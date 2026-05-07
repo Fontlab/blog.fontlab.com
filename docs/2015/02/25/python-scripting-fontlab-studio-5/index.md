@@ -15,4 +15,4 @@ The scripting model shown here laid the groundwork for the FontLab 7 scripting A
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=QCSKRYZ1Qko).
 
-[Read more →](https://help.fontlab.com/fontlab/scripting/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Scripting-with-Python/)

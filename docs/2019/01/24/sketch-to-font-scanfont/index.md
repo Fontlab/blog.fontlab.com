@@ -12,4 +12,4 @@ For lettering artists, calligraphers, and designers who work analog-first, this 
 
 Watch the full demo on [FontLab TV](https://www.youtube.com/watch?v=c0XCxcJY_UY).
 
-[Read more →](https://help.fontlab.com/fontlab/import-images/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Importing-Artwork/)

@@ -8,4 +8,4 @@ Spacing is addressed after drawing is mostly complete, but the decisions made he
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=cmDocLGmw4A).
 
-[Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/)

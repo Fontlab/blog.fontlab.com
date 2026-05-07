@@ -35,7 +35,7 @@
 
 ### Verified
 - `uv sync --frozen` completed with Flowmark in the lock file.
-- `uv run blog-fontlab format` completed against the current 81 Markdown source files with no `.bak` or `.orig` files.
+- `uv run blog-fontlab format` completed against the current 79 published Markdown source files with no `.bak` or `.orig` files.
 - `uv run --with pytest python -m pytest -q` passed.
 - `uvx ruff check src tests` passed.
 - `./build.sh build` completed after running Flowmark first.
@@ -44,7 +44,7 @@
 - Local CTA audit found no split `.fl-help-cta` attributes and no mismatch between source `review.cta_target` values and Markdown CTA links.
 - HTTP checks returned 200 for the updated TransType 4, FontLab VI release notes, FontLab 7 importing artwork, FontLab 8 intro tutorial, FontLab 8 families & variation, and Scannerlicker catalogue CTA targets.
 - Local checks confirmed the four named offline draft consolidation candidates remain under `issues/draft-posts/` with `draft: true`.
-- Browser check at `http://127.0.0.1:8174/` plus edited post pages found no horizontal overflow and no console errors.
+- Playwright browser check at `http://127.0.0.1:8026/` plus edited post pages found no horizontal overflow and no console errors.
 - `uv sync --frozen` completed.
 - `./build.sh build` completed and generated root `llms.txt` and `llms-full.txt`.
 - `uvx ruff check src/` passed.
@@ -53,7 +53,7 @@
 - Local checks confirmed the three retired 2013 color-font pages are absent from generated `docs/`, the new 2026 color-font page exists, and no source or generated page links to the old color-font URLs.
 - Current web research found the Matthew Carter recording at `https://www.youtube.com/watch?v=ibJhxbsbqJ4`; searches found the Brush Romans event listing/preview but no stable recording URL.
 - Playwright screenshots were captured for home, single post, archive, and about at desktop and narrow mobile widths.
-- Chrome DevTools checks found no horizontal overflow and no console errors on home, the Dave Lawrence post, and the 2025 color-font history post; the homepage has no draft labels or moved-draft slugs; a moved draft URL returns the 404 page; the Dave Lawrence page has MyFonts links and no `calfonts.com`; the 2025 color-font gradient image loads with nonzero natural dimensions.
+- Playwright checks found no horizontal overflow and no console errors on home, the OpenType post, the Scannerlicker post, the variable-font file-size post, and the TransType post at desktop and mobile widths.
 
 ## [Unreleased] — 2026-05-07 (cont)
 

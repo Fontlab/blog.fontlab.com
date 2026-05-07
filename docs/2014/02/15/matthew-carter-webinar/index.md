@@ -12,4 +12,4 @@ His typefaces shape how we read every day:
 
 The webinar featured an interview and Q&A. Carter discussed his working methods and his views on how technical constraints shape design decisions. He also shared insights on the transition from metal type to digital font production.
 
-[Read more →](https://www.fontlab.tv/)
+[Watch the recording →](https://www.youtube.com/watch?v=ibJhxbsbqJ4)

@@ -15,4 +15,4 @@ Watching it now serves as a great historical document. Many of the format confli
 
 Watch the full video on [FontLab TV](https://www.youtube.com/watch?v=Yit1ZpClwAk).
 
-[Read more →](https://help.fontlab.com/fontlab/color-fonts/)
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-8-color/)

@@ -17,8 +17,8 @@ review:
     - "Verdana and Georgia designed mid-1990s for Microsoft — verify years"
     - "Carter started at Enschedé foundry in the 1950s — verify"
     - "Verified 2026-05-08: FontLab YouTube recording is the stable webinar deep link"
-  image_status: missing
-  image_needs: "Matthew Carter portrait or typeface specimen (Verdana/Georgia/Bell Centennial); no FontLab TV thumbnail exists for this event — check reference/fontlab-com-oldpub/ for original post image"
+  image_status: weak
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2014-03-15-brush-romans-webinar.md"
   notes: "Good biographical depth on Carter, specific enough to be valuable. The post describes the webinar but never says what Carter actually concluded or revealed — the 'so what' is missing. Could consolidate with brush-romans into a 'FontLab webinar series' roundup."

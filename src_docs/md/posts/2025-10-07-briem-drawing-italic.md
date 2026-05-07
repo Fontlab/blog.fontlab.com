@@ -16,8 +16,8 @@ review:
     - "Briem tutorial URL briem/4-3-italic/briem-4-31-italic/ — verify path exists on help.fontlab.com"
     - "Slant range 6°–14° for italic — verify against Briem source material"
     - "Pen angle 40–50° for italic vs 30° for roman — verify against Briem"
-  image_status: missing
-  image_needs: "Side-by-side of slanted roman vs true italic lowercase (a, g, n, o)"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2025-11-04-the-briem-method-and-the-geometry-of-nothing.md, 2025-12-16-fontlab-tv-briem-on-brushes.md"
   notes: "Best of the three Briem posts — concrete, actionable, the practical exercise is excellent. Overlaps with the other Briem posts in pen-angle theory; flag for series navigation links."
@@ -28,6 +28,8 @@ structure is wrong, the rhythm is wrong, the connection points are wrong.
 Briem’s italic tutorial, lightly modernized, walks through what an italic actually is.
 
 <!-- more -->
+
+![FontLab 8 spacing workflow](../media/fl8-8days-spacing.png)
 
 ## What an italic is
 

@@ -16,8 +16,8 @@ review:
     - "'700-odd accented forms' auto-generated — verify realistic count for full Latin Extended"
     - "FontLab TV anchors episode URL — confirm actual episode at fontlab.tv"
     - "Underscore prefix naming convention for mark attachment anchors — verify '_top' convention"
-  image_status: missing
-  image_needs: "Anchors panel or accented glyph composition screenshot from reference/fldoc/"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Covers essential workflow for multilingual fonts; CTA should deep-link to anchors/components section; FontLab TV link is homepage-only."
@@ -28,6 +28,8 @@ assembles `aacute`, `acircumflex`, `agrave`, and the other 700-odd accented form
 you.
 
 <!-- more -->
+
+![FontLab TV — anchors, components, and accented glyphs](../media/fontlab-tv1.png)
 
 > 📺 Watch: [Anchors and components on FontLab TV](https://fontlab.tv/)
 

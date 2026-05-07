@@ -14,4 +14,4 @@ FontLab Studio 5.2.1 for Windows shipped in December 2013. It builds on the 5.2 
 
 This release is a free upgrade for all Windows users of FontLab Studio 5 and AsiaFont Studio.
 
-[Read more →](https://help.fontlab.com/fontlab-studio/5/)
+[Read more →](https://help.fontlab.com/pdf/FLS5WinManual.pdf)

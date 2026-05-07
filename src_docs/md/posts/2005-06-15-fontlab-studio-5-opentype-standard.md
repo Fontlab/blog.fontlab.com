@@ -16,8 +16,8 @@ review:
     - "Fontographer 5 shipped in 2010 — verify exact year"
     - "FontFlasher released in 2005 — verify"
     - "Calibri, Myriad Pro etc. produced with Studio 5 — verify specific tool used"
-  image_status: missing
-  image_needs: "FontLab Studio 5 splash screen or interface screenshot; check reference/i.fontlab.com/docs/ for fls5 assets"
+  image_status: weak
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Strong historical narrative with good specifics (named fonts, named companies). The Fontographer acquisition angle is the hook — lead with that more boldly. CTA is plain text, not a proper markdown link."

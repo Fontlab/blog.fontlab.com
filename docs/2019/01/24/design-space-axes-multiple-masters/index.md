@@ -10,4 +10,4 @@ What makes this video useful beyond the mechanics is how it makes the abstract c
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=AijDkf3DBk8).
 
-[Read more →](https://help.fontlab.com/fontlab/variable-fonts/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-Fonts/)

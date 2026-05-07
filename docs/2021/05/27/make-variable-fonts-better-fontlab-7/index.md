@@ -8,4 +8,4 @@ Because this was a conference talk, the pace is faster and assumes more prior kn
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=xQcR9riPhTc).
 
-[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-fonts/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-Fonts/)

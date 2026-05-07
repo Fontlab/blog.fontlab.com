@@ -59,7 +59,7 @@ The OpenType editing work began in FontLab 4 and matured in Studio 5. It gave ty
 
 That capability changed the industry. Combined with class-based kerning and visual TrueType hinting, it made Studio 5 the tool of record for a generation of professional type production.
 
-[Read more →](https://help.fontlab.com/fontlab-studio/5/)
+[Read more →](https://help.fontlab.com/pdf/FLS5WinManual.pdf)
 
 TransType 4 arrived in December 2013 as a complete rewrite of our font conversion app. It added multi-color OpenType output and web font export to its core toolkit.
 
@@ -92,7 +92,7 @@ FontLab Studio 5.2.1 for Windows shipped in December 2013. It builds on the 5.2 
 
 This release is a free upgrade for all Windows users of FontLab Studio 5 and AsiaFont Studio.
 
-[Read more →](https://help.fontlab.com/fontlab-studio/5/)
+[Read more →](https://help.fontlab.com/pdf/FLS5WinManual.pdf)
 
 In February 2014, FontLab hosted a live webinar with Matthew Carter, a key figure in digital type design.
 
@@ -108,7 +108,7 @@ His typefaces shape how we read every day:
 
 The webinar featured an interview and Q&A. Carter discussed his working methods and his views on how technical constraints shape design decisions. He also shared insights on the transition from metal type to digital font production.
 
-[Read more →](https://www.fontlab.tv/)
+[Watch the recording →](https://www.youtube.com/watch?v=ibJhxbsbqJ4)
 
 On March 11, 2014, FontLab hosted a webinar on Roman capital letterforms and their origins in flat-brush writing. Sign painter and type designer John Downer presented alongside calligrapher Paul Herrera.
 
@@ -143,7 +143,7 @@ Watching it now serves as a great historical document. Many of the format confli
 
 Watch the full video on [FontLab TV](https://www.youtube.com/watch?v=Yit1ZpClwAk).
 
-[Read more →](https://help.fontlab.com/fontlab/color-fonts/)
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-8-color/)
 
 December 2014 brought a major update to DTL OTMaster, plus two new free tools. We released a command-line UFO converter and an updated color font typesetter.
 
@@ -153,7 +153,7 @@ Here is what shipped in this release:
 - **vfb2ufo**: A free command-line tool for two-way conversion. It translates between VFB (FontLab Studio’s native binary format) and UFO (Unified Font Object, the open XML-based interchange format). This gives FontLab Studio users a direct path to UFO-based workflows. You don’t need to open the GUI to convert files.
 - **FontLab Pad 1.1**: A free app for Mac OS X and Windows. It lets you set text in color fonts. You can use bitmap color, SVG color, and layered color OpenType formats. The app renders the results correctly, something most operating systems and apps couldn’t do back then. Version 1.1 brought updates to both Mac and Windows builds.
 
-[Read more →](https://help.fontlab.com/font-utility/dtl-otmaster/)
+[Read more →](https://www.fontlab.com/font-utility/dtl-otmaster/)
 
 Automation unlocks the real power of a professional font editor. In this 70-minute tutorial, Adam Twardoch introduces Python scripting inside FontLab Studio 5. You get a clear look at the scripting environment, the FontLab object model, and practical examples that go well beyond “hello world.”
 
@@ -172,7 +172,7 @@ The scripting model shown here laid the groundwork for the FontLab 7 scripting A
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=QCSKRYZ1Qko).
 
-[Read more →](https://help.fontlab.com/fontlab/scripting/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Scripting-with-Python/)
 
 Spacing is where type design lives or dies. This 53-minute tutorial with Thomas Phinney is one of the clearest explanations of the craft ever recorded. Phinney, a type designer and font technologist with decades of experience, walks through sidebearings, optical principles, and the practical workflow inside FontLab Studio 5.
 
@@ -317,7 +317,7 @@ What makes this video useful beyond the mechanics is how it makes the abstract c
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=AijDkf3DBk8).
 
-[Read more →](https://help.fontlab.com/fontlab/variable-fonts/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-Fonts/)
 
 This two-minute demo of the built-in ScanFont feature has over 40,000 views. It earns that attention by showing something genuinely useful in record time. You scan or photograph hand-drawn letterforms, paste them into FontLab, and the software traces them into editable outlines.
 
@@ -333,7 +333,7 @@ For lettering artists, calligraphers, and designers who work analog-first, this 
 
 Watch the full demo on [FontLab TV](https://www.youtube.com/watch?v=c0XCxcJY_UY).
 
-[Read more →](https://help.fontlab.com/fontlab/import-images/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Importing-Artwork/)
 
 macOS 10.15 Catalina drops all 32-bit app support, which means FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3 for Mac will not run on it — and porting them to 64-bit is not feasible. If you are on Catalina, your options are CrossOver Mac 19 (run the Windows versions via a thin emulation layer), a virtual machine running an older macOS or Windows, or upgrading to the 64-bit FontLab 7.
 
@@ -545,7 +545,7 @@ Spacing is addressed after drawing is mostly complete, but the decisions made he
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=cmDocLGmw4A).
 
-[Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/)
 
 FontLab 7 launched in December 2019 with over 250 new features. Twelve months later, it has rather more than that. Here is what the 2020 update cycle actually delivered — not counting FontLab 7.2, which has [its own post](https://blog.fontlab.com/2020/11/30/say-hello-to-fontlab-72/index.md).
 
@@ -590,7 +590,7 @@ Because this was a conference talk, the pace is faster and assumes more prior kn
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=xQcR9riPhTc).
 
-[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-fonts/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-Fonts/)
 
 PostScript Type 1 fonts are on their way out. Adobe is ending Type 1 support in Creative Cloud applications in early 2023, and Apple has signalled the same direction in macOS. If you have a library of Type 1 fonts — and many working designers do — now is the time to convert them to OpenType.
 
@@ -1108,7 +1108,7 @@ The drawing is the part students notice. The spacing is the part professionals g
 - [Inside the fonts: optical sizes — Type Network](https://typenetwork.com/articles/inside-the-fonts-optical-sizes)
 - [opsz axis — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz)
 
-[Read more →](https://help.fontlab.com/fontlab/8/manual/Spacing/)
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/3.%20Fitting%20and%20Spacing/3a-0%20Intro%20to%20Spacing/)
 
 The standard method for digitising a font is to draw the outline. You map the exterior boundary of the shape with Bezier curves, and you push and pull nodes until the silhouette behaves. This works fine for rigid sans-serifs. For a script font, it feels like sculpting in oven mitts.
 
@@ -1404,7 +1404,7 @@ Spacing is what separates a font that exists from a font that reads. The FontLab
 
 Bad spacing is the single most common reason a technically competent font feels off. This episode is the cheapest hour you will spend improving every font you make from now on.
 
-[Read more →](https://help.fontlab.com/fontlab/8/manual/Spacing/)
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/3.%20Fitting%20and%20Spacing/3a-0%20Intro%20to%20Spacing/)
 
 Most readers never notice when typography is right. They only notice when reading feels like work. The features that decide which side of that line a font lands on are mostly the unglamorous ones — kerning, standard ligatures, contextual alternates — the parts that handle the friction the user never sees.
 
@@ -2290,13 +2290,13 @@ Martins’s bread-and-butter pair is **expressions and tags.** Tags let you labe
 
 The Linux remark is not throwaway. FontLab ships native binaries for macOS, Windows, and — yes — Linux. Most of the working type-design world is on the first two; the people who are on Linux either run a one-person foundry or work inside a larger pipeline where Linux is the only choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece of cross-platform engineering for an industry that mostly assumes Mac.
 
-The [Scannerlicker catalogue](https://fonts.scannerlicker.net/) is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
+The [Scannerlicker catalogue](https://www.myfonts.com/collections/scannerlicker-foundry) is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
 
 ## More from Fábio Duarte Martins
 
-- [Scannerlicker catalogue — variable fonts and retail families](https://fonts.scannerlicker.net/)
+- [Scannerlicker catalogue — variable fonts and retail families](https://www.myfonts.com/collections/scannerlicker-foundry)
 
-[Browse Scannerlicker →](https://fonts.scannerlicker.net/)
+[Browse Scannerlicker →](https://www.myfonts.com/collections/scannerlicker-foundry)
 
 Nothing gets old faster than a font format — until a client opens a twenty-year-old file and suddenly it is everybody’s problem again.
 

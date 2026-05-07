@@ -17,4 +17,4 @@ The drawing is the part students notice. The spacing is the part professionals g
 - [Inside the fonts: optical sizes — Type Network](https://typenetwork.com/articles/inside-the-fonts-optical-sizes)
 - [opsz axis — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz)
 
-[Read more →](https://help.fontlab.com/fontlab/8/manual/Spacing/)
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/3.%20Fitting%20and%20Spacing/3a-0%20Intro%20to%20Spacing/)

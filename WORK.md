@@ -51,7 +51,7 @@
 - CTA syntax check — all body Markdown CTA links use compact `.fl-help-cta` attributes or raw HTML anchors.
 - Verified CTA targets with HTTP 200: TransType 4, FontLab VI release notes, FontLab 7 importing artwork, FontLab 8 intro tutorial, FontLab 8 families & variation, and the Scannerlicker catalogue.
 - Verified the four named offline draft consolidation candidates still live under `issues/draft-posts/` with `draft: true`.
-- Browser check at `http://127.0.0.1:8174/` plus edited post pages — no horizontal overflow and no console errors.
+- Playwright browser check at `http://127.0.0.1:8026/` plus edited post pages — no horizontal overflow and no console errors.
 - `uv sync --frozen` — complete.
 - `uvx ruff check src/` — clean.
 - Source/generated HTML quote check — no smart-quote attribute delimiters in `src_docs/md` or `docs`.
@@ -59,7 +59,7 @@
 - Counts: 79 published source posts, 12 offline draft/research files, 79 generated public post pages.
 - Generated color-font page exists at `docs/2026/05/03/color-fonts-in-2026/index.html`; the three old generated 2013 color-font pages are absent.
 - `rg` found no source or generated links to the retired color-font URLs.
-- Browser checks: Chrome DevTools found no horizontal overflow and no console errors on checked pages; the homepage no longer exposes draft labels or moved-draft slugs; the moved draft URL returns the 404 page; the Dave Lawrence page uses MyFonts links and no `calfonts.com`; the 2025 color-font gradient image loads with nonzero natural dimensions.
+- Browser checks: Playwright found no horizontal overflow and no console errors on home, the OpenType post, the Scannerlicker post, the variable-font file-size post, and the TransType post at desktop and mobile widths.
 
 ## Shipped (2026-05-07 session)
 

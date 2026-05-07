@@ -8,7 +8,7 @@ date:
 slug: made-with-fontlab-patrick-griffin
 review:
   cta_status: ok
-  cta_target: "https://canadatype.com/"
+  cta_target: "https://www.myfonts.com/collections/patrick-griffin"
   title_case: ok
   title_suggested: ""
   voice_quality: strong
@@ -85,4 +85,4 @@ improved. The current “primary tool” he names is FontLab.
   McDonald)
 - [Ronaldson Pro](https://canadatype.com/2021/10/20/ronaldson-pro/) — Canada Type
 
-[Browse Canada Type →](https://canadatype.com/){ .fl-help-cta }
+[Browse Patrick Griffin →](https://www.myfonts.com/collections/patrick-griffin){ .fl-help-cta }

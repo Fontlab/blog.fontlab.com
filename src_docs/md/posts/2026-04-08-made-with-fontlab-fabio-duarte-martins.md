@@ -77,9 +77,8 @@ choice. Either way, “running flawlessly on my Linux machine” is an unusually
 of cross-platform engineering for an industry that mostly assumes Mac.
 
 The [Scannerlicker catalogue](https://www.myfonts.com/collections/scannerlicker-foundry)
-is the proof.
-Variable fonts shipped, conditional substitutions configured, design space defined, all
-out of one editor and one studio.
+is the proof. Variable fonts shipped, conditional substitutions configured, design space
+defined, all out of one editor and one studio.
 
 ## More from Fábio Duarte Martins
 

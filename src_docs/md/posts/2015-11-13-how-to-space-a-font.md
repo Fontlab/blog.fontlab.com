@@ -7,7 +7,7 @@ date:
 slug: how-to-space-a-font
 review:
   cta_status: ok
-  cta_target: "https://help.fontlab.com/fontlab/spacing-and-kerning/"
+  cta_target: "https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/"
   title_case: ok
   title_suggested: ""
   voice_quality: strong
@@ -54,4 +54,4 @@ use today.
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=tbc_O7bNROs).
 
-[Read more →](https://help.fontlab.com/fontlab/spacing-and-kerning/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/){ .fl-help-cta }

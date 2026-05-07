@@ -14,4 +14,4 @@ The OpenType editing work began in FontLab 4 and matured in Studio 5. It gave ty
 
 That capability changed the industry. Combined with class-based kerning and visual TrueType hinting, it made Studio 5 the tool of record for a generation of professional type production.
 
-[Read more →](https://help.fontlab.com/fontlab-studio/5/)
+[Read more →](https://help.fontlab.com/pdf/FLS5WinManual.pdf)
