@@ -41,14 +41,6 @@ packages = ["src/blog_fontlab"]
 [tool.uv]
 package = true
 
-[tool.uv.sources]
-properdocs = { path = "reference/properdocs" }
-mkdocs-materialx = { path = "reference/mkdocs-materialx" }
-mkdocs-awesome-nav = { path = "reference/mkdocs-awesome-nav" }
-mkdocs-include-markdown-plugin = { path = "reference/mkdocs-include-markdown-plugin" }
-mkdocs-llmstxt = { path = "reference/mkdocs-llmstxt" }
-mkdocs-copy-to-llm = { path = "reference/mkdocs-copy-to-llm" }
-
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 

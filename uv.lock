@@ -70,12 +70,12 @@ dependencies = [
 requires-dist = [
     { name = "fire", specifier = ">=0.6" },
     { name = "loguru", specifier = ">=0.7" },
-    { name = "mkdocs-awesome-nav", directory = "reference/mkdocs-awesome-nav" },
-    { name = "mkdocs-copy-to-llm", directory = "reference/mkdocs-copy-to-llm" },
-    { name = "mkdocs-include-markdown-plugin", directory = "reference/mkdocs-include-markdown-plugin" },
-    { name = "mkdocs-llmstxt", directory = "reference/mkdocs-llmstxt" },
-    { name = "mkdocs-materialx", directory = "reference/mkdocs-materialx" },
-    { name = "properdocs", directory = "reference/properdocs" },
+    { name = "mkdocs-awesome-nav", specifier = ">=3.3" },
+    { name = "mkdocs-copy-to-llm", specifier = ">=0.2" },
+    { name = "mkdocs-include-markdown-plugin", specifier = ">=7.2" },
+    { name = "mkdocs-llmstxt", specifier = ">=0.2" },
+    { name = "mkdocs-materialx", specifier = ">=10.1.4" },
+    { name = "properdocs", specifier = ">=1.6.7" },
     { name = "pymdown-extensions", specifier = ">=10.2" },
     { name = "python-frontmatter", specifier = ">=1.1" },
 ]
@@ -416,71 +416,30 @@ wheels = [
 
 [[package]]
 name = "mkdocs-awesome-nav"
-version = "0.0.0"
-source = { directory = "reference/mkdocs-awesome-nav" }
+version = "3.3.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mkdocs" },
     { name = "natsort" },
     { name = "pydantic" },
     { name = "wcmatch" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "mkdocs", specifier = ">=1.6.0" },
-    { name = "natsort", specifier = ">=8.1.0" },
-    { name = "pydantic", marker = "python_full_version < '3.13'", specifier = ">=2.0.2" },
-    { name = "pydantic", marker = "python_full_version >= '3.13'", specifier = ">=2.8.1" },
-    { name = "wcmatch", specifier = ">=8.4" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "coverage", specifier = ">=7.6.10" },
-    { name = "mkdocs-exclude", specifier = ">=1.0.2" },
-    { name = "mkdocs-material", specifier = ">=9.2.6" },
-    { name = "mkdocs-monorepo-plugin", specifier = ">=1.1.0" },
-    { name = "mkdocs-multirepo-plugin", specifier = ">=0.8.2" },
-    { name = "mkdocs-static-i18n", specifier = ">=1.0.0" },
-    { name = "mktheapidocs", specifier = ">=0.2.0" },
-    { name = "mktheapidocs-test-module", directory = "reference/mkdocs-awesome-nav/tests/compatibility/mktheapidocs_test_module" },
-    { name = "mypy", specifier = ">=1.14.0" },
-    { name = "pytest", specifier = ">=8.3.4" },
-    { name = "ruff", specifier = ">=0.8.4" },
-    { name = "tox", specifier = ">=4.23.2" },
-    { name = "tox-gh", specifier = ">=1.4.4" },
-    { name = "tox-uv", specifier = ">=1.16.2" },
-    { name = "types-pyyaml", specifier = ">=6.0.12.20241221" },
-    { name = "types-setuptools", specifier = ">=75.6.0.20241223" },
+sdist = { url = "https://files.pythonhosted.org/packages/1f/96/d581c9ceae7d8c08c7456d1d2befbf3e9c7a52a6b03aebbe6dc1d46ffdac/mkdocs_awesome_nav-3.3.0.tar.gz", hash = "sha256:330edf4129995a7be8a9751edd8739d312fddf591c6cbd95ec80f12f4bfe8578", size = 9112, upload-time = "2025-12-02T20:10:46.11Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/de/98/dc154a7f0bb25827d988dc31992917606d1ca9f5349077db045bb5cd9dbc/mkdocs_awesome_nav-3.3.0-py3-none-any.whl", hash = "sha256:bf80f14bff9571df79129bbdf103b4198589ee7616f8a29720ae2e7ac2455930", size = 12891, upload-time = "2025-12-02T20:10:45.054Z" },
 ]
 
 [[package]]
 name = "mkdocs-copy-to-llm"
 version = "0.2.10"
-source = { directory = "reference/mkdocs-copy-to-llm" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mkdocs" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "build", marker = "extra == 'dev'", specifier = ">=0.10.0" },
-    { name = "csscompressor", marker = "extra == 'dev'", specifier = ">=0.9.5" },
-    { name = "csscompressor", marker = "extra == 'minify'", specifier = ">=0.9.5" },
-    { name = "jsmin", marker = "extra == 'dev'", specifier = ">=3.0.0" },
-    { name = "jsmin", marker = "extra == 'minify'", specifier = ">=3.0.0" },
-    { name = "mkdocs", specifier = ">=1.2" },
-    { name = "mkdocs-material", marker = "extra == 'dev'", specifier = ">=9.0" },
-    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.0" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.0.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0" },
-    { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=4.0" },
-    { name = "pytest-mock", marker = "extra == 'dev'", specifier = ">=3.0" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.1.0" },
-    { name = "twine", marker = "extra == 'dev'", specifier = ">=4.0.0" },
-    { name = "types-setuptools", marker = "extra == 'dev'" },
+sdist = { url = "https://files.pythonhosted.org/packages/80/69/2b6f447cb548f1e91541e453a6af8d87c953018c08c147cf18ec0849075d/mkdocs_copy_to_llm-0.2.10.tar.gz", hash = "sha256:70506eb248ab022d3068b6d510c9337a38efcc4bc65bae0798d72e4d9e29eade", size = 36173, upload-time = "2026-03-10T10:27:32.72Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/15/98/f06fcdc6d9057618c19c39f1dbf7ba2151626933e88cd7db471cb15edd95/mkdocs_copy_to_llm-0.2.10-py3-none-any.whl", hash = "sha256:cf39b922eb9fabd853e39a6c2e2fb698be6775bfdaf2ff1e0158feed129696f8", size = 23670, upload-time = "2026-03-10T10:27:31.34Z" },
 ]
-provides-extras = ["minify", "dev"]
 
 [[package]]
 name = "mkdocs-document-dates"
@@ -512,68 +471,29 @@ wheels = [
 [[package]]
 name = "mkdocs-include-markdown-plugin"
 version = "7.2.2"
-source = { directory = "reference/mkdocs-include-markdown-plugin" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mkdocs" },
     { name = "wcmatch" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "mkdocs", specifier = ">=1.4" },
-    { name = "platformdirs", marker = "extra == 'cache'" },
-    { name = "wcmatch" },
+sdist = { url = "https://files.pythonhosted.org/packages/ad/2d/bdf1aee3f4f7b34148b0f62298b62f03415160cb2707f09503c99a0a7cd5/mkdocs_include_markdown_plugin-7.2.2.tar.gz", hash = "sha256:f052ccb741eccf498116b826c1d78a2d761c56747372594709441cee0963fbc9", size = 25415, upload-time = "2026-03-29T15:15:14.2Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/38/a5/f6b2f0aa805dbda52f6265e9aff1450c8643195442facf29d475bdeba15d/mkdocs_include_markdown_plugin-7.2.2-py3-none-any.whl", hash = "sha256:f2ec4487cf32d3e33ca528f9366f20fb9280ded9c8d1630eb2bbda244962dcd1", size = 29528, upload-time = "2026-03-29T15:15:13.079Z" },
 ]
-provides-extras = ["cache"]
 
 [[package]]
 name = "mkdocs-llmstxt"
-source = { directory = "reference/mkdocs-llmstxt" }
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "markdownify" },
     { name = "mdformat" },
     { name = "mdformat-tables" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "beautifulsoup4", specifier = ">=4.12" },
-    { name = "markdownify", specifier = ">=0.14" },
-    { name = "mdformat", specifier = ">=0.7.21" },
-    { name = "mdformat-tables", specifier = ">=1.0" },
-]
-
-[package.metadata.requires-dev]
-ci = [
-    { name = "duty", specifier = ">=1.6" },
-    { name = "mypy", specifier = ">=1.10" },
-    { name = "pytest", specifier = ">=8.2" },
-    { name = "pytest-cov", specifier = ">=5.0" },
-    { name = "pytest-randomly", specifier = ">=3.15" },
-    { name = "pytest-xdist", specifier = ">=3.6" },
-    { name = "ruff", specifier = ">=0.4" },
-    { name = "types-markdown", specifier = ">=3.6" },
-    { name = "types-pyyaml", specifier = ">=6.0" },
-]
-docs = [
-    { name = "markdown-callouts", specifier = ">=0.4" },
-    { name = "markdown-exec", specifier = ">=1.8" },
-    { name = "mkdocs", specifier = ">=1.6" },
-    { name = "mkdocs-coverage", specifier = ">=1.0" },
-    { name = "mkdocs-git-revision-date-localized-plugin", specifier = ">=1.2" },
-    { name = "mkdocs-llmstxt", specifier = ">=0.2" },
-    { name = "mkdocs-material", specifier = ">=9.5" },
-    { name = "mkdocs-minify-plugin", specifier = ">=0.8" },
-    { name = "mkdocs-section-index", specifier = ">=0.3" },
-    { name = "mkdocstrings", extras = ["python"], specifier = ">=0.29" },
-    { name = "tomli", marker = "python_full_version < '3.11'", specifier = ">=2.0" },
-]
-maintain = [
-    { name = "build", specifier = ">=1.2" },
-    { name = "git-changelog", specifier = ">=2.5" },
-    { name = "twine", specifier = ">=5.1" },
-    { name = "yore", specifier = ">=0.3.3" },
+sdist = { url = "https://files.pythonhosted.org/packages/7f/f5/4c31cdffa7c09bf48d8c7a50d8342dc100abac98ac4150826bc11afc0c9f/mkdocs_llmstxt-0.5.0.tar.gz", hash = "sha256:b2fa9e6d68df41d7467e948a4745725b6c99434a36b36204857dbd7bb3dfe041", size = 33909, upload-time = "2025-11-20T14:02:24.861Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ad/2b/82928cc9e8d9269cd79e7ebf015efdc4945e6c646e86ec1d4dba1707f215/mkdocs_llmstxt-0.5.0-py3-none-any.whl", hash = "sha256:753c699913d2d619a9072604b26b6dc9f5fb6d257d9b107857f80c8a0b787533", size = 12040, upload-time = "2025-11-20T14:02:23.483Z" },
 ]
 
 [[package]]
@@ -587,7 +507,8 @@ wheels = [
 
 [[package]]
 name = "mkdocs-materialx"
-source = { directory = "reference/mkdocs-materialx" }
+version = "10.1.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "babel" },
     { name = "backrefs" },
@@ -603,31 +524,10 @@ dependencies = [
     { name = "pymdown-extensions" },
     { name = "requests" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "babel", specifier = ">=2.10" },
-    { name = "backrefs", specifier = ">=5.7.post1" },
-    { name = "cairosvg", marker = "extra == 'imaging'", specifier = ">=2.6" },
-    { name = "colorama", specifier = ">=0.4" },
-    { name = "jinja2", specifier = ">=3.1" },
-    { name = "markdown", specifier = ">=3.2" },
-    { name = "mkdocs", specifier = ">=1.6,<=1.6.1" },
-    { name = "mkdocs-document-dates", specifier = "==3.8.0" },
-    { name = "mkdocs-drawio", marker = "extra == 'recommended'", specifier = ">=1.15.0" },
-    { name = "mkdocs-git-committers-plugin-2", marker = "extra == 'git'", specifier = ">=1.1" },
-    { name = "mkdocs-glightbox", marker = "extra == 'recommended'", specifier = ">=0.5" },
-    { name = "mkdocs-material-extensions", specifier = ">=1.3" },
-    { name = "mkdocs-minify-plugin", marker = "extra == 'recommended'", specifier = ">=0.7" },
-    { name = "mkdocs-redirects", marker = "extra == 'recommended'", specifier = ">=1.2" },
-    { name = "paginate", specifier = ">=0.5" },
-    { name = "pillow", marker = "extra == 'imaging'", specifier = ">=10.2" },
-    { name = "properdocs", specifier = ">=1.6.5" },
-    { name = "pygments", specifier = ">=2.16" },
-    { name = "pymdown-extensions", specifier = ">=10.2" },
-    { name = "requests", specifier = ">=2.30" },
+sdist = { url = "https://files.pythonhosted.org/packages/4d/a1/b5cd26e0abce491f439a2b7ccdc116dd9b117844717c1906daab7b00ca1b/mkdocs_materialx-10.1.4.tar.gz", hash = "sha256:3aad29c71d6aa9f10ea3d8d48fc5568fdaea2cd2f7e3acec18fd6aa9bdb812e5", size = 4098357, upload-time = "2026-04-24T06:44:14.242Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/92/54/78d09978ad977aca4e59c644a13e05383ea5ede892641c396338ed18fbec/mkdocs_materialx-10.1.4-py3-none-any.whl", hash = "sha256:2b90da60d5eaea3ebb93fdc2205f1d3f163a56bae3429fef8a6ec40fd9132b4c", size = 9289165, upload-time = "2026-04-24T06:44:11.281Z" },
 ]
-provides-extras = ["git", "imaging", "recommended"]
 
 [[package]]
 name = "natsort"
@@ -676,7 +576,8 @@ wheels = [
 
 [[package]]
 name = "properdocs"
-source = { directory = "reference/properdocs" }
+version = "1.6.7"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
     { name = "colorama", marker = "sys_platform == 'win32'" },
@@ -691,25 +592,10 @@ dependencies = [
     { name = "pyyaml-env-tag" },
     { name = "watchdog" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "babel", marker = "extra == 'i18n'", specifier = ">=2.9.0" },
-    { name = "click", specifier = ">=7.0" },
-    { name = "colorama", marker = "sys_platform == 'win32'", specifier = ">=0.4" },
-    { name = "ghp-import", specifier = ">=1.0" },
-    { name = "importlib-metadata", marker = "python_full_version < '3.10'", specifier = ">=4.4" },
-    { name = "jinja2", specifier = ">=2.11.1" },
-    { name = "markdown", specifier = ">=3.3.6" },
-    { name = "markupsafe", specifier = ">=2.0.1" },
-    { name = "packaging", specifier = ">=20.5" },
-    { name = "pathspec", specifier = ">=0.11.1" },
-    { name = "platformdirs", specifier = ">=2.2.0" },
-    { name = "pyyaml", specifier = ">=5.1" },
-    { name = "pyyaml-env-tag", specifier = ">=0.1" },
-    { name = "watchdog", specifier = ">=2.0" },
+sdist = { url = "https://files.pythonhosted.org/packages/ec/29/f27a4e1eddf72ed3db6e47818fbafe6debbf09fd7051f9c1a007239b46ef/properdocs-1.6.7.tar.gz", hash = "sha256:adc7b16e562890af0e098a7e5b02e3a81c20894a87d6a28d345c9300de73c26e", size = 276141, upload-time = "2026-03-20T20:07:48.167Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bd/4d/fc923f5c85318ee8cc903566dc4e0ebe41b2dfc1d2ecf5546db232397ed6/properdocs-1.6.7-py3-none-any.whl", hash = "sha256:6fa0cfa2e01bf338f684892c8a506cf70ea88ae7f3479c933b6fa20168101cbd", size = 225406, upload-time = "2026-03-20T20:07:46.875Z" },
 ]
-provides-extras = ["i18n"]
 
 [[package]]
 name = "pydantic"
