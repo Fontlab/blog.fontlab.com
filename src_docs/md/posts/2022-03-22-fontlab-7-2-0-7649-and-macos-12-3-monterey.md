@@ -4,215 +4,82 @@ date:
 title: "FontLab 7.2.0.7644 and macOS 12.3 Monterey"
 categories:
   - release
-author: adam
+authors: [adam]
 draft: false
 ---
 
-# FontLab 7.2.0.7644 and macOS 12.3 Monterey
+Apple's macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing the system Python 2.7 that FontLab depended on. FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need to install a bundled Python 2.7 package alongside the app. A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644 does not have that problem.
 
-By [Adam
-Twardoch](https://www.fontlab.com/author/adamtwr39258/ "Adam Twardoch")
-on 2022-03-22 in
-<a href="https://www.fontlab.com/news/" rel="category tag">News</a>
+<!-- more -->
 
-On <span class="numbers">11</span> March
-<span class="numbers">2022</span>, we published FontLab
-<span class="numbers">7</span>.<span class="numbers">2</span>.<span class="numbers">0</span>.<span class="numbers">7649</span>.
-Unfortunately, we discovered a problem in this version: when you open
-some fonts, FontLab sets the fill of the glyphs **transparent**. We’re
-now **re-releasing version
-<span class="numbers">7</span>.<span class="numbers">2</span>.<span class="numbers">0</span>.<span class="numbers">7644</span>** for
-both Mac and Windows. This is the same version as was available before
-<span class="numbers">11</span> March. It does not have this problem,
-but does bring compatibility with macOS
-<span class="numbers">12</span>.<span class="numbers">3</span>.
-
-<span id="more-2811"></span>
-
-**Note:** If you open a font and all glyphs unintentionally have
-a transparent or colored fill, scroll down to the end of this text for
-simple instructions how to fix it.
+**Note:** If you open a font and all glyphs unintentionally have a transparent or colored fill, scroll to the end of this post for instructions on how to fix it.
 
 ## Download and install FontLab 7.2.0.7644 on macOS
 
-On macOS, this update brings compatibility with the newest **macOS
-Monterey version
-<span class="numbers">12</span>.<span class="numbers">3</span>**. Apple
-released macOS
-<span class="numbers">12</span>.<span class="numbers">3</span> in March
-<span class="numbers">2022</span>, and this version of macOS broke
-compatibility with numerous existing apps from many vendors. This
-included all previous versions of FontLab
-<span class="numbers">7</span>. 
+macOS 12.3, released in March 2022, broke compatibility with numerous apps from many vendors — including all previous versions of FontLab 7.
 
-**Before** you update macOS Monterey to
-<span class="numbers">12</span>.<span class="numbers">3</span>, open
-FontLab and from the *FontLab <span class="numbers">7</span>* menu
-choose *Check for Updates*. Download the FontLab
-<span class="numbers">7</span> update, and follow the instructions to
-install it. Then run FontLab <span class="numbers">7</span>. If you have
-installed this new FontLab <span class="numbers">7</span> update, and
-you then get a notification about *FontLab
-<span class="numbers">7</span>.<span class="numbers">2</span>.<span class="numbers">0</span>.<span class="numbers">7650</span>*
-being available, click *Skip this Version*, then go to *Preferences ›
-General* and turn off *Get beta versions*.
+**Before** you update macOS Monterey to 12.3, open FontLab and choose *FontLab 7 › Check for Updates*. Download and install the FontLab 7 update, then run FontLab 7. If you then see a notification about build 7650 or 7651, click *Skip This Version*, then go to *Preferences › General* and turn off *Get beta versions*.
 
-If you **have updated** your macOS to
-<span class="numbers">12</span>.<span class="numbers">3</span> Monterey,
-and you try to run an older version of FontLab
-<span class="numbers">7</span>, FontLab will *crash*. If this happens,
-click the button below to download the FontLab
-<span class="numbers">7</span> update, and install it. 
+If you **have already updated** to macOS 12.3 and FontLab crashes on launch, download and install the update below.
 
-------------------------------------------------------------------------
+---
 
-<a href="https://download.fontlab.com/fontlab-7/get-mac.php"
-class="wp-block-button__link wp-element-button">Download FontLab <span
-class="numbers">7</span>.<span class="numbers">2</span>.<span
-class="numbers">0</span>.<span class="numbers">7644</span> for macOS
-(all versions)</a>
+[Download FontLab 7.2.0.7644 for macOS (all versions)](https://download.fontlab.com/fontlab-7/get-mac.php)
 
-------------------------------------------------------------------------
+---
 
-This update contains two different editions of FontLab
-<span class="numbers">7</span>: for macOS
-<span class="numbers">12</span>.<span class="numbers">3</span> or newer,
-and for macOS
-<span class="numbers">12</span>.<span class="numbers">2</span> or older.
-Please install the edition suitable for your macOS version. To see which
-version of macOS you’re using, click the *Apple* menu and choose *About
-your Mac*.
+The download contains two editions of FontLab 7: one for macOS 12.3 or newer, one for macOS 12.2 or older. To check your macOS version, click the Apple menu and choose *About This Mac*.
 
-<figure class="aligncenter size-large is-resized">
-<img
-src="https://res.cloudinary.com/fontlab/images/w_1024,h_806,c_scale/v1647359144/blog/fontlab7-monterey-installer/fontlab7-monterey-installer-1024x806.png?_i=AA"
-class="wp-image-2875" style="width:512px;height:403px"
-fetchpriority="high" decoding="async" width="512" height="403" />
-<figcaption>After you download and double-click your DMG, choose the
-right installation procedure depending for your macOS version. See
-details below.</figcaption>
-</figure>
+![After you download and double-click the DMG, choose the right installation procedure for your macOS version.](https://res.cloudinary.com/fontlab/images/w_1024,h_806,c_scale/v1647359144/blog/fontlab7-monterey-installer/fontlab7-monterey-installer-1024x806.png?_i=AA)
 
 ## Install on macOS 12.2 Monterey or older
 
-If you use macOS Monterey
-<span class="numbers">12</span>.<span class="numbers">2</span> or older,
-or macOS <span class="numbers">11</span> Big Sur,
-<span class="numbers">10</span>.<span class="numbers">15</span>
-Catalina,
-<span class="numbers">10</span>.<span class="numbers">14</span> Mojave,
-<span class="numbers">10</span>.<span class="numbers">13</span> High
-Sierra or
-<span class="numbers">10</span>.<span class="numbers">12</span> Sierra:
+If you use macOS Monterey 12.2 or older, macOS 11 Big Sur, macOS 10.15 Catalina, 10.14 Mojave, 10.13 High Sierra, or 10.12 Sierra:
 
-- Download the
-  <a href="https://download.fontlab.com/fontlab-7/get-mac.php"
-  target="_blank" rel="noreferrer noopener">FontLab <span
-  class="numbers">7</span>.<span class="numbers">2</span>.<span
-  class="numbers">0</span>.<span class="numbers">7644</span> update</a>
-- Double-click the downloaded
-  *FontLab-<span class="numbers">7</span>-Mac-Install-<span class="numbers">7644</span>.dmg*
-  archive and accept the license
-- Double-click *FontLab-<span class="numbers">7</span>-older.dmg* and
-  accept the license
-- When a second window opens, drag *FontLab
-  <span class="numbers">7</span>.app* to your */Applications* folder
-- Run FontLab <span class="numbers">7</span>.
-- When you see the update notification to build
-  <span class="numbers">7651</span>, click *Skip This Version*.
+1. [Download FontLab 7.2.0.7644](https://download.fontlab.com/fontlab-7/get-mac.php)
+2. Double-click *FontLab-7-Mac-Install-7644.dmg* and accept the license
+3. Double-click *FontLab-7-older.dmg* and accept the license
+4. Drag *FontLab 7.app* to your */Applications* folder
+5. Run FontLab 7
+6. If you see the update notification for build 7651, click *Skip This Version*
 
 ## Install on macOS 12.3 Monterey or newer
 
-If you have updated **macOS Monterey** to version
-**<span class="numbers">12</span>.<span class="numbers">3</span>**
-(released in March <span class="numbers">2022</span>) or newer:
+1. [Download FontLab 7.2.0.7644](https://download.fontlab.com/fontlab-7/get-mac.php)
+2. Double-click *FontLab-7-Mac-Install-7644.dmg* and accept the license
+3. Double-click *README* and follow the instructions: **first** double-click the bundled *python-2.7.18.pkg* to install Python, then drag *FontLab 7* to your */Applications* folder
+4. Run FontLab 7
+5. If you see the update notification for build 7651, click *Skip This Version*
 
-- Download the
-  <a href="https://download.fontlab.com/fontlab-7/get-mac.php"
-  target="_blank" rel="noreferrer noopener">FontLab <span
-  class="numbers">7</span>.<span class="numbers">2</span>.<span
-  class="numbers">0</span>.<span class="numbers">7644</span> update</a>
-- Double-click the downloaded
-  *FontLab-<span class="numbers">7</span>-Mac-Install-<span class="numbers">7644</span>.dmg*
-  archive and accept the license
-- Double-click *<span class="caps">README</span>* and follow the
-  included instructions: **first** double-click the
-  bundled *python‑<span class="numbers">2</span>.<span class="numbers">7</span>.<span class="numbers">18</span>.pkg* to
-  install, then drag *FontLab <span class="numbers">7</span>* to
-  your */Applications* folder.
-- Run FontLab <span class="numbers">7</span>.
-- When you see the update notification to build
-  <span class="numbers">7651</span>, click *Skip This Version*.
-
-*Note: This edition requires that you install a separate version of
-Python <span class="numbers">2</span>.<span class="numbers">7</span>,
-which is provided in the .dmg archive. When you install Python, you need
-to enter your administrator password.*
+*Note: this edition requires a separate Python 2.7 installation, provided in the DMG. You will need your administrator password to install it.*
 
 ## Download and install FontLab 7.2.0.7644 on Windows
 
-------------------------------------------------------------------------
+---
 
-<a href="https://download.fontlab.com/fontlab-7/get-win64.php"
-class="wp-block-button__link wp-element-button">Download FontLab <span
-class="numbers">7</span>.<span class="numbers">2</span>.<span
-class="numbers">0</span>.<span class="numbers">7644</span> for Windows
-(<span class="numbers">64</span>-bit)</a>
+[Download FontLab 7.2.0.7644 for Windows (64-bit)](https://download.fontlab.com/fontlab-7/get-win64.php)
 
-------------------------------------------------------------------------
+---
 
-<a href="https://download.fontlab.com/fontlab-7/get-win.php"
-class="wp-block-button__link wp-element-button">Download FontLab <span
-class="numbers">7</span>.<span class="numbers">2</span>.<span
-class="numbers">0</span>.<span class="numbers">7644</span> for Windows
-(<span class="numbers">32</span>-bit)</a>
+[Download FontLab 7.2.0.7644 for Windows (32-bit)](https://download.fontlab.com/fontlab-7/get-win.php)
 
-------------------------------------------------------------------------
+---
 
-## Install on Windows 7–11 64-bit or 32-bit
+## Install on Windows 7–11
 
-- Click the buttons above to download the FontLab
-  <span class="numbers">7</span>.<span class="numbers">2</span>.<span class="numbers">0</span>.<span class="numbers">7644</span>
-  update appropriate for your Windows version
-  (<span class="numbers">64</span>-bit or
-  <span class="numbers">32</span>-bit, if in doubt, use the
-  <span class="numbers">64</span>-bit version).
-- Double-click the downloaded *.exe* file and install the app.
-- Run FontLab <span class="numbers">7</span>.
-- When you see the update notification to build
-  <span class="numbers">7651</span>, click *Skip This Version*.
+1. Download the edition appropriate for your Windows version (64-bit or 32-bit; if unsure, use 64-bit)
+2. Double-click the downloaded *.exe* file and install the app
+3. Run FontLab 7
+4. If you see the update notification for build 7651, click *Skip This Version*
 
 ## Fix the transparent fill problem
 
-After you’ve installed FontLab
-<span class="numbers">7</span>.<span class="numbers">2</span>.<span class="numbers">0</span>.<span class="numbers">7644</span>,
-if you open a font that unintentionally has transparent or colored fill
-applied to the glyphs:
+If you open a font after installing FontLab 7.2.0.7644 and glyphs unintentionally have a transparent or colored fill:
 
-- Open the *Color* panel via *View &gt; Panels &gt; Color*.
-- In the *Color* panel, type `black` into the color name field (at the
-  bottom).
-- In Font window, choose *Edit &gt; Select All*.
-- In the *Layers & Masters* panel, choose your first master.
-- In the *Color* panel, click *Apply*.
-- Choose the next master and click *Apply* in the *Color* panel, repeat
-  for all masters.
-- Save the font as a new <span class="caps">VFC</span>.
-
-<img
-src="https://secure.gravatar.com/avatar/a19bf747f8460e6f957b712ff0d7ac8b?s=96&amp;d=blank&amp;r=g"
-class="uk-comment-avatar avatar-96 photo"
-srcset="https://secure.gravatar.com/avatar/a19bf747f8460e6f957b712ff0d7ac8b?s=192&amp;d=blank&amp;r=g 2x"
-decoding="async" width="96" height="96" />
-
-## Adam Twardoch
-
-Adam Twardoch is Director of Products at FontLab, and a font consultant
-specializing in font technology, multilingual typography, CSS webfonts,
-Unicode and OpenType. Co-designer of Lato, the world’s most-popular
-independently made font family (by Łukasz Dziedzic), and of Milka (by
-Botio Nikoltchev). Co-creator of OpenType Font Variations and CSS Fonts
-specs. In 2000–2014, technical and linguistic consultant at MyFonts, the
-world’s largest online font distributor, and board member of Association
-Typographique Internationale (ATypI). Adam regularly teaches workshops
-in font creation. He lives and works in Warsaw and Berlin.
+1. Open the *Color* panel via *View › Panels › Color*
+2. Type `black` into the color name field at the bottom
+3. In the Font window, choose *Edit › Select All*
+4. In the *Layers & Masters* panel, choose your first master
+5. In the *Color* panel, click *Apply*
+6. Choose the next master, click *Apply* in the Color panel, and repeat for all masters
+7. Save the font as a new VFC

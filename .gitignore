@@ -1,4 +1,5 @@
 src/*/__version__.py
+src_docs/md/assets/copy-to-llm/
 __marimo__/
 __pycache__/
 __pypackages__/

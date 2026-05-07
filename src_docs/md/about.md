@@ -24,9 +24,8 @@ FontLab VI launched in 2017 as a full rewrite of the flagship editor. It was the
 
 ## The team
 
-- **Ted** — President
+- **Adam** — President
 - **Yuri** — Lead Development
-- **Adam** — Products & Marketing
 - **Dima** — Development
 - **Sofia** — Development
 - **Alex** — Help & Support

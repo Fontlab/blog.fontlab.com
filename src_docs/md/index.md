@@ -1,8 +1,4 @@
 ---
 title: Blog
-this_file: src_docs/md/blog/index.md
+this_file: src_docs/md/index.md
 ---
-
-# Blog
-
-News, technical writing, and updates from FontLab.

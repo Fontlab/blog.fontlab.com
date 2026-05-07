@@ -16,6 +16,7 @@ use_directory_urls: true
 theme:
   name: materialx
   custom_dir: mk-fontlab
+  font: false
   features:
     - navigation.top
     - toc.follow
@@ -75,6 +76,25 @@ markdown_extensions:
 plugins:
   - search:
       enabled: true
+  - include-markdown:
+      opening_tag: "{!"
+      closing_tag: "!}"
+  - llmstxt:
+      markdown_description: News, technical writing, and product updates from FontLab.
+      full_output: llms-full.txt
+      sections:
+        Main pages:
+          - index.md: Latest posts from the FontLab Blog.
+          - about.md: FontLab company history and background.
+        Blog posts:
+          - posts/*.md
+  - copy-to-llm:
+      repo_url: https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md
+      button_hover_color: "var(--md-accent-fg-color)"
+      toast_bg_color: "var(--md-accent-fg-color)"
+      buttons:
+        open_in_chatgpt: false
+        open_in_claude: false
   - materialx/tags
   - materialx/blog:
       blog_dir: .
@@ -84,8 +104,8 @@ plugins:
       archive: true
       categories: true
       authors: true
-      authors_file: .authors.yml
-      pagination_per_page: 10
+      authors_file: authors.yml
+      pagination_per_page: 30
       draft_on_serve: true
       draft_if_future_date: false
 

@@ -1,0 +1,1846 @@
+<!-- this_file: mkdocs/mk-fontlab/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
+<meta name="mkdocs-site-name" content="FontLab Blog">
+<meta name="mkdocs-copy-to-llm-analytics" content="false">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="News, technical writing, and updates from FontLab.">
+      
+      
+        <meta name="author" content="Fontlab Ltd.">
+      
+      
+        <link rel="canonical" href="https://blog.fontlab.com/2019/10/29/migration-paths-from-legacy-fontlab-tools-on-catalina/">
+      
+      
+        <link rel="prev" href="../../08/fontlab-studio-5-fontographer-5-and-typetool-3-on-macos-1015-catalina/">
+      
+      
+        <link rel="next" href="../../../11/30/introducing-fontlab-7-the-pro-font-editor-evolved/">
+      
+      
+        
+      
+      
+      
+      
+        
+        
+        
+          <link rel="icon" href="../../../../assets/images/favicon.png">
+        
+      
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.4">
+    
+    
+      
+        <title>Migration paths from legacy FontLab tools on Catalina - FontLab Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.e156878f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.d7242098.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/fontlab-chrome.css">
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
+    
+      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+
+  <!-- MaterialX layout tweaks: <fontlab-menu> is the only top bar. -->
+  <style>
+    /* Kill the MaterialX copyright footer; <fontlab-footer> is the only footer. */
+    .md-footer { display: none !important; }
+
+    /* Sub-pages: narrow column + proper typography scale. */
+    .md-content__inner.md-typeset {
+      max-width: 860px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 1rem 1.5rem 3rem !important;
+    }
+    .md-main__inner { margin-top: 0 !important; }
+  </style>
+
+  <!-- FontLab menu/footer loader -->
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer></script>
+
+  <!-- Configure <fontlab-menu>: no local nav items for blog; search from 'blog'. -->
+  <script>
+  (function () {
+    function apply() {
+      var el = document.querySelector('fontlab-menu');
+      if (!el) return;
+      el.config = { localMenu: [], search: { from: 'blog' } };
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else { apply(); }
+  })();
+  </script>
+
+  </head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#crossover-mac-19" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <fontlab-menu
+    mode="dark"
+    site-label="Blog"
+    site-url="https://blog.fontlab.com/"></fontlab-menu>
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-header__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FontLab Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migration paths from legacy FontLab tools on Catalina
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+  
+
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-nav__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FontLab Blog
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2020
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2017/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2017
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2015/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2015
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2014/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2014
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2013/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2013
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2012/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2012
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2005/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2005
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2000
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/1994/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1994
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/1992/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1992
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/fontlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    History
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    News
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/transtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TransType
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/type1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/vexy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vexy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    release
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#crossover-mac-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CrossOver Mac 19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtualization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-macos-inside-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running macOS inside macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choose-your-virtualization-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose your virtualization app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#choose-your-guest-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose your guest macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-macos-mojave-in-parallels-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing macOS Mojave in Parallels Desktop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-guest-macos-in-vmware-fusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing guest macOS in VMWare Fusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-guest-macos-in-virtualbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing guest macOS in VirtualBox
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-managing-your-guest-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for managing your guest macOS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Windows
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guest-windows-in-a-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guest Windows in a virtual machine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bootcamp-with-virtualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BootCamp with virtualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-on-this-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        More on this topic
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                        
+                      </strong>
+                      <br>
+                      Fontlab Ltd.
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2019-10-29 00:00:00+00:00" class="md-ellipsis">October 29, 2019</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/release/">release</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              7 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+  <h1>Migration paths from legacy FontLab tools on Catalina</h1>
+
+<p>If you rely on FontLab Studio 5, Fontographer 5, TypeTool 3, or BitFonter 3 on a Mac that has been updated to macOS Catalina, there are three viable routes: CrossOver Mac 19 for a lightweight Windows emulation layer, a virtual machine running an older macOS or Windows, or a clean upgrade to FontLab 7. This post covers the setup in detail for each option.</p>
+<!-- more -->
+
+<h2 id="crossover-mac-19">CrossOver Mac 19<a class="headerlink" href="#crossover-mac-19" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.codeweavers.com/">Codeweavers CrossOver Mac</a> 19 runs on macOS Catalina and lets you run 32-bit Windows apps without installing Windows — a thin emulation layer that requires no full Windows license.</p>
+<p>The whole footprint is small: CrossOver, the Windows bottle, and the FontLab apps together take under 1 GB of disk. CrossOver uses far less RAM than a real Windows virtual machine, and apps run at native speed.</p>
+<p>The trade-off: Windows apps on CrossOver still look and behave like Windows apps, not Mac apps.</p>
+<p>We've tested FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3 with CrossOver 19 — they run fine. <a href="https://www.fontlab.com/contact/">Contact our sales</a> for cross-grade pricing from Mac to Windows versions of the classic apps.</p>
+<h2 id="virtualization">Virtualization<a class="headerlink" href="#virtualization" title="Permanent link">&para;</a></h2>
+<h3 id="running-macos-inside-macos">Running macOS inside macOS<a class="headerlink" href="#running-macos-inside-macos" title="Permanent link">&para;</a></h3>
+<p>Virtualization apps let you run a complete operating system inside a window on your Mac. The guest OS lives on a virtual disk — a large file on your real drive — and runs alongside your normal apps. From the guest's perspective, the virtual machine is the computer.</p>
+<p>You can configure shared folders so the guest can read and write files on your real Mac, just like a network drive. Some virtualization apps also offer a "coherence" mode where guest app windows appear alongside real Mac windows.</p>
+<p><strong>Performance:</strong> you assign a fixed slice of RAM to the VM when it runs. Font editors are not memory-hungry — 4 GB is plenty. As for speed, modern Macs support hardware virtualization via a hypervisor. Guest apps typically run at 80–90% of native speed, which is faster than FontLab Studio 5 ran on Macs from just a few years ago. You won't notice any delays.</p>
+<h3 id="choose-your-virtualization-app">Choose your virtualization app<a class="headerlink" href="#choose-your-virtualization-app" title="Permanent link">&para;</a></h3>
+<p>Three options exist for Mac:</p>
+<p><strong><a href="https://www.parallels.com/products/desktop/">Parallels Desktop 15</a></strong> is the most popular. Easy to use, runs Catalina as host, and lets you install macOS Mojave, High Sierra, or Sierra as a guest. Standard edition: $80/€100 one-time, or €80/year subscription with free upgrades. Pro edition costs about $20 more.</p>
+<p><strong><a href="https://www.vmware.com/products/fusion.html">VMWare Fusion 11.5</a></strong> is the alternative. Performance is comparable to Parallels (marginally faster in some tests, marginally slower in others). VMs created in VMWare are slightly more portable — there is a free VMWare Workstation Player for Windows that can run the same VM files. Price: $/€90.</p>
+<p><strong><a href="https://www.virtualbox.org/">Oracle VirtualBox</a></strong> is completely free and open-source. Performance is comparable, but setup is more complex and host/guest integration is less polished. Download the "OS X hosts" version from the VirtualBox website.</p>
+<h3 id="choose-your-guest-macos">Choose your guest macOS<a class="headerlink" href="#choose-your-guest-macos" title="Permanent link">&para;</a></h3>
+<p><em>The macOS license agreement permits running macOS as a guest only when the host is also macOS. Running macOS inside Windows, or on a PC, is not permitted.</em></p>
+<p>The easiest choice is <strong>macOS 10.14 Mojave</strong>. A Mojave virtual disk takes around 22 GB once installed; Sierra takes around 11 GB.</p>
+<p>Download links (each opens in the Mac App Store or System Preferences):</p>
+<p><strong>macOS 10.14.6 Mojave</strong> — requires at least 2 GB RAM and 18.5 GB storage in the VM.
+<a href="https://apps.apple.com/us/app/macos-mojave/id1398502828">Download macOS Mojave</a> (6.1 GB installer)</p>
+<p><strong>macOS 10.13.6 High Sierra</strong> — requires at least 2 GB RAM and 14.3 GB storage in the VM.
+<a href="https://apps.apple.com/us/app/macos-high-sierra/id1246284741">Download macOS High Sierra</a> (4.8 GB installer)</p>
+<p><strong>macOS 10.12.6 Sierra</strong> — requires at least 2 GB RAM and 8.8 GB storage in the VM.
+<a href="https://itunes.apple.com/us/app/macos-sierra/id1127487414">Download macOS Sierra</a> (5.1 GB installer) — note: you can only download this from the App Store if you are currently on High Sierra or earlier.</p>
+<h3 id="installing-macos-mojave-in-parallels-desktop">Installing macOS Mojave in Parallels Desktop<a class="headerlink" href="#installing-macos-mojave-in-parallels-desktop" title="Permanent link">&para;</a></h3>
+<p>Parallels Desktop makes guest macOS installation straightforward. You'll need about 42 GB of free space during installation; once complete, the VM will occupy 23–32 GB.</p>
+<ol>
+<li>Run <em>Parallels Desktop</em>.</li>
+<li>Choose <em>File &gt; New…</em> to open the Installation Assistant.</li>
+<li>Click <em>Install Windows or another OS from a DVD or image file</em> and click <em>Continue</em>.</li>
+<li>In the <em>Installation images found</em> list, choose <em>macOS: Install macOS Mojave.app</em> and click <em>Continue</em>.</li>
+<li>Click <em>Continue</em> in the popup and save the <em>macOS image file.dmg</em> in the suggested location (the <em>Parallels</em> folder inside your home folder). Wait for the image to be created.</li>
+<li>In the <em>Name and Location</em> window, enter a name. Enable <em>Create alias on Mac desktop</em> and <em>Customize settings before installation</em>.</li>
+<li>By default Parallels stores the VM in your <em>Parallels</em> folder. If you have both an SSD and an HDD, store it on the SSD.</li>
+<li>Click <em>Create</em>. In the Configuration dialog:</li>
+<li><em>Options</em> tab → <em>Optimization &gt; Resource usage</em>: choose <em>Medium</em></li>
+<li><em>Sharing &gt; Share folders</em>: you may choose <em>All disks</em></li>
+<li><em>Hardware</em> tab → <em>CPU &amp; Memory</em>: allocate 20–25% of your Mac's RAM (2 GB minimum; 4 GB if you have 16 GB)</li>
+<li><em>Graphics</em>: set Memory to 256 or 512 MB</li>
+<li>Click <em>+ &gt; Hard Disk</em>, set the maximum virtual disk size (32 GB if you allocated 4 GB RAM), enable <em>Split the disk image into 2 GB files</em>, click <em>OK</em></li>
+<li>Click <em>Hard Disk 1</em>, click <em>–</em> at the bottom, choose <em>Move to Trash</em></li>
+<li>In <em>Boot Order</em>, click <em>Hard Disk 2</em>, then click <em>↑</em></li>
+<li>Close the Configuration window with the red × button</li>
+<li>In the Installation Assistant, click <em>Continue</em>.</li>
+<li>Sign in to or create a Parallels Account to start the 14-day trial or activate your purchase.</li>
+<li>The guest window appears. Click <em>▶</em> to start installing macOS Mojave.</li>
+<li>If Parallels asks to use Accessibility features, click <em>Grant</em> and enable it in <em>System Preferences &gt; Security &amp; Privacy &gt; Accessibility</em>.</li>
+<li>When the <em>Welcome</em> screen appears in the guest, choose your language and click <em>→</em>. Press Ctrl+Alt to release mouse capture back to your real Mac.</li>
+<li>In the <em>macOS Utilities</em> dialog inside the guest, double-click <em>Install macOS</em>.</li>
+<li>Proceed through the installer; choose <em>Macintosh HD</em> (the virtual Hard Disk 2, not your real drive).</li>
+<li>After 10–15 minutes the guest restarts. You don't need to sign in with an Apple ID unless you want to sync data with the guest.</li>
+<li>Create a user account — same name as your real Mac account is fine, but use a different password.</li>
+<li>Once setup completes, the guest desktop appears.</li>
+<li>Click the yellow-triangle exclamation in the guest window's top-right corner and choose <em>Install Parallels Tools…</em></li>
+<li>Double-click the <em>Parallels Tools</em> volume on the guest desktop, double-click install, and complete the installation.</li>
+<li>Enter the guest account's password when prompted (not your real Mac password).</li>
+<li>Click <em>Restart</em>.</li>
+<li>After restart, drag the <em>Parallels Tools</em> volume to the Bin inside the guest window. From the app menu, choose <em>Devices &gt; CD/DVD &gt; Disconnect</em>.</li>
+<li>Double-click <em>Parallels Shared Folders</em> on the guest desktop. The guest Finder will show your real Mac's volumes — you can now open and save files across both systems.</li>
+<li>On your real Mac, download the latest version of <a href="https://www.fontlab.com/font-editor/fontlab-studio/">FontLab Studio 5.1.6</a>, <a href="https://www.fontlab.com/font-editor/fontographer/">Fontographer 5.2.4</a>, or <a href="https://www.fontlab.com/font-editor/typetool/">TypeTool 3.1.3</a>.</li>
+<li>Inside the guest, open <em>Parallels Shared Folders</em>, navigate to <em>Home &gt; Downloads</em>, double-click the DMG, and install the font editor. Enter your serial number to activate.</li>
+<li>Drag the macOS Mojave VM icon to the left side of your Dock for one-click access.</li>
+<li>Shut down the guest from its Apple menu.</li>
+<li>In Parallels Desktop, choose <em>View &gt; Expanded View</em>, click the gear icon, go to the <em>Hardware</em> tab, click <em>Hard Disk 1</em>. If the Source shows <em>macOS image file.hdd</em>, click <em>–</em> and choose <em>Move to Trash</em> — you no longer need the installer volume.</li>
+<li>Quit Parallels Desktop.</li>
+<li>Move <em>Install macOS Mojave.app</em> from your <em>/Applications</em> folder to Trash.</li>
+<li>Empty the Trash — you'll reclaim around 12 GB. Your guest macOS Mojave VM should now occupy no more than 24 GB.</li>
+</ol>
+<p>Additional guides for Parallels Desktop:</p>
+<ul>
+<li><a href="https://www.parallels.com/blogs/try-macos-mojave-parallels-desktop/">https://www.parallels.com/blogs/try-macos-mojave-parallels-desktop/</a></li>
+<li><a href="https://www.geekrar.com/install-macos-mojave-on-parallels-desktop/">https://www.geekrar.com/install-macos-mojave-on-parallels-desktop/</a></li>
+<li><a href="https://www.parallels.com/blogs/older-versions-mac-os-x-with-macos-sierra/">https://www.parallels.com/blogs/older-versions-mac-os-x-with-macos-sierra/</a></li>
+<li><a href="https://www.howtogeek.com/364272/how-to-run-macos-mojave-in-parallels-for-free/">https://www.howtogeek.com/364272/how-to-run-macos-mojave-in-parallels-for-free/</a></li>
+</ul>
+<h3 id="installing-guest-macos-in-vmware-fusion">Installing guest macOS in VMWare Fusion<a class="headerlink" href="#installing-guest-macos-in-vmware-fusion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://docs.vmware.com/en/VMware-Fusion/11/com.vmware.fusion.using.doc/GUID-474FC78E-4E77-42B7-A1C6-12C2F378C5B9.html">https://docs.vmware.com/en/VMware-Fusion/11/com.vmware.fusion.using.doc/GUID-474FC78E-4E77-42B7-A1C6-12C2F378C5B9.html</a></li>
+<li><a href="https://www.huibdijkstra.nl/how-to-set-up-a-osx-mojave-vm-in-vmware-fusion/">https://www.huibdijkstra.nl/how-to-set-up-a-osx-mojave-vm-in-vmware-fusion/</a></li>
+</ul>
+<h3 id="installing-guest-macos-in-virtualbox">Installing guest macOS in VirtualBox<a class="headerlink" href="#installing-guest-macos-in-virtualbox" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/">https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/</a></li>
+<li><a href="https://www.saintlad.com/install-macos-sierra-in-virtualbox-on-windows-10/">https://www.saintlad.com/install-macos-sierra-in-virtualbox-on-windows-10/</a></li>
+<li><a href="https://medium.com/@twister.mr/installing-macos-to-virtualbox-1fcc5cf22801">https://medium.com/@twister.mr/installing-macos-to-virtualbox-1fcc5cf22801</a></li>
+<li><a href="https://www.maketecheasier.com/install-macos-virtualbox/">https://www.maketecheasier.com/install-macos-virtualbox/</a></li>
+</ul>
+<h3 id="tips-for-managing-your-guest-macos">Tips for managing your guest macOS<a class="headerlink" href="#tips-for-managing-your-guest-macos" title="Permanent link">&para;</a></h3>
+<p>Once the guest is running:</p>
+<ul>
+<li>Keep the guest lean — don't install apps you don't need there.</li>
+<li>Save working files on your real Mac using shared folders, not inside the guest.</li>
+<li>In the guest's <em>System Preferences &gt; General</em>, switch <em>Appearance</em> to <em>Graphite</em> so you can tell at a glance whether you're looking at the real desktop or the guest.</li>
+<li>In <em>Accessibility</em>, enable <em>Reduce motion</em> and <em>Reduce transparency</em>.</li>
+<li>Keep the guest in non-Retina mode (the default) — the classic FontLab apps don't support Retina, and non-Retina mode reduces visual confusion.</li>
+</ul>
+<h2 id="running-windows">Running Windows<a class="headerlink" href="#running-windows" title="Permanent link">&para;</a></h2>
+<h3 id="guest-windows-in-a-virtual-machine">Guest Windows in a virtual machine<a class="headerlink" href="#guest-windows-in-a-virtual-machine" title="Permanent link">&para;</a></h3>
+<p>Installing a Windows guest works the same way as a macOS guest, and is actually simpler — virtualization apps are most commonly used for Windows. FontLab Studio 5, Fontographer 5, and TypeTool 3 for Windows run on XP, Vista, 7, 8, and 10. <a href="https://www.fontlab.com/contact/">Contact FontLab sales</a> to cross-grade from a Mac license to a Windows license.</p>
+<p>You'll need a valid Windows product key and an ISO installer for your chosen Windows version. An old Windows XP "tiny" or "micro" ISO, once installed, can occupy as little as 2–3 GB. A Windows 7 VM with apps installed typically takes around 9 GB.</p>
+<h3 id="bootcamp-with-virtualization">BootCamp with virtualization<a class="headerlink" href="#bootcamp-with-virtualization" title="Permanent link">&para;</a></h3>
+<p>Apple's BootCamp lets you install Windows on a separate partition and boot directly into it for full native performance. Parallels Desktop and VMWare Fusion can also run your BootCamp Windows partition inside a VM — slightly slower than native boot, but usable side-by-side with your Mac apps.</p>
+<h2 id="more-on-this-topic">More on this topic<a class="headerlink" href="#more-on-this-topic" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../08/fontlab-studio-5-fontographer-5-and-typetool-3-on-macos-1015-catalina/">FontLab Studio 5, Fontographer 5 and TypeTool 3 on macOS 10.15 Catalina</a></li>
+</ul>
+
+
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden>
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+        
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc" >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-right" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2013–2026 Fontlab Ltd.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <section class="fl-footer-cta" aria-label="FontLab links">
+    <div class="fl-footer-cta__grid">
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--buy">
+        <h2 class="fl-footer-cta__title">Buy FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Get the professional font editor for drawing, spacing, kerning,
+          OpenType production, color fonts, and variable fonts.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light"
+             href="https://www.fontlab.com/buy/">Buy now</a>
+        </p>
+        <a class="fl-footer-cta__fineprint"
+           href="https://www.fontlab.com/buy/">FontLab licenses, upgrades, and bundles</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--learn">
+        <h2 class="fl-footer-cta__title">Explore FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Learn what FontLab can do for type design, variable workflows,
+          color fonts, scripting, import, export, and production.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light"
+             href="https://www.fontlab.com/">Learn more</a>
+        </p>
+        <a class="fl-footer-cta__fineprint"
+           href="https://www.fontlab.com/">Products, features, examples, and updates</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--talk">
+        <h2 class="fl-footer-cta__title">Questions first?</h2>
+        <p class="fl-footer-cta__copy">
+          Tell us what you are making, what you need to solve, or what you
+          need to know before choosing a FontLab tool.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--dark"
+             href="https://www.fontlab.com/contact/">Let's talk</a>
+        </p>
+        <a class="fl-footer-cta__fineprint fl-footer-cta__fineprint--dark"
+           href="https://www.fontlab.com/contact/">Sales and support contact options</a>
+      </article>
+    </div>
+  </section>
+  <fontlab-footer mode="dark"></fontlab-footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.top", "toc.follow", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.3c4058f5.min.js"></script>
+      
+        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
+      
+    
+  </body>
+</html>

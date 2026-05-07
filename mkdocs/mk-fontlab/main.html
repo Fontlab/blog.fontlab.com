@@ -6,11 +6,20 @@
 
   We add on top of MaterialX:
     1. FontLab menu + footer web components and their loader script.
-    2. Local menu config (empty localMenu; search from 'blog').
+    2. Partner-site typography fonts for the blog headings.
+    3. Local menu config (empty localMenu; search from 'blog').
+    4. A general FontLab CTA band above the shared footer.
 -#}
 
 {% block extrahead %}
   {{ super() }}
+
+  <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
 
   <!-- MaterialX layout tweaks: <fontlab-menu> is the only top bar. -->
   <style>
@@ -53,7 +62,64 @@
   {{ super() }}
 {% endblock %}
 
+{% block hero %}
+  {% if page and page.is_homepage %}
+    <div class="fl-home-hero" role="presentation">
+      <img class="fl-home-hero__img"
+           src="{{ 'media/fl8-hero.png' | url }}"
+           alt=""
+           loading="eager"
+           decoding="async">
+    </div>
+  {% endif %}
+{% endblock %}
+
 {% block footer %}
   {{ super() }}
+  <section class="fl-footer-cta" aria-label="FontLab links">
+    <div class="fl-footer-cta__grid">
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--buy">
+        <h2 class="fl-footer-cta__title">Buy FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Get the professional font editor for drawing, spacing, kerning,
+          OpenType production, color fonts, and variable fonts.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light"
+             href="https://www.fontlab.com/buy/">Buy now</a>
+        </p>
+        <a class="fl-footer-cta__fineprint"
+           href="https://www.fontlab.com/buy/">FontLab licenses, upgrades, and bundles</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--learn">
+        <h2 class="fl-footer-cta__title">Explore FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Learn what FontLab can do for type design, variable workflows,
+          color fonts, scripting, import, export, and production.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light"
+             href="https://www.fontlab.com/">Learn more</a>
+        </p>
+        <a class="fl-footer-cta__fineprint"
+           href="https://www.fontlab.com/">Products, features, examples, and updates</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--talk">
+        <h2 class="fl-footer-cta__title">Questions first?</h2>
+        <p class="fl-footer-cta__copy">
+          Tell us what you are making, what you need to solve, or what you
+          need to know before choosing a FontLab tool.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--dark"
+             href="https://www.fontlab.com/contact/">Let's talk</a>
+        </p>
+        <a class="fl-footer-cta__fineprint fl-footer-cta__fineprint--dark"
+           href="https://www.fontlab.com/contact/">Sales and support contact options</a>
+      </article>
+    </div>
+  </section>
   <fontlab-footer mode="dark"></fontlab-footer>
 {% endblock %}

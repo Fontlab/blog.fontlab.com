@@ -33,7 +33,7 @@ jobs:
         run: uv python install 3.12
 
       - name: Sync dependencies
-        run: uv sync
+        run: uv sync --frozen
 
       - name: Build site
         run: ./build.sh build
@@ -41,8 +41,11 @@ jobs:
       - name: Sanity-check output
         run: |
           [[ -f docs/index.html ]] || exit 1
+          [[ -f docs/about/index.html ]] || exit 1
           [[ -f docs/CNAME ]] || exit 1
-          [[ -f docs/blog/index.html ]] || exit 1
+          [[ -f docs/.nojekyll ]] || exit 1
+          [[ -f docs/llms.txt ]] || exit 1
+          [[ -f docs/llms-full.txt ]] || exit 1
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
