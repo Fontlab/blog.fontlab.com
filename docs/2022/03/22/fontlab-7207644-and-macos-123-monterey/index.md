@@ -69,3 +69,5 @@ If you open a font after installing FontLab 7.2.0.7644 and glyphs unintentionall
 1. In the *Color* panel, click *Apply*
 1. Choose the next master, click *Apply* in the Color panel, and repeat for all masters
 1. Save the font as a new VFC
+
+[Read more →](https://download.fontlab.com/fontlab-7/get-mac.php)

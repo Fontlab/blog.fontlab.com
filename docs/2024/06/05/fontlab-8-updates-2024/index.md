@@ -23,4 +23,6 @@ Both updates are free for all FontLab 8 users. FontLab 8.4 also marks a mileston
 - **Better Help panel** — context-sensitive articles that update as you switch tools, keeping relevant documentation one glance away.
 - **Auto features on export** — if a font has no OpenType feature definitions, FontLab generates a sensible default feature set at export time.
 
-FontLab 8.4 and all prior 8.x updates are free for FontLab 8 license holders. Download the latest build and browse the full release notes at [fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Full documentation is at [help.fontlab.com](https://help.fontlab.com/).
+FontLab 8.4 and all prior 8.x updates are free for FontLab 8 license holders. Download the latest build from the [FontLab product page](https://www.fontlab.com/font-editor/fontlab/) and browse the [FontLab 8 help site](https://help.fontlab.com/fontlab/8/) for full documentation.
+
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/)

@@ -5,6 +5,21 @@ authors: [fontlab]
 date:
   created: 2020-12-11
 slug: import-artwork-fontlab-7
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/7/manual/Importing-Artwork/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Video runtime eight minutes — verify against YouTube"
+    - "Dave Lawrence is from California Type Foundry — verify"
+    - "FontLab 7 accepts paste from clipboard, drag-and-drop, and direct SVG import — verify all three methods"
+  image_status: present
+  image_needs: "Thumbnail present (fontlabtv-b6TO3MF-eMU.jpg) — adequate"
+  weakness_verdict: keep
+  consolidate_with: "2019-01-24-sketch-to-font-scanfont.md"
+  notes: "Clean, focused tutorial post. The closing sentence ('Once that step is smooth, the drawing and refinement workflow opens up considerably') is good motivation but arrives too late — move it to the opener. No CTA link to help docs is a miss for a how-to post."
 ---
 Most type designers don’t draw directly in the font editor — they sketch in pencil,
 refine in Illustrator or Affinity Designer, then need to get that artwork into FontLab
@@ -31,3 +46,5 @@ Getting artwork into FontLab without friction is foundational.
 Once that step is smooth, the drawing and refinement workflow opens up considerably.
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=b6TO3MF-eMU).
+
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Importing-Artwork/){ .fl-help-cta }

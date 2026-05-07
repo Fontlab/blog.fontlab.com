@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://blog.fontlab.com/2025/05/13/variable-fonts-were-never-about-file-size/">
       
       
-        <link rel="prev" href="../../../04/22/variable-fonts-in-many-languages/">
+        <link rel="prev" href="../../../04/08/fontlab-tv-color-fonts/">
       
       
         <link rel="next" href="../made-with-fontlab-nate-piekos/">
@@ -32,7 +32,7 @@
           <link rel="icon" href="../../../../assets/images/favicon.png">
         
       
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.3">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.3">
     
     
       
@@ -146,7 +146,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#references" class="md-skip">
+        <a href="#yes-the-page-weight-drops" class="md-skip">
           Skip to content
         </a>
       
@@ -854,6 +854,72 @@
     <ul class="md-nav__list" data-md-component="toc">
       
         <li class="md-nav__item">
+  <a href="#yes-the-page-weight-drops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Yes, the page weight drops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-maths-underneath-briefly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The maths underneath, briefly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-control-changes-the-design-itself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continuous control changes the design itself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-argument-crosses-every-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The argument crosses every language
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-production-tool-has-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the production tool has to do
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -932,7 +998,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -959,15 +1025,49 @@ The smaller downloads are real.
 They are also the least interesting thing about the format.</p>
 <!-- more -->
 
-<!-- image TBD -->
-
-<p>A variable font compresses an entire family into one file by storing a default master
-and a set of mathematical instructions for deforming it along continuous axes.
-Yes, that is fewer HTTP requests.
-Yes, the page weight drops.
-The Google Fonts and web.dev articles have repeated this for years and they are correct.</p>
-<p>The interesting part is what continuous control does to design itself.
-A static family forces the typesetter to choose between Regular and Bold, with nothing
+<p><img alt="FontLab 8 weight-axis and variable component controls" src="../../../../media/fl8-head-07-varcomponent.png" /></p>
+<h2 id="yes-the-page-weight-drops">Yes, the page weight drops<a class="headerlink" href="#yes-the-page-weight-drops" title="Permanent link">&para;</a></h2>
+<p>We used to ship eighteen separate font files just to make a website look decent.
+It was a dark time. Now you ship one, and the browser handles the math.
+CSS does the rest:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">@</span><span class="k">font-face</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Roboto Flex&#39;</span><span class="o">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;roboto-flex.woff2&#39;</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s1">&#39;woff2-variations&#39;</span><span class="o">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">font-weight</span><span class="o">:</span><span class="w"> </span><span class="nt">100</span><span class="w"> </span><span class="nt">1000</span><span class="o">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">font-stretch</span><span class="o">:</span><span class="w"> </span><span class="nt">25</span><span class="o">%</span><span class="w"> </span><span class="nt">151</span><span class="o">%;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>You write <code>font-variation-settings: 'wght' 700, 'wdth' 85;</code> and the text responds
+instantly. No flicker.
+Layouts stay put. Performance wins twice — smaller payload, smoother animation.
+Google’s Roboto Flex specimen shows the full range live; Monotype rebuilt FF Meta as a
+variable font and replaced a small library with a single file.</p>
+<p>The Google Fonts and web.dev articles have repeated this story for years and they are
+correct. They are also where the conversation usually stops, which is a shame, because
+the file-size argument is the boring half.</p>
+<h2 id="the-maths-underneath-briefly">The maths underneath, briefly<a class="headerlink" href="#the-maths-underneath-briefly" title="Permanent link">&para;</a></h2>
+<p>For five hundred years, making a letter bolder meant casting a new chunk of lead.
+Digital typography clung to the habit for decades.
+You wanted bold italic, you bought a separate file.
+Then in 2016, Apple, Adobe, Google, and Microsoft agreed on OpenType Font Variations,
+and a whole family started fitting inside one file.</p>
+<p>A variable font stores a default master design plus a dense set of mathematical
+instructions for stretching and squishing it along continuous axes.
+Two axes — weight and width — define a square with four corners: Light Condensed, Light
+Wide, Black Condensed, Black Wide.
+The renderer interpolates any point inside the square on demand.
+Add an axis and you get a cube.
+Add another and your design lives in a hyperspace nobody can draw on paper, but the file
+does not care.</p>
+<p>Linear interpolation has limits.
+Letters do not get bolder at a constant rate.
+If you interpolate straight from a hairline to an ultra-black, the middle weights look
+anaemic or muddy. The fix is intermediate masters: a corrected drawing at, say, the 700
+weight position, which warps the interpolation path through that anchor.
+Sometimes a glyph needs to change shape entirely — a single-storey <code>g</code> past weight 850 —
+and the format handles that through the <code>rvrn</code> feature.</p>
+<h2 id="continuous-control-changes-the-design-itself">Continuous control changes the design itself<a class="headerlink" href="#continuous-control-changes-the-design-itself" title="Permanent link">&para;</a></h2>
+<p>A static family forces the typesetter to choose between Regular and Bold, with nothing
 in between. A variable family lets the typesetter pick 525 — between Medium and Semibold
 — because that is the weight the column actually wants.
 UI teams use this for hierarchy.
@@ -978,24 +1078,56 @@ keyframe in After Effects.</p>
 treating old categories as sacred.
 Time can be an axis.
 Motion can be an axis.
-The interface can become part of the typeface experience.
+The interface itself can become part of the typeface experience.
 A weight slider is the start, not the destination.</p>
-<p>FontLab 8 sits behind a lot of this work because it treats the variation space as a
-primary unit. Open a Light and a Black as masters; the engine establishes the axis
-automatically. Add an intermediate master at 700 if linear interpolation muddies the
-middle. Tag a single-storey <code>g</code> to swap in past 850 weight via the <code>rvrn</code> feature.
-Export, ship one file, give the typesetter the whole continuum.</p>
+<h2 id="the-argument-crosses-every-language">The argument crosses every language<a class="headerlink" href="#the-argument-crosses-every-language" title="Permanent link">&para;</a></h2>
+<p>The same case for variable fonts has been made, in slightly different accents, in
+Polish, Spanish, Chinese, Japanese, and Korean tutorials over the past few years.
+They all converge. Chinese and Japanese guides explain variation axes as levers for
+weight, width, slant, and optical size, noting that axes can be continuous ranges or
+simple on–off switches.
+Polish and Spanish articles speak the language of practice: fewer HTTP requests,
+smoother responsive type scales, the comfort of adjusting weight in fine steps instead
+of jumping between Regular and Bold.
+Korean writing goes further, treating variable fonts as part of design systems — using
+Roboto Flex and similar families to tune stroke width, counter size, and contrast for
+specific screen densities and hierarchy levels.</p>
+<p>A Spanish primer on Runebook puts it bluntly: if your OS and browser are even vaguely
+current, your bottleneck is no longer technology.
+It is whether your typeface is ready.</p>
+<h2 id="what-the-production-tool-has-to-do">What the production tool has to do<a class="headerlink" href="#what-the-production-tool-has-to-do" title="Permanent link">&para;</a></h2>
+<p>Building these files needs capable software.
+FontLab 8 treats the variation space as a primary unit.
+Open a Light and a Black as masters; the engine establishes the axis automatically.
+Add an intermediate master where linear interpolation muddies the middle.
+Tag a single-storey <code>g</code> to swap in past weight 850 via <code>rvrn</code>. Match Moves propagates a
+node adjustment across all visible masters at once — often the difference between
+meeting and missing a deadline on a serious family.</p>
+<p>External reviewers have flagged FontLab 8 as a complete variable-font production
+environment on macOS and Windows, closing the long-standing gap for Windows-based
+designers who needed robust interpolation, OpenType features, and export in one app.
+In practice, that means you can draw a Light and a Black, interpolate the in-between
+masters, define <code>wght</code>, <code>wdth</code>, and custom axes, and export one file that speaks
+fluently to a Korean news site, a Japanese app UI, and a Polish cultural portal.
+All those multilingual tutorials stop being aspirational.
+They describe what you can ship today.</p>
+<h2 id="the-point">The point<a class="headerlink" href="#the-point" title="Permanent link">&para;</a></h2>
+<p>Look at Roboto Flex or IBM Plex Sans Variable.
+A single file acts as a complete typography system.
+UX teams get granular control without licensing a new weight every time a client changes
+their mind. Designers get a continuum instead of a ladder.</p>
 <p>The savings on bandwidth are nice.
 The control is the point.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.underware.nl/blog/2018/06/very-able-fonts-com/">Very-able fonts — Underware</a></li>
-<li><a href="https://typenetwork.com/articles/thinking-beyond-the-static">Thinking beyond the static — Type Network</a></li>
 <li><a href="https://web.dev/articles/variable-fonts">Variable fonts on the web — web.dev</a></li>
-<li><a href="fontlab/8/whats-new/whats-new-07-families-variation/">Families and variation in FontLab 8</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts">Variable fonts — MDN</a></li>
+<li><a href="https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview">OpenType Font Variations — Microsoft</a></li>
+<li><a href="https://www.underware.nl/blog/2018/06/very-able-fonts-com/">Very-able fonts — Underware</a></li>
+<li><a href="https://typoteka.pl/en/period/variable-fonts-and-screen-typography">Variable fonts and screen typography — Typoteka</a></li>
+<li><a href="https://codelabs.developers.google.com/migrating-variable-fonts">Migrating to variable fonts — Google Codelabs</a></li>
 </ul>
-<p>Read more on help.fontlab.com →{
-.fl-help-cta }</p>
+<p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/">Read more →</a></p>
 
 
   
@@ -1028,6 +1160,13 @@ The control is the point.</p>
       
       
       
+        <span class="md-tag md-tag-icon">multilingual</span>
+      
+    
+      
+      
+      
+      
         <span class="md-tag md-tag-icon">opentype</span>
       
     
@@ -1036,6 +1175,13 @@ The control is the point.</p>
       
       
         <span class="md-tag md-tag-icon">variable-fonts</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag md-tag-icon">web</span>
       
     
   </nav>

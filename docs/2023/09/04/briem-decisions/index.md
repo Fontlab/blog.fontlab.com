@@ -34,4 +34,4 @@ Spacing is where most first drafts fail. The chapter on squeezing — condensing
 
 ______________________________________________________________________
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/3-0-decisions/briem-3-01-decisions/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/)

@@ -4,6 +4,22 @@ date:
 title: "FontLab 7.2.0.7644 and macOS 12.3 Monterey"
 authors: [fontlab]
 draft: false
+review:
+  cta_status: ok
+  cta_target: "https://download.fontlab.com/fontlab-7/get-mac.php"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "macOS 12.3 removed system Python 2.7 — verify this is the exact cause of the crash"
+    - "Build 7650 made glyph fills transparent — verify this bug and that 7644 does not have it"
+    - "Build 7651 mentioned as update notification to skip — verify relationship between 7644/7650/7651"
+    - "Download URL download.fontlab.com/fontlab-7/get-mac.php still active — verify"
+  image_status: present
+  image_needs: "Cloudinary installer screenshot present — verify URL still resolves"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Exemplary crisis/patch post — clear problem statement, explicit numbered install steps for two macOS variants, and a dedicated fix for the transparent-fill regression. The 'Note:' callout at the top for the fill bug is well-placed. Download link in inline text satisfies CTA effectively."
 ---
 Apple’s macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing
 the system Python 2.7 that FontLab depended on.
@@ -99,3 +115,5 @@ transparent or colored fill:
 5. In the *Color* panel, click *Apply*
 6. Choose the next master, click *Apply* in the Color panel, and repeat for all masters
 7. Save the font as a new VFC
+
+[Read more →](https://download.fontlab.com/fontlab-7/get-mac.php){ .fl-help-cta }

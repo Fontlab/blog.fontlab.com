@@ -6,6 +6,21 @@ title: "FontLab 7: a year in updates"
 authors: [fontlab]
 draft: false
 slug: fontlab-7-year-in-review
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Six named releases from 7.0 to 7.2: 7.0.1, 7.1, 7.1.1, 7.1.2, 7.1.3, 7.1.4 — verify list is complete"
+    - "30× faster interpolation described as arriving in 7.2.0 beta builds during late 2020 — verify"
+    - "Glyphs.app interchange improved — verify specific version of Glyphs supported"
+  image_status: missing
+  image_needs: "FontLab 7 interface or update timeline graphic; check reference/i.fontlab.com/docs/ for fontlab-7 assets"
+  weakness_verdict: keep
+  consolidate_with: "2020-03-02-fontlab-71.md"
+  notes: "Good thematic grouping of 2020 updates — drawing, metrics, variation, files. The cross-link to the 7.2 post is well-placed. Could be stronger with one concrete 'before/after' example per theme rather than a list of feature names. Inline help.fontlab.com link satisfies CTA."
 ---
 FontLab 7 launched in December 2019 with over 250 new features.
 Twelve months later, it has rather more than that.
@@ -60,6 +75,8 @@ The highlights, grouped by theme:
   for complex-script font engineering.
 
 All of these shipped as free updates.
-If you have FontLab 7 and have not updated recently, grab the latest build from
-[fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Full
-documentation is at [help.fontlab.com](https://help.fontlab.com/).
+If you have FontLab 7 and have not updated recently, grab the latest build from the
+[FontLab product page](https://www.fontlab.com/font-editor/fontlab/). Full documentation
+starts at the [FontLab Help Center](https://help.fontlab.com/).
+
+[Read more →](https://help.fontlab.com/){ .fl-help-cta }

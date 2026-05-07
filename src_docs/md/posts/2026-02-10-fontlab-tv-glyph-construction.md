@@ -6,6 +6,21 @@ tags: [drawing, contours, beziers, glyph, tutorial]
 date:
   created: 2026-02-10
 slug: fontlab-tv-glyph-construction
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/calfonts/1.%20Drawing/01b%20Basics%20of%20Drawing%20in%20FontLab/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "YouTube URL https://www.youtube.com/watch?v=McFex__HSfk — verify video exists and is correct episode"
+    - "Video title 'Assembling glyphs in FontLab 7, Part 1' — note says FontLab 7 but post context is FL8"
+    - "Overshoot 1–2% of UPM — verify against FL8 docs"
+  image_status: missing
+  image_needs: "FontLab glyph cell with n drawn and metrics lines visible"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Clean tutorial post, the 'why n' rationale is perfectly concise. CTA now points to the FontLab 8 drawing basics tutorial. Video references FontLab 7 while post implies FL8; clarify later."
 ---
 The first letter is the hardest.
 The FontLab TV glyph construction episode is a calm, deliberate walkthrough of drawing
@@ -49,5 +64,4 @@ Every glyph after the first is a variation on a structure you set up at the star
 This episode is the patient version of “draw one letter properly” — and it pays off
 across the entire font.
 
-Read more on help.fontlab.com →{
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/1.%20Drawing/01b%20Basics%20of%20Drawing%20in%20FontLab/){ .fl-help-cta }

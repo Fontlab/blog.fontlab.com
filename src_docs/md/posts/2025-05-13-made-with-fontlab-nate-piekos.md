@@ -6,6 +6,22 @@ tags: [made-with-fontlab, blambot, comics]
 date:
   created: 2025-05-13
 slug: made-with-fontlab-nate-piekos
+review:
+  cta_status: ok
+  cta_target: "https://blambot.com/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Five Blambot families in the made-with-fontlab gallery — verify names and count"
+    - "Piekos used FontLab 7 (not 8) — confirm from gallery metadata"
+    - "Blambot individual product URLs — verify all five product page URLs are live"
+    - "'Blambot fonts' as generic trade term — verify this claim is not exaggerated"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Good genre-focused Made-with post; dark-mode testimonial is specific and human; five product links should be verified as live."
 ---
 If you’ve read a comic in the last twenty years, you’ve read Blambot.
 Nate Piekos’s foundry has supplied the lettering fonts for an absurd share of the medium

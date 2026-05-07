@@ -5,6 +5,21 @@ authors: [fontlab]
 date:
   created: 2023-05-22
 slug: variable-fonts-fontlab-8
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "Tilde glyph tag syntax a~wt>850 exports rvrn rule — verify this is current FL8 syntax"
+    - "Fonts > Merge Fonts to Masters workflow — verify exact menu path in FL8"
+    - "From FontLab 8.3 action sets run on new master immediately — confirm this is 8.3 not 8.2"
+  image_status: present
+  image_needs: "Header image present; a live axis slider animation from reference/fontlab-tv/ would demonstrate the unique value"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Closing CTA link is malformed — missing leading slash in path (fontlab/8/whats-new/... instead of /fontlab/8/...). Variable components section is the strongest part; the Matchmaker tool and tilde-tag conditional substitution are underexplained for a post about them."
 ---
 Variable fonts pack an entire type family into one file, letting users slide
 continuously between weights, widths, and other axes rather than jumping between
@@ -93,4 +108,6 @@ a one-story ‘a’ at a specific weight threshold.
 * * *
 
 Full documentation is in the
-[FontLab 8 What’s New: Families & variation](fontlab/8/whats-new/whats-new-07-families-variation/).
+[FontLab 8 What’s New: Families & variation](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/).
+
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/){ .fl-help-cta }

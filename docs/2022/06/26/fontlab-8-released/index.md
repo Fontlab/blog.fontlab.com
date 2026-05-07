@@ -27,6 +27,22 @@ Beyond the headline features, FontLab 8 introduces several precision editing too
 
 FontLab 8 ships with an expanded tutorial system. Text tutorials by Dave Lawrence (California Type Foundry) and Gunnlaugur SE Briem cover foundational techniques. Over 240 video tutorials are available on the FontLab YouTube channel, with playlists organized by topic and difficulty.
 
-The 8-day introductory tutorial series at help.fontlab.com/fontlab/8/tutorials/intro/8-days/ walks through the complete workflow from first glyph to exported font, covering drawing, spacing, kerning, OpenType features, and variable font basics in sequence.
+The [8-day introductory tutorial series](https://help.fontlab.com/fontlab/8/tutorials/intro/) walks through the complete workflow from first glyph to exported font, covering drawing, spacing, kerning, OpenType features, and variable font basics in sequence.
 
-Download FontLab 8 and find the full what’s-new list at [fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Documentation lives at [help.fontlab.com](https://help.fontlab.com/).
+## Upgrading from FontLab VI
+
+Coming from FontLab VI? The leap is larger than the version number suggests. FontLab 8 keeps the elements model and the variable-font foundation VI introduced, then rebuilds the rest:
+
+- **Interface** — optional dark theme, panel docks, widgets for quick property access, numeric fields that accept calculations (`300+50` → 350), F1 Quick Help over any control.
+- **Drawing** — Power Stroke joins Power Brush; the Thickness tool modulates weight along a path; Pen and Rapid carry toolbox sub-tools; the Rectangle tool draws polygons and stars.
+- **Editing precision** — the Lever (Cmd/Ctrl while dragging) gives sub-unit precision without zooming; align, collapse, and sort operations on selected nodes; paste-to-replace-selection.
+- **Consistency** — Auto-meter shows live stem widths and curve tensions; Suggest Stems highlights common widths as you draw; snapping adds continuation, perpendicular, and centerlines.
+- **Composites** — variable components, the Fusion Boolean filter, text shapes, clipping groups, Glue and Skin.
+- **Metrics and kerning** — auto-spacing and auto-kerning on a single keypress; right-to-left kerning; Audit Kerning resolves class conflicts; the Pairs & Phrases panel.
+- **Families and variation** — Merge Fonts to Masters, per-glyph variation axes, smart variable components, conditional substitutions via tilde tags (e.g. `~wt>850`) for `rvrn`.
+- **Color** — redesigned Colors panel with linear, radial, and conical gradients; a visual gradient editor; OpenType COLRv1 export including variable color; automatic dark-mode palettes.
+- **Scripting** — Python 3.11 (up from 2.7 in VI), 10–60% faster, with the bundled TypeRig library by Vassil Kateliev for batch glyph operations.
+
+Download FontLab 8 and find the full what’s-new list at [fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). The documentation starts at the [FontLab 8 help site](https://help.fontlab.com/fontlab/8/).
+
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/)

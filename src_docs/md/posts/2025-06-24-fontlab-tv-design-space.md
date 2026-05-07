@@ -6,6 +6,22 @@ tags: [design-space, masters, axes, variable-fonts, tutorial]
 date:
   created: 2025-06-24
 slug: fontlab-tv-design-space
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "FontLab TV design space episode URL — confirm actual episode at fontlab.tv"
+    - "rclt and rvrn features for conditional substitution — verify both tags are correct"
+    - "STAT table setup for OS/app font menu naming — verify this is covered in the episode"
+    - "Custom axis examples XHGT, YOPQ — verify these are real registered axis tags"
+  image_status: missing
+  image_needs: "Design space visualization or Variation panel screenshot from reference/fldoc/"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Canonical conceptual intro to design space; absorbed the unique parts of 2025-03-25-designing-variable-axes-well.md."
 ---
 Design space is the part of variable font work that decides whether your font feels good
 or merely works. The FontLab TV design space episode is the conceptual foundation for
@@ -49,5 +65,4 @@ Most variable font problems are design space problems.
 This episode is the framing that lets you debug VF behaviour by drawing diagrams instead
 of guessing.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

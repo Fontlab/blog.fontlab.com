@@ -47,3 +47,5 @@ FontLab 8 imports and exports cleanly to and from RoboFont (UFO), Glyphs (`.glyp
 ______________________________________________________________________
 
 Full documentation is in the FontLab 8 What’s New chapters on [Color](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/) and [Scripts & extensions](https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/).
+
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/)

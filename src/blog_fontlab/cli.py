@@ -11,6 +11,7 @@ or via uv directly:
 
 See ``./build.sh --help`` for subcommands.
 """
+
 from __future__ import annotations
 
 import re
@@ -29,11 +30,16 @@ class BuildError(RuntimeError):
 
 
 HTML_TAG_RE = re.compile(r"</?[A-Za-z][^>]*>", re.DOTALL)
+FL_HELP_CTA_RE = re.compile(
+    r"(?P<link>\[[^\]\n]+\]\([^)]+\))\{\s*\.fl-help-cta\s*\}",
+    re.DOTALL,
+)
 
 
 def _configure_logging(verbose: bool) -> None:
     """Configure loguru sink."""
     import os
+
     level = "DEBUG" if verbose else os.environ.get("BLOG_LOG_LEVEL", "INFO").upper()
     logger.remove()
     logger.add(sys.stderr, level=level, format="<level>{level: <8}</level> | {message}")
@@ -87,22 +93,23 @@ def _restore_html_tag_quotes(markdown: str) -> str:
 
     def restore(match: re.Match[str]) -> str:
         return (
-            match.group(0)
-            .replace("“", '"')
-            .replace("”", '"')
-            .replace("‘", "'")
-            .replace("’", "'")
+            match.group(0).replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
         )
 
     return HTML_TAG_RE.sub(restore, markdown)
 
 
-def _restore_html_tag_quotes_in_tree(src_docs_dir: Path) -> int:
-    """Restore HTML tag quote delimiters in Markdown files below ``src_docs_dir``."""
+def _restore_fl_help_cta_attributes(markdown: str) -> str:
+    """Keep CTA attribute lists attached to their Markdown links."""
+    return FL_HELP_CTA_RE.sub(r"\g<link>{ .fl-help-cta }", markdown)
+
+
+def _repair_markdown_after_flowmark(src_docs_dir: Path) -> int:
+    """Restore post-Flowmark markdown details in files below ``src_docs_dir``."""
     changed_count = 0
     for markdown_path in sorted(src_docs_dir.rglob("*.md")):
         original = markdown_path.read_text(encoding="utf-8")
-        restored = _restore_html_tag_quotes(original)
+        restored = _restore_fl_help_cta_attributes(_restore_html_tag_quotes(original))
         if restored == original:
             continue
         markdown_path.write_text(restored, encoding="utf-8")
@@ -144,9 +151,9 @@ class Build:
             str(src_docs_dir),
         ]
         _run_command(cmd, self._root)
-        restored_count = _restore_html_tag_quotes_in_tree(src_docs_dir)
-        if restored_count:
-            logger.info(f"Restored HTML tag quotes in {restored_count} Markdown files")
+        repaired_count = _repair_markdown_after_flowmark(src_docs_dir)
+        if repaired_count:
+            logger.info(f"Repaired Flowmark output in {repaired_count} Markdown files")
         logger.info("Formatted source Markdown with Flowmark")
 
     def clean(self, verbose: bool = False) -> None:
@@ -182,8 +189,10 @@ class Build:
             cmd = [
                 "properdocs",
                 "build",
-                "-f", str(config),
-                "-d", str(self._docs_dir),
+                "-f",
+                str(config),
+                "-d",
+                str(self._docs_dir),
             ]
             _run_command(cmd, self._root)
             (self._docs_dir / ".nojekyll").touch()
@@ -205,7 +214,8 @@ class Build:
             cmd = [
                 "properdocs",
                 "serve",
-                "-f", str(config),
+                "-f",
+                str(config),
             ]
             _run_command(cmd, self._root)
         except BuildError as exc:

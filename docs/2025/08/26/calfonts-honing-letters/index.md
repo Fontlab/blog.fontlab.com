@@ -35,4 +35,4 @@ Curved letters need to overshoot straight ones — `o` extends slightly above an
 
 You stop honing when you cannot identify a specific change that would make the glyph better. That is not “when you are tired of it” or “when the deadline arrives” — though both happen. The Calfonts standard is the higher one.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

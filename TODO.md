@@ -1,89 +1,62 @@
-<!-- this_file: TODO.md -->
-# TODO — blog.fontlab.com
+---
+this_file: TODO.md
+---
+# TODO — blog.fontlab.com rewrite
 
-Flat checklist derived from `spec/01.md`–`15.md`. Completed items are recorded in `CHANGELOG.md`. Only open items remain here.
+Current source state after the 2026-05-08 reconciliation sprint:
 
-## Foundation
+- 79 published source posts in `src_docs/md/posts/`
+- 0 draft posts in `src_docs/md/posts/`
+- 12 offline draft/research files in `issues/draft-posts/`
+- 0 live title-case fixes remaining
+- 0 live voice rewrite fixes remaining
+- 0 live consolidation markers remaining
+- 0 live CTA deep-link research items remaining
 
-- [ ] Drop `tool.uv.sources` local overrides in `pyproject.toml` once `properdocs` and `mkdocs-materialx` are on PyPI.
-- [ ] Commit `uv.lock` and verify `uv sync --frozen` works in a clean environment.
-- [ ] Add `src/blog_fontlab/__version__.py` to `.gitignore`.
-- [ ] Verify `hatch-vcs` writes `__version__.py` correctly from a `v*.*.*` git tag.
+Completed rewrite, title-case, concrete-URL CTA, deep-link research, and consolidation items were removed after source front matter and rendered output were reconciled.
 
-## Site config
+## Missing Images
 
-- [ ] Add `awesome-nav` plugin to `mkdocs.yml`.
-- [ ] Add `vexy-output-as-input` plugin to `mkdocs.yml`.
-- [ ] Add `vexy-strip-number-prefix` plugin to `mkdocs.yml`.
-- [ ] Add `vexy-tags` plugin to `mkdocs.yml`.
-- [ ] Verify `vexy_python_markdown_steroids.all` shorthand exists in the current package; fall back to explicit extension list if not.
-
-## Theme & chrome
-
-- [ ] Move chrome CSS from `src_docs/md/css/` to `src_docs/md/assets/css/` to match spec; update `extra_css`.
-- [ ] Confirm exact colour token values against FontLab brand guide before v0.1.0 ships.
-- [ ] Verify dark mode: page background matches `<fontlab-menu mode="dark">` background with no colour join at the seam.
-
-## Typography sweep (issues/202.md)
-
-- [ ] In every post under `src_docs/md/posts/`, replace ASCII `'` with proper Unicode apostrophes (U+2019) and `"` with English curly quotes (U+201C / U+201D), respecting code blocks and inline code (which must stay as-is).
-- [ ] Surround every em dash (—) with normal spaces ` — ` (do not use thin spaces or no-break spaces); leave en dashes used in numeric ranges alone.
-- [ ] Add a CI check (or `vexy-mkdocs-tools` lint subcommand) that flags straight quotes and unspaced em dashes in `posts/*.md`.
-
-## Existing post fixes (issues/202.md)
-
-- [ ] `2023/09/04/briem-decisions/`: pull figure images from `reference/fldoc/src/fontlab/8/md/tutorials/briem/3-0-decisions/` (and parent `briem/img/`) into `src_docs/md/media/briem/`; add captions.
-- [ ] `2024-11-19-designers-on-fontlab.md`: convert from listicle to series anchor. Each subsequent series entry profiles ONE designer + their fonts (see `spec/13.md` schedule).
-
-## Content — porting backlog
-
-- [ ] Source the full body of the 2013 colour-fonts article (Wayback Machine or backup); replace any remaining placeholder.
-- [ ] Run `pandoc -f html -t markdown_strict` on each surviving oldpub post as a conversion starting point (already done for the 8 ported; document the recipe in `spec/11.md`).
-- [ ] Rewrite internal links: `fontlab.com/blog/...` → relative `/...` if target is ported; drop if target is retired.
-- [ ] Verify all `help.fontlab.com` external links in ported posts still resolve.
-- [ ] Annotate dead external links inline rather than silently removing them.
-- [ ] Store all post images in `src_docs/md/media/` (current convention); ensure descriptive kebab-case filenames.
-- [ ] Compress all ported images to ≤500KB; enforce 1200px max width.
-- [ ] Add alt text to every image in every post.
-
-## Editorial roadmap (spec/13.md, spec/14.md)
-
-- [ ] Write the 12 planned 2026 posts (Jan–May 2026) per `spec/13.md`.
-- [ ] Write the 24 planned 2025 posts (2/month) per `spec/13.md`.
-- [ ] Write the 24 planned 2024 posts (2/month) per `spec/13.md`, deduping with already-shipped slugs.
-- [ ] Build the "FontLab TV" companion series (one post per Kapusta chapter, 25 chapters) per `spec/14.md`. Pack 2024–2026 with these.
-- [ ] Build the "Tutorials" series modernizing `briem/4-2-bold` … `briem/7-0-glossary` and selected `calfonts/` chapters per `spec/14.md`.
-- [ ] For every planned post that is currently `TBD: select topic from <source>` in `spec/13.md`, lock the topic before drafting.
-
-## Build & deploy
-
-- [ ] Configure GitHub repository: Settings → Pages → Source: `gh-pages` branch, `/ (root)`.
-- [ ] Add DNS `CNAME` record: `blog.fontlab.com → fontlab.github.io`.
-- [ ] Enable branch protection on `main`: require PR review + `build` status check before merge.
-- [ ] Push `v0.1.0` tag to trigger first deploy.
-- [ ] Wait for TLS certificate provisioning and verify `https://blog.fontlab.com/` loads over HTTPS.
-- [ ] Add `pull_request_template.md` at `.github/pull_request_template.md` with authoring checklist from `spec/11.md`.
-
-## Quality
-
-- [ ] Install `lychee` and run `lychee --offline docs/` against the local build output.
-- [ ] Add `.lycheeignore` suppressing `fonts.googleapis.com` and `fonts.gstatic.com`.
-- [ ] Add scheduled (weekly) external link check job to `ci.yml` using `lychee docs/ --exclude-all-private`.
-- [ ] Verify Web Component local nav items (Blog, Archive, About) are visible in the rendered menu.
-- [ ] Verify RSS feed after deploy; confirm content and post ordering.
-- [ ] DECIDE: RSS feed URL — accept plugin default or alias as `/feed.xml`?
-- [ ] Maintain `pin: true` on the most-recent series anchor post once the editorial roadmap rolls forward.
-
-## Issue 203 — Draft expansion
-
-Thirty-two of the 35 issue-203 posts from `spec/15.md` now exist in `src_docs/md/posts/` and build as public pages. The remaining three are still open.
-
-- [ ] 2025-07-01 — `nabla-colrv1-and-color-fonts` (source: `403-grok:section-4`)
-- [ ] 2026-02-17 — `when-type-becomes-texture` (source: `401-grok:section-4`)
-- [ ] 2026-03-31 — `distortion-as-defense-2026` (source: `406-gemi:distortion`)
-
-### Follow-ups
-
-- [ ] Add provenance `_sources.txt` for `the-long-awkward-adolescence-of-color-fonts`.
-- [ ] Re-read issue-203 posts after they ship and add cross-links between related posts.
-- [ ] Reconcile any issue-203 date collisions with `spec/13.md` and update that chapter's date table.
+- [ ] `2005-06-15-fontlab-studio-5-opentype-standard.md` — FontLab Studio 5 splash screen or interface screenshot.
+- [ ] `2013-12-15-transtype-4.md` — TransType 4 app screenshot or conversion workflow diagram.
+- [ ] `2013-12-20-fontlab-studio-521-windows.md` — FontLab Studio 5 Windows screenshot.
+- [ ] `2014-02-15-matthew-carter-webinar.md` — Matthew Carter portrait or typeface specimen.
+- [ ] `2014-03-15-brush-romans-webinar.md` — flat-brush Roman capital demonstration photo or Catich-style inscription.
+- [ ] `2014-12-15-otmaster-5-vfb2ufo-fontlab-pad-11.md` — OTMaster 5 or FontLab Pad screenshot.
+- [ ] `2018-10-25-fontlab-vi-61.md` — FontLab VI 6.1 sidebar or metrics expressions screenshot.
+- [ ] `2020-03-02-fontlab-71.md` — ink-trap or quick-measurement screenshot.
+- [ ] `2020-12-30-fontlab-7-year-in-review.md` — FontLab 7 interface or update timeline graphic.
+- [ ] `2023-04-17-briem-foundations.md` — BriemAkademi sample or broad-nib pen example.
+- [ ] `2024-02-13-transtype-the-converter-that-outlived-the-format.md` — Type 1 folder to OpenType family screenshot or TransType interface image.
+- [ ] `2024-04-08-briem-bold-italic-spacing.md` — bold interpolation diagram or italic sidebearing example.
+- [ ] `2024-06-05-fontlab-8-updates.md` — Widgets UI screenshot or Match Moves multi-master demo.
+- [ ] `2024-06-11-web-fonts-too-heavy-the-fix.md` — waterfall loading diagram or before/after file-size comparison.
+- [ ] `2024-07-09-white-space-does-the-real-drawing.md` — spacing or metrics window screenshot.
+- [ ] `2024-09-23-calfonts-setup-shapes.md` — Calfonts tutorial screenshot.
+- [ ] `2024-10-08-fontlab-tv-variable-fonts-crash-course.md` — FontLab TV variable-fonts episode thumbnail.
+- [ ] `2024-11-12-the-bitter-truth-of-screens-hinting.md` — hinting panel or FontAudit panel screenshot.
+- [ ] `2024-12-10-fontlab-tv-spacing-letters.md` — FontLab TV spacing episode thumbnail or metrics window screenshot.
+- [ ] `2025-01-21-fontlab-tv-anchors-components.md` — Anchors panel or accented glyph composition screenshot.
+- [ ] `2025-02-04-a-width-axis-is-not-a-squeeze-command.md` — width-axis comparison or condensed-master screenshot.
+- [ ] `2025-03-17-calfonts-spacing-italics.md` — metrics window or italic slant comparison.
+- [ ] `2025-04-08-fontlab-tv-color-fonts.md` — color glyph or CPAL palette screenshot.
+- [ ] `2025-05-13-variable-fonts-were-never-about-file-size.md` — weight-axis animation or design-space screenshot.
+- [ ] `2025-06-24-fontlab-tv-design-space.md` — design-space visualization or Variation panel screenshot.
+- [ ] `2025-07-15-briem-drawing-bold.md` — bold vs regular comparison image.
+- [ ] `2025-08-12-fontlab-seen-from-six-languages.md` — multi-script specimen or original language-collage art.
+- [ ] `2025-08-19-made-with-fontlab-eduardo-tunni.md` — Graduate variable font specimen or Tunni Lines screenshot.
+- [ ] `2025-08-26-calfonts-honing-letters.md` — contour optimization or before/after honing screenshot.
+- [ ] `2025-09-02-beyond-the-latin-sandbox-global-typography.md` — Arabic, CJK, or multi-script FontLab screenshot.
+- [ ] `2025-09-09-fontlab-tv-opentype-features.md` — OpenType features panel screenshot or video thumbnail.
+- [ ] `2025-09-23-making-hangul-in-fontlab.md` — Hangul decomposition or component assembly screenshot.
+- [ ] `2025-10-07-briem-drawing-italic.md` — slanted roman vs true italic comparison.
+- [ ] `2025-10-14-what-type-designers-actually-argue-about.md` — forum screenshot or debate-topic diagram.
+- [ ] `2025-11-04-the-briem-method-and-the-geometry-of-nothing.md` — metrics/sidebearings panel or spacing-string screenshot.
+- [ ] `2025-12-02-calfonts-italics.md` — roman vs italic structure comparison.
+- [ ] `2025-12-16-fontlab-tv-briem-on-brushes.md` — pen-angle diagram or broad-pen strokes illustration.
+- [ ] `2025-12-30-the-vexy-lines-pipeline-into-fontlab.md` — Vexy Lines to FontLab workflow screenshot or diagram.
+- [ ] `2026-02-10-fontlab-tv-glyph-construction.md` — glyph cell with metrics lines visible.
+- [ ] `2026-03-10-variable-fonts-in-motion-and-ui.md` — variable-font axis animation screenshot or CSS animation example.
+- [ ] `2026-04-08-made-with-fontlab-fabio-duarte-martins.md` — Scannerlicker font specimen or FontLab 8 axis graph screenshot.
+- [ ] `2026-04-21-the-old-fonts-are-not-dead.md` — old font suitcase icons or TransType 4 interface screenshot.
+- [ ] `2026-05-03-color-fonts-in-2026.md` — COLRv1 gradient specimen or browser-support comparison table.

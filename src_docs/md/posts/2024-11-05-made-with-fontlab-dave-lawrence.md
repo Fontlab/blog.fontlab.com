@@ -6,6 +6,22 @@ tags: [made-with-fontlab, california-type-foundry, revivals]
 date:
   created: 2024-11-05
 slug: made-with-fontlab-dave-lawrence
+review:
+  cta_status: ok
+  cta_target: "https://www.myfonts.com/collections/california-type-foundry/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Seven public entries in the made-with-fontlab gallery — verify count"
+    - "Fra Luca described as 'after Bruce Rogers' — confirm historical attribution"
+    - "Hermanz Titling described as 'after Hermann Zapf' — confirm"
+    - "FontLab supports fractional/sub-unit coordinates — verify this is a real FL8 feature"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Genuine interview with specific technical detail (fractional coords, Hi-res series); one of the stronger Made-with posts."
 ---
 Bodoni Casale is not a Bodoni revival in the careful, museum-conservator sense.
 It’s three Bodoni revivals — Casale, Ferrara, Terracina — each a different printed
@@ -19,11 +35,12 @@ That’s the California Type Foundry house style, and Dave Lawrence does it in F
 
 Lawrence calls them the Hi-res Font™ Series — pitch-perfect classics from hi-res scans.
 The catalogue runs to seven public entries on the gallery: three Bodonis,
-[CAL Grotesk](https://calfonts.com/cal-grotesk/),
-[Fra Luca](https://calfonts.com/fra-luca/) (after Bruce Rogers),
-[Hermanz Titling](https://calfonts.com/hermanz-titling/) (after Hermann Zapf), and
-[Oceanwide](https://calfonts.com/oceanwide/). Six of them are revivals after named
-historical sources; the precision required is not negotiable.
+[CAL Grotesk](https://www.myfonts.com/collections/california-type-foundry/),
+[Fra Luca](https://www.myfonts.com/collections/california-type-foundry/) (after Bruce
+Rogers), [Hermanz Titling](https://www.myfonts.com/collections/california-type-foundry/)
+(after Hermann Zapf), and
+[Oceanwide](https://www.myfonts.com/collections/california-type-foundry/). Six of them
+are revivals after named historical sources; the precision required is not negotiable.
 
 Asked what FontLab gives him, Lawrence is unusually direct for a type designer:
 
@@ -48,7 +65,8 @@ Asked what FontLab gives him, Lawrence is unusually direct for a type designer:
 > Accurate, pitch-perfect classics from hi-res scans.
 > Without FontLab 8, I could do just about nothing.
 
-— Dave Lawrence, [California Type Foundry](https://calfonts.com)
+— Dave Lawrence,
+[California Type Foundry](https://www.myfonts.com/collections/california-type-foundry/)
 
 ![CAL Grotesk by Dave Lawrence / California Type Foundry](https://i.fontlab.com/made-with-fontlab/fonts-black/CALFonts-CALGrotesk.png)
 
@@ -69,12 +87,19 @@ year and next year.
 
 ## More from Dave Lawrence
 
-- [Bodoni Casale](https://calfonts.com/bodoni-casale/) — California Type Foundry
-- [Bodoni Ferrara](https://calfonts.com/bodoni-ferrara/) — California Type Foundry
-- [Bodoni Terracina](https://calfonts.com/bodoni-terracina/) — California Type Foundry
-- [CAL Grotesk](https://calfonts.com/cal-grotesk/) — California Type Foundry
-- [Fra Luca](https://calfonts.com/fra-luca/) — California Type Foundry
-- [Hermanz Titling](https://calfonts.com/hermanz-titling/) — California Type Foundry
-- [Oceanwide](https://calfonts.com/oceanwide/) — California Type Foundry
+- [Bodoni Casale](https://www.myfonts.com/collections/california-type-foundry/) —
+  California Type Foundry
+- [Bodoni Ferrara](https://www.myfonts.com/collections/california-type-foundry/) —
+  California Type Foundry
+- [Bodoni Terracina](https://www.myfonts.com/collections/california-type-foundry/) —
+  California Type Foundry
+- [CAL Grotesk](https://www.myfonts.com/collections/california-type-foundry/) —
+  California Type Foundry
+- [Fra Luca](https://www.myfonts.com/collections/california-type-foundry/) — California
+  Type Foundry
+- [Hermanz Titling](https://www.myfonts.com/collections/california-type-foundry/) —
+  California Type Foundry
+- [Oceanwide](https://www.myfonts.com/collections/california-type-foundry/) — California
+  Type Foundry
 
-[Browse California Type Foundry →](https://calfonts.com){ .fl-help-cta }
+[Browse California Type Foundry →](https://www.myfonts.com/collections/california-type-foundry/){ .fl-help-cta }

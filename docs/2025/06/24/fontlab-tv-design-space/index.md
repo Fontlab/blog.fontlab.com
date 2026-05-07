@@ -18,4 +18,4 @@ Design space is the part of variable font work that decides whether your font fe
 
 Most variable font problems are design space problems. This episode is the framing that lets you debug VF behaviour by drawing diagrams instead of guessing.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

@@ -63,6 +63,4 @@ The videos below show how to run FontLab Studio 5, Fontographer 5, TypeTool 3, a
 - On Catalina: CrossOver Mac 19 is the lightest-weight option. Parallels Desktop, VMWare Fusion, or VirtualBox let you run a guest macOS or Windows — see the detailed guide below.
 - We recommend upgrading to [FontLab 7](https://www.fontlab.com/font-editor/fontlab/), our modern 64-bit font editor for macOS and Windows.
 
-## More on this topic
-
-- [Migration paths from legacy FontLab tools on Catalina](https://blog.fontlab.com/2019/10/29/migration-paths-from-legacy-fontlab-tools-on-catalina/index.md)
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)

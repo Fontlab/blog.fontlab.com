@@ -16,4 +16,4 @@ If you are still drawing every accented letter by hand, this is the episode that
 
 Most languages that use Latin script need a lot of accented glyphs. Anchors and components are how you ship them without losing your weekend. They are also what makes Vietnamese, Polish, Czech, and Eastern European Latin coverage achievable for solo designers.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

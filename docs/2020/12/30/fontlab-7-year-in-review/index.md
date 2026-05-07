@@ -27,4 +27,6 @@ The journey from 7.0 to 7.2 ran through six named releases (7.0.1, 7.1, 7.1.1, 7
 - **UFO and VFM** — expanded metrics and kerning import from VFM, plus fixes to UFO export for folders with unusual characters in their paths.
 - **Microsoft VOLT** — 7.1.4 added export of OpenType features directly to VOLT format for complex-script font engineering.
 
-All of these shipped as free updates. If you have FontLab 7 and have not updated recently, grab the latest build from [fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Full documentation is at [help.fontlab.com](https://help.fontlab.com/).
+All of these shipped as free updates. If you have FontLab 7 and have not updated recently, grab the latest build from the [FontLab product page](https://www.fontlab.com/font-editor/fontlab/). Full documentation starts at the [FontLab Help Center](https://help.fontlab.com/).
+
+[Read more →](https://help.fontlab.com/)

@@ -5,6 +5,21 @@ authors: [fontlab]
 date:
   created: 2024-04-08
 slug: briem-bold-italic-spacing
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/briem/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Stempel released Palatino in 1950 — verify date; commonly cited as 1948–1950"
+    - "Tschichold published spacing examples in 1952 — verify publication and year"
+    - "Briem recommends going very bold for interpolation exercise — verify this is Briem's actual recommendation"
+  image_status: missing
+  image_needs: "No images; bold interpolation diagram or italic sidebearing example from reference/i.fontlab.com/docs/ needed"
+  weakness_verdict: keep
+  consolidate_with: "2023-04-17-briem-foundations.md, 2023-09-04-briem-decisions.md"
+  notes: "Tschichold-vs-Zapf spacing dispute is the strongest hook in all three Briem posts — lead with it instead of burying it at the end. Three solid Briem posts work well as a tagged series; no need to merge."
 ---
 Three chapters from Gunnlaugur SE Briem’s notes on type design cover the work that comes
 after the roman is drawn: making a bold weight, designing the italic, and spacing the
@@ -80,5 +95,4 @@ Accept that the result belongs to its moment, not to eternity.
 
 * * *
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/){ .fl-help-cta }

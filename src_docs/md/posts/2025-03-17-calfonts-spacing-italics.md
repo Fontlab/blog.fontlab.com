@@ -5,6 +5,22 @@ authors: [fontlab]
 date:
   created: 2025-03-17
 slug: calfonts-spacing-italics
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/calfonts/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "Calfonts tutorial URL is live and points at the current tutorial index"
+    - "Font > Auto Space keyboard shortcut is semicolon — verify"
+    - "Contour > Auto Fix menu path — verify in current FL8"
+    - "Tools > Actions > Slant for oblique starting point — verify menu path"
+  image_status: missing
+  image_needs: "Metrics window or italic slant comparison from reference/fldoc/"
+  weakness_verdict: keep
+  consolidate_with: "2024-09-23-calfonts-setup-shapes.md"
+  notes: "No tags. CTA and tutorial URL now point at the current Calfonts tutorial index. Part of a two-post series with the setup post."
 ---
 Once your letterforms are drawn, the work shifts to spacing, quality control, and — if
 you’re ambitious — building a family.
@@ -87,8 +103,11 @@ What’s here is the skeleton; the flesh is in the full series.
 
 * * *
 
-Dave Lawrence’s full tutorial series is at
-[help.fontlab.com/fontlab/8/tutorials/calfonts/](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/tutorials/calfonts/).
+Dave Lawrence’s full
+[Calfonts tutorial series](https://help.fontlab.com/fontlab/8/tutorials/calfonts/) goes
+deeper on drawing, spacing, family planning, and italics.
 
 *Previous:
 [Drawing calligraphic fonts in FontLab: setup and shapes](2024-09-23-calfonts-setup-shapes.md)*
+
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/){ .fl-help-cta }

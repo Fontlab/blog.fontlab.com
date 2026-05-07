@@ -17,4 +17,4 @@ The pipeline is short. The amount of fun you can have with it is not.
 - FontLab 8 Sketchboard
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

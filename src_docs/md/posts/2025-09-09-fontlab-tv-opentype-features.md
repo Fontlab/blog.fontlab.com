@@ -6,6 +6,20 @@ tags: [opentype, features, ligatures, kerning, fea, tutorial]
 date:
   created: 2025-09-09
 slug: fontlab-tv-opentype-features
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "YouTube URL https://www.youtube.com/watch?v=DitUgjL6T5s — verify video exists and is the correct episode"
+    - "FontLab has built-in compiler and round-trips with Adobe makeotf — verify makeotf still supported in FL8"
+  image_status: missing
+  image_needs: "FontLab OpenType features panel screenshot or video thumbnail"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Feature list is accurate and practically ordered. CTA now points to the live FontLab 8 OpenType features tutorial section."
 ---
 OpenType features are the part of font design where text becomes typography.
 The FontLab TV OpenType episode walks through the feature tags you will actually use,
@@ -52,5 +66,4 @@ in the wrong place” bugs.
 Almost every modern type design ships with at least a dozen OpenType features.
 Getting them right is what separates a “font” from a typography product.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/tutorials/intro/8-days/day-3-beyond-abc/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8){ .fl-help-cta }

@@ -1,10 +1,14 @@
-TransType 4 arrived in December 2013 as a complete rewrite of the font conversion application, adding multi-color OpenType output and web font export to its core conversion capabilities.
+TransType 4 arrived in December 2013 as a complete rewrite of our font conversion app. It added multi-color OpenType output and web font export to its core toolkit.
 
-TransType 4 for Mac and Windows converts virtually any font format — including VFB and UFO source files — into modern OpenType PS (.otf) or TrueType (.ttf) fonts and @font-face web fonts. Key capabilities:
+You can convert virtually any font format into modern OpenType PS (.otf), TrueType (.ttf), and @font-face web fonts. This includes VFB and UFO source files. The app runs on both Mac and Windows.
 
-- **Format conversion**: reads a wide range of legacy and current font formats, writes OpenType PS, OpenType TT, and @font-face web font packages
-- **Family naming repair**: fixes and reorganizes font family naming automatically, with drag-and-drop reorganization for manual adjustments
-- **Multi-color OpenType**: generates color OpenType fonts from layered source fonts or BitFonter Photofont files
-- **Effects**: applies outline, shadow, and other transformations to generate new font variants
+Here’s what it does:
 
-The application replaced TransType 3, which handled Mac-to-Windows and Windows-to-Mac format conversion but predated the OpenType and web font era.
+- **Format conversion**: Reads legacy and current font formats. Writes OpenType PS, OpenType TT, and @font-face web font packages.
+- **Family naming repair**: Fixes and reorganizes font family naming automatically. You can also drag and drop to make manual adjustments.
+- **Multi-color OpenType**: Generates color OpenType fonts from layered source fonts or BitFonter Photofont files.
+- **Effects**: Applies outlines, shadows, and other transformations to generate new font variants.
+
+This release replaced TransType 3. The older version handled basic cross-platform format conversion but predated the OpenType and web font era.
+
+[Read more →](https://help.fontlab.com/transtype-4/)

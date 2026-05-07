@@ -17,4 +17,4 @@ A font that respects six scripts respects the readers of those scripts. The tool
 - [What’s new in FontLab 8 — formats](https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/)
 - [FontLab 8 review — The Endearing Designer](https://theendearingdesigner.com/fontlab-8-review/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

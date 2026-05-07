@@ -6,6 +6,21 @@ tags: [power-nudge, lever, match-moves, drawing-tools, fontlab-8]
 date:
   created: 2024-09-10
 slug: the-heavy-machinery-of-fontlab-8
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/whats-new/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Section heading 'the Lever' uses lower-case 't' — intentional style or typo?"
+    - "FL5 architecture claim ('each master's glyph as an independent drawing') — verify accuracy"
+    - "Match Moves proportional scaling claim (10-unit Light = 14-unit Black) — confirm this is accurate"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Best editorial voice in the set — the house/plumbing metaphor earns its place; title is already sentence case despite version number."
 ---
 Drawing letters for a living turns out to be mostly an exercise in being perpetually
 disappointed by optical illusions.
@@ -110,5 +125,4 @@ structural elements that let serious type design happen at current scale.
 - [What’s new in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/)
 - [Hello, FontLab 8.2!](https://www.fontlab.com/news/fontlab-8/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/whats-new/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/){ .fl-help-cta }

@@ -6,6 +6,23 @@ tags: [color-fonts, colrv1, sbix, cbdt, svg, history]
 date:
   created: 2025-07-22
 slug: the-long-awkward-adolescence-of-color-fonts
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Four color-font proposals in 2013 — verify year (Apple sbix, Google CBDT, Microsoft COLR, Adobe/Mozilla SVG)"
+    - "Safari/iOS still does not support COLRv1 as of 2026 — verify current browser support"
+    - "Internal link '/2026/05/03/color-fonts-in-2026/' — verify this post exists or will exist"
+    - "Internal link '/2023/03/13/8-days-color/' — verify this slug exists in the blog"
+    - "'Color emoji v1 spec — Google' reference has no URL — add it"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: "2025-04-08-fontlab-tv-color-fonts.md"
+  notes: "Best history post in the set — the duct-tape paragraph is a keeper; future-dated internal link to '2026/05/03' post must exist before publish."
 ---
 Type spent five hundred years in black and white.
 Then mobile phones demanded emoji, and four large companies sat down separately and
@@ -14,7 +31,7 @@ The decade since has been an awkward growing-up.
 
 <!-- more -->
 
-![Gradient color glyph in FontLab 8](/media/the-long-awkward-adolescence-of-color-fonts/gradient.png)
+![Gradient color glyph in FontLab 8](../media/fl8-head-09-gradient.png)
 
 ## The four-way standoff
 
@@ -101,11 +118,10 @@ We are out of those now.
 ## From the archives
 
 We have been writing about color fonts since the earliest days of these format wars.
-If you want to dive deeper into the history and mechanics, check out our older posts:
+If you want to dive deeper into the history and mechanics, start with the current
+consolidated guide:
 
-- [Color fonts: overview of proposals for color extensions of OpenType](/2013/09/19/color-font-format-proposals/)
-- [The four color-font proposals: APP, COLR/CPAL, CBDT/CBLC, and SVG](/2013/10/10/color-font-proposals-detailed/)
-- [Color font concepts: layers, palettes, scaling, and finiteness](/2013/11/07/color-font-concepts/)
+- [Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes](/2026/05/03/color-fonts-in-2026/)
 - [Color fonts: the next big thing?
   A FontLab tutorial](/2014/06/18/color-fonts-tutorial/)
 - [8 days: Color](/2023/03/13/8-days-color/)
@@ -120,5 +136,4 @@ If you want to dive deeper into the history and mechanics, check out our older p
 - [Convert TTF to CBDT/CBLC — TypeDrawers](https://typedrawers.com/discussion/2392/convert-a-ttf-to-cbdt-cblc-format-color-font)
 - Color fonts in browsers — web.dev
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

@@ -1,9 +1,15 @@
-With over 40,000 views, this two-minute demo of FontLab VI’s built-in ScanFont feature is one of the most-watched videos on the channel — and it earns that attention by showing something genuinely useful in a very short time. You scan or photograph hand-drawn letterforms, paste them into FontLab VI, and the software traces them into editable outlines ready for refinement.
+This two-minute demo of the built-in ScanFont feature has over 40,000 views. It earns that attention by showing something genuinely useful in record time. You scan or photograph hand-drawn letterforms, paste them into FontLab, and the software traces them into editable outlines.
 
-ScanFont was previously a separate application that shipped alongside FontLab Studio. In FontLab VI, its functionality was integrated directly into the font editor: you paste a bitmap image into a glyph cell, adjust the tracing threshold, and FontLab generates vector outlines from the grayscale artwork automatically.
+ScanFont used to be a separate app. Starting with FontLab VI, its functionality lives directly inside the font editor. The workflow is simple:
 
-The workflow shown in the video moves from scanned sketch to traced outline to cleaned-up glyph in a matter of seconds per letter. The tracing is not perfect — hand cleanup is still needed — but it removes the most tedious part of digitizing hand-drawn type. For lettering artists, calligraphers, and designers who work analog-first, this integration makes FontLab VI a practical bridge between the sketchbook and the font file.
+- **Paste** a bitmap image into a glyph cell.
+- **Adjust** the tracing threshold.
+- **Generate** vector outlines from the grayscale artwork automatically.
 
-This feature carries forward into FontLab 7 and FontLab 8, where the image import and tracing workflow has been further refined.
+The video shows how to move from a scanned sketch to a traced outline to a cleaned-up glyph in seconds per letter. The tracing isn’t perfect. You still need to do some hand cleanup. But it removes the most tedious part of digitizing hand-drawn type.
 
-Watch on [FontLab TV](https://www.youtube.com/watch?v=c0XCxcJY_UY).
+For lettering artists, calligraphers, and designers who work analog-first, this integration makes FontLab a practical bridge between the sketchbook and the font file. This feature carries forward into FontLab 7 and FontLab 8, where the image import and tracing workflow has been further refined.
+
+Watch the full demo on [FontLab TV](https://www.youtube.com/watch?v=c0XCxcJY_UY).
+
+[Read more →](https://help.fontlab.com/fontlab/import-images/)

@@ -20,10 +20,10 @@ Martins’s bread-and-butter pair is **expressions and tags.** Tags let you labe
 
 The Linux remark is not throwaway. FontLab ships native binaries for macOS, Windows, and — yes — Linux. Most of the working type-design world is on the first two; the people who are on Linux either run a one-person foundry or work inside a larger pipeline where Linux is the only choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece of cross-platform engineering for an industry that mostly assumes Mac.
 
-The Scannerlicker catalogue at fonts.scannerlicker.net is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
+The [Scannerlicker catalogue](https://fonts.scannerlicker.net/) is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
 
 ## More from Fábio Duarte Martins
 
-- Scannerlicker catalogue — variable fonts and retail families
+- [Scannerlicker catalogue — variable fonts and retail families](https://fonts.scannerlicker.net/)
 
-Browse Scannerlicker →{ .fl-help-cta }
+[Browse Scannerlicker →](https://fonts.scannerlicker.net/)

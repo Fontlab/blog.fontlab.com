@@ -6,6 +6,21 @@ tags: [anchors, components, diacritics, accents, tutorial]
 date:
   created: 2025-01-21
 slug: fontlab-tv-anchors-components
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "'700-odd accented forms' auto-generated — verify realistic count for full Latin Extended"
+    - "FontLab TV anchors episode URL — confirm actual episode at fontlab.tv"
+    - "Underscore prefix naming convention for mark attachment anchors — verify '_top' convention"
+  image_status: missing
+  image_needs: "Anchors panel or accented glyph composition screenshot from reference/fldoc/"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Covers essential workflow for multilingual fonts; CTA should deep-link to anchors/components section; FontLab TV link is homepage-only."
 ---
 If you are still drawing every accented letter by hand, this is the episode that retires
 that habit. Anchors plus components mean you draw `a` and `acute` once, and FontLab
@@ -46,5 +61,4 @@ Anchors and components are how you ship them without losing your weekend.
 They are also what makes Vietnamese, Polish, Czech, and Eastern European Latin coverage
 achievable for solo designers.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

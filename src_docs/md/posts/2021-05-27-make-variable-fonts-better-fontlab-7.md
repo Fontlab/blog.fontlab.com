@@ -5,6 +5,21 @@ authors: [fontlab]
 date:
   created: 2021-05-27
 slug: make-variable-fonts-better-fontlab-7
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/7/manual/Variable-Fonts/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Presented at ATypI Tech Talks 2021 — verify event name and date"
+    - "Video runtime 19 minutes — verify against YouTube"
+    - "FontLab 7 compatibility checker described — verify feature exists and works as described"
+  image_status: present
+  image_needs: "Thumbnail present (fontlabtv-xQcR9riPhTc.jpg) — adequate"
+  weakness_verdict: keep
+  consolidate_with: "2019-01-24-design-space-axes-multiple-masters.md"
+  notes: "Conference talk framing is well-handled — 'assumes more prior knowledge than an introductory tutorial' sets expectations correctly. The failure modes list (nodes drift, contours flip, anchors interpolate incorrectly) is genuinely useful and specific. No CTA to help docs is a miss for a QA-focused post."
 ---
 This 19-minute presentation by Adam Twardoch, delivered at ATypI Tech Talks 2021, goes
 beyond building variable fonts to the harder question: making them good.
@@ -32,3 +47,5 @@ It is aimed at designers who have already built a variable font and want to rais
 quality of their output, or who have run into problems they couldn’t diagnose.
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=xQcR9riPhTc).
+
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-Fonts/){ .fl-help-cta }

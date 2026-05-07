@@ -32,4 +32,4 @@ What he offers instead of fixed rules is method: set your control characters fir
 
 ______________________________________________________________________
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/)

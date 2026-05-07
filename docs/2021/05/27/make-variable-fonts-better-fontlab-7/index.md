@@ -7,3 +7,5 @@ The presentation covers how to set up masters for clean interpolation, what Font
 Because this was a conference talk, the pace is faster and assumes more prior knowledge than an introductory tutorial. It is aimed at designers who have already built a variable font and want to raise the quality of their output, or who have run into problems they couldn’t diagnose.
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=xQcR9riPhTc).
+
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-fonts/)

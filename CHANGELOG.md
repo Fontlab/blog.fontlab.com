@@ -5,32 +5,55 @@
 ### Added
 - Added Flowmark 0.6.5 as a locked build dependency.
 - Added `./build.sh format` / `blog-fontlab format` to format `src_docs/md/` in place with semantic line breaks, safe cleanups, smart quotes, and ellipses.
+- Added focused CLI tests for build ordering and Flowmark smart-quote HTML tag repair.
+- Added a regression test for both Flowmark-split `.fl-help-cta` Markdown attribute-list shapes.
 - Generated root-level `docs/llms.txt` and `docs/llms-full.txt` through the `llmstxt` plugin.
 - Added 32 issue-203 expansion posts from `spec/15.md`; only `nabla-colrv1-and-color-fonts`, `when-type-becomes-texture`, and `distortion-as-defense-2026` remain open.
-- Added 2024–2026 roadmap posts for the Made with FontLab, FontLab TV, Briem, Calfonts, and Vexy Lines series, bringing the source tree to 113 Markdown posts.
+- Added 2024–2026 roadmap posts for the Made with FontLab, FontLab TV, Briem, Calfonts, and Vexy Lines series.
 - Added a local Vexy Lines interface image for `vexy-lines-and-the-useful-lie-of-engraving`, replacing a broken `doc360/Images` reference.
+- Added `src_docs/md/posts/2026-05-03-color-fonts-in-2026.md`, a current consolidated color-font article covering COLR v1, variation, browser support, app/rendering support, and FontLab 8 support.
+- Added existing lead images to four posts that still had verified missing-image placeholders: TransType 4, FontLab TV variable fonts, variable fonts and file size, and color fonts in 2026.
+- Added the verified FontLab YouTube recording link for the 2014 Matthew Carter webinar.
 
 ### Changed
 - `./build.sh build` now runs Flowmark against `src_docs/md/` before cleaning `docs/` and running ProperDocs.
-- Build-time Flowmark formatting restores ASCII quote delimiters inside raw HTML tags after smart quote conversion, so legacy WordPress HTML attributes remain valid.
+- Build-time Flowmark formatting restores ASCII quote delimiters inside raw HTML tags and rejoins `.fl-help-cta` Markdown attribute lists after smart quote/line-wrap conversion, so legacy WordPress HTML attributes and CTA styling remain valid.
+- Consolidated the three 2013 color-font proposal posts into the new 2026-05-03 article and updated the archive link in `2025-07-22-the-long-awkward-adolescence-of-color-fonts.md`.
+- Replaced dead `calfonts.com` links in Dave Lawrence / California Type Foundry posts with the current MyFonts collection URL.
+- Moved four duplicate consolidation candidate posts to `issues/draft-posts/` and left them marked as drafts so they stay out of the public blog until reviewed.
+- Fixed the missing image reference in the 2025 color-font history post by pointing it at an existing FontLab gradient asset.
+- Normalized current source-post CTA links from each post's `review.cta_target`, using live official FontLab help URLs where the older TODO target was stale.
+- Updated verified CTA targets for TransType 4, FontLab VI release notes, FontLab 7 artwork import, the FontLab 8 intro tutorial, variable-font variations, and Scannerlicker.
+- Updated the 2026 OpenType post's FontLab source reference from the older FontLab 7 manual page to the current FontLab 8 OpenType tutorial.
+- Updated the variable-font file-size post CTA to the current FontLab 8 Families & variation chapter.
+- Rewrote `opentype-is-where-good-manners-live` with a stronger small-caps example, formatted references, and a live OpenType help CTA.
 - Enabled `include-markdown`, `llmstxt`, and `copy-to-llm` in `mkdocs/mkdocs.yml`.
 - Expanded GitHub Actions output checks for the at-root layout: `docs/index.html`, `docs/about/index.html`, `docs/CNAME`, `docs/.nojekyll`, `docs/llms.txt`, and `docs/llms-full.txt`.
 - Reconciled `TASKS.md` and `TODO.md` so completed configuration, post-list styling, FontLab 8.2 split, excerpt, llms, browser-check, Made with FontLab, and shipped issue-203 post-file tasks are removed from the open checklist.
 - Tightened the template content container so narrow post pages no longer overflow horizontally.
+- Kept the Brush Romans webinar CTA on the FontLab TV fallback after current web/video research found no stable recording URL.
 
 ### Verified
 - `uv sync --frozen` completed with Flowmark in the lock file.
-- `uv run blog-fontlab format` completed against 118 Markdown files with no `.bak` or `.orig` files.
+- `uv run blog-fontlab format` completed against the current 81 Markdown source files with no `.bak` or `.orig` files.
+- `uv run --with pytest python -m pytest -q` passed.
+- `uvx ruff check src tests` passed.
 - `./build.sh build` completed after running Flowmark first.
 - `uvx ruff check src/` passed.
 - Local checks found no smart-quote HTML attribute delimiters in `src_docs/md` or generated `docs`.
+- Local CTA audit found no split `.fl-help-cta` attributes and no mismatch between source `review.cta_target` values and Markdown CTA links.
+- HTTP checks returned 200 for the updated TransType 4, FontLab VI release notes, FontLab 7 importing artwork, FontLab 8 intro tutorial, FontLab 8 families & variation, and Scannerlicker catalogue CTA targets.
+- Local checks confirmed the four named offline draft consolidation candidates remain under `issues/draft-posts/` with `draft: true`.
+- Browser check at `http://127.0.0.1:8174/` plus edited post pages found no horizontal overflow and no console errors.
 - `uv sync --frozen` completed.
 - `./build.sh build` completed and generated root `llms.txt` and `llms-full.txt`.
 - `uvx ruff check src/` passed.
-- Local checks confirmed all current posts include `<!-- more -->`, no post uses `authors: [editorial]` or `categories:`, CI sanity-check target files exist, and `src_docs/md/posts/` currently contains 113 Markdown posts.
-- Local build output contains 113 generated public post pages, `docs/llms.txt` (14,252 bytes), and `docs/llms-full.txt` (359,412 bytes).
+- Local checks confirmed all current published posts include `<!-- more -->`, no post uses `authors: [editorial]` or `categories:`, CI sanity-check target files exist, `src_docs/md/posts/` currently contains 79 published Markdown posts, and 12 offline draft/research files live under `issues/draft-posts/`.
+- Local build output contains 79 generated public post pages, `docs/llms.txt` (9,916 bytes), and `docs/llms-full.txt` (251,703 bytes).
+- Local checks confirmed the three retired 2013 color-font pages are absent from generated `docs/`, the new 2026 color-font page exists, and no source or generated page links to the old color-font URLs.
+- Current web research found the Matthew Carter recording at `https://www.youtube.com/watch?v=ibJhxbsbqJ4`; searches found the Brush Romans event listing/preview but no stable recording URL.
 - Playwright screenshots were captured for home, single post, archive, and about at desktop and narrow mobile widths.
-- Chrome DevTools checks found no horizontal overflow and no console errors on home, `opentype-features-as-ux`, archive 2025, and about.
+- Chrome DevTools checks found no horizontal overflow and no console errors on home, the Dave Lawrence post, and the 2025 color-font history post; the homepage has no draft labels or moved-draft slugs; a moved draft URL returns the 404 page; the Dave Lawrence page has MyFonts links and no `calfonts.com`; the 2025 color-font gradient image loads with nonzero natural dimensions.
 
 ## [Unreleased] — 2026-05-07 (cont)
 
@@ -95,7 +118,7 @@ The following items were marked `[x]` in `TODO.md` during the 2026-05-07 session
 - Template override at `mkdocs/mk-fontlab/main.html` loading the shared FontLab Web Component menu/footer from `i.fontlab.com/menu/`.
 - Skeleton pages: `index.md`, `about.md` (full company history, ~750 words), `blog/index.md`.
 - Author registry at `blog/.authors.yml` (Adam Twardoch).
-- First post: `blog/posts/2013-09-19-color-fonts.md` (color-fonts overview, ported from WordPress export — body was teaser-only in the source archive; full piece needs sourcing).
+- First post: `blog/posts/2013-09-19-color-fonts.md` (color-fonts overview, ported from WordPress export; later replaced by the 2026 consolidated color-font guide).
 - `src_docs/md/CNAME` so `blog.fontlab.com` survives the build clean.
 - `.github/workflows/ci.yml`: tag-triggered (`v*.*.*`) deploy to `gh-pages` branch via `peaceiris/actions-gh-pages@v4`.
 - `CLAUDE.md` capturing repo layout, reference policy, and migration constraints.

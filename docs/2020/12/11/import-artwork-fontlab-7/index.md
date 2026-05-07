@@ -7,3 +7,5 @@ The tutorial is part of a longer series on type design with FontLab 7, developed
 Getting artwork into FontLab without friction is foundational. Once that step is smooth, the drawing and refinement workflow opens up considerably.
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=b6TO3MF-eMU).
+
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Importing-Artwork/)

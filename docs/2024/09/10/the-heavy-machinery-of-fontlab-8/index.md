@@ -40,4 +40,4 @@ Old software is like an old house — eventually you have to take it down to the
 - [What’s new in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/)
 - [Hello, FontLab 8.2!](https://www.fontlab.com/news/fontlab-8/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/whats-new/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/)

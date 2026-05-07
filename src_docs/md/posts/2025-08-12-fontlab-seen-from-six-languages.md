@@ -6,6 +6,22 @@ tags: [fontlab-8, multilingual, type-design, global, design-systems]
 date:
   created: 2025-08-12
 slug: fontlab-seen-from-six-languages
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "JustFont is based in Taiwan, not Japan — confirm the geographic attribution"
+    - "ATypI 2020 talks on Chinese Buddhist manuscripts — verify this happened at ATypI 2020"
+    - "Page Online (page-online.de) variable fonts article — verify URL is live"
+    - "grafmag.pl and designpractice.pl Polish coverage — verify these sites exist and have relevant articles"
+  image_status: missing
+  image_needs: "Multilingual type specimen or world-languages collage — original art needed"
+  weakness_verdict: keep
+  consolidate_with: "2025-04-22-variable-fonts-in-many-languages.md"
+  notes: "Genuinely original editorial angle; geographic/cultural framing is stronger than the 2025-04-22 post — if merging, keep this voice."
 ---
 If you read about FontLab only in English, you get one picture.
 If you read about it in Polish, Spanish, Japanese, Korean, Chinese, and German, you get
@@ -60,4 +76,4 @@ The software has to do all of it.
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 - [Roboto Flex in design systems — wdnote](https://wdnote.tistory.com/197)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

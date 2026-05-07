@@ -34,11 +34,9 @@ There is a charming detail in the early-2010s lore. Before the editors caught up
 
 ## From the archives
 
-We have been writing about color fonts since the earliest days of these format wars. If you want to dive deeper into the history and mechanics, check out our older posts:
+We have been writing about color fonts since the earliest days of these format wars. If you want to dive deeper into the history and mechanics, start with the current consolidated guide:
 
-- [Color fonts: overview of proposals for color extensions of OpenType](/2013/09/19/color-font-format-proposals/)
-- [The four color-font proposals: APP, COLR/CPAL, CBDT/CBLC, and SVG](/2013/10/10/color-font-proposals-detailed/)
-- [Color font concepts: layers, palettes, scaling, and finiteness](/2013/11/07/color-font-concepts/)
+- [Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes](/2026/05/03/color-fonts-in-2026/)
 - [Color fonts: the next big thing? A FontLab tutorial](/2014/06/18/color-fonts-tutorial/)
 - [8 days: Color](/2023/03/13/8-days-color/)
 - [Color scripts, color fonts](/2023/11/13/color-scripts-color-fonts/)
@@ -52,4 +50,4 @@ We have been writing about color fonts since the earliest days of these format w
 - [Convert TTF to CBDT/CBLC — TypeDrawers](https://typedrawers.com/discussion/2392/convert-a-ttf-to-cbdt-cblc-format-color-font)
 - Color fonts in browsers — web.dev
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

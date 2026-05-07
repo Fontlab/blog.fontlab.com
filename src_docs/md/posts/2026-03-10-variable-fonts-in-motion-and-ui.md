@@ -6,6 +6,21 @@ tags: [variable-fonts, motion, ui, fontlab-8, vexy-lines]
 date:
   created: 2026-03-10
 slug: variable-fonts-in-motion-and-ui
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "FontLab 8 supports custom per-glyph variation axes and variable components — verify"
+    - "Webflow University variable fonts link — verify URL is live"
+    - "Korean design-system writers using variable fonts for screen density — verify sources"
+  image_status: missing
+  image_needs: "Variable font axis animation screenshot or CSS animation example"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Good cross-product framing (FL8 + Vexy Lines for motion); the multilingual design-system angle is underused. CTA URL is fixed."
 ---
 Typography on screen used to mean “pick a weight and hope for the best.”
 Now the weight can follow the user.
@@ -53,5 +68,4 @@ The tools just make getting there a little less heroic.
 - [Variable fonts — MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
 - [Vexy Lines](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](fontlab/8/manual/Variations/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/){ .fl-help-cta }

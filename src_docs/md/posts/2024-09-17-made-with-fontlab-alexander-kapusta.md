@@ -6,6 +6,21 @@ tags: [made-with-fontlab, your-font-fetish, display]
 date:
   created: 2024-09-17
 slug: made-with-fontlab-alexander-kapusta
+review:
+  cta_status: ok
+  cta_target: "https://www.yourfontfetish.com/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Four families in public made-with-fontlab gallery — verify count and names (Becha, Fargo, Rare, Zarya)"
+    - "Kapusta uses FontLab 7 and FontLab 8 — confirm from gallery metadata"
+    - "yourfontfetish.com is the correct URL for all four font links"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Real interview with real quote; four font links all point to the same homepage — needs individual product URLs."
 ---
 YFF Becha looks like a poster you’d find tacked behind a bar in Lviv — heavy, slightly
 off, deliberately so.

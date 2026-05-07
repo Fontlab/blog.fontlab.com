@@ -6,10 +6,25 @@ tags: [made-with-fontlab, scannerlicker, variable-fonts]
 date:
   created: 2026-04-08
 slug: made-with-fontlab-fabio-duarte-martins
+review:
+  cta_status: ok
+  cta_target: "https://www.myfonts.com/collections/scannerlicker-foundry"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "FontLab ships native binaries for macOS, Windows, and Linux — verify Linux is currently supported"
+    - "Conditional glyph substitutions in FontLab 8 — verify feature exists"
+    - "Axis graph feature mentioned — verify what 'new axis graph' refers to in FL8"
+  image_status: missing
+  image_needs: "Scannerlicker font specimen or FontLab 8 axis graph screenshot"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Testimonial annotation is sharp — the 'design to engineering' and Linux observations are genuinely useful. CTA now points to the verified live Scannerlicker catalogue."
 ---
-Scannerlicker is Fábio Duarte Martins’s foundry, and
-his testimonial is one of the few that actually names the FontLab features doing the
-work. It is, accidentally, a short manual on what to learn first.
+Scannerlicker is Fábio Duarte Martins’s foundry, and his testimonial is one of the few
+that actually names the FontLab features doing the work.
+It is, accidentally, a short manual on what to learn first.
 
 <!-- more -->
 
@@ -61,14 +76,13 @@ either run a one-person foundry or work inside a larger pipeline where Linux is 
 choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece
 of cross-platform engineering for an industry that mostly assumes Mac.
 
-The Scannerlicker catalogue at
-fonts.scannerlicker.net is the proof.
+The [Scannerlicker catalogue](https://www.myfonts.com/collections/scannerlicker-foundry)
+is the proof.
 Variable fonts shipped, conditional substitutions configured, design space defined, all
 out of one editor and one studio.
 
 ## More from Fábio Duarte Martins
 
-- Scannerlicker catalogue — variable fonts and
-  retail families
+- [Scannerlicker catalogue — variable fonts and retail families](https://www.myfonts.com/collections/scannerlicker-foundry)
 
-Browse Scannerlicker →{ .fl-help-cta }
+[Browse Scannerlicker →](https://www.myfonts.com/collections/scannerlicker-foundry){ .fl-help-cta }

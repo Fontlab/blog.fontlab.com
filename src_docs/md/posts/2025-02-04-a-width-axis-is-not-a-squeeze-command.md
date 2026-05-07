@@ -6,6 +6,22 @@ tags: [variable-fonts, width-axis, type-design, fontlab-8, condensed]
 date:
   created: 2025-02-04
 slug: a-width-axis-is-not-a-squeeze-command
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Families and variation CTA URL is live"
+    - "justfont article URL — verify the blog.justfont.com link is correct and live"
+    - "Underware 'Very-able fonts' 2018 — confirm publication date"
+    - "Roboto Flex / Korean design-system reference — verify source"
+  image_status: missing
+  image_needs: "JustFont width comparison image or condensed master comparison from reference/fldoc/"
+  weakness_verdict: keep
+  consolidate_with: "2025-05-13-variable-fonts-were-never-about-file-size.md"
+  notes: "Strong argument with good multilingual sourcing. CTA now points to the FontLab 8 families and variation guide."
 ---
 Read enough writing on variable fonts in German, French, Spanish, Italian, Portuguese,
 Polish, Russian, Chinese, Japanese, and Korean and the cliché falls apart.
@@ -57,5 +73,4 @@ Anything else is a transform.
 - [Thinking beyond the static — Type Network](https://typenetwork.com/articles/thinking-beyond-the-static)
 - [Variable fonts — web.dev](https://web.dev/articles/variable-fonts)
 
-Read more on help.fontlab.com →{
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/){ .fl-help-cta }

@@ -1,6 +1,6 @@
 Bodoni Casale is not a Bodoni revival in the careful, museum-conservator sense. It’s three Bodoni revivals — Casale, Ferrara, Terracina — each a different printed source, each digitised at the level of detail that only matters when somebody looks at the page from six inches away. That’s the California Type Foundry house style, and Dave Lawrence does it in FontLab.
 
-Lawrence calls them the Hi-res Font™ Series — pitch-perfect classics from hi-res scans. The catalogue runs to seven public entries on the gallery: three Bodonis, [CAL Grotesk](https://calfonts.com/cal-grotesk/), [Fra Luca](https://calfonts.com/fra-luca/) (after Bruce Rogers), [Hermanz Titling](https://calfonts.com/hermanz-titling/) (after Hermann Zapf), and [Oceanwide](https://calfonts.com/oceanwide/). Six of them are revivals after named historical sources; the precision required is not negotiable.
+Lawrence calls them the Hi-res Font™ Series — pitch-perfect classics from hi-res scans. The catalogue runs to seven public entries on the gallery: three Bodonis, [CAL Grotesk](https://www.myfonts.com/collections/california-type-foundry/), [Fra Luca](https://www.myfonts.com/collections/california-type-foundry/) (after Bruce Rogers), [Hermanz Titling](https://www.myfonts.com/collections/california-type-foundry/) (after Hermann Zapf), and [Oceanwide](https://www.myfonts.com/collections/california-type-foundry/). Six of them are revivals after named historical sources; the precision required is not negotiable.
 
 Asked what FontLab gives him, Lawrence is unusually direct for a type designer:
 
@@ -12,7 +12,7 @@ Asked what FontLab gives him, Lawrence is unusually direct for a type designer:
 >
 > If you want pro results, you have to invest in a pro font editor. Period. (…) FontLab allowed me to make our Hi-res Font™ Series. Accurate, pitch-perfect classics from hi-res scans. Without FontLab 8, I could do just about nothing.
 
-— Dave Lawrence, [California Type Foundry](https://calfonts.com)
+— Dave Lawrence, [California Type Foundry](https://www.myfonts.com/collections/california-type-foundry/)
 
 The “fractional coordinates” remark elsewhere in his testimonial is the giveaway about how Hi-res actually works. Most font editors quantise to integer units; the Bodoni revivals lean on FontLab’s sub-unit precision so the trapped ink and the optical compensations from the original lead don’t get mashed flat by rounding. That’s the kind of detail that does not show up in the marketing copy because it’s boring to non-revivalists, and load-bearing to people who do this for a living.
 
@@ -20,12 +20,12 @@ The skeleton-based Stroke panel and Thickness tool he mentions are the FontLab 8
 
 ## More from Dave Lawrence
 
-- [Bodoni Casale](https://calfonts.com/bodoni-casale/) — California Type Foundry
-- [Bodoni Ferrara](https://calfonts.com/bodoni-ferrara/) — California Type Foundry
-- [Bodoni Terracina](https://calfonts.com/bodoni-terracina/) — California Type Foundry
-- [CAL Grotesk](https://calfonts.com/cal-grotesk/) — California Type Foundry
-- [Fra Luca](https://calfonts.com/fra-luca/) — California Type Foundry
-- [Hermanz Titling](https://calfonts.com/hermanz-titling/) — California Type Foundry
-- [Oceanwide](https://calfonts.com/oceanwide/) — California Type Foundry
+- [Bodoni Casale](https://www.myfonts.com/collections/california-type-foundry/) — California Type Foundry
+- [Bodoni Ferrara](https://www.myfonts.com/collections/california-type-foundry/) — California Type Foundry
+- [Bodoni Terracina](https://www.myfonts.com/collections/california-type-foundry/) — California Type Foundry
+- [CAL Grotesk](https://www.myfonts.com/collections/california-type-foundry/) — California Type Foundry
+- [Fra Luca](https://www.myfonts.com/collections/california-type-foundry/) — California Type Foundry
+- [Hermanz Titling](https://www.myfonts.com/collections/california-type-foundry/) — California Type Foundry
+- [Oceanwide](https://www.myfonts.com/collections/california-type-foundry/) — California Type Foundry
 
-[Browse California Type Foundry →](https://calfonts.com)
+[Browse California Type Foundry →](https://www.myfonts.com/collections/california-type-foundry/)

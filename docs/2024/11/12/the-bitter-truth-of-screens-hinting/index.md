@@ -40,4 +40,4 @@ Type design is an exercise in engineering as much as in art. The drawing is the 
 - [What’s new in FontLab 8 — formats](https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/)
 - [Microsoft Typography — ClearType overview](https://learn.microsoft.com/en-us/typography/cleartype/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

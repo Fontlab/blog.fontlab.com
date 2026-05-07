@@ -6,6 +6,22 @@ tags: [python, typerig, scripting, automation, fontlab-8]
 date:
   created: 2024-10-15
 slug: scripting-the-mundane-python-fontlab
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "FontLab 8 uses Python 3.11 — verify current Python version in FL8"
+    - "Python 3.11 speed claim '10 to 60 percent faster' — confirm this is the FL8 upgrade claim, not generic CPython claim"
+    - "Post-export hooks introduced in FontLab 8.3 — verify version number"
+    - "TypeRig author is Vassil Kateliev — confirm"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Strongest technical post in the set — the 'rule of five' framing is sharp; CTA could deep-link to scripting section."
 ---
 Type design is an art form.
 Font production is a factory job.
@@ -111,5 +127,4 @@ FontLab 8 plus TypeRig is the version of that toolkit that exists today.
 - [Awesome typography — curated list](https://github.com/Jolg42/awesome-typography)
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

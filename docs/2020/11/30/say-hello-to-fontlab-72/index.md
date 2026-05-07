@@ -57,4 +57,10 @@ Use the Font window search box to find glyphs by name, Unicode character name, s
 
 The Glyph window is single-line by default. Make manual wraps with Enter, or switch to Auto wrap. When you apply a text wrap in the Glyph window, you can switch masters and instances without reflowing longer texts.
 
-[Learn more about FontLab 7.2](https://help.fontlab.com/fontlab/7/manual/Release-Notes-7622/)
+## Walkthrough
+
+A 31-minute guided tour by Adam Twardoch covers each area in turn — drawing, variable fonts, OpenType features, export — with commentary on why each design decision was made. The fastest path from “I saw the release notes” to “I understand what actually changed.”
+
+For the version-by-version detail, use the release notes below.
+
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Release-Notes-7622/)

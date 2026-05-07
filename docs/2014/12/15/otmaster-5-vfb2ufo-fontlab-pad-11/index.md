@@ -1,7 +1,9 @@
-December 2014 brought a major version of DTL OTMaster alongside two new free tools: a command-line UFO converter and an updated color font typesetter.
+December 2014 brought a major update to DTL OTMaster, plus two new free tools. We released a command-line UFO converter and an updated color font typesetter.
 
-**DTL OTMaster 5.0** is a technical OpenType font editor developed by the Dutch Type Library. It provides low-level access to the binary structure of OpenType fonts — tables, records, and individual fields — without abstracting them into a visual design interface. Version 5.0 was a major upgrade from the 4.x series.
+Here is what shipped in this release:
 
-**vfb2ufo** is a free command-line tool for two-way conversion between VFB (FontLab Studio’s native binary format) and UFO (Unified Font Object, the open XML-based interchange format). It gives FontLab Studio users a path to and from UFO-based workflows without a round-trip through the GUI.
+- **DTL OTMaster 5.0**: A technical OpenType font editor from the Dutch Type Library. It gives you low-level access to the binary structure of OpenType fonts. You can edit tables, records, and individual fields directly. This skips the visual design interface entirely. Version 5.0 marked a massive upgrade from the 4.x series.
+- **vfb2ufo**: A free command-line tool for two-way conversion. It translates between VFB (FontLab Studio’s native binary format) and UFO (Unified Font Object, the open XML-based interchange format). This gives FontLab Studio users a direct path to UFO-based workflows. You don’t need to open the GUI to convert files.
+- **FontLab Pad 1.1**: A free app for Mac OS X and Windows. It lets you set text in color fonts. You can use bitmap color, SVG color, and layered color OpenType formats. The app renders the results correctly, something most operating systems and apps couldn’t do back then. Version 1.1 brought updates to both Mac and Windows builds.
 
-**FontLab Pad 1.1** is a free application for Mac OS X and Windows for setting text in color fonts — bitmap color, SVG color, and layered color OpenType formats — and seeing the results rendered correctly, which most operating systems and applications could not do at the time. Version 1.1 updated both the Mac and Windows builds.
+[Read more →](https://help.fontlab.com/font-utility/dtl-otmaster/)

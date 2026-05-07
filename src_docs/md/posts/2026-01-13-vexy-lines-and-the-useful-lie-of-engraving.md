@@ -6,6 +6,21 @@ tags: [vexy-lines, engraving, hedcut, halftone, vector]
 date:
   created: 2026-01-13
 slug: vexy-lines-and-the-useful-lie-of-engraving
+review:
+  cta_status: ok
+  cta_target: "https://vexy.art/lines/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Wall Street Journal hedcut tradition uses dots and hatch lines — verify hedcut.com source"
+    - "Five fills listed (Stipple, Halftone, Trace, Wave, Text) — verify these are all in shipped product"
+    - "Vexy Lines described as helping turn raster into vector with 'remarkable control and artistic flair' — flag as marketing language to rewrite"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: "2025-12-23-vexy-lines-and-the-joy-of-halftone.md"
+  notes: "Best conceptual Vexy Lines post — 'tasteful loss is the whole craft' is the line the others are trying to write. The five-fills practical test section is the clearest feature explanation in the series."
 ---
 Engraving is a useful lie.
 A hedcut looks old, sober, authoritative, and a little expensive — even when it was made
@@ -60,4 +75,4 @@ Tasteful loss is the whole craft.
 - [A crash course in halftones — Screenprinting.com](https://www.screenprinting.com/blogs/news/a-crash-course-in-halftones-for-screen-printing)
 - [Vexy Lines — official](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://vexy.art/lines/){ .fl-help-cta }

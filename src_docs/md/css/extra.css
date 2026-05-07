@@ -131,6 +131,11 @@ html {
     margin: 0 0 0.3rem;
   }
 
+  /* Glue "Continue reading" inline to the end of the excerpt paragraph */
+  .md-post--excerpt .md-post__content > p:last-of-type {
+    display: inline;
+  }
+
   /* "Continue reading" — inline, muted, small */
   .md-post__action {
     display: inline;

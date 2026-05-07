@@ -4,6 +4,23 @@ date:
 title: "Introducing FontLab 7: the pro font editor, evolved"
 authors: [fontlab]
 draft: false
+review:
+  cta_status: ok
+  cta_target: "https://www.fontlab.com/font-editor/fontlab/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "25% launch discount valid until December 22, 2019 — historical, no action needed"
+    - "FontLab VI users who bought Aug 1, 2019 or later get free upgrade — verify policy"
+    - "FontLab VI upgrade to 7 for $99 — verify this was the actual price"
+    - "250+ new features claimed — verify against release notes"
+    - "Dave Lawrence claim: 167 ornamental glyphs per day average — verify quote accuracy"
+  image_status: present
+  image_needs: "YouTube embed thumbnail present (ytimg.com) — adequate; verify URL still works"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Strong launch post with real user quotes that add credibility. The feature bullet string reads like release notes copy-paste; a prose paragraph would land better. Pricing and discount deadline are historical — no cleanup needed but add a note that current pricing is on fontlab.com."
 ---
 FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of
 concentrated work, with more than 250 new features, fixes, and improvements.
@@ -83,3 +100,5 @@ element references, components, auto-generated glyphs, or all of them combined.
 Add auto layers, auto OpenType feature generation, a powerful Python API, and
 multi-platform support.
 FontLab 7 finally feels mature.”
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/){ .fl-help-cta }

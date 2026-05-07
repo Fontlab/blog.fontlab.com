@@ -7,3 +7,5 @@ The video covers the difference between sidebearing values and advance width, ho
 Spacing is addressed after drawing is mostly complete, but the decisions made here affect how every glyph relates to its neighbors. Getting it consistent is what separates a draft font from a usable one.
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=cmDocLGmw4A).
+
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing/)

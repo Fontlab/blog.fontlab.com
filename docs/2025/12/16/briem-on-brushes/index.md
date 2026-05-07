@@ -14,4 +14,4 @@ Gunnlaugur SE Briem has spent a career arguing that you cannot draw a serious ty
 
 Most “stiff” letters come from designers who have never held a broad-edged pen. This tutorial is a fix for that — and a useful re-read every six months.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/2-0-basics/briem-2-01-basics/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/2-0-basics/briem-2-01-basics/)

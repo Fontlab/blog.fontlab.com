@@ -6,6 +6,22 @@ tags: [made-with-fontlab, tipo, variable-fonts]
 date:
   created: 2025-08-19
 slug: made-with-fontlab-eduardo-tunni
+review:
+  cta_status: ok
+  cta_target: "https://www.tipo.net.ar/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Tunni Lines named after Eduardo Tunni and built into FontLab — verify this is accurate"
+    - "Graduate font: slab to sans variable — verify axis description at etunni.github.io"
+    - "Jeremy Tankard testimonial quote cited — verify this appears on the same FontLab gallery page"
+    - "Graduate is free and open source on GitHub — verify license"
+  image_status: missing
+  image_needs: "Graduate variable font specimen or Tunni Lines tool screenshot from reference/fldoc/"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "The Tunni Lines paragraph is the most technically specific and interesting content in any Made-with post; Jeremy Tankard quote needs sourcing."
 ---
 [Graduate](https://etunni.github.io/Graduate-Variable-Font/) is the kind of variable
 font that makes the case for the format without having to argue.

@@ -5,6 +5,21 @@ authors: [fontlab]
 date:
   created: 2023-09-04
 slug: briem-decisions
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/briem/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Matthew Carter made Bell Centennial for high-speed printing on rough paper — verify this design brief"
+    - "BriemAkademi typeface family built from three modules at Royal Academy — verify this is published/available"
+    - "Golden section applied to x-height/ascenders/descenders — verify this is Briem's method not an interpretation"
+  image_status: present
+  image_needs: "GIF images from i.fontlab.com/fl8/briem/ — confirm these CDN paths are live"
+  weakness_verdict: keep
+  consolidate_with: "2023-04-17-briem-foundations.md, 2024-04-08-briem-bold-italic-spacing.md"
+  notes: "Best-written post in the Briem series — Briem's own voice comes through clearly via direct quotes. The Bell Centennial anecdote is a genuine hook. Tag all three Briem posts as a series rather than consolidating."
 ---
 The hardest part of designing a typeface isn’t drawing — it’s deciding.
 Which letterforms? How wide?
@@ -95,5 +110,4 @@ A condensed design needs redrawing, not rescaling.
 
 * * *
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/3-0-decisions/briem-3-01-decisions/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/){ .fl-help-cta }

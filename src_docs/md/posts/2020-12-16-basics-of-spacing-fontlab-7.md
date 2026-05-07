@@ -5,6 +5,21 @@ authors: [fontlab]
 date:
   created: 2020-12-16
 slug: basics-of-spacing-fontlab-7
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Video runtime five minutes — verify against YouTube"
+    - "Dave Lawrence's series teaches one concept at a time — verify series structure"
+    - "Reference characters n, o, H, O described — verify this matches FontLab 7 documentation methodology"
+  image_status: present
+  image_needs: "Thumbnail present (fontlabtv-cmDocLGmw4A.jpg) — adequate"
+  weakness_verdict: keep
+  consolidate_with: "2015-11-13-how-to-space-a-font.md"
+  notes: "Tight and well-written — the 'deliberately brief' acknowledgment is honest and appropriate. Strong closer: 'Getting it consistent is what separates a draft font from a usable one.' Consolidation candidate with the 2015 Phinney spacing tutorial; both cover the same concept at different software versions."
 ---
 Spacing is the invisible work that determines whether a font feels effortless or labored
 to read.
@@ -33,3 +48,5 @@ affect how every glyph relates to its neighbors.
 Getting it consistent is what separates a draft font from a usable one.
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=cmDocLGmw4A).
+
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/){ .fl-help-cta }

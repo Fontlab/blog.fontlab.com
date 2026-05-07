@@ -6,6 +6,22 @@ tags: [hinting, fontaudit, rendering, opentype, fontlab-8]
 date:
   created: 2024-11-12
 slug: the-bitter-truth-of-screens-hinting
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "FL8 auto-hinter known-bad cases: 'lowercase g, ampersand, and italics' — verify this claim"
+    - "Built-in preview uses Microsoft ClearType's actual rendering pipeline — verify technical accuracy"
+    - ".glyphspackage stores each glyph as a separate file — confirm format spec"
+    - "French designer white-gaps anecdote — flagged as illustrative; check it isn't fabricated"
+  image_status: missing
+  image_needs: "hinting panel or FontAudit panel screenshot from reference/fldoc/"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Covers hinting, FontAudit, overlapping contours, and .glyphspackage — arguably four posts squeezed into one; CTA should deep-link to hinting section."
 ---
 You can spend six months agonising over the curvature of a lowercase ‘s’, and then your
 font is rendered by a ruthless grid of pixels on somebody’s second monitor at 1366×768.
@@ -105,5 +121,4 @@ that looks beautiful on a stranger’s laptop in 2024.
 - [What’s new in FontLab 8 — formats](https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/)
 - [Microsoft Typography — ClearType overview](https://learn.microsoft.com/en-us/typography/cleartype/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

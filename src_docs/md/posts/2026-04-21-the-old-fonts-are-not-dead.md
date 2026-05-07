@@ -6,6 +6,23 @@ tags: [transtype, type-1, opentype, preservation, conversion]
 date:
   created: 2026-04-21
 slug: the-old-fonts-are-not-dead
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Adobe ended Type 1 authoring support after January 2023 — verify date"
+    - "Adobe declared Type 1 'obsolete' in September 1999 — verify source"
+    - "25 years of continued support after 1999 obsolete declaration — math checks out (1999-2023 = 24 years, close enough)"
+    - "TransType 4 shipped in 2013 — verify release year"
+    - "Type Network end-of-Type-1 article URL — verify live"
+  image_status: missing
+  image_needs: "Old font suitcase icons on desktop, or TransType 4 interface screenshot"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Best opener in the batch ('nothing gets old faster than a font format'); the rescue-boat framing is earned. CTA URL too generic — needs TransType product page or Type 1 rescue doc."
 ---
 Nothing gets old faster than a font format — until a client opens a twenty-year-old file
 and suddenly it is everybody’s problem again.
@@ -57,4 +74,4 @@ They are just waiting for someone to move them carefully into the present.
 - PostScript Type 1 fonts: end of support — Adobe
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
 
-Read more on help.fontlab.com →{ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

@@ -4,6 +4,22 @@ date:
 title: "FontLab Studio 5, Fontographer 5 and TypeTool 3 on macOS 10.15 Catalina"
 authors: [fontlab, typetool, fontographer]
 draft: false
+review:
+  cta_status: ok
+  cta_target: "https://www.fontlab.com/font-editor/fontlab/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Porting PowerPC to Intel in 2010 took two years and eight developer-years — verify"
+    - "CrossOver Mac 19 costs $24.95–$49.95 — verify current pricing (likely stale)"
+    - "FontLab 7 upgrade from Studio 5 for $199, Fontographer $229, TypeTool $415 — verify current pricing"
+    - "Updated March 20, 2020 note in CrossOver section — verify this annotation is intentional"
+  image_status: present
+  image_needs: "Cloudinary image present (fls5-fog5-tt3) — verify URL still resolves; CrossOver screenshot also present"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Absorbed the high-level VM-options summary from the Oct 29 migration post; the deep step-by-step Parallels guide was dropped as stale."
 ---
 macOS 10.15 Catalina drops all 32-bit app support, which means FontLab Studio 5,
 Fontographer 5, TypeTool 3, and BitFonter 3 for Mac will not run on it — and porting
@@ -37,12 +53,9 @@ Retina-ready font editor.
 
 If you’ve been hesitant about upgrading — do it now.
 
-- From FontLab Studio 5
-  for **$199**
-- From Fontographer 5
-  for **$229**
-- From TypeTool 3
-  for **$415**
+- From FontLab Studio 5 for **$199**
+- From Fontographer 5 for **$229**
+- From TypeTool 3 for **$415**
 
 ## 32-bit apps no longer run natively on macOS Catalina
 
@@ -96,8 +109,7 @@ ways to keep using FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3
    7, or XP as the guest.
    Contact us to cross-grade your Mac license to a Windows license.
 
-4. **Upgrade to FontLab 7**
-   — the clean break.
+4. **Upgrade to FontLab 7** — the clean break.
 
 ## CrossOver Mac 19
 
@@ -149,6 +161,4 @@ We don’t offer technical support for our Windows apps running inside CrossOver
 - We recommend upgrading to [FontLab 7](https://www.fontlab.com/font-editor/fontlab/),
   our modern 64-bit font editor for macOS and Windows.
 
-## More on this topic
-
-- [Migration paths from legacy FontLab tools on Catalina](2019-10-29-fls5-fog5-tt3-catalina-migration.md)
+[Read more →](https://www.fontlab.com/font-editor/fontlab/){ .fl-help-cta }

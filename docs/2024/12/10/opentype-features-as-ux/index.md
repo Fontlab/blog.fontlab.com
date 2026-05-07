@@ -55,4 +55,4 @@ OpenType features are user experience for text. They are how a font behaves unde
 - [Kerning and OpenType features in Firefox 3 — Ralf Herrmann](https://opentype.info/blog/2008/06/14/kerning-and-opentype-features-in-firefox-3.html)
 - [Practical guide to alternate characters and OpenType features — Pangram Pangram](https://pangrampangram.com/blogs/journal/opentype-features)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8)

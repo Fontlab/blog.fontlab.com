@@ -5,6 +5,22 @@ authors: [transtype]
 date:
   created: 2021-09-15
 slug: rescue-postscript-type1-transtype
+review:
+  cta_status: ok
+  cta_target: "https://www.fontlab.com/font-converter/transtype/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Adobe ending Type 1 support in Creative Cloud in early 2023 — verify exact date (Adobe announced Jan 2023)"
+    - "Type 1 introduced by Adobe in 1985 — verify year"
+    - "Type 1 limited to 256 glyphs per file — verify this is accurate"
+    - "PostScript hinting in OTF is preserved correctly — verify TransType handles PS hinting faithfully"
+  image_status: present
+  image_needs: "transtype-hero.png present — verify local path resolves correctly (../media/transtype-hero.png)"
+  weakness_verdict: keep
+  consolidate_with: "2013-12-15-transtype-4.md"
+  notes: "Best practical-advice post in the set — clear urgency (Adobe deadline), honest licensing caveat, specific technical caveats (256-glyph limit, hinting). The 'two decades of real value' closer lands well. Inline link to fontlab.com/font-converter/transtype/ satisfies CTA."
 ---
 PostScript Type 1 fonts are on their way out.
 Adobe is ending Type 1 support in Creative Cloud applications in early 2023, and Apple
@@ -53,3 +69,5 @@ your favorite headline face no longer loads.
 
 TransType is available at
 [fontlab.com/font-converter/transtype/](https://www.fontlab.com/font-converter/transtype/).
+
+[Read more →](https://www.fontlab.com/font-converter/transtype/){ .fl-help-cta }

@@ -6,6 +6,21 @@ tags: [bold, weight, contrast, drawing]
 date:
   created: 2025-07-15
 slug: briem-drawing-bold
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Briem tutorial URL — verify the deep-link path is live at help.fontlab.com"
+    - "'Bold is roughly 5–10% wider than regular' — confirm this is Briem's rule, not invented"
+    - "Counter closing / join thickening claims — verify against Briem source text"
+  image_status: missing
+  image_needs: "Bold vs regular n comparison image from reference/fldoc/ or Briem tutorial assets"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Tightest craft post in the set — the three-failure-modes structure is immediately useful; CTA has a real deep link, the only FontLab TV / tutorial post that does."
 ---
 A bold weight is not a thicker version of the regular.
 It is a different design that has to share a family with the regular and pretend they
@@ -60,5 +75,4 @@ without scaling the regular.
 Compare. The differences you find on `n` are the differences you will need to apply
 across the rest of the lowercase.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/){ .fl-help-cta }

@@ -35,4 +35,4 @@ Italic capitals have less leeway. They are usually slanted versions of the roman
 
 Set the italic next to the roman at text size — 9 to 11 point — and read a paragraph. The italic should look like a sibling of the roman, not a tilted twin. If the slant feels like a transformation rather than a design, something in the structure is still wrong.
 
-Read more on help.fontlab.com →{ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/6.%20Italics/6a%20Intro%20to%20Italics/)

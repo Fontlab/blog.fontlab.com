@@ -19,4 +19,4 @@ The composite picture is more useful than any single regional view. FontLab is a
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 - [Roboto Flex in design systems — wdnote](https://wdnote.tistory.com/197)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

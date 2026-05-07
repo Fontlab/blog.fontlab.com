@@ -6,6 +6,21 @@ tags: [spacing, counters, type-design, fontlab-8, frutiger]
 date:
   created: 2024-07-09
 slug: white-space-does-the-real-drawing
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/calfonts/3.%20Fitting%20and%20Spacing/3a-0%20Intro%20to%20Spacing/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Frutiger quote attribution — confirm exact source at typography.guru"
+    - "Walter Tracy spacing logic — confirm book title is 'Letters of Credit'"
+    - "FontLab metrics key linking behaviour (n → b, h, i, k, r)"
+  image_status: missing
+  image_needs: "spacing/metrics window screenshot from reference/fldoc/ or reference/FontLabVI-help/"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Sharp, well-argued editorial on spacing primacy. Frutiger quote needs a real citation URL; image placeholder must be resolved before publish."
 ---
 Letterforms are made of black shapes, but type is judged by the white around and inside
 them.
@@ -53,5 +68,4 @@ The spacing is the part professionals get paid for.
 - [Inside the fonts: optical sizes — Type Network](https://typenetwork.com/articles/inside-the-fonts-optical-sizes)
 - [opsz axis — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/3.%20Fitting%20and%20Spacing/3a-0%20Intro%20to%20Spacing/){ .fl-help-cta }

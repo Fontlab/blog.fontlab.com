@@ -6,6 +6,22 @@ tags: [made-with-fontlab, variable-fonts, display]
 date:
   created: 2026-02-25
 slug: made-with-fontlab-yuri-gordon
+review:
+  cta_status: ok
+  cta_target: "https://yurigordon.com/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Seven entries on made-with-fontlab gallery for Gordon — verify count at i.fontlab.com"
+    - "Acqua Aldina URL yurigordon.com — verify it points to that specific font"
+    - "Baker Street 221B Dr Watson URL — verify URL is correct"
+    - "Gordon is a beta tester for FontLab — verify this claim"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "The kerning-as-pleasure and micron-precision annotations around the testimonial are what make this series worth reading; Gordon's quote is better than most. Strong post."
 ---
 [Acqua Aldina](https://yurigordon.com/) is a variable serif drawn by hand.
 [Baker Street 221B](https://yurigordon.com/en/shop/fonts/baker-street-221b-mr-holmes) is

@@ -14,4 +14,6 @@ The 7.1 cycle ran from 7.1.0 (2 March 2020) through 7.1.4 (1 August 2020). Here 
 - **VOLT export (7.1.4)** — export OpenType feature code in Microsoft VOLT format, making FontLab usable in complex-script workflows that rely on VOLT for hinting and feature development.
 - **Add variation to an existing font (7.1.4)** — a guided flow for introducing a new master axis into a font that was not originally designed as variable, handling the structural changes automatically.
 
-Full release notes and documentation are at [help.fontlab.com](https://help.fontlab.com/).
+Full release notes and documentation start at the [FontLab Help Center](https://help.fontlab.com/).
+
+[Read more →](https://help.fontlab.com/)

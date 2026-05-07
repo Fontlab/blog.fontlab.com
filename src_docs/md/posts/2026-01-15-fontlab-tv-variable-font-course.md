@@ -4,6 +4,22 @@ title: "FontLab TV: 50-hour variable font course now available"
 authors: [fontlab]
 date: 2026-01-15
 slug: fontlab-tv-variable-font-course
+review:
+  cta_status: ok
+  cta_target: "https://fontlab.tv/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "50-hour course, 25 playlists — verify current count on fontlab.tv"
+    - "Alexander Kapusta @YourFontFetish — verify YouTube channel name"
+    - "Co-produced by FontLab Ltd — verify this is accurate"
+    - "fontlab.tv URL — verify it resolves and links to playlists"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Straight announcement post — factual, well-structured, the curriculum overview is genuinely useful. Reads slightly like a press release; could use one sentence of editorial opinion to lift it."
 ---
 FontLab TV has published a 50-hour video course on variable font design, organized into
 25 playlists. It runs from absolute fundamentals — coordinates, contours, metrics —

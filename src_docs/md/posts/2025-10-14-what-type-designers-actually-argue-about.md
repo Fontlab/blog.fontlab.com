@@ -6,6 +6,21 @@ tags: [type-design, community, debates, fontlab-8, opentype]
 date:
   created: 2025-10-14
 slug: what-type-designers-actually-argue-about
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "FontLab 8.4 improved Autotrace — verify version number"
+    - "FontLab 8 leans toward strict compatibility from first stroke — verify this is accurate product positioning"
+    - "TypeDrawers thread URL — verify still live"
+  image_status: missing
+  image_needs: "TypeDrawers or forum screenshot, or illustrative debate-topic diagram"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Punchy editorial voice, the AI-in-workflow paragraph is the most timely section. CTA URL too generic; needs deep link to autotrace or variable font compatibility docs."
 ---
 If you only read industry marketing, you might think type designers spend their time
 celebrating the same handful of features.
@@ -60,4 +75,4 @@ The arguments mature.
 - [Alex John Lucas on FontLab vs RoboFont vs Glyphs](https://alexjohnlucas.com/type/software)
 - [Awesome typography — Jolg42](https://github.com/Jolg42/awesome-typography)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

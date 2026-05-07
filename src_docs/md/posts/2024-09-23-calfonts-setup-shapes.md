@@ -5,6 +5,22 @@ authors: [fontlab]
 date:
   created: 2024-09-23
 slug: calfonts-setup-shapes
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/calfonts/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "FontLab 8 runs on macOS 10.15 Catalina — verify minimum OS version in current docs"
+    - "FontLab 8 runs on Windows 8.1 — verify minimum Windows version"
+    - "10-day free trial, fully functional — confirm current trial terms"
+    - "Outer contours counter-clockwise, inner clockwise — confirm correct winding rule for OTF/TTF"
+  image_status: missing
+  image_needs: "calfonts tutorial screenshot from reference/fldoc/ or reference/fontlab-tv/"
+  weakness_verdict: keep
+  consolidate_with: "2025-03-17-calfonts-spacing-italics.md"
+  notes: "Good tutorial summary but no CTA and no tags; the series cross-link at the bottom is a relative path that may break — must be verified."
 ---
 Dave Lawrence of California Type Foundry wrote a comprehensive set of tutorials for
 FontLab 8, from installation to finished font.
@@ -81,8 +97,11 @@ that contours are closed and directions are correct before moving on.
 
 * * *
 
-Dave Lawrence’s full tutorial series is at
-[help.fontlab.com/fontlab/8/tutorials/calfonts/](https://help.fontlab.com/fontlab/8/tutorials/calfonts/).
+Dave Lawrence’s full
+[Calfonts tutorial series](https://help.fontlab.com/fontlab/8/tutorials/calfonts/)
+continues with spacing, family planning, and italics.
 
 *Next in this series:
 [Calligraphic fonts: spacing, italics, and family planning](2025-03-17-calfonts-spacing-italics.md)*
+
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/){ .fl-help-cta }

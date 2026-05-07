@@ -1,11 +1,27 @@
 ---
 this_file: src_docs/md/posts/2025-09-02-beyond-the-latin-sandbox-global-typography.md
-title: "Beyond the latin sandbox — global typography"
+title: "Beyond the Latin sandbox — global typography"
 authors: [fontlab]
 tags: [global-scripts, cyrillic, arabic, cjk, fontlab-8]
 date:
   created: 2025-09-02
 slug: beyond-the-latin-sandbox-global-typography
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "FontLab 8.2 refined right-to-left kerning workflow — verify version number"
+    - "FontLab 8.4 added Unicode Variation Sequences support — verify version number"
+    - "IJUP 2025 research on Ukrainian Cyrillic — verify source exists"
+    - "Latin font ~500 glyphs vs CJK tens of thousands — verify ballpark"
+  image_status: missing
+  image_needs: "FontLab glyph panel showing Arabic or CJK, or multi-script specimen"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Solid overview but stays at the altitude of a Wikipedia entry; the Arabic section is the sharpest. CTA URL too generic — needs deep link to formats/scripts chapter."
 ---
 It is a common myopia in Western design to assume that typography begins with `A` and
 ends with `Z`. In reality, Latin script is one small neighbourhood in a vast, complex
@@ -55,4 +71,4 @@ The tools that support all six are how that respect actually ships.
 - [What’s new in FontLab 8 — formats](https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/)
 - [FontLab 8 review — The Endearing Designer](https://theendearingdesigner.com/fontlab-8-review/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

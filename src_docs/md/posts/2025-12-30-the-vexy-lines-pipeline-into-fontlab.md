@@ -6,6 +6,21 @@ tags: [vexy-lines, fontlab-8, workflow, vector, type-design]
 date:
   created: 2025-12-30
 slug: the-vexy-lines-pipeline-into-fontlab
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "FontLab 8 Sketchboard described as unlimited canvas — verify feature name and description"
+    - "COLRv1 colour font from halftone/stipple textures via FontLab Colors panel — verify workflow is achievable"
+    - "Vexy Lines exports SVG; FontLab imports SVG — verify SVG import fidelity claim"
+  image_status: missing
+  image_needs: "Workflow diagram or screenshot showing SVG export from Vexy Lines, import into FontLab Sketchboard"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "The only Vexy Lines post with a genuine FontLab integration story; the COLRv1 texture inlay angle is unique and worth keeping. Closing line is the best sentence in all the Vexy Lines posts."
 ---
 Vexy Lines is not a font tool.
 It is a vector generator that happens to play unusually well with type-design tools.
@@ -53,4 +68,4 @@ The amount of fun you can have with it is not.
 - FontLab 8 Sketchboard
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

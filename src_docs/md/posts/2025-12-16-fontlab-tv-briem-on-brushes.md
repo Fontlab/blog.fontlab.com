@@ -6,6 +6,21 @@ tags: [briem, calligraphy, brush, broad-pen, theory]
 date:
   created: 2025-12-16
 slug: briem-on-brushes
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/briem/2-0-basics/briem-2-01-basics/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Briem tutorial URL briem/2-0-basics/briem-2-01-basics/ — verify path on help.fontlab.com"
+    - "No video for this tutorial — confirm it is written-only (contradicts 'FontLab TV' in title)"
+    - "Pen angle 0°, 30°, 45° examples cited — verify against actual Briem content"
+  image_status: missing
+  image_needs: "Pen angle diagram or broad-pen letter strokes illustration"
+  weakness_verdict: keep
+  consolidate_with: "2025-10-07-briem-drawing-italic.md, 2025-11-04-the-briem-method-and-the-geometry-of-nothing.md"
+  notes: "Title says 'FontLab TV' but body admits there is no video — this is a factual mismatch that must be fixed. Pen-angle theory overlaps the italic post but the brush vs broad-edge distinction is unique."
 ---
 Gunnlaugur SE Briem has spent a career arguing that you cannot draw a serious typeface
 without understanding how a broad-edged pen makes letters.
@@ -45,5 +60,4 @@ after twenty minutes with a pen.
 Most “stiff” letters come from designers who have never held a broad-edged pen.
 This tutorial is a fix for that — and a useful re-read every six months.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/2-0-basics/briem-2-01-basics/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/2-0-basics/briem-2-01-basics/){ .fl-help-cta }

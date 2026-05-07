@@ -42,4 +42,4 @@ The goal of Python in a font editor is to eliminate clicking. The clicks that re
 - [Awesome typography — curated list](https://github.com/Jolg42/awesome-typography)
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

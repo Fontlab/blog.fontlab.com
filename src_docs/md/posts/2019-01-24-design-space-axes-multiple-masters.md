@@ -5,30 +5,53 @@ authors: [fontlab]
 date:
   created: 2019-01-24
 slug: design-space-axes-multiple-masters
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/7/manual/Variable-Fonts/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Video runtime four minutes — verify against YouTube"
+    - "FontLab VI design space panel described — verify UI still matches FontLab 7/8"
+  image_status: present
+  image_needs: "Thumbnail present (fontlabtv-AijDkf3DBk8.jpg) — adequate"
+  weakness_verdict: keep
+  consolidate_with: "2021-05-27-make-variable-fonts-better-fontlab-7.md"
+  notes: "Concise and well-paced; the 'abstract made concrete' paragraph earns its place. The post covers FontLab VI but the feature carries forward — a one-line note pointing to current docs would extend its shelf life. Good cross-link candidate with the ATypI variable fonts quality talk."
 ---
-Variable fonts require thinking in multiple dimensions at once — and this four-minute
-video from FontLab VI shows exactly how to set up a design space with axes and masters.
-It is a concise, visual introduction to the core concept behind variable font
-production.
+Variable fonts force you to think in multiple dimensions at once.
+This four-minute video shows exactly how to set up a design space with axes and masters
+in FontLab VI. It gives you a concise, visual introduction to the core concepts behind
+variable font production.
 
 <!-- more -->
 
 [![Design Space Axes and Multiple Masters](../media/fontlabtv-AijDkf3DBk8.jpg)](https://www.youtube.com/watch?v=AijDkf3DBk8)
 
-A variable font is not a single design but a continuous space of designs.
-You define the extremes — light and bold, condensed and wide, upright and italic — as
-separate masters, and the font interpolates smoothly between them at runtime.
-The design space is the conceptual model that holds all of this together.
+A variable font isn’t a single design.
+It is a continuous space of designs.
+You define the extremes as separate masters, and the font interpolates smoothly between
+them at runtime. The design space is the conceptual model that holds all of this
+together.
 
-FontLab VI’s design space panel lets you define axes (Weight, Width, Optical Size, or
-custom axes of your own), place masters at coordinates within that space, and
-immediately preview interpolated instances without exporting.
-This video walks through setting up a two-axis design space, adding masters, and
-checking that interpolation is compatible across glyphs.
+Common extremes include:
+* **Weight:** Light and bold.
+* **Width:** Condensed and wide.
+* **Slant:** Upright and italic.
 
-What makes this video useful beyond the mechanics is the way it makes the abstract
-concrete. Seeing the masters laid out on a grid, with a draggable instance point moving
-through the space, turns a concept that can feel mathematical into something visual and
-tactile. Variable font design in FontLab starts here.
+FontLab VI’s design space panel lets you define axes, place masters at coordinates
+within that space, and immediately preview interpolated instances without exporting.
+You can use standard axes like Weight, Width, and Optical Size, or create custom axes of
+your own. This video walks through setting up a design space with two axes, adding
+masters, and checking that interpolation is compatible across glyphs.
+
+What makes this video useful beyond the mechanics is how it makes the abstract concrete.
+Seeing the masters laid out on a grid turns a mathematical concept into something visual
+and tactile. A draggable instance point moves through the space to show you exactly what
+happens between your masters.
+Variable font design in FontLab starts here.
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=AijDkf3DBk8).
+
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Variable-Fonts/){ .fl-help-cta }

@@ -24,4 +24,4 @@ If the regular and bold are two masters of a variable font, all of the above has
 
 Draw a regular `n`. Then draw a bold `n` from scratch — same height, same x-height — without scaling the regular. Compare. The differences you find on `n` are the differences you will need to apply across the rest of the lowercase.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/)

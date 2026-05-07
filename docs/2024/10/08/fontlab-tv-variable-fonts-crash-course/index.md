@@ -16,4 +16,4 @@ If “variable font” still sounds like one of those things you’ll learn prop
 
 Variable fonts are not exotic anymore — they are the default delivery format for most new releases. The crash course is the fastest way from “I have static masters” to “I am shipping a VF that browsers handle correctly.”
 
-[Read more on help.fontlab.com →](https://blog.fontlab.com/2024/10/08/fontlab-tv-variable-fonts-crash-course/fontlab/8/manual/index.md){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

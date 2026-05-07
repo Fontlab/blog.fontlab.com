@@ -2,7 +2,7 @@
 
 ## In progress
 
-- (none — session deliverables shipped)
+- (none — session deliverables verified; commit pending)
 
 ## Shipped (2026-05-08 sprint)
 
@@ -11,29 +11,55 @@
 - Added `blog-fontlab format` / `./build.sh format` for in-place formatting of `src_docs/md/`.
 - `blog-fontlab build` now runs Flowmark before cleaning `docs/` and running ProperDocs.
 - Flowmark runs with semantic line breaks, safe cleanups, smart quotes, and ellipses.
-- Added a post-Flowmark repair step that restores ASCII quote delimiters inside raw HTML tags so legacy WordPress HTML attributes stay valid.
+- Added a post-Flowmark repair step that restores ASCII quote delimiters inside raw HTML tags and rejoins `.fl-help-cta` Markdown attribute lists so legacy WordPress HTML attributes and CTA styling stay valid.
 
 ### Content and task reconciliation
 - Reconciled `TASKS.md` and `TODO.md` against the current root-layout site.
-- Current source tree: 113 Markdown posts in `src_docs/md/posts/`.
+- Current source tree: 79 published Markdown posts in `src_docs/md/posts/`.
+- Twelve offline draft/research files live in `issues/draft-posts/` so MaterialX cannot list them on the public blog index.
 - Issue 203 draft expansion: 32 of 35 post files exist and build. Remaining open slugs: `nabla-colrv1-and-color-fonts`, `when-type-becomes-texture`, `distortion-as-defense-2026`.
 - Completed post-list/CTA styling, Made with FontLab series, browser-check, llms, and stale configuration items were removed from the open checklist and recorded in `CHANGELOG.md`.
 
+### Color-font consolidation
+- Retired the three 2013 color-font proposal/concept posts.
+- Added one current article dated 2026-05-03: `src_docs/md/posts/2026-05-03-color-fonts-in-2026.md`.
+- Updated the 2025 color-font archive post to link to the consolidated 2026 guide.
+- The new post covers actual OpenType color formats, COLR v1 variation, CSS palettes, browser support as of 2026-05-03, app/rendering support, and FontLab 8 support with source triads.
+
 ### Fixes
+- Restored `blog-fontlab build` to run Flowmark before cleaning `docs/` and running ProperDocs, matching README/CHANGELOG behavior.
+- Added focused CLI tests for build ordering, raw HTML tag quote repair, and Flowmark-split CTA attribute repair.
+- Updated verified CTA targets for TransType 4, FontLab VI release notes, FontLab 7 artwork import, the FontLab 8 intro tutorial, and Scannerlicker.
+- Updated the 2026 OpenType post's FontLab source reference to the current FontLab 8 OpenType tutorial.
+- Updated the variable-font file-size post CTA to the current FontLab 8 Families & variation chapter.
+- Updated the Matthew Carter webinar CTA to the verified FontLab YouTube recording.
+- Researched the Brush Romans webinar CTA; no stable FontLab TV or YouTube recording URL was found, so the FontLab TV fallback remains intentional.
+- Standardized help-site CTA labels to `Read more →` across current published posts.
+- Replaced dead `calfonts.com` links in the Dave Lawrence / California Type Foundry source posts with `https://www.myfonts.com/collections/california-type-foundry/`.
+- Moved four duplicate consolidation candidates to `issues/draft-posts/` and left them marked `draft: true` so they remain available for review without entering the public blog source tree.
+- Repointed the missing 2025 color-font gradient image to the existing `src_docs/md/media/fl8-head-09-gradient.png` asset.
 - Removed stale `categories:` front matter and unknown `editorial` authors from new posts.
 - Replaced premature internal links to unshipped draft posts with plain text where needed.
 - Fixed narrow-post overflow in `mkdocs/mk-fontlab/main.html`.
 - Moved the Vexy Lines engraving post image to `src_docs/md/media/vexy-lines-and-the-useful-lie-of-engraving/` and updated the post link so the asset builds.
 
 ### Verified
+- `uv run --with pytest python -m pytest -q` — clean.
+- `uvx ruff check src tests` — clean.
 - `uv run blog-fontlab format` — complete; no `.bak` or `.orig` files created.
-- `./build.sh build` — complete, no warnings.
+- `./build.sh build` — complete; emitted only existing informational link warnings from unrelated posts.
+- CTA syntax check — all body Markdown CTA links use compact `.fl-help-cta` attributes or raw HTML anchors.
+- Verified CTA targets with HTTP 200: TransType 4, FontLab VI release notes, FontLab 7 importing artwork, FontLab 8 intro tutorial, FontLab 8 families & variation, and the Scannerlicker catalogue.
+- Verified the four named offline draft consolidation candidates still live under `issues/draft-posts/` with `draft: true`.
+- Browser check at `http://127.0.0.1:8174/` plus edited post pages — no horizontal overflow and no console errors.
 - `uv sync --frozen` — complete.
 - `uvx ruff check src/` — clean.
 - Source/generated HTML quote check — no smart-quote attribute delimiters in `src_docs/md` or `docs`.
 - Output sanity: `docs/index.html`, `docs/about/index.html`, `docs/CNAME`, `docs/.nojekyll`, `docs/llms.txt`, `docs/llms-full.txt` exist.
-- Counts: 113 source posts, 113 generated public post pages.
-- Browser checks: Playwright screenshots saved for home, post, archive, and about; Chrome DevTools found no horizontal overflow and no console errors on checked pages.
+- Counts: 79 published source posts, 12 offline draft/research files, 79 generated public post pages.
+- Generated color-font page exists at `docs/2026/05/03/color-fonts-in-2026/index.html`; the three old generated 2013 color-font pages are absent.
+- `rg` found no source or generated links to the retired color-font URLs.
+- Browser checks: Chrome DevTools found no horizontal overflow and no console errors on checked pages; the homepage no longer exposes draft labels or moved-draft slugs; the moved draft URL returns the 404 page; the Dave Lawrence page uses MyFonts links and no `calfonts.com`; the 2025 color-font gradient image loads with nonzero natural dimensions.
 
 ## Shipped (2026-05-07 session)
 
@@ -78,7 +104,6 @@
 ## Open follow-ups (next sessions)
 
 - Reconcile `spec/06.md` and `spec/07.md` with the at-root blog layout.
-- The 2013 color-fonts post initially ported as teaser-only; pandoc conversion later ported the full body. Verify that the body matches the Wayback / archive original.
 - Drop `tool.uv.sources` overrides in `pyproject.toml` once `properdocs` and `mkdocs-materialx` are reliably resolvable from PyPI.
 - Ship `vexy-mkdocs-tools` per IDEA.md so the blog can eventually call `uvx vexy-mkdocs-tools build` instead of `properdocs build` directly.
 - Modernize `vexy-mkdocs-markdown-in-template` (currently missing from `reference/`) and relax `vexy-marktripy`'s Python 3.12-only pin.

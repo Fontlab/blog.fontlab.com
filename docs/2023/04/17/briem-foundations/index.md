@@ -28,4 +28,4 @@ What he offers is a framework, not a rulebook. A way of seeing, and a way of mak
 
 ______________________________________________________________________
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/2-0-basics/briem-2-01-basics/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/)

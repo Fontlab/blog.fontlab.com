@@ -15,4 +15,4 @@ The deeper point is that calligraphic typefaces are skeletal in conception long 
 - Bezier curves and type design — scannerlicker
 - [What’s new in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

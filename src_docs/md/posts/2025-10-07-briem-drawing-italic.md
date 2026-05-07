@@ -6,6 +6,21 @@ tags: [italic, slant, cursive, drawing]
 date:
   created: 2025-10-07
 slug: briem-drawing-italic
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/briem/4-3-italic/briem-4-31-italic/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Briem tutorial URL briem/4-3-italic/briem-4-31-italic/ — verify path exists on help.fontlab.com"
+    - "Slant range 6°–14° for italic — verify against Briem source material"
+    - "Pen angle 40–50° for italic vs 30° for roman — verify against Briem"
+  image_status: missing
+  image_needs: "Side-by-side of slanted roman vs true italic lowercase (a, g, n, o)"
+  weakness_verdict: keep
+  consolidate_with: "2025-11-04-the-briem-method-and-the-geometry-of-nothing.md, 2025-12-16-fontlab-tv-briem-on-brushes.md"
+  notes: "Best of the three Briem posts — concrete, actionable, the practical exercise is excellent. Overlaps with the other Briem posts in pen-angle theory; flag for series navigation links."
 ---
 Italic is not roman tilted to the right.
 Slant your upright `a` and what you get is a tilted `a`, not an italic `a` — the
@@ -67,5 +82,4 @@ with roman structure, once at 12° slant with cursive structure, once at 0° sla
 roman structure. Three of those four are wrong as italics.
 Identify which one is right and what makes the other three feel off.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-3-italic/briem-4-31-italic/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-3-italic/briem-4-31-italic/){ .fl-help-cta }

@@ -6,6 +6,22 @@ tags: [web-fonts, woff2, performance, transtype, subsetting]
 date:
   created: 2024-06-11
 slug: web-fonts-too-heavy-the-fix
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "WOFF2 compresses better than anything else — verify vs Brotli/gzip alternatives; WOFF2 uses Brotli internally"
+    - "Full Latin-Extended cut 90 KB, subset 12 KB — verify these are representative figures"
+    - "TransType 4 released in 2013 — verify this is accurate for the web font context claim"
+    - "Font Squirrel and Transfonter handle quick jobs — verify both tools are still actively maintained"
+  image_status: missing
+  image_needs: "No image; a waterfall loading diagram or before/after file-size comparison would be compelling"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "CTA at end is correctly formatted with .fl-help-cta class — the only post in this slice with a properly formatted CTA. The TransType historical tangent (2013) feels forced in a 2024 web performance post; tighten or cut it."
 ---
 You inherit a folder of old PostScript Type 1 fonts.
 Or a client sends a family with broken names, duplicate glyphs, and kerning that only
@@ -50,4 +66,4 @@ Your readers notice only that the page feels crisp and the type never janks.
 - [TransType — FontLab](https://www.fontlab.com/font-converter/transtype/)
 - [Variable fonts on the web — web.dev](https://web.dev/articles/variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

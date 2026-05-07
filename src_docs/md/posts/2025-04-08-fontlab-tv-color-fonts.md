@@ -6,6 +6,22 @@ tags: [color-fonts, opentype, cpal, colr, svg, tutorial]
 date:
   created: 2025-04-08
 slug: fontlab-tv-color-fonts
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "FontLab TV color fonts episode URL — confirm actual episode at fontlab.tv"
+    - "COLR v1 support status — verify browser/OS support as of 2026"
+    - "CBDT/sbix — verify Apple still uses sbix for emoji (not COLR)"
+    - "CTA should deep-link to color fonts section"
+  image_status: missing
+  image_needs: "Color glyph / CPAL palette screenshot from reference/fldoc/ or gradient image"
+  weakness_verdict: keep
+  consolidate_with: "2025-07-22-the-long-awkward-adolescence-of-color-fonts.md"
+  notes: "Good four-format overview but thin; pairs with the color history post; FontLab TV link goes to homepage not episode."
 ---
 Color fonts have stopped being a novelty and started being a deliverable — emoji,
 branded display faces, multi-layered display work.
@@ -53,5 +69,4 @@ Color fonts are now production-grade for display, branding, and app-icon context
 just emoji. This episode is the fastest way from “I have a layered illustration” to “I
 have a working color OTF that ships.”
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

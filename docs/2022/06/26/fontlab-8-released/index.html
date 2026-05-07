@@ -19,7 +19,7 @@
         <link rel="prev" href="../../../03/22/fontlab-7207644-and-macos-123-monterey/">
       
       
-        <link rel="next" href="../../../07/18/whats-new-since-fontlab-vi/">
+        <link rel="next" href="../../../../2023/04/17/briem-foundations/">
       
       
         
@@ -32,7 +32,7 @@
           <link rel="icon" href="../../../../assets/images/favicon.png">
         
       
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.3">
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.3">
     
     
       
@@ -875,6 +875,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#upgrading-from-fontlab-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading from FontLab VI
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -943,7 +954,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              3 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -1020,13 +1031,45 @@ Text tutorials by Dave Lawrence (California Type Foundry) and Gunnlaugur SE Brie
 foundational techniques.
 Over 240 video tutorials are available on the FontLab YouTube channel, with playlists
 organized by topic and difficulty.</p>
-<p>The 8-day introductory tutorial series at
-help.fontlab.com/fontlab/8/tutorials/intro/8-days/
+<p>The
+<a href="https://help.fontlab.com/fontlab/8/tutorials/intro/">8-day introductory tutorial series</a>
 walks through the complete workflow from first glyph to exported font, covering drawing,
 spacing, kerning, OpenType features, and variable font basics in sequence.</p>
+<h2 id="upgrading-from-fontlab-vi">Upgrading from FontLab VI<a class="headerlink" href="#upgrading-from-fontlab-vi" title="Permanent link">&para;</a></h2>
+<p>Coming from FontLab VI? The leap is larger than the version number suggests.
+FontLab 8 keeps the elements model and the variable-font foundation VI introduced, then
+rebuilds the rest:</p>
+<ul>
+<li><strong>Interface</strong> — optional dark theme, panel docks, widgets for quick property access,
+  numeric fields that accept calculations (<code>300+50</code> → 350), F1 Quick Help over any
+  control.</li>
+<li><strong>Drawing</strong> — Power Stroke joins Power Brush; the Thickness tool modulates weight
+  along a path; Pen and Rapid carry toolbox sub-tools; the Rectangle tool draws polygons
+  and stars.</li>
+<li><strong>Editing precision</strong> — the Lever (Cmd/Ctrl while dragging) gives sub-unit precision
+  without zooming; align, collapse, and sort operations on selected nodes;
+  paste-to-replace-selection.</li>
+<li><strong>Consistency</strong> — Auto-meter shows live stem widths and curve tensions; Suggest Stems
+  highlights common widths as you draw; snapping adds continuation, perpendicular, and
+  centerlines.</li>
+<li><strong>Composites</strong> — variable components, the Fusion Boolean filter, text shapes, clipping
+  groups, Glue and Skin.</li>
+<li><strong>Metrics and kerning</strong> — auto-spacing and auto-kerning on a single keypress;
+  right-to-left kerning; Audit Kerning resolves class conflicts; the Pairs &amp; Phrases
+  panel.</li>
+<li><strong>Families and variation</strong> — Merge Fonts to Masters, per-glyph variation axes, smart
+  variable components, conditional substitutions via tilde tags (e.g. <code>~wt&gt;850</code>) for
+  <code>rvrn</code>.</li>
+<li><strong>Color</strong> — redesigned Colors panel with linear, radial, and conical gradients; a
+  visual gradient editor; OpenType COLRv1 export including variable color; automatic
+  dark-mode palettes.</li>
+<li><strong>Scripting</strong> — Python 3.11 (up from 2.7 in VI), 10–60% faster, with the bundled
+  TypeRig library by Vassil Kateliev for batch glyph operations.</li>
+</ul>
 <p>Download FontLab 8 and find the full what’s-new list at
-<a href="https://www.fontlab.com/font-editor/fontlab/">fontlab.com/font-editor/fontlab/</a>.
-Documentation lives at <a href="https://help.fontlab.com/">help.fontlab.com</a>.</p>
+<a href="https://www.fontlab.com/font-editor/fontlab/">fontlab.com/font-editor/fontlab/</a>. The
+documentation starts at the <a href="https://help.fontlab.com/fontlab/8/">FontLab 8 help site</a>.</p>
+<p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/whats-new/">Read more →</a></p>
 
 
   

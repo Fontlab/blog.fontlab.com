@@ -34,6 +34,8 @@ FontLab’s **FontAudit** catches direction errors, open contours, and other pro
 
 ______________________________________________________________________
 
-Dave Lawrence’s full tutorial series is at [help.fontlab.com/fontlab/8/tutorials/calfonts/](https://help.fontlab.com/fontlab/8/tutorials/calfonts/).
+Dave Lawrence’s full [Calfonts tutorial series](https://help.fontlab.com/fontlab/8/tutorials/calfonts/) continues with spacing, family planning, and italics.
 
 *Next in this series: [Calligraphic fonts: spacing, italics, and family planning](https://blog.fontlab.com/2025/03/17/calfonts-spacing-italics/index.md)*
+
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/)

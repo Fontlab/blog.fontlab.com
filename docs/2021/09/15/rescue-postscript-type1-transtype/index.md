@@ -15,3 +15,5 @@ A few things to check before converting:
 A font collection assembled over two decades has real value. Converting it once now is considerably less painful than discovering mid-project that your favorite headline face no longer loads.
 
 TransType is available at [fontlab.com/font-converter/transtype/](https://www.fontlab.com/font-converter/transtype/).
+
+[Read more →](https://www.fontlab.com/font-converter/transtype/)

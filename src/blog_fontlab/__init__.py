@@ -1,5 +1,6 @@
 # this_file: src/blog_fontlab/__init__.py
 """blog-fontlab — build orchestrator for blog.fontlab.com."""
+
 from __future__ import annotations
 
 try:

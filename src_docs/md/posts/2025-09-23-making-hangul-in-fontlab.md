@@ -6,6 +6,22 @@ tags: [hangul, korean, fontlab-8, components, scripts]
 date:
   created: 2025-09-23
 slug: making-hangul-in-fontlab
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "11,000+ pre-composed Hangul syllables — verify exact Unicode count (11,172)"
+    - "FontLab 8 variable components and smart components for Hangul — verify feature exists"
+    - "wdnote and pixso.net as Korean design sources — verify URLs are live"
+    - "Roboto Flex cited as model for Hangul axis design — verify this is claimed in cited sources"
+  image_status: missing
+  image_needs: "Hangul syllable block decomposition diagram or FontLab component assembly screenshot"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Strong premise and unique content; the component-based assembly angle is the right hook. CTA URL too generic — needs deep link to variable components or Hangul workflow docs."
 ---
 Hangul looks deceptively simple to a Latin-trained eye.
 Twenty-four basic letters, written in tidy syllabic blocks.
@@ -57,4 +73,4 @@ The tools have caught up.
 - [Variable components in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 - [The Type — typography podcast](https://www.thetype.com/typechat/feed/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

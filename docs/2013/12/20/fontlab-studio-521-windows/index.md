@@ -1,16 +1,17 @@
-FontLab Studio 5.2.1 for Windows shipped in December 2013 with a substantial set of new features on top of the 5.2 foundation, plus hundreds of bug fixes.
+FontLab Studio 5.2.1 for Windows shipped in December 2013. It builds on the 5.2 foundation with new tools and hundreds of bug fixes.
 
-New in FontLab Studio 5.2.1 for Windows:
+### What’s new
 
-- **65,535-glyph OpenType fonts**: raised the glyph count ceiling, enabling full Unicode coverage in a single font file
-- **FEA syntax 2.5**: updated OpenType feature code editor with improved Adobe FEA specification support
-- **Interpolated nodes**: node interpolation tools for outline editing
-- **OpenType layout features in Metrics Window**: preview OpenType substitution and positioning rules directly while spacing
-- **Class kerning overlay preview**: visual overlay showing kerning class coverage during class kerning editing
-- **Change weight and clean up paths**: new outline operations for weight adjustment and path cleanup
-- **MM glyph blend preview**: Multiple Master blend preview for interpolated glyph design
-- **Canvas notes**: freeform annotation layer on the glyph canvas
-- **Python 2.7**: updated scripting engine
-- Improved user interface and hundreds of bug fixes
+- **65,535-glyph OpenType fonts**: We raised the glyph count ceiling. You can now pack full Unicode coverage into a single font file.
+- **FEA syntax 2.5**: The OpenType feature code editor supports the improved Adobe FEA specification.
+- **Interpolated nodes**: Edit outlines faster with new node interpolation tools.
+- **OpenType layout features in Metrics Window**: Preview OpenType substitution and positioning rules directly while you space your fonts.
+- **Class kerning overlay preview**: See a visual overlay of kerning class coverage while you edit class kerning.
+- **Change weight and clean up paths**: Adjust weight and clean up paths with new outline operations.
+- **MM glyph blend preview**: Preview Multiple Master blends for interpolated glyph design.
+- **Canvas notes**: Add freeform annotations directly on the glyph canvas.
+- **Python 2.7**: We updated the scripting engine.
 
-This release was a free upgrade for all Windows users of FontLab Studio 5 and AsiaFont Studio.
+This release is a free upgrade for all Windows users of FontLab Studio 5 and AsiaFont Studio.
+
+[Read more →](https://help.fontlab.com/fontlab-studio/5/)

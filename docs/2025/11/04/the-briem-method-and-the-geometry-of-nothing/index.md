@@ -19,4 +19,4 @@ Spacing evolves with technology and taste. Tschichold condemned tight spacing in
 - [Spacing a font, part 1 — Society of Fonts](https://www.societyoffonts.com/2018/09/19/spacing-a-font-part-1/)
 - [White-space compensation — TypeDrawers](https://typedrawers.com/discussion/3317/white-space-compensation-or-other-reasons-in-n-m-w-etc)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/5-0-spacing/briem-5-01-spacing/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/5-0-spacing/briem-5-01-spacing/)

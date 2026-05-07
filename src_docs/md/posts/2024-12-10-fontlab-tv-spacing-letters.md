@@ -6,6 +6,21 @@ tags: [spacing, sidebearings, metrics, tutorial]
 date:
   created: 2024-12-10
 slug: fontlab-tv-spacing-letters
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/calfonts/3.%20Fitting%20and%20Spacing/3a-0%20Intro%20to%20Spacing/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "Spacing manual CTA URL is live"
+    - "FontLab TV spacing episode URL — confirm actual episode URL at fontlab.tv"
+    - "Spacing string 'nnHnoHonn' — verify this is the string Dave Lawrence recommends"
+  image_status: missing
+  image_needs: "FontLab TV spacing episode thumbnail or metrics window screenshot"
+  weakness_verdict: keep
+  consolidate_with: "2024-07-09-white-space-does-the-real-drawing.md"
+  notes: "Useful companion to the white-space editorial post but thin on its own. CTA URL is now fixed."
 ---
 Spacing is what separates a font that exists from a font that reads.
 The FontLab TV spacing episode is the one to watch first — before kerning, before
@@ -41,5 +56,4 @@ Bad spacing is the single most common reason a technically competent font feels 
 This episode is the cheapest hour you will spend improving every font you make from now
 on.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/3.%20Fitting%20and%20Spacing/3a-0%20Intro%20to%20Spacing/){ .fl-help-cta }

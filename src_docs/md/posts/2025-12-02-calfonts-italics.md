@@ -6,6 +6,21 @@ tags: [italic, cursive, slant, drawing, fontlab-8]
 date:
   created: 2025-12-02
 slug: calfonts-italics
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/calfonts/6.%20Italics/6a%20Intro%20to%20Italics/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Italic lowercase 5–10% narrower than roman — verify against Calfonts source"
+    - "Slant range 8–14° cited here vs 6–14° in briem-drawing-italic — reconcile"
+    - "Contrast axis tip from 30° roman to 40–50° italic — verify"
+  image_status: missing
+  image_needs: "Side-by-side roman vs italic structure comparison (single vs double-storey a)"
+  weakness_verdict: keep
+  consolidate_with: "2025-10-07-briem-drawing-italic.md"
+  notes: "Substantially overlaps 2025-10-07-briem-drawing-italic on structure and pen angle; the Calfonts framing and verification section differentiate it enough to keep. CTA now points to the FontLab 8 Calfonts italics intro."
 ---
 Italics are the part of a font family that most often gets shipped wrong — slanted
 romans, no cursive structure, lopsided ovals.
@@ -75,5 +90,4 @@ The italic should look like a sibling of the roman, not a tilted twin.
 If the slant feels like a transformation rather than a design, something in the
 structure is still wrong.
 
-Read more on help.fontlab.com →{
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/6.%20Italics/6a%20Intro%20to%20Italics/){ .fl-help-cta }

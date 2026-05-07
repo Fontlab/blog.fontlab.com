@@ -6,6 +6,22 @@ tags: [made-with-fontlab, canada-type, revivals]
 date:
   created: 2025-02-18
 slug: made-with-fontlab-patrick-griffin
+review:
+  cta_status: ok
+  cta_target: "https://canadatype.com/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Griffin 'more than 27 years' in industry — confirm approximate start year"
+    - "Ronaldson is a Philadelphia text face from 1884 — verify historical source"
+    - "Ronaldson Pro credits FL Studio 5, Glyphs 2, FontLab 7 — verify from product page"
+    - "Goluska drawn by Rod McDonald — confirm attribution"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Real quote, real history, and the software-generation narrative is unusually revealing; one of the best Made-with posts."
 ---
 Bananas is a casual brush face that is mostly an excuse to grin while you set it.
 Ronaldson Pro is a 19th-century revival that took years to draw and exists because

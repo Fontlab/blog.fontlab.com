@@ -6,6 +6,22 @@ title: "FontLab 8.3 and 8.4: what's new"
 authors: [fontlab]
 draft: false
 slug: fontlab-8-updates-2024
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/whats-new/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "FontLab 8.3 released December 2023 — verify exact release date"
+    - "FontLab 8.4 released June 2024 — verify exact release date"
+    - "Apple Silicon native build in 8.3 gives up to 2x speedup vs Rosetta 2 — verify this benchmark"
+    - "Over 900 improvements vs FL7 in 8.4 — verify cumulative count"
+  image_status: missing
+  image_needs: "No images; Widgets UI screenshot or Match Moves multi-master demo from reference/fontlab-tv/ would illustrate the biggest additions"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Cleanest of the FL8.x release posts — specific feature names, concrete descriptions, no WordPress markup residue. Title uses wrong apostrophe in 'what's' — check encoding. Both closing links (fontlab.com and help.fontlab.com) are present and correct."
 ---
 Since the FontLab 8.2 release in August 2023, two major free updates have shipped: 8.3
 in December 2023 and 8.4 in June 2024. Together they add over 200 new features and
@@ -65,6 +81,8 @@ over 500 relative to the original 8.0 release.
   generates a sensible default feature set at export time.
 
 FontLab 8.4 and all prior 8.x updates are free for FontLab 8 license holders.
-Download the latest build and browse the full release notes at
-[fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Full
-documentation is at [help.fontlab.com](https://help.fontlab.com/).
+Download the latest build from the
+[FontLab product page](https://www.fontlab.com/font-editor/fontlab/) and browse the
+[FontLab 8 help site](https://help.fontlab.com/fontlab/8/) for full documentation.
+
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/){ .fl-help-cta }

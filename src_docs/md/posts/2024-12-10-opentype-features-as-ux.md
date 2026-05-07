@@ -6,6 +6,21 @@ tags: [opentype, kerning, ligatures, contextual-alternates, ux]
 date:
   created: 2024-12-10
 slug: opentype-features-as-ux
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "OpenType features CTA URL is live"
+    - "Firefox discretionary-ligature bug breaking German/Turkish — verify this is a real historical issue"
+    - "FontLab auto-generates smcp feature for glyphs named 'a.sc' — verify naming convention"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Canonical OpenType-features-as-UX post; absorbed the weaker 2025-01-14 invisible-logic post."
 ---
 Most readers never notice when typography is right.
 They only notice when reading feels like work.
@@ -135,5 +150,4 @@ That is the point. Good UX, in any medium, is invisible until somebody removes i
 - [Kerning and OpenType features in Firefox 3 — Ralf Herrmann](https://opentype.info/blog/2008/06/14/kerning-and-opentype-features-in-firefox-3.html)
 - [Practical guide to alternate characters and OpenType features — Pangram Pangram](https://pangrampangram.com/blogs/journal/opentype-features)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8){ .fl-help-cta }

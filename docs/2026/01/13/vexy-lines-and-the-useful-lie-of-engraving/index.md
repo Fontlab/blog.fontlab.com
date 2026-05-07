@@ -17,4 +17,4 @@ If a vector recreation looks indistinguishable from the photograph, the maths ha
 - [A crash course in halftones — Screenprinting.com](https://www.screenprinting.com/blogs/news/a-crash-course-in-halftones-for-screen-printing)
 - [Vexy Lines — official](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
+[Read more →](https://vexy.art/lines/)

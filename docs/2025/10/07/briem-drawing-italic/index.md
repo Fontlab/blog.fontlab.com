@@ -32,4 +32,4 @@ Slant comes last, often as a transformation applied late in the process to a nea
 
 Draw `i n o a` four times: once at 0° slant with cursive structure, once at 12° slant with roman structure, once at 12° slant with cursive structure, once at 0° slant with roman structure. Three of those four are wrong as italics. Identify which one is right and what makes the other three feel off.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-3-italic/briem-4-31-italic/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-3-italic/briem-4-31-italic/)

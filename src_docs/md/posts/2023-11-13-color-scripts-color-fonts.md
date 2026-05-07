@@ -5,6 +5,21 @@ authors: [fontlab]
 date:
   created: 2023-11-13
 slug: color-scripts-color-fonts
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: adequate
+  facts_to_verify:
+    - "TypeRig library by Vassil Kateliev — verify correct attribution and current availability"
+    - "COLRv1 supported in Chrome and Firefox — verify browser support status as of post date"
+    - "Dark-mode palette auto-generation — confirm this feature exists in FL8 and how it works"
+  image_status: present
+  image_needs: "Images present but check i.fontlab.com CDN paths are live"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Original consolidation targets were already merged elsewhere; this post stands as the reference for the four color OpenType formats and the Python/TypeRig scripting workflow."
 ---
 FontLab 8 supports every current color OpenType format and ships with Python 3.11
 scripting and the TypeRig library.
@@ -102,3 +117,5 @@ Cross-tool collaboration is practical.
 Full documentation is in the FontLab 8 What’s New chapters on
 [Color](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/) and
 [Scripts & extensions](https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/).
+
+[Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/){ .fl-help-cta }

@@ -17,4 +17,4 @@ The fonts in those folders are not dead. They are just waiting for someone to mo
 - PostScript Type 1 fonts: end of support — Adobe
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
 
-Read more on help.fontlab.com →{ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

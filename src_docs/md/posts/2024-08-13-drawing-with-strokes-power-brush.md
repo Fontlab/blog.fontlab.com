@@ -6,6 +6,21 @@ tags: [power-brush, power-stroke, calligraphic, fontlab-8, drawing]
 date:
   created: 2024-08-13
 slug: drawing-with-strokes-power-brush
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Power Brush vs Power Stroke distinction — confirm ellipse vs asymmetric-expansion description"
+    - "Autotrace tuning claim ('tuned for typography rather than logos') — verify in release notes"
+    - "Scannerlicker Bezier reference — URL missing from references list"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Crisp product explainer with good voice; CTA lands on broad manual page — should deep-link to Power Brush section when available."
 ---
 The standard method for digitising a font is to draw the outline.
 You map the exterior boundary of the shape with Bezier curves, and you push and pull
@@ -47,4 +62,4 @@ they are outlined. Tools that respect the skeleton respect the design.
 - Bezier curves and type design — scannerlicker
 - [What’s new in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

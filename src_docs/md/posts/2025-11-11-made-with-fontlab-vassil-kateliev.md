@@ -6,6 +6,22 @@ tags: [made-with-fontlab, gallery]
 date:
   created: 2025-11-11
 slug: made-with-fontlab-vassil-kateliev
+review:
+  cta_status: ok
+  cta_target: "http://karandash.eu/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Science Gothic is a four-axis variable font — verify axis count"
+    - "Science Gothic authors: Thomas Phinney, Brandon Buerkle, Vassil Kateliev — verify GitHub repo"
+    - "TypeRig GitHub URL kateliev.github.io/TypeRig/ — verify live"
+    - "Robert Strauch and Alexander Haberer credit TypeRig — verify quotes exist"
+  image_status: present
+  image_needs: ""
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "One of the stronger Made With posts — the TypeRig angle elevates it above testimonial-dump territory. The 'endless ocean' annotation is the kind of editorial judgment that makes these posts readable."
 ---
 [Science Gothic](https://github.com/tphinney/science-gothic) is a four-axis variable
 font drawn by Thomas Phinney, Brandon Buerkle, and Vassil Kateliev.

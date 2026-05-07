@@ -6,6 +6,21 @@ tags: [drawing, contours, beziers, refinement, fontlab-8]
 date:
   created: 2025-08-26
 slug: calfonts-honing-letters
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/manual/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "50% handle = 'circle' tension claim — verify against Calfonts source"
+    - "55–65% handle range as standard — verify against Calfonts material"
+    - "Overshoot 1–2% of UPM — verify standard range"
+  image_status: missing
+  image_needs: "Screenshot of FontLab contour optimization tools or before/after honing example"
+  weakness_verdict: keep
+  consolidate_with: ""
+  notes: "Practical and grounded; the three-sizes heuristic is the kind of advice that earns a bookmark. CTA URL is too generic — needs deep link to contour/honing chapter."
 ---
 Honing is the part of font design between “I have a sketch” and “I have a glyph that
 ships.” The Calfonts honing tutorial — adapted here — covers the boring, decisive 80% of
@@ -70,5 +85,4 @@ You stop honing when you cannot identify a specific change that would make the g
 better. That is not “when you are tired of it” or “when the deadline arrives” — though
 both happen. The Calfonts standard is the higher one.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

@@ -23,4 +23,4 @@ Color fonts have stopped being a novelty and started being a deliverable — emo
 
 Color fonts are now production-grade for display, branding, and app-icon contexts — not just emoji. This episode is the fastest way from “I have a layered illustration” to “I have a working color OTF that ships.”
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)

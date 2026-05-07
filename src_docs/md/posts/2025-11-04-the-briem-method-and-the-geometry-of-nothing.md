@@ -6,6 +6,22 @@ tags: [briem, spacing, kerning, metrics, fontlab-8]
 date:
   created: 2025-11-04
 slug: the-briem-method-and-the-geometry-of-nothing
+review:
+  cta_status: ok
+  cta_target: "https://help.fontlab.com/fontlab/8/tutorials/briem/5-0-spacing/briem-5-01-spacing/"
+  title_case: ok
+  title_suggested: ""
+  voice_quality: strong
+  facts_to_verify:
+    - "Briem taught at Royal Academy of Fine Arts, Copenhagen, 1996 — verify institution and date"
+    - "Tschichold condemned tight spacing in 1952 — verify source/year"
+    - "Zapf popularised tight spacing with Palatino — verify historical claim"
+    - "Control characters n, o, H, O for spacing — verify this matches Briem's actual method"
+  image_status: missing
+  image_needs: "FontLab metrics/sidebearings panel or nnnnn spacing string screenshot"
+  weakness_verdict: keep
+  consolidate_with: "2025-10-07-briem-drawing-italic.md, 2025-12-16-fontlab-tv-briem-on-brushes.md"
+  notes: "Strong title and opening; Tschichold/Zapf historical framing is the best paragraph. Briem series needs cross-links; standalone it buries the spacing workflow under too much preamble."
 ---
 The most difficult part of drawing a typeface is not the black ink.
 It is the white space.
@@ -61,5 +77,4 @@ relationship lives.
 - [Spacing a font, part 1 — Society of Fonts](https://www.societyoffonts.com/2018/09/19/spacing-a-font-part-1/)
 - [White-space compensation — TypeDrawers](https://typedrawers.com/discussion/3317/white-space-compensation-or-other-reasons-in-n-m-w-etc)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/5-0-spacing/briem-5-01-spacing/){
-.fl-help-cta }
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/5-0-spacing/briem-5-01-spacing/){ .fl-help-cta }
