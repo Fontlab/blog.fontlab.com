@@ -91,7 +91,7 @@ One change, everywhere it applies.
 
 ## Further reading
 
-- [On legibility: in typography and type design](https://learn.scannerlicker.net/2014/11/14/on-legibility-in-typography-and-type-design/)
+- On legibility: in typography and type design
 
 * * *
 

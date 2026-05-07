@@ -60,4 +60,4 @@ Tasteful loss is the whole craft.
 - [A crash course in halftones — Screenprinting.com](https://www.screenprinting.com/blogs/news/a-crash-course-in-halftones-for-screen-printing)
 - [Vexy Lines — official](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

@@ -1,6 +1,6 @@
 Drawing letters for a living turns out to be mostly an exercise in being perpetually disappointed by optical illusions. A geometric circle next to a geometric square at the same height looks smaller than the square. The fix is to draw the circle slightly larger so that it merely looks the same size. Type design is a profession built on quietly lying to the eye so the eye perceives the truth.
 
-## a font is not a vector drawing
+## A font is not a vector drawing
 
 The standard vector drawing program treats paths as rigid wireframes. Move a node, and only that node moves. This is fine for an icon. It is hopeless for a letter, where every node is in conversation with every other node — the right side of the stem with the left, the top of the bowl with the bottom, the cap height with the x-height with the descender depth.
 
@@ -22,13 +22,13 @@ Match Moves does the propagation. Adjust a node on one master with Match Moves o
 
 This is the difference, on a serious family with seven masters across two axes, between a deadline and a missed deadline. It is not a glamour feature. It is heavy machinery for heavy work.
 
-## the small print: still a system
+## The small print: still a system
 
 The reason FontLab 8 can do this is the same reason FontLab Studio 5 could not. FL5 was a legendary tool, but its architecture treated each master’s glyph as an independent drawing. The cross-master operations had to be bolted on. The complete rewrite that began with FontLab VI and culminated in FontLab 8 made the system the primary unit. A glyph in FontLab 8 is, internally, a collection of compatible masters; the operations on it work on all of them by default.
 
 That architectural choice is what enables Match Moves, Power Nudge, and the Lever as integrated rather than scripted features. It is also what enables FontLab’s variable-font workflow to scale to families with five or six axes, where the manual approach would be a non-starter.
 
-## the moral
+## The moral
 
 Old software is like an old house — eventually you have to take it down to the studs because the plumbing cannot handle modern water pressure. FontLab Studio 5 was a legendary house. FontLab 8 is the rebuild, with the heavy machinery built into the foundation. The drawing tools that look like conveniences in a feature list are, in practice, the structural elements that let serious type design happen at current scale.
 

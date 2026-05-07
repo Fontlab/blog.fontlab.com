@@ -12,8 +12,6 @@ News, technical writing, and product updates from FontLab.
 ## Blog posts
 
 - [FontLab Studio 5 and the Fontographer acquisition](https://blog.fontlab.com/2005/06/15/fontlab-studio-5-opentype-standard/index.md)
-- [TypeTool 3.1.1 and Fontographer 5.2.1 updates](https://blog.fontlab.com/2012/10/15/typetool-3-fontographer-5-updates/index.md)
-- [FontLab Studio 5.2 for Windows and 5.1.3 for Mac](https://blog.fontlab.com/2012/11/15/fontlab-studio-52-win-513-mac/index.md)
 - [Color fonts: overview of proposals for color extensions of OpenType](https://blog.fontlab.com/2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/index.md)
 - [The four color-font proposals: APP, COLR/CPAL, CBDT/CBLC, and SVG](https://blog.fontlab.com/2013/10/10/the-four-color-font-proposals-app-colrcpal-cbdtcblc-and-svg/index.md)
 - [Color font concepts: layers, palettes, scaling, and finiteness](https://blog.fontlab.com/2013/11/07/color-font-concepts-layers-palettes-scaling-and-finiteness/index.md)

@@ -17,4 +17,4 @@ A width axis matters because somebody drew and checked the intermediate decision
 - [Thinking beyond the static — Type Network](https://typenetwork.com/articles/thinking-beyond-the-static)
 - [Variable fonts — web.dev](https://web.dev/articles/variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }

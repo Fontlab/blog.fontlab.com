@@ -2,7 +2,7 @@ DTL OTMaster 7.9 adds first-class support for variable OpenType fonts — includ
 
 OTMaster lets you inspect, troubleshoot, and modify OpenType and TrueType fonts without destructive round-tripping — in all their flavors, including variable fonts, color fonts, TTC collections, WOFF2 web fonts, and CID-keyed OTF fonts. You can view and edit OpenType Layout features, work with low-level font tables, and fix bugs. The Glyph Editor lets you import a monochrome EPS or SVG drawing and add it as a new glyph or replace an existing one.
 
-Visit the [DTL OTMaster web page](https://www.fontlab.com/font-utility/dtl-otmaster/) for more info, or [buy or upgrade now](https://store.fontlab.com/index.php?option=com_mijoshop&view=category&path=42&Itemid=234) in the FontLab store. The full license for macOS, Windows, or Linux is US$228; upgrades from previous versions are US$57. Academic pricing is available at $114 (proof of academic status required).
+Visit the [DTL OTMaster web page](https://www.fontlab.com/font-utility/dtl-otmaster/) for more info, or buy or upgrade now in the FontLab store. The full license for macOS, Windows, or Linux is US$228; upgrades from previous versions are US$57. Academic pricing is available at $114 (proof of academic status required).
 
 OTMaster pairs well with [FontLab VI](https://www.fontlab.com/font-editor/fontlab-vi/): draw, space, kern, and hint in FontLab; test and tweak in OTMaster.
 

@@ -7,7 +7,7 @@ date:
   created: 2026-04-08
 slug: made-with-fontlab-fabio-duarte-martins
 ---
-[Scannerlicker](https://fonts.scannerlicker.net/) is Fábio Duarte Martins’s foundry, and
+Scannerlicker is Fábio Duarte Martins’s foundry, and
 his testimonial is one of the few that actually names the FontLab features doing the
 work. It is, accidentally, a short manual on what to learn first.
 
@@ -25,19 +25,19 @@ His full statement on FontLab 8:
 > better! FontAudit keeps you in check, with new information and smarter corrections; the
 > new views for masks and layers are a super-handy for designing multiple masters; and
 > the nudging workflow is spot-on.
->
+> 
 > Expressions and tags became my bread and butter: generate tags to keep you organized
 > in one click, edit them to automate your kerning classes and OT features, copy your
 > expressions to all of your masters with one click!
->
+> 
 > Did I mention that the new FontLab is a serious variable font production tool, with
 > conditional glyph substitutions, table editing and all?
 > To be honest, I wish I recorded my face when I saw the new axis graph!
->
+> 
 > FontLab 8 is the juiciest release of FontLab.
 > And hey, it’s running flawlessly on my Linux machine too!
 
-— Fábio Duarte Martins, [Scannerlicker](https://fonts.scannerlicker.net/)
+— Fábio Duarte Martins, Scannerlicker
 
 The phrase “from design to engineering” is the one to keep.
 Modern variable font work is not just drawing — it’s also a non-trivial engineering job,
@@ -62,13 +62,13 @@ choice. Either way, “running flawlessly on my Linux machine” is an unusually
 of cross-platform engineering for an industry that mostly assumes Mac.
 
 The Scannerlicker catalogue at
-[fonts.scannerlicker.net](https://fonts.scannerlicker.net/) is the proof.
+fonts.scannerlicker.net is the proof.
 Variable fonts shipped, conditional substitutions configured, design space defined, all
 out of one editor and one studio.
 
 ## More from Fábio Duarte Martins
 
-- [Scannerlicker catalogue](https://fonts.scannerlicker.net/) — variable fonts and
+- Scannerlicker catalogue — variable fonts and
   retail families
 
-[Browse Scannerlicker →](https://fonts.scannerlicker.net/){ .fl-help-cta }
+Browse Scannerlicker →{ .fl-help-cta }

@@ -23,7 +23,7 @@ personal.*
 
 In my view, each of the presented approaches has its advantages and disadvantages.
 
-### The Proposals
+### The proposals
 
 The <span class="caps">APP</span> proposal is great in so far that it’s actually already
 implemented. However, the interaction of the `sbix` and `glyf` tables as implemented in
@@ -62,7 +62,7 @@ be confined to only the web browser context.
 Also, Firefox actually already implements the <span class="caps">SVG</span> approach,
 which is very good news.
 
-### Color Palettes
+### Color palettes
 
 As for **color palettes**, I consider its addition to font formats (whether through a
 unified and further developed `CPAL` table or through several separate mechanisms) as
@@ -79,7 +79,7 @@ the text.
 And now, we’re extending the user’s control by adding ability to specify multiple colors
 through the font’s color palette.
 
-### Relation to Existing Solutions
+### Relation to existing solutions
 
 When comparing the **outline color font format** proposals, I would use the following
 analogy:

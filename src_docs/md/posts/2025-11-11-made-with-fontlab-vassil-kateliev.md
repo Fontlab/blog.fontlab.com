@@ -31,7 +31,7 @@ The relevant part:
 > The definitive FontLab version to have: blazingly fast, cutting-edge technology, and
 > with superbly rich functionality that touches almost every possible aspect of type
 > design. (…) A keen tool worthy of a master!
->
+> 
 > What’s not to love? The best vector engine for drawing and manipulation I have seen in
 > ages. Rock-steady interpolation engine that is also compliant with variable OpenType
 > fonts. Start with an excellent multi-paradigm approach to type design — old-school
@@ -40,7 +40,7 @@ The relevant part:
 > layers or auto OpenType feature generation.
 > Combine that with a super powerful Python-based API (that I actually use a lot).
 > Let’s not forget multi-platform: a fact that I consider very important.
->
+> 
 > The new FontLab is an endless ocean of opportunities — you get an app for every taste
 > and workflow.
 

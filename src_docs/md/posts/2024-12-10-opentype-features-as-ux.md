@@ -17,7 +17,7 @@ handle the friction the user never sees.
 
 ![OpenType feature panel in FontLab 8](/media/opentype-features-as-ux/fl8-8days-opentype.png)
 
-## the features users never see
+## The features users never see
 
 OpenType features get sold on the showy ones: swashes, discretionary ligatures,
 alternate numerals, fancy stylistic sets.
@@ -38,7 +38,7 @@ because they turn a raw glyph set into a text system that behaves intelligently.
 The user never thinks about the `fi` ligature.
 They think about how the paragraph reads.
 
-## kerning, the load-bearing feature
+## Kerning, the load-bearing feature
 
 Of all the OpenType features, kerning carries the most weight in user perception.
 A poorly kerned font reads as cheap, because the eye notices the gaps before it notices
@@ -59,7 +59,7 @@ the base glyph — gets the kerning applied.
 This matters most for languages with heavy accent coverage, where kerning every pair
 manually is the opposite of feasible.
 
-## contextual alternates, the engine behind connected scripts
+## Contextual alternates, the engine behind connected scripts
 
 `calt` is the OpenType feature that decides which version of a glyph to substitute based
 on the surrounding context.
@@ -82,7 +82,7 @@ anybody writing the feature code by hand.
 A swash glyph named `A.swsh` ends up in the `swsh` feature.
 The naming conventions are the schema; the feature code is the compiled output.
 
-## the messy reality
+## The messy reality
 
 In practice, OpenType features do not always work as cleanly as the spec suggests.
 Discussion threads among type designers note that the OpenType specification
@@ -118,7 +118,7 @@ low-level tags; in production code, you write both, in that order.
 Browsers favour the more specific declaration, which means the `font-feature-settings`
 line wins where it matters.
 
-## the moral
+## The moral
 
 OpenType features are user experience for text.
 They are how a font behaves under pressure — long paragraphs, mixed scripts, accented

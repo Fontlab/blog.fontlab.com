@@ -15,4 +15,4 @@ If you squint a bit, it is one continuum: Pyrus and early FontLab on one end, va
 - [FontLab 8 review — The Endearing Designer](https://theendearingdesigner.com/fontlab-8-review/)
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }

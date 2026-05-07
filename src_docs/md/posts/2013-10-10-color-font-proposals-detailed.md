@@ -89,15 +89,15 @@ and whether support for `EBSC` is planned.
 - \[<span class="caps">GOO<span class="numbers">1</span></span>\]
   [http://​google​-opensource​.blogspot​.de/​<span class="numbers">2</span>​<span class="numbers">0</span>​<span class="numbers">1</span>​<span class="numbers">3</span>​/​<span class="numbers">0</span>​<span class="numbers">5</span>​/​o​p​e​n​-​s​t​a​n​d​a​r​d​-​c​o​l​o​r​-​f​o​n​t​-​f​u​n​-​f​o​r​.​h​tml](http://google-opensource.blogspot.de/2013/05/open-standard-color-font-fun-for.html)
 - \[<span class="caps">GOO<span class="numbers">2</span></span>\]
-  [https://​color​-emoji​.googlecode​.com/​g​i​t​/​s​p​e​c​i​f​i​c​a​t​i​o​n​/​v​<span class="numbers">1</span>​.​h​tml](https://color-emoji.googlecode.com/git/specification/v1.html)
+  https://​color​-emoji​.googlecode​.com/​g​i​t​/​s​p​e​c​i​f​i​c​a​t​i​o​n​/​v​<span class="numbers">1</span>​.​h​tml
 - \[<span class="caps">GOO<span class="numbers">3</span></span>\]
   [http://​www​.microsoft​.com/​t​y​p​o​g​r​a​p​h​y​/​o​t​s​p​e​c​/​e​b​d​t​.​htm](http://www.microsoft.com/typography/otspec/ebdt.htm)
 - \[<span class="caps">GOO<span class="numbers">4</span></span>\]
   [http://​www​.microsoft​.com/​t​y​p​o​g​r​a​p​h​y​/​o​t​s​p​e​c​/​e​b​l​c​.​htm](http://www.microsoft.com/typography/otspec/eblc.htm)
 - \[<span class="caps">GOO<span class="numbers">5</span></span>\]
-  [https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​ji/](https://code.google.com/p/color-emoji/)
+  https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​ji/
 - \[<span class="caps">GOO<span class="numbers">6</span></span>\]
-  [https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​j​i​/​s​o​u​r​c​e​/​b​r​o​w​se/](https://code.google.com/p/color-emoji/source/browse/)
+  https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​j​i​/​s​o​u​r​c​e​/​b​r​o​w​se/
 - \[<span class="caps">GOO<span class="numbers">7</span></span>\]
   [http://​git​.savannah​.gnu​.org/​c​g​i​t​/​f​r​e​e​t​y​p​e​/​f​r​e​e​t​y​p​e​<span class="numbers">2</span>​.​g​it/](http://git.savannah.gnu.org/cgit/freetype/freetype2.git/)
 - \[<span class="caps">GOO<span class="numbers">8</span></span>\]

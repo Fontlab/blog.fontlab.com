@@ -49,5 +49,5 @@ Every glyph after the first is a variation on a structure you set up at the star
 This episode is the patient version of “draw one letter properly” — and it pays off
 across the entire font.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/1.-drawing/01g-1-reusing-shapes-1/){
+Read more on help.fontlab.com →{
 .fl-help-cta }

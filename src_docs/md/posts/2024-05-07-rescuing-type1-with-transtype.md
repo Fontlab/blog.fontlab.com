@@ -48,4 +48,4 @@ making sure the bridge does not collapse.
 - [FontLab 8 review — The Endearing Designer](https://theendearingdesigner.com/fontlab-8-review/)
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/transtype/4/){ .fl-help-cta }
+Read more on help.fontlab.com →{ .fl-help-cta }

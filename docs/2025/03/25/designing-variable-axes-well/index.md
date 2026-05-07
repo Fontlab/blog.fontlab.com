@@ -17,6 +17,6 @@ A well-designed axis turns a typeface into a system. Done right, one file replac
 - [variablefonts.io — interactive axis explorer](https://variablefonts.io)
 - [Axis Praxis — live VF testing](https://axis-praxis.org)
 - [OpenType Font Variations overview — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
-- [Families and variation in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
+- [Families and variation in FontLab 8](https://blog.fontlab.com/2025/03/25/designing-variable-axes-well/fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-07-families-variation/index.md)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://blog.fontlab.com/2025/03/25/designing-variable-axes-well/fontlab/8/manual/Variations/index.md){ .fl-help-cta }

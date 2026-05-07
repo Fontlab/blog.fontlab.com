@@ -27,6 +27,6 @@ Beyond the headline features, FontLab 8 introduces several precision editing too
 
 FontLab 8 ships with an expanded tutorial system. Text tutorials by Dave Lawrence (California Type Foundry) and Gunnlaugur SE Briem cover foundational techniques. Over 240 video tutorials are available on the FontLab YouTube channel, with playlists organized by topic and difficulty.
 
-The 8-day introductory tutorial series at [help.fontlab.com/fontlab/8/tutorials/intro/8-days/](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/) walks through the complete workflow from first glyph to exported font, covering drawing, spacing, kerning, OpenType features, and variable font basics in sequence.
+The 8-day introductory tutorial series at help.fontlab.com/fontlab/8/tutorials/intro/8-days/ walks through the complete workflow from first glyph to exported font, covering drawing, spacing, kerning, OpenType features, and variable font basics in sequence.
 
 Download FontLab 8 and find the full what’s-new list at [fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Documentation lives at [help.fontlab.com](https://help.fontlab.com/).

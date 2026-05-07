@@ -1,6 +1,6 @@
 You can spend six months agonising over the curvature of a lowercase ‘s’, and then your font is rendered by a ruthless grid of pixels on somebody’s second monitor at 1366×768. Translating smooth Bézier curves onto a low-resolution raster is a violent process. The curves win the design argument. The pixels win the rendering argument.
 
-## what hinting actually is
+## What hinting actually is
 
 Hinting is a set of mathematical instructions embedded in the font that tells the operating system how to distort the outline so it lands properly on the pixel grid. The instructions snap stems to whole pixels, align the cap height across the alphabet, and keep the relationship between hairlines and main strokes legible at small sizes. Without hinting, a 10-pixel-tall ‘e’ on a Windows machine in 2024 reads as a smudge. With hinting, it reads as an ‘e’.
 
@@ -8,7 +8,7 @@ FontLab 8 ships both automatic and manual hinting controls. The auto-hinter hand
 
 The built-in preview uses Microsoft ClearType’s actual rendering pipeline, which is the closest you can get to seeing what a Windows user will see, short of running Windows. This matters because the FontLab editor on macOS otherwise renders fonts the way macOS renders them, and macOS is much more forgiving than Windows. A font that previews well on macOS may still need hinting work to survive a Windows render.
 
-## the trap of overlapping contours
+## The trap of overlapping contours
 
 A French designer recently posted a typical horror story: their font looked flawless in FontLab’s preview, but when they exported and tested it in Microsoft Word, white gaps appeared at the joints of the letters at small zoom levels. The culprit was overlapping contours.
 
@@ -22,13 +22,13 @@ The fix is to remove overlaps on export. FontLab does this non-destructively: th
 
 The auditing role is the right one for software. Visually, you can stare at a glyph for ten minutes and miss the redundant on-curve point that is making the rendering subtly off. FontAudit finds it in milliseconds and tells you exactly where it is.
 
-## the .glyphspackage opening
+## The .glyphspackage opening
 
 FontLab 8 supports the `.glyphspackage` format alongside its native FLP. The interesting thing about `.glyphspackage` is that it stores each glyph as a separate file inside a folder structure, which makes it Git-friendly. Two designers working on the same font can edit different glyphs in parallel and merge the changes through a normal pull request. This is mundane in software development; it is novel in font development, where for years the unit of version control was the entire font file.
 
 The implication is that font production starts to look like software production. Branches, pull requests, code review, CI pipelines that build the font and check it against regression tests — all of it becomes possible because the source format is finally decomposable.
 
-## the moral
+## The moral
 
 Type design is an exercise in engineering as much as in art. The drawing is the first half of the job. Surviving the brutal reality of the screen is the second half. Hinting, audit, and a clean export pipeline are not glamour features. They are the difference between a font that looks beautiful in your editor and a font that looks beautiful on a stranger’s laptop in 2024.
 

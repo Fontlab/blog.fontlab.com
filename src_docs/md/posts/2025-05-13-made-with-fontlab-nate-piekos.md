@@ -31,7 +31,7 @@ After waiting years for one specific feature:
 > Glorious, glorious Dark Mode at last.
 > My eyes thank you, FontLab!
 > (…)
->
+> 
 > I asked for this, and FontLab is delivering.
 > Can’t get better customer relations than that.
 

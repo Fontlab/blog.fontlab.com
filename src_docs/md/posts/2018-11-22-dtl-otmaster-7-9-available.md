@@ -24,7 +24,7 @@ new glyph or replace an existing one.
 
 Visit the [DTL OTMaster web page](https://www.fontlab.com/font-utility/dtl-otmaster/)
 for more info, or
-[buy or upgrade now](https://store.fontlab.com/index.php?option=com_mijoshop&view=category&path=42&Itemid=234)
+buy or upgrade now
 in the FontLab store.
 The full license for macOS, Windows, or Linux is US$228; upgrades from previous versions
 are US$57. Academic pricing is available at $114 (proof of academic status required).

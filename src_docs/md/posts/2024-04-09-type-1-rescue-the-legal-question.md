@@ -46,8 +46,8 @@ A careful conversion respects both.
 ## References
 
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
-- [Adobe Type 1 end-of-support FAQ](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html)
+- Adobe Type 1 end-of-support FAQ
 - [How to convert PostScript fonts to OpenType — CreativePro](https://creativepro.com/how-to-convert-postscript-fonts-to-opentype-with-transtype/)
 - [The end of Type 1 — Type Network](https://typenetwork.com/articles/the-end-of-type-1)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/transtype/4/){ .fl-help-cta }
+Read more on help.fontlab.com →{ .fl-help-cta }

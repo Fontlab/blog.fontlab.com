@@ -17,4 +17,4 @@ The future the multilingual tutorials describe is already here. The tools just m
 - [Variable fonts — MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
 - [Vexy Lines](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://blog.fontlab.com/2026/03/10/variable-fonts-in-motion-and-ui/fontlab/8/manual/Variations/index.md){ .fl-help-cta }

@@ -50,7 +50,7 @@ The amount of fun you can have with it is not.
 
 - [Vexy Lines — overview](https://vexy.art/lines/)
 - [Vexy Lines knowledge base](https://help.vexy.art/)
-- [FontLab 8 Sketchboard](https://help.fontlab.com/fontlab/8/whats-new/whats-new-08-sketchboard/)
+- FontLab 8 Sketchboard
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

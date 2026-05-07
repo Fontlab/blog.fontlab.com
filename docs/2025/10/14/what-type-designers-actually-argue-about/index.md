@@ -17,4 +17,4 @@ Reading these debates is one of the better ways to learn type design. The produc
 - [Alex John Lucas on FontLab vs RoboFont vs Glyphs](https://alexjohnlucas.com/type/software)
 - [Awesome typography — Jolg42](https://github.com/Jolg42/awesome-typography)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)

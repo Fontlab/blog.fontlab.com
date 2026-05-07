@@ -32,7 +32,7 @@
           <link rel="icon" href="../../../../assets/images/favicon.png">
         
       
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.3">
     
     
       
@@ -792,36 +792,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2012/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2012
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../archive/2005/" class="md-nav__link">
         
   
@@ -960,40 +930,28 @@
 
   <h1>Hello, Vexy Lines</h1>
 
-<p>Vexy Lines converts raster images into scalable vector artwork.
-Drop in a photo, screenshot, or AI-generated graphic; choose a fill style; export as SVG
-or PDF. The underlying mechanism is signal processing: image brightness drives stroke
-thickness, so darker areas get heavier lines and lighter areas get finer ones.</p>
+<p>Drop a photo into Vexy Lines, and it hands you back a crisp vector drawing.
+It reads the brightness of your image and adjusts stroke thickness to match. Dark areas get heavy lines. Light areas get fine ones. It's simple math, but the results look like magic.</p>
 <!-- more -->
 
 <p><img alt="Vexy Lines application showing fill styles" src="../../../../media/vexy-hello-hero.png" /></p>
-<p>Fill styles available at launch:</p>
+<p>You get six fill styles right out of the box:</p>
 <ul>
-<li><strong>Linear</strong> — parallel lines whose weight tracks the source image’s luminance</li>
-<li><strong>Wave</strong> — undulating lines, same brightness-to-weight mapping</li>
-<li><strong>Halftone</strong> — classic dot-based halftone pattern</li>
-<li><strong>Trace</strong> — follows edges in the source image rather than a fixed grid</li>
-<li><strong>Text</strong> — fills areas with letterforms, using variable font weight to encode
-  brightness</li>
-<li><strong>Handmade</strong> — a looser, sketch-like stroke character</li>
+<li><strong>Linear</strong>: Parallel lines that swell and shrink with the shadows.</li>
+<li><strong>Wave</strong>: Wavy lines doing the exact same thing.</li>
+<li><strong>Halftone</strong>: The classic dot pattern from old comic books.</li>
+<li><strong>Trace</strong>: Follows the actual edges in your image instead of a rigid grid.</li>
+<li><strong>Text</strong>: Fills space with letters, shifting font weight to build the picture.</li>
+<li><strong>Handmade</strong>: A messy, sketched look for when perfection is boring.</li>
 </ul>
 <p><img alt="Vexy Lines fill style examples" src="../../../../media/vexy-hello-fills.png" /></p>
-<p>Output is organized with layers, groups, and masks, giving you control over which parts
-of the source image get which treatment.
-Strokes can sample colors from the source image, producing a chromatic result that
-echoes the original photograph’s palette.
-A mesh-wrapping option handles pattern continuity, and hidden-line removal conceals
-strokes on the far side of a shape.</p>
+<p>The app keeps everything tidy. Your output arrives neatly packed into layers, groups, and masks. You decide exactly which parts of your image get which treatment.</p>
+<p>Want color? The strokes can pull hues straight from your source image. The result is a vibrant vector piece that perfectly matches your original photo. We also threw in mesh-wrapping to keep patterns flowing smoothly, plus hidden-line removal so strokes on the back of a shape stay out of sight.</p>
 <p><img alt="Vexy Lines stroke sampling from source image colors" src="../../../../media/vexy-hello-strokes.jpeg" /></p>
-<p>The text fill mode deserves a note.
-Font weight is driven by the same signal-processing pipeline that controls line weight
-in the linear mode — the typographic texture encodes the image’s tonal structure.
-It works with variable fonts that have a weight axis, and the effect can be combined
-with linear or wave fills in layers.</p>
-<p>Vexy Lines is available as a free browser version and as paid desktop applications for
-macOS and Windows. The browser version has limited export options; the desktop versions
-export full-resolution SVG and PDF.</p>
-<p>More at <a href="https://vexy.art/">vexy.art</a>.</p>
+<p>That text fill mode is particularly fun.
+It uses the same logic that controls line thickness, but applies it to typography. The letters themselves get bolder in the dark spots and lighter in the bright spots. Feed it a variable font with a weight axis, and watch the text build your image. You can even stack it with linear or wave fills if you're feeling adventurous.</p>
+<p>Try Vexy Lines right now in your browser for free. If you need full-resolution SVG and PDF exports, grab the paid desktop app for macOS or Windows.</p>
+<p>Go play with it at <a href="https://vexy.art/">vexy.art</a>.</p>
 
 
   

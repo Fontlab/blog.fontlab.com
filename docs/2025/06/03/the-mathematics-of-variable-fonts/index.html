@@ -32,7 +32,7 @@
           <link rel="icon" href="../../../../assets/images/favicon.png">
         
       
-      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-materialx-10.1.3">
     
     
       
@@ -797,36 +797,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2012/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2012
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../archive/2005/" class="md-nav__link">
         
   
@@ -984,52 +954,50 @@
 
   <h1>The mathematics of variable fonts</h1>
 
-<p>For five hundred years of printing, a bolder letter meant a new piece of cast lead.
-Digital typography kept that paradigm for decades.
-A family meant a folder of static files: Regular, Italic, Bold, Condensed.</p>
+<p>For five hundred years, making a letter bolder meant casting a new chunk of lead.
+Digital typography clung to this habit for decades.
+You wanted a bold italic, you bought a separate file.</p>
 <!-- more -->
 
 <!-- image TBD -->
 
-<p>That changed in 2016 when Apple, Adobe, Google, and Microsoft ratified OpenType Font
-Variations as version 1.8 of the spec.
-By 2025 the variable font is no longer a gimmick; it is the architecture of responsive
-typography.</p>
-<p>A variable font compresses an entire family into one file by storing a default master
-design and a mathematically complex set of instructions for deforming it along
-continuous axes. The design space is multi-dimensional.
-If a font has a weight axis and a width axis, the designer defines four corner masters —
-Light Condensed, Light Wide, Black Condensed, Black Wide — and the renderer interpolates
-the maths to generate any point inside that square on the fly.
-A recent paper on arXiv even worked out a differentiable variable-font framework,
-allowing target glyphs to be approximated by unrelated variable fonts using PyTorch.
-The underlying maths is heavy.</p>
-<p>The practical benefit for UI design is straightforward.
-A web page used to load four font files for four weights.
-A variable font is one network request that can produce a semibold for a tablet, a heavy
-condensed cut for a narrow mobile screen, and a delicate wide cut for a desktop monitor.</p>
-<p>Building these files needs serious software.
-FontLab 8 handles variable production natively — merge a static Regular and a static
-Bold and FontLab establishes the axis automatically.
-But linear maths has limits.
-A letterform does not get bolder at a constant rate.
-Interpolating directly from hairline to ultra-black tends to produce middle weights that
-look anemic or muddy.
-The fix is intermediate masters: drop a corrected drawing at the 700 position and
-FontLab warps the interpolation path to hit that anchor.
-For glyph swaps that depend on axis position — a single-storey <code>g</code> past 850, say —
-FontLab writes the OpenType code through the <code>rvrn</code> feature.</p>
-<p>Roboto Flex and IBM Plex Sans Variable show the destination.
-A single file becomes a token-based typography system, granting UX teams granular
-control without licensing a new font weight every time the brief changes.</p>
+<p>Then came 2016.
+Apple, Adobe, Google, and Microsoft agreed on OpenType Font Variations.
+Suddenly, a whole type family could live inside a single file.</p>
+<p>A variable font stores a default master design.
+It also packs a dense set of mathematical instructions for stretching and squishing that design along continuous axes.
+Think of it as a multi-dimensional space.
+Give a font a weight axis and a width axis, and you define four corners: Light Condensed, Light Wide, Black Condensed, and Black Wide.
+The renderer does the math to generate any point inside that square instantly.</p>
+<p>The math gets intense.
+Researchers recently built a differentiable framework using PyTorch to approximate target glyphs with unrelated variable fonts.
+You don't need to understand the calculus to appreciate the result.</p>
+<p>For UI design, the payoff is obvious.
+Web pages used to choke on four separate font files just to display a few weights.
+Now, one network request delivers a semibold for a tablet, a heavy condensed cut for a phone, and a delicate wide cut for a desktop monitor.</p>
+<p>Building these files requires capable software.
+FontLab 8 handles variable production natively.
+Merge a static Regular with a static Bold, and FontLab sets up the axis automatically.
+But linear math has limits.
+Letters don't get bolder at a constant rate.
+If you interpolate straight from a hairline to an ultra-black, the middle weights usually look anemic or muddy.</p>
+<p>The solution is intermediate masters.
+Drop a corrected drawing at the 700 weight position.
+FontLab then warps the interpolation path to hit that exact anchor.
+Sometimes a glyph needs to change shape entirely, like switching to a single-storey <code>g</code> past weight 850.
+FontLab handles this by writing the OpenType code through the <code>rvrn</code> feature.</p>
+<p>Look at Roboto Flex or IBM Plex Sans Variable.
+A single file acts as a complete typography system.
+UX teams get granular control without needing to license a new font weight every time a client changes their mind.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Variable_font">Variable font — Wikipedia</a></li>
-<li><a href="https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview">OpenType Font Variations — Microsoft</a></li>
-<li><a href="https://arxiv.org/html/2510.07638v2">Differentiable variable fonts — arXiv</a></li>
-<li><a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/">Families and variation — FontLab 8</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Variable_font">Variable font, Wikipedia</a></li>
+<li><a href="https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview">OpenType Font Variations, Microsoft</a></li>
+<li><a href="https://arxiv.org/html/2510.07638v2">Differentiable variable fonts, arXiv</a></li>
+<li><a href="fontlab/8/whats-new/whats-new-07-families-variation/">Families and variation, FontLab 8</a></li>
 </ul>
-<p><a class="fl-help-cta" href="https://help.fontlab.com/">Read more on help.fontlab.com →</a></p>
+<p>Read more on help.fontlab.com →{
+.fl-help-cta }</p>
 
 
   

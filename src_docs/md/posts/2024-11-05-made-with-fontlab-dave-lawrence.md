@@ -32,17 +32,17 @@ Asked what FontLab gives him, Lawrence is unusually direct for a type designer:
 > I’m hugely enjoying FontLab 8 in dark mode.
 > It looks AMAZING. It feels amazing.
 > Drawing is extra snappy.
->
+> 
 > For example, you can do unlimited axes and masters.
 > In some font editors, this is not possible, requiring additional programming in a
 > second application. No extra steps in FontLab.
 > This saves time.
->
+> 
 > The new Stroke panel along with the Thickness tool is a game changer.
 > There had been a lot of talk about how we should be using “outline skeletons” to make
 > our fonts. There’s been a lot of theoretical work, but FontLab 8 is the first app to
 > put that in practice in an integrated way.
->
+> 
 > If you want pro results, you have to invest in a pro font editor.
 > Period. (…) FontLab allowed me to make our Hi-res Font™ Series.
 > Accurate, pitch-perfect classics from hi-res scans.

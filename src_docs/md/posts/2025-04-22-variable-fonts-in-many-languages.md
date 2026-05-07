@@ -54,4 +54,5 @@ They describe what you can ship today.
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 - [Migrating to variable fonts — Google Codelabs](https://codelabs.developers.google.com/migrating-variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Variations/){ .fl-help-cta }
+Read more on help.fontlab.com →{
+.fl-help-cta }

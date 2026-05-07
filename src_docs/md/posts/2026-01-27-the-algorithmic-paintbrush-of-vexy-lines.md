@@ -60,4 +60,4 @@ aimed at the right problem.
 - [Vexy Lines on AlternativeTo](https://alternativeto.net/software/vexy-lines/about/)
 - [Halftone shading — Astute Graphics](https://astutegraphics.com/learn/10minskills/halftone-shading-a-quick-how-to)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

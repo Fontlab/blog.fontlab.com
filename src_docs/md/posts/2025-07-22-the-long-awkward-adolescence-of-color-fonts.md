@@ -16,7 +16,7 @@ The decade since has been an awkward growing-up.
 
 ![Gradient color glyph in FontLab 8](/media/the-long-awkward-adolescence-of-color-fonts/gradient.png)
 
-## the four-way standoff
+## The four-way standoff
 
 In 2013, four proposals landed at the OpenType committee in roughly the same year.
 Apple offered `sbix`, which essentially shoved PNG images into the font at several
@@ -36,7 +36,7 @@ web had to export three formats and pray.
 Some renderers ignored the table you cared about and used the one you had not bothered
 with. Diagnosis was a hobby.
 
-## the bitmap problem
+## The bitmap problem
 
 `sbix` and `CBDT` shipped what Apple’s emoji needed: photographic-looking glyphs, fixed
 sizes, fast on mobile.
@@ -98,7 +98,7 @@ fonts on top of each other in InDesign, each colored differently with the type t
 It worked. It was the duct-tape years.
 We are out of those now.
 
-## from the archives
+## From the archives
 
 We have been writing about color fonts since the earliest days of these format wars.
 If you want to dive deeper into the history and mechanics, check out our older posts:
@@ -116,9 +116,9 @@ If you want to dive deeper into the history and mechanics, check out our older p
 
 - [COLR table — Microsoft Typography](https://learn.microsoft.com/en-us/typography/opentype/spec/colr)
 - [SVG in OpenType — W3C Community](https://www.w3.org/community/svgopentype/)
-- [Color emoji v1 spec — Google](https://github.com/googlei18n/color-emoji)
+- Color emoji v1 spec — Google
 - [Convert TTF to CBDT/CBLC — TypeDrawers](https://typedrawers.com/discussion/2392/convert-a-ttf-to-cbdt-cblc-format-color-font)
-- [Color fonts in browsers — web.dev](https://web.dev/articles/color-fonts)
+- Color fonts in browsers — web.dev
 
 [Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){
 .fl-help-cta }

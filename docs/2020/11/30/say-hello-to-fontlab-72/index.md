@@ -39,13 +39,13 @@ An attached component automatically snaps to the position determined by correspo
 
 Attached components give you anchor-based placement while keeping full flexibility over metrics, and allow mixing contours with components. To attach a component, select it in the Glyph window and turn on *Element › Attached*, or toggle the paper-clip icon in the Glyph window property bar.
 
-## Suggest Distance
+## Suggest distance
 
 When *View › Suggest › Distance* is on and you drag a node, handle, selection, or anchor, FontLab draws a temporary suggested outline at the distance defined in *Font Info › Other Values › Contour properties › Suggest distance* — a freeform grid that adapts to your current drawing.
 
 You can define separate horizontal and vertical distances per master. Use Suggest Distance to position anchors at a specified distance from existing contours, or to transform an existing drawing.
 
-## Rotate, Scale and Slant tools
+## Rotate, scale and slant tools
 
 The quick transform tools — Rotate, Scale, and Slant — have been revamped. They work better and are accessible from the toolbar.
 

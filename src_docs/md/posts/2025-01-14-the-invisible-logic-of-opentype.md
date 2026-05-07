@@ -51,4 +51,5 @@ Users notice OpenType features most when they are missing.
 - [A practical guide to OpenType features — Pangram Pangram](https://pangrampangram.com/blogs/journal/opentype-features)
 - [OpenType feature tags — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/featuretags)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/){
+.fl-help-cta }

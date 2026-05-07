@@ -53,4 +53,5 @@ The spacing is the part professionals get paid for.
 - [Inside the fonts: optical sizes — Type Network](https://typenetwork.com/articles/inside-the-fonts-optical-sizes)
 - [opsz axis — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/){
+.fl-help-cta }

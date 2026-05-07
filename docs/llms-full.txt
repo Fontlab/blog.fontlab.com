@@ -53,17 +53,6 @@ Also in 2005, the company released FontFlasher for pixel font creation and FogLa
 
 The OpenType editing work that began in FontLab 4 and matured in Studio 5 gave type designers direct access to the feature code layer of OpenType fonts — ligatures, alternate forms, positional variants, and script-specific rules — without requiring separate tools or hand-editing binary tables. That capability, combined with class-based kerning and visual TrueType hinting, made Studio 5 the tool of record for a generation of professional type production.
 
-October 2012 brought maintenance updates to two of our font editors, with bug fixes for both Mac and Windows.
-
-Two free updates shipped this month:
-
-- **TypeTool 3.1.1** for Mac — bug-fix update to the entry-level font editor
-- **Fontographer 5.2.1** for Mac and Windows — maintenance release for the classic font editor, covering both platforms
-
-November 2012 saw a version split in FontLab Studio 5: a new 5.2 release for Windows and a 5.1.3 maintenance update for Mac.
-
-FontLab Studio 5.2 for Windows introduced new features to the Windows build, while Mac users received FontLab Studio 5.1.3 as a bug-fix update. The full Windows 5.2 feature set — including 65,535-glyph OpenType support and FEA syntax 2.5 — was documented with the December 2013 release of FontLab Studio 5.2.1 for Windows.
-
 In 2013, all four major players — Apple, Google, Microsoft, and Adobe with Mozilla — each proposed a different way to add color to OpenType fonts, and none of them agreed. The proposals range from simple PNG bitmaps (Apple’s `sbix`, Google’s `CBDT`/`CBLC`) to layered solid-color outlines (Microsoft’s `COLR`/`CPAL`) to full SVG with potential animation (Adobe/Mozilla’s `SVG` table). This post summarises the conceptual landscape and the four approaches at a high level.
 
 *This article is very technical. No completeness or correctness of the information presented below is guaranteed, and all views are personal.*
@@ -122,11 +111,11 @@ Google hosts a “Color Emoji” project dedicated to this [GOO5], have created 
 *Co-existence:* The GOO proposal states: “It is recommended that such fonts include no `glyf` table, and as such be bitmap-only fonts. In the presence of color and non-color strikes in the same font, it is currently unspecified which bitmap a conformant client will choose for rendering.”. While this does not directly invalidate co-existence, it raises a valid question (for co-existence in general, and for precedence in particular). However, in Microsoft’s and Apple’s traditional implementations of the TrueType rasterizer (before ClearType), the bdat/bloc and `EBDT`/`EBLC` tables worked so that if a bitmap strike was available for a given PPM, it was used, otherwise the outline glyph was rendered from the `glyf` table (even for the same glyph but different PPM). I definitely think that all consuming platforms which support the GOO approach should adopt the aforementioned principle. This is especially crucial when it comes to co-existence between the GOO proposal and the MIC proposal. If the GOO approach behaves as I described, then chances are that one font could include the `CBDT`, `CBLC`, `COLR`, `CPAL` and glyf tables, and the consuming platform could easily choose whether to use the GOO approach first, and then (for different PPM sizes or glyphs which are not supported by the GOO tables) use the MIC approach (or just the plain `glyf` table). *External modification:* While some people have generally voiced their desire to be able to manipulate colors that are embedded inside of a font file externally, I think in case of PNG-based glyphs, this should be, if at all, a post-processing step (after the glyph images have been retrieved from the scaler). *Fallback/degradation:* the GOO spec includes provisions as to how the color bitmap data should be transformed into grayscale bitmap data. *Unclear:* The OpenType spec also includes the `EBSC` table [GOO8] which defines which per-PPM strikes should be used for which PPM ranges when they need to be scaled. Without `EBSC`, it is assumed that the `EBDT`/`EBLC` strikes are only rendered for the specified PPM. The GOO proposal makes no mention of how scaling should be implemented, or whether a scaler should rely on the presence of the `EBSC` table. I **strongly** think that, should the GOO proposal aim at wider adoption, it should strictly follow the principle laid out in the OpenType spec: if no `EBSC` table is present, strikes should be rendered only at given PPMs. For scaling, it should refer to the `EBSC` table. It’s also unclear to me what FreeType 2.5 is doing at this point, and whether support for `EBSC` is planned.
 
 - [GOO1] [http://​google​-opensource​.blogspot​.de/​2​0​1​3​/​0​5​/​o​p​e​n​-​s​t​a​n​d​a​r​d​-​c​o​l​o​r​-​f​o​n​t​-​f​u​n​-​f​o​r​.​h​tml](http://google-opensource.blogspot.de/2013/05/open-standard-color-font-fun-for.html)
-- [GOO2] [https://​color​-emoji​.googlecode​.com/​g​i​t​/​s​p​e​c​i​f​i​c​a​t​i​o​n​/​v​1​.​h​tml](https://color-emoji.googlecode.com/git/specification/v1.html)
+- [GOO2] https://​color​-emoji​.googlecode​.com/​g​i​t​/​s​p​e​c​i​f​i​c​a​t​i​o​n​/​v​1​.​h​tml
 - [GOO3] [http://​www​.microsoft​.com/​t​y​p​o​g​r​a​p​h​y​/​o​t​s​p​e​c​/​e​b​d​t​.​htm](http://www.microsoft.com/typography/otspec/ebdt.htm)
 - [GOO4] [http://​www​.microsoft​.com/​t​y​p​o​g​r​a​p​h​y​/​o​t​s​p​e​c​/​e​b​l​c​.​htm](http://www.microsoft.com/typography/otspec/eblc.htm)
-- [GOO5] [https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​ji/](https://code.google.com/p/color-emoji/)
-- [GOO6] [https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​j​i​/​s​o​u​r​c​e​/​b​r​o​w​se/](https://code.google.com/p/color-emoji/source/browse/)
+- [GOO5] https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​ji/
+- [GOO6] https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​j​i​/​s​o​u​r​c​e​/​b​r​o​w​se/
 - [GOO7] [http://​git​.savannah​.gnu​.org/​c​g​i​t​/​f​r​e​e​t​y​p​e​/​f​r​e​e​t​y​p​e​2​.​g​it/](http://git.savannah.gnu.org/cgit/freetype/freetype2.git/)
 - [GOO8] [https://​www​.microsoft​.com/​t​y​p​o​g​r​a​p​h​y​/​o​t​s​p​e​c​/​e​b​s​c​.​htm](https://www.microsoft.com/typography/otspec/ebsc.htm)
 
@@ -196,7 +185,7 @@ With four competing color font proposals on the table in 2013, it is worth stepp
 
 In my view, each of the presented approaches has its advantages and disadvantages.
 
-### The Proposals
+### The proposals
 
 The APP proposal is great in so far that it’s actually already implemented. However, the interaction of the `sbix` and `glyf` tables as implemented in Apple OSes has its serious drawbacks (no fallback scenario). Also, it’s unknown whether the `sbix` table would ever make its way into the official ISO OFF or OpenType specs.
 
@@ -210,7 +199,7 @@ In principle, the MIC and GOO approaches could be easily “married together”:
 
 The SVG approach is very welcome, and, as I said, a kind of “2.0” thing. I believe the discussion on them should continue, even if implementations of those could be confined to only the web browser context. Also, Firefox actually already implements the SVG approach, which is very good news.
 
-### Color Palettes
+### Color palettes
 
 As for **color palettes**, I consider its addition to font formats (whether through a unified and further developed `CPAL` table or through several separate mechanisms) as **third element of typographic user control**.
 
@@ -220,7 +209,7 @@ The second mechanism was the addition of the `GSUB`/`GPOS` tables: user’s cont
 
 And now, we’re extending the user’s control by adding ability to specify multiple colors through the font’s color palette.
 
-### Relation to Existing Solutions
+### Relation to existing solutions
 
 When comparing the **outline color font format** proposals, I would use the following analogy:
 
@@ -410,7 +399,7 @@ DTL OTMaster 7.9 adds first-class support for variable OpenType fonts — includ
 
 OTMaster lets you inspect, troubleshoot, and modify OpenType and TrueType fonts without destructive round-tripping — in all their flavors, including variable fonts, color fonts, TTC collections, WOFF2 web fonts, and CID-keyed OTF fonts. You can view and edit OpenType Layout features, work with low-level font tables, and fix bugs. The Glyph Editor lets you import a monochrome EPS or SVG drawing and add it as a new glyph or replace an existing one.
 
-Visit the [DTL OTMaster web page](https://www.fontlab.com/font-utility/dtl-otmaster/) for more info, or [buy or upgrade now](https://store.fontlab.com/index.php?option=com_mijoshop&view=category&path=42&Itemid=234) in the FontLab store. The full license for macOS, Windows, or Linux is US$228; upgrades from previous versions are US$57. Academic pricing is available at $114 (proof of academic status required).
+Visit the [DTL OTMaster web page](https://www.fontlab.com/font-utility/dtl-otmaster/) for more info, or buy or upgrade now in the FontLab store. The full license for macOS, Windows, or Linux is US$228; upgrades from previous versions are US$57. Academic pricing is available at $114 (proof of academic status required).
 
 OTMaster pairs well with [FontLab VI](https://www.fontlab.com/font-editor/fontlab-vi/): draw, space, kern, and hint in FontLab; test and tweak in OTMaster.
 
@@ -486,9 +475,9 @@ We spent over five years building [FontLab 7](http://www.fontlab.info). It combi
 
 If you’ve been hesitant about upgrading — do it now.
 
-- [From FontLab Studio 5](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=137&Itemid=221) for **$199**
-- [From Fontographer 5](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=139&Itemid=222) for **$229**
-- [From TypeTool 3](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=140&Itemid=223) for **$415**
+- From FontLab Studio 5 for **$199**
+- From Fontographer 5 for **$229**
+- From TypeTool 3 for **$415**
 
 ## 32-bit apps no longer run natively on macOS Catalina
 
@@ -511,7 +500,7 @@ If you’ve upgraded to Catalina — or bought a new Mac with it pre-installed �
 1. **[Codeweavers CrossOver Mac](https://www.codeweavers.com/products/crossover-mac) 19 or newer** — a thin emulation layer that runs 32-bit Windows apps on Catalina without a full virtual machine. Contact us to cross-grade your Mac license to a Windows license, then install the Windows version of the app inside CrossOver. The whole setup — CrossOver, the Windows bottle, and the FontLab apps — takes under 1 GB of disk space.
 1. **Virtualization with an older guest macOS** — use Parallels Desktop, VMWare Fusion, or Oracle VirtualBox to run macOS 10.14 Mojave, 10.13 High Sierra, or 10.12 Sierra inside a virtual machine. Install your 32-bit apps there. They’ll run at near-native speed with full access to your files.
 1. **Virtualization with Windows** — same virtualization apps, but running Windows 10, 7, or XP as the guest. Contact us to cross-grade your Mac license to a Windows license.
-1. **[Upgrade to FontLab 7](https://store.fontlab.com/index.php?option=com_mijoshop&view=category&path=54)** — the clean break.
+1. **Upgrade to FontLab 7** — the clean break.
 
 ## CrossOver Mac 19
 
@@ -637,7 +626,6 @@ Additional guides for Parallels Desktop:
 - <https://www.parallels.com/blogs/try-macos-mojave-parallels-desktop/>
 - <https://www.geekrar.com/install-macos-mojave-on-parallels-desktop/>
 - <https://www.parallels.com/blogs/older-versions-mac-os-x-with-macos-sierra/>
-- <https://www.howtogeek.com/364272/how-to-run-macos-mojave-in-parallels-for-free/>
 
 ### Installing guest macOS in VMWare Fusion
 
@@ -646,7 +634,6 @@ Additional guides for Parallels Desktop:
 
 ### Installing guest macOS in VirtualBox
 
-- <https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/>
 - <https://www.saintlad.com/install-macos-sierra-in-virtualbox-on-windows-10/>
 - <https://medium.com/@twister.mr/installing-macos-to-virtualbox-1fcc5cf22801>
 - <https://www.maketecheasier.com/install-macos-virtualbox/>
@@ -768,13 +755,13 @@ An attached component automatically snaps to the position determined by correspo
 
 Attached components give you anchor-based placement while keeping full flexibility over metrics, and allow mixing contours with components. To attach a component, select it in the Glyph window and turn on *Element › Attached*, or toggle the paper-clip icon in the Glyph window property bar.
 
-## Suggest Distance
+## Suggest distance
 
 When *View › Suggest › Distance* is on and you drag a node, handle, selection, or anchor, FontLab draws a temporary suggested outline at the distance defined in *Font Info › Other Values › Contour properties › Suggest distance* — a freeform grid that adapts to your current drawing.
 
 You can define separate horizontal and vertical distances per master. Use Suggest Distance to position anchors at a specified distance from existing contours, or to transform an existing drawing.
 
-## Rotate, Scale and Slant tools
+## Rotate, scale and slant tools
 
 The quick transform tools — Rotate, Scale, and Slant — have been revamped. They work better and are accessible from the toolbar.
 
@@ -978,7 +965,7 @@ Beyond the headline features, FontLab 8 introduces several precision editing too
 
 FontLab 8 ships with an expanded tutorial system. Text tutorials by Dave Lawrence (California Type Foundry) and Gunnlaugur SE Briem cover foundational techniques. Over 240 video tutorials are available on the FontLab YouTube channel, with playlists organized by topic and difficulty.
 
-The 8-day introductory tutorial series at [help.fontlab.com/fontlab/8/tutorials/intro/8-days/](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/) walks through the complete workflow from first glyph to exported font, covering drawing, spacing, kerning, OpenType features, and variable font basics in sequence.
+The 8-day introductory tutorial series at help.fontlab.com/fontlab/8/tutorials/intro/8-days/ walks through the complete workflow from first glyph to exported font, covering drawing, spacing, kerning, OpenType features, and variable font basics in sequence.
 
 Download FontLab 8 and find the full what’s-new list at [fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Documentation lives at [help.fontlab.com](https://help.fontlab.com/).
 
@@ -1114,7 +1101,7 @@ Curvy fonts aren’t as intimidating as they look when the tool works the way a 
 ## Further reading
 
 - [Basics of drawing in FontLab](https://help.fontlab.com/fontlab/8/tutorials/calfonts/)
-- [Bézier curves and type design: a tutorial](https://learn.scannerlicker.net/2014/04/16/bezier-curves-and-type-design-a-tutorial/)
+- Bézier curves and type design: a tutorial
 
 ______________________________________________________________________
 
@@ -1165,7 +1152,7 @@ Move the “\_top” anchor in “acutecomb”, and the accent shifts in every a
 
 ## Further reading
 
-- [On legibility: in typography and type design](https://learn.scannerlicker.net/2014/11/14/on-legibility-in-typography-and-type-design/)
+- On legibility: in typography and type design
 
 ______________________________________________________________________
 
@@ -1546,7 +1533,7 @@ Variable fonts can swap glyphs at axis boundaries — switching to a different �
 
 ______________________________________________________________________
 
-Full documentation is in the [FontLab 8 What’s New: Families & variation](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/).
+Full documentation is in the [FontLab 8 What’s New: Families & variation](https://blog.fontlab.com/2023/05/22/variable-fonts-fontlab-8/fontlab/8/whats-new/whats-new-07-families-variation/index.md).
 
 FontLab 8.2 delivers 250 improvements over FontLab 8.0, with major additions including OpenType MATH table support, designspace-aware feature generation, smarter component handling, and a redesigned Welcome screen. It consolidates the FontLab 8 generation and sets the foundation for further free updates.
 
@@ -1825,7 +1812,7 @@ FontLab 8.2 advances OpenType feature handling and kerning: right-to-left kernin
 
 Add accented glyphs with a double-click. Build glyphs from components or always-editable element references. Automate complex glyphs with *Auto layers*. Join design parts with *Skin* and *Glue*. Convert drawing parts to components in one click. Use *Fill* to sculpt whitespace off filled areas. Add ligatures, small caps, and old-style numerals with automatically generated OpenType features.
 
-[Read more: Build & assemble ↗️](https://help.fontlab.com/fontlab/8/whats-new/whats-new-05-build-assemble/)
+[Read more: Build & assemble ↗️](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-05-build-assemble/)
 
 **FontLab 8.2** adds one-click copying of auto layer recipes to other masters, improves the *Skin* filter, element switching, and automatic conversion of simple contours to composites.
 
@@ -1833,7 +1820,7 @@ Add accented glyphs with a double-click. Build glyphs from components or always-
 
 Adjust metrics and kerning in a text-like editor, by planned phrases and pair lists. Apply tracking, modify widths, sidebearings, and kerning globally or for selected glyphs. Build kerning classes automatically or manually, and link metrics between glyphs using expressions. Auto-calculate metrics and kerning, and audit kerning exceptions to find combinations that create visual conflicts.
 
-[Read more: Metrics & kerning ↗️](https://help.fontlab.com/fontlab/8/whats-new/whats-new-06-metrics-kerning/)
+[Read more: Metrics & kerning ↗️](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-06-metrics-kerning/)
 
 **FontLab 8.2** brings major kerning improvements: right-to-left kerning for Arabic and Hebrew, new *Kern to Distance* autokerning, better exception handling and auditing, and improved kerning class management. The Metrics line-spacing workflow is improved, with new support for optical bounds for better text line edge alignment.
 
@@ -1841,7 +1828,7 @@ Adjust metrics and kerning in a text-like editor, by planned phrases and pair li
 
 Build large font families and variable OpenType fonts. Interpolate and extrapolate fonts. Create intermediate weights and styles. Add conditional glyph substitutions. Work on multiple masters at once, and run automatic masters matching for point-compatible outlines. Preview interpolation live with sliders, a variation map, and play/pause buttons — inside FontLab, without external tools.
 
-[Read more: Families & variation ↗️](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
+[Read more: Families & variation ↗️](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-07-families-variation/)
 
 **FontLab 8.2** makes adding simple variation easier and extends support for conditional glyph substitution to features other than `rvrn`.
 
@@ -1969,10 +1956,10 @@ A converter is supposed to be a footnote. TransType 4 keeps showing up in workin
 
 - [TransType 4 — overview](https://www.fontlab.com/font-converter/transtype/)
 - [How to convert PostScript fonts to OpenType — CreativePro](https://creativepro.com/how-to-convert-postscript-fonts-to-opentype-with-transtype/)
-- [Adobe ends Type 1 support — Adobe](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html)
+- Adobe ends Type 1 support — Adobe
 - [The end of Type 1 — Type Network](https://typenetwork.com/articles/the-end-of-type-1)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 Digital formats do not die of natural causes. They are usually smothered in their sleep by the companies that invented them.
 
@@ -1989,11 +1976,11 @@ If a font is worth keeping, it is worth converting carefully. The graveyard is f
 ## References
 
 - [Adobe ending Type 1 support — CreativePro](https://creativepro.com/adobe-is-ending-support-for-type-1-fonts/)
-- [PostScript Type 1 fonts: end of support — Adobe](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html)
+- PostScript Type 1 fonts: end of support — Adobe
 - [The end of Type 1 — Type Network](https://typenetwork.com/articles/the-end-of-type-1)
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 Three chapters from Gunnlaugur SE Briem’s notes on type design cover the work that comes after the roman is drawn: making a bold weight, designing the italic, and spacing the result. All three are harder than they look and more forgiving than they seem.
 
@@ -2029,7 +2016,7 @@ What he offers instead of fixed rules is method: set your control characters fir
 
 ______________________________________________________________________
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/){ .fl-help-cta }
 
 Converting a font you bought in 1998 to a format you can use in 2024 sounds like a technical problem. Often it is a licence problem first.
 
@@ -2046,11 +2033,11 @@ The format changed. The work the font was doing did not. A careful conversion re
 ## References
 
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
-- [Adobe Type 1 end-of-support FAQ](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html)
+- Adobe Type 1 end-of-support FAQ
 - [How to convert PostScript fonts to OpenType — CreativePro](https://creativepro.com/how-to-convert-postscript-fonts-to-opentype-with-transtype/)
 - [The end of Type 1 — Type Network](https://typenetwork.com/articles/the-end-of-type-1)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 A surprising amount of contemporary design still depends on fonts that think the year is 1998.
 
@@ -2069,7 +2056,7 @@ If you squint a bit, it is one continuum: Pyrus and early FontLab on one end, va
 - [FontLab 8 review — The Endearing Designer](https://theendearingdesigner.com/fontlab-8-review/)
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 Since the FontLab 8.2 release in August 2023, two major free updates have shipped: 8.3 in December 2023 and 8.4 in June 2024. Together they add over 200 new features and improvements. Here is the short version.
 
@@ -2117,7 +2104,7 @@ The result is measurable: fewer requests, smaller kilobytes, faster first paint.
 - [TransType — FontLab](https://www.fontlab.com/font-converter/transtype/)
 - [Variable fonts on the web — web.dev](https://web.dev/articles/variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 Letterforms are made of black shapes, but type is judged by the white around and inside them.
 
@@ -2138,7 +2125,7 @@ The drawing is the part students notice. The spacing is the part professionals g
 - [Inside the fonts: optical sizes — Type Network](https://typenetwork.com/articles/inside-the-fonts-optical-sizes)
 - [opsz axis — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/){ .fl-help-cta }
 
 The standard method for digitising a font is to draw the outline. You map the exterior boundary of the shape with Bezier curves, and you push and pull nodes until the silhouette behaves. This works fine for rigid sans-serifs. For a script font, it feels like sculpting in oven mitts.
 
@@ -2154,14 +2141,14 @@ The deeper point is that calligraphic typefaces are skeletal in conception long 
 
 - [Drawing in FontLab — calligraphic basics](https://help.fontlab.com/fontlab/8/tutorials/calfonts/)
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
-- [Bezier curves and type design — scannerlicker](https://learn.scannerlicker.net/2014/04/16/bezier-curves-and-type-design-a-tutorial/)
+- Bezier curves and type design — scannerlicker
 - [What’s new in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 Drawing letters for a living turns out to be mostly an exercise in being perpetually disappointed by optical illusions. A geometric circle next to a geometric square at the same height looks smaller than the square. The fix is to draw the circle slightly larger so that it merely looks the same size. Type design is a profession built on quietly lying to the eye so the eye perceives the truth.
 
-## a font is not a vector drawing
+## A font is not a vector drawing
 
 The standard vector drawing program treats paths as rigid wireframes. Move a node, and only that node moves. This is fine for an icon. It is hopeless for a letter, where every node is in conversation with every other node — the right side of the stem with the left, the top of the bowl with the bottom, the cap height with the x-height with the descender depth.
 
@@ -2183,13 +2170,13 @@ Match Moves does the propagation. Adjust a node on one master with Match Moves o
 
 This is the difference, on a serious family with seven masters across two axes, between a deadline and a missed deadline. It is not a glamour feature. It is heavy machinery for heavy work.
 
-## the small print: still a system
+## The small print: still a system
 
 The reason FontLab 8 can do this is the same reason FontLab Studio 5 could not. FL5 was a legendary tool, but its architecture treated each master’s glyph as an independent drawing. The cross-master operations had to be bolted on. The complete rewrite that began with FontLab VI and culminated in FontLab 8 made the system the primary unit. A glyph in FontLab 8 is, internally, a collection of compatible masters; the operations on it work on all of them by default.
 
 That architectural choice is what enables Match Moves, Power Nudge, and the Lever as integrated rather than scripted features. It is also what enables FontLab’s variable-font workflow to scale to families with five or six axes, where the manual approach would be a non-starter.
 
-## the moral
+## The moral
 
 Old software is like an old house — eventually you have to take it down to the studs because the plumbing cannot handle modern water pressure. FontLab Studio 5 was a legendary house. FontLab 8 is the rebuild, with the heavy machinery built into the foundation. The drawing tools that look like conveniences in a feature list are, in practice, the structural elements that let serious type design happen at current scale.
 
@@ -2290,11 +2277,11 @@ If “variable font” still sounds like one of those things you’ll learn prop
 
 Variable fonts are not exotic anymore — they are the default delivery format for most new releases. The crash course is the fastest way from “I have static masters” to “I am shipping a VF that browsers handle correctly.”
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://blog.fontlab.com/2024/10/08/fontlab-tv-variable-fonts-crash-course/fontlab/8/manual/index.md){ .fl-help-cta }
 
 Type design is an art form. Font production is a factory job. Once the aesthetic decisions are settled on the core alphabet, you face the unglamorous reality of propagating those decisions across hundreds — sometimes thousands — of glyphs. Doing that by hand is a recipe for repetitive strain injury and existential dread.
 
-## the boring 90%
+## The boring 90%
 
 Open any serious foundry’s production timeline and the visible part — drawing the lowercase, agreeing on the bowl of the ‘a’ — is maybe ten percent of the work. The other ninety is propagation: building the diacritics from a base glyph plus an accent, generating small caps from the lowercase, deriving old-style figures from the lining figures, normalising sidebearings across the family, exporting to a dozen formats with a dozen different naming conventions, syncing the result to a test server, and then running a quality audit before any of it ships.
 
@@ -2312,19 +2299,19 @@ The serious script work in the FontLab world is built on TypeRig, the Python lib
 
 A representative script: walk every glyph in the font, find the ones whose advance width is below a threshold, and report them. Six lines. Another: open every master, normalise the cap-height anchor, save. Eight lines. Another: regenerate every composite glyph from its base components after a change to one of those bases. Twelve lines. The kind of work that used to consume a Tuesday afternoon now runs in three seconds and produces a log.
 
-## post-export hooks
+## Post-export hooks
 
 FontLab 8.3 introduced the ability to run a Python script after the font has finished compiling. The script gets the path to the exported file and can do whatever it likes: rename it according to a foundry’s naming convention, copy it to a staging folder, upload it to a test server, generate a WOFF2 from it via `fonttools`, push the change to a Git repository, run a regression test against a known-good rendering snapshot.
 
 This is the bit that turns FontLab from a font editor into a node in a build pipeline. The boundary between the type designer’s craft and the production engineer’s craft starts to dissolve. The output of the editor becomes the input of a CI/CD process, with the script as the bridge.
 
-## the rule of five
+## The rule of five
 
 The rule of thumb in any craft that involves a computer: if you find yourself doing the exact same sequence of clicks five times in a row, write a script. The first time costs more than the manual operation. By the third or fourth use, the script is in profit. By the tenth, you have a small library of utilities that other people on the team can also use, and the work that used to be a daily chore is now a Python module someone else maintains.
 
 This applies as much to a one-person foundry as to a corporate type department. The economics are the same; the only difference is who maintains the script library. The aesthetic of FontLab’s scripting environment is to make that library small, readable, and easy to keep.
 
-## the moral
+## The moral
 
 The goal of Python in a font editor is to eliminate clicking. The clicks that remain are the ones where a human aesthetic decision needs to happen. Everything else — the propagation, the export, the QA, the deployment — should be running while the human is making coffee. FontLab 8 plus TypeRig is the version of that toolkit that exists today.
 
@@ -2372,7 +2359,7 @@ The skeleton-based Stroke panel and Thickness tool he mentions are the FontLab 8
 
 You can spend six months agonising over the curvature of a lowercase ‘s’, and then your font is rendered by a ruthless grid of pixels on somebody’s second monitor at 1366×768. Translating smooth Bézier curves onto a low-resolution raster is a violent process. The curves win the design argument. The pixels win the rendering argument.
 
-## what hinting actually is
+## What hinting actually is
 
 Hinting is a set of mathematical instructions embedded in the font that tells the operating system how to distort the outline so it lands properly on the pixel grid. The instructions snap stems to whole pixels, align the cap height across the alphabet, and keep the relationship between hairlines and main strokes legible at small sizes. Without hinting, a 10-pixel-tall ‘e’ on a Windows machine in 2024 reads as a smudge. With hinting, it reads as an ‘e’.
 
@@ -2380,7 +2367,7 @@ FontLab 8 ships both automatic and manual hinting controls. The auto-hinter hand
 
 The built-in preview uses Microsoft ClearType’s actual rendering pipeline, which is the closest you can get to seeing what a Windows user will see, short of running Windows. This matters because the FontLab editor on macOS otherwise renders fonts the way macOS renders them, and macOS is much more forgiving than Windows. A font that previews well on macOS may still need hinting work to survive a Windows render.
 
-## the trap of overlapping contours
+## The trap of overlapping contours
 
 A French designer recently posted a typical horror story: their font looked flawless in FontLab’s preview, but when they exported and tested it in Microsoft Word, white gaps appeared at the joints of the letters at small zoom levels. The culprit was overlapping contours.
 
@@ -2394,13 +2381,13 @@ The fix is to remove overlaps on export. FontLab does this non-destructively: th
 
 The auditing role is the right one for software. Visually, you can stare at a glyph for ten minutes and miss the redundant on-curve point that is making the rendering subtly off. FontAudit finds it in milliseconds and tells you exactly where it is.
 
-## the .glyphspackage opening
+## The .glyphspackage opening
 
 FontLab 8 supports the `.glyphspackage` format alongside its native FLP. The interesting thing about `.glyphspackage` is that it stores each glyph as a separate file inside a folder structure, which makes it Git-friendly. Two designers working on the same font can edit different glyphs in parallel and merge the changes through a normal pull request. This is mundane in software development; it is novel in font development, where for years the unit of version control was the entire font file.
 
 The implication is that font production starts to look like software production. Branches, pull requests, code review, CI pipelines that build the font and check it against regression tests — all of it becomes possible because the source format is finally decomposable.
 
-## the moral
+## The moral
 
 Type design is an exercise in engineering as much as in art. The drawing is the first half of the job. Surviving the brutal reality of the screen is the second half. Hinting, audit, and a clean export pipeline are not glamour features. They are the difference between a font that looks beautiful in your editor and a font that looks beautiful on a stranger’s laptop in 2024.
 
@@ -2432,11 +2419,11 @@ Spacing is what separates a font that exists from a font that reads. The FontLab
 
 Bad spacing is the single most common reason a technically competent font feels off. This episode is the cheapest hour you will spend improving every font you make from now on.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/manual/){ .fl-help-cta }
 
 Most readers never notice when typography is right. They only notice when reading feels like work. The features that decide which side of that line a font lands on are mostly the unglamorous ones — kerning, standard ligatures, contextual alternates — the parts that handle the friction the user never sees.
 
-## the features users never see
+## The features users never see
 
 OpenType features get sold on the showy ones: swashes, discretionary ligatures, alternate numerals, fancy stylistic sets. Those are the ones that show up in marketing copy and design-blog round-ups. The serious typographic work happens in the boring features.
 
@@ -2444,7 +2431,7 @@ OpenType features get sold on the showy ones: swashes, discretionary ligatures, 
 
 Type Network frames it well: standard ligatures are a “font superpower” precisely because they turn a raw glyph set into a text system that behaves intelligently. The user never thinks about the `fi` ligature. They think about how the paragraph reads.
 
-## kerning, the load-bearing feature
+## Kerning, the load-bearing feature
 
 Of all the OpenType features, kerning carries the most weight in user perception. A poorly kerned font reads as cheap, because the eye notices the gaps before it notices the letters. A well-kerned font reads as professional, because the eye doesn’t notice anything at all.
 
@@ -2452,7 +2439,7 @@ Modern kerning is class-based. Rather than kerning every individual pair (the V/
 
 FontLab 8’s kerning panel handles the class structure natively. You tag a glyph as belonging to a class, define the class once, kern the class once, and every member of the class — including the eight Eastern European accented variants of the base glyph — gets the kerning applied. This matters most for languages with heavy accent coverage, where kerning every pair manually is the opposite of feasible.
 
-## contextual alternates, the engine behind connected scripts
+## Contextual alternates, the engine behind connected scripts
 
 `calt` is the OpenType feature that decides which version of a glyph to substitute based on the surrounding context. Its native habitat is connected scripts — Arabic, Devanagari, cursive Latin, blackletter — where the entry stroke of one letter has to match the exit stroke of the previous one or the script falls apart visually.
 
@@ -2460,7 +2447,7 @@ Arabic is the demanding case. A single letter changes shape depending on whether
 
 FontLab 8 generates the substitution syntax automatically when glyphs are named with the right conventions. A small-cap glyph named `a.sc` ends up in the `smcp` feature without anybody writing the feature code by hand. A swash glyph named `A.swsh` ends up in the `swsh` feature. The naming conventions are the schema; the feature code is the compiled output.
 
-## the messy reality
+## The messy reality
 
 In practice, OpenType features do not always work as cleanly as the spec suggests. Discussion threads among type designers note that the OpenType specification *recommends* certain default behaviours but does not require them, and applications are free to ignore the recommendations. Firefox’s early OpenType support, in particular, made discretionary-ligature decisions that broke German words and Turkish dotted/dotless `i` distinctions because the engine ignored language-specific rules baked into the fonts.
 
@@ -2479,7 +2466,7 @@ For web designers engaging these features, the CSS surface is straightforward in
 
 The trick is that some browsers respect the high-level properties and some require the low-level tags; in production code, you write both, in that order. Browsers favour the more specific declaration, which means the `font-feature-settings` line wins where it matters.
 
-## the moral
+## The moral
 
 OpenType features are user experience for text. They are how a font behaves under pressure — long paragraphs, mixed scripts, accented characters, contextual letter combinations, language-specific rules. The features that decide whether the user has a good time are mostly the ones the user will never consciously notice. That is the point. Good UX, in any medium, is invisible until somebody removes it.
 
@@ -2491,7 +2478,7 @@ OpenType features are user experience for text. They are how a font behaves unde
 - [Kerning and OpenType features in Firefox 3 — Ralf Herrmann](https://opentype.info/blog/2008/06/14/kerning-and-opentype-features-in-firefox-3.html)
 - [Practical guide to alternate characters and OpenType features — Pangram Pangram](https://pangrampangram.com/blogs/journal/opentype-features)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/manual/){ .fl-help-cta }
 
 A font is not a static collection of drawings. It is a highly coordinated piece of software.
 
@@ -2512,7 +2499,7 @@ For web developers, engaging features at the lowest level still means `font-feat
 - [A practical guide to OpenType features — Pangram Pangram](https://pangrampangram.com/blogs/journal/opentype-features)
 - [OpenType feature tags — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/featuretags)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/){ .fl-help-cta }
 
 If you are still drawing every accented letter by hand, this is the episode that retires that habit. Anchors plus components mean you draw `a` and `acute` once, and FontLab assembles `aacute`, `acircumflex`, `agrave`, and the other 700-odd accented forms for you.
 
@@ -2553,7 +2540,7 @@ A width axis matters because somebody drew and checked the intermediate decision
 - [Thinking beyond the static — Type Network](https://typenetwork.com/articles/thinking-beyond-the-static)
 - [Variable fonts — web.dev](https://web.dev/articles/variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 Bananas is a casual brush face that is mostly an excuse to grin while you set it. Ronaldson Pro is a 19th-century revival that took years to draw and exists because Patrick Griffin would not let the original die. Both are Canada Type. Both came out of FontLab.
 
@@ -2578,9 +2565,9 @@ Ronaldson Pro is the case study. The original Ronaldson is a Philadelphia text f
 
 [Browse Canada Type →](https://canadatype.com/)
 
-A headline that thickens on hover. A paragraph that narrows on mobile without a second download. A single file that quietly contains thin, regular, bold, condensed, and everything between. That is variable fonts in practice.
+Watch a headline thicken on hover. A paragraph narrows on mobile without a second download. One file quietly holds thin, regular, bold, condensed, and every weight in between. This is how variable fonts work in practice.
 
-The idea landed in 2016. Instead of shipping eighteen separate files for one family, you ship one. The browser interpolates. CSS does the rest:
+We used to ship eighteen separate font files just to make a website look decent. It was a dark time. Now you ship one, and the browser handles the math. CSS does the rest:
 
 ```css
 @font-face {
@@ -2591,22 +2578,22 @@ The idea landed in 2016. Instead of shipping eighteen separate files for one fam
 }
 ```
 
-Then you write `font-variation-settings: 'wght' 700, 'wdth' 85;` and the text responds instantly. No flicker, no layout shift. Performance wins twice: smaller payload and smoother animation.
+You write `font-variation-settings: 'wght' 700, 'wdth' 85;` and the text responds instantly. There's no flicker. Layouts stay put. Performance wins twice because you get a smaller payload and smoother animation.
 
-External demos make it concrete. Google’s own Roboto Flex specimen shows the full range live. Monotype rebuilt FF Meta as a variable font; one file replaced a small library and cut page weight dramatically. CSS-Tricks and web.dev walk through the same pattern: declare the range once, vary it with custom properties or media queries, and the typography adapts to context — screen size, user preference, even ambient light if you wire it up.
+Real examples make this concrete. Google shows the full range live with their Roboto Flex specimen. Monotype rebuilt FF Meta as a variable font. That single file replaced a small library and cut page weight dramatically. You declare the range once. Then you vary it with custom properties or media queries. The typography adapts to screen size, user preference, or even ambient light if you feel like wiring that up.
 
-Designers building these fonts need control over axes, instances, and OpenType features before export. FontLab 8 gives exactly that: live preview across masters, automatic axis setup, and clean variable OpenType output that works in every modern browser and app. Match Moves propagates a node adjustment across all visible masters at once, which is the difference between meeting and missing a deadline on a serious family.
+Designers building these fonts need control over axes, instances, and OpenType features before export. FontLab 8 gives you exactly that. You get live previews across masters. Axis setup happens automatically. The output is clean variable OpenType that works in every modern browser and app. Match Moves propagates a node adjustment across all visible masters at once. That feature alone is often the difference between meeting and missing a deadline on a serious family.
 
-The quiet revolution is already here. Your next website can feel lighter and more alive because the type itself is alive.
+Your next website can feel lighter, simply because the type itself is alive.
 
 ## References
 
-- [Variable fonts on the web — web.dev](https://web.dev/articles/variable-fonts)
-- [Variable fonts — MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
-- [Variable fonts in real life — Evil Martians](https://evilmartians.com/chronicles/variable-fonts-in-real-life-how-to-use-and-love-them)
-- [An intro to variable fonts — Grilli Type](https://www.grillitype.com/blog/guides/introduction-variable-fonts)
+- [Variable fonts on the web, web.dev](https://web.dev/articles/variable-fonts)
+- [Variable fonts, MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
+- [Variable fonts in real life, Evil Martians](https://evilmartians.com/chronicles/variable-fonts-in-real-life-how-to-use-and-love-them)
+- [An intro to variable fonts, Grilli Type](https://www.grillitype.com/blog/guides/introduction-variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 Once your letterforms are drawn, the work shifts to spacing, quality control, and — if you’re ambitious — building a family. This post distills Dave Lawrence’s chapters on fitting and spacing, building italic variants, and planning a type family in FontLab 8.
 
@@ -2646,7 +2633,7 @@ The tutorials go much deeper on each topic. What’s here is the skeleton; the f
 
 ______________________________________________________________________
 
-Dave Lawrence’s full tutorial series is at [help.fontlab.com/fontlab/8/tutorials/calfonts/](https://help.fontlab.com/fontlab/8/tutorials/calfonts/).
+Dave Lawrence’s full tutorial series is at [help.fontlab.com/fontlab/8/tutorials/calfonts/](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/tutorials/calfonts/).
 
 *Previous: [Drawing calligraphic fonts in FontLab: setup and shapes](https://blog.fontlab.com/2024/09/23/calfonts-setup-shapes/index.md)*
 
@@ -2669,9 +2656,9 @@ A well-designed axis turns a typeface into a system. Done right, one file replac
 - [variablefonts.io — interactive axis explorer](https://variablefonts.io)
 - [Axis Praxis — live VF testing](https://axis-praxis.org)
 - [OpenType Font Variations overview — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
-- [Families and variation in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
+- [Families and variation in FontLab 8](https://blog.fontlab.com/2025/03/25/designing-variable-axes-well/fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-07-families-variation/index.md)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://blog.fontlab.com/2025/03/25/designing-variable-axes-well/fontlab/8/manual/Variations/index.md){ .fl-help-cta }
 
 Color fonts have stopped being a novelty and started being a deliverable — emoji, branded display faces, multi-layered display work. The FontLab TV color font episode covers the four formats you actually have to think about and which to ship for which target.
 
@@ -2717,7 +2704,7 @@ In practice, that means you can draw a Light and a Black, interpolate the in-bet
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 - [Migrating to variable fonts — Google Codelabs](https://codelabs.developers.google.com/migrating-variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 If you’ve read a comic in the last twenty years, you’ve read Blambot. Nate Piekos’s foundry has supplied the lettering fonts for an absurd share of the medium — the dialogue balloons, the SFX, the display titles. Five of his Blambot families sit in the public made-with-fontlab gallery, all drawn in FontLab 7.
 
@@ -2764,30 +2751,34 @@ The savings on bandwidth are nice. The control is the point.
 - [Very-able fonts — Underware](https://www.underware.nl/blog/2018/06/very-able-fonts-com/)
 - [Thinking beyond the static — Type Network](https://typenetwork.com/articles/thinking-beyond-the-static)
 - [Variable fonts on the web — web.dev](https://web.dev/articles/variable-fonts)
-- [Families and variation in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
+- [Families and variation in FontLab 8](https://blog.fontlab.com/2025/05/13/variable-fonts-were-never-about-file-size/fontlab/8/whats-new/whats-new-07-families-variation/index.md)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
-For five hundred years of printing, a bolder letter meant a new piece of cast lead. Digital typography kept that paradigm for decades. A family meant a folder of static files: Regular, Italic, Bold, Condensed.
+For five hundred years, making a letter bolder meant casting a new chunk of lead. Digital typography clung to this habit for decades. You wanted a bold italic, you bought a separate file.
 
-That changed in 2016 when Apple, Adobe, Google, and Microsoft ratified OpenType Font Variations as version 1.8 of the spec. By 2025 the variable font is no longer a gimmick; it is the architecture of responsive typography.
+Then came 2016. Apple, Adobe, Google, and Microsoft agreed on OpenType Font Variations. Suddenly, a whole type family could live inside a single file.
 
-A variable font compresses an entire family into one file by storing a default master design and a mathematically complex set of instructions for deforming it along continuous axes. The design space is multi-dimensional. If a font has a weight axis and a width axis, the designer defines four corner masters — Light Condensed, Light Wide, Black Condensed, Black Wide — and the renderer interpolates the maths to generate any point inside that square on the fly. A recent paper on arXiv even worked out a differentiable variable-font framework, allowing target glyphs to be approximated by unrelated variable fonts using PyTorch. The underlying maths is heavy.
+A variable font stores a default master design. It also packs a dense set of mathematical instructions for stretching and squishing that design along continuous axes. Think of it as a multi-dimensional space. Give a font a weight axis and a width axis, and you define four corners: Light Condensed, Light Wide, Black Condensed, and Black Wide. The renderer does the math to generate any point inside that square instantly.
 
-The practical benefit for UI design is straightforward. A web page used to load four font files for four weights. A variable font is one network request that can produce a semibold for a tablet, a heavy condensed cut for a narrow mobile screen, and a delicate wide cut for a desktop monitor.
+The math gets intense. Researchers recently built a differentiable framework using PyTorch to approximate target glyphs with unrelated variable fonts. You don't need to understand the calculus to appreciate the result.
 
-Building these files needs serious software. FontLab 8 handles variable production natively — merge a static Regular and a static Bold and FontLab establishes the axis automatically. But linear maths has limits. A letterform does not get bolder at a constant rate. Interpolating directly from hairline to ultra-black tends to produce middle weights that look anemic or muddy. The fix is intermediate masters: drop a corrected drawing at the 700 position and FontLab warps the interpolation path to hit that anchor. For glyph swaps that depend on axis position — a single-storey `g` past 850, say — FontLab writes the OpenType code through the `rvrn` feature.
+For UI design, the payoff is obvious. Web pages used to choke on four separate font files just to display a few weights. Now, one network request delivers a semibold for a tablet, a heavy condensed cut for a phone, and a delicate wide cut for a desktop monitor.
 
-Roboto Flex and IBM Plex Sans Variable show the destination. A single file becomes a token-based typography system, granting UX teams granular control without licensing a new font weight every time the brief changes.
+Building these files requires capable software. FontLab 8 handles variable production natively. Merge a static Regular with a static Bold, and FontLab sets up the axis automatically. But linear math has limits. Letters don't get bolder at a constant rate. If you interpolate straight from a hairline to an ultra-black, the middle weights usually look anemic or muddy.
+
+The solution is intermediate masters. Drop a corrected drawing at the 700 weight position. FontLab then warps the interpolation path to hit that exact anchor. Sometimes a glyph needs to change shape entirely, like switching to a single-storey `g` past weight 850. FontLab handles this by writing the OpenType code through the `rvrn` feature.
+
+Look at Roboto Flex or IBM Plex Sans Variable. A single file acts as a complete typography system. UX teams get granular control without needing to license a new font weight every time a client changes their mind.
 
 ## References
 
-- [Variable font — Wikipedia](https://en.wikipedia.org/wiki/Variable_font)
-- [OpenType Font Variations — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
-- [Differentiable variable fonts — arXiv](https://arxiv.org/html/2510.07638v2)
-- [Families and variation — FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
+- [Variable font, Wikipedia](https://en.wikipedia.org/wiki/Variable_font)
+- [OpenType Font Variations, Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
+- [Differentiable variable fonts, arXiv](https://arxiv.org/html/2510.07638v2)
+- [Families and variation, FontLab 8](https://blog.fontlab.com/2025/06/03/the-mathematics-of-variable-fonts/fontlab/8/whats-new/whats-new-07-families-variation/index.md)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 Design space is the part of variable font work that decides whether your font feels good or merely works. The FontLab TV design space episode is the conceptual foundation for everything you do with masters, axes, and instances.
 
@@ -2841,13 +2832,13 @@ Draw a regular `n`. Then draw a bold `n` from scratch — same height, same x-he
 
 Type spent five hundred years in black and white. Then mobile phones demanded emoji, and four large companies sat down separately and proposed four entirely incompatible ways to put color into a font. The decade since has been an awkward growing-up.
 
-## the four-way standoff
+## The four-way standoff
 
 In 2013, four proposals landed at the OpenType committee in roughly the same year. Apple offered `sbix`, which essentially shoved PNG images into the font at several sizes, one per emoji. Google offered `CBDT/CBLC`, which was another flavour of bitmap embedding, more compact, similarly raster. Microsoft offered `COLR/CPAL`, a clever lightweight idea — stack solid-colored vector layers, reuse the existing outline machinery, ship tiny files. Adobe and Mozilla offered SVG-in-OpenType: embed entire SVG documents per glyph, allow gradients, transforms, even animation, and demand a renderer with most of a browser’s graphics stack.
 
 None of these were silly. All of them solved different problems. Together they were a mess. A font developer who wanted the same emoji to render on iOS, Android, Windows, and the web had to export three formats and pray. Some renderers ignored the table you cared about and used the one you had not bothered with. Diagnosis was a hobby.
 
-## the bitmap problem
+## The bitmap problem
 
 `sbix` and `CBDT` shipped what Apple’s emoji needed: photographic-looking glyphs, fixed sizes, fast on mobile. The cost was that they did not scale. A 32-pixel emoji blown up to 256 pixels looked exactly like a 32-pixel emoji blown up to 256 pixels — pillowed and fuzzy. For emoji on a phone, fine. For a brand display font that might appear at any size, not fine.
 
@@ -2873,7 +2864,7 @@ FontLab 8 exports every format from a single source, by design. You build a glyp
 
 There is a charming detail in the early-2010s lore. Before the editors caught up, designers built color fonts by stacking several monochrome fonts on top of each other in InDesign, each colored differently with the type tool. It worked. It was the duct-tape years. We are out of those now.
 
-## from the archives
+## From the archives
 
 We have been writing about color fonts since the earliest days of these format wars. If you want to dive deeper into the history and mechanics, check out our older posts:
 
@@ -2889,9 +2880,9 @@ We have been writing about color fonts since the earliest days of these format w
 
 - [COLR table — Microsoft Typography](https://learn.microsoft.com/en-us/typography/opentype/spec/colr)
 - [SVG in OpenType — W3C Community](https://www.w3.org/community/svgopentype/)
-- [Color emoji v1 spec — Google](https://github.com/googlei18n/color-emoji)
+- Color emoji v1 spec — Google
 - [Convert TTF to CBDT/CBLC — TypeDrawers](https://typedrawers.com/discussion/2392/convert-a-ttf-to-cbdt-cblc-format-color-font)
-- [Color fonts in browsers — web.dev](https://web.dev/articles/color-fonts)
+- Color fonts in browsers — web.dev
 
 [Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
 
@@ -2916,7 +2907,7 @@ The composite picture is more useful than any single regional view. FontLab is a
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 - [Roboto Flex in design systems — wdnote](https://wdnote.tistory.com/197)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 [Graduate](https://etunni.github.io/Graduate-Variable-Font/) is the kind of variable font that makes the case for the format without having to argue. Slab to sans, light to black, all in one file. Eduardo Tunni drew it in FontLab.
 
@@ -2998,7 +2989,7 @@ A font that respects six scripts respects the readers of those scripts. The tool
 - [What’s new in FontLab 8 — formats](https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/)
 - [FontLab 8 review — The Endearing Designer](https://theendearingdesigner.com/fontlab-8-review/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 OpenType features are the part of font design where text becomes typography. The FontLab TV OpenType episode walks through the feature tags you will actually use, what they do at runtime, and how to write them without breaking anything else.
 
@@ -3027,7 +3018,7 @@ OpenType features are the part of font design where text becomes typography. The
 
 Almost every modern type design ships with at least a dozen OpenType features. Getting them right is what separates a “font” from a typography product.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-3-beyond-abc/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/tutorials/intro/8-days/day-3-beyond-abc/){ .fl-help-cta }
 
 Hangul looks deceptively simple to a Latin-trained eye. Twenty-four basic letters, written in tidy syllabic blocks. The reality is that those letters combine into more than eleven thousand pre-composed syllables, and getting them all to behave inside a single font is one of the harder jobs in modern type design.
 
@@ -3048,7 +3039,7 @@ The character set is large. The work is not impossible. The tools have caught up
 - [Variable components in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 - [The Type — typography podcast](https://www.thetype.com/typechat/feed/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 Italic is not roman tilted to the right. Slant your upright `a` and what you get is a tilted `a`, not an italic `a` — the structure is wrong, the rhythm is wrong, the connection points are wrong. Briem’s italic tutorial, lightly modernized, walks through what an italic actually is.
 
@@ -3105,26 +3096,28 @@ Reading these debates is one of the better ways to learn type design. The produc
 - [Alex John Lucas on FontLab vs RoboFont vs Glyphs](https://alexjohnlucas.com/type/software)
 - [Awesome typography — Jolg42](https://github.com/Jolg42/awesome-typography)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
-Vexy Lines converts raster images into scalable vector artwork. Drop in a photo, screenshot, or AI-generated graphic; choose a fill style; export as SVG or PDF. The underlying mechanism is signal processing: image brightness drives stroke thickness, so darker areas get heavier lines and lighter areas get finer ones.
+Drop a photo into Vexy Lines, and it hands you back a crisp vector drawing. It reads the brightness of your image and adjusts stroke thickness to match. Dark areas get heavy lines. Light areas get fine ones. It's simple math, but the results look like magic.
 
-Fill styles available at launch:
+You get six fill styles right out of the box:
 
-- **Linear** — parallel lines whose weight tracks the source image’s luminance
-- **Wave** — undulating lines, same brightness-to-weight mapping
-- **Halftone** — classic dot-based halftone pattern
-- **Trace** — follows edges in the source image rather than a fixed grid
-- **Text** — fills areas with letterforms, using variable font weight to encode brightness
-- **Handmade** — a looser, sketch-like stroke character
+- **Linear**: Parallel lines that swell and shrink with the shadows.
+- **Wave**: Wavy lines doing the exact same thing.
+- **Halftone**: The classic dot pattern from old comic books.
+- **Trace**: Follows the actual edges in your image instead of a rigid grid.
+- **Text**: Fills space with letters, shifting font weight to build the picture.
+- **Handmade**: A messy, sketched look for when perfection is boring.
 
-Output is organized with layers, groups, and masks, giving you control over which parts of the source image get which treatment. Strokes can sample colors from the source image, producing a chromatic result that echoes the original photograph’s palette. A mesh-wrapping option handles pattern continuity, and hidden-line removal conceals strokes on the far side of a shape.
+The app keeps everything tidy. Your output arrives neatly packed into layers, groups, and masks. You decide exactly which parts of your image get which treatment.
 
-The text fill mode deserves a note. Font weight is driven by the same signal-processing pipeline that controls line weight in the linear mode — the typographic texture encodes the image’s tonal structure. It works with variable fonts that have a weight axis, and the effect can be combined with linear or wave fills in layers.
+Want color? The strokes can pull hues straight from your source image. The result is a vibrant vector piece that perfectly matches your original photo. We also threw in mesh-wrapping to keep patterns flowing smoothly, plus hidden-line removal so strokes on the back of a shape stay out of sight.
 
-Vexy Lines is available as a free browser version and as paid desktop applications for macOS and Windows. The browser version has limited export options; the desktop versions export full-resolution SVG and PDF.
+That text fill mode is particularly fun. It uses the same logic that controls line thickness, but applies it to typography. The letters themselves get bolder in the dark spots and lighter in the bright spots. Feed it a variable font with a weight axis, and watch the text build your image. You can even stack it with linear or wave fills if you're feeling adventurous.
 
-More at [vexy.art](https://vexy.art/).
+Try Vexy Lines right now in your browser for free. If you need full-resolution SVG and PDF exports, grab the paid desktop app for macOS or Windows.
+
+Go play with it at [vexy.art](https://vexy.art/).
 
 The most difficult part of drawing a typeface is not the black ink. It is the white space.
 
@@ -3212,7 +3205,7 @@ Italic capitals have less leeway. They are usually slanted versions of the roman
 
 Set the italic next to the roman at text size — 9 to 11 point — and read a paragraph. The italic should look like a sibling of the roman, not a tilted twin. If the slant feels like a transformation rather than a design, something in the structure is still wrong.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/){ .fl-help-cta }
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 The boundary between a letterform and an illustration is a human invention. To a computer, both are coordinates plotted on a grid.
 
@@ -3233,7 +3226,7 @@ The connection back to FontLab and the typography world is the Text fill mode, w
 - [Vexy Lines on AlternativeTo](https://alternativeto.net/software/vexy-lines/about/)
 - [Vexy Lines on MacUpdate](https://vexy-lines.macupdate.com/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 Gunnlaugur SE Briem has spent a career arguing that you cannot draw a serious typeface without understanding how a broad-edged pen makes letters. Briem’s tutorial on brushes is the cleanest version of that argument you will find. (Note: Unlike other FontLab TV episodes like [this playlist](https://www.youtube.com/playlist?list=PLj-8PzlEWrCF8M0bmHFhI0BfVk4sRCm1b), there is no video for this tutorial—it is purely a written masterclass.)
 
@@ -3269,12 +3262,12 @@ If you are chasing the very specific “screen-printed band poster found under a
 
 ## References
 
-- [Vexy Lines — Halftone fills](https://help.vexy.art/docs/halftone-fills)
+- Vexy Lines — Halftone fills
 - [Halftone shading — Astute Graphics](https://astutegraphics.com/learn/10minskills/halftone-shading-a-quick-how-to)
-- [Halftone effect in Illustrator — Tuts+](https://design.tutsplus.com/tutorials/using-the-blend-tool-to-create-a-halftone-effect-portrait-in-adobe-illustrator--vector-910)
+- Halftone effect in Illustrator — Tuts+
 - [Vexy Lines](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 Vexy Lines is not a font tool. It is a vector generator that happens to play unusually well with type-design tools.
 
@@ -3292,10 +3285,10 @@ The pipeline is short. The amount of fun you can have with it is not.
 
 - [Vexy Lines — overview](https://vexy.art/lines/)
 - [Vexy Lines knowledge base](https://help.vexy.art/)
-- [FontLab 8 Sketchboard](https://help.fontlab.com/fontlab/8/whats-new/whats-new-08-sketchboard/)
+- FontLab 8 Sketchboard
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 Engraving is a useful lie. A hedcut looks old, sober, authoritative, and a little expensive — even when it was made yesterday.
 
@@ -3316,7 +3309,7 @@ If a vector recreation looks indistinguishable from the photograph, the maths ha
 - [A crash course in halftones — Screenprinting.com](https://www.screenprinting.com/blogs/news/a-crash-course-in-halftones-for-screen-printing)
 - [Vexy Lines — official](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 FontLab TV has published a 50-hour video course on variable font design, organized into 25 playlists. It runs from absolute fundamentals — coordinates, contours, metrics — through production, hinting, export, and font business basics.
 
@@ -3359,7 +3352,7 @@ Algorithms make better paintbrushes than people give them credit for, when they 
 - [Vexy Lines on AlternativeTo](https://alternativeto.net/software/vexy-lines/about/)
 - [Halftone shading — Astute Graphics](https://astutegraphics.com/learn/10minskills/halftone-shading-a-quick-how-to)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)
 
 The first letter is the hardest. The FontLab TV glyph construction episode is a calm, deliberate walkthrough of drawing one letter — `n` — from a blank glyph cell to a finished, point-clean contour you can build a font around.
 
@@ -3381,7 +3374,7 @@ The first letter is the hardest. The FontLab TV glyph construction episode is a 
 
 Every glyph after the first is a variation on a structure you set up at the start. This episode is the patient version of “draw one letter properly” — and it pays off across the entire font.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/){ .fl-help-cta }
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 [Acqua Aldina](https://yurigordon.com/) is a variable serif drawn by hand. [Baker Street 221B](https://yurigordon.com/en/shop/fonts/baker-street-221b-mr-holmes) is a three-font Sherlockian set with a font for the detective, the doctor, and the housekeeper. Yuri Gordon’s catalogue does not pretend to fit one mood, and he’s open about why FontLab works for the spread.
 
@@ -3430,7 +3423,7 @@ The future the multilingual tutorials describe is already here. The tools just m
 - [Variable fonts — MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
 - [Vexy Lines](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://blog.fontlab.com/2026/03/10/variable-fonts-in-motion-and-ui/fontlab/8/manual/Variations/index.md){ .fl-help-cta }
 
 A closer look at the effects in Vexy Lines: halftone and dithering, stipple hedcuts, contour-following flowlines, multicolor screenprint separations, and variable-font text fills. Export covers SVG, PDF, EPS, PNG, and JPG.
 
@@ -3460,7 +3453,7 @@ Typical uses: social-media graphics, vintage poster design, tattoo artwork, hedc
 
 Platform: macOS and Windows, with a free browser version for evaluation. More at [vexy.art](https://vexy.art/).
 
-[Scannerlicker](https://fonts.scannerlicker.net/) is Fábio Duarte Martins’s foundry, and his testimonial is one of the few that actually names the FontLab features doing the work. It is, accidentally, a short manual on what to learn first.
+Scannerlicker is Fábio Duarte Martins’s foundry, and his testimonial is one of the few that actually names the FontLab features doing the work. It is, accidentally, a short manual on what to learn first.
 
 Most testimonials are vibes. Martins’s reads like a release-notes annotation, which is what makes it useful. He runs Scannerlicker out of Portugal, builds variable fonts, and writes about the editor the way somebody writes about a daily driver they have actually opened.
 
@@ -3474,7 +3467,7 @@ His full statement on FontLab 8:
 >
 > FontLab 8 is the juiciest release of FontLab. And hey, it’s running flawlessly on my Linux machine too!
 
-— Fábio Duarte Martins, [Scannerlicker](https://fonts.scannerlicker.net/)
+— Fábio Duarte Martins, Scannerlicker
 
 The phrase “from design to engineering” is the one to keep. Modern variable font work is not just drawing — it’s also a non-trivial engineering job, with conditional substitutions, design-space configuration, OpenType feature compilation, and binary table editing. The traditional split between “designer who draws” and “engineer who packages” is exactly what the modern editor has to collapse.
 
@@ -3482,13 +3475,13 @@ Martins’s bread-and-butter pair is **expressions and tags.** Tags let you labe
 
 The Linux remark is not throwaway. FontLab ships native binaries for macOS, Windows, and — yes — Linux. Most of the working type-design world is on the first two; the people who are on Linux either run a one-person foundry or work inside a larger pipeline where Linux is the only choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece of cross-platform engineering for an industry that mostly assumes Mac.
 
-The Scannerlicker catalogue at [fonts.scannerlicker.net](https://fonts.scannerlicker.net/) is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
+The Scannerlicker catalogue at fonts.scannerlicker.net is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
 
 ## More from Fábio Duarte Martins
 
-- [Scannerlicker catalogue](https://fonts.scannerlicker.net/) — variable fonts and retail families
+- Scannerlicker catalogue — variable fonts and retail families
 
-[Browse Scannerlicker →](https://fonts.scannerlicker.net/)
+Browse Scannerlicker →{ .fl-help-cta }
 
 Nothing gets old faster than a font format — until a client opens a twenty-year-old file and suddenly it is everybody’s problem again.
 
@@ -3506,10 +3499,10 @@ The fonts in those folders are not dead. They are just waiting for someone to mo
 
 - [The end of Type 1 — Type Network](https://typenetwork.com/articles/the-end-of-type-1)
 - [Adobe ending Type 1 support — CreativePro](https://creativepro.com/adobe-is-ending-support-for-type-1-fonts/)
-- [PostScript Type 1 fonts: end of support — Adobe](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html)
+- PostScript Type 1 fonts: end of support — Adobe
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }
 
 Ligatures, small caps, script behavior, and feature tags are not extras. They are the quiet parts that keep text readable. Good typography works without announcing itself. OpenType’s layout model gives fonts the logic for substitution and positioning, so contextual alternates and script-specific forms happen automatically when they should.
 

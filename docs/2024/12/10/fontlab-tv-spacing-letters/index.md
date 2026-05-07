@@ -16,4 +16,4 @@ Spacing is what separates a font that exists from a font that reads. The FontLab
 
 Bad spacing is the single most common reason a technically competent font feels off. This episode is the cheapest hour you will spend improving every font you make from now on.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/manual/){ .fl-help-cta }

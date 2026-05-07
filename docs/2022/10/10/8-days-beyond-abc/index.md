@@ -34,7 +34,7 @@ Move the “\_top” anchor in “acutecomb”, and the accent shifts in every a
 
 ## Further reading
 
-- [On legibility: in typography and type design](https://learn.scannerlicker.net/2014/11/14/on-legibility-in-typography-and-type-design/)
+- On legibility: in typography and type design
 
 ______________________________________________________________________
 

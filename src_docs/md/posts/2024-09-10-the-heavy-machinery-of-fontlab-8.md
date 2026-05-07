@@ -18,7 +18,7 @@ the truth.
 
 ![Power Nudge in the FontLab 8 toolbox](/media/the-heavy-machinery-of-fontlab-8/fl8-head-03-toolbox-powernudge.png)
 
-## a font is not a vector drawing
+## A font is not a vector drawing
 
 The standard vector drawing program treats paths as rigid wireframes.
 Move a node, and only that node moves.
@@ -77,7 +77,7 @@ a deadline and a missed deadline.
 It is not a glamour feature.
 It is heavy machinery for heavy work.
 
-## the small print: still a system
+## The small print: still a system
 
 The reason FontLab 8 can do this is the same reason FontLab Studio 5 could not.
 FL5 was a legendary tool, but its architecture treated each master’s glyph as an
@@ -93,7 +93,7 @@ integrated rather than scripted features.
 It is also what enables FontLab’s variable-font workflow to scale to families with five
 or six axes, where the manual approach would be a non-starter.
 
-## the moral
+## The moral
 
 Old software is like an old house — eventually you have to take it down to the studs
 because the plumbing cannot handle modern water pressure.

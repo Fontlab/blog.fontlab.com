@@ -26,9 +26,9 @@ He drew them in FontLab 7 and FontLab 8. Asked about the experience, he keeps it
 > Much easier than it sounds to get started with type design.
 > Much harder to finish what you started.
 > But you can do it in FontLab 8.
->
+> 
 > A very friendly interface for such a complex working tool like FontLab 8.
->
+> 
 > A little bit of skills in working with a curve, a couple of days reading the manual,
 > several months of sleepless nights at FontLab 8, some tears and your first typeface is
 > done. You are gorgeous!

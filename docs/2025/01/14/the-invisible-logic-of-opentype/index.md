@@ -17,4 +17,4 @@ For web developers, engaging features at the lowest level still means `font-feat
 - [A practical guide to OpenType features — Pangram Pangram](https://pangrampangram.com/blogs/journal/opentype-features)
 - [OpenType feature tags — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/featuretags)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/){ .fl-help-cta }

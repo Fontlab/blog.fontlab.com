@@ -1,6 +1,6 @@
 Most readers never notice when typography is right. They only notice when reading feels like work. The features that decide which side of that line a font lands on are mostly the unglamorous ones — kerning, standard ligatures, contextual alternates — the parts that handle the friction the user never sees.
 
-## the features users never see
+## The features users never see
 
 OpenType features get sold on the showy ones: swashes, discretionary ligatures, alternate numerals, fancy stylistic sets. Those are the ones that show up in marketing copy and design-blog round-ups. The serious typographic work happens in the boring features.
 
@@ -8,7 +8,7 @@ OpenType features get sold on the showy ones: swashes, discretionary ligatures, 
 
 Type Network frames it well: standard ligatures are a “font superpower” precisely because they turn a raw glyph set into a text system that behaves intelligently. The user never thinks about the `fi` ligature. They think about how the paragraph reads.
 
-## kerning, the load-bearing feature
+## Kerning, the load-bearing feature
 
 Of all the OpenType features, kerning carries the most weight in user perception. A poorly kerned font reads as cheap, because the eye notices the gaps before it notices the letters. A well-kerned font reads as professional, because the eye doesn’t notice anything at all.
 
@@ -16,7 +16,7 @@ Modern kerning is class-based. Rather than kerning every individual pair (the V/
 
 FontLab 8’s kerning panel handles the class structure natively. You tag a glyph as belonging to a class, define the class once, kern the class once, and every member of the class — including the eight Eastern European accented variants of the base glyph — gets the kerning applied. This matters most for languages with heavy accent coverage, where kerning every pair manually is the opposite of feasible.
 
-## contextual alternates, the engine behind connected scripts
+## Contextual alternates, the engine behind connected scripts
 
 `calt` is the OpenType feature that decides which version of a glyph to substitute based on the surrounding context. Its native habitat is connected scripts — Arabic, Devanagari, cursive Latin, blackletter — where the entry stroke of one letter has to match the exit stroke of the previous one or the script falls apart visually.
 
@@ -24,7 +24,7 @@ Arabic is the demanding case. A single letter changes shape depending on whether
 
 FontLab 8 generates the substitution syntax automatically when glyphs are named with the right conventions. A small-cap glyph named `a.sc` ends up in the `smcp` feature without anybody writing the feature code by hand. A swash glyph named `A.swsh` ends up in the `swsh` feature. The naming conventions are the schema; the feature code is the compiled output.
 
-## the messy reality
+## The messy reality
 
 In practice, OpenType features do not always work as cleanly as the spec suggests. Discussion threads among type designers note that the OpenType specification *recommends* certain default behaviours but does not require them, and applications are free to ignore the recommendations. Firefox’s early OpenType support, in particular, made discretionary-ligature decisions that broke German words and Turkish dotted/dotless `i` distinctions because the engine ignored language-specific rules baked into the fonts.
 
@@ -43,7 +43,7 @@ For web designers engaging these features, the CSS surface is straightforward in
 
 The trick is that some browsers respect the high-level properties and some require the low-level tags; in production code, you write both, in that order. Browsers favour the more specific declaration, which means the `font-feature-settings` line wins where it matters.
 
-## the moral
+## The moral
 
 OpenType features are user experience for text. They are how a font behaves under pressure — long paragraphs, mixed scripts, accented characters, contextual letter combinations, language-specific rules. The features that decide whether the user has a good time are mostly the ones the user will never consciously notice. That is the point. Good UX, in any medium, is invisible until somebody removes it.
 
@@ -55,4 +55,4 @@ OpenType features are user experience for text. They are how a font behaves unde
 - [Kerning and OpenType features in Firefox 3 — Ralf Herrmann](https://opentype.info/blog/2008/06/14/kerning-and-opentype-features-in-firefox-3.html)
 - [Practical guide to alternate characters and OpenType features — Pangram Pangram](https://pangrampangram.com/blogs/journal/opentype-features)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/manual/){ .fl-help-cta }

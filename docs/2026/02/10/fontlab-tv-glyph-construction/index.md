@@ -18,4 +18,4 @@ The first letter is the hardest. The FontLab TV glyph construction episode is a 
 
 Every glyph after the first is a variation on a structure you set up at the start. This episode is the patient version of “draw one letter properly” — and it pays off across the entire font.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/){ .fl-help-cta }
+Read more on help.fontlab.com →{ .fl-help-cta }

@@ -37,11 +37,11 @@ Retina-ready font editor.
 
 If you’ve been hesitant about upgrading — do it now.
 
-- [From FontLab Studio 5](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=137&Itemid=221)
+- From FontLab Studio 5
   for **$199**
-- [From Fontographer 5](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=139&Itemid=222)
+- From Fontographer 5
   for **$229**
-- [From TypeTool 3](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=140&Itemid=223)
+- From TypeTool 3
   for **$415**
 
 ## 32-bit apps no longer run natively on macOS Catalina
@@ -96,7 +96,7 @@ ways to keep using FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3
    7, or XP as the guest.
    Contact us to cross-grade your Mac license to a Windows license.
 
-4. **[Upgrade to FontLab 7](https://store.fontlab.com/index.php?option=com_mijoshop&view=category&path=54)**
+4. **Upgrade to FontLab 7**
    — the clean break.
 
 ## CrossOver Mac 19

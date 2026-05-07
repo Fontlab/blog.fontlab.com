@@ -57,4 +57,5 @@ Anything else is a transform.
 - [Thinking beyond the static — Type Network](https://typenetwork.com/articles/thinking-beyond-the-static)
 - [Variable fonts — web.dev](https://web.dev/articles/variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Variations/){ .fl-help-cta }
+Read more on help.fontlab.com →{
+.fl-help-cta }

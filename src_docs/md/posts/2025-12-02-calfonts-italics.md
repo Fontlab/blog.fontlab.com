@@ -75,5 +75,5 @@ The italic should look like a sibling of the roman, not a tilted twin.
 If the slant feels like a transformation rather than a design, something in the
 structure is still wrong.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/6.-italics/6a-intro-to-italics/){
+Read more on help.fontlab.com →{
 .fl-help-cta }

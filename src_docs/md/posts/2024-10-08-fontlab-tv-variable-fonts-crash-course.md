@@ -42,5 +42,5 @@ Variable fonts are not exotic anymore — they are the default delivery format f
 new releases. The crash course is the fastest way from “I have static masters” to “I am
 shipping a VF that browsers handle correctly.”
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Variations/fontlab/8/manual/){
+[Read more on help.fontlab.com →](fontlab/8/manual/){
 .fl-help-cta }

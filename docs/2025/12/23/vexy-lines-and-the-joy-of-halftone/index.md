@@ -14,9 +14,9 @@ If you are chasing the very specific “screen-printed band poster found under a
 
 ## References
 
-- [Vexy Lines — Halftone fills](https://help.vexy.art/docs/halftone-fills)
+- Vexy Lines — Halftone fills
 - [Halftone shading — Astute Graphics](https://astutegraphics.com/learn/10minskills/halftone-shading-a-quick-how-to)
-- [Halftone effect in Illustrator — Tuts+](https://design.tutsplus.com/tutorials/using-the-blend-tool-to-create-a-halftone-effect-portrait-in-adobe-illustrator--vector-910)
+- Halftone effect in Illustrator — Tuts+
 - [Vexy Lines](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)

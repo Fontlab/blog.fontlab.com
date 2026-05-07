@@ -1,12 +1,12 @@
 Type spent five hundred years in black and white. Then mobile phones demanded emoji, and four large companies sat down separately and proposed four entirely incompatible ways to put color into a font. The decade since has been an awkward growing-up.
 
-## the four-way standoff
+## The four-way standoff
 
 In 2013, four proposals landed at the OpenType committee in roughly the same year. Apple offered `sbix`, which essentially shoved PNG images into the font at several sizes, one per emoji. Google offered `CBDT/CBLC`, which was another flavour of bitmap embedding, more compact, similarly raster. Microsoft offered `COLR/CPAL`, a clever lightweight idea — stack solid-colored vector layers, reuse the existing outline machinery, ship tiny files. Adobe and Mozilla offered SVG-in-OpenType: embed entire SVG documents per glyph, allow gradients, transforms, even animation, and demand a renderer with most of a browser’s graphics stack.
 
 None of these were silly. All of them solved different problems. Together they were a mess. A font developer who wanted the same emoji to render on iOS, Android, Windows, and the web had to export three formats and pray. Some renderers ignored the table you cared about and used the one you had not bothered with. Diagnosis was a hobby.
 
-## the bitmap problem
+## The bitmap problem
 
 `sbix` and `CBDT` shipped what Apple’s emoji needed: photographic-looking glyphs, fixed sizes, fast on mobile. The cost was that they did not scale. A 32-pixel emoji blown up to 256 pixels looked exactly like a 32-pixel emoji blown up to 256 pixels — pillowed and fuzzy. For emoji on a phone, fine. For a brand display font that might appear at any size, not fine.
 
@@ -32,7 +32,7 @@ FontLab 8 exports every format from a single source, by design. You build a glyp
 
 There is a charming detail in the early-2010s lore. Before the editors caught up, designers built color fonts by stacking several monochrome fonts on top of each other in InDesign, each colored differently with the type tool. It worked. It was the duct-tape years. We are out of those now.
 
-## from the archives
+## From the archives
 
 We have been writing about color fonts since the earliest days of these format wars. If you want to dive deeper into the history and mechanics, check out our older posts:
 
@@ -48,8 +48,8 @@ We have been writing about color fonts since the earliest days of these format w
 
 - [COLR table — Microsoft Typography](https://learn.microsoft.com/en-us/typography/opentype/spec/colr)
 - [SVG in OpenType — W3C Community](https://www.w3.org/community/svgopentype/)
-- [Color emoji v1 spec — Google](https://github.com/googlei18n/color-emoji)
+- Color emoji v1 spec — Google
 - [Convert TTF to CBDT/CBLC — TypeDrawers](https://typedrawers.com/discussion/2392/convert-a-ttf-to-cbdt-cblc-format-color-font)
-- [Color fonts in browsers — web.dev](https://web.dev/articles/color-fonts)
+- Color fonts in browsers — web.dev
 
 [Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

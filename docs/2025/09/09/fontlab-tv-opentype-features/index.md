@@ -25,4 +25,4 @@ OpenType features are the part of font design where text becomes typography. The
 
 Almost every modern type design ships with at least a dozen OpenType features. Getting them right is what separates a “font” from a typography product.
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-3-beyond-abc/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/OpenType-Features/fontlab/8/tutorials/intro/8-days/day-3-beyond-abc/){ .fl-help-cta }

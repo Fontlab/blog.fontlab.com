@@ -18,7 +18,7 @@ dread.
 
 ![TypeRig running inside FontLab 8](/media/scripting-the-mundane-python-fontlab/fl8-head-12-typerig.png)
 
-## the boring 90%
+## The boring 90%
 
 Open any serious foundry’s production timeline and the visible part — drawing the
 lowercase, agreeing on the bowl of the ‘a’ — is maybe ten percent of the work.
@@ -67,7 +67,7 @@ Twelve lines.
 The kind of work that used to consume a Tuesday afternoon now runs in three
 seconds and produces a log.
 
-## post-export hooks
+## Post-export hooks
 
 FontLab 8.3 introduced the ability to run a Python script after the font has finished
 compiling. The script gets the path to the exported file and can do whatever it likes:
@@ -80,7 +80,7 @@ The boundary between the type designer’s craft and the production engineer’s
 starts to dissolve. The output of the editor becomes the input of a CI/CD process, with
 the script as the bridge.
 
-## the rule of five
+## The rule of five
 
 The rule of thumb in any craft that involves a computer: if you find yourself doing the
 exact same sequence of clicks five times in a row, write a script.
@@ -95,7 +95,7 @@ The economics are the same; the only difference is who maintains the script libr
 The aesthetic of FontLab’s scripting environment is to make that library small,
 readable, and easy to keep.
 
-## the moral
+## The moral
 
 The goal of Python in a font editor is to eliminate clicking.
 The clicks that remain are the ones where a human aesthetic decision needs to happen.

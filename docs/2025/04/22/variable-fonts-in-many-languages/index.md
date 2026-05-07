@@ -15,4 +15,4 @@ In practice, that means you can draw a Light and a Black, interpolate the in-bet
 - [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
 - [Migrating to variable fonts — Google Codelabs](https://codelabs.developers.google.com/migrating-variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }

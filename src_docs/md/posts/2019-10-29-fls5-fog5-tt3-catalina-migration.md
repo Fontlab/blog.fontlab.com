@@ -178,7 +178,7 @@ Additional guides for Parallels Desktop:
 - [https://www.parallels.com/blogs/try-macos-mojave-parallels-desktop/](https://www.parallels.com/blogs/try-macos-mojave-parallels-desktop/)
 - [https://www.geekrar.com/install-macos-mojave-on-parallels-desktop/](https://www.geekrar.com/install-macos-mojave-on-parallels-desktop/)
 - [https://www.parallels.com/blogs/older-versions-mac-os-x-with-macos-sierra/](https://www.parallels.com/blogs/older-versions-mac-os-x-with-macos-sierra/)
-- [https://www.howtogeek.com/364272/how-to-run-macos-mojave-in-parallels-for-free/](https://www.howtogeek.com/364272/how-to-run-macos-mojave-in-parallels-for-free/)
+- 
 
 ### Installing guest macOS in VMWare Fusion
 
@@ -187,7 +187,7 @@ Additional guides for Parallels Desktop:
 
 ### Installing guest macOS in VirtualBox
 
-- [https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/](https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/)
+- 
 - [https://www.saintlad.com/install-macos-sierra-in-virtualbox-on-windows-10/](https://www.saintlad.com/install-macos-sierra-in-virtualbox-on-windows-10/)
 - [https://medium.com/@twister.mr/installing-macos-to-virtualbox-1fcc5cf22801](https://medium.com/@twister.mr/installing-macos-to-virtualbox-1fcc5cf22801)
 - [https://www.maketecheasier.com/install-macos-virtualbox/](https://www.maketecheasier.com/install-macos-virtualbox/)

@@ -60,4 +60,4 @@ The arguments mature.
 - [Alex John Lucas on FontLab vs RoboFont vs Glyphs](https://alexjohnlucas.com/type/software)
 - [Awesome typography — Jolg42](https://github.com/Jolg42/awesome-typography)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

@@ -53,4 +53,5 @@ The tools just make getting there a little less heroic.
 - [Variable fonts — MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
 - [Vexy Lines](https://vexy.art/lines/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Variations/fontlab/8/manual/Variations/){ .fl-help-cta }
+[Read more on help.fontlab.com →](fontlab/8/manual/Variations/){
+.fl-help-cta }

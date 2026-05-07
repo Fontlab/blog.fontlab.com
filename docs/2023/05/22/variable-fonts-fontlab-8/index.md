@@ -38,4 +38,4 @@ Variable fonts can swap glyphs at axis boundaries — switching to a different �
 
 ______________________________________________________________________
 
-Full documentation is in the [FontLab 8 What’s New: Families & variation](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/).
+Full documentation is in the [FontLab 8 What’s New: Families & variation](https://blog.fontlab.com/2023/05/22/variable-fonts-fontlab-8/fontlab/8/whats-new/whats-new-07-families-variation/index.md).

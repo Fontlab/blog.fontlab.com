@@ -7,55 +7,55 @@ date:
   created: 2025-06-03
 slug: the-mathematics-of-variable-fonts
 ---
-For five hundred years of printing, a bolder letter meant a new piece of cast lead.
-Digital typography kept that paradigm for decades.
-A family meant a folder of static files: Regular, Italic, Bold, Condensed.
+For five hundred years, making a letter bolder meant casting a new chunk of lead.
+Digital typography clung to this habit for decades.
+You wanted a bold italic, you bought a separate file.
 
 <!-- more -->
 
 <!-- image TBD -->
 
-That changed in 2016 when Apple, Adobe, Google, and Microsoft ratified OpenType Font
-Variations as version 1.8 of the spec.
-By 2025 the variable font is no longer a gimmick; it is the architecture of responsive
-typography.
+Then came 2016.
+Apple, Adobe, Google, and Microsoft agreed on OpenType Font Variations.
+Suddenly, a whole type family could live inside a single file.
 
-A variable font compresses an entire family into one file by storing a default master
-design and a mathematically complex set of instructions for deforming it along
-continuous axes. The design space is multi-dimensional.
-If a font has a weight axis and a width axis, the designer defines four corner masters —
-Light Condensed, Light Wide, Black Condensed, Black Wide — and the renderer interpolates
-the maths to generate any point inside that square on the fly.
-A recent paper on arXiv even worked out a differentiable variable-font framework,
-allowing target glyphs to be approximated by unrelated variable fonts using PyTorch.
-The underlying maths is heavy.
+A variable font stores a default master design.
+It also packs a dense set of mathematical instructions for stretching and squishing that design along continuous axes.
+Think of it as a multi-dimensional space.
+Give a font a weight axis and a width axis, and you define four corners: Light Condensed, Light Wide, Black Condensed, and Black Wide.
+The renderer does the math to generate any point inside that square instantly.
 
-The practical benefit for UI design is straightforward.
-A web page used to load four font files for four weights.
-A variable font is one network request that can produce a semibold for a tablet, a heavy
-condensed cut for a narrow mobile screen, and a delicate wide cut for a desktop monitor.
+The math gets intense.
+Researchers recently built a differentiable framework using PyTorch to approximate target glyphs with unrelated variable fonts.
+You don't need to understand the calculus to appreciate the result.
 
-Building these files needs serious software.
-FontLab 8 handles variable production natively — merge a static Regular and a static
-Bold and FontLab establishes the axis automatically.
-But linear maths has limits.
-A letterform does not get bolder at a constant rate.
-Interpolating directly from hairline to ultra-black tends to produce middle weights that
-look anemic or muddy.
-The fix is intermediate masters: drop a corrected drawing at the 700 position and
-FontLab warps the interpolation path to hit that anchor.
-For glyph swaps that depend on axis position — a single-storey `g` past 850, say —
-FontLab writes the OpenType code through the `rvrn` feature.
+For UI design, the payoff is obvious.
+Web pages used to choke on four separate font files just to display a few weights.
+Now, one network request delivers a semibold for a tablet, a heavy condensed cut for a phone, and a delicate wide cut for a desktop monitor.
 
-Roboto Flex and IBM Plex Sans Variable show the destination.
-A single file becomes a token-based typography system, granting UX teams granular
-control without licensing a new font weight every time the brief changes.
+Building these files requires capable software.
+FontLab 8 handles variable production natively.
+Merge a static Regular with a static Bold, and FontLab sets up the axis automatically.
+But linear math has limits.
+Letters don't get bolder at a constant rate.
+If you interpolate straight from a hairline to an ultra-black, the middle weights usually look anemic or muddy.
+
+The solution is intermediate masters.
+Drop a corrected drawing at the 700 weight position.
+FontLab then warps the interpolation path to hit that exact anchor.
+Sometimes a glyph needs to change shape entirely, like switching to a single-storey `g` past weight 850.
+FontLab handles this by writing the OpenType code through the `rvrn` feature.
+
+Look at Roboto Flex or IBM Plex Sans Variable.
+A single file acts as a complete typography system.
+UX teams get granular control without needing to license a new font weight every time a client changes their mind.
 
 ## References
 
-- [Variable font — Wikipedia](https://en.wikipedia.org/wiki/Variable_font)
-- [OpenType Font Variations — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
-- [Differentiable variable fonts — arXiv](https://arxiv.org/html/2510.07638v2)
-- [Families and variation — FontLab 8](https://help.fontlab.com/fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-07-families-variation/)
+- [Variable font, Wikipedia](https://en.wikipedia.org/wiki/Variable_font)
+- [OpenType Font Variations, Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
+- [Differentiable variable fonts, arXiv](https://arxiv.org/html/2510.07638v2)
+- [Families and variation, FontLab 8](fontlab/8/whats-new/whats-new-07-families-variation/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Variations/){ .fl-help-cta }
+Read more on help.fontlab.com →{
+.fl-help-cta }

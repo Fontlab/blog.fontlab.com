@@ -16,16 +16,6 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/2012/10/15/typetool-3-fontographer-5-updates/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/2012/11/15/fontlab-studio-52-win-513-mac/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
         <loc>https://blog.fontlab.com/2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
@@ -637,11 +627,6 @@
     </url>
     <url>
         <loc>https://blog.fontlab.com/archive/2013/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/archive/2012/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>

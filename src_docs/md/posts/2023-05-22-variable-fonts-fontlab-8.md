@@ -93,4 +93,4 @@ a one-story ‘a’ at a specific weight threshold.
 * * *
 
 Full documentation is in the
-[FontLab 8 What’s New: Families & variation](https://help.fontlab.com/fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-07-families-variation/).
+[FontLab 8 What’s New: Families & variation](fontlab/8/whats-new/whats-new-07-families-variation/).

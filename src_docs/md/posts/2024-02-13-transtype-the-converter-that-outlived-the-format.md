@@ -48,7 +48,7 @@ keeps refusing to die.
 
 - [TransType 4 — overview](https://www.fontlab.com/font-converter/transtype/)
 - [How to convert PostScript fonts to OpenType — CreativePro](https://creativepro.com/how-to-convert-postscript-fonts-to-opentype-with-transtype/)
-- [Adobe ends Type 1 support — Adobe](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html)
+- Adobe ends Type 1 support — Adobe
 - [The end of Type 1 — Type Network](https://typenetwork.com/articles/the-end-of-type-1)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/transtype/4/){ .fl-help-cta }
+Read more on help.fontlab.com →{ .fl-help-cta }

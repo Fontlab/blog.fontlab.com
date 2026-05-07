@@ -15,6 +15,6 @@ The savings on bandwidth are nice. The control is the point.
 - [Very-able fonts — Underware](https://www.underware.nl/blog/2018/06/very-able-fonts-com/)
 - [Thinking beyond the static — Type Network](https://typenetwork.com/articles/thinking-beyond-the-static)
 - [Variable fonts on the web — web.dev](https://web.dev/articles/variable-fonts)
-- [Families and variation in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
+- [Families and variation in FontLab 8](https://blog.fontlab.com/2025/05/13/variable-fonts-were-never-about-file-size/fontlab/8/whats-new/whats-new-07-families-variation/index.md)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }

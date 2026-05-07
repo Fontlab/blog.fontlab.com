@@ -55,4 +55,4 @@ thing comes through.
 - [Vexy Lines on AlternativeTo](https://alternativeto.net/software/vexy-lines/about/)
 - [Vexy Lines on MacUpdate](https://vexy-lines.macupdate.com/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

@@ -59,6 +59,7 @@ precise control.
 - [variablefonts.io — interactive axis explorer](https://variablefonts.io)
 - [Axis Praxis — live VF testing](https://axis-praxis.org)
 - [OpenType Font Variations overview — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
-- [Families and variation in FontLab 8](https://help.fontlab.com/fontlab/8/manual/Variations/fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-07-families-variation/)
+- [Families and variation in FontLab 8](fontlab/8/manual/Variations/fontlab/8/whats-new/whats-new-07-families-variation/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/Variations/fontlab/8/manual/Variations/){ .fl-help-cta }
+[Read more on help.fontlab.com →](fontlab/8/manual/Variations/){
+.fl-help-cta }

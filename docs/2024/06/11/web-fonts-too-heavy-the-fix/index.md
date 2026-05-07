@@ -17,4 +17,4 @@ The result is measurable: fewer requests, smaller kilobytes, faster first paint.
 - [TransType — FontLab](https://www.fontlab.com/font-converter/transtype/)
 - [Variable fonts on the web — web.dev](https://web.dev/articles/variable-fonts)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)

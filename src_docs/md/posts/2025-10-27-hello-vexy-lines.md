@@ -6,44 +6,33 @@ date:
   created: 2025-10-27
 slug: hello-vexy-lines
 ---
-Vexy Lines converts raster images into scalable vector artwork.
-Drop in a photo, screenshot, or AI-generated graphic; choose a fill style; export as SVG
-or PDF. The underlying mechanism is signal processing: image brightness drives stroke
-thickness, so darker areas get heavier lines and lighter areas get finer ones.
+Drop a photo into Vexy Lines, and it hands you back a crisp vector drawing.
+It reads the brightness of your image and adjusts stroke thickness to match. Dark areas get heavy lines. Light areas get fine ones. It's simple math, but the results look like magic.
 
 <!-- more -->
 
 ![Vexy Lines application showing fill styles](../media/vexy-hello-hero.png)
 
-Fill styles available at launch:
+You get six fill styles right out of the box:
 
-- **Linear** — parallel lines whose weight tracks the source image’s luminance
-- **Wave** — undulating lines, same brightness-to-weight mapping
-- **Halftone** — classic dot-based halftone pattern
-- **Trace** — follows edges in the source image rather than a fixed grid
-- **Text** — fills areas with letterforms, using variable font weight to encode
-  brightness
-- **Handmade** — a looser, sketch-like stroke character
+* **Linear**: Parallel lines that swell and shrink with the shadows.
+* **Wave**: Wavy lines doing the exact same thing.
+* **Halftone**: The classic dot pattern from old comic books.
+* **Trace**: Follows the actual edges in your image instead of a rigid grid.
+* **Text**: Fills space with letters, shifting font weight to build the picture.
+* **Handmade**: A messy, sketched look for when perfection is boring.
 
 ![Vexy Lines fill style examples](../media/vexy-hello-fills.png)
 
-Output is organized with layers, groups, and masks, giving you control over which parts
-of the source image get which treatment.
-Strokes can sample colors from the source image, producing a chromatic result that
-echoes the original photograph’s palette.
-A mesh-wrapping option handles pattern continuity, and hidden-line removal conceals
-strokes on the far side of a shape.
+The app keeps everything tidy. Your output arrives neatly packed into layers, groups, and masks. You decide exactly which parts of your image get which treatment.
+
+Want color? The strokes can pull hues straight from your source image. The result is a vibrant vector piece that perfectly matches your original photo. We also threw in mesh-wrapping to keep patterns flowing smoothly, plus hidden-line removal so strokes on the back of a shape stay out of sight.
 
 ![Vexy Lines stroke sampling from source image colors](../media/vexy-hello-strokes.jpeg)
 
-The text fill mode deserves a note.
-Font weight is driven by the same signal-processing pipeline that controls line weight
-in the linear mode — the typographic texture encodes the image’s tonal structure.
-It works with variable fonts that have a weight axis, and the effect can be combined
-with linear or wave fills in layers.
+That text fill mode is particularly fun.
+It uses the same logic that controls line thickness, but applies it to typography. The letters themselves get bolder in the dark spots and lighter in the bright spots. Feed it a variable font with a weight axis, and watch the text build your image. You can even stack it with linear or wave fills if you're feeling adventurous.
 
-Vexy Lines is available as a free browser version and as paid desktop applications for
-macOS and Windows. The browser version has limited export options; the desktop versions
-export full-resolution SVG and PDF.
+Try Vexy Lines right now in your browser for free. If you need full-resolution SVG and PDF exports, grab the paid desktop app for macOS or Windows.
 
-More at [vexy.art](https://vexy.art/).
+Go play with it at [vexy.art](https://vexy.art/).

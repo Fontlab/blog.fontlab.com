@@ -1,4 +1,4 @@
-[Scannerlicker](https://fonts.scannerlicker.net/) is Fábio Duarte Martins’s foundry, and his testimonial is one of the few that actually names the FontLab features doing the work. It is, accidentally, a short manual on what to learn first.
+Scannerlicker is Fábio Duarte Martins’s foundry, and his testimonial is one of the few that actually names the FontLab features doing the work. It is, accidentally, a short manual on what to learn first.
 
 Most testimonials are vibes. Martins’s reads like a release-notes annotation, which is what makes it useful. He runs Scannerlicker out of Portugal, builds variable fonts, and writes about the editor the way somebody writes about a daily driver they have actually opened.
 
@@ -12,7 +12,7 @@ His full statement on FontLab 8:
 >
 > FontLab 8 is the juiciest release of FontLab. And hey, it’s running flawlessly on my Linux machine too!
 
-— Fábio Duarte Martins, [Scannerlicker](https://fonts.scannerlicker.net/)
+— Fábio Duarte Martins, Scannerlicker
 
 The phrase “from design to engineering” is the one to keep. Modern variable font work is not just drawing — it’s also a non-trivial engineering job, with conditional substitutions, design-space configuration, OpenType feature compilation, and binary table editing. The traditional split between “designer who draws” and “engineer who packages” is exactly what the modern editor has to collapse.
 
@@ -20,10 +20,10 @@ Martins’s bread-and-butter pair is **expressions and tags.** Tags let you labe
 
 The Linux remark is not throwaway. FontLab ships native binaries for macOS, Windows, and — yes — Linux. Most of the working type-design world is on the first two; the people who are on Linux either run a one-person foundry or work inside a larger pipeline where Linux is the only choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece of cross-platform engineering for an industry that mostly assumes Mac.
 
-The Scannerlicker catalogue at [fonts.scannerlicker.net](https://fonts.scannerlicker.net/) is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
+The Scannerlicker catalogue at fonts.scannerlicker.net is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
 
 ## More from Fábio Duarte Martins
 
-- [Scannerlicker catalogue](https://fonts.scannerlicker.net/) — variable fonts and retail families
+- Scannerlicker catalogue — variable fonts and retail families
 
-[Browse Scannerlicker →](https://fonts.scannerlicker.net/)
+Browse Scannerlicker →{ .fl-help-cta }

@@ -12,9 +12,9 @@ We spent over five years building [FontLab 7](http://www.fontlab.info). It combi
 
 If you’ve been hesitant about upgrading — do it now.
 
-- [From FontLab Studio 5](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=137&Itemid=221) for **$199**
-- [From Fontographer 5](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=139&Itemid=222) for **$229**
-- [From TypeTool 3](https://store.fontlab.com/index.php?option=com_mijoshop&route=product/product&path=54&product_id=140&Itemid=223) for **$415**
+- From FontLab Studio 5 for **$199**
+- From Fontographer 5 for **$229**
+- From TypeTool 3 for **$415**
 
 ## 32-bit apps no longer run natively on macOS Catalina
 
@@ -37,7 +37,7 @@ If you’ve upgraded to Catalina — or bought a new Mac with it pre-installed �
 1. **[Codeweavers CrossOver Mac](https://www.codeweavers.com/products/crossover-mac) 19 or newer** — a thin emulation layer that runs 32-bit Windows apps on Catalina without a full virtual machine. Contact us to cross-grade your Mac license to a Windows license, then install the Windows version of the app inside CrossOver. The whole setup — CrossOver, the Windows bottle, and the FontLab apps — takes under 1 GB of disk space.
 1. **Virtualization with an older guest macOS** — use Parallels Desktop, VMWare Fusion, or Oracle VirtualBox to run macOS 10.14 Mojave, 10.13 High Sierra, or 10.12 Sierra inside a virtual machine. Install your 32-bit apps there. They’ll run at near-native speed with full access to your files.
 1. **Virtualization with Windows** — same virtualization apps, but running Windows 10, 7, or XP as the guest. Contact us to cross-grade your Mac license to a Windows license.
-1. **[Upgrade to FontLab 7](https://store.fontlab.com/index.php?option=com_mijoshop&view=category&path=54)** — the clean break.
+1. **Upgrade to FontLab 7** — the clean break.
 
 ## CrossOver Mac 19
 

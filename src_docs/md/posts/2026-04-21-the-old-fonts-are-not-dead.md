@@ -54,7 +54,7 @@ They are just waiting for someone to move them carefully into the present.
 
 - [The end of Type 1 — Type Network](https://typenetwork.com/articles/the-end-of-type-1)
 - [Adobe ending Type 1 support — CreativePro](https://creativepro.com/adobe-is-ending-support-for-type-1-fonts/)
-- [PostScript Type 1 fonts: end of support — Adobe](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html)
+- PostScript Type 1 fonts: end of support — Adobe
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/transtype/4/){ .fl-help-cta }
+Read more on help.fontlab.com →{ .fl-help-cta }

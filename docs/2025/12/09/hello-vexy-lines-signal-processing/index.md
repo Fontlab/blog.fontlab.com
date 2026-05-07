@@ -17,4 +17,4 @@ The connection back to FontLab and the typography world is the Text fill mode, w
 - [Vexy Lines on AlternativeTo](https://alternativeto.net/software/vexy-lines/about/)
 - [Vexy Lines on MacUpdate](https://vexy-lines.macupdate.com/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/)

@@ -37,7 +37,7 @@ cleanly:
 > the most convenient set of shortcuts.
 > In FontLab, you can build a traditional serif font, verified to a micron, and just as
 > easily draw a crazy variable font by hand.
->
+> 
 > Some operations in type design normally are terribly tedious.
 > But FontLab makes them a pleasure, both aesthetically and motorically — for example
 > manual kerning. As a fan and beta tester, I can only shout: Vamos!

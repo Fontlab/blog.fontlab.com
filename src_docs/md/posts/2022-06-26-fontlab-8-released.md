@@ -69,7 +69,7 @@ Over 240 video tutorials are available on the FontLab YouTube channel, with play
 organized by topic and difficulty.
 
 The 8-day introductory tutorial series at
-[help.fontlab.com/fontlab/8/tutorials/intro/8-days/](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/)
+help.fontlab.com/fontlab/8/tutorials/intro/8-days/
 walks through the complete workflow from first glyph to exported font, covering drawing,
 spacing, kerning, OpenType features, and variable font basics in sequence.
 

@@ -6,7 +6,7 @@ With four competing color font proposals on the table in 2013, it is worth stepp
 
 In my view, each of the presented approaches has its advantages and disadvantages.
 
-### The Proposals
+### The proposals
 
 The APP proposal is great in so far that it’s actually already implemented. However, the interaction of the `sbix` and `glyf` tables as implemented in Apple OSes has its serious drawbacks (no fallback scenario). Also, it’s unknown whether the `sbix` table would ever make its way into the official ISO OFF or OpenType specs.
 
@@ -20,7 +20,7 @@ In principle, the MIC and GOO approaches could be easily “married together”:
 
 The SVG approach is very welcome, and, as I said, a kind of “2.0” thing. I believe the discussion on them should continue, even if implementations of those could be confined to only the web browser context. Also, Firefox actually already implements the SVG approach, which is very good news.
 
-### Color Palettes
+### Color palettes
 
 As for **color palettes**, I consider its addition to font formats (whether through a unified and further developed `CPAL` table or through several separate mechanisms) as **third element of typographic user control**.
 
@@ -30,7 +30,7 @@ The second mechanism was the addition of the `GSUB`/`GPOS` tables: user’s cont
 
 And now, we’re extending the user’s control by adding ability to specify multiple colors through the font’s color palette.
 
-### Relation to Existing Solutions
+### Relation to existing solutions
 
 When comparing the **outline color font format** proposals, I would use the following analogy:
 

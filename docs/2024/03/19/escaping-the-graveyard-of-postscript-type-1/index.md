@@ -13,8 +13,8 @@ If a font is worth keeping, it is worth converting carefully. The graveyard is f
 ## References
 
 - [Adobe ending Type 1 support — CreativePro](https://creativepro.com/adobe-is-ending-support-for-type-1-fonts/)
-- [PostScript Type 1 fonts: end of support — Adobe](https://helpx.adobe.com/fonts/kb/postscript-type-1-fonts-end-of-support.html)
+- PostScript Type 1 fonts: end of support — Adobe
 - [The end of Type 1 — Type Network](https://typenetwork.com/articles/the-end-of-type-1)
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/)
+Read more on help.fontlab.com →{ .fl-help-cta }

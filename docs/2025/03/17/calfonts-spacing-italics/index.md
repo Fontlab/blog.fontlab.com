@@ -36,6 +36,6 @@ The tutorials go much deeper on each topic. What’s here is the skeleton; the f
 
 ______________________________________________________________________
 
-Dave Lawrence’s full tutorial series is at [help.fontlab.com/fontlab/8/tutorials/calfonts/](https://help.fontlab.com/fontlab/8/tutorials/calfonts/).
+Dave Lawrence’s full tutorial series is at [help.fontlab.com/fontlab/8/tutorials/calfonts/](https://help.fontlab.com/fontlab/8/manual/Spacing/fontlab/8/tutorials/calfonts/).
 
 *Previous: [Drawing calligraphic fonts in FontLab: setup and shapes](https://blog.fontlab.com/2024/09/23/calfonts-setup-shapes/index.md)*

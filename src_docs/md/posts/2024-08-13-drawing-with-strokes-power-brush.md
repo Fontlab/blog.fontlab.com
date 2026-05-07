@@ -44,7 +44,7 @@ they are outlined. Tools that respect the skeleton respect the design.
 
 - [Drawing in FontLab — calligraphic basics](https://help.fontlab.com/fontlab/8/tutorials/calfonts/)
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
-- [Bezier curves and type design — scannerlicker](https://learn.scannerlicker.net/2014/04/16/bezier-curves-and-type-design-a-tutorial/)
+- Bezier curves and type design — scannerlicker
 - [What’s new in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

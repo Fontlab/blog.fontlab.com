@@ -57,4 +57,4 @@ The tools have caught up.
 - [Variable components in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 - [The Type — typography podcast](https://www.thetype.com/typechat/feed/)
 
-[Read more on help.fontlab.com →](https://help.fontlab.com/){ .fl-help-cta }
+[Read more on help.fontlab.com →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }
