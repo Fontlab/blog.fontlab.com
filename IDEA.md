@@ -1,5 +1,7 @@
 The paths are relative to the root of the git repo. 
 
+Ultrawork, read @CLAUDE.md and plan and implement this file. Work continuously, use 'uv', test, build locally, use browser, visually test, iterate. 
+
 ## Writable references
 
 Write easy build scripts and Github Actions modern as of May 2026. You may push to the repos, if you have write access. 
