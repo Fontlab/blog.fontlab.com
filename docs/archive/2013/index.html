@@ -1,0 +1,1491 @@
+<!-- this_file: mkdocs/mk-fontlab/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="News, technical writing, and updates from FontLab.">
+      
+      
+        <meta name="author" content="Fontlab Ltd.">
+      
+      
+        <link rel="canonical" href="https://blog.fontlab.com/archive/2013/">
+      
+      
+        <link rel="prev" href="../2018/">
+      
+      
+      
+        
+      
+      
+      
+      
+        
+        
+        
+          <link rel="icon" href="../../assets/images/favicon.png">
+        
+      
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.4">
+    
+    
+      
+        <title>2013 - FontLab Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e156878f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.d7242098.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/fontlab-chrome.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- MaterialX layout tweaks: <fontlab-menu> is the only top bar. -->
+  <style>
+    /* Kill the MaterialX copyright footer; <fontlab-footer> is the only footer. */
+    .md-footer { display: none !important; }
+
+    /* Sub-pages: narrow column + proper typography scale. */
+    .md-content__inner.md-typeset {
+      max-width: 860px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 1rem 1.5rem 3rem !important;
+    }
+    .md-main__inner { margin-top: 0 !important; }
+  </style>
+
+  <!-- FontLab menu/footer loader -->
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer></script>
+
+  <!-- Configure <fontlab-menu>: no local nav items for blog; search from 'blog'. -->
+  <script>
+  (function () {
+    function apply() {
+      var el = document.querySelector('fontlab-menu');
+      if (!el) return;
+      el.config = { localMenu: [], search: { from: 'blog' } };
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else { apply(); }
+  })();
+  </script>
+
+  </head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2013" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <fontlab-menu
+    mode="dark"
+    site-label="Blog"
+    site-url="https://blog.fontlab.com/"></fontlab-menu>
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-header__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FontLab Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2013
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-nav__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FontLab Blog
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2020
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+      
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2013
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    release
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="2013">2013<a class="headerlink" href="#2013" title="Permanent link">&para;</a></h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2013-09-19 00:00:00+00:00">September 19, 2013</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/blog/" class="md-meta__link">blog</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              21 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="color-fonts-overview-of-the-proposals-for-color-extensions-of-the-opentype-font-format"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/">Color fonts. Overview of the proposals for color extensions of the OpenType font format.</a></h2>
+<p>By <a href="https://www.fontlab.com/author/adamtwr39258/" title="Adam Twardoch">Adam
+Twardoch</a>
+on 2013-09-19 in
+<a href="https://www.fontlab.com/news/" rel="category tag">News</a></p>
+<p>Although Fontlab Ltd. debuted the Photofont technology some
+<span class="numbers">8</span> years ago, the typographic community did
+not show much interest for multi-color fonts or typography. In
+<span class="numbers">2013</span>, it changed. Actually, this started
+a few years ago with Apple introducing the color emoji font into iOS,
+and then Mac <span class="caps">OS</span>
+X <span class="numbers">10</span>.<span class="numbers">7</span>. Now,
+all major industry players (Apple, Adobe, Mozilla, Google and Microsoft)
+have proposed their formats, which aim to extend the OpenType font
+format by the ability of including color glyph information. The
+proposals differ in many aspects. Below is a discussion of the proposals
+along with some personal comments.</p>
+<p><span id="more-40"></span></p>
+<p><em>This article is very technical. No completeness or correctness of the
+information presented below, and all views are personal.</em></p>
+<p><img src="https://i.ytimg.com/vi/Yit1ZpClwAk/maxresdefault.jpg"
+class="epyt-facade-poster skip-lazy" decoding="async"
+data-spai-excluded="true" loading="lazy"
+alt="Color Fonts. The next big thing? FontLab tutorial with Adam Twardoch" /></p>
+<p><img alt="" src="data:image/svg+xml;base64,PHN2ZyBkYXRhLW5vLWxhenk9IjEiIGhlaWdodD0iMTAwJSIgdmVyc2lvbj0iMS4xIiB2aWV3Ym94PSIwIDAgNjggNDgiIHdpZHRoPSIxMDAlIj48cGF0aCBjbGFzcz0icGFyYSIgZD0iTTY2LjUyLDcuNzRjLTAuNzgtMi45My0yLjQ5LTUuNDEtNS40Mi02LjE5QzU1Ljc5LC4xMywzNCwwLDM0LDBTMTIuMjEsLjEzLDYuOSwxLjU1IEMzLjk3LDIuMzMsMi4yNyw0LjgxLDEuNDgsNy43NEMwLjA2LDEzLjA1LDAsMjQsMCwyNHMwLjA2LDEwLjk1LDEuNDgsMTYuMjZjMC43OCwyLjkzLDIuNDksNS40MSw1LjQyLDYuMTkgQzEyLjIxLDQ3Ljg3LDM0LDQ4LDM0LDQ4czIxLjc5LTAuMTMsMjcuMS0xLjU1YzIuOTMtMC43OCw0LjY0LTMuMjYsNS40Mi02LjE5QzY3Ljk0LDM0Ljk1LDY4LDI0LDY4LDI0UzY3Ljk0LDEzLjA1LDY2LjUyLDcuNzR6IiBmaWxsPSIjZjAwIiAvPjxwYXRoIGQ9Ik0gNDUsMjQgMjcsMTQgMjcsMzQiIGZpbGw9IiNmZmYiIGNsYXNzPSJwYXJhIiAvPjwvc3ZnPg==" /></p>
+<p><span itemprop="video" itemscope=""
+itemtype="http://schema.org/VideoObject"></span></p>
+<p>The video tutorial by Adam Twardoch accompanies this article by
+providing a more practical take on color font creation issues.</p>
+<h3 id="concepts"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#concepts">Concepts</a></h3>
+<p>There are several conceptual approaches for “color fonts” that can be
+considered, in increasing order of complexity:</p>
+<ul>
+<li>a] per-PPM bitmap strike definition, without any scaling</li>
+<li>b] scalable bitmap glyphs with multiple “master
+  <span class="caps">PPM</span> sizes”</li>
+<li>c] one scalable bitmap glyph definition across all PPMs</li>
+<li>d] layered outline glyphs, one solid fill per layer</li>
+<li>e] static outline glyphs with complex fills and optional bitmap
+  content</li>
+<li>f] animated variant of e]</li>
+</ul>
+<h3 id="approaches"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#approaches">Approaches</a></h3>
+<p>We have now four distinct approaches from the major vendors, in
+increasing order of complexity:</p>
+<ul>
+<li><span class="caps">GOO</span>: Google <code>CBDT</code>/<code>CBLC</code> tables — a] or
+  b], unclear</li>
+<li><span class="caps">APP</span>: Apple <code>sbix</code> table — b] concept</li>
+<li><span class="caps">MIC</span>: Microsoft <code>COLR</code>/<code>CPAL</code> tables — d]
+  concept</li>
+<li><span class="caps">SVG</span>: Joint Adobe and Mozilla <code>SVG</code>
+   table — e] concept, possibly expandable to f]</li>
+</ul>
+<h3 id="considerations"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#considerations">Considerations</a></h3>
+<p>There are also several considerations, or aspects, which each
+implementation needs to address.</p>
+<ul>
+<li><strong>Co-existence</strong>: regardless of the possible size inflation, whether
+  several approach can co-exist within the same <code>SFNT</code> font file. This
+  includes questions such as precedence (what should happen if
+  a consuming platform “understands” multiple approaches) or structure
+  sharing (whether the same structure, e.g. the
+  <span class="caps">PNG</span> image data or a color palette, can be
+  shared by multiple approaches). In particular, the question of
+  co-existence of the new structures with old ones (<code>glyf</code> or <code>CFF</code>
+   table) is important.</li>
+<li><strong>External modification</strong>: especially with the outline approaches,
+  whether the colors specified within the <code>SFNT</code> font file can somehow
+  be manipulated/modified externally by the consuming platforms. This
+  also includes more specific questions such as, in case of the
+  SVG-based approaches, controlling animation or, if the consuming
+  platform is a web browser, interaction with the document’s
+  <span class="caps">DOM</span>.</li>
+<li><strong>Fallback/degradation</strong>: related to co-existence, how the color data
+  should be represented in environments that only support grayscale or
+  even monochrome data. Adobe’s Leonard Rosenthol has raised a number of
+  fundamental issues on this in context of the
+  <span class="caps">SVG</span> discussion. The discussion makes,
+  I hope, an interesting read: the “Glyph bbox concerns” thread,
+  [<span class="numbers">1</span>] and
+  [<span class="numbers">2</span>].</li>
+<li>[<span class="numbers">1</span>]  <a
+  href="http://lists.w3.org/Archives/Public/public-svgopentype/2012Jun/thread.html"
+  rel="nofollow">http://​lists​.w<span
+  class="numbers">3</span>​.org/​A​r​c​h​i​v​e​s​/​P​u​b​l​i​c​/​p​u​b​l​i​c​-​s​v​g​o​p​e​n​t​y​p​e​/​<span
+  class="numbers">2</span>​<span class="numbers">0</span>​<span
+  class="numbers">1</span>​<span
+  class="numbers">2</span>​J​u​n​/​t​h​r​e​a​d​.​h​tml</a></li>
+<li>[<span class="numbers">2</span>]  <a
+  href="http://lists.w3.org/Archives/Public/public-svgopentype/2012Aug/thread.html"
+  rel="nofollow">http://​lists​.w<span
+  class="numbers">3</span>​.org/​A​r​c​h​i​v​e​s​/​P​u​b​l​i​c​/​p​u​b​l​i​c​-​s​v​g​o​p​e​n​t​y​p​e​/​<span
+  class="numbers">2</span>​<span class="numbers">0</span>​<span
+  class="numbers">1</span>​<span
+  class="numbers">2</span>​A​u​g​/​t​h​r​e​a​d​.​h​tml</a></li>
+</ul>
+<h3 id="detailed-discussion-of-approaches"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#detailed-discussion-of-approaches">Detailed discussion of approaches</a></h3>
+<h4 id="goo-google-cbdtcblc-tables"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#goo-google-cbdtcblc-tables"><span class="caps">GOO</span>: Google <code>CBDT</code>/<code>CBLC</code> tables</a></h4>
+<p>Bitmap-based (<span class="caps">PNG</span>) glyphs, either as per-PPM
+bitmap strike definition, without any scaling, or as scalable bitmap
+glyphs with multiple “master <span class="caps">PPM</span> sizes” — this
+is unclear (see below for details).</p>
+<p>Announced in May <span class="numbers">2013</span> on the Google blog
+[<span class="caps">GOO<span class="numbers">1</span></span>], this is
+an approach which specifies two tables (<code>CBDT</code>/<code>CBLC</code>,
+[<span class="caps">GOO<span class="numbers">2</span></span>]), which
+in turn extend the existing OpenType <code>EBDT</code>/<code>EBLC</code> tables
+[<span class="caps">GOO<span class="numbers">3</span></span>],
+[<span class="caps">GOO<span class="numbers">4</span></span>] by
+adding the ability to include uncompressed color images or
+<span class="caps">PNG</span> images. Those, in turn, are extended
+version of Apple’s original <code>bdat</code>/<code>bloc</code> tables which have a long
+history.</p>
+<p>Google hosts a “Color Emoji” project dedicated to this
+[<span class="caps">GOO<span class="numbers">5</span></span>], have
+created a Python tool which embeds PNGs into that table
+[<span class="caps">GOO<span class="numbers">6</span></span>] and have
+provided sample fonts. FreeType
+<span class="numbers">2</span>.<span class="numbers">5</span> now also
+includes support for this
+[<span class="caps">GOO<span class="numbers">7</span></span>], added
+on May <span class="numbers">29</span><sup>th</sup>.</p>
+<p><em>Co-existence:</em> The <span class="caps">GOO</span> proposal states: “It
+is recommended that such fonts include no <code>glyf</code> table, and as such be
+bitmap-only fonts. In the presence of color and non-color strikes in the
+same font, it is currently unspecified which bitmap a conformant client
+will choose for rendering.”. While this does not directly invalidate
+co-existence, it raises a valid question (for co-existence in general,
+and for precedence in particular). However, in Microsoft’s and Apple’s
+traditional implementations of the TrueType rasterizer (before
+ClearType), the bdat/bloc and <code>EBDT</code>/<code>EBLC</code> tables worked so that if
+a bitmap strike was available for a given <span class="caps">PPM</span>,
+it was used, otherwise the outline glyph was rendered from the <code>glyf</code>
+table (even for the same glyph but different
+<span class="caps">PPM</span>). I definitely think that all consuming
+platforms which support the <span class="caps">GOO</span> approach
+should adopt the aforementioned principle. This is especially crucial
+when it comes to co-existence between the <span class="caps">GOO</span>
+proposal and the <span class="caps">MIC</span> proposal. If the
+<span class="caps">GOO</span> approach behaves as I described, then
+chances are that one font could include the <code>CBDT</code>, <code>CBLC</code>, <code>COLR</code>,
+<code>CPAL</code> and glyf tables, and the consuming platform could easily choose
+whether to use the <span class="caps">GOO</span> approach first, and
+then (for different <span class="caps">PPM</span> sizes or glyphs which
+are not supported by the <span class="caps">GOO</span> tables) use the
+<span class="caps">MIC</span> approach (or just the plain <code>glyf</code> table).
+<em>External modification:</em> While some people have generally voiced their
+desire to be able to manipulate colors that are embedded inside of
+a font file externally, I think in case of PNG-based glyphs, this should
+be, if at all, a post-processing step (after the glyph images have been
+retrieved from the scaler). <em>Fallback/degradation:</em> the
+<span class="caps">GOO</span> spec includes provisions as to how the
+color bitmap data should be transformed into grayscale bitmap data.
+<em>Unclear:</em> The OpenType spec also includes the <code>EBSC</code> table
+[<span class="caps">GOO<span class="numbers">8</span></span>] which
+defines which per-PPM strikes should be used for which
+<span class="caps">PPM</span> ranges when they need to be scaled.
+Without <code>EBSC</code>, it is assumed that the <code>EBDT</code>/<code>EBLC</code> strikes are only
+rendered for the specified <span class="caps">PPM</span>. The
+<span class="caps">GOO</span> proposal makes no mention of how scaling
+should be implemented, or whether a scaler should rely on the presence
+of the <code>EBSC</code> table. I <strong>strongly</strong> think that, should the
+<span class="caps">GOO</span> proposal aim at wider adoption, it should
+strictly follow the principle laid out in the OpenType spec: if no
+<code>EBSC</code> table is present, strikes should be rendered only at given PPMs.
+For scaling, it should refer to the <code>EBSC</code> table. It’s also unclear to
+me what FreeType
+<span class="numbers">2</span>.<span class="numbers">5</span> is doing
+at this point, and whether support for <code>EBSC</code> is planned.</p>
+<ul>
+<li>[<span class="caps">GOO<span class="numbers">1</span></span>] 
+  <a href="http://google-opensource.blogspot.de/2013/05/open-standard-color-font-fun-for.html">http://​google​-opensource​.blogspot​.de/​<span class="numbers">2</span>​<span class="numbers">0</span>​<span class="numbers">1</span>​<span class="numbers">3</span>​/​<span class="numbers">0</span>​<span class="numbers">5</span>​/​o​p​e​n​-​s​t​a​n​d​a​r​d​-​c​o​l​o​r​-​f​o​n​t​-​f​u​n​-​f​o​r​.​h​tml</a></li>
+<li>[<span class="caps">GOO<span class="numbers">2</span></span>] 
+  <a href="https://color-emoji.googlecode.com/git/specification/v1.html">https://​color​-emoji​.googlecode​.com/​g​i​t​/​s​p​e​c​i​f​i​c​a​t​i​o​n​/​v​<span class="numbers">1</span>​.​h​tml</a></li>
+<li>[<span class="caps">GOO<span class="numbers">3</span></span>] 
+  <a href="http://www.microsoft.com/typography/otspec/ebdt.htm">http://​www​.microsoft​.com/​t​y​p​o​g​r​a​p​h​y​/​o​t​s​p​e​c​/​e​b​d​t​.​htm</a></li>
+<li>[<span class="caps">GOO<span class="numbers">4</span></span>] 
+  <a href="http://www.microsoft.com/typography/otspec/eblc.htm">http://​www​.microsoft​.com/​t​y​p​o​g​r​a​p​h​y​/​o​t​s​p​e​c​/​e​b​l​c​.​htm</a></li>
+<li>[<span class="caps">GOO<span class="numbers">5</span></span>] 
+  <a href="https://code.google.com/p/color-emoji/">https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​ji/</a></li>
+<li>[<span class="caps">GOO<span class="numbers">6</span></span>] 
+  <a href="https://code.google.com/p/color-emoji/source/browse/">https://​code​.google​.com/​p​/​c​o​l​o​r​-​e​m​o​j​i​/​s​o​u​r​c​e​/​b​r​o​w​se/</a></li>
+<li>[<span class="caps">GOO<span class="numbers">7</span></span>] 
+  <a href="http://git.savannah.gnu.org/cgit/freetype/freetype2.git/">http://​git​.savannah​.gnu​.org/​c​g​i​t​/​f​r​e​e​t​y​p​e​/​f​r​e​e​t​y​p​e​<span class="numbers">2</span>​.​g​it/</a></li>
+<li>[<span class="caps">GOO<span class="numbers">8</span></span>] 
+  <a href="https://www.microsoft.com/typography/otspec/ebsc.htm">https://​www​.microsoft​.com/​t​y​p​o​g​r​a​p​h​y​/​o​t​s​p​e​c​/​e​b​s​c​.​htm</a></li>
+</ul>
+<h4 id="app-apple-sbix-table"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#app-apple-sbix-table"><span class="caps">APP</span>: Apple <code>sbix</code> table</a></h4>
+<p>In the current implementation: bitmap-based
+(<span class="caps">PNG</span>) glyphs, as scalable bitmap glyphs with
+multiple “master strikes” per <span class="caps">PPM</span>. The <code>sbix</code>
+spec has provisions to hold other types of glyph definitions, such as
+<span class="caps">TIFF</span>, <span class="caps">SVG</span>,
+<span class="caps">PDF</span> or even movie clips, but this is not very
+clearly specified nor implemented.</p>
+<p>Apple’s is the first implementation that has been officially deployed.
+It was introduced to iOS <span class="numbers">4</span> and also runs in
+CoreText applications Mac <span class="caps">OS</span>
+X <span class="numbers">10</span>.<span class="numbers">7</span> and
+newer. It does not run on <span class="caps">ATSUI</span> applications
+such as Pages <span class="numbers">09</span> or Keynote
+<span class="numbers">09</span>, but does work in CoreText applications
+such as TextEdit or Safari. Support for <code>sbix</code> table with
+<span class="caps">PNG</span> glyph has also been added to FreeType.</p>
+<p>The spec of the table has not been officially published by Apple, but
+has been shared with interested developers. The implementation hosts
+<span class="caps">PNG</span> data inside the <code>sbix</code> table, with
+multiple <span class="caps">PPM</span> “master bitmaps” possible per
+glyph. The scaler is responsible for choosing the most appropriate
+<span class="caps">PPM</span> size and scale it to other
+<span class="caps">PPM</span> sizes as needed.</p>
+<p>It seems that per “master strike”, both the
+<span class="caps">PPM</span> and <span class="caps">DPI</span>
+information can be provided. For the metrics, the implementation relies
+on the bounding boxes stored in the <code>glyf</code> table. It seems that, very
+unfortunately, the Apple implementation renders the contents of a <code>glyf</code>
+table glyph, and the on top it renders its associated bitmap — so if
+bitmaps are available in the <code>sbix</code> table for a particular glyph
+<span class="caps">ID</span>, the corresponding <code>glyf</code> glyph
+<span class="caps">ID</span> slot has to be empty.</p>
+<p>Mac <span class="caps">OS</span>
+X <span class="numbers">10</span>.<span class="numbers">8</span>
+includes one font with the <code>sbix</code> table: Apple Color Emoji, while iOS
+<span class="numbers">6</span> includes the former along with Apple
+Color Emoji@<span class="numbers">2</span> (the latter hosting the
+glyphs in double <span class="caps">DPI</span> resolution, it appears).</p>
+<p>A reverse-engineered incomplete and faulty spec has been published
+[<span class="caps">APP<span class="numbers">1</span></span>] and
+[<span class="caps">APP<span class="numbers">2</span></span>], and
+a patch for fontTools/<span class="caps">TTX</span> has been published
+[<span class="caps">APP<span class="numbers">3</span></span>]. Those
+do not seem to work correctly, though. However, Fontlab Ltd. has
+implemented its own <code>sbix</code> reading and writing, which seems to work
+correctly. Fontlab Ltd. also has its own <code>sbix</code> renderer, and I have
+successfully built Latin-script color fonts with the <code>sbix</code> table and
+OpenType Layout features such as <code>calt</code>, and that font works as expected
+in Mac <span class="caps">OS</span>
+X <span class="numbers">10</span>.<span class="numbers">7</span> and
+<span class="numbers">10</span>.<span class="numbers">8</span>
+(hooray!).</p>
+<p><em>Co-existence:</em> The fact that the <code>sbix</code> implementation in Apple OSes
+seems to require that the <code>glyf</code> glyphs are blank raises a big
+co-existence concern. In particular, it seems that this approach could
+not co-exist with the <span class="caps">MIC</span> approach, which is
+a pity. I see that as a weakness of the <span class="caps">APP</span>
+approach. As for the co-existence of the <span class="caps">APP</span>
+and <span class="caps">GOO</span> approaches, it seems somewhat unclear
+to me. The <span class="caps">APP</span> approach requires both <code>sbix</code>
+and <code>glyf</code> to be present, while currently, the
+<span class="caps">GOO</span> approach discourages the presence of
+<code>glyf</code>. I see it as a weakness of both approaches (more strongly of the
+<span class="caps">GOO</span> approach). Also, there is the question of
+data duplication. Theoretically, I imagine that a smart mechanism (akin
+to <code>TTC</code>) could allow for some data sharing, wherein both the <code>sbix</code>
+table and the <code>CBLC</code> table referred to the same
+<span class="caps">PNG</span> chunks. But I’m not sure if offsets that
+go beyond defined table boundaries are permitted in the
+<span class="caps">OT</span> spec (I don’t think they are). <em>External
+modification:</em> While some people have generally voiced their desire to
+be able to manipulate colors that are embedded inside of a font file
+externally, I think in case of PNG-based glyphs, this should be, if at
+all, a post-processing step (after the glyph images have been retrieved
+from the scaler). <em>Fallback/degradation:</em> the
+<span class="caps">APP</span> implementation does not have any clear
+provisions for fallback/degradation. A renderer could fall back to
+grayscale or monochrome (dithered) versions of the <code>sbix</code>
+<span class="caps">PNG</span> glyphs, but it would be desirable if it
+could also fall back to “proper” <code>glyf</code> outline glyphs. However, the
+fact that the <span class="caps">APP</span> implementation relies on
+<strong>empty</strong> <code>glyf</code> glyphs invalidates that. <em>Unclear:</em> It’s not currently
+clear how the
+<span class="caps">PPM</span>+<span class="caps">DPI</span> “master
+strikes” should be chosen and scaled, but my assumption is that the
+<span class="caps">APP</span> approach explicitly assumes that the
+<code>sbix</code> glyphs are scalable, without the need for an additional <code>EBSC</code>
+table. This may be disputable. Also, it’s not entirely clear to me how
+a renderer should make use of the <span class="caps">PPM</span> and
+<span class="caps">DPI</span> information, though by itself it seems
+rather straightforward.</p>
+<ul>
+<li>[<span class="caps">APP<span class="numbers">1</span></span>] 
+  <a href="http://typophile.com/node/96671#comment-524375">http://​typophile​.com/​n​o​d​e​/​<span class="numbers">9</span>​<span class="numbers">6</span>​<span class="numbers">6</span>​<span class="numbers">7</span>​<span class="numbers">1</span>​#​c​o​m​m​e​n​t​-​<span class="numbers">5</span>​<span class="numbers">2</span>​<span class="numbers">4</span>​<span class="numbers">375</span></a></li>
+<li>[<span class="caps">APP<span class="numbers">2</span></span>] 
+  <a href="http://kanji-database.sourceforge.net/fonts/opentype.html">http://​kanji​-database​.sourceforge​.net/​f​o​n​t​s​/​o​p​e​n​t​y​p​e​.​h​tml</a></li>
+<li>[<span class="caps">APP<span class="numbers">3</span></span>] 
+  <a href="https://gist.github.com/jjgod/5478229">https://​gist​.github​.com/​j​j​g​o​d​/​<span class="numbers">5</span>​<span class="numbers">4</span>​<span class="numbers">7</span>​<span class="numbers">8</span>​<span class="numbers">229</span></a></li>
+</ul>
+<h4 id="mic-microsoft-colrcpal-tables"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#mic-microsoft-colrcpal-tables"><span class="caps">MIC</span>: Microsoft <code>COLR</code>/<code>CPAL</code> tables</a></h4>
+<p>The newest member in the family of solutions, announced by Microsoft’s
+Michelle Perham and Si Daniels on June
+<span class="numbers">26</span><sup>th</sup>
+[<span class="caps">MIC<span class="numbers">1</span></span>], the
+Microsoft proposal looks quite simple and clever to me, judging from the
+announcement. It adds a relatively lightweight baggage of <code>COLR</code> and
+<code>CPAL</code> tables which results in layered outline glyphs with one solid
+fill per layer.</p>
+<p>The <span class="caps">MIC</span> approach is implemented in Windows
+<span class="numbers">8</span>.<span class="numbers">1</span>, with
+a new Segoe <span class="caps">UI</span> Emoji font being included in
+the <span class="caps">OS</span>. A video from Microsoft’s Dan McLachlan
+talk where he presents the approach is available
+[<span class="caps">MIC<span class="numbers">2</span></span>] (about
+<span class="numbers">9</span> minutes into the talk). Also, Michelle
+Perham made a presentation at TypeCon <span class="numbers">2013</span>
+dedicated to the topic.</p>
+<p>The approach uses a base glyph (<code>glyf</code> or, presumably, also <code>CFF</code> )
+which is used for non-color situations. The <code>COLR</code> table refers from
+this glyph into other outline glyphs (which exist within the same
+table), which serve as layers. Each “layer glyph” has its own z‑order
+and a single color references. The color references are handled has
+palette indices, with a separate table, <code>CPAL</code> in OpenType that resolves
+the <span class="caps">RGBA</span> colors actually used for the glyph.
+Therefore, both the <code>COLR</code> and the <code>CPAL</code> tables should be quite small
+in size, all the heavy-lifting being done by the traditional rendering
+methods. It was announced that Microsoft plans to publish the specs for
+the tables within the next few weeks.</p>
+<p><em>Co-existence:</em> If the <span class="caps">GOO</span> approach clarifies
+its behavior when the <code>glyf</code> table is present, then the
+<span class="caps">MIC</span> approach could co-exist easily with the
+<span class="caps">GOO</span> approach. Actually, these two approaches
+could cleverly echo the former co-existence of <code>glyf</code> with
+<code>bdat</code>/<code>bloc</code> (or <code>EBDT</code>/<code>EBLC</code>/<code>EBSC</code>). A consuming platform could go
+straight for the monochrome <code>glyf</code> glyphs, or could prioritize the
+<span class="caps">MIC</span> approach with a fallback to <code>glyf</code>, or
+could prioritize the <span class="caps">GOO</span> approach with
+a fallback to <code>glyf</code>, or could prioritize the
+<span class="caps">GOO</span> approach, then fall back to the
+<span class="caps">MIC</span> approach, and then finally fall back to
+<code>glyf</code>. I don’t see any principal conflict there. <em>External
+modification:</em> As Michelle wrote on the OpenType list, “Fonts can have
+multiple palettes, but right now the colors are defined by the font
+developer and the user is not able to make changes to the palettes.
+That’s definitely something we’d like to consider in the future and
+might be something that applications could expose.” At TypeCon, Greg
+Hitchcock clarified the envisioned roles of the palettes: first palette
+is used by default for “dark on light” color situations while second
+palette is intended for use in “light on dark” situations. Additional
+palettes should be selectable by the user. <em>Fallback/degradation:</em> This
+approach seems to be degrading nicely, and fallback implications have
+been discussed above.</p>
+<ul>
+<li>[<span class="caps">MIC<span class="numbers">1</span></span>] 
+  <a href="http://typophile.com/node/104174">http://​typophile​.com/​n​o​d​e​/​<span class="numbers">1</span>​<span class="numbers">0</span>​<span class="numbers">4</span>​<span class="numbers">174</span></a></li>
+<li>[<span class="caps">MIC<span class="numbers">2</span></span>] 
+  <a href="http://channel9.msdn.com/Events/Build/2013/3-191">http://​channel<span class="numbers">9</span>​.msdn​.com/​E​v​e​n​t​s​/​B​u​i​l​d​/​<span class="numbers">2</span>​<span class="numbers">0</span>​<span class="numbers">1</span>​<span class="numbers">3</span>/<span class="numbers">3</span> – <span class="numbers">191</span></a></li>
+</ul>
+<h4 id="svg-joint-adobe-and-mozilla-svg-table"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#svg-joint-adobe-and-mozilla-svg-table"><span class="caps">SVG</span>: Joint Adobe and Mozilla <code>SVG</code>  table</a></h4>
+<p>The “full Monty” outline+bitmap (<span class="caps">SVG</span>) glyphs
+with possible animation.</p>
+<p>This is a proposal formulated by Mozilla’s Edwin Flores and Cameron
+McCormack, with input from Robert O’Callahan and Adobe’s Sairus Patel,
+which has been submitted as <s>an unofficial editor’s draft</s> a Final
+Community Group Specification to the
+<span class="caps">W<span class="numbers">3</span>C</span>
+[<span class="caps">SVG<span class="numbers">1</span></span>]. There
+is a reasonably well-working <span class="caps">SVG</span> OpenType
+community for this
+[<span class="caps">SVG<span class="numbers">3</span></span>] and
+a public mailing list
+[<span class="caps">SVG<span class="numbers">2</span></span>]. As
+indicated on Robert O’Callahan’s blog
+[<span class="caps">SVG<span class="numbers">4</span></span>], this
+proposal has been implemented in Firefox — it’s off by default but can
+be enabled by toggling <code>gfx.font_rendering.opentype_svg.enabled</code> in
+about:config. Also, a tool, written in Python, is available to create
+such fonts
+[<span class="caps">SVG<span class="numbers">5</span></span>].</p>
+<p>This is the by-far most complex proposal, as it puts the bar quite high
+for implementers (it requires a full <span class="caps">SVG</span>
+renderer, and has provisions for animated glyphs). On the other hand,
+its great advantage is that, once an app has access to the
+<span class="caps">SVG</span> renderer, it can delegate the rendering of
+the glyphs completely to the <span class="caps">SVG</span> library. So
+the app only needs to call an OpenType Layout library to perform the
+layout, and then call the <span class="caps">SVG</span> renderer for
+each glyph, and position the rendered bitmaps. So in fact in an
+SVG-compatible environment using the <span class="caps">SVG</span> table
+would be trivial.</p>
+<p>The <span class="caps">SVG</span> proposal allows for designs that
+cannot be achieved by the other solutions: it implements “rich color”
+(with gradients etc.), allows for drawing various strokes and, of
+course, intermixing vectors and bitmaps. So it’s potentially very very
+powerful.</p>
+<p>Sairus Patel explained to me at TypeCon that he considers the current
+proposed spec as “good to go”, and that’s the spec that is implemented
+in Firefox.</p>
+<p>This approach really is an entirely different animal than all of the
+above. I can easily imagine that the <span class="caps">APP</span>,
+<span class="caps">GOO</span> and <span class="caps">MIC</span>
+approaches are all some kind of “color fonts
+<span class="numbers">1</span>.<span class="numbers">0</span>”, while
+the <span class="caps">SVG</span> proposal is “color fonts
+<span class="numbers">2</span>.<span class="numbers">0</span>”. There’s
+is an ongoing debate on the public mailing list of the
+<span class="caps">W<span class="numbers">3</span>C</span> community, so
+I won’t get into a detailed discussion here (also because I don’t quite
+understand some of the complexities involved). I definitely think,
+though, that this approach can co-exist with all the previous ones. One
+potential co-existence benefit could be if the <code>SVG</code>  table co-exists
+with the <span class="caps">MIC</span> <code>CPAL</code> table. The
+<span class="caps">SVG</span> glyphs could potentially make references
+to the color palettes specified within <code>CPAL</code>, and if — in future — some
+means to externally manipulate the <code>CPAL</code> palettes were implemented in
+consuming platforms, both the <span class="caps">MIC</span> approach and
+the <span class="caps">SVG</span> approach could benefit from that
+development. In the light of the <span class="caps">MIC</span> proposal,
+Sairus Patel mentioned to me that he might consider proposing some
+extensions to the Microsoft <code>CPAL</code> table, and then would consider
+dropping the color palette format proposed in the
+<span class="caps">SVG</span> spec — so that ultimately both the
+<span class="caps">MIC</span> and the <span class="caps">SVG</span>
+formats could use the <code>CPAL</code> table.</p>
+<ul>
+<li>[<span class="caps">SVG<span class="numbers">1</span></span>]  <a href="http://www.w3.org/2013/10/SVG_in_OpenType/">http://​www​.w<span class="numbers">3</span>​.org/​<span class="numbers">2</span>​<span class="numbers">0</span>​<span class="numbers">1</span>​<span class="numbers">3</span>​/​<span class="numbers">1</span>​<span class="numbers">0</span>​/​S​V​G​_​i​n​_​O​p​e​n​T​y​pe/</a></li>
+<li>[<span class="caps">SVG<span class="numbers">2</span></span>] 
+  <a href="http://www.w3.org/community/svgopentype/">http://​www​.w<span class="numbers">3</span>​.org/​c​o​m​m​u​n​i​t​y​/​s​v​g​o​p​e​n​t​y​pe/</a></li>
+<li>[<span class="caps">SVG<span class="numbers">3</span></span>] 
+  <a href="http://lists.w3.org/Archives/Public/public-svgopentype/">http://​lists​.w<span class="numbers">3</span>​.org/​A​r​c​h​i​v​e​s​/​P​u​b​l​i​c​/​p​u​b​l​i​c​-​s​v​g​o​p​e​n​t​y​pe/</a></li>
+<li>[<span class="caps">SVG<span class="numbers">4</span></span>] 
+  <a href="http://robert.ocallahan.org/2013/02/svg-in-opentype-new-approach-to-svg.html">http://​robert​.ocallahan​.org/​<span class="numbers">2</span>​<span class="numbers">0</span>​<span class="numbers">1</span>​<span class="numbers">3</span>​/​<span class="numbers">0</span>​<span class="numbers">2</span>​/​s​v​g​-​i​n​-​o​p​e​n​t​y​p​e​-​n​e​w​-​a​p​p​r​o​a​c​h​-​t​o​-​s​v​g​.​h​tml</a></li>
+<li>[<span class="caps">SVG<span class="numbers">5</span></span>] 
+  <a href="https://github.com/edf825/SVG-OpenType-Utils">https://​github​.com/​e​d​f​<span class="numbers">8</span>​<span class="numbers">2</span>​<span class="numbers">5</span>​/​S​V​G​-​O​p​e​n​T​y​p​e​-​U​t​ils</a></li>
+</ul>
+<h3 id="personal-conclusion"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#personal-conclusion">Personal conclusion</a></h3>
+<p>In my view, each of the presented approaches has its advantages and
+disadvantages.</p>
+<h4 id="the-proposals"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#the-proposals">The Proposals</a></h4>
+<p>The <span class="caps">APP</span> proposal is great in so far that it’s
+actually already implemented. However, the interaction of the <code>sbix</code> and
+<code>glyf</code> tables as implemented in Apple OSes has its serious drawbacks (no
+fallback scenario). Also, it’s unknown whether the <code>sbix</code> table would
+ever make its way into the official <span class="caps">ISO</span>
+<span class="caps">OFF</span> or OpenType specs.</p>
+<p>The <span class="caps">MIC</span> proposal only “goes color” in
+a limited scope — it provides a way to render multilayer glyphs with
+solid fills. But they’re outline glyphs, so they should scale nicely.</p>
+<p>The <span class="caps">GOO</span> and <span class="caps">APP</span>
+proposals use <span class="caps">PNG</span> as their vehicle, so they
+can have complex fills but would fail in high-resolution scenarios.
+FreeType already implements the <span class="caps">APP</span> proposal
+with <span class="caps">PNG</span> glyph definitions, and the
+<span class="caps">GOO</span> proposal — so it looks like adding support
+for them was quite easy.</p>
+<p>The <span class="caps">GOO</span> approach has advantages in so far that
+it ties into an existing infrastructure of tables, but my fear is that
+these existing table concepts may be abused (no reference to how scaling
+should happen). Also, <span class="caps">GOO</span>’s insistence over
+non-presence of the <code>glyf</code> table is very limiting, and not
+understandable: they say they want their extensions to go into the
+official <code>EBDT</code>/<code>EBLC</code> tables, but those tables make no such
+requirement.</p>
+<p>In principle, the <span class="caps">MIC</span> and
+<span class="caps">GOO</span> approaches could be easily “married
+together”: the <span class="caps">MIC</span> proposal would be useful
+for multilayer glyphs with solid fills, the
+<span class="caps">GOO</span> approach for glyphs which require more
+refined bitmap treatment, and fallback scenarios could be defined rather
+well.</p>
+<p>The <span class="caps">SVG</span> approach is very welcome, and, as
+I said, a kind of
+“<span class="numbers">2</span>.<span class="numbers">0</span>” thing.
+I believe the discussion on them should continue, even if
+implementations of those could be confined to only the web browser
+context. Also, Firefox actually already implements the
+<span class="caps">SVG</span> approach, which is very good news.</p>
+<h4 id="color-palettes"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#color-palettes">Color Palettes</a></h4>
+<p>As for <strong>color palettes</strong>, I consider its addition to font formats
+(whether through a unified and further developed <code>CPAL</code> table or through
+several separate mechanisms) as <strong>third element of typographic user
+control</strong>.</p>
+<p>Historically, the first user control mechanism was just the <code>cmap</code>
+table: the user’s control over a font was limited to just entering
+a string of Unicodes, and picking the font size — and the rest would be
+done by the font.</p>
+<p>The second mechanism was the addition of the <code>GSUB</code>/<code>GPOS</code> tables:
+user’s control was extended by the ability to specify OpenType Layout
+features that should be applied to the text.</p>
+<p>And now, we’re extending the user’s control by adding ability to specify
+multiple colors through the font’s color palette.</p>
+<h4 id="relation-to-existing-solutions"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#relation-to-existing-solutions">Relation to Existing Solutions</a></h4>
+<p>When comparing the <strong>outline color font format</strong> proposals, I would use
+the following analogy:</p>
+<ul>
+<li>First personal computers had <strong>black-and-white</strong> monitors so they only
+  could display one color. That’s like the current monochrome font
+  formats.</li>
+<li>Then, computers could display <strong><span class="numbers">16</span>
+  colors</strong> at the time, and later even <span class="numbers">256</span>
+  colors. The <span class="caps">GIF</span> graphics format dominated
+  the early days of the web, and it supported up to
+  <span class="numbers">256</span> colors. So that was the “<strong>flat
+  color</strong>” implementation, and that’s exactly what the
+  <span class="caps">MIC</span> proposal is.</li>
+<li>Finally, computers gained the possibility to display
+  over <strong><span class="numbers">16</span> million colors</strong>, and graphic
+  formats such as <span class="caps">JPG</span> and
+  <span class="caps">PNG</span> were developed to support this. That
+  allowed for “<strong>rich color</strong>” applications, and this is analogous to
+  the <span class="caps">SVG</span> proposal.</li>
+</ul>
+<p>Before color fonts, <strong>OpenType</strong> had three separate possible glyph
+sources:</p>
+<ul>
+<li><strong>embedded bitmaps</strong>, which could be monochrome or grayscale, in the
+  <code>bdat</code>/<code>bloc</code>/<code>EBDT</code>/<code>EBLC</code>/<code>EBSC</code> tables</li>
+<li><strong>TrueType outlines</strong> in the <code>glyf</code> table, which was a very
+  straightforward structure that allowed little design flexibility but
+  through its sophisticated hinting mechanism gave the designer a lot of
+  control over the rasterizer</li>
+<li><strong>PostScript outlines</strong> in the <code>CFF</code>  table, which did not give that
+  precise control over the rasterizer through hinting, but was
+  a relatively complex structure that came “supercharged” with some
+  features that were not fully explored to date: fractional point
+  coordinates, the FontMatrix mechanism which allowed on-the-fly
+  skewing, scaling or rotation, and even Multiple Master, which was
+  dropped from the spec.</li>
+</ul>
+<p>All three solutions “co-existed peacefully” in the monochrome
+font world.</p>
+<p>The <span class="caps">GOO</span> proposal plugs directly into the
+embedded bitmaps mechanism, but extends it with color.</p>
+<p>The <span class="caps">MIC</span> proposal extends the <code>glyf</code> table and
+provides a simple solution for “flat colors”, but is quite limited
+beyond that. Yet it allows precise hinting.</p>
+<p>The <span class="caps">SVG</span> proposal is a cousin of the <code>CFF</code>
+ table: it’s technically the most complex, and requires a very smart,
+“active” rasterizer. It does not offer hinting but allows more complex
+design solutions than the other proposals.</p>
+<p>I hope that a similar “peaceful co-existence” can emerge for the color
+proposals that had existed for the monochrome solutions. Each of them
+has its merits and none of them is sufficient by its own.</p>
+<h4 id="finiteness"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#finiteness">Finiteness</a></h4>
+<p>There is one more consideration that I should mention: “finiteness” of
+the proposals. By that I mean whether the limitations of what a given
+formats aims to achieve in the end is now clearly defined. This is
+closely related to stability of implementations, meaning: if, as
+a developer, I invest the time to implement a given format now, will
+I have to revisit it in the future?</p>
+<p>Superficially, an “extensible” structure is appealing. “Oh, this
+structure is infinitely extensible, we can add so many cool stuff to it
+later”. But in many cases, an infinitely extensible structure also poses
+risks. Software developers have limited time windows to devote to fonts
+and text technology. They often want to implement something and be done
+with it for the next years. So somewhat paradoxically, a proposal that
+clearly and consciously states its limits is actually attractive because
+it doesn’t leave open questions.</p>
+<p>The <span class="caps">GOO</span> proposal seems to be the best example
+of such self-limiting format. It extends the existing embedded bitmap
+formats by adding just two or so new subformats, and that’s it. There
+may be one or two open questions now (the scalability issue
+I discussed), but once those are answered, and developers add support
+for it, it’s a done deal. The <span class="caps">GOO</span> proposal
+does not leave many loose ends.</p>
+<p>In other words, the <span class="caps">GOO</span> proposal doesn’t try
+to cook many dishes at the same time or doesn’t try to be a “catch all
+solution”. Instead, it aims to do just one thing, and to do it very
+well. Which is, I believe, where its real beauty lies. Also — just like
+the older embedded bitmap formats — it can be used to host bitmap-only
+glyph data, without any outline fallback. This actually is quite
+desirable for some scenarios such as fixed-size devices — simple
+electronic displays (brick phones, scrolling electronic banners, diplays
+in car radios or other portable electronics).</p>
+<p>In constrast, the <span class="caps">APP</span> proposal limits itself
+very vaguely. The <code>sbix</code> table spec says that it can host a huge variety
+of possible glyph formats, from <span class="caps">PNG</span> through
+<span class="caps">TIFF</span> and <span class="caps">JPEG</span>,
+<span class="caps">SVG</span> and <span class="caps">PDF</span> to even
+movie clips. Attractive in principle, it also may be a bit “scary”. The
+current <span class="caps">APP</span> implementation isn’t actually
+<code>sbix</code>. It’s “<code>sbix</code> with <span class="caps">PNG</span> glyph data”. But
+there could be “<code>sbix</code> with <span class="caps">SVG</span> data” or
+“<code>sbix</code> with <span class="caps">MOV</span> clips”. This means that
+develpers who choose to implement “sbix as a whole” may end up
+struggling to support various glyph data sources, and they may never be
+sure whether something new wouldn’t pop up in future.</p>
+<p>The <span class="caps">MIC</span> proposal quite cleanly defines its
+current scope, though Greg Hitchcock has suggested during the TypeCon
+meeting that Microsoft may in future extend their format to support
+“more things”, like gradients. However, knowing Microsoft’s practice,
+they would most likely extend it in a transparent, backwards-compatible
+way (so, for example, a gradient would fall back to a solid color). At
+the current stage of the proposal, <code>CPAL</code> and <code>COLR</code> are nicely defined.
+<code>CPAL</code> may undergo some revisions, especially if (hopefully) both the
+<code>COLR</code> and the <code>SVG</code>  tables make use it, i.e. if Adobe, Microsoft and
+Mozilla come to common terms regarding some minor <code>CPAL</code> extensions.</p>
+<p>Interestingly, the <span class="caps">SVG</span> in <code>SFNT</code> proposal,
+although very ambitious in terms of graphic effects you can achieve, is
+actually fairly clearly limited. Again, some wrinkles need to be ironed
+out, and animation is a big open question, but if we limit ourselves to
+static SVGs, the principle is very simple: the
+<span class="caps">SVG</span> in <code>SFNT</code> format only defines a container
+format for the data, and clearly <strong>delegates</strong> everything else to the
+<span class="caps">SVG</span> standard proper.</p>
+<p>This is actually a fairly stable proposal. It means that, as a developer
+who implements it, you’ll need to keep up with the evolution of
+<span class="caps">SVG</span> proper, but — if you do have an
+<span class="caps">SVG</span> renderer implementation — you’ll want to
+do it anyway. But the <span class="caps">SVG</span> in <code>SFNT</code> makes
+(more less) a promise that they won’t bother you greatly with doing big
+changes in future that will be font-specific. So as long as you’ve
+implemented the <span class="caps">SFNT</span> <code>SVG</code>  table once
+(hopefully the revised one which shouls reuse <code>CPAL</code>), you’ll be done at
+the font end. Then, you’ll just need to keep up with your general
+<span class="caps">SVG</span> renderer as you normally would.</p>
+<p>So with <span class="caps">SVG</span>, if your application does not have
+an <span class="caps">SVG</span> renderer, it’s a “big step” that you’d
+need to do, but you’d only need to do it once. (And perhaps it would be
+a good idea to do it anyway, since <span class="caps">SVG</span> is
+a graphics format that may be useful is supporting regardless of fonts).
+But once you’ve done it, all future steps you’ll have to do will likely
+be very small and will “just happen”.</p>
+<p>In fact, I think the <span class="caps">GOO</span> mechanism would serve
+as an ideal fallback to <span class="caps">SVG</span>. Since
+<span class="caps">SVG</span> can contain scalable graphics which
+intermix vectors and bitmaps, the results can be very complex. But they
+could be pre-rendered and put into the <code>CBDT</code>/<code>CBLC</code> tables as well. It
+could be similar to how pre-rendered <span class="caps">PNG</span>
+bitmaps are (or used to be) often served by websites to older browsers
+which don’t support <span class="caps">SVG</span>. You’d lose the smooth
+scalability, but you would at least get the intended glyphs appearance.</p>
+<h3 id="support-by-fontlab-apps"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#support-by-fontlab-apps">Support by FontLab apps</a></h3>
+<p>Fontlab Ltd. will soon be releasing a free app for Mac and Windows
+called <strong>FontLab Pad</strong> which will allow users on both OSes to use fonts
+that implement any of the above proposals (currently the
+<span class="caps">APP</span> and <span class="caps">MIC</span> formats
+are implemented but more support is being added as we speak). Also,
+FontLab’s <strong>TransType <span class="numbers">4</span></strong> allows simple
+creation of MIC-compatible fonts through overlaying existing “layered
+fonts” and assigning each layer a color. TransType can also output
+APP-compatible fonts with the same contents. In combination with
+FontLab’s <strong>BitFonter <span class="numbers">3</span></strong>, TransType
+<span class="numbers">4</span> can be used to produce sophisticated
+full-bitmap color fonts in the APP-compatible format.</p>
+<p>At FontLab, we are very happy with this development and support it
+fully. Our upcoming font editors will support multicolor fonts natively,
+with layers and potentially also complex fills, so fonts in all color
+formats (including <span class="caps">SVG</span>) can be created.</p>
+<p><img
+src="https://secure.gravatar.com/avatar/a19bf747f8460e6f957b712ff0d7ac8b?s=96&amp;d=blank&amp;r=g"
+class="uk-comment-avatar avatar-96 photo"
+srcset="https://secure.gravatar.com/avatar/a19bf747f8460e6f957b712ff0d7ac8b?s=192&amp;d=blank&amp;r=g 2x"
+decoding="async" width="96" height="96" /></p>
+<h3 id="adam-twardoch"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/#adam-twardoch">Adam Twardoch</a></h3>
+<p>Adam Twardoch is Director of Products at FontLab, and a font consultant
+specializing in font technology, multilingual typography, CSS webfonts,
+Unicode and OpenType. Co-designer of Lato, the world’s most-popular
+independently made font family (by Łukasz Dziedzic), and of Milka (by
+Botio Nikoltchev). Co-creator of OpenType Font Variations and CSS Fonts
+specs. In 2000–2014, technical and linguistic consultant at MyFonts, the
+world’s largest online font distributor, and board member of Association
+Typographique Internationale (ATypI). Adam regularly teaches workshops
+in font creation. He lives and works in Warsaw and Berlin.</p>
+    
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden>
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-left" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc" >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-panel-right" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2013–2026 Fontlab Ltd.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <fontlab-footer mode="dark"></fontlab-footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.3c4058f5.min.js"></script>
+      
+    
+  </body>
+</html>

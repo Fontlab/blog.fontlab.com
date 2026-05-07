@@ -1,0 +1,59 @@
+<!-- this_file: mkdocs/mk-fontlab/main.html -->
+{% extends "base.html" %}
+
+{#-
+  FontLab Blog — minimal MaterialX override.
+
+  We add on top of MaterialX:
+    1. FontLab menu + footer web components and their loader script.
+    2. Local menu config (empty localMenu; search from 'blog').
+-#}
+
+{% block extrahead %}
+  {{ super() }}
+
+  <!-- MaterialX layout tweaks: <fontlab-menu> is the only top bar. -->
+  <style>
+    /* Kill the MaterialX copyright footer; <fontlab-footer> is the only footer. */
+    .md-footer { display: none !important; }
+
+    /* Sub-pages: narrow column + proper typography scale. */
+    .md-content__inner.md-typeset {
+      max-width: 860px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 1rem 1.5rem 3rem !important;
+    }
+    .md-main__inner { margin-top: 0 !important; }
+  </style>
+
+  <!-- FontLab menu/footer loader -->
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer></script>
+
+  <!-- Configure <fontlab-menu>: no local nav items for blog; search from 'blog'. -->
+  <script>
+  (function () {
+    function apply() {
+      var el = document.querySelector('fontlab-menu');
+      if (!el) return;
+      el.config = { localMenu: [], search: { from: 'blog' } };
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else { apply(); }
+  })();
+  </script>
+{% endblock %}
+
+{% block header %}
+  <fontlab-menu
+    mode="dark"
+    site-label="Blog"
+    site-url="https://blog.fontlab.com/"></fontlab-menu>
+  {{ super() }}
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+  <fontlab-footer mode="dark"></fontlab-footer>
+{% endblock %}

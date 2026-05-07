@@ -1,0 +1,69 @@
+# this_file: pyproject.toml
+[project]
+name = "blog-fontlab"
+dynamic = ["version"]
+description = "Build orchestrator for blog.fontlab.com"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+    { name = "Fontlab Ltd." },
+]
+dependencies = [
+    "fire>=0.6",
+    "loguru>=0.7",
+    "python-frontmatter>=1.1",
+    "pymdown-extensions>=10.2",
+    "mkdocs-awesome-nav>=3.3",
+    "mkdocs-include-markdown-plugin>=7.2",
+    "mkdocs-llmstxt>=0.2",
+    "mkdocs-copy-to-llm>=0.2",
+    "properdocs>=1.6.7",
+    "mkdocs-materialx>=10.1.4",
+]
+
+[project.scripts]
+blog-fontlab = "blog_fontlab.cli:main"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/blog_fontlab/__version__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/blog_fontlab"]
+
+[tool.uv]
+package = true
+
+[tool.uv.sources]
+properdocs = { path = "reference/properdocs" }
+mkdocs-materialx = { path = "reference/mkdocs-materialx" }
+mkdocs-awesome-nav = { path = "reference/mkdocs-awesome-nav" }
+mkdocs-include-markdown-plugin = { path = "reference/mkdocs-include-markdown-plugin" }
+mkdocs-llmstxt = { path = "reference/mkdocs-llmstxt" }
+mkdocs-copy-to-llm = { path = "reference/mkdocs-copy-to-llm" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pyright]
+include = ["src"]
+extraPaths = ["src"]
+venvPath = "."
+venv = ".venv"
+pythonVersion = "3.12"
+reportMissingImports = "warning"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+ignore = ["E501"]

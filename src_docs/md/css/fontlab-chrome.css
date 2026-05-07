@@ -1,0 +1,5 @@
+/* this_file: src_docs/md/css/fontlab-chrome.css */
+.md-header { display: none !important; }
+.md-sidebar--primary, .md-sidebar--secondary, .md-overlay { display: none !important; }
+fontlab-menu { position: sticky; top: 0; z-index: 100; }
+.md-main__inner { margin-top: 0; }
