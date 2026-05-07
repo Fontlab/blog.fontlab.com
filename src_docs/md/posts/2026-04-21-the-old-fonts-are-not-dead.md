@@ -57,4 +57,5 @@ They are just waiting for someone to move them carefully into the present.
 - PostScript Type 1 fonts: end of support — Adobe
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
 
-Read more on help.fontlab.com →{ .fl-help-cta }
+Read more on help.fontlab.com →
+{ .fl-help-cta }
