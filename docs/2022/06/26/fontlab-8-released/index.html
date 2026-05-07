@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1400,16 +934,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1431,16 +965,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/release/">release</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1471,35 +995,68 @@
 
   <h1>Hello, FontLab 8</h1>
 
-<p>Two years into FontLab 7, users had a clear message: the drawing engine is excellent, the variable font support is solid, now make the rest of the application match. FontLab 8, shipping today, is our answer.</p>
+<p>Two years into FontLab 7, users had a clear message: the drawing engine is excellent,
+the variable font support is solid, now make the rest of the application match.
+FontLab 8, shipping today, is our answer.</p>
 <!-- more -->
 
 <p><img alt="FontLab 8 application window showing the new UI" src="../../../../media/fl8-release-screen.png" /></p>
-<p>FontLab 8 is a free upgrade for all FontLab 7 users, and a major revision for everyone else. It runs on macOS (Intel and Apple Silicon) and Windows 10/11. Here is what changed:</p>
+<p>FontLab 8 is a free upgrade for all FontLab 7 users, and a major revision for everyone
+else.
+It runs on macOS (Intel and Apple Silicon) and Windows 10/11. Here is what changed:</p>
 <ul>
-<li><strong>Boolean contour operations</strong> — Subtract, Intersect, and Exclude are now proper menu commands under Contour &gt; Overlap, not workarounds. Select two overlapping paths, choose your operation, done.</li>
-<li><strong>Measurements panel</strong> — a dedicated panel for tracking design dimensions (stem weights, counter sizes, cap heights) with illustrative icons that make clear what you are measuring and why it matters.</li>
-<li><strong>Soft Brush and Soft Pencil</strong> — two new drawing tools that apply inertia as you draw, producing smoother curves with fewer nodes than a steady hand alone.</li>
-<li><strong>Smart Pencil</strong> — draws and immediately simplifies: nodes land at curve extrema, the node count stays as low as the shape allows.</li>
-<li><strong>Back/Forward navigation</strong> in the Glyph window text bar, so switching between recent glyph sequences no longer requires retyping them.</li>
-<li><strong>Glyphs format v3</strong> as the default export target for <code>.glyphs</code> files, including full tag support for interoperability with Glyphs.app workflows.</li>
-<li><strong>Custom Alt+key shortcuts</strong> — assign your own keyboard shortcuts to any menu command, reducing hand travel for operations you run dozens of times a day.</li>
-<li><strong>UI redesign</strong> throughout: updated icons, improved dark and light mode consistency, and a cleaned-up Font Info layout.</li>
+<li><strong>Boolean contour operations</strong> — Subtract, Intersect, and Exclude are now proper menu
+  commands under Contour &gt; Overlap, not workarounds.
+  Select two overlapping paths, choose your operation, done.</li>
+<li><strong>Measurements panel</strong> — a dedicated panel for tracking design dimensions (stem
+  weights, counter sizes, cap heights) with illustrative icons that make clear what you
+  are measuring and why it matters.</li>
+<li><strong>Soft Brush and Soft Pencil</strong> — two new drawing tools that apply inertia as you draw,
+  producing smoother curves with fewer nodes than a steady hand alone.</li>
+<li><strong>Smart Pencil</strong> — draws and immediately simplifies: nodes land at curve extrema, the
+  node count stays as low as the shape allows.</li>
+<li><strong>Back/Forward navigation</strong> in the Glyph window text bar, so switching between recent
+  glyph sequences no longer requires retyping them.</li>
+<li><strong>Glyphs format v3</strong> as the default export target for <code>.glyphs</code> files, including full
+  tag support for interoperability with Glyphs.app workflows.</li>
+<li><strong>Custom Alt+key shortcuts</strong> — assign your own keyboard shortcuts to any menu command,
+  reducing hand travel for operations you run dozens of times a day.</li>
+<li><strong>UI redesign</strong> throughout: updated icons, improved dark and light mode consistency,
+  and a cleaned-up Font Info layout.</li>
 </ul>
-<p>The 8.0 release is the foundation. Substantive free updates — more drawing tools, more overlap operations, more kerning improvements — are already in development and will follow shortly.</p>
+<p>The 8.0 release is the foundation.
+Substantive free updates — more drawing tools, more overlap operations, more kerning
+improvements — are already in development and will follow shortly.</p>
 <h2 id="drawing-and-vector-editing">Drawing and vector editing<a class="headerlink" href="#drawing-and-vector-editing" title="Permanent link">&para;</a></h2>
 <p>Beyond the headline features, FontLab 8 introduces several precision editing tools:</p>
 <ul>
-<li><strong>Power Nudge</strong> — adjusts a selected point while maintaining smooth curve relationships with adjacent segments, avoiding the manual handle correction that a plain nudge would require.</li>
-<li><strong>Lever drag</strong> — moves a handle while keeping the opposite handle in proportion, preserving curve character when changing tension.</li>
-<li><strong>Slide</strong> — moves a node along its path without disturbing the overall curve shape. Useful for repositioning a node that is structurally correct but geometrically misplaced.</li>
-<li><strong>Suggest</strong> — displays live numeric distance hints during drawing, so you can hit a specific measurement without switching to a panel.</li>
-<li><strong>Power Brush and Power Stroke</strong> — tools for creating and editing modulated (variable-width) strokes with a live-editable contour structure. The result is editable after drawing, not a flattened outline.</li>
+<li><strong>Power Nudge</strong> — adjusts a selected point while maintaining smooth curve
+  relationships with adjacent segments, avoiding the manual handle correction that a
+  plain nudge would require.</li>
+<li><strong>Lever drag</strong> — moves a handle while keeping the opposite handle in proportion,
+  preserving curve character when changing tension.</li>
+<li><strong>Slide</strong> — moves a node along its path without disturbing the overall curve shape.
+  Useful for repositioning a node that is structurally correct but geometrically
+  misplaced.</li>
+<li><strong>Suggest</strong> — displays live numeric distance hints during drawing, so you can hit a
+  specific measurement without switching to a panel.</li>
+<li><strong>Power Brush and Power Stroke</strong> — tools for creating and editing modulated
+  (variable-width) strokes with a live-editable contour structure.
+  The result is editable after drawing, not a flattened outline.</li>
 </ul>
 <h2 id="learning-resources">Learning resources<a class="headerlink" href="#learning-resources" title="Permanent link">&para;</a></h2>
-<p>FontLab 8 ships with an expanded tutorial system. Text tutorials by Dave Lawrence (California Type Foundry) and Gunnlaugur SE Briem cover foundational techniques. Over 240 video tutorials are available on the FontLab YouTube channel, with playlists organized by topic and difficulty.</p>
-<p>The 8-day introductory tutorial series at <a href="https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/">help.fontlab.com/fontlab/8/tutorials/intro/8-days/</a> walks through the complete workflow from first glyph to exported font, covering drawing, spacing, kerning, OpenType features, and variable font basics in sequence.</p>
-<p>Download FontLab 8 and find the full what's-new list at <a href="https://www.fontlab.com/font-editor/fontlab/">fontlab.com/font-editor/fontlab/</a>. Documentation lives at <a href="https://help.fontlab.com/">help.fontlab.com</a>.</p>
+<p>FontLab 8 ships with an expanded tutorial system.
+Text tutorials by Dave Lawrence (California Type Foundry) and Gunnlaugur SE Briem cover
+foundational techniques.
+Over 240 video tutorials are available on the FontLab YouTube channel, with playlists
+organized by topic and difficulty.</p>
+<p>The 8-day introductory tutorial series at
+<a href="https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/">help.fontlab.com/fontlab/8/tutorials/intro/8-days/</a>
+walks through the complete workflow from first glyph to exported font, covering drawing,
+spacing, kerning, OpenType features, and variable font basics in sequence.</p>
+<p>Download FontLab 8 and find the full what’s-new list at
+<a href="https://www.fontlab.com/font-editor/fontlab/">fontlab.com/font-editor/fontlab/</a>.
+Documentation lives at <a href="https://help.fontlab.com/">help.fontlab.com</a>.</p>
 
 
   
@@ -1623,8 +1180,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

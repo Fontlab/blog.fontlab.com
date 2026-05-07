@@ -20,6 +20,8 @@ this_file: spec/00-toc.md
 | [10](10.md) | Content & Porting Strategy | ~12 posts survive from `oldpub`. All promo/sale posts and point-release notes are retired. The 2013 colour-fonts technical piece is the crown jewel — port it with original date preserved. This chapter explains what to keep, what to cut, and how to do the HTML→Markdown conversion without mangling the content. |
 | [11](11.md) | Authoring Workflow | Front-matter template, slug rules, image handling, draft flag lifecycle, local preview command, and link-checking discipline. Everything a new author needs from first draft to merged post. |
 | [12](12.md) | Quality, Testing & Roadmap | Local smoke tests (link check, browser render via Chrome DevTools MCP), CI sanity checks, the evergreen-only content rule, and the open questions that need a decision before v1.0 ships. |
+| [13](13.md) | Editorial Roadmap 2024–2026 | Sixty planned posts: 12 in 2026 (Jan–May), 24 in 2025, 24 in 2024. Each row is date + slug + title + summary + source pool (FontLab TV chapter, briem/calfonts tutorial cluster, Made-with-FontLab designer profile). The roadmap packs 2024–2026 with FontLab content without duplicating already-shipped slugs. |
+| [14](14.md) | Content Series | Three named series with explicit slug prefixes, categories, and source-material pipelines: "Made with FontLab" (one designer per post, 6–8 entries), "FontLab TV" (one post per Kapusta chapter), "Tutorials" (modernized briem and calfonts chapters). Authoring rules, pull-out admonition conventions, nav-surfacing decisions. |
 
 ---
 

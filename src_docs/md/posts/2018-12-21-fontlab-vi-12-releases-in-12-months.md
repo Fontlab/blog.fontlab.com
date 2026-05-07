@@ -2,16 +2,21 @@
 date:
   created: 2018-12-21
 title: "FontLab VI: 12 releases in 12 months"
-categories:
-  - release
-authors: [adam]
+authors: [fontlab]
 draft: false
 ---
-
-FontLab VI shipped a free update every single month of 2018 — twelve releases in twelve months — evolving from the December 2017 launch through version 6.1.2. Each release incorporated feedback from type designers and font developers, steadily refining drawing tools, variable font support, and file interchange. The video and release notes below walk through what actually changed across the full year.
+FontLab VI shipped a free update every single month of 2018 — twelve releases in twelve
+months — evolving from the December 2017 launch through version 6.1.2. Each release
+incorporated feedback from type designers and font developers, steadily refining drawing
+tools, variable font support, and file interchange.
+The video and release notes below walk through what actually changed across the full
+year.
 
 <!-- more -->
 
-We've just published FontLab VI 6.1.2, the 12th release since the initial version 12 months ago. Thank you — type designers and font developers, students and pros — for the feedback we received this year. FontLab VI is evolving because of you, and we have much planned for 2019.
+We’ve just published FontLab VI 6.1.2, the 12th release since the initial version 12
+months ago. Thank you — type designers and font developers, students and pros — for the
+feedback we received this year.
+FontLab VI is evolving because of you, and we have much planned for 2019.
 
 [![FontLab VI. The ultra bold font editor for Mac and Windows](https://i.ytimg.com/vi/uyyAPvoeEHo/maxresdefault.jpg)](https://www.youtube.com/watch?v=uyyAPvoeEHo)

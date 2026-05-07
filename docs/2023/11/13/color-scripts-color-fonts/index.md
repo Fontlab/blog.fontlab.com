@@ -1,4 +1,4 @@
-FontLab 8 supports every current color OpenType format and ships with Python 3.11 scripting and the TypeRig library. This post covers the color workflow and scripting capabilities from the "Color" and "Scripts & extensions" chapters of the What's New documentation.
+FontLab 8 supports every current color OpenType format and ships with Python 3.11 scripting and the TypeRig library. This post covers the color workflow and scripting capabilities from the “Color” and “Scripts & extensions” chapters of the What’s New documentation.
 
 ## Color in FontLab 8
 
@@ -20,7 +20,7 @@ FontLab 8 exports all four current OpenType color formats:
 
 **OpenType+SVG** — Full SVG graphics per glyph, supporting anything SVG supports. Supported in Firefox and some Adobe CC apps. Larger file sizes.
 
-**OpenType+sbix / CBDT** — PNG bitmap images per glyph. Apple and Google's original emoji formats. Supported everywhere emoji work. Multiple bitmap sizes are embedded at different resolutions rather than scaling from a single source.
+**OpenType+sbix / CBDT** — PNG bitmap images per glyph. Apple and Google’s original emoji formats. Supported everywhere emoji work. Multiple bitmap sizes are embedded at different resolutions rather than scaling from a single source.
 
 A single color font project can export all four simultaneously. Users and distributors pick the format their environment supports.
 
@@ -46,4 +46,4 @@ FontLab 8 imports and exports cleanly to and from RoboFont (UFO), Glyphs (`.glyp
 
 ______________________________________________________________________
 
-Full documentation is in the FontLab 8 What's New chapters on [Color](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/) and [Scripts & extensions](https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/).
+Full documentation is in the FontLab 8 What’s New chapters on [Color](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/) and [Scripts & extensions](https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/).

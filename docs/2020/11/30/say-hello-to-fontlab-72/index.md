@@ -13,7 +13,7 @@ FontLab 7.2 brings 120 new or improved features:
 - Better UFO 3 and .glyphs 2 and 3 interchange
 - 80 fixes
 
-FontLab 7.2 is free for existing FontLab 7 users, and $99 for FontLab VI users. If you already have FontLab 7, use *Preferences › General › Check now* to update. If you don't have FontLab 7 yet, get a fully-functional 30-day trial from [our website](https://www.fontlab.com/font-editor/fontlab/).
+FontLab 7.2 is free for existing FontLab 7 users, and $99 for FontLab VI users. If you already have FontLab 7, use *Preferences › General › Check now* to update. If you don’t have FontLab 7 yet, get a fully-functional 30-day trial from [our website](https://www.fontlab.com/font-editor/fontlab/).
 
 [See detailed FontLab 7.2 release notes](https://help.fontlab.com/fontlab/7/manual/Release-Notes-7622/)
 

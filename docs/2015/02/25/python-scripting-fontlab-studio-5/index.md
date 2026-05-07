@@ -1,4 +1,4 @@
-Automation unlocks the real power of a professional font editor, and this 70-minute tutorial with Adam Twardoch is the definitive introduction to Python scripting inside FontLab Studio 5. It covers the scripting environment, the FontLab object model, and practical examples that go well beyond "hello world."
+Automation unlocks the real power of a professional font editor, and this 70-minute tutorial with Adam Twardoch is the definitive introduction to Python scripting inside FontLab Studio 5. It covers the scripting environment, the FontLab object model, and practical examples that go well beyond “hello world.”
 
 FontLab Studio 5 exposed its internals through a rich Python API, letting type designers write scripts to automate repetitive tasks — batch-transforming glyphs, generating metrics, manipulating anchors, or building entire font families from a master. This tutorial walks through that API from the ground up.
 

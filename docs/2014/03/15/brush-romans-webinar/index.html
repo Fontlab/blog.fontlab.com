@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -835,480 +843,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1365,12 +899,12 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://github.com/twardoch">Adam Twardoch</a>
                         
                       </strong>
                       <br>
@@ -1396,16 +930,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/events/">Events</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1436,13 +960,33 @@
 
   <h1>Brush Romans webinar with John Downer and Paul Herrera</h1>
 
-<p>On March 11, 2014, FontLab hosted a webinar on Roman capital letterforms and their origins in flat-brush writing, presented by sign painter and type designer John Downer and calligrapher Paul Herrera.</p>
+<p>On March 11, 2014, FontLab hosted a webinar on Roman capital letterforms and their
+origins in flat-brush writing, presented by sign painter and type designer John Downer
+and calligrapher Paul Herrera.</p>
 <!-- more -->
 
-<p>The session demonstrated how the structure of Imperial Roman capitals — the letterforms that underpin most Western type design — can be traced to marks made by a flat brush on a vertical surface. Downer used live brush demonstration to show how the tool's geometry generates the thick-thin stroke contrast, serif terminations, and proportional relationships that define the classical Latin alphabet.</p>
-<p><strong>John Downer</strong> has worked as a journeyman sign painter for more than forty years. He began designing typefaces thirty years ago, approaching letterform design through professional hand lettering rather than historical models alone. His typefaces include Brothers, Roxy, Iowan Old Style, and Vendetta — each carrying structural decisions traceable to his sign-painting practice.</p>
-<p><strong>Paul Herrera</strong> trained under Reverend Edward M. Catich, beginning in 1967 as an undergraduate. Catich, an inscription cutter and calligrapher, developed influential theories on the brush origins of Roman capitals, documented in his 1968 book <em>The Origin of the Serif</em>. Herrera worked alongside Catich as an inscription cutter and seminar assistant until Catich's death in 1979, then taught Catich's classes at St. Ambrose University through 1989. He also served on the faculty of five international calligraphy conventions between 1981 and 1987, and continued inscription work for Wichita State University and architectural clients over a forty-year career.</p>
-<p>The webinar drew a direct line from historical stonecutting and brushwork to the practical concerns of contemporary type design — how understanding the physical origins of letterforms informs decisions about weight distribution, stroke modulation, and serif construction.</p>
+<p>The session demonstrated how the structure of Imperial Roman capitals — the letterforms
+that underpin most Western type design — can be traced to marks made by a flat brush on
+a vertical surface. Downer used live brush demonstration to show how the tool’s geometry
+generates the thick-thin stroke contrast, serif terminations, and proportional
+relationships that define the classical Latin alphabet.</p>
+<p><strong>John Downer</strong> has worked as a journeyman sign painter for more than forty years.
+He began designing typefaces thirty years ago, approaching letterform design through
+professional hand lettering rather than historical models alone.
+His typefaces include Brothers, Roxy, Iowan Old Style, and Vendetta — each carrying
+structural decisions traceable to his sign-painting practice.</p>
+<p><strong>Paul Herrera</strong> trained under Reverend Edward M. Catich, beginning in 1967 as an
+undergraduate. Catich, an inscription cutter and calligrapher, developed influential
+theories on the brush origins of Roman capitals, documented in his 1968 book <em>The Origin
+of the Serif</em>. Herrera worked alongside Catich as an inscription cutter and seminar
+assistant until Catich’s death in 1979, then taught Catich’s classes at St.
+Ambrose University through 1989. He also served on the faculty of five international
+calligraphy conventions between 1981 and 1987, and continued inscription work for
+Wichita State University and architectural clients over a forty-year career.</p>
+<p>The webinar drew a direct line from historical stonecutting and brushwork to the
+practical concerns of contemporary type design — how understanding the physical origins
+of letterforms informs decisions about weight distribution, stroke modulation, and serif
+construction.</p>
 
 
   
@@ -1566,8 +1110,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

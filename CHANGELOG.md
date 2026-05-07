@@ -1,5 +1,88 @@
 # Changelog
 
+## [Unreleased] — 2026-05-08 (continued)
+
+### Added
+- Added Flowmark 0.6.5 as a locked build dependency.
+- Added `./build.sh format` / `blog-fontlab format` to format `src_docs/md/` in place with semantic line breaks, safe cleanups, smart quotes, and ellipses.
+- Generated root-level `docs/llms.txt` and `docs/llms-full.txt` through the `llmstxt` plugin.
+- Added 32 issue-203 expansion posts from `spec/15.md`; only `nabla-colrv1-and-color-fonts`, `when-type-becomes-texture`, and `distortion-as-defense-2026` remain open.
+- Added 2024–2026 roadmap posts for the Made with FontLab, FontLab TV, Briem, Calfonts, and Vexy Lines series, bringing the source tree to 113 Markdown posts.
+- Added a local Vexy Lines interface image for `vexy-lines-and-the-useful-lie-of-engraving`, replacing a broken `doc360/Images` reference.
+
+### Changed
+- `./build.sh build` now runs Flowmark against `src_docs/md/` before cleaning `docs/` and running ProperDocs.
+- Build-time Flowmark formatting restores ASCII quote delimiters inside raw HTML tags after smart quote conversion, so legacy WordPress HTML attributes remain valid.
+- Enabled `include-markdown`, `llmstxt`, and `copy-to-llm` in `mkdocs/mkdocs.yml`.
+- Expanded GitHub Actions output checks for the at-root layout: `docs/index.html`, `docs/about/index.html`, `docs/CNAME`, `docs/.nojekyll`, `docs/llms.txt`, and `docs/llms-full.txt`.
+- Reconciled `TASKS.md` and `TODO.md` so completed configuration, post-list styling, FontLab 8.2 split, excerpt, llms, browser-check, Made with FontLab, and shipped issue-203 post-file tasks are removed from the open checklist.
+- Tightened the template content container so narrow post pages no longer overflow horizontally.
+
+### Verified
+- `uv sync --frozen` completed with Flowmark in the lock file.
+- `uv run blog-fontlab format` completed against 118 Markdown files with no `.bak` or `.orig` files.
+- `./build.sh build` completed after running Flowmark first.
+- `uvx ruff check src/` passed.
+- Local checks found no smart-quote HTML attribute delimiters in `src_docs/md` or generated `docs`.
+- `uv sync --frozen` completed.
+- `./build.sh build` completed and generated root `llms.txt` and `llms-full.txt`.
+- `uvx ruff check src/` passed.
+- Local checks confirmed all current posts include `<!-- more -->`, no post uses `authors: [editorial]` or `categories:`, CI sanity-check target files exist, and `src_docs/md/posts/` currently contains 113 Markdown posts.
+- Local build output contains 113 generated public post pages, `docs/llms.txt` (14,252 bytes), and `docs/llms-full.txt` (359,412 bytes).
+- Playwright screenshots were captured for home, single post, archive, and about at desktop and narrow mobile widths.
+- Chrome DevTools checks found no horizontal overflow and no console errors on home, `opentype-features-as-ux`, archive 2025, and about.
+
+## [Unreleased] — 2026-05-07 (cont)
+
+### Planned
+- Editorial roadmap: 12 posts in 2026 (Jan–May), 24 posts in 2025, 24 posts in 2024 — see `spec/13.md`.
+- Three new content series — "Made with FontLab" (designer profiles), "FontLab TV" (Kapusta-chapter companions), "Tutorials" (briem + calfonts modernizations) — see `spec/14.md`.
+
+### Changed (planning)
+- `spec/06.md` rewritten for the at-root blog layout (`blog_dir: .`); removed every `/blog/` URL prefix and documented category-free blog behavior.
+- `spec/07.md` updated: `blog_dir: .`, `post_dir: posts`, `authors_file: authors.yml`, `categories: false`, and post-URL examples no longer prefixed with `/blog/`.
+- `spec/00-toc.md` extended to include chapters 13 and 14.
+- `TODO.md` rewritten: completed items moved into `CHANGELOG.md` `## Shipped` (below); only open items remain. New sections added for the typography sweep, post-list restyling, existing-post fixes, and editorial-roadmap drafting.
+
+### Added (planning)
+- `spec/13.md` — Editorial Roadmap 2024–2026 with 60 planned posts (date, slug, title, summary, source).
+- `spec/14.md` — Content Series specifying "Made with FontLab", "FontLab TV", "Tutorials".
+
+## Shipped
+
+The following items were marked `[x]` in `TODO.md` during the 2026-05-07 session and have moved here so the open list stays focused. Verification evidence is preserved in the `### Verified` block of the original `[Unreleased] — 2026-05-07` section below.
+
+### Foundation
+- Created `pyproject.toml` with hatchling + hatch-vcs, `requires-python = ">=3.12"`, all plugin dependencies pinned.
+- Created `src/blog_fontlab/__init__.py` (empty).
+- Created `src/blog_fontlab/cli.py` with Fire CLI exposing `build`, `serve`, `clean`.
+- Registered `blog-fontlab` entry point in `pyproject.toml` `[project.scripts]`.
+- Created `build.sh` as thin `uv run blog-fontlab "$@"` wrapper with `set -euo pipefail`.
+- Ran `uv sync` and verified all 56+ packages resolve (including local `reference/` sources).
+
+### Site config
+- Created `mkdocs/mkdocs.yml` with `theme: materialx`, `palette: scheme: slate`, `docs_dir: ../src_docs/md`, `site_dir: ../docs`.
+- Added `materialx/blog` plugin block (archive, categories, authors, pagination, draft, slugify, readtime).
+- Added `materialx/tags` plugin.
+- Added full `markdown_extensions` block (pymdownx suite + admonition + footnotes + toc + vexy_python_markdown_steroids).
+
+### Theme & chrome
+- Created `mkdocs/mk-fontlab/main.html` extending `base.html`, injecting the FontLab Web Component menu/footer, with `DOMContentLoaded` config assignment.
+- Wired `localMenu` config object with Blog, Archive, About items in `main.html`.
+
+### Content
+- Created `src_docs/md/index.md` landing page (Option B brief intro under 300 words).
+- Created `src_docs/md/about.md` condensed from the oldpub about page.
+- Created the initial blog index file (later removed when the blog moved to site root).
+- Created `.authors.yml` with `adam` entry.
+- Created the 2013-09-19 colour-fonts post with correct front-matter.
+
+### Build & deploy
+- Moved `CNAME` to `src_docs/md/CNAME` so the build pipeline copies it to `docs/CNAME`.
+- Verified `docs/CNAME` contains `blog.fontlab.com` after `./build.sh build`.
+- Confirmed `.nojekyll` is present in build output.
+- Created `.github/workflows/ci.yml` with tag-triggered deploy via `peaceiris/actions-gh-pages@v4`, `fetch-depth: 0`, `uv sync --frozen`.
+
 ## [Unreleased] — 2026-05-07
 
 ### Added

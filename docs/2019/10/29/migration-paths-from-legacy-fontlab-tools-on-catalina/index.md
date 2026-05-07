@@ -8,17 +8,17 @@ The whole footprint is small: CrossOver, the Windows bottle, and the FontLab app
 
 The trade-off: Windows apps on CrossOver still look and behave like Windows apps, not Mac apps.
 
-We've tested FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3 with CrossOver 19 — they run fine. [Contact our sales](https://www.fontlab.com/contact/) for cross-grade pricing from Mac to Windows versions of the classic apps.
+We’ve tested FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3 with CrossOver 19 — they run fine. [Contact our sales](https://www.fontlab.com/contact/) for cross-grade pricing from Mac to Windows versions of the classic apps.
 
 ## Virtualization
 
 ### Running macOS inside macOS
 
-Virtualization apps let you run a complete operating system inside a window on your Mac. The guest OS lives on a virtual disk — a large file on your real drive — and runs alongside your normal apps. From the guest's perspective, the virtual machine is the computer.
+Virtualization apps let you run a complete operating system inside a window on your Mac. The guest OS lives on a virtual disk — a large file on your real drive — and runs alongside your normal apps. From the guest’s perspective, the virtual machine is the computer.
 
-You can configure shared folders so the guest can read and write files on your real Mac, just like a network drive. Some virtualization apps also offer a "coherence" mode where guest app windows appear alongside real Mac windows.
+You can configure shared folders so the guest can read and write files on your real Mac, just like a network drive. Some virtualization apps also offer a “coherence” mode where guest app windows appear alongside real Mac windows.
 
-**Performance:** you assign a fixed slice of RAM to the VM when it runs. Font editors are not memory-hungry — 4 GB is plenty. As for speed, modern Macs support hardware virtualization via a hypervisor. Guest apps typically run at 80–90% of native speed, which is faster than FontLab Studio 5 ran on Macs from just a few years ago. You won't notice any delays.
+**Performance:** you assign a fixed slice of RAM to the VM when it runs. Font editors are not memory-hungry — 4 GB is plenty. As for speed, modern Macs support hardware virtualization via a hypervisor. Guest apps typically run at 80–90% of native speed, which is faster than FontLab Studio 5 ran on Macs from just a few years ago. You won’t notice any delays.
 
 ### Choose your virtualization app
 
@@ -28,7 +28,7 @@ Three options exist for Mac:
 
 **[VMWare Fusion 11.5](https://www.vmware.com/products/fusion.html)** is the alternative. Performance is comparable to Parallels (marginally faster in some tests, marginally slower in others). VMs created in VMWare are slightly more portable — there is a free VMWare Workstation Player for Windows that can run the same VM files. Price: $/€90.
 
-**[Oracle VirtualBox](https://www.virtualbox.org/)** is completely free and open-source. Performance is comparable, but setup is more complex and host/guest integration is less polished. Download the "OS X hosts" version from the VirtualBox website.
+**[Oracle VirtualBox](https://www.virtualbox.org/)** is completely free and open-source. Performance is comparable, but setup is more complex and host/guest integration is less polished. Download the “OS X hosts” version from the VirtualBox website.
 
 ### Choose your guest macOS
 
@@ -46,7 +46,7 @@ Download links (each opens in the Mac App Store or System Preferences):
 
 ### Installing macOS Mojave in Parallels Desktop
 
-Parallels Desktop makes guest macOS installation straightforward. You'll need about 42 GB of free space during installation; once complete, the VM will occupy 23–32 GB.
+Parallels Desktop makes guest macOS installation straightforward. You’ll need about 42 GB of free space during installation; once complete, the VM will occupy 23–32 GB.
 
 1. Run *Parallels Desktop*.
 1. Choose *File > New…* to open the Installation Assistant.
@@ -58,7 +58,7 @@ Parallels Desktop makes guest macOS installation straightforward. You'll need ab
 1. Click *Create*. In the Configuration dialog:
 1. *Options* tab → *Optimization > Resource usage*: choose *Medium*
 1. *Sharing > Share folders*: you may choose *All disks*
-1. *Hardware* tab → *CPU & Memory*: allocate 20–25% of your Mac's RAM (2 GB minimum; 4 GB if you have 16 GB)
+1. *Hardware* tab → *CPU & Memory*: allocate 20–25% of your Mac’s RAM (2 GB minimum; 4 GB if you have 16 GB)
 1. *Graphics*: set Memory to 256 or 512 MB
 1. Click *+ > Hard Disk*, set the maximum virtual disk size (32 GB if you allocated 4 GB RAM), enable *Split the disk image into 2 GB files*, click *OK*
 1. Click *Hard Disk 1*, click *–* at the bottom, choose *Move to Trash*
@@ -71,15 +71,15 @@ Parallels Desktop makes guest macOS installation straightforward. You'll need ab
 1. When the *Welcome* screen appears in the guest, choose your language and click *→*. Press Ctrl+Alt to release mouse capture back to your real Mac.
 1. In the *macOS Utilities* dialog inside the guest, double-click *Install macOS*.
 1. Proceed through the installer; choose *Macintosh HD* (the virtual Hard Disk 2, not your real drive).
-1. After 10–15 minutes the guest restarts. You don't need to sign in with an Apple ID unless you want to sync data with the guest.
+1. After 10–15 minutes the guest restarts. You don’t need to sign in with an Apple ID unless you want to sync data with the guest.
 1. Create a user account — same name as your real Mac account is fine, but use a different password.
 1. Once setup completes, the guest desktop appears.
-1. Click the yellow-triangle exclamation in the guest window's top-right corner and choose *Install Parallels Tools…*
+1. Click the yellow-triangle exclamation in the guest window’s top-right corner and choose *Install Parallels Tools…*
 1. Double-click the *Parallels Tools* volume on the guest desktop, double-click install, and complete the installation.
-1. Enter the guest account's password when prompted (not your real Mac password).
+1. Enter the guest account’s password when prompted (not your real Mac password).
 1. Click *Restart*.
 1. After restart, drag the *Parallels Tools* volume to the Bin inside the guest window. From the app menu, choose *Devices > CD/DVD > Disconnect*.
-1. Double-click *Parallels Shared Folders* on the guest desktop. The guest Finder will show your real Mac's volumes — you can now open and save files across both systems.
+1. Double-click *Parallels Shared Folders* on the guest desktop. The guest Finder will show your real Mac’s volumes — you can now open and save files across both systems.
 1. On your real Mac, download the latest version of [FontLab Studio 5.1.6](https://www.fontlab.com/font-editor/fontlab-studio/), [Fontographer 5.2.4](https://www.fontlab.com/font-editor/fontographer/), or [TypeTool 3.1.3](https://www.fontlab.com/font-editor/typetool/).
 1. Inside the guest, open *Parallels Shared Folders*, navigate to *Home > Downloads*, double-click the DMG, and install the font editor. Enter your serial number to activate.
 1. Drag the macOS Mojave VM icon to the left side of your Dock for one-click access.
@@ -87,7 +87,7 @@ Parallels Desktop makes guest macOS installation straightforward. You'll need ab
 1. In Parallels Desktop, choose *View > Expanded View*, click the gear icon, go to the *Hardware* tab, click *Hard Disk 1*. If the Source shows *macOS image file.hdd*, click *–* and choose *Move to Trash* — you no longer need the installer volume.
 1. Quit Parallels Desktop.
 1. Move *Install macOS Mojave.app* from your */Applications* folder to Trash.
-1. Empty the Trash — you'll reclaim around 12 GB. Your guest macOS Mojave VM should now occupy no more than 24 GB.
+1. Empty the Trash — you’ll reclaim around 12 GB. Your guest macOS Mojave VM should now occupy no more than 24 GB.
 
 Additional guides for Parallels Desktop:
 
@@ -112,11 +112,11 @@ Additional guides for Parallels Desktop:
 
 Once the guest is running:
 
-- Keep the guest lean — don't install apps you don't need there.
+- Keep the guest lean — don’t install apps you don’t need there.
 - Save working files on your real Mac using shared folders, not inside the guest.
-- In the guest's *System Preferences > General*, switch *Appearance* to *Graphite* so you can tell at a glance whether you're looking at the real desktop or the guest.
+- In the guest’s *System Preferences > General*, switch *Appearance* to *Graphite* so you can tell at a glance whether you’re looking at the real desktop or the guest.
 - In *Accessibility*, enable *Reduce motion* and *Reduce transparency*.
-- Keep the guest in non-Retina mode (the default) — the classic FontLab apps don't support Retina, and non-Retina mode reduces visual confusion.
+- Keep the guest in non-Retina mode (the default) — the classic FontLab apps don’t support Retina, and non-Retina mode reduces visual confusion.
 
 ## Running Windows
 
@@ -124,11 +124,11 @@ Once the guest is running:
 
 Installing a Windows guest works the same way as a macOS guest, and is actually simpler — virtualization apps are most commonly used for Windows. FontLab Studio 5, Fontographer 5, and TypeTool 3 for Windows run on XP, Vista, 7, 8, and 10. [Contact FontLab sales](https://www.fontlab.com/contact/) to cross-grade from a Mac license to a Windows license.
 
-You'll need a valid Windows product key and an ISO installer for your chosen Windows version. An old Windows XP "tiny" or "micro" ISO, once installed, can occupy as little as 2–3 GB. A Windows 7 VM with apps installed typically takes around 9 GB.
+You’ll need a valid Windows product key and an ISO installer for your chosen Windows version. An old Windows XP “tiny” or “micro” ISO, once installed, can occupy as little as 2–3 GB. A Windows 7 VM with apps installed typically takes around 9 GB.
 
 ### BootCamp with virtualization
 
-Apple's BootCamp lets you install Windows on a separate partition and boot directly into it for full native performance. Parallels Desktop and VMWare Fusion can also run your BootCamp Windows partition inside a VM — slightly slower than native boot, but usable side-by-side with your Mac apps.
+Apple’s BootCamp lets you install Windows on a separate partition and boot directly into it for full native performance. Parallels Desktop and VMWare Fusion can also run your BootCamp Windows partition inside a VM — slightly slower than native boot, but usable side-by-side with your Mac apps.
 
 ## More on this topic
 

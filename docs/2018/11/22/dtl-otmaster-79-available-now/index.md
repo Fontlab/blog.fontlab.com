@@ -24,7 +24,7 @@ OTMaster pairs well with [FontLab VI](https://www.fontlab.com/font-editor/fontla
 
 ## A word from DTL
 
-"Initially the idea was that version 8 would be the next retail version. However, the additional OTF–TTF conversion, the export of the UFO 3 format, and the development of the updated manual takes a bit longer than expected. In the past months we received quite a number of requests for a new OTM version, so we have decided to release version 7.9, even though this version comes without the aforementioned functionality and without an updated manual. Owners of version 7.9 will be able to upgrade to version 8 (scheduled for the first half of 2019) for only €25."
+“Initially the idea was that version 8 would be the next retail version. However, the additional OTF–TTF conversion, the export of the UFO 3 format, and the development of the updated manual takes a bit longer than expected. In the past months we received quite a number of requests for a new OTM version, so we have decided to release version 7.9, even though this version comes without the aforementioned functionality and without an updated manual. Owners of version 7.9 will be able to upgrade to version 8 (scheduled for the first half of 2019) for only €25.”
 
 ## System requirements
 

@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1411,16 +945,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1442,16 +976,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/blog/">blog</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1482,28 +1006,79 @@
 
   <h1>Drafting and drawing in FontLab 8</h1>
 
-<p>Two of FontLab 8's "What's New" chapters cover drafting and drawing tools, and editing and refining contours. Together they describe a toolkit that has grown considerably since FontLab VI — with a new stroke engine, better selection mechanics, and a precision editing approach that reduces the need to zoom in constantly.</p>
+<p>Two of FontLab 8’s “What’s New” chapters cover drafting and drawing tools, and editing
+and refining contours.
+Together they describe a toolkit that has grown considerably since FontLab VI — with a
+new stroke engine, better selection mechanics, and a precision editing approach that
+reduces the need to zoom in constantly.</p>
 <!-- more -->
 
 <h2 id="a-new-stroke-engine">A new stroke engine<a class="headerlink" href="#a-new-stroke-engine" title="Permanent link">&para;</a></h2>
-<p>FontLab has supported stroke-based design for years — draw a skeleton, let the software expand it to a full outline. FontLab 8 rethinks the underlying engine.</p>
+<p>FontLab has supported stroke-based design for years — draw a skeleton, let the software
+expand it to a full outline.
+FontLab 8 rethinks the underlying engine.</p>
 <p><img alt="FontLab 8 draft and draw feature header showing stroke-based letter construction" src="../../../../media/fl8-head-02-stroke.png" /></p>
-<p><strong>Simple stroke</strong> applies an outline decoration to a contour, similar to how strokes work in Illustrator. The skeleton is what FontLab "sees" — the stroke is a visual property. It's quick to apply and easy to preview.</p>
-<p><strong>Power Stroke</strong> is different. It creates virtual contours from the stroke on the fly, treating the expanded result as a first-class object. You get control over which portion of the stroke appears inside versus outside the skeleton, different cap shapes at start and end nodes, global thickness with vertical compression for optical compensation, and per-node local thickness adjustment on either side. The result: asymmetric strokes, modulated weight, and faithful calligraphic quality — all without converting to outlines until you're ready.</p>
-<p><strong>Power Brush</strong> takes a different approach than Power Stroke: it traces an ellipse along the skeleton rather than offsetting it. The result is more faithfully calligraphic — it simulates a broad-nib pen — but with fewer cap options and less thickness asymmetry than Power Stroke. For script and calligraphic typefaces, Power Brush is often the right starting point.</p>
-<p>The <strong>Thickness</strong> tool modulates stroke weight visually. Drag along a path to make it heavier or lighter locally. Combined with a pressure-sensitive tablet, this lets you draw strokes that taper and swell as naturally as physical media.</p>
+<p><strong>Simple stroke</strong> applies an outline decoration to a contour, similar to how strokes
+work in Illustrator.
+The skeleton is what FontLab “sees” — the stroke is a visual property.
+It’s quick to apply and easy to preview.</p>
+<p><strong>Power Stroke</strong> is different.
+It creates virtual contours from the stroke on the fly, treating the expanded result as
+a first-class object.
+You get control over which portion of the stroke appears inside versus outside the
+skeleton, different cap shapes at start and end nodes, global thickness with vertical
+compression for optical compensation, and per-node local thickness adjustment on either
+side.
+The result: asymmetric strokes, modulated weight, and faithful calligraphic quality
+— all without converting to outlines until you’re ready.</p>
+<p><strong>Power Brush</strong> takes a different approach than Power Stroke: it traces an ellipse along
+the skeleton rather than offsetting it.
+The result is more faithfully calligraphic — it simulates a broad-nib pen — but with
+fewer cap options and less thickness asymmetry than Power Stroke.
+For script and calligraphic typefaces, Power Brush is often the right starting point.</p>
+<p>The <strong>Thickness</strong> tool modulates stroke weight visually.
+Drag along a path to make it heavier or lighter locally.
+Combined with a pressure-sensitive tablet, this lets you draw strokes that taper and
+swell as naturally as physical media.</p>
 <h2 id="the-sketchboard-and-import">The Sketchboard and import<a class="headerlink" href="#the-sketchboard-and-import" title="Permanent link">&para;</a></h2>
-<p>FontLab's <strong>Sketchboard</strong> is an unlimited canvas outside the font's glyph grid. Drag bitmaps or vectors onto it, sketch freely, arrange and compose without committing to specific glyph slots. When you're ready, Optically Separate breaks a word image into individual glyphs; Place As Glyphs drops them into the font.</p>
-<p>SVG, PDF, and AI files can be imported as simple contours, or with their stroke and color properties preserved. Autotrace has been re-tuned for font glyph output — the algorithm knows about stem widths, curves appropriate for letterforms, and the difference between a serif and a stray artifact.</p>
+<p>FontLab’s <strong>Sketchboard</strong> is an unlimited canvas outside the font’s glyph grid.
+Drag bitmaps or vectors onto it, sketch freely, arrange and compose without committing
+to specific glyph slots.
+When you’re ready, Optically Separate breaks a word image into individual glyphs; Place
+As Glyphs drops them into the font.</p>
+<p>SVG, PDF, and AI files can be imported as simple contours, or with their stroke and
+color properties preserved.
+Autotrace has been re-tuned for font glyph output — the algorithm knows about stem
+widths, curves appropriate for letterforms, and the difference between a serif and a
+stray artifact.</p>
 <h2 id="editing-selecting-nudging-and-precision">Editing: selecting, nudging, and precision<a class="headerlink" href="#editing-selecting-nudging-and-precision" title="Permanent link">&para;</a></h2>
-<p>The editing chapter is largely about reducing friction in the small operations that compose a working session.</p>
-<p><strong>Slanted marquee selection</strong> — hold Ctrl while dragging a selection rectangle — selects in a rhomboid rather than a rectangle, useful for diagonal strokes. Selections persist when you switch masters, and can be saved to the <strong>Selections</strong> panel for reuse.</p>
-<p><strong>Power Nudge</strong> (the white arrow with modifier keys) moves a node while related nodes follow intelligently — stroke thickness is preserved when you move along a stem. The toolbox toggle lets you switch between standard nudge and Power Nudge without a menu visit.</p>
-<p>The <strong>Lever</strong> is the standout new editing feature. Hold Cmd (Mac) or Ctrl (Windows) while dragging a node or handle, and it moves at a fraction of the actual cursor displacement — typically 1/10. You get sub-unit precision without zooming in. This is useful for small kerning and spacing adjustments, curve tension tweaks, and fine-tuning node positions on complex curves.</p>
-<p><strong>Align and collapse</strong> operations work on selected points: align to a grid position, or collapse multiple nearby nodes into one. <strong>Sort contours</strong> reorders them by position, which matters for interpolation compatibility.</p>
-<p>The <strong>Eraser</strong> toolbox works in three modes: erase a segment between two nodes (connecting the gap), erase a range of nodes while preserving the contour shape, or erase an entire contour. The mode switch happens in the toolbox sub-tool selector.</p>
+<p>The editing chapter is largely about reducing friction in the small operations that
+compose a working session.</p>
+<p><strong>Slanted marquee selection</strong> — hold Ctrl while dragging a selection rectangle — selects
+in a rhomboid rather than a rectangle, useful for diagonal strokes.
+Selections persist when you switch masters, and can be saved to the <strong>Selections</strong> panel
+for reuse.</p>
+<p><strong>Power Nudge</strong> (the white arrow with modifier keys) moves a node while related nodes
+follow intelligently — stroke thickness is preserved when you move along a stem.
+The toolbox toggle lets you switch between standard nudge and Power Nudge without a menu
+visit.</p>
+<p>The <strong>Lever</strong> is the standout new editing feature.
+Hold Cmd (Mac) or Ctrl (Windows) while dragging a node or handle, and it moves at a
+fraction of the actual cursor displacement — typically 1/10. You get sub-unit precision
+without zooming in. This is useful for small kerning and spacing adjustments, curve
+tension tweaks, and fine-tuning node positions on complex curves.</p>
+<p><strong>Align and collapse</strong> operations work on selected points: align to a grid position, or
+collapse multiple nearby nodes into one.
+<strong>Sort contours</strong> reorders them by position, which matters for interpolation
+compatibility.</p>
+<p>The <strong>Eraser</strong> toolbox works in three modes: erase a segment between two nodes
+(connecting the gap), erase a range of nodes while preserving the contour shape, or
+erase an entire contour.
+The mode switch happens in the toolbox sub-tool selector.</p>
 <hr />
-<p>Full documentation for these features is in the <a href="https://help.fontlab.com/fontlab/7/manual/">FontLab 8 manual</a> and the <a href="https://help.fontlab.com/fontlab/8/whats-new/">What's New section</a>.</p>
+<p>Full documentation for these features is in the
+<a href="https://help.fontlab.com/fontlab/7/manual/">FontLab 8 manual</a> and the
+<a href="https://help.fontlab.com/fontlab/8/whats-new/">What’s New section</a>.</p>
 
 
   
@@ -1627,8 +1202,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

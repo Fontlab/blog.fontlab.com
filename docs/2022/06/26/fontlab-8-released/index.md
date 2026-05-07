@@ -29,4 +29,4 @@ FontLab 8 ships with an expanded tutorial system. Text tutorials by Dave Lawrenc
 
 The 8-day introductory tutorial series at [help.fontlab.com/fontlab/8/tutorials/intro/8-days/](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/) walks through the complete workflow from first glyph to exported font, covering drawing, spacing, kerning, OpenType features, and variable font basics in sequence.
 
-Download FontLab 8 and find the full what's-new list at [fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Documentation lives at [help.fontlab.com](https://help.fontlab.com/).
+Download FontLab 8 and find the full what’s-new list at [fontlab.com/font-editor/fontlab/](https://www.fontlab.com/font-editor/fontlab/). Documentation lives at [help.fontlab.com](https://help.fontlab.com/).

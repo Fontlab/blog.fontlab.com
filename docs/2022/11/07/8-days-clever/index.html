@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1433,16 +967,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1464,16 +998,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/tutorial/">Tutorial</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1504,13 +1028,26 @@
 
   <h1>Eight days of FontLab — day 4: clever fonts</h1>
 
-<p>A font is more than a collection of drawings. Modern OpenType fonts can substitute glyphs automatically, adjust letter positioning based on context, and adapt to different languages — all driven by code inside the font file. Day 4 covers ligatures and OpenType features, and how FontLab's naming conventions and auto feature generation do most of the work for you.</p>
+<p>A font is more than a collection of drawings.
+Modern OpenType fonts can substitute glyphs automatically, adjust letter positioning
+based on context, and adapt to different languages — all driven by code inside the font
+file. Day 4 covers ligatures and OpenType features, and how FontLab’s naming conventions
+and auto feature generation do most of the work for you.</p>
 <!-- more -->
 
 <h2 id="ligatures-when-two-letters-become-one">Ligatures: when two letters become one<a class="headerlink" href="#ligatures-when-two-letters-become-one" title="Permanent link">&para;</a></h2>
-<p>You've seen those joined "fi" and "fl" pairs in well-set text. Those are ligatures — single glyphs that replace common letter combinations. Foundries casting type in metal used them to solve physical incompatibilities between adjacent letter slugs. In digital type, they solve optical ones and add visual richness.</p>
+<p>You’ve seen those joined “fi” and “fl” pairs in well-set text.
+Those are ligatures — single glyphs that replace common letter combinations.
+Foundries casting type in metal used them to solve physical incompatibilities between
+adjacent letter slugs.
+In digital type, they solve optical ones and add visual richness.</p>
 <p><img alt="Ligature design process showing fi and fl combined letterforms in the glyph editor" src="../../../../media/fl8days-4-clever-design.png" /></p>
-<p>Making a ligature in FontLab is a matter of naming. Create a new glyph with the "fi" design. In the Glyph panel, name it "f_i" — the underscore between component names tells FontLab it's a ligature. Then in the Features panel's local menu (☰), choose <strong>Add Auto Features</strong>. FontLab writes the <code>liga</code> feature code. Add more ligature glyphs with the right names and click the star button to update.</p>
+<p>Making a ligature in FontLab is a matter of naming.
+Create a new glyph with the “fi” design.
+In the Glyph panel, name it “f_i” — the underscore between component names tells FontLab
+it’s a ligature. Then in the Features panel’s local menu (☰), choose <strong>Add Auto
+Features</strong>. FontLab writes the <code>liga</code> feature code.
+Add more ligature glyphs with the right names and click the star button to update.</p>
 <p><img alt="Glyph panel in FontLab showing naming convention for f_i ligature glyph" src="../../../../media/fl8days-4-clever-name.png" /></p>
 <p>The naming rules:
 - <code>f_i</code> (no suffix) → Standard Ligatures (<code>liga</code>), on by default in apps
@@ -1518,22 +1055,38 @@
 - <code>s_t.dlig</code> → Discretionary Ligatures (<code>dlig</code>), off by default, user-enabled</p>
 <p><img alt="Features panel in FontLab showing auto-generated liga feature code" src="../../../../media/fl8days-4-clever-font.png" /></p>
 <h2 id="opentype-features-what-they-are-and-why-they-matter">OpenType features: what they are and why they matter<a class="headerlink" href="#opentype-features-what-they-are-and-why-they-matter" title="Permanent link">&para;</a></h2>
-<p>English typographer Walter Tracy wrote: "A great typeface is not a collection of beautiful letters, but a beautiful collection of letters." For digital fonts, that's truer than ever.</p>
-<p>Every glyph is a small program. A font is a coordinated system of programs. OpenType Layout gives fonts two kinds of intelligence: continuous variation along design axes (covered in day 6), and substitution and positioning rules that respond to text content and context.</p>
+<p>English typographer Walter Tracy wrote: “A great typeface is not a collection of
+beautiful letters, but a beautiful collection of letters.”
+For digital fonts, that’s truer than ever.</p>
+<p>Every glyph is a small program.
+A font is a coordinated system of programs.
+OpenType Layout gives fonts two kinds of intelligence: continuous variation along design
+axes (covered in day 6), and substitution and positioning rules that respond to text
+content and context.</p>
 <p><img alt="Arabic letterforms showing different shapes for initial, medial, final and isolated positions" src="../../../../media/fl8days-4-clever-arabic.png" /></p>
-<p>In Arabic, a letter takes different shapes at the beginning, middle, or end of a word, or when it stands alone. A handwriting or calligraphic Latin font may want different "e" shapes to avoid repetition. A formal font may want swash capitals only at the start of words, not mid-word. All of this is OpenType Layout.</p>
-<p>OpenType features are named slots — <code>liga</code>, <code>frac</code>, <code>smcp</code>, <code>calt</code>, <code>swsh</code> — each associated with lookup rules that swap or reposition glyphs under specified conditions.</p>
+<p>In Arabic, a letter takes different shapes at the beginning, middle, or end of a word,
+or when it stands alone.
+A handwriting or calligraphic Latin font may want different “e” shapes to avoid
+repetition. A formal font may want swash capitals only at the start of words, not
+mid-word. All of this is OpenType Layout.</p>
+<p>OpenType features are named slots — <code>liga</code>, <code>frac</code>, <code>smcp</code>, <code>calt</code>, <code>swsh</code> — each
+associated with lookup rules that swap or reposition glyphs under specified conditions.</p>
 <p><img alt="Zapfino font sample showing contextual alternate glyphs substituting based on adjacent characters" src="../../../../media/fl8days-4-clever-zapfino.png" /></p>
 <h2 id="glyph-naming-does-the-heavy-lifting">Glyph naming does the heavy lifting<a class="headerlink" href="#glyph-naming-does-the-heavy-lifting" title="Permanent link">&para;</a></h2>
-<p>Follow FontLab's naming conventions and you won't need to write feature code manually for the most common cases:</p>
+<p>Follow FontLab’s naming conventions and you won’t need to write feature code manually
+for the most common cases:</p>
 <ul>
 <li><code>A.swsh</code> → swash variant, goes into the <code>swsh</code> feature</li>
 <li><code>A.ss01</code> → Stylistic Set 1 variant, goes into <code>ss01</code></li>
 <li><code>A.sc</code> → small cap, goes into <code>smcp</code> and <code>c2sc</code></li>
 </ul>
-<p>Name your glyphs, then choose <strong>Add Auto Features</strong> from the Features panel menu. Done.</p>
+<p>Name your glyphs, then choose <strong>Add Auto Features</strong> from the Features panel menu.
+Done.</p>
 <p><img alt="Swash capital variants in the glyph editor, showing decorative alternate uppercase forms" src="../../../../media/fl8days-4-clever-swash.png" /></p>
-<p>For contextual substitutions — where a glyph substitutes only when adjacent to specific others — you'll need to write <code>calt</code> feature code. There are good tutorials online and the logic is learnable. But you'll be surprised how far the naming conventions alone take you.</p>
+<p>For contextual substitutions — where a glyph substitutes only when adjacent to specific
+others — you’ll need to write <code>calt</code> feature code.
+There are good tutorials online and the logic is learnable.
+But you’ll be surprised how far the naming conventions alone take you.</p>
 <h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://help.fontlab.com/fontlab/7/manual/OpenType-Features/">OpenType features in FontLab 8</a></li>
@@ -1675,8 +1228,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

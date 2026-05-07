@@ -4,6 +4,37 @@
 
 - (none — session deliverables shipped)
 
+## Shipped (2026-05-08 sprint)
+
+### Flowmark build formatting
+- Added Flowmark 0.6.5 to the locked project dependencies.
+- Added `blog-fontlab format` / `./build.sh format` for in-place formatting of `src_docs/md/`.
+- `blog-fontlab build` now runs Flowmark before cleaning `docs/` and running ProperDocs.
+- Flowmark runs with semantic line breaks, safe cleanups, smart quotes, and ellipses.
+- Added a post-Flowmark repair step that restores ASCII quote delimiters inside raw HTML tags so legacy WordPress HTML attributes stay valid.
+
+### Content and task reconciliation
+- Reconciled `TASKS.md` and `TODO.md` against the current root-layout site.
+- Current source tree: 113 Markdown posts in `src_docs/md/posts/`.
+- Issue 203 draft expansion: 32 of 35 post files exist and build. Remaining open slugs: `nabla-colrv1-and-color-fonts`, `when-type-becomes-texture`, `distortion-as-defense-2026`.
+- Completed post-list/CTA styling, Made with FontLab series, browser-check, llms, and stale configuration items were removed from the open checklist and recorded in `CHANGELOG.md`.
+
+### Fixes
+- Removed stale `categories:` front matter and unknown `editorial` authors from new posts.
+- Replaced premature internal links to unshipped draft posts with plain text where needed.
+- Fixed narrow-post overflow in `mkdocs/mk-fontlab/main.html`.
+- Moved the Vexy Lines engraving post image to `src_docs/md/media/vexy-lines-and-the-useful-lie-of-engraving/` and updated the post link so the asset builds.
+
+### Verified
+- `uv run blog-fontlab format` — complete; no `.bak` or `.orig` files created.
+- `./build.sh build` — complete, no warnings.
+- `uv sync --frozen` — complete.
+- `uvx ruff check src/` — clean.
+- Source/generated HTML quote check — no smart-quote attribute delimiters in `src_docs/md` or `docs`.
+- Output sanity: `docs/index.html`, `docs/about/index.html`, `docs/CNAME`, `docs/.nojekyll`, `docs/llms.txt`, `docs/llms-full.txt` exist.
+- Counts: 113 source posts, 113 generated public post pages.
+- Browser checks: Playwright screenshots saved for home, post, archive, and about; Chrome DevTools found no horizontal overflow and no console errors on checked pages.
+
 ## Shipped (2026-05-07 session)
 
 ### Foundation

@@ -1,4 +1,4 @@
-Type spent most of its history in black and white. When emoji arrived on mobile phones, system vendors extended OpenType to carry color — and independent type designers immediately started using the new formats for expressive display faces. Day 8 covers color fonts: how they work, how to make them in FontLab 8, and how FontAudit keeps your contours honest once you're done.
+Type spent most of its history in black and white. When emoji arrived on mobile phones, system vendors extended OpenType to carry color — and independent type designers immediately started using the new formats for expressive display faces. Day 8 covers color fonts: how they work, how to make them in FontLab 8, and how FontAudit keeps your contours honest once you’re done.
 
 ## How color fonts work
 
@@ -8,10 +8,10 @@ Several formats exist:
 
 - **OpenType+COLR** — vector layers with flat colors (v0) or gradients and compositing (v1)
 - **OpenType+SVG** — full SVG graphics per glyph, including gradients and images
-- **OpenType+sbix** — PNG bitmaps per glyph at multiple sizes (Apple's original emoji format)
-- **OpenType+CBDT** — PNG bitmaps (Google's format)
+- **OpenType+sbix** — PNG bitmaps per glyph at multiple sizes (Apple’s original emoji format)
+- **OpenType+CBDT** — PNG bitmaps (Google’s format)
 
-FontLab 8 exports all four. The catch: no single format works everywhere. You'll typically export two or three and distribute them as a bundle, letting applications pick the format they support.
+FontLab 8 exports all four. The catch: no single format works everywhere. You’ll typically export two or three and distribute them as a bundle, letting applications pick the format they support.
 
 ## Making a color font
 
@@ -30,7 +30,7 @@ Color OpenType also supports bitmaps. Photograph anything — seaweed, rocks, ca
 
 ## FontAudit: the accounting department of type design
 
-Color fonts expand what's possible. FontAudit keeps the result from falling apart.
+Color fonts expand what’s possible. FontAudit keeps the result from falling apart.
 
 FontAudit is a continuous quality-checking system built into FontLab. Enable it in an open glyph and colored markers appear on the outline wherever a problem exists. Click a marker and a dialog explains the issue. About 18 tests run automatically:
 
@@ -43,9 +43,9 @@ FontAudit is a continuous quality-checking system built into FontLab. Enable it 
 
 Fix problems individually, or use the FontAudit action to batch-fix all instances of one problem type across the entire glyph set — a genuine time-saver after autotracing a hundred glyphs.
 
-Not every flag is an error. A "nearly flat curve" flag is right most of the time, but if your design intentionally uses slightly tapered curves, turn that test off in Preferences. Each flag is a judgment call. Having FontAudit make the catches means you're exercising judgment instead of hunting for problems.
+Not every flag is an error. A “nearly flat curve” flag is right most of the time, but if your design intentionally uses slightly tapered curves, turn that test off in Preferences. Each flag is a judgment call. Having FontAudit make the catches means you’re exercising judgment instead of hunting for problems.
 
-That's Day 8 — and the end of the series. From your first sketch to a polished color font, the distance is manageable.
+That’s Day 8 — and the end of the series. From your first sketch to a polished color font, the distance is manageable.
 
 ______________________________________________________________________
 

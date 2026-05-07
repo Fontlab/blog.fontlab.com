@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -22,7 +19,7 @@
         <link rel="prev" href="../../../04/17/briem-foundations/">
       
       
-        <link rel="next" href="../../../08/09/hello-fontlab-82/">
+        <link rel="next" href="../../../08/09/fontlab-82-released/">
       
       
         
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1433,16 +967,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1464,16 +998,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/blog/">blog</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1504,30 +1028,73 @@
 
   <h1>Variable fonts in FontLab 8</h1>
 
-<p>Variable fonts pack an entire type family into one file, letting users slide continuously between weights, widths, and other axes rather than jumping between predetermined styles. FontLab 8 treats variable font creation as a first-class workflow, not a post-production step. Here's what the "Families &amp; variation" chapter of the What's New documentation covers.</p>
+<p>Variable fonts pack an entire type family into one file, letting users slide
+continuously between weights, widths, and other axes rather than jumping between
+predetermined styles.
+FontLab 8 treats variable font creation as a first-class workflow, not a post-production
+step. Here’s what the “Families &amp; variation” chapter of the What’s New documentation
+covers.</p>
 <!-- more -->
 
 <h2 id="building-from-static-fonts">Building from static fonts<a class="headerlink" href="#building-from-static-fonts" title="Permanent link">&para;</a></h2>
-<p>If you already have several static weights, you don't need to rebuild from scratch to make a variable font.</p>
+<p>If you already have several static weights, you don’t need to rebuild from scratch to
+make a variable font.</p>
 <p><img alt="FontLab 8 families and variation header showing variable components and multi-master workflow" src="../../../../media/fl8-head-07-varcomponent.png" /></p>
-<p>Select multiple static fonts in the Fonts panel (Shift-click to select more than one), then choose <em>Fonts &gt; Merge Fonts to Masters</em>. FontLab creates a new multi-master font with each source as a master. If the sources differ in weight or width, FontLab builds the variation axes and assigns design coordinates. Mask layers carry over.</p>
-<p>To add a new master to an existing project: <em>Font &gt; Add Variation</em> adds a duplicate master and a new axis. From FontLab 8.3, you can specify an action set to run on the new master immediately — useful for automatically generating a condensed or bold variant from the regular.</p>
+<p>Select multiple static fonts in the Fonts panel (Shift-click to select more than one),
+then choose <em>Fonts &gt; Merge Fonts to Masters</em>. FontLab creates a new multi-master font
+with each source as a master.
+If the sources differ in weight or width, FontLab builds the variation axes and assigns
+design coordinates. Mask layers carry over.</p>
+<p>To add a new master to an existing project: <em>Font &gt; Add Variation</em> adds a duplicate
+master and a new axis.
+From FontLab 8.3, you can specify an action set to run on the new master immediately —
+useful for automatically generating a condensed or bold variant from the regular.</p>
 <h2 id="variable-components">Variable components<a class="headerlink" href="#variable-components" title="Permanent link">&para;</a></h2>
-<p>The most significant addition to FontLab 8's variation workflow is <strong>variable components</strong> — components that reference not a static glyph, but an interpolated <em>instance</em> of a glyph at a specific location on the variation axes.</p>
-<p>Design a lowercase 'o' with weight variation. Then build 'c', 'e', 'G', and 'Q' as variable components referencing 'o' at specific positions. Adjust the 'o' master and all those letters update. Each component can be placed at a different axis position — the 'c' might reference a slightly lighter interpolation of 'o' than the 'G', giving per-glyph weight compensation without manual drawing.</p>
-<p>Variable components are adjusted with sliders in the Glyph window. No code, no special panel.</p>
+<p>The most significant addition to FontLab 8’s variation workflow is <strong>variable
+components</strong> — components that reference not a static glyph, but an interpolated
+<em>instance</em> of a glyph at a specific location on the variation axes.</p>
+<p>Design a lowercase ‘o’ with weight variation.
+Then build ‘c’, ‘e’, ‘G’, and ‘Q’ as variable components referencing ‘o’ at specific
+positions. Adjust the ‘o’ master and all those letters update.
+Each component can be placed at a different axis position — the ‘c’ might reference a
+slightly lighter interpolation of ‘o’ than the ‘G’, giving per-glyph weight compensation
+without manual drawing.</p>
+<p>Variable components are adjusted with sliders in the Glyph window.
+No code, no special panel.</p>
 <h2 id="contour-compatibility">Contour compatibility<a class="headerlink" href="#contour-compatibility" title="Permanent link">&para;</a></h2>
-<p>For interpolation to work, all masters of a glyph must have the same number of contours, points, and components in the same order. This is the main technical challenge of variable font production.</p>
-<p><strong>Match when Editing</strong> propagates contour operations — set start point, reverse contour — to all matching masters automatically. The <strong>Matchmaker</strong> tool visualizes which nodes correspond between masters, color-coding matched and unmatched points. If masters are incompatible, Matchmaker shows where the divergence happens so you can re-establish correspondence manually.</p>
-<p><strong>Group layers</strong> in the layers panel organizes masters by family relationship. <strong>Master cousins</strong> shows all masters simultaneously as colored wireframes in the Glyph window — draw with one master active while seeing the others as context.</p>
+<p>For interpolation to work, all masters of a glyph must have the same number of contours,
+points, and components in the same order.
+This is the main technical challenge of variable font production.</p>
+<p><strong>Match when Editing</strong> propagates contour operations — set start point, reverse contour
+— to all matching masters automatically.
+The <strong>Matchmaker</strong> tool visualizes which nodes correspond between masters, color-coding
+matched and unmatched points.
+If masters are incompatible, Matchmaker shows where the divergence happens so you can
+re-establish correspondence manually.</p>
+<p><strong>Group layers</strong> in the layers panel organizes masters by family relationship.
+<strong>Master cousins</strong> shows all masters simultaneously as colored wireframes in the Glyph
+window — draw with one master active while seeing the others as context.</p>
 <h2 id="intermediate-masters-and-axis-mapping">Intermediate masters and axis mapping<a class="headerlink" href="#intermediate-masters-and-axis-mapping" title="Permanent link">&para;</a></h2>
-<p>Standard variable font interpolation is linear. If your design curve isn't — a bold typically needs more weight change near the light end than near the dark — you have two options.</p>
-<p><strong>Intermediate masters</strong> add a master at a specific axis position. FontLab exports these as intermediate glyph masters in the variable font, giving you non-linear interpolation without avar.</p>
-<p><strong>The Axis Graph</strong> maps your internal design coordinates to the user-facing coordinates in the variable font (the avar table). A curved mapping means users see a perceptually even weight ramp even when the design space isn't linearly distributed.</p>
+<p>Standard variable font interpolation is linear.
+If your design curve isn’t — a bold typically needs more weight change near the light
+end than near the dark — you have two options.</p>
+<p><strong>Intermediate masters</strong> add a master at a specific axis position.
+FontLab exports these as intermediate glyph masters in the variable font, giving you
+non-linear interpolation without avar.</p>
+<p><strong>The Axis Graph</strong> maps your internal design coordinates to the user-facing coordinates
+in the variable font (the avar table).
+A curved mapping means users see a perceptually even weight ramp even when the design
+space isn’t linearly distributed.</p>
 <h2 id="conditional-glyph-substitutions">Conditional glyph substitutions<a class="headerlink" href="#conditional-glyph-substitutions" title="Permanent link">&para;</a></h2>
-<p>Variable fonts can swap glyphs at axis boundaries — switching to a different 'a' design above a certain weight, for example. FontLab 8 implements this with <strong>tilde glyph tags</strong>: name a glyph <code>a~wt&gt;850</code> and FontLab exports an <code>rvrn</code> rule substituting it for 'a' when the weight axis exceeds 850. This handles design decisions that can't be interpolated, like switching from a two-story to a one-story 'a' at a specific weight threshold.</p>
+<p>Variable fonts can swap glyphs at axis boundaries — switching to a different ‘a’ design
+above a certain weight, for example.
+FontLab 8 implements this with <strong>tilde glyph tags</strong>: name a glyph <code>a~wt&gt;850</code> and FontLab
+exports an <code>rvrn</code> rule substituting it for ‘a’ when the weight axis exceeds 850. This
+handles design decisions that can’t be interpolated, like switching from a two-story to
+a one-story ‘a’ at a specific weight threshold.</p>
 <hr />
-<p>Full documentation is in the <a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/">FontLab 8 What's New: Families &amp; variation</a>.</p>
+<p>Full documentation is in the
+<a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/">FontLab 8 What’s New: Families &amp; variation</a>.</p>
 
 
   
@@ -1651,8 +1218,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

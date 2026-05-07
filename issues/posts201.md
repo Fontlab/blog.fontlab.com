@@ -1,5 +1,5 @@
 
-CREATE SHORT POSTS from these items: 
+CREATE SHORT POSTS from these items:
 
 ------
 
@@ -25,7 +25,7 @@ Questions which will be answered:
 4.  Where do you get your brushes and materials?
 5.  Is it possible to run a profitable lettering business from home?
 
- 
+
 
 Presented by John Downer & Paul Herrera
 March 11, 2014 11:00 CST
@@ -44,15 +44,15 @@ Matthew Carter webinar
 
 He has an extensive background in typography, working with some of the great designers in our field. Matthew has been part of the transformation of the industry since the days of metal type.
 
- 
+
 
 He has worked for many foundries, including Linotype, and was the founder of the Bitstream font foundry. He has designed many of the fonts that we use every day, including Bell Centennial used in our phone books. He is the creator of Verdana, Snell Roundhand, and Carter Sans as well as many adaptations of fonts such as Galliard, Bodoni, etc.
 
- 
+
 
 Matthew will be doing an interview and answering questions during this webinar. But we are limited to 200 attendees - so register ASAP! If you don't make it into the webinar there will be an online recording you can register for later.
 
- 
+
 -------------------
 
 Introducing TransType 4 for Mac OS X and Windows
@@ -62,7 +62,7 @@ December 2013 INTRODUCING TransType 4 for Mac and Windows, an easy application t
 
 Download free 7-day trial for Mac and Windows or buy now at US$97 (upgrades just US$39.95).
 
- 
+
 -------------------------
 
 December 2013: Introducing FontLab Studio 5.2 for Windows
@@ -78,7 +78,7 @@ Nov 2012 Brand-new FontLab Studio 5.2 Win, new FontLab Studio 5.1.3 Mac
 
 Free updates: Fontographer Mac & Win, TypeTool Mac
 Oct 2012 Updates: TypeTool 3.1.1 Mac and Fontographer 5.2.1
- 
+
 ---------------
 
-——— also create short posts for older history from https://www.fontlab.com/about/ 
+——— also create short posts for older history from https://www.fontlab.com/about/

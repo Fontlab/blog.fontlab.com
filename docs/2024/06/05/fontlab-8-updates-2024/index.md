@@ -14,10 +14,10 @@ Both updates are free for all FontLab 8 users. FontLab 8.4 also marks a mileston
 
 ## FontLab 8.4 (June 2024)
 
-- **Variable components** — drag handles in the Glyph window to change a component's variation axis values in real time, without typing numbers into a panel.
+- **Variable components** — drag handles in the Glyph window to change a component’s variation axis values in real time, without typing numbers into a panel.
 - **Detach serifs from stems** — extract serif elements from a glyph and convert them to reusable Smart Corner components, so editing the serif shape once propagates across the whole typeface.
 - **UVS sequences** — edit Unicode Variation Sequences for CJK ideograph variants and emoji, required for fonts targeting Japanese, Chinese, and Korean publishing workflows.
-- **Tool-specific context menus** — right-click with any tool (Text, Eraser, Brush, Pencil, Knife, Scissors, Thickness, and more) to get a menu relevant to that tool's context.
+- **Tool-specific context menus** — right-click with any tool (Text, Eraser, Brush, Pencil, Knife, Scissors, Thickness, and more) to get a menu relevant to that tool’s context.
 - **Node and handle rendering** — customize the size, shape, and color of nodes and handles. Useful on high-DPI displays where default node sizes can feel cramped.
 - **Kerning preview** — a visual overlay in the Glyph window showing the applied kerning value as a colored band between glyphs, making it easy to spot missing or anomalous pairs.
 - **Better Help panel** — context-sensitive articles that update as you switch tools, keeping relevant documentation one glance away.

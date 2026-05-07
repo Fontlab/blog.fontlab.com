@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../css/extra.css">
     
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -850,480 +858,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1372,7 +906,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1381,11 +915,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2019-11-30 00:00:00+00:00">November 30, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1402,7 +931,12 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="introducing-fontlab-7-the-pro-font-editor-evolved"><a class="toclink" href="../../2019/11/30/introducing-fontlab-7-the-pro-font-editor-evolved/">Introducing FontLab 7: the pro font editor, evolved</a></h2>
-<p>FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of concentrated work, with more than 250 new features, fixes, and improvements. Highlights include auto-generated OpenType features, both-sided kerning classes, kerning clash detection, variable font intermediate masters and conditional glyph substitution, and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who purchased on or after August 1, 2019 qualify for a free upgrade.</p>
+<p>FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of
+concentrated work, with more than 250 new features, fixes, and improvements.
+Highlights include auto-generated OpenType features, both-sided kerning classes, kerning
+clash detection, variable font intermediate masters and conditional glyph substitution,
+and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who
+purchased on or after August 1, 2019 qualify for a free upgrade.</p>
 
     
       <nav class="md-post__action">
@@ -1421,7 +955,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1430,11 +964,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2019-10-29 00:00:00+00:00">October 29, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1451,7 +980,11 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="migration-paths-from-legacy-fontlab-tools-on-catalina"><a class="toclink" href="../../2019/10/29/migration-paths-from-legacy-fontlab-tools-on-catalina/">Migration paths from legacy FontLab tools on Catalina</a></h2>
-<p>If you rely on FontLab Studio 5, Fontographer 5, TypeTool 3, or BitFonter 3 on a Mac that has been updated to macOS Catalina, there are three viable routes: CrossOver Mac 19 for a lightweight Windows emulation layer, a virtual machine running an older macOS or Windows, or a clean upgrade to FontLab 7. This post covers the setup in detail for each option.</p>
+<p>If you rely on FontLab Studio 5, Fontographer 5, TypeTool 3, or BitFonter 3 on a Mac
+that has been updated to macOS Catalina, there are three viable routes: CrossOver Mac 19
+for a lightweight Windows emulation layer, a virtual machine running an older macOS or
+Windows, or a clean upgrade to FontLab 7. This post covers the setup in detail for each
+option.</p>
 
     
       <nav class="md-post__action">
@@ -1470,7 +1003,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1479,11 +1012,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2019-10-08 00:00:00+00:00">October 8, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1500,7 +1028,12 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="fontlab-studio-5-fontographer-5-and-typetool-3-on-macos-1015-catalina"><a class="toclink" href="../../2019/10/08/fontlab-studio-5-fontographer-5-and-typetool-3-on-macos-1015-catalina/">FontLab Studio 5, Fontographer 5 and TypeTool 3 on macOS 10.15 Catalina</a></h2>
-<p>macOS 10.15 Catalina drops all 32-bit app support, which means FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3 for Mac will not run on it — and porting them to 64-bit is not feasible. If you are on Catalina, your options are CrossOver Mac 19 (run the Windows versions via a thin emulation layer), a virtual machine running an older macOS or Windows, or upgrading to the 64-bit FontLab 7.</p>
+<p>macOS 10.15 Catalina drops all 32-bit app support, which means FontLab Studio 5,
+Fontographer 5, TypeTool 3, and BitFonter 3 for Mac will not run on it — and porting
+them to 64-bit is not feasible.
+If you are on Catalina, your options are CrossOver Mac 19 (run the Windows versions via
+a thin emulation layer), a virtual machine running an older macOS or Windows, or
+upgrading to the 64-bit FontLab 7.</p>
 
     
       <nav class="md-post__action">
@@ -1519,7 +1052,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1528,12 +1061,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2019-01-24 00:00:00+00:00">January 24, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
         
         
           
@@ -1550,7 +1077,10 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="design-space-axes-and-multiple-masters-in-fontlab-vi"><a class="toclink" href="../../2019/01/24/design-space-axes-multiple-masters/">Design space axes and multiple masters in FontLab VI</a></h2>
-<p>Variable fonts require thinking in multiple dimensions at once — and this four-minute video from FontLab VI shows exactly how to set up a design space with axes and masters. It is a concise, visual introduction to the core concept behind variable font production.</p>
+<p>Variable fonts require thinking in multiple dimensions at once — and this four-minute
+video from FontLab VI shows exactly how to set up a design space with axes and masters.
+It is a concise, visual introduction to the core concept behind variable font
+production.</p>
 
     
       <nav class="md-post__action">
@@ -1569,7 +1099,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1578,12 +1108,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2019-01-24 00:00:00+00:00">January 24, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
         
         
           
@@ -1600,7 +1124,11 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="from-sketch-to-font-in-minutes-with-built-in-scanfont"><a class="toclink" href="../../2019/01/24/sketch-to-font-scanfont/">From sketch to font in minutes with built-in ScanFont</a></h2>
-<p>With over 40,000 views, this two-minute demo of FontLab VI's built-in ScanFont feature is one of the most-watched videos on the channel — and it earns that attention by showing something genuinely useful in a very short time. You scan or photograph hand-drawn letterforms, paste them into FontLab VI, and the software traces them into editable outlines ready for refinement.</p>
+<p>With over 40,000 views, this two-minute demo of FontLab VI’s built-in ScanFont feature
+is one of the most-watched videos on the channel — and it earns that attention by
+showing something genuinely useful in a very short time.
+You scan or photograph hand-drawn letterforms, paste them into FontLab VI, and the
+software traces them into editable outlines ready for refinement.</p>
 
     
       <nav class="md-post__action">
@@ -1733,8 +1261,6 @@
     
     
       <script src="../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

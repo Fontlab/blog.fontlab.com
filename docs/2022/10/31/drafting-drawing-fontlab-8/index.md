@@ -1,12 +1,12 @@
-Two of FontLab 8's "What's New" chapters cover drafting and drawing tools, and editing and refining contours. Together they describe a toolkit that has grown considerably since FontLab VI — with a new stroke engine, better selection mechanics, and a precision editing approach that reduces the need to zoom in constantly.
+Two of FontLab 8’s “What’s New” chapters cover drafting and drawing tools, and editing and refining contours. Together they describe a toolkit that has grown considerably since FontLab VI — with a new stroke engine, better selection mechanics, and a precision editing approach that reduces the need to zoom in constantly.
 
 ## A new stroke engine
 
 FontLab has supported stroke-based design for years — draw a skeleton, let the software expand it to a full outline. FontLab 8 rethinks the underlying engine.
 
-**Simple stroke** applies an outline decoration to a contour, similar to how strokes work in Illustrator. The skeleton is what FontLab "sees" — the stroke is a visual property. It's quick to apply and easy to preview.
+**Simple stroke** applies an outline decoration to a contour, similar to how strokes work in Illustrator. The skeleton is what FontLab “sees” — the stroke is a visual property. It’s quick to apply and easy to preview.
 
-**Power Stroke** is different. It creates virtual contours from the stroke on the fly, treating the expanded result as a first-class object. You get control over which portion of the stroke appears inside versus outside the skeleton, different cap shapes at start and end nodes, global thickness with vertical compression for optical compensation, and per-node local thickness adjustment on either side. The result: asymmetric strokes, modulated weight, and faithful calligraphic quality — all without converting to outlines until you're ready.
+**Power Stroke** is different. It creates virtual contours from the stroke on the fly, treating the expanded result as a first-class object. You get control over which portion of the stroke appears inside versus outside the skeleton, different cap shapes at start and end nodes, global thickness with vertical compression for optical compensation, and per-node local thickness adjustment on either side. The result: asymmetric strokes, modulated weight, and faithful calligraphic quality — all without converting to outlines until you’re ready.
 
 **Power Brush** takes a different approach than Power Stroke: it traces an ellipse along the skeleton rather than offsetting it. The result is more faithfully calligraphic — it simulates a broad-nib pen — but with fewer cap options and less thickness asymmetry than Power Stroke. For script and calligraphic typefaces, Power Brush is often the right starting point.
 
@@ -14,7 +14,7 @@ The **Thickness** tool modulates stroke weight visually. Drag along a path to ma
 
 ## The Sketchboard and import
 
-FontLab's **Sketchboard** is an unlimited canvas outside the font's glyph grid. Drag bitmaps or vectors onto it, sketch freely, arrange and compose without committing to specific glyph slots. When you're ready, Optically Separate breaks a word image into individual glyphs; Place As Glyphs drops them into the font.
+FontLab’s **Sketchboard** is an unlimited canvas outside the font’s glyph grid. Drag bitmaps or vectors onto it, sketch freely, arrange and compose without committing to specific glyph slots. When you’re ready, Optically Separate breaks a word image into individual glyphs; Place As Glyphs drops them into the font.
 
 SVG, PDF, and AI files can be imported as simple contours, or with their stroke and color properties preserved. Autotrace has been re-tuned for font glyph output — the algorithm knows about stem widths, curves appropriate for letterforms, and the difference between a serif and a stray artifact.
 
@@ -34,4 +34,4 @@ The **Eraser** toolbox works in three modes: erase a segment between two nodes (
 
 ______________________________________________________________________
 
-Full documentation for these features is in the [FontLab 8 manual](https://help.fontlab.com/fontlab/7/manual/) and the [What's New section](https://help.fontlab.com/fontlab/8/whats-new/).
+Full documentation for these features is in the [FontLab 8 manual](https://help.fontlab.com/fontlab/7/manual/) and the [What’s New section](https://help.fontlab.com/fontlab/8/whats-new/).

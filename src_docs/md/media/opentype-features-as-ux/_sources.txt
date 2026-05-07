@@ -1,0 +1,2 @@
+fl8-8days-opentype.png
+  Source: copied from src_docs/md/media/fl8-8days-opentype.png (in-repo asset, FontLab Ltd.)

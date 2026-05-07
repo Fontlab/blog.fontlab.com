@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1400,16 +934,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1431,16 +965,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/release/">release</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1471,27 +995,70 @@
 
   <h1>Introducing FontLab 7: the pro font editor, evolved</h1>
 
-<p>FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of concentrated work, with more than 250 new features, fixes, and improvements. Highlights include auto-generated OpenType features, both-sided kerning classes, kerning clash detection, variable font intermediate masters and conditional glyph substitution, and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who purchased on or after August 1, 2019 qualify for a free upgrade.</p>
+<p>FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of
+concentrated work, with more than 250 new features, fixes, and improvements.
+Highlights include auto-generated OpenType features, both-sided kerning classes, kerning
+clash detection, variable font intermediate masters and conditional glyph substitution,
+and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who
+purchased on or after August 1, 2019 qualify for a free upgrade.</p>
 <!-- more -->
 
 <p><a href="https://www.youtube.com/watch?v=9tQxrLxdbXI"><img alt="Introducing FontLab 7: the pro font editor, evolved" src="https://i.ytimg.com/vi/9tQxrLxdbXI/maxresdefault.jpg" /></a></p>
-<p>Until <strong>December 22, 2019</strong>, you can buy FontLab 7 or upgrade from FontLab Studio 5, Fontographer, or TypeTool 3 at a <strong>25% discount</strong>. If you have <strong>FontLab VI</strong>, you can upgrade to 7 for just $99 — and if you bought FontLab VI on August 1 or later, or hold a full educational license, the upgrade is <strong>free</strong>.</p>
+<p>Until <strong>December 22, 2019</strong>, you can buy FontLab 7 or upgrade from FontLab Studio 5,
+Fontographer, or TypeTool 3 at a <strong>25% discount</strong>. If you have <strong>FontLab VI</strong>, you can
+upgrade to 7 for just $99 — and if you bought FontLab VI on August 1 or later, or hold a
+full educational license, the upgrade is <strong>free</strong>.</p>
 <p><a href="https://www.fontlab.com/font-editor/fontlab/">Visit the FontLab 7 website</a></p>
 <blockquote>
-<p>Auto OpenType features • Equalize uneven stems • Edit all masters • Precision dragging • View centerline &amp; thickness • Batch glyph renaming • Conditional glyphs • Both-sided kerning classes • Fix kerning clashes • VF intermediate masters • Parametric GPOS • PDF • JSON • CFF2 • STAT • Quick Help • 250+ features &amp; fixes</p>
+<p>Auto OpenType features • Equalize uneven stems • Edit all masters • Precision dragging
+• View centerline &amp; thickness • Batch glyph renaming • Conditional glyphs • Both-sided
+kerning classes • Fix kerning clashes • VF intermediate masters • Parametric GPOS •
+PDF • JSON • CFF2 • STAT • Quick Help • 250+ features &amp; fixes</p>
 </blockquote>
-<p>FontLab 7 focuses on stability, productivity, and technical excellence — four years of user feedback and deferred ideas now shipped.</p>
-<p><strong>Edit curves precisely</strong> without zooming. Improve <strong>stem consistency</strong> with thickness measurement and uneven-stem equalization. Create <strong>kerning classes</strong> quickly — now both-sided — and fix <strong>clashing kerning</strong> combinations. FontLab 7 fully supports <strong>variable fonts</strong>: open and export CFF2- and TrueType-based VFs with <strong>intermediate</strong> glyph masters, <strong>conditional</strong> glyph substitution, avar <strong>axis mapping</strong>, and STAT <strong>axis instances</strong>. <strong>View multiple masters</strong> simultaneously as overlaid wireframes or side-by-side cousins, and <strong>edit across masters</strong> with Edit across Layers and Match when Editing.</p>
-<p>FontLab 7 understands <strong>glyph naming</strong> from other font editors and can <strong>automatically generate OpenType features</strong> from different naming schemes — batch-renaming glyphs is straightforward too. Hold <strong>F1</strong> over any interface element for <strong>Quick Help</strong>. Built on a 64-bit foundation, FontLab 7 runs on <strong>macOS Catalina</strong>, <strong>Windows 10</strong>, older systems, and even Linux with Wine.</p>
-<p><a href="https://fontlab.com/font-editor/fontlab/7/">See what's new in FontLab 7</a></p>
+<p>FontLab 7 focuses on stability, productivity, and technical excellence — four years of
+user feedback and deferred ideas now shipped.</p>
+<p><strong>Edit curves precisely</strong> without zooming.
+Improve <strong>stem consistency</strong> with thickness measurement and uneven-stem equalization.
+Create <strong>kerning classes</strong> quickly — now both-sided — and fix <strong>clashing kerning</strong>
+combinations. FontLab 7 fully supports <strong>variable fonts</strong>: open and export CFF2- and
+TrueType-based VFs with <strong>intermediate</strong> glyph masters, <strong>conditional</strong> glyph
+substitution, avar <strong>axis mapping</strong>, and STAT <strong>axis instances</strong>. <strong>View multiple
+masters</strong> simultaneously as overlaid wireframes or side-by-side cousins, and <strong>edit
+across masters</strong> with Edit across Layers and Match when Editing.</p>
+<p>FontLab 7 understands <strong>glyph naming</strong> from other font editors and can <strong>automatically
+generate OpenType features</strong> from different naming schemes — batch-renaming glyphs is
+straightforward too.
+Hold <strong>F1</strong> over any interface element for <strong>Quick Help</strong>. Built on a 64-bit foundation,
+FontLab 7 runs on <strong>macOS Catalina</strong>, <strong>Windows 10</strong>, older systems, and even Linux with
+Wine.</p>
+<p><a href="https://fontlab.com/font-editor/fontlab/7/">See what’s new in FontLab 7</a></p>
 <h2 id="download-the-30-day-trial">Download the 30-day trial<a class="headerlink" href="#download-the-30-day-trial" title="Permanent link">&para;</a></h2>
-<p>Download the <strong>30-day trial</strong>, which runs side-by-side with your existing FontLab VI. Fully functional from day one.</p>
+<p>Download the <strong>30-day trial</strong>, which runs side-by-side with your existing FontLab VI.
+Fully functional from day one.</p>
 <p><a href="https://www.fontlab.com/font-editor/fontlab/#download">Go to FontLab 7 downloads</a></p>
 <h2 id="what-early-adopters-say">What early adopters say<a class="headerlink" href="#what-early-adopters-say" title="Permanent link">&para;</a></h2>
-<p><strong>Fábio Duarte Martins</strong> (Scannerlicker), designer of Optician Sans and Electrica: "This baby is a rock-solid font development software, from design to engineering. Drawing is a joy: FontLab has the best drawing tools I've ever seen, and they just got better!"</p>
-<p><strong>Eduardo Tunni</strong>, designer of the Graduate variable superfont: "Great stuff! FontLab 7 is very stable. Congrats to the FontLab team."</p>
-<p><strong>Dave Lawrence</strong> (California Type Foundry), designer of CAL Bodoni and CAL Zed: "If you want to make more fonts faster and better and if you want to stay ahead of the competition, go with FontLab 7. My favorite parts are auto layers, glyph masters, and FontAudit. Using these features, I was able to create an average of 167 ornamental glyphs (in two weights) per day."</p>
-<p><strong>Vassil Kateliev</strong> (Karandash / The FontMaker), co-designer of the Bolyar font family and developer of TypeRig: "FontLab 7 is superb. The best vector engine for drawing and manipulation I have seen in ages. Rock-steady interpolation engine that is also compliant with variable OpenType fonts. Start with an excellent multi-paradigm approach to type design — old-school outlines, element references, components, auto-generated glyphs, or all of them combined. Add auto layers, auto OpenType feature generation, a powerful Python API, and multi-platform support. FontLab 7 finally feels mature."</p>
+<p><strong>Fábio Duarte Martins</strong> (Scannerlicker), designer of Optician Sans and Electrica: “This
+baby is a rock-solid font development software, from design to engineering.
+Drawing is a joy: FontLab has the best drawing tools I’ve ever seen, and they just got
+better!”</p>
+<p><strong>Eduardo Tunni</strong>, designer of the Graduate variable superfont: “Great stuff!
+FontLab 7 is very stable.
+Congrats to the FontLab team.”</p>
+<p><strong>Dave Lawrence</strong> (California Type Foundry), designer of CAL Bodoni and CAL Zed: “If you
+want to make more fonts faster and better and if you want to stay ahead of the
+competition, go with FontLab 7. My favorite parts are auto layers, glyph masters, and
+FontAudit.
+Using these features, I was able to create an average of 167 ornamental glyphs
+(in two weights) per day.”</p>
+<p><strong>Vassil Kateliev</strong> (Karandash / The FontMaker), co-designer of the Bolyar font family
+and developer of TypeRig: “FontLab 7 is superb.
+The best vector engine for drawing and manipulation I have seen in ages.
+Rock-steady interpolation engine that is also compliant with variable OpenType fonts.
+Start with an excellent multi-paradigm approach to type design — old-school outlines,
+element references, components, auto-generated glyphs, or all of them combined.
+Add auto layers, auto OpenType feature generation, a powerful Python API, and
+multi-platform support.
+FontLab 7 finally feels mature.”</p>
 
 
   
@@ -1615,8 +1182,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

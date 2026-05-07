@@ -6,6 +6,7 @@
 # Usage:
 #   ./build.sh              # defaults to `build`
 #   ./build.sh build
+#   ./build.sh format
 #   ./build.sh clean
 #   ./build.sh serve
 #   ./build.sh --help

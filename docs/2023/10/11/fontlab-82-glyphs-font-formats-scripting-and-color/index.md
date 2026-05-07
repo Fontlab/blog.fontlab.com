@@ -2,7 +2,7 @@ FontLab 8.2 rounds out the release with improvements across the Font window, for
 
 ## Test and adjust.
 
-FontLab helps you iterate toward the ideal and test in real-world environments. Find and fix problems automatically, optimize contours, tweak tension and curvature, merge paths, and apply non-destructive tweaks like rounded corners and *Delta* adjustments. Change weight, convert contours, or transform glyphs. Preview current or custom text in multiple masters and multi-size waterfalls. With FontLab's built-in HarfBuzz and Microsoft ClearType, complex-script features and Windows screen rendering are the genuine article. Any glyph map, glyph, or custom text can be printed or exported to PDF.
+FontLab helps you iterate toward the ideal and test in real-world environments. Find and fix problems automatically, optimize contours, tweak tension and curvature, merge paths, and apply non-destructive tweaks like rounded corners and *Delta* adjustments. Change weight, convert contours, or transform glyphs. Preview current or custom text in multiple masters and multi-size waterfalls. With FontLab’s built-in HarfBuzz and Microsoft ClearType, complex-script features and Windows screen rendering are the genuine article. Any glyph map, glyph, or custom text can be printed or exported to PDF.
 
 [Read more: Test & adjust ↗️](https://help.fontlab.com/fontlab/8/whats-new/whats-new-08-test-adjust/)
 
@@ -46,6 +46,6 @@ With numerous fixes for issues reported by users, **FontLab 8.2** reaches a new 
 
 ## More on FontLab 8.2
 
-- [Hello, FontLab 8.2!](https://blog.fontlab.com/2023/08/09/hello-fontlab-82/index.md)
+- [Hello, FontLab 8.2!](https://blog.fontlab.com/2023/08/09/fontlab-82-released/index.md)
 - [Drawing, stroke, and contour tools](https://blog.fontlab.com/2023/08/30/fontlab-82-drawing-stroke-and-contour-tools/index.md)
 - [OpenType features, kerning, and variable fonts](https://blog.fontlab.com/2023/09/20/fontlab-82-opentype-features-kerning-and-variable-fonts/index.md)

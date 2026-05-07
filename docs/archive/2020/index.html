@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../css/extra.css">
     
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -850,480 +858,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1372,7 +906,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1381,11 +915,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2020-12-30 00:00:00+00:00">December 30, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1402,7 +931,10 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="fontlab-7-a-year-in-updates"><a class="toclink" href="../../2020/12/30/fontlab-7-year-in-review/">FontLab 7: a year in updates</a></h2>
-<p>FontLab 7 launched in December 2019 with over 250 new features. Twelve months later, it has rather more than that. Here is what the 2020 update cycle actually delivered — not counting FontLab 7.2, which has <a href="../../2020/11/30/say-hello-to-fontlab-72/">its own post</a>.</p>
+<p>FontLab 7 launched in December 2019 with over 250 new features.
+Twelve months later, it has rather more than that.
+Here is what the 2020 update cycle actually delivered — not counting FontLab 7.2, which
+has <a href="../../2020/11/30/say-hello-to-fontlab-72/">its own post</a>.</p>
 
     
       <nav class="md-post__action">
@@ -1421,7 +953,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1430,12 +962,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2020-12-16 00:00:00+00:00">December 16, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
         
         
           
@@ -1452,7 +978,11 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="basics-of-spacing-in-fontlab-7"><a class="toclink" href="../../2020/12/16/basics-of-spacing-fontlab-7/">Basics of spacing in FontLab 7</a></h2>
-<p>Spacing is the invisible work that determines whether a font feels effortless or labored to read. This five-minute tutorial from Dave Lawrence's FontLab 7 series strips the topic down to its essentials: what sidebearings are, how to set them in the metrics window, and how to evaluate spacing visually as you work.</p>
+<p>Spacing is the invisible work that determines whether a font feels effortless or labored
+to read.
+This five-minute tutorial from Dave Lawrence’s FontLab 7 series strips the topic
+down to its essentials: what sidebearings are, how to set them in the metrics window,
+and how to evaluate spacing visually as you work.</p>
 
     
       <nav class="md-post__action">
@@ -1471,7 +1001,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1480,12 +1010,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2020-12-11 00:00:00+00:00">December 11, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
         
         
           
@@ -1502,7 +1026,10 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="import-artwork-into-fontlab-7"><a class="toclink" href="../../2020/12/11/import-artwork-fontlab-7/">Import artwork into FontLab 7</a></h2>
-<p>Most type designers don't draw directly in the font editor — they sketch in pencil, refine in Illustrator or Affinity Designer, then need to get that artwork into FontLab cleanly. This eight-minute video from Dave Lawrence's FontLab 7 series shows exactly how.</p>
+<p>Most type designers don’t draw directly in the font editor — they sketch in pencil,
+refine in Illustrator or Affinity Designer, then need to get that artwork into FontLab
+cleanly.
+This eight-minute video from Dave Lawrence’s FontLab 7 series shows exactly how.</p>
 
     
       <nav class="md-post__action">
@@ -1521,7 +1048,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1530,11 +1057,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2020-11-30 00:00:00+00:00">November 30, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1551,7 +1073,12 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="say-hello-to-fontlab-72"><a class="toclink" href="../../2020/11/30/say-hello-to-fontlab-72/">Say hello to FontLab 7.2</a></h2>
-<p>FontLab 7.2 is a free update with 120 new or improved features. The headline: interpolation now runs 30× faster. New tools include Rotate, Scale, and Slant; an adaptive freeform grid with Suggest Distance; variable and attached components; visual OpenType feature proofing; and Microsoft VOLT integration. Existing FontLab 7 users get it free; FontLab VI users can upgrade for $99.</p>
+<p>FontLab 7.2 is a free update with 120 new or improved features.
+The headline: interpolation now runs 30× faster.
+New tools include Rotate, Scale, and Slant; an adaptive freeform grid with Suggest
+Distance; variable and attached components; visual OpenType feature proofing; and
+Microsoft VOLT integration.
+Existing FontLab 7 users get it free; FontLab VI users can upgrade for $99.</p>
 
     
       <nav class="md-post__action">
@@ -1570,7 +1097,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1579,11 +1106,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2020-03-02 00:00:00+00:00">March 2, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1600,7 +1122,12 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="fontlab-71-ink-traps-harmonized-handles-and-quick-measurement"><a class="toclink" href="../../2020/03/02/fontlab-71/">FontLab 7.1: ink traps, harmonized handles, and quick measurement</a></h2>
-<p>FontLab 7.1 landed in March 2020 as a free update to all <a href="../../2019/11/30/introducing-fontlab-7-the-pro-font-editor-evolved/">FontLab 7</a> users, delivering over 70 new and improved features and 80 fixes across five point releases between March and August 2020. The headline additions — ink traps, harmonized handles, looped corners, and quick measurement — gave designers finer control over node behavior and optical geometry than any prior version.</p>
+<p>FontLab 7.1 landed in March 2020 as a free update to all
+<a href="../../2019/11/30/introducing-fontlab-7-the-pro-font-editor-evolved/">FontLab 7</a> users, delivering over 70 new and
+improved features and 80 fixes across five point releases between March and August 2020.
+The headline additions — ink traps, harmonized handles, looped corners, and quick
+measurement — gave designers finer control over node behavior and optical geometry than
+any prior version.</p>
 
     
       <nav class="md-post__action">
@@ -1733,8 +1260,6 @@
     
     
       <script src="../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

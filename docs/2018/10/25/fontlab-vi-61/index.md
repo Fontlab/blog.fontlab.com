@@ -4,7 +4,7 @@ FontLab VI 6.1 shipped across four point releases between October 2018 and April
 
 - **Standards-compliant components** — glyphs can now be built from other glyphs using proper OpenType component references, not just element references. Components behave as type designers expect: edit the base glyph and the composite updates automatically.
 - **Nonspacing components and elements** — attach a mark or element to a glyph without affecting its advance width. Building accented glyphs and stacked diacritics becomes a matter of placing components rather than manually copying contours.
-- **Metrics expressions and linked metrics** — write a formula in the sidebearing field (e.g., `=H`) to link a glyph's spacing to another glyph. Change the source and every linked glyph follows. Useful for maintaining consistent spacing groups without re-typing numbers across masters.
+- **Metrics expressions and linked metrics** — write a formula in the sidebearing field (e.g., `=H`) to link a glyph’s spacing to another glyph. Change the source and every linked glyph follows. Useful for maintaining consistent spacing groups without re-typing numbers across masters.
 - **Font window sidebar** — a new panel for filtering the glyph set by script, Unicode range, encoding, or custom tags. The sidebar replaces hunting through a flat grid when working with large character sets.
 - **Handle length and angle display** — as you draw or drag, FontLab shows the length and angle of handles and line segments in real time. Useful when matching tensions across a family or hitting a specific handle ratio.
 - **Cursor-key node editing after dragging** — move a node or handle with the cursor keys immediately after dragging it, without releasing and re-clicking. Small but fast.

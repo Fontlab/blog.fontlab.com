@@ -1,4 +1,4 @@
-With over 40,000 views, this two-minute demo of FontLab VI's built-in ScanFont feature is one of the most-watched videos on the channel — and it earns that attention by showing something genuinely useful in a very short time. You scan or photograph hand-drawn letterforms, paste them into FontLab VI, and the software traces them into editable outlines ready for refinement.
+With over 40,000 views, this two-minute demo of FontLab VI’s built-in ScanFont feature is one of the most-watched videos on the channel — and it earns that attention by showing something genuinely useful in a very short time. You scan or photograph hand-drawn letterforms, paste them into FontLab VI, and the software traces them into editable outlines ready for refinement.
 
 ScanFont was previously a separate application that shipped alongside FontLab Studio. In FontLab VI, its functionality was integrated directly into the font editor: you paste a bitmap image into a glyph cell, adjust the tracing threshold, and FontLab generates vector outlines from the grayscale artwork automatically.
 

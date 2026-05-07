@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -62,10 +59,6 @@
     
       <link rel="stylesheet" href="css/extra.css">
     
-      <link rel="stylesheet" href="assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -87,13 +80,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -847,480 +855,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1367,7 +901,146 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-05-05 00:00:00+00:00">May 5, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="opentype-is-where-good-manners-live"><a class="toclink" href="2026/05/05/opentype-is-where-good-manners-live/">OpenType is where good manners live</a></h2>
+<p>Ligatures, small caps, script behavior, and feature tags are not extras.
+They are the quiet parts that keep text readable.
+Good typography works without announcing itself.
+OpenType’s layout model gives fonts the logic for substitution and positioning, so
+contextual alternates and script-specific forms happen automatically when they should.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/05/05/opentype-is-where-good-manners-live/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/transtype.png" alt="TransType">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-04-21 00:00:00+00:00">April 21, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="the-old-fonts-are-not-dead-they-are-just-waiting-in-a-folder"><a class="toclink" href="2026/04/21/the-old-fonts-are-not-dead/">The old fonts are not dead — they are just waiting in a folder</a></h2>
+<p>Nothing gets old faster than a font format — until a client opens a twenty-year-old file
+and suddenly it is everybody’s problem again.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/04/21/the-old-fonts-are-not-dead/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-04-08 00:00:00+00:00">April 8, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="made-with-fontlab-fabio-duarte-martins"><a class="toclink" href="2026/04/08/made-with-fontlab-fabio-duarte-martins/">Made with FontLab: Fábio Duarte Martins</a></h2>
+<p><a href="https://fonts.scannerlicker.net/">Scannerlicker</a> is Fábio Duarte Martins’s foundry, and
+his testimonial is one of the few that actually names the FontLab features doing the
+work. It is, accidentally, a short manual on what to learn first.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/04/08/made-with-fontlab-fabio-duarte-martins/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/vexy-lines.png" alt="Vexy Lines">
           </span>
         
       </nav>
@@ -1376,12 +1049,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2026-03-15 00:00:00+00:00">March 15, 2026</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/news/" class="md-meta__link">News</a>, 
-              <a href="category/vexy/" class="md-meta__link">Vexy</a></li>
         
         
           
@@ -1398,7 +1065,9 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="more-from-vexy-lines-halftone-stipple-and-variable-font-text-fills"><a class="toclink" href="2026/03/15/vexy-lines-effects/">More from Vexy Lines: halftone, stipple, and variable-font text fills</a></h2>
-<p>A closer look at the effects in Vexy Lines: halftone and dithering, stipple hedcuts, contour-following flowlines, multicolor screenprint separations, and variable-font text fills. Export covers SVG, PDF, EPS, PNG, and JPG.</p>
+<p>A closer look at the effects in Vexy Lines: halftone and dithering, stipple hedcuts,
+contour-following flowlines, multicolor screenprint separations, and variable-font text
+fills. Export covers SVG, PDF, EPS, PNG, and JPG.</p>
 
     
       <nav class="md-post__action">
@@ -1417,7 +1086,193 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-03-10 00:00:00+00:00">March 10, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="variable-fonts-in-motion-and-interface"><a class="toclink" href="2026/03/10/variable-fonts-in-motion-and-ui/">Variable fonts in motion and interface</a></h2>
+<p>Typography on screen used to mean “pick a weight and hope for the best.”
+Now the weight can follow the user.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/03/10/variable-fonts-in-motion-and-ui/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-02-25 00:00:00+00:00">February 25, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="made-with-fontlab-yuri-gordon"><a class="toclink" href="2026/02/25/made-with-fontlab-yuri-gordon/">Made with FontLab: Yuri Gordon</a></h2>
+<p><a href="https://yurigordon.com/">Acqua Aldina</a> is a variable serif drawn by hand.
+<a href="https://yurigordon.com/en/shop/fonts/baker-street-221b-mr-holmes">Baker Street 221B</a> is
+a three-font Sherlockian set with a font for the detective, the doctor, and the
+housekeeper. Yuri Gordon’s catalogue does not pretend to fit one mood, and he’s open
+about why FontLab works for the spread.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/02/25/made-with-fontlab-yuri-gordon/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-02-10 00:00:00+00:00">February 10, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="fontlab-tv-glyph-construction-from-scratch"><a class="toclink" href="2026/02/10/fontlab-tv-glyph-construction/">FontLab TV: glyph construction from scratch</a></h2>
+<p>The first letter is the hardest.
+The FontLab TV glyph construction episode is a calm, deliberate walkthrough of drawing
+one letter — <code>n</code> — from a blank glyph cell to a finished, point-clean contour you can
+build a font around.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/02/10/fontlab-tv-glyph-construction/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/vexy-lines.png" alt="Vexy Lines">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-01-27 00:00:00+00:00">January 27, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="the-algorithmic-paintbrush-of-vexy-lines"><a class="toclink" href="2026/01/27/the-algorithmic-paintbrush-of-vexy-lines/">The algorithmic paintbrush of Vexy Lines</a></h2>
+<p>The boundary between a letterform and an illustration is entirely a human invention.
+Vexy Lines, released December 2025, is a signal-processing engine that treats both as
+the same problem.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/01/27/the-algorithmic-paintbrush-of-vexy-lines/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1426,12 +1281,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2026-01-15 00:00:00+00:00">January 15, 2026</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/news/" class="md-meta__link">News</a>, 
-              <a href="category/fontlab/" class="md-meta__link">FontLab</a></li>
         
         
           
@@ -1448,7 +1297,9 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="fontlab-tv-50-hour-variable-font-course-now-available"><a class="toclink" href="2026/01/15/fontlab-tv-variable-font-course/">FontLab TV: 50-hour variable font course now available</a></h2>
-<p>FontLab TV has published a 50-hour video course on variable font design, organized into 25 playlists. It runs from absolute fundamentals — coordinates, contours, metrics — through production, hinting, export, and font business basics.</p>
+<p>FontLab TV has published a 50-hour video course on variable font design, organized into
+25 playlists. It runs from absolute fundamentals — coordinates, contours, metrics —
+through production, hinting, export, and font business basics.</p>
 
     
       <nav class="md-post__action">
@@ -1467,7 +1318,376 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/vexy-lines.png" alt="Vexy Lines">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-01-13 00:00:00+00:00">January 13, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="vexy-lines-and-the-useful-lie-of-engraving"><a class="toclink" href="2026/01/13/vexy-lines-and-the-useful-lie-of-engraving/">Vexy Lines and the useful lie of engraving</a></h2>
+<p>Engraving is a useful lie.
+A hedcut looks old, sober, authoritative, and a little expensive — even when it was made
+yesterday.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/01/13/vexy-lines-and-the-useful-lie-of-engraving/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-30 00:00:00+00:00">December 30, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="the-vexy-lines-pipeline-into-fontlab"><a class="toclink" href="2025/12/30/the-vexy-lines-pipeline-into-fontlab/">The Vexy Lines pipeline into FontLab</a></h2>
+<p>Vexy Lines is not a font tool.
+It is a vector generator that happens to play unusually well with type-design tools.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/12/30/the-vexy-lines-pipeline-into-fontlab/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/vexy-lines.png" alt="Vexy Lines">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-23 00:00:00+00:00">December 23, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="vexy-lines-and-the-joy-of-halftone"><a class="toclink" href="2025/12/23/vexy-lines-and-the-joy-of-halftone/">Vexy Lines and the joy of halftone</a></h2>
+<p>If you grew up staring at old maps, comics, or 1980s movie posters, halftone is probably
+wired into your visual cortex already.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/12/23/vexy-lines-and-the-joy-of-halftone/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-16 00:00:00+00:00">December 16, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="briem-on-brushes-and-broad-pen-logic"><a class="toclink" href="2025/12/16/briem-on-brushes/">Briem on brushes and broad-pen logic</a></h2>
+<p>Gunnlaugur SE Briem has spent a career arguing that you cannot draw a serious typeface
+without understanding how a broad-edged pen makes letters.
+Briem’s tutorial on brushes is the cleanest version of that argument you will find.
+(Note: Unlike other FontLab TV episodes like
+<a href="https://www.youtube.com/playlist?list=PLj-8PzlEWrCF8M0bmHFhI0BfVk4sRCm1b">this playlist</a>,
+there is no video for this tutorial—it is purely a written masterclass.)</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/12/16/briem-on-brushes/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/vexy-lines.png" alt="Vexy Lines">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-09 00:00:00+00:00">December 9, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="hello-vexy-lines-signal-processing-for-vectors"><a class="toclink" href="2025/12/09/hello-vexy-lines-signal-processing/">Hello Vexy Lines — signal processing for vectors</a></h2>
+<p>The boundary between a letterform and an illustration is a human invention.
+To a computer, both are coordinates plotted on a grid.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/12/09/hello-vexy-lines-signal-processing/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-02 00:00:00+00:00">December 2, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="calfonts-italics-that-arent-just-slanted-romans"><a class="toclink" href="2025/12/02/calfonts-italics/">Calfonts: italics that aren't just slanted romans</a></h2>
+<p>Italics are the part of a font family that most often gets shipped wrong — slanted
+romans, no cursive structure, lopsided ovals.
+The Calfonts italic tutorial walks through what it actually takes to draw an italic that
+earns its place next to the roman.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/12/02/calfonts-italics/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-11-11 00:00:00+00:00">November 11, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="made-with-fontlab-vassil-kateliev"><a class="toclink" href="2025/11/11/made-with-fontlab-vassil-kateliev/">Made with FontLab: Vassil Kateliev</a></h2>
+<p><a href="https://github.com/tphinney/science-gothic">Science Gothic</a> is a four-axis variable
+font drawn by Thomas Phinney, Brandon Buerkle, and Vassil Kateliev.
+The fact that it exists at all — full Latin coverage, four axes, a real production
+pipeline — is partly because Kateliev wrote the toolkit that did the heavy lifting.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/11/11/made-with-fontlab-vassil-kateliev/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-11-04 00:00:00+00:00">November 4, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="the-briem-method-and-the-geometry-of-nothing"><a class="toclink" href="2025/11/04/the-briem-method-and-the-geometry-of-nothing/">The Briem method and the geometry of nothing</a></h2>
+<p>The most difficult part of drawing a typeface is not the black ink.
+It is the white space.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/11/04/the-briem-method-and-the-geometry-of-nothing/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/vexy-lines.png" alt="Vexy Lines">
           </span>
         
       </nav>
@@ -1476,12 +1696,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2025-10-27 00:00:00+00:00">October 27, 2025</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/news/" class="md-meta__link">News</a>, 
-              <a href="category/vexy/" class="md-meta__link">Vexy</a></li>
         
         
           
@@ -1498,7 +1712,10 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="hello-vexy-lines"><a class="toclink" href="2025/10/27/hello-vexy-lines/">Hello, Vexy Lines</a></h2>
-<p>Vexy Lines converts raster images into scalable vector artwork. Drop in a photo, screenshot, or AI-generated graphic; choose a fill style; export as SVG or PDF. The underlying mechanism is signal processing: image brightness drives stroke thickness, so darker areas get heavier lines and lighter areas get finer ones.</p>
+<p>Vexy Lines converts raster images into scalable vector artwork.
+Drop in a photo, screenshot, or AI-generated graphic; choose a fill style; export as SVG
+or PDF. The underlying mechanism is signal processing: image brightness drives stroke
+thickness, so darker areas get heavier lines and lighter areas get finer ones.</p>
 
     
       <nav class="md-post__action">
@@ -1517,7 +1734,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -1525,159 +1742,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2025-03-17 00:00:00+00:00">March 17, 2025</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="calligraphic-fonts-spacing-italics-and-family-planning"><a class="toclink" href="2025/03/17/calfonts-spacing-italics/">Calligraphic fonts: spacing, italics, and family planning</a></h2>
-<p>Once your letterforms are drawn, the work shifts to spacing, quality control, and — if you're ambitious — building a family. This post distills Dave Lawrence's chapters on fitting and spacing, building italic variants, and planning a type family in FontLab 8.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2025/03/17/calfonts-spacing-italics/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-19 00:00:00+00:00">November 19, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="designers-on-fontlab"><a class="toclink" href="2024/11/19/designers-on-fontlab/">Designers on FontLab</a></h2>
-<p>What do working type designers actually think of FontLab 8? The most substantive testimonials — the ones that say <em>why</em>, not just <em>that</em>.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2024/11/19/designers-on-fontlab/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-09-23 00:00:00+00:00">September 23, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="drawing-calligraphic-fonts-in-fontlab-setup-and-shapes"><a class="toclink" href="2024/09/23/calfonts-setup-shapes/">Drawing calligraphic fonts in FontLab: setup and shapes</a></h2>
-<p>Dave Lawrence of California Type Foundry wrote a comprehensive set of tutorials for FontLab 8, from installation to finished font. This post distills the first two chapters: getting your environment set up, and the fundamentals of drawing in FontLab's glyph-oriented workflow.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2024/09/23/calfonts-setup-shapes/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-08-12 00:00:00+00:00">August 12, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
+          <time datetime="2025-10-14 00:00:00+00:00">October 14, 2025</time></li>
         
         
           
@@ -1693,12 +1758,14 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="made-with-fontlab"><a class="toclink" href="2024/08/12/made-with-fontlab/">Made with FontLab</a></h2>
-<p>Designers and foundries have used FontLab to create typefaces in every style and for scripts around the world. A selection of notable fonts made with FontLab 7 or FontLab 8 — from high-resolution historical revivals to expressive variable fonts.</p>
+    <h2 id="what-type-designers-actually-argue-about"><a class="toclink" href="2025/10/14/what-type-designers-actually-argue-about/">What type designers actually argue about</a></h2>
+<p>If you only read industry marketing, you might think type designers spend their time
+celebrating the same handful of features.
+The forums tell a different story.</p>
 
     
       <nav class="md-post__action">
-        <a href="2024/08/12/made-with-fontlab/">
+        <a href="2025/10/14/what-type-designers-actually-argue-about/">
           Continue reading
         </a>
       </nav>
@@ -1713,7 +1780,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1721,12 +1788,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2024-06-05 00:00:00+00:00">June 5, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/release/" class="md-meta__link">release</a></li>
+          <time datetime="2025-10-07 00:00:00+00:00">October 7, 2025</time></li>
         
         
           
@@ -1742,12 +1804,15 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="fontlab-83-and-84-whats-new"><a class="toclink" href="2024/06/05/fontlab-8-updates-2024/">FontLab 8.3 and 8.4: what's new</a></h2>
-<p>Since the FontLab 8.2 release in August 2023, two major free updates have shipped: 8.3 in December 2023 and 8.4 in June 2024. Together they add over 200 new features and improvements. Here is the short version.</p>
+    <h2 id="briem-how-to-draw-an-italic-and-why-the-slanted-roman-trap-is-real"><a class="toclink" href="2025/10/07/briem-drawing-italic/">Briem: how to draw an italic (and why the slanted-roman trap is real)</a></h2>
+<p>Italic is not roman tilted to the right.
+Slant your upright <code>a</code> and what you get is a tilted <code>a</code>, not an italic <code>a</code> — the
+structure is wrong, the rhythm is wrong, the connection points are wrong.
+Briem’s italic tutorial, lightly modernized, walks through what an italic actually is.</p>
 
     
       <nav class="md-post__action">
-        <a href="2024/06/05/fontlab-8-updates-2024/">
+        <a href="2025/10/07/briem-drawing-italic/">
           Continue reading
         </a>
       </nav>
@@ -1762,7 +1827,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1770,159 +1835,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2024-04-08 00:00:00+00:00">April 8, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="briem-on-spacing-italics-and-the-bold-weight"><a class="toclink" href="2024/04/08/briem-bold-italic-spacing/">Briem on spacing, italics, and the bold weight</a></h2>
-<p>Three chapters from Gunnlaugur SE Briem's notes on type design cover the work that comes after the roman is drawn: making a bold weight, designing the italic, and spacing the result. All three are harder than they look and more forgiving than they seem.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2024/04/08/briem-bold-italic-spacing/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-11-13 00:00:00+00:00">November 13, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="color-scripts-and-color-font-formats"><a class="toclink" href="2023/11/13/color-scripts-color-fonts/">Color, scripts, and color-font formats</a></h2>
-<p>FontLab 8 supports every current color OpenType format and ships with Python 3.11 scripting and the TypeRig library. This post covers the color workflow and scripting capabilities from the "Color" and "Scripts &amp; extensions" chapters of the What's New documentation.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2023/11/13/color-scripts-color-fonts/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-10-11 00:00:00+00:00">October 11, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fontlab-82-glyphs-font-formats-scripting-and-color"><a class="toclink" href="2023/10/11/fontlab-82-glyphs-font-formats-scripting-and-color/">FontLab 8.2: glyphs, font formats, scripting, and color</a></h2>
-<p>FontLab 8.2 rounds out the release with improvements across the Font window, format interop, Python scripting, and color fonts. Highlights include COLRv1 support, temporary font installation on export, improved Glyphs file format support, Python 3.11.3 for 10–60% faster scripting, and case conversion in the Font window.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2023/10/11/fontlab-82-glyphs-font-formats-scripting-and-color/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-09-20 00:00:00+00:00">September 20, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/release/" class="md-meta__link">release</a></li>
+          <time datetime="2025-09-23 00:00:00+00:00">September 23, 2025</time></li>
         
         
           
@@ -1938,12 +1851,16 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="fontlab-82-opentype-features-kerning-and-variable-fonts"><a class="toclink" href="2023/09/20/fontlab-82-opentype-features-kerning-and-variable-fonts/">FontLab 8.2: OpenType features, kerning, and variable fonts</a></h2>
-<p>FontLab 8.2 advances OpenType feature handling and kerning: right-to-left kerning for Arabic and Hebrew, the new Kern to Distance autokerning, better exception auditing, and improved kerning class management. Variable font support gains easier intermediate masters and extended conditional glyph substitution. Component and auto-layer workflows are also refined.</p>
+    <h2 id="making-hangul-in-fontlab"><a class="toclink" href="2025/09/23/making-hangul-in-fontlab/">Making Hangul in FontLab</a></h2>
+<p>Hangul looks deceptively simple to a Latin-trained eye.
+Twenty-four basic letters, written in tidy syllabic blocks.
+The reality is that those letters combine into more than eleven thousand pre-composed
+syllables, and getting them all to behave inside a single font is one of the harder jobs
+in modern type design.</p>
 
     
       <nav class="md-post__action">
-        <a href="2023/09/20/fontlab-82-opentype-features-kerning-and-variable-fonts/">
+        <a href="2025/09/23/making-hangul-in-fontlab/">
           Continue reading
         </a>
       </nav>
@@ -1958,7 +1875,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1966,208 +1883,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2023-09-04 00:00:00+00:00">September 4, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="briem-on-type-design-decisions"><a class="toclink" href="2023/09/04/briem-decisions/">Briem on type design decisions</a></h2>
-<p>The hardest part of designing a typeface isn't drawing — it's deciding. Which letterforms? How wide? How much contrast? Gunnlaugur SE Briem's notes on decisions and modules offer two complementary approaches: systematic variation and comparison, and learning from masterpieces.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2023/09/04/briem-decisions/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-08-30 00:00:00+00:00">August 30, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fontlab-82-drawing-stroke-and-contour-tools"><a class="toclink" href="2023/08/30/fontlab-82-drawing-stroke-and-contour-tools/">FontLab 8.2: drawing, stroke, and contour tools</a></h2>
-<p>FontLab 8.2 refines the drawing and contour toolset: improved Stroke and Brush modulation, new Harmonize Handles for G2 smoothness, smarter Knife slicing, and a redesigned drag-to-zoom experience. Whether you work with calligraphic strokes on the Sketchboard or precision nodes in the Glyph window, the tools are faster and more responsive.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2023/08/30/fontlab-82-drawing-stroke-and-contour-tools/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-08-09 00:00:00+00:00">August 9, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              8 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="hello-fontlab-82"><a class="toclink" href="2023/08/09/hello-fontlab-82/">Hello, FontLab 8.2!</a></h2>
-<p>FontLab 8.2 delivers 250 improvements over FontLab 8.0, with major additions including OpenType MATH table support, designspace-aware feature generation, smarter component handling, and a redesigned Welcome screen. It consolidates the FontLab 8 generation and sets the foundation for further free updates.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2023/08/09/hello-fontlab-82/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-05-22 00:00:00+00:00">May 22, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="variable-fonts-in-fontlab-8"><a class="toclink" href="2023/05/22/variable-fonts-fontlab-8/">Variable fonts in FontLab 8</a></h2>
-<p>Variable fonts pack an entire type family into one file, letting users slide continuously between weights, widths, and other axes rather than jumping between predetermined styles. FontLab 8 treats variable font creation as a first-class workflow, not a post-production step. Here's what the "Families &amp; variation" chapter of the What's New documentation covers.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2023/05/22/variable-fonts-fontlab-8/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-04-17 00:00:00+00:00">April 17, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
+          <time datetime="2025-09-09 00:00:00+00:00">September 9, 2025</time></li>
         
         
           
@@ -2183,12 +1899,14 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="briems-typography-lessons-foundations"><a class="toclink" href="2023/04/17/briem-foundations/">Briem's typography lessons: foundations</a></h2>
-<p>Gunnlaugur SE Briem taught type design at the Royal Academy of Fine Arts in Copenhagen in 1996. His notes from that course — precise, practical, free of mystification — have been republished with permission on the FontLab documentation site. Here is a distillation of his opening chapters on why you'd make a font and what the basics actually require.</p>
+    <h2 id="fontlab-tv-opentype-features-made-simple"><a class="toclink" href="2025/09/09/fontlab-tv-opentype-features/">FontLab TV: OpenType features made simple</a></h2>
+<p>OpenType features are the part of font design where text becomes typography.
+The FontLab TV OpenType episode walks through the feature tags you will actually use,
+what they do at runtime, and how to write them without breaking anything else.</p>
 
     
       <nav class="md-post__action">
-        <a href="2023/04/17/briem-foundations/">
+        <a href="2025/09/09/fontlab-tv-opentype-features/">
           Continue reading
         </a>
       </nav>
@@ -2203,7 +1921,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -2211,18 +1929,13 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2023-03-13 00:00:00+00:00">March 13, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
+          <time datetime="2025-09-02 00:00:00+00:00">September 2, 2025</time></li>
         
         
           
           <li class="md-meta__item">
             
-              3 min read
+              2 min read
             
           </li>
         
@@ -2232,12 +1945,14 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="eight-days-of-fontlab-day-8-color-is-the-new-black"><a class="toclink" href="2023/03/13/8-days-color/">Eight days of FontLab — Day 8: color is the new black</a></h2>
-<p>Type spent most of its history in black and white. When emoji arrived on mobile phones, system vendors extended OpenType to carry color — and independent type designers immediately started using the new formats for expressive display faces. Day 8 covers color fonts: how they work, how to make them in FontLab 8, and how FontAudit keeps your contours honest once you're done.</p>
+    <h2 id="beyond-the-latin-sandbox-global-typography"><a class="toclink" href="2025/09/02/beyond-the-latin-sandbox-global-typography/">Beyond the latin sandbox — global typography</a></h2>
+<p>It is a common myopia in Western design to assume that typography begins with <code>A</code> and
+ends with <code>Z</code>. In reality, Latin script is one small neighbourhood in a vast, complex
+city of writing systems.</p>
 
     
       <nav class="md-post__action">
-        <a href="2023/03/13/8-days-color/">
+        <a href="2025/09/02/beyond-the-latin-sandbox-global-typography/">
           Continue reading
         </a>
       </nav>
@@ -2252,7 +1967,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -2260,18 +1975,13 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2023-02-13 00:00:00+00:00">February 13, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
+          <time datetime="2025-08-26 00:00:00+00:00">August 26, 2025</time></li>
         
         
           
           <li class="md-meta__item">
             
-              3 min read
+              2 min read
             
           </li>
         
@@ -2281,12 +1991,14 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="eight-days-of-fontlab-day-7-beyond-text"><a class="toclink" href="2023/02/13/8-days-beyond-text/">Eight days of FontLab — Day 7: beyond text</a></h2>
-<p>Fonts aren't just for letters. An OpenType file can hold a company logo, a set of UI icons, or an entire pictogram library — one file that works in every application that renders text. Day 7 covers two practical workflows: packaging a logo as a font, and building a consistent icon set in FontLab.</p>
+    <h2 id="calfonts-honing-letters-from-rough-sketches-to-clean-curves"><a class="toclink" href="2025/08/26/calfonts-honing-letters/">Calfonts: honing letters from rough sketches to clean curves</a></h2>
+<p>Honing is the part of font design between “I have a sketch” and “I have a glyph that
+ships.” The Calfonts honing tutorial — adapted here — covers the boring, decisive 80% of
+drawing: fixing paths automatically where you can, fixing them by hand where you must.</p>
 
     
       <nav class="md-post__action">
-        <a href="2023/02/13/8-days-beyond-text/">
+        <a href="2025/08/26/calfonts-honing-letters/">
           Continue reading
         </a>
       </nav>
@@ -2301,7 +2013,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -2309,18 +2021,13 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2023-01-09 00:00:00+00:00">January 9, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
+          <time datetime="2025-08-19 00:00:00+00:00">August 19, 2025</time></li>
         
         
           
           <li class="md-meta__item">
             
-              3 min read
+              2 min read
             
           </li>
         
@@ -2330,12 +2037,15 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="eight-days-of-fontlab-day-6-bigger-bolder-better"><a class="toclink" href="2023/01/09/8-days-bigger-bolder/">Eight days of FontLab — Day 6: bigger, bolder, better</a></h2>
-<p>One font is a typeface. A family of weights and widths is a tool. Day 6 covers two things: how FontLab helps teams stay organized across a shared project, and how to build font families — static and variable — using masters, interpolation, and variation axes.</p>
+    <h2 id="made-with-fontlab-eduardo-tunni"><a class="toclink" href="2025/08/19/made-with-fontlab-eduardo-tunni/">Made with FontLab: Eduardo Tunni</a></h2>
+<p><a href="https://etunni.github.io/Graduate-Variable-Font/">Graduate</a> is the kind of variable
+font that makes the case for the format without having to argue.
+Slab to sans, light to black, all in one file.
+Eduardo Tunni drew it in FontLab.</p>
 
     
       <nav class="md-post__action">
-        <a href="2023/01/09/8-days-bigger-bolder/">
+        <a href="2025/08/19/made-with-fontlab-eduardo-tunni/">
           Continue reading
         </a>
       </nav>
@@ -2350,7 +2060,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -2358,18 +2068,13 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2022-12-05 00:00:00+00:00">December 5, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
+          <time datetime="2025-08-12 00:00:00+00:00">August 12, 2025</time></li>
         
         
           
           <li class="md-meta__item">
             
-              3 min read
+              2 min read
             
           </li>
         
@@ -2379,12 +2084,14 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="eight-days-of-fontlab-day-5-letter-crowd"><a class="toclink" href="2022/12/05/8-days-letter-crowd/">Eight days of FontLab — day 5: letter crowd</a></h2>
-<p>Letters are social creatures. How much space they give each other determines whether a font reads comfortably or looks like a ransom note. Day 5 covers spacing (sidebearings and metrics keys) and kerning (class-based pair adjustment) — the two disciplines that turn a set of well-drawn glyphs into a usable typeface.</p>
+    <h2 id="fontlab-seen-from-six-languages"><a class="toclink" href="2025/08/12/fontlab-seen-from-six-languages/">FontLab seen from six languages</a></h2>
+<p>If you read about FontLab only in English, you get one picture.
+If you read about it in Polish, Spanish, Japanese, Korean, Chinese, and German, you get
+six.</p>
 
     
       <nav class="md-post__action">
-        <a href="2022/12/05/8-days-letter-crowd/">
+        <a href="2025/08/12/fontlab-seen-from-six-languages/">
           Continue reading
         </a>
       </nav>
@@ -2399,7 +2106,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -2407,12 +2114,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2022-11-07 00:00:00+00:00">November 7, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
+          <time datetime="2025-07-22 00:00:00+00:00">July 22, 2025</time></li>
         
         
           
@@ -2428,12 +2130,15 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="eight-days-of-fontlab-day-4-clever-fonts"><a class="toclink" href="2022/11/07/8-days-clever/">Eight days of FontLab — day 4: clever fonts</a></h2>
-<p>A font is more than a collection of drawings. Modern OpenType fonts can substitute glyphs automatically, adjust letter positioning based on context, and adapt to different languages — all driven by code inside the font file. Day 4 covers ligatures and OpenType features, and how FontLab's naming conventions and auto feature generation do most of the work for you.</p>
+    <h2 id="the-long-awkward-adolescence-of-color-fonts"><a class="toclink" href="2025/07/22/the-long-awkward-adolescence-of-color-fonts/">The long, awkward adolescence of color fonts</a></h2>
+<p>Type spent five hundred years in black and white.
+Then mobile phones demanded emoji, and four large companies sat down separately and
+proposed four entirely incompatible ways to put color into a font.
+The decade since has been an awkward growing-up.</p>
 
     
       <nav class="md-post__action">
-        <a href="2022/11/07/8-days-clever/">
+        <a href="2025/07/22/the-long-awkward-adolescence-of-color-fonts/">
           Continue reading
         </a>
       </nav>
@@ -2448,7 +2153,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -2456,357 +2161,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2022-10-31 00:00:00+00:00">October 31, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="drafting-and-drawing-in-fontlab-8"><a class="toclink" href="2022/10/31/drafting-drawing-fontlab-8/">Drafting and drawing in FontLab 8</a></h2>
-<p>Two of FontLab 8's "What's New" chapters cover drafting and drawing tools, and editing and refining contours. Together they describe a toolkit that has grown considerably since FontLab VI — with a new stroke engine, better selection mechanics, and a precision editing approach that reduces the need to zoom in constantly.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2022/10/31/drafting-drawing-fontlab-8/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-10-10 00:00:00+00:00">October 10, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="eight-days-of-fontlab-day-3-beyond-a-b-c"><a class="toclink" href="2022/10/10/8-days-beyond-abc/">Eight days of FontLab — day 3: beyond A-B-C</a></h2>
-<p>Fifty glyphs is a start. Five hundred is a font that works for most of Europe. Day 3 covers composites, diacritics, symbols, ligatures, and the FontLab tools — auto layers, anchors, auto features — that let you build a large glyph set without drawing each piece from scratch.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2022/10/10/8-days-beyond-abc/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-09-12 00:00:00+00:00">September 12, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="eight-days-of-fontlab-day-2-a-b-c"><a class="toclink" href="2022/09/12/8-days-abc/">Eight days of FontLab — day 2: A-B-C</a></h2>
-<p>You don't always need a full character set. A font with a dozen glyphs is still a font — and it works everywhere an OpenType file works. Day 2 looks at why packaging even a small set of drawings as a font pays off, and how stroke-based drawing makes calligraphic and script letterforms accessible.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2022/09/12/8-days-abc/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-08-15 00:00:00+00:00">August 15, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/tutorial/" class="md-meta__link">Tutorial</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="eight-days-of-fontlab-day-1-start-making-fonts"><a class="toclink" href="2022/08/15/8-days-start/">Eight days of FontLab — day 1: start making fonts</a></h2>
-<p>Ever wanted to make your own font? FontLab 8 can take you from rough sketch to working OpenType file — and it handles more of the tedious precision work than you might expect. Day 1 covers what the software does, why it matters, and how Autotrace can cut hours off your first project.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2022/08/15/8-days-start/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-07-18 00:00:00+00:00">July 18, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="what-changed-since-fontlab-vi"><a class="toclink" href="2022/07/18/whats-new-since-fontlab-vi/">What changed since FontLab VI</a></h2>
-<p>FontLab 8 launched in June 2022 with over 1,400 improvements over FontLab VI. For FL VI users considering the upgrade, here is a practical summary of what changed across every stage of the font-making workflow.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2022/07/18/whats-new-since-fontlab-vi/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-06-26 00:00:00+00:00">June 26, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="hello-fontlab-8"><a class="toclink" href="2022/06/26/fontlab-8-released/">Hello, FontLab 8</a></h2>
-<p>Two years into FontLab 7, users had a clear message: the drawing engine is excellent, the variable font support is solid, now make the rest of the application match. FontLab 8, shipping today, is our answer.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2022/06/26/fontlab-8-released/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2022-03-22 00:00:00+00:00">March 22, 2022</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fontlab-7207644-and-macos-123-monterey"><a class="toclink" href="2022/03/22/fontlab-7207644-and-macos-123-monterey/">FontLab 7.2.0.7644 and macOS 12.3 Monterey</a></h2>
-<p>Apple's macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing the system Python 2.7 that FontLab depended on. FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need to install a bundled Python 2.7 package alongside the app. A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644 does not have that problem.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2022/03/22/fontlab-7207644-and-macos-123-monterey/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-09-15 00:00:00+00:00">September 15, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/news/" class="md-meta__link">News</a>, 
-              <a href="category/transtype/" class="md-meta__link">TransType</a>, 
-              <a href="category/type1/" class="md-meta__link">Type1</a></li>
+          <time datetime="2025-07-15 00:00:00+00:00">July 15, 2025</time></li>
         
         
           
@@ -2822,12 +2177,108 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="rescue-your-postscript-type-1-fonts"><a class="toclink" href="2021/09/15/rescue-postscript-type1-transtype/">Rescue your PostScript Type 1 fonts</a></h2>
-<p>PostScript Type 1 fonts are on their way out. Adobe is ending Type 1 support in Creative Cloud applications in early 2023, and Apple has signalled the same direction in macOS. If you have a library of Type 1 fonts — and many working designers do — now is the time to convert them to OpenType.</p>
+    <h2 id="briem-how-to-draw-a-bold-without-ruining-the-regular"><a class="toclink" href="2025/07/15/briem-drawing-bold/">Briem: how to draw a bold (without ruining the regular)</a></h2>
+<p>A bold weight is not a thicker version of the regular.
+It is a different design that has to share a family with the regular and pretend they
+were drawn together.
+Briem’s bold tutorial — adapted lightly here — is the cleanest argument for why the
+obvious approach doesn’t work.</p>
 
     
       <nav class="md-post__action">
-        <a href="2021/09/15/rescue-postscript-type1-transtype/">
+        <a href="2025/07/15/briem-drawing-bold/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-06-24 00:00:00+00:00">June 24, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="fontlab-tv-design-space-basics"><a class="toclink" href="2025/06/24/fontlab-tv-design-space/">FontLab TV: design space basics</a></h2>
+<p>Design space is the part of variable font work that decides whether your font feels good
+or merely works. The FontLab TV design space episode is the conceptual foundation for
+everything you do with masters, axes, and instances.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/06/24/fontlab-tv-design-space/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-06-03 00:00:00+00:00">June 3, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="the-mathematics-of-variable-fonts"><a class="toclink" href="2025/06/03/the-mathematics-of-variable-fonts/">The mathematics of variable fonts</a></h2>
+<p>For five hundred years of printing, a bolder letter meant a new piece of cast lead.
+Digital typography kept that paradigm for decades.
+A family meant a folder of static files: Regular, Italic, Bold, Condensed.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/06/03/the-mathematics-of-variable-fonts/">
           Continue reading
         </a>
       </nav>
@@ -2843,7 +2294,7 @@
 
 
 <nav class="md-pagination">
-  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a> <a class="md-pagination__link" href="page/3/">3</a>
+  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a> <a class="md-pagination__link" href="page/3/">3</a> <a class="md-pagination__link" href="page/4/">4</a>
 </nav>
         
       
@@ -2956,8 +2407,6 @@
     
     
       <script src="assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

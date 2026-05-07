@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1477,16 +1011,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1508,16 +1042,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/blog/">blog</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1548,31 +1072,83 @@
 
   <h1>What changed since FontLab VI</h1>
 
-<p>FontLab 8 launched in June 2022 with over 1,400 improvements over FontLab VI. For FL VI users considering the upgrade, here is a practical summary of what changed across every stage of the font-making workflow.</p>
+<p>FontLab 8 launched in June 2022 with over 1,400 improvements over FontLab VI. For FL VI
+users considering the upgrade, here is a practical summary of what changed across every
+stage of the font-making workflow.</p>
 <!-- more -->
 
-<p>FontLab VI was released in 2017. It introduced a lot — elements, variable font support, a new drawing engine — but it arrived before those ideas were fully settled. FontLab 7 (2019) consolidated the rough edges. FontLab 8 (2022) followed with what the team calls the "best and boldest upgrade ever," with FontLab 8.2, 8.3, and 8.4 extending it further through 2023–2024.</p>
+<p>FontLab VI was released in 2017. It introduced a lot — elements, variable font support,
+a new drawing engine — but it arrived before those ideas were fully settled.
+FontLab 7 (2019) consolidated the rough edges.
+FontLab 8 (2022) followed with what the team calls the “best and boldest upgrade ever,”
+with FontLab 8.2, 8.3, and 8.4 extending it further through 2023–2024.</p>
 <h2 id="interface-and-environment">Interface and environment<a class="headerlink" href="#interface-and-environment" title="Permanent link">&para;</a></h2>
-<p>The most visible change is the optional <strong>dark theme</strong> — a common request from designers who spend long hours at a screen. Beyond aesthetics, the interface has been substantially reorganized. <strong>Widgets</strong> give quick access to properties for glyphs, components, and selections. Panels can be grouped into scrollable <strong>panel docks</strong>. Numeric values accept <strong>slider</strong> input and simple <strong>calculations</strong> (type "300+50" and get 350). Hold <strong>F1</strong> over any interface element to get a <strong>Quick Help</strong> popup explaining what it does.</p>
+<p>The most visible change is the optional <strong>dark theme</strong> — a common request from designers
+who spend long hours at a screen.
+Beyond aesthetics, the interface has been substantially reorganized.
+<strong>Widgets</strong> give quick access to properties for glyphs, components, and selections.
+Panels can be grouped into scrollable <strong>panel docks</strong>. Numeric values accept <strong>slider</strong>
+input and simple <strong>calculations</strong> (type “300+50” and get 350). Hold <strong>F1</strong> over any
+interface element to get a <strong>Quick Help</strong> popup explaining what it does.</p>
 <h2 id="drawing">Drawing<a class="headerlink" href="#drawing" title="Permanent link">&para;</a></h2>
-<p>FontLab VI had the Power Brush. FontLab 8 adds the <strong>Power Stroke</strong> — a different approach to skeleton-based drawing that allows thickness to vary asymmetrically on either side of the skeleton, with more cap options. The <strong>Thickness</strong> tool lets you visually modulate stroke weight along a path. The Pen and Rapid tools now have <strong>toolbox sub-tools</strong> accessible without switching tools.</p>
-<p>The <strong>Rectangle</strong> tool draws polygons and stars as well as rectangles. The <strong>Pencil</strong> produces smoother freehand curves. Autotrace has been improved for better glyph-optimized results.</p>
+<p>FontLab VI had the Power Brush.
+FontLab 8 adds the <strong>Power Stroke</strong> — a different approach to skeleton-based drawing
+that allows thickness to vary asymmetrically on either side of the skeleton, with more
+cap options. The <strong>Thickness</strong> tool lets you visually modulate stroke weight along a
+path.
+The Pen and Rapid tools now have <strong>toolbox sub-tools</strong> accessible without switching
+tools.</p>
+<p>The <strong>Rectangle</strong> tool draws polygons and stars as well as rectangles.
+The <strong>Pencil</strong> produces smoother freehand curves.
+Autotrace has been improved for better glyph-optimized results.</p>
 <h2 id="editing">Editing<a class="headerlink" href="#editing" title="Permanent link">&para;</a></h2>
-<p><strong>Power Nudge</strong> now has a toolbox toggle so you can switch between nudge modes without a menu trip. The <strong>Lever</strong> is new: hold Cmd (Mac) or Ctrl (Windows) while dragging a node to move it with high precision without zooming in. Curves can be tension-adjusted numerically. Points can be <strong>aligned</strong> and <strong>collapsed</strong>. Contours can be <strong>sorted</strong>. <strong>Paste to replace selection</strong> is a new operation. Ink traps and smart corners can be fine-tuned individually.</p>
+<p><strong>Power Nudge</strong> now has a toolbox toggle so you can switch between nudge modes without a
+menu trip. The <strong>Lever</strong> is new: hold Cmd (Mac) or Ctrl (Windows) while dragging a node
+to move it with high precision without zooming in.
+Curves can be tension-adjusted numerically.
+Points can be <strong>aligned</strong> and <strong>collapsed</strong>. Contours can be <strong>sorted</strong>. <strong>Paste to
+replace selection</strong> is a new operation.
+Ink traps and smart corners can be fine-tuned individually.</p>
 <h2 id="consistency-and-precision">Consistency and precision<a class="headerlink" href="#consistency-and-precision" title="Permanent link">&para;</a></h2>
-<p><strong>Auto-meter</strong> shows stem widths, segment lengths, curve tensions, and corner angles — live analytics as you draw. <strong>Quick measurement</strong> displays thickness between opposing segments. Snapping now includes <strong>continuation lines</strong>, <strong>perpendicular</strong> lines, and <strong>centerlines</strong>. The <strong>Suggest Stems</strong> feature highlights common widths in your font as you draw new paths, making it easy to keep stems consistent across glyphs.</p>
+<p><strong>Auto-meter</strong> shows stem widths, segment lengths, curve tensions, and corner angles —
+live analytics as you draw.
+<strong>Quick measurement</strong> displays thickness between opposing segments.
+Snapping now includes <strong>continuation lines</strong>, <strong>perpendicular</strong> lines, and
+<strong>centerlines</strong>. The <strong>Suggest Stems</strong> feature highlights common widths in your font as
+you draw new paths, making it easy to keep stems consistent across glyphs.</p>
 <h2 id="composites-and-assembly">Composites and assembly<a class="headerlink" href="#composites-and-assembly" title="Permanent link">&para;</a></h2>
-<p><strong>Variable components</strong> — composites that use interpolated instances of other glyphs — are new. Adjust them visually with sliders. A <strong>Fusion</strong> filter applies live Boolean pathfinding between elements. <strong>Text shapes</strong> let you re-use scaled words from your font as elements inside other glyphs. <strong>Clipping groups</strong> mask out areas. The Glue and Skin filters handle decorations attached to nodes and segments.</p>
+<p><strong>Variable components</strong> — composites that use interpolated instances of other glyphs —
+are new. Adjust them visually with sliders.
+A <strong>Fusion</strong> filter applies live Boolean pathfinding between elements.
+<strong>Text shapes</strong> let you re-use scaled words from your font as elements inside other
+glyphs. <strong>Clipping groups</strong> mask out areas.
+The Glue and Skin filters handle decorations attached to nodes and segments.</p>
 <h2 id="metrics-and-kerning">Metrics and kerning<a class="headerlink" href="#metrics-and-kerning" title="Permanent link">&para;</a></h2>
-<p>Auto-spacing and auto-kerning are now a single keypress (semicolon). <strong>Right-to-left kerning</strong> is supported. Lever dragging extends to sidebearing and kerning adjustment. <strong>Audit Kerning</strong> finds class kerning conflicts and converts them to exceptions. The <strong>Pairs &amp; Phrases</strong> panel manages the most commonly kerned combinations.</p>
+<p>Auto-spacing and auto-kerning are now a single keypress (semicolon).
+<strong>Right-to-left kerning</strong> is supported.
+Lever dragging extends to sidebearing and kerning adjustment.
+<strong>Audit Kerning</strong> finds class kerning conflicts and converts them to exceptions.
+The <strong>Pairs &amp; Phrases</strong> panel manages the most commonly kerned combinations.</p>
 <h2 id="families-and-variation">Families and variation<a class="headerlink" href="#families-and-variation" title="Permanent link">&para;</a></h2>
-<p>Static fonts can be merged into a variable font with <strong>Fonts &gt; Merge Fonts to Masters</strong>. <strong>Per-glyph variation axes</strong> allow individual glyphs to vary along custom axes independent of the main font axes. <strong>Smart variable components</strong> use interpolated instances of other glyphs as building blocks. Conditional glyph substitutions using tilde glyph tags (e.g. <code>~wt&gt;850</code>) allow <code>rvrn</code> rules in exported variable fonts.</p>
+<p>Static fonts can be merged into a variable font with <strong>Fonts &gt; Merge Fonts to Masters</strong>.
+<strong>Per-glyph variation axes</strong> allow individual glyphs to vary along custom axes
+independent of the main font axes.
+<strong>Smart variable components</strong> use interpolated instances of other glyphs as building
+blocks. Conditional glyph substitutions using tilde glyph tags (e.g. <code>~wt&gt;850</code>) allow
+<code>rvrn</code> rules in exported variable fonts.</p>
 <h2 id="color">Color<a class="headerlink" href="#color" title="Permanent link">&para;</a></h2>
-<p>The <strong>Colors</strong> panel is redesigned with palettes and gradient support — linear, radial, and conical. A <strong>visual gradient editor</strong> works directly in the Glyph window. <strong>OpenType COLRv1</strong> export is supported, including variable color fonts. Dark-mode palette export is automatic.</p>
+<p>The <strong>Colors</strong> panel is redesigned with palettes and gradient support — linear, radial,
+and conical. A <strong>visual gradient editor</strong> works directly in the Glyph window.
+<strong>OpenType COLRv1</strong> export is supported, including variable color fonts.
+Dark-mode palette export is automatic.</p>
 <h2 id="scripting">Scripting<a class="headerlink" href="#scripting" title="Permanent link">&para;</a></h2>
-<p>FontLab 8 uses <strong>Python 3.11</strong> (up from Python 2.7 in FontLab VI), which is 10–60% faster. The <strong>TypeRig</strong> library by Vassil Kateliev is bundled, providing extensive glyph transformation and batch-processing capabilities. Interchange with RoboFont, Glyphs, FontForge, and other editors is improved throughout.</p>
+<p>FontLab 8 uses <strong>Python 3.11</strong> (up from Python 2.7 in FontLab VI), which is 10–60%
+faster. The <strong>TypeRig</strong> library by Vassil Kateliev is bundled, providing extensive glyph
+transformation and batch-processing capabilities.
+Interchange with RoboFont, Glyphs, FontForge, and other editors is improved throughout.</p>
 <hr />
-<p>The full list of changes across all FontLab 8 releases is at <a href="https://help.fontlab.com/fontlab/8/whats-new/">help.fontlab.com/fontlab/8/whats-new/</a>.</p>
+<p>The full list of changes across all FontLab 8 releases is at
+<a href="https://help.fontlab.com/fontlab/8/whats-new/">help.fontlab.com/fontlab/8/whats-new/</a>.</p>
 
 
   
@@ -1696,8 +1272,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

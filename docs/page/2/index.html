@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -62,10 +59,6 @@
     
       <link rel="stylesheet" href="../../css/extra.css">
     
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -87,13 +80,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -844,480 +852,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1366,7 +900,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -1374,112 +908,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2021-05-27 00:00:00+00:00">May 27, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="make-your-variable-fonts-better-with-fontlab-7"><a class="toclink" href="../../2021/05/27/make-variable-fonts-better-fontlab-7/">Make your variable fonts better with FontLab 7</a></h2>
-<p>This 19-minute presentation by Adam Twardoch, delivered at ATypI Tech Talks 2021, goes beyond building variable fonts to the harder question: making them good. It covers quality assurance, interpolation checking, and the tools in FontLab 7 and related applications that help catch problems before a variable font ships.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2021/05/27/make-variable-fonts-better-fontlab-7/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2021-01-18 00:00:00+00:00">January 18, 2021</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="whats-new-in-fontlab-72"><a class="toclink" href="../../2021/01/18/whats-new-fontlab-72/">What's new in FontLab 7.2</a></h2>
-<p>FontLab 7.2 was a substantial update, and this 31-minute walkthrough by Adam Twardoch covers the new features methodically. If you want to know what changed and why it matters, this is the most efficient way to find out — a guided tour of the release notes, with live demonstrations.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2021/01/18/whats-new-fontlab-72/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-12-30 00:00:00+00:00">December 30, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
+          <time datetime="2025-05-13 00:00:00+00:00">May 13, 2025</time></li>
         
         
           
@@ -1495,12 +924,16 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="fontlab-7-a-year-in-updates"><a class="toclink" href="../../2020/12/30/fontlab-7-year-in-review/">FontLab 7: a year in updates</a></h2>
-<p>FontLab 7 launched in December 2019 with over 250 new features. Twelve months later, it has rather more than that. Here is what the 2020 update cycle actually delivered — not counting FontLab 7.2, which has <a href="../../2020/11/30/say-hello-to-fontlab-72/">its own post</a>.</p>
+    <h2 id="made-with-fontlab-nate-piekos"><a class="toclink" href="../../2025/05/13/made-with-fontlab-nate-piekos/">Made with FontLab: Nate Piekos</a></h2>
+<p>If you’ve read a comic in the last twenty years, you’ve read Blambot.
+Nate Piekos’s foundry has supplied the lettering fonts for an absurd share of the medium
+— the dialogue balloons, the SFX, the display titles.
+Five of his Blambot families sit in the public made-with-fontlab gallery, all drawn in
+FontLab 7.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2020/12/30/fontlab-7-year-in-review/">
+        <a href="../../2025/05/13/made-with-fontlab-nate-piekos/">
           Continue reading
         </a>
       </nav>
@@ -1515,7 +948,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1523,13 +956,470 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2020-12-16 00:00:00+00:00">December 16, 2020</time></li>
+          <time datetime="2025-05-13 00:00:00+00:00">May 13, 2025</time></li>
         
+        
+          
           <li class="md-meta__item">
-            in
             
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="variable-fonts-were-never-about-file-size"><a class="toclink" href="../../2025/05/13/variable-fonts-were-never-about-file-size/">Variable fonts were never about file size</a></h2>
+<p>The marketing for variable fonts has spent a decade promising smaller downloads.
+The smaller downloads are real.
+They are also the least interesting thing about the format.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/05/13/variable-fonts-were-never-about-file-size/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-04-22 00:00:00+00:00">April 22, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="variable-fonts-in-many-languages"><a class="toclink" href="../../2025/04/22/variable-fonts-in-many-languages/">Variable fonts in many languages</a></h2>
+<p>Designers in Warsaw, Seoul, Barcelona, and Tokyo are all asking the same quiet question:
+why am I still shipping twenty font files when one variable font would do?</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/04/22/variable-fonts-in-many-languages/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-04-08 00:00:00+00:00">April 8, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="fontlab-tv-color-fonts-without-tears"><a class="toclink" href="../../2025/04/08/fontlab-tv-color-fonts/">FontLab TV: color fonts without tears</a></h2>
+<p>Color fonts have stopped being a novelty and started being a deliverable — emoji,
+branded display faces, multi-layered display work.
+The FontLab TV color font episode covers the four formats you actually have to think
+about and which to ship for which target.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/04/08/fontlab-tv-color-fonts/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-03-25 00:00:00+00:00">March 25, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="designing-variable-axes-well"><a class="toclink" href="../../2025/03/25/designing-variable-axes-well/">Designing variable axes well</a></h2>
+<p>Variable font axis design is the process of deciding which dimensions of a typeface
+should be controllable, then drawing the masters that make those dimensions behave.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/03/25/designing-variable-axes-well/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-03-17 00:00:00+00:00">March 17, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="calligraphic-fonts-spacing-italics-and-family-planning"><a class="toclink" href="../../2025/03/17/calfonts-spacing-italics/">Calligraphic fonts: spacing, italics, and family planning</a></h2>
+<p>Once your letterforms are drawn, the work shifts to spacing, quality control, and — if
+you’re ambitious — building a family.
+This post distills Dave Lawrence’s chapters on fitting and spacing, building italic
+variants, and planning a type family in FontLab 8.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/03/17/calfonts-spacing-italics/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-02-25 00:00:00+00:00">February 25, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="one-font-file-dozens-of-styles"><a class="toclink" href="../../2025/02/25/one-font-file-dozens-of-styles/">One font file, dozens of styles</a></h2>
+<p>A headline that thickens on hover.
+A paragraph that narrows on mobile without a second download.
+A single file that quietly contains thin, regular, bold, condensed, and everything
+between. That is variable fonts in practice.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/02/25/one-font-file-dozens-of-styles/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-02-18 00:00:00+00:00">February 18, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="made-with-fontlab-patrick-griffin"><a class="toclink" href="../../2025/02/18/made-with-fontlab-patrick-griffin/">Made with FontLab: Patrick Griffin</a></h2>
+<p>Bananas is a casual brush face that is mostly an excuse to grin while you set it.
+Ronaldson Pro is a 19<sup>th</sup>-century revival that took years to draw and exists because
+Patrick Griffin would not let the original die.
+Both are Canada Type.
+Both came out of FontLab.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/02/18/made-with-fontlab-patrick-griffin/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-02-04 00:00:00+00:00">February 4, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="a-width-axis-is-not-a-squeeze-command"><a class="toclink" href="../../2025/02/04/a-width-axis-is-not-a-squeeze-command/">A width axis is not a squeeze command</a></h2>
+<p>Read enough writing on variable fonts in German, French, Spanish, Italian, Portuguese,
+Polish, Russian, Chinese, Japanese, and Korean and the cliché falls apart.
+Variable fonts are not a flashy weight slider.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/02/04/a-width-axis-is-not-a-squeeze-command/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-01-21 00:00:00+00:00">January 21, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="fontlab-tv-anchors-components-and-accented-glyphs"><a class="toclink" href="../../2025/01/21/fontlab-tv-anchors-components/">FontLab TV: anchors, components, and accented glyphs</a></h2>
+<p>If you are still drawing every accented letter by hand, this is the episode that retires
+that habit. Anchors plus components mean you draw <code>a</code> and <code>acute</code> once, and FontLab
+assembles <code>aacute</code>, <code>acircumflex</code>, <code>agrave</code>, and the other 700-odd accented forms for
+you.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/01/21/fontlab-tv-anchors-components/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-01-14 00:00:00+00:00">January 14, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="the-invisible-logic-of-opentype-features"><a class="toclink" href="../../2025/01/14/the-invisible-logic-of-opentype/">The invisible logic of OpenType features</a></h2>
+<p>A font is not a static collection of drawings.
+It is a highly coordinated piece of software.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/01/14/the-invisible-logic-of-opentype/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-12-10 00:00:00+00:00">December 10, 2024</time></li>
         
         
           
@@ -1545,12 +1435,14 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="basics-of-spacing-in-fontlab-7"><a class="toclink" href="../../2020/12/16/basics-of-spacing-fontlab-7/">Basics of spacing in FontLab 7</a></h2>
-<p>Spacing is the invisible work that determines whether a font feels effortless or labored to read. This five-minute tutorial from Dave Lawrence's FontLab 7 series strips the topic down to its essentials: what sidebearings are, how to set them in the metrics window, and how to evaluate spacing visually as you work.</p>
+    <h2 id="fontlab-tv-spacing-letters-from-scratch"><a class="toclink" href="../../2024/12/10/fontlab-tv-spacing-letters/">FontLab TV: spacing letters from scratch</a></h2>
+<p>Spacing is what separates a font that exists from a font that reads.
+The FontLab TV spacing episode is the one to watch first — before kerning, before
+OpenType, before anything else that can mask bad sidebearings.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2020/12/16/basics-of-spacing-fontlab-7/">
+        <a href="../../2024/12/10/fontlab-tv-spacing-letters/">
           Continue reading
         </a>
       </nav>
@@ -1565,7 +1457,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1573,62 +1465,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2020-12-11 00:00:00+00:00">December 11, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="import-artwork-into-fontlab-7"><a class="toclink" href="../../2020/12/11/import-artwork-fontlab-7/">Import artwork into FontLab 7</a></h2>
-<p>Most type designers don't draw directly in the font editor — they sketch in pencil, refine in Illustrator or Affinity Designer, then need to get that artwork into FontLab cleanly. This eight-minute video from Dave Lawrence's FontLab 7 series shows exactly how.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2020/12/11/import-artwork-fontlab-7/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2020-11-30 00:00:00+00:00">November 30, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
+          <time datetime="2024-12-10 00:00:00+00:00">December 10, 2024</time></li>
         
         
           
@@ -1644,12 +1481,16 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="say-hello-to-fontlab-72"><a class="toclink" href="../../2020/11/30/say-hello-to-fontlab-72/">Say hello to FontLab 7.2</a></h2>
-<p>FontLab 7.2 is a free update with 120 new or improved features. The headline: interpolation now runs 30× faster. New tools include Rotate, Scale, and Slant; an adaptive freeform grid with Suggest Distance; variable and attached components; visual OpenType feature proofing; and Microsoft VOLT integration. Existing FontLab 7 users get it free; FontLab VI users can upgrade for $99.</p>
+    <h2 id="opentype-features-as-invisible-ux"><a class="toclink" href="../../2024/12/10/opentype-features-as-ux/">OpenType features as invisible UX</a></h2>
+<p>Most readers never notice when typography is right.
+They only notice when reading feels like work.
+The features that decide which side of that line a font lands on are mostly the
+unglamorous ones — kerning, standard ligatures, contextual alternates — the parts that
+handle the friction the user never sees.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2020/11/30/say-hello-to-fontlab-72/">
+        <a href="../../2024/12/10/opentype-features-as-ux/">
           Continue reading
         </a>
       </nav>
@@ -1664,7 +1505,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1672,18 +1513,13 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2020-03-02 00:00:00+00:00">March 2, 2020</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
+          <time datetime="2024-11-12 00:00:00+00:00">November 12, 2024</time></li>
         
         
           
           <li class="md-meta__item">
             
-              2 min read
+              4 min read
             
           </li>
         
@@ -1693,12 +1529,16 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="fontlab-71-ink-traps-harmonized-handles-and-quick-measurement"><a class="toclink" href="../../2020/03/02/fontlab-71/">FontLab 7.1: ink traps, harmonized handles, and quick measurement</a></h2>
-<p>FontLab 7.1 landed in March 2020 as a free update to all <a href="../../2019/11/30/introducing-fontlab-7-the-pro-font-editor-evolved/">FontLab 7</a> users, delivering over 70 new and improved features and 80 fixes across five point releases between March and August 2020. The headline additions — ink traps, harmonized handles, looped corners, and quick measurement — gave designers finer control over node behavior and optical geometry than any prior version.</p>
+    <h2 id="the-bitter-truth-of-screens-testing-and-hinting"><a class="toclink" href="../../2024/11/12/the-bitter-truth-of-screens-hinting/">The bitter truth of screens: testing and hinting</a></h2>
+<p>You can spend six months agonising over the curvature of a lowercase ‘s’, and then your
+font is rendered by a ruthless grid of pixels on somebody’s second monitor at 1366×768.
+Translating smooth Bézier curves onto a low-resolution raster is a violent process.
+The curves win the design argument.
+The pixels win the rendering argument.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2020/03/02/fontlab-71/">
+        <a href="../../2024/11/12/the-bitter-truth-of-screens-hinting/">
           Continue reading
         </a>
       </nav>
@@ -1713,7 +1553,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -1721,308 +1561,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2019-11-30 00:00:00+00:00">November 30, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="introducing-fontlab-7-the-pro-font-editor-evolved"><a class="toclink" href="../../2019/11/30/introducing-fontlab-7-the-pro-font-editor-evolved/">Introducing FontLab 7: the pro font editor, evolved</a></h2>
-<p>FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of concentrated work, with more than 250 new features, fixes, and improvements. Highlights include auto-generated OpenType features, both-sided kerning classes, kerning clash detection, variable font intermediate masters and conditional glyph substitution, and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who purchased on or after August 1, 2019 qualify for a free upgrade.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2019/11/30/introducing-fontlab-7-the-pro-font-editor-evolved/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2019-10-29 00:00:00+00:00">October 29, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              7 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="migration-paths-from-legacy-fontlab-tools-on-catalina"><a class="toclink" href="../../2019/10/29/migration-paths-from-legacy-fontlab-tools-on-catalina/">Migration paths from legacy FontLab tools on Catalina</a></h2>
-<p>If you rely on FontLab Studio 5, Fontographer 5, TypeTool 3, or BitFonter 3 on a Mac that has been updated to macOS Catalina, there are three viable routes: CrossOver Mac 19 for a lightweight Windows emulation layer, a virtual machine running an older macOS or Windows, or a clean upgrade to FontLab 7. This post covers the setup in detail for each option.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2019/10/29/migration-paths-from-legacy-fontlab-tools-on-catalina/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2019-10-08 00:00:00+00:00">October 8, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fontlab-studio-5-fontographer-5-and-typetool-3-on-macos-1015-catalina"><a class="toclink" href="../../2019/10/08/fontlab-studio-5-fontographer-5-and-typetool-3-on-macos-1015-catalina/">FontLab Studio 5, Fontographer 5 and TypeTool 3 on macOS 10.15 Catalina</a></h2>
-<p>macOS 10.15 Catalina drops all 32-bit app support, which means FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3 for Mac will not run on it — and porting them to 64-bit is not feasible. If you are on Catalina, your options are CrossOver Mac 19 (run the Windows versions via a thin emulation layer), a virtual machine running an older macOS or Windows, or upgrading to the 64-bit FontLab 7.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2019/10/08/fontlab-studio-5-fontographer-5-and-typetool-3-on-macos-1015-catalina/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2019-01-24 00:00:00+00:00">January 24, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="design-space-axes-and-multiple-masters-in-fontlab-vi"><a class="toclink" href="../../2019/01/24/design-space-axes-multiple-masters/">Design space axes and multiple masters in FontLab VI</a></h2>
-<p>Variable fonts require thinking in multiple dimensions at once — and this four-minute video from FontLab VI shows exactly how to set up a design space with axes and masters. It is a concise, visual introduction to the core concept behind variable font production.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2019/01/24/design-space-axes-multiple-masters/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2019-01-24 00:00:00+00:00">January 24, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="from-sketch-to-font-in-minutes-with-built-in-scanfont"><a class="toclink" href="../../2019/01/24/sketch-to-font-scanfont/">From sketch to font in minutes with built-in ScanFont</a></h2>
-<p>With over 40,000 views, this two-minute demo of FontLab VI's built-in ScanFont feature is one of the most-watched videos on the channel — and it earns that attention by showing something genuinely useful in a very short time. You scan or photograph hand-drawn letterforms, paste them into FontLab VI, and the software traces them into editable outlines ready for refinement.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2019/01/24/sketch-to-font-scanfont/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2018-12-21 00:00:00+00:00">December 21, 2018</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fontlab-vi-12-releases-in-12-months"><a class="toclink" href="../../2018/12/21/fontlab-vi-12-releases-in-12-months/">FontLab VI: 12 releases in 12 months</a></h2>
-<p>FontLab VI shipped a free update every single month of 2018 — twelve releases in twelve months — evolving from the December 2017 launch through version 6.1.2. Each release incorporated feedback from type designers and font developers, steadily refining drawing tools, variable font support, and file interchange. The video and release notes below walk through what actually changed across the full year.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2018/12/21/fontlab-vi-12-releases-in-12-months/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2018-11-22 00:00:00+00:00">November 22, 2018</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
+          <time datetime="2024-11-05 00:00:00+00:00">November 5, 2024</time></li>
         
         
           
@@ -2038,12 +1577,16 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="dtl-otmaster-79-available-now"><a class="toclink" href="../../2018/11/22/dtl-otmaster-79-available-now/">DTL OTMaster 7.9 available now</a></h2>
-<p>DTL OTMaster 7.9 adds first-class support for variable OpenType fonts — including the <code>fvar</code>, <code>gvar</code>, <code>CFF2</code>, <code>STAT</code>, <code>HVAR</code>, and <code>MVAR</code> tables — plus a new Proofing Tool for printing and exporting PDF specimens and a Side-by-Side Viewer that can show variation instances. Available for macOS, Windows, and Linux; a full license is US$228, upgrades from previous versions are US$57.</p>
+    <h2 id="made-with-fontlab-dave-lawrence"><a class="toclink" href="../../2024/11/05/made-with-fontlab-dave-lawrence/">Made with FontLab: Dave Lawrence</a></h2>
+<p>Bodoni Casale is not a Bodoni revival in the careful, museum-conservator sense.
+It’s three Bodoni revivals — Casale, Ferrara, Terracina — each a different printed
+source, each digitised at the level of detail that only matters when somebody looks at
+the page from six inches away.
+That’s the California Type Foundry house style, and Dave Lawrence does it in FontLab.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2018/11/22/dtl-otmaster-79-available-now/">
+        <a href="../../2024/11/05/made-with-fontlab-dave-lawrence/">
           Continue reading
         </a>
       </nav>
@@ -2058,7 +1601,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -2066,12 +1609,56 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2018-10-25 00:00:00+00:00">October 25, 2018</time></li>
+          <time datetime="2024-10-15 00:00:00+00:00">October 15, 2024</time></li>
         
+        
+          
           <li class="md-meta__item">
-            in
             
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
+              4 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="scripting-the-mundane-letting-python-do-the-dishes"><a class="toclink" href="../../2024/10/15/scripting-the-mundane-python-fontlab/">Scripting the mundane: letting Python do the dishes</a></h2>
+<p>Type design is an art form.
+Font production is a factory job.
+Once the aesthetic decisions are settled on the core alphabet, you face the unglamorous
+reality of propagating those decisions across hundreds — sometimes thousands — of
+glyphs. Doing that by hand is a recipe for repetitive strain injury and existential
+dread.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/10/15/scripting-the-mundane-python-fontlab/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-10-08 00:00:00+00:00">October 8, 2024</time></li>
         
         
           
@@ -2087,12 +1674,15 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="fontlab-vi-61-components-sidebar-filters-and-metrics-expressions"><a class="toclink" href="../../2018/10/25/fontlab-vi-61/">FontLab VI 6.1: components, sidebar filters, and metrics expressions</a></h2>
-<p>FontLab VI 6.1 arrived in October 2018, adding standards-compliant components, a Font window sidebar for glyph filtering, and linked metrics expressions — three features that changed how designers structured and navigated their work. It was a free update to all FontLab VI users, and the biggest single leap since the December 2017 launch.</p>
+    <h2 id="fontlab-tv-variable-fonts-crash-course"><a class="toclink" href="../../2024/10/08/fontlab-tv-variable-fonts-crash-course/">FontLab TV: variable fonts crash course</a></h2>
+<p>If “variable font” still sounds like one of those things you’ll learn properly later —
+this is the playlist that fixes that.
+The FontLab TV crash course gets you from a single static master to a working VF in
+under an hour of focused video.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2018/10/25/fontlab-vi-61/">
+        <a href="../../2024/10/08/fontlab-tv-variable-fonts-crash-course/">
           Continue reading
         </a>
       </nav>
@@ -2107,7 +1697,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -2115,605 +1705,7 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2017-12-08 00:00:00+00:00">December 8, 2017</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="introducing-fontlab-vi-the-ultra-bold-font-editor"><a class="toclink" href="../../2017/12/08/introducing-fontlab-vi/">Introducing FontLab VI, the ultra bold font editor</a></h2>
-<p>FontLab VI was a ground-up rewrite of the professional font editor, and this two-minute announcement video captures the moment of its release. It highlights the new design philosophy — a single application for creating, editing, and exporting fonts in any format — and previews the tools that would define a new generation of FontLab.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2017/12/08/introducing-fontlab-vi/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2017-12-07 00:00:00+00:00">December 7, 2017</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fontlab-vi-is-here"><a class="toclink" href="../../2017/12/07/fontlab-vi-released/">FontLab VI is here</a></h2>
-<p>FontLab Studio 5 was a workhorse. It shipped in 2004, carried a generation of type designers through the OpenType revolution, and aged gracefully — right up until it didn't. On 7 December 2017, we replaced it.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2017/12/07/fontlab-vi-released/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2015-11-13 00:00:00+00:00">November 13, 2015</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="how-to-space-a-font"><a class="toclink" href="../../2015/11/13/how-to-space-a-font/">How to Space a Font</a></h2>
-<p>Spacing is where type design lives or dies, and this 53-minute tutorial with Thomas Phinney is among the clearest explanations of the craft ever recorded. Phinney — a type designer and font technologist with decades of experience — walks through sidebearings, optical principles, and the practical workflow inside FontLab Studio 5.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2015/11/13/how-to-space-a-font/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2015-02-25 00:00:00+00:00">February 25, 2015</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="basics-of-python-scripting-in-fontlab-studio-5"><a class="toclink" href="../../2015/02/25/python-scripting-fontlab-studio-5/">Basics of Python scripting in FontLab Studio 5</a></h2>
-<p>Automation unlocks the real power of a professional font editor, and this 70-minute tutorial with Adam Twardoch is the definitive introduction to Python scripting inside FontLab Studio 5. It covers the scripting environment, the FontLab object model, and practical examples that go well beyond "hello world."</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2015/02/25/python-scripting-fontlab-studio-5/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2014-12-15 00:00:00+00:00">December 15, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="dtl-otmaster-50-vfb2ufo-and-fontlab-pad-11"><a class="toclink" href="../../2014/12/15/otmaster-5-vfb2ufo-fontlab-pad-11/">DTL OTMaster 5.0, vfb2ufo, and FontLab Pad 1.1</a></h2>
-<p>December 2014 brought a major version of DTL OTMaster alongside two new free tools: a command-line UFO converter and an updated color font typesetter.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2014/12/15/otmaster-5-vfb2ufo-fontlab-pad-11/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2014-06-18 00:00:00+00:00">June 18, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="color-fonts-the-next-big-thing-a-fontlab-tutorial"><a class="toclink" href="../../2014/06/18/color-fonts-tutorial/">Color fonts: the next big thing? A FontLab tutorial</a></h2>
-<p>In 2014, color fonts were an emerging frontier — and this 103-minute tutorial with Adam Twardoch was one of the first in-depth explorations of how to actually create them. It covers the technical standards, font editor workflows, and the promise of full-color type at a moment when emoji and display typography were pushing the format into the mainstream.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2014/06/18/color-fonts-tutorial/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2014-03-15 00:00:00+00:00">March 15, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/events/" class="md-meta__link">Events</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="brush-romans-webinar-with-john-downer-and-paul-herrera"><a class="toclink" href="../../2014/03/15/brush-romans-webinar/">Brush Romans webinar with John Downer and Paul Herrera</a></h2>
-<p>On March 11, 2014, FontLab hosted a webinar on Roman capital letterforms and their origins in flat-brush writing, presented by sign painter and type designer John Downer and calligrapher Paul Herrera.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2014/03/15/brush-romans-webinar/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2014-02-15 00:00:00+00:00">February 15, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/events/" class="md-meta__link">Events</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="matthew-carter-webinar"><a class="toclink" href="../../2014/02/15/matthew-carter-webinar/">Matthew Carter webinar</a></h2>
-<p>In February 2014, FontLab hosted a live webinar with Matthew Carter, one of the most consequential type designers of the digital era.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2014/02/15/matthew-carter-webinar/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2013-12-20 00:00:00+00:00">December 20, 2013</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="fontlab-studio-521-for-windows"><a class="toclink" href="../../2013/12/20/fontlab-studio-521-windows/">FontLab Studio 5.2.1 for Windows</a></h2>
-<p>FontLab Studio 5.2.1 for Windows shipped in December 2013 with a substantial set of new features on top of the 5.2 foundation, plus hundreds of bug fixes.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2013/12/20/fontlab-studio-521-windows/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2013-12-15 00:00:00+00:00">December 15, 2013</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a>, 
-              <a href="../../category/transtype/" class="md-meta__link">TransType</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="transtype-4-for-mac-and-windows"><a class="toclink" href="../../2013/12/15/transtype-4/">TransType 4 for Mac and Windows</a></h2>
-<p>TransType 4 arrived in December 2013 as a complete rewrite of the font conversion application, adding multi-color OpenType output and web font export to its core conversion capabilities.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2013/12/15/transtype-4/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2013-11-07 00:00:00+00:00">November 7, 2013</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              8 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="color-font-concepts-layers-palettes-scaling-and-finiteness"><a class="toclink" href="../../2013/11/07/color-font-concepts-layers-palettes-scaling-and-finiteness/">Color font concepts: layers, palettes, scaling, and finiteness</a></h2>
-<p>With four competing color font proposals on the table in 2013, it is worth stepping back to examine the foundational concepts each one builds on — and what their individual advantages and blind spots reveal about the broader challenge of adding color to OpenType. This post covers palettes as a third typographic user-control mechanism, the analogy between color font formats and display-color history, co-existence with existing OpenType glyph sources, and the underappreciated virtue of a format that clearly defines its own limits.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2013/11/07/color-font-concepts-layers-palettes-scaling-and-finiteness/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2013-10-10 00:00:00+00:00">October 10, 2013</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/blog/" class="md-meta__link">blog</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              11 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="the-four-color-font-proposals-app-colrcpal-cbdtcblc-and-svg"><a class="toclink" href="../../2013/10/10/the-four-color-font-proposals-app-colrcpal-cbdtcblc-and-svg/">The four color-font proposals: APP, COLR/CPAL, CBDT/CBLC, and SVG</a></h2>
-<p>Apple, Google, Microsoft, and Adobe/Mozilla each approached the color font problem differently in 2013. This post examines the four proposals in technical detail — their table structures, co-existence characteristics, fallback behavior, and open questions — based on what was known at the time of the first implementations.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2013/10/10/the-four-color-font-proposals-app-colrcpal-cbdtcblc-and-svg/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2013-09-19 00:00:00+00:00">September 19, 2013</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/blog/" class="md-meta__link">blog</a></li>
+          <time datetime="2024-09-23 00:00:00+00:00">September 23, 2024</time></li>
         
         
           
@@ -2729,12 +1721,15 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="color-fonts-overview-of-proposals-for-color-extensions-of-opentype"><a class="toclink" href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/">Color fonts: overview of proposals for color extensions of OpenType</a></h2>
-<p>In 2013, all four major players — Apple, Google, Microsoft, and Adobe with Mozilla — each proposed a different way to add color to OpenType fonts, and none of them agreed. The proposals range from simple PNG bitmaps (Apple's <code>sbix</code>, Google's <code>CBDT</code>/<code>CBLC</code>) to layered solid-color outlines (Microsoft's <code>COLR</code>/<code>CPAL</code>) to full SVG with potential animation (Adobe/Mozilla's <code>SVG</code> table). This post summarises the conceptual landscape and the four approaches at a high level.</p>
+    <h2 id="drawing-calligraphic-fonts-in-fontlab-setup-and-shapes"><a class="toclink" href="../../2024/09/23/calfonts-setup-shapes/">Drawing calligraphic fonts in FontLab: setup and shapes</a></h2>
+<p>Dave Lawrence of California Type Foundry wrote a comprehensive set of tutorials for
+FontLab 8, from installation to finished font.
+This post distills the first two chapters: getting your environment set up, and the
+fundamentals of drawing in FontLab’s glyph-oriented workflow.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2013/09/19/color-fonts-overview-of-proposals-for-color-extensions-of-opentype/">
+        <a href="../../2024/09/23/calfonts-setup-shapes/">
           Continue reading
         </a>
       </nav>
@@ -2749,7 +1744,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -2757,18 +1752,13 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2012-11-15 00:00:00+00:00">November 15, 2012</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
+          <time datetime="2024-09-17 00:00:00+00:00">September 17, 2024</time></li>
         
         
           
           <li class="md-meta__item">
             
-              1 min read
+              2 min read
             
           </li>
         
@@ -2778,12 +1768,15 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="fontlab-studio-52-for-windows-and-513-for-mac"><a class="toclink" href="../../2012/11/15/fontlab-studio-52-win-513-mac/">FontLab Studio 5.2 for Windows and 5.1.3 for Mac</a></h2>
-<p>November 2012 saw a version split in FontLab Studio 5: a new 5.2 release for Windows and a 5.1.3 maintenance update for Mac.</p>
+    <h2 id="made-with-fontlab-alexander-kapusta"><a class="toclink" href="../../2024/09/17/made-with-fontlab-alexander-kapusta/">Made with FontLab: Alexander Kapusta</a></h2>
+<p>YFF Becha looks like a poster you’d find tacked behind a bar in Lviv — heavy, slightly
+off, deliberately so.
+It’s the kind of display face that does not pretend to be neutral, and it’s drawn by
+Alexander Kapusta at his one-person foundry, Your Font Fetish.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2012/11/15/fontlab-studio-52-win-513-mac/">
+        <a href="../../2024/09/17/made-with-fontlab-alexander-kapusta/">
           Continue reading
         </a>
       </nav>
@@ -2798,7 +1791,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -2806,18 +1799,13 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2012-10-15 00:00:00+00:00">October 15, 2012</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
+          <time datetime="2024-09-10 00:00:00+00:00">September 10, 2024</time></li>
         
         
           
           <li class="md-meta__item">
             
-              1 min read
+              4 min read
             
           </li>
         
@@ -2827,12 +1815,476 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="typetool-311-and-fontographer-521-updates"><a class="toclink" href="../../2012/10/15/typetool-3-fontographer-5-updates/">TypeTool 3.1.1 and Fontographer 5.2.1 updates</a></h2>
-<p>October 2012 brought maintenance updates to two of our font editors, with bug fixes for both Mac and Windows.</p>
+    <h2 id="the-heavy-machinery-of-fontlab-84"><a class="toclink" href="../../2024/09/10/the-heavy-machinery-of-fontlab-8/">The heavy machinery of FontLab 8.4</a></h2>
+<p>Drawing letters for a living turns out to be mostly an exercise in being perpetually
+disappointed by optical illusions.
+A geometric circle next to a geometric square at the same height looks smaller than the
+square. The fix is to draw the circle slightly larger so that it merely looks the same
+size. Type design is a profession built on quietly lying to the eye so the eye perceives
+the truth.</p>
 
     
       <nav class="md-post__action">
-        <a href="../../2012/10/15/typetool-3-fontographer-5-updates/">
+        <a href="../../2024/09/10/the-heavy-machinery-of-fontlab-8/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-08-13 00:00:00+00:00">August 13, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="ghosts-in-the-machine-drawing-with-strokes"><a class="toclink" href="../../2024/08/13/drawing-with-strokes-power-brush/">Ghosts in the machine — drawing with strokes</a></h2>
+<p>The standard method for digitising a font is to draw the outline.
+You map the exterior boundary of the shape with Bezier curves, and you push and pull
+nodes until the silhouette behaves.
+This works fine for rigid sans-serifs.
+For a script font, it feels like sculpting in oven mitts.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/08/13/drawing-with-strokes-power-brush/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-07-09 00:00:00+00:00">July 9, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="white-space-does-the-real-drawing"><a class="toclink" href="../../2024/07/09/white-space-does-the-real-drawing/">White space does the real drawing</a></h2>
+<p>Letterforms are made of black shapes, but type is judged by the white around and inside
+them.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/07/09/white-space-does-the-real-drawing/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-06-11 00:00:00+00:00">June 11, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="your-web-fonts-are-probably-too-heavy-here-is-the-fix"><a class="toclink" href="../../2024/06/11/web-fonts-too-heavy-the-fix/">Your web fonts are probably too heavy — here is the fix</a></h2>
+<p>You inherit a folder of old PostScript Type 1 fonts.
+Or a client sends a family with broken names, duplicate glyphs, and kerning that only
+works in one app. You need web fonts that load fast and look right everywhere.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/06/11/web-fonts-too-heavy-the-fix/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-06-05 00:00:00+00:00">June 5, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="fontlab-83-and-84-whats-new"><a class="toclink" href="../../2024/06/05/fontlab-8-updates-2024/">FontLab 8.3 and 8.4: what's new</a></h2>
+<p>Since the FontLab 8.2 release in August 2023, two major free updates have shipped: 8.3
+in December 2023 and 8.4 in June 2024. Together they add over 200 new features and
+improvements. Here is the short version.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/06/05/fontlab-8-updates-2024/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/transtype.png" alt="TransType">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-05-07 00:00:00+00:00">May 7, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="rescuing-endangered-fonts-with-transtype-4"><a class="toclink" href="../../2024/05/07/rescuing-type1-with-transtype/">Rescuing endangered fonts with TransType 4</a></h2>
+<p>A surprising amount of contemporary design still depends on fonts that think the year is
+1998.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/05/07/rescuing-type1-with-transtype/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/transtype.png" alt="TransType">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-04-09 00:00:00+00:00">April 9, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="type-1-rescue-the-legal-question"><a class="toclink" href="../../2024/04/09/type-1-rescue-the-legal-question/">Type 1 rescue, the legal question</a></h2>
+<p>Converting a font you bought in 1998 to a format you can use in 2024 sounds like a
+technical problem. Often it is a licence problem first.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/04/09/type-1-rescue-the-legal-question/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-04-08 00:00:00+00:00">April 8, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="briem-on-spacing-italics-and-the-bold-weight"><a class="toclink" href="../../2024/04/08/briem-bold-italic-spacing/">Briem on spacing, italics, and the bold weight</a></h2>
+<p>Three chapters from Gunnlaugur SE Briem’s notes on type design cover the work that comes
+after the roman is drawn: making a bold weight, designing the italic, and spacing the
+result. All three are harder than they look and more forgiving than they seem.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/04/08/briem-bold-italic-spacing/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/transtype.png" alt="TransType">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-03-19 00:00:00+00:00">March 19, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="escaping-the-graveyard-of-postscript-type-1"><a class="toclink" href="../../2024/03/19/escaping-the-graveyard-of-postscript-type-1/">Escaping the graveyard of PostScript Type 1</a></h2>
+<p>Digital formats do not die of natural causes.
+They are usually smothered in their sleep by the companies that invented them.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/03/19/escaping-the-graveyard-of-postscript-type-1/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/transtype.png" alt="TransType">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-02-13 00:00:00+00:00">February 13, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="transtype-the-converter-that-outlived-the-format"><a class="toclink" href="../../2024/02/13/transtype-the-converter-that-outlived-the-format/">TransType, the converter that outlived the format</a></h2>
+<p>TransType 4 shipped in 2013 to solve a problem nobody wanted to keep having.
+A decade later it is still solving it, because PostScript Type 1 refused to leave the
+building on schedule.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/02/13/transtype-the-converter-that-outlived-the-format/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2023-11-13 00:00:00+00:00">November 13, 2023</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="color-scripts-and-color-font-formats"><a class="toclink" href="../../2023/11/13/color-scripts-color-fonts/">Color, scripts, and color-font formats</a></h2>
+<p>FontLab 8 supports every current color OpenType format and ships with Python 3.11
+scripting and the TypeRig library.
+This post covers the color workflow and scripting capabilities from the “Color” and
+“Scripts &amp; extensions” chapters of the What’s New documentation.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2023/11/13/color-scripts-color-fonts/">
           Continue reading
         </a>
       </nav>
@@ -2848,7 +2300,7 @@
 
 
 <nav class="md-pagination">
-  <a class="md-pagination__link" href="../..">1</a> <span class="md-pagination__current">2</span> <a class="md-pagination__link" href="../3/">3</a>
+  <a class="md-pagination__link" href="../..">1</a> <span class="md-pagination__current">2</span> <a class="md-pagination__link" href="../3/">3</a> <a class="md-pagination__link" href="../4/">4</a>
 </nav>
         
       
@@ -2961,8 +2413,6 @@
     
     
       <script src="../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1444,16 +978,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1475,16 +1009,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/release/">release</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1515,21 +1039,35 @@
 
   <h1>FontLab 7.2.0.7644 and macOS 12.3 Monterey</h1>
 
-<p>Apple's macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing the system Python 2.7 that FontLab depended on. FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need to install a bundled Python 2.7 package alongside the app. A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644 does not have that problem.</p>
+<p>Apple’s macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing
+the system Python 2.7 that FontLab depended on.
+FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need
+to install a bundled Python 2.7 package alongside the app.
+A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644
+does not have that problem.</p>
 <!-- more -->
 
-<p><strong>Note:</strong> If you open a font and all glyphs unintentionally have a transparent or colored fill, scroll to the end of this post for instructions on how to fix it.</p>
+<p><strong>Note:</strong> If you open a font and all glyphs unintentionally have a transparent or
+colored fill, scroll to the end of this post for instructions on how to fix it.</p>
 <h2 id="download-and-install-fontlab-7207644-on-macos">Download and install FontLab 7.2.0.7644 on macOS<a class="headerlink" href="#download-and-install-fontlab-7207644-on-macos" title="Permanent link">&para;</a></h2>
-<p>macOS 12.3, released in March 2022, broke compatibility with numerous apps from many vendors — including all previous versions of FontLab 7.</p>
-<p><strong>Before</strong> you update macOS Monterey to 12.3, open FontLab and choose <em>FontLab 7 › Check for Updates</em>. Download and install the FontLab 7 update, then run FontLab 7. If you then see a notification about build 7650 or 7651, click <em>Skip This Version</em>, then go to <em>Preferences › General</em> and turn off <em>Get beta versions</em>.</p>
-<p>If you <strong>have already updated</strong> to macOS 12.3 and FontLab crashes on launch, download and install the update below.</p>
+<p>macOS 12.3, released in March 2022, broke compatibility with numerous apps from many
+vendors — including all previous versions of FontLab 7.</p>
+<p><strong>Before</strong> you update macOS Monterey to 12.3, open FontLab and choose <em>FontLab 7 › Check
+for Updates</em>. Download and install the FontLab 7 update, then run FontLab 7. If you then
+see a notification about build 7650 or 7651, click <em>Skip This Version</em>, then go to
+<em>Preferences › General</em> and turn off <em>Get beta versions</em>.</p>
+<p>If you <strong>have already updated</strong> to macOS 12.3 and FontLab crashes on launch, download
+and install the update below.</p>
 <hr />
 <p><a href="https://download.fontlab.com/fontlab-7/get-mac.php">Download FontLab 7.2.0.7644 for macOS (all versions)</a></p>
 <hr />
-<p>The download contains two editions of FontLab 7: one for macOS 12.3 or newer, one for macOS 12.2 or older. To check your macOS version, click the Apple menu and choose <em>About This Mac</em>.</p>
+<p>The download contains two editions of FontLab 7: one for macOS 12.3 or newer, one for
+macOS 12.2 or older.
+To check your macOS version, click the Apple menu and choose <em>About This Mac</em>.</p>
 <p><img alt="After you download and double-click the DMG, choose the right installation procedure for your macOS version." src="https://res.cloudinary.com/fontlab/images/w_1024,h_806,c_scale/v1647359144/blog/fontlab7-monterey-installer/fontlab7-monterey-installer-1024x806.png?_i=AA" /></p>
 <h2 id="install-on-macos-122-monterey-or-older">Install on macOS 12.2 Monterey or older<a class="headerlink" href="#install-on-macos-122-monterey-or-older" title="Permanent link">&para;</a></h2>
-<p>If you use macOS Monterey 12.2 or older, macOS 11 Big Sur, macOS 10.15 Catalina, 10.14 Mojave, 10.13 High Sierra, or 10.12 Sierra:</p>
+<p>If you use macOS Monterey 12.2 or older, macOS 11 Big Sur, macOS 10.15 Catalina, 10.14
+Mojave, 10.13 High Sierra, or 10.12 Sierra:</p>
 <ol>
 <li><a href="https://download.fontlab.com/fontlab-7/get-mac.php">Download FontLab 7.2.0.7644</a></li>
 <li>Double-click <em>FontLab-7-Mac-Install-7644.dmg</em> and accept the license</li>
@@ -1542,11 +1080,14 @@
 <ol>
 <li><a href="https://download.fontlab.com/fontlab-7/get-mac.php">Download FontLab 7.2.0.7644</a></li>
 <li>Double-click <em>FontLab-7-Mac-Install-7644.dmg</em> and accept the license</li>
-<li>Double-click <em>README</em> and follow the instructions: <strong>first</strong> double-click the bundled <em>python-2.7.18.pkg</em> to install Python, then drag <em>FontLab 7</em> to your <em>/Applications</em> folder</li>
+<li>Double-click <em>README</em> and follow the instructions: <strong>first</strong> double-click the bundled
+   <em>python-2.7.18.pkg</em> to install Python, then drag <em>FontLab 7</em> to your <em>/Applications</em>
+   folder</li>
 <li>Run FontLab 7</li>
 <li>If you see the update notification for build 7651, click <em>Skip This Version</em></li>
 </ol>
-<p><em>Note: this edition requires a separate Python 2.7 installation, provided in the DMG. You will need your administrator password to install it.</em></p>
+<p><em>Note: this edition requires a separate Python 2.7 installation, provided in the DMG.
+You will need your administrator password to install it.</em></p>
 <h2 id="download-and-install-fontlab-7207644-on-windows">Download and install FontLab 7.2.0.7644 on Windows<a class="headerlink" href="#download-and-install-fontlab-7207644-on-windows" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a href="https://download.fontlab.com/fontlab-7/get-win64.php">Download FontLab 7.2.0.7644 for Windows (64-bit)</a></p>
@@ -1555,13 +1096,15 @@
 <hr />
 <h2 id="install-on-windows-711">Install on Windows 7–11<a class="headerlink" href="#install-on-windows-711" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Download the edition appropriate for your Windows version (64-bit or 32-bit; if unsure, use 64-bit)</li>
+<li>Download the edition appropriate for your Windows version (64-bit or 32-bit; if
+   unsure, use 64-bit)</li>
 <li>Double-click the downloaded <em>.exe</em> file and install the app</li>
 <li>Run FontLab 7</li>
 <li>If you see the update notification for build 7651, click <em>Skip This Version</em></li>
 </ol>
 <h2 id="fix-the-transparent-fill-problem">Fix the transparent fill problem<a class="headerlink" href="#fix-the-transparent-fill-problem" title="Permanent link">&para;</a></h2>
-<p>If you open a font after installing FontLab 7.2.0.7644 and glyphs unintentionally have a transparent or colored fill:</p>
+<p>If you open a font after installing FontLab 7.2.0.7644 and glyphs unintentionally have a
+transparent or colored fill:</p>
 <ol>
 <li>Open the <em>Color</em> panel via <em>View › Panels › Color</em></li>
 <li>Type <code>black</code> into the color name field at the bottom</li>
@@ -1694,8 +1237,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

@@ -14,4 +14,6 @@ The course was created and directed by Alexander Kapusta ([@YourFontFetish](http
 
 **Format.** Video, YouTube, free. The FontLab TV page at [fontlab.tv](https://fontlab.tv/) links to each playlist in order.
 
+[Visit FontLab TV →](https://fontlab.tv/)
+
 FontLab 8 is used throughout. At 50 hours, this is one of the more comprehensive publicly available type design curricula — comparable in scope to paid courses from dedicated type design programs.

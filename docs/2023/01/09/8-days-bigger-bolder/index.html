@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1411,16 +945,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1442,16 +976,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/tutorial/">Tutorial</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1482,25 +1006,66 @@
 
   <h1>Eight days of FontLab — Day 6: bigger, bolder, better</h1>
 
-<p>One font is a typeface. A family of weights and widths is a tool. Day 6 covers two things: how FontLab helps teams stay organized across a shared project, and how to build font families — static and variable — using masters, interpolation, and variation axes.</p>
+<p>One font is a typeface.
+A family of weights and widths is a tool.
+Day 6 covers two things: how FontLab helps teams stay organized across a shared project,
+and how to build font families — static and variable — using masters, interpolation, and
+variation axes.</p>
 <!-- more -->
 
 <h2 id="collaboration-without-chaos-flags-tags-notes-stickers">Collaboration without chaos: flags, tags, notes, stickers<a class="headerlink" href="#collaboration-without-chaos-flags-tags-notes-stickers" title="Permanent link">&para;</a></h2>
-<p>Type design doesn't have to be a solo project. But group work is hard when collaborators are in different time zones, all touching the same file.</p>
-<p>FontLab's answer is to put communication inside the font. Four tools:</p>
-<p><strong>Flags</strong> are color codes on glyph cells in the Font window. Assign blue to one designer's glyphs, green to another's, red to glyphs needing review. Everyone sees the project's status at a glance.</p>
-<p><strong>Tags</strong> are labels that group glyphs logically — "linFig" for lining figures, "smallcap" for small capitals. Filter by tag in the Classes panel to work on a subset. Tags also apply to font guides and zones, letting FontLab show guides only in glyphs where they're relevant.</p>
-<p><strong>Notes</strong> are free-text fields. Per-font notes go in File › Font Info › Note. Per-glyph notes appear under the glyph cell or via right-click &gt; Edit Note. A small yellow icon marks glyphs with notes so teammates spot them without opening every glyph.</p>
-<p><strong>Stickers</strong> are visual annotations inside the Glyph window — circles, arrows, text callouts pointing to specific areas of the drawing. Activate the Guides tool to add them. Useful for "perhaps too bold here" or "descender should reach −30".</p>
-<p>None of this data goes into the exported OpenType font. It's for your team, not your users.</p>
+<p>Type design doesn’t have to be a solo project.
+But group work is hard when collaborators are in different time zones, all touching the
+same file.</p>
+<p>FontLab’s answer is to put communication inside the font.
+Four tools:</p>
+<p><strong>Flags</strong> are color codes on glyph cells in the Font window.
+Assign blue to one designer’s glyphs, green to another’s, red to glyphs needing review.
+Everyone sees the project’s status at a glance.</p>
+<p><strong>Tags</strong> are labels that group glyphs logically — “linFig” for lining figures,
+“smallcap” for small capitals.
+Filter by tag in the Classes panel to work on a subset.
+Tags also apply to font guides and zones, letting FontLab show guides only in glyphs
+where they’re relevant.</p>
+<p><strong>Notes</strong> are free-text fields.
+Per-font notes go in File › Font Info › Note.
+Per-glyph notes appear under the glyph cell or via right-click &gt; Edit Note.
+A small yellow icon marks glyphs with notes so teammates spot them without opening every
+glyph.</p>
+<p><strong>Stickers</strong> are visual annotations inside the Glyph window — circles, arrows, text
+callouts pointing to specific areas of the drawing.
+Activate the Guides tool to add them.
+Useful for “perhaps too bold here” or “descender should reach −30”.</p>
+<p>None of this data goes into the exported OpenType font.
+It’s for your team, not your users.</p>
 <h2 id="from-single-weight-to-type-family">From single weight to type family<a class="headerlink" href="#from-single-weight-to-type-family" title="Permanent link">&para;</a></h2>
-<p>Most fonts have family members: Bold, Italic, Condensed, ExtraLight. Each style is a <em>master</em> — a set of contours with the same point count arranged differently. FontLab interpolates between masters to produce everything in between.</p>
-<p>To prototype a condensed variant, open your Regular in FontLab. Choose <em>Add Variations</em> from the Font menu, type "Condensed", click OK. You now have a Width axis and two identical masters. Select some glyphs, open <em>Tools &gt; Actions</em>, find <em>Change width</em> in the Adjust section, apply it to the Condensed master only. Select all glyphs, run <em>Match Masters</em>. You have variation.</p>
+<p>Most fonts have family members: Bold, Italic, Condensed, ExtraLight.
+Each style is a <em>master</em> — a set of contours with the same point count arranged
+differently. FontLab interpolates between masters to produce everything in between.</p>
+<p>To prototype a condensed variant, open your Regular in FontLab.
+Choose <em>Add Variations</em> from the Font menu, type “Condensed”, click OK. You now have a
+Width axis and two identical masters.
+Select some glyphs, open <em>Tools &gt; Actions</em>, find <em>Change width</em> in the Adjust section,
+apply it to the Condensed master only.
+Select all glyphs, run <em>Match Masters</em>. You have variation.</p>
 <p>Variation enables two kinds of output:</p>
-<p><strong>Static font families</strong> — predetermined points along each axis. Users get Light, Regular, Bold, and choose among them. Every app supports this.</p>
-<p><strong>Variable fonts</strong> — a single file that lets users slide continuously between any positions on each axis. A typesetter can pick exactly the weight that fills a column, without accepting the nearest static style. Export with <em>Variable TT</em> to produce this format. Variable fonts work in Adobe InDesign CC 2020 and later, among many other apps.</p>
-<p>The math is simpler than it sounds. Make a Regular and a Bold (or a Regular and a Condensed). FontLab interpolates anything in between — Medium, Semibold — and extrapolates outward to Light or Black. Produce all of those as static instances, or fold the whole family into one variable file. Assign names to each instance in Font Info › Instances.</p>
-<p>A complete family handles every situation. Headlines, body text, captions, tight layouts, loose ones — a well-built family adapts.</p>
+<p><strong>Static font families</strong> — predetermined points along each axis.
+Users get Light, Regular, Bold, and choose among them.
+Every app supports this.</p>
+<p><strong>Variable fonts</strong> — a single file that lets users slide continuously between any
+positions on each axis.
+A typesetter can pick exactly the weight that fills a column, without accepting the
+nearest static style.
+Export with <em>Variable TT</em> to produce this format.
+Variable fonts work in Adobe InDesign CC 2020 and later, among many other apps.</p>
+<p>The math is simpler than it sounds.
+Make a Regular and a Bold (or a Regular and a Condensed).
+FontLab interpolates anything in between — Medium, Semibold — and extrapolates outward
+to Light or Black. Produce all of those as static instances, or fold the whole family
+into one variable file.
+Assign names to each instance in Font Info › Instances.</p>
+<p>A complete family handles every situation.
+Headlines, body text, captions, tight layouts, loose ones — a well-built family adapts.</p>
 <hr />
 <h2 id="more-in-this-series">More in this series<a class="headerlink" href="#more-in-this-series" title="Permanent link">&para;</a></h2>
 <ol>
@@ -1636,8 +1201,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

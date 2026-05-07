@@ -13,6 +13,8 @@ See ``./build.sh --help`` for subcommands.
 """
 from __future__ import annotations
 
+import re
+import shlex
 import shutil
 import subprocess
 import sys
@@ -24,6 +26,9 @@ from loguru import logger
 
 class BuildError(RuntimeError):
     """Raised when the build pipeline cannot proceed."""
+
+
+HTML_TAG_RE = re.compile(r"</?[A-Za-z][^>]*>", re.DOTALL)
 
 
 def _configure_logging(verbose: bool) -> None:
@@ -71,6 +76,40 @@ def _clean_docs(docs_dir: Path) -> None:
     logger.info(f"Cleaned {docs_dir} (preserved CNAME)")
 
 
+def _run_command(cmd: list[str], cwd: Path) -> None:
+    """Run a subprocess with consistent logging."""
+    logger.info(f"Running: {shlex.join(cmd)}")
+    subprocess.run(cmd, check=True, cwd=cwd)
+
+
+def _restore_html_tag_quotes(markdown: str) -> str:
+    """Restore ASCII quotes in raw HTML tags after Flowmark smart quotes."""
+
+    def restore(match: re.Match[str]) -> str:
+        return (
+            match.group(0)
+            .replace("“", '"')
+            .replace("”", '"')
+            .replace("‘", "'")
+            .replace("’", "'")
+        )
+
+    return HTML_TAG_RE.sub(restore, markdown)
+
+
+def _restore_html_tag_quotes_in_tree(src_docs_dir: Path) -> int:
+    """Restore HTML tag quote delimiters in Markdown files below ``src_docs_dir``."""
+    changed_count = 0
+    for markdown_path in sorted(src_docs_dir.rglob("*.md")):
+        original = markdown_path.read_text(encoding="utf-8")
+        restored = _restore_html_tag_quotes(original)
+        if restored == original:
+            continue
+        markdown_path.write_text(restored, encoding="utf-8")
+        changed_count += 1
+    return changed_count
+
+
 class Build:
     """FontLab Blog build orchestrator."""
 
@@ -85,6 +124,31 @@ class Build:
     def _mkdocs_config(self) -> Path:
         return self._root / "mkdocs" / "mkdocs.yml"
 
+    @property
+    def _src_docs_dir(self) -> Path:
+        return self._root / "src_docs" / "md"
+
+    def _format_markdown_source(self) -> None:
+        """Format source Markdown with Flowmark before rendering the site."""
+        src_docs_dir = self._src_docs_dir
+        if not src_docs_dir.is_dir():
+            raise BuildError(f"source Markdown directory missing: {src_docs_dir}")
+        cmd = [
+            "flowmark",
+            "--inplace",
+            "--nobackup",
+            "--semantic",
+            "--cleanups",
+            "--smartquotes",
+            "--ellipses",
+            str(src_docs_dir),
+        ]
+        _run_command(cmd, self._root)
+        restored_count = _restore_html_tag_quotes_in_tree(src_docs_dir)
+        if restored_count:
+            logger.info(f"Restored HTML tag quotes in {restored_count} Markdown files")
+        logger.info("Formatted source Markdown with Flowmark")
+
     def clean(self, verbose: bool = False) -> None:
         """Remove everything in docs/ except CNAME."""
         _configure_logging(verbose)
@@ -94,10 +158,23 @@ class Build:
             logger.error(str(exc))
             sys.exit(1)
 
-    def build(self, verbose: bool = False) -> None:
-        """Run the full build pipeline: clean → properdocs build."""
+    def format(self, verbose: bool = False) -> None:
+        """Format src_docs/md Markdown with Flowmark in place."""
         _configure_logging(verbose)
         try:
+            self._format_markdown_source()
+        except BuildError as exc:
+            logger.error(str(exc))
+            sys.exit(1)
+        except subprocess.CalledProcessError as exc:
+            logger.error(f"Flowmark formatting failed (exit {exc.returncode})")
+            sys.exit(1)
+
+    def build(self, verbose: bool = False) -> None:
+        """Run the full build pipeline: format → clean → properdocs build."""
+        _configure_logging(verbose)
+        try:
+            self._format_markdown_source()
             _clean_docs(self._docs_dir)
             config = self._mkdocs_config
             if not config.is_file():
@@ -108,15 +185,14 @@ class Build:
                 "-f", str(config),
                 "-d", str(self._docs_dir),
             ]
-            logger.info(f"Running: {' '.join(cmd)}")
-            subprocess.run(cmd, check=True, cwd=self._root)
+            _run_command(cmd, self._root)
             (self._docs_dir / ".nojekyll").touch()
             logger.info("Build complete")
         except BuildError as exc:
             logger.error(str(exc))
             sys.exit(1)
         except subprocess.CalledProcessError as exc:
-            logger.error(f"properdocs build failed (exit {exc.returncode})")
+            logger.error(f"build command failed (exit {exc.returncode})")
             sys.exit(1)
 
     def serve(self, verbose: bool = False) -> None:
@@ -131,8 +207,7 @@ class Build:
                 "serve",
                 "-f", str(config),
             ]
-            logger.info(f"Running: {' '.join(cmd)}")
-            subprocess.run(cmd, check=True, cwd=self._root)
+            _run_command(cmd, self._root)
         except BuildError as exc:
             logger.error(str(exc))
             sys.exit(1)

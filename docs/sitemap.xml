@@ -11,21 +11,6 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/1992/06/15/pyrus-founded-fontlab-origins/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/1994/06/15/fontlab-25-truetype-editing-windows/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/2000/01/15/fontlab-ltd-founded/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
         <loc>https://blog.fontlab.com/2005/06/15/fontlab-studio-5-opentype-standard/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
@@ -256,7 +241,17 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/2023/08/09/hello-fontlab-82/</loc>
+        <loc>https://blog.fontlab.com/2023/08/09/fontlab-82-released/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2023/08/12/fontlab-82-showcase/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2023/08/15/fontlab-82-get-it/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -286,7 +281,27 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2024/02/13/transtype-the-converter-that-outlived-the-format/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/03/19/escaping-the-graveyard-of-postscript-type-1/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2024/04/08/briem-bold-italic-spacing/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/04/09/type-1-rescue-the-legal-question/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/05/07/rescuing-type1-with-transtype/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -296,7 +311,27 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/2024/08/12/made-with-fontlab/</loc>
+        <loc>https://blog.fontlab.com/2024/06/11/web-fonts-too-heavy-the-fix/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/07/09/white-space-does-the-real-drawing/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/08/13/drawing-with-strokes-power-brush/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/09/10/the-heavy-machinery-of-fontlab-8/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/09/17/made-with-fontlab-alexander-kapusta/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -306,7 +341,57 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/2024/11/19/designers-on-fontlab/</loc>
+        <loc>https://blog.fontlab.com/2024/10/08/fontlab-tv-variable-fonts-crash-course/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/10/15/scripting-the-mundane-python-fontlab/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/11/05/made-with-fontlab-dave-lawrence/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/11/12/the-bitter-truth-of-screens-hinting/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/12/10/fontlab-tv-spacing-letters/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2024/12/10/opentype-features-as-ux/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/01/14/the-invisible-logic-of-opentype/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/01/21/fontlab-tv-anchors-components/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/02/04/a-width-axis-is-not-a-squeeze-command/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/02/18/made-with-fontlab-patrick-griffin/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/02/25/one-font-file-dozens-of-styles/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -316,7 +401,132 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2025/03/25/designing-variable-axes-well/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/04/08/fontlab-tv-color-fonts/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/04/22/variable-fonts-in-many-languages/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/05/13/made-with-fontlab-nate-piekos/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/05/13/variable-fonts-were-never-about-file-size/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/06/03/the-mathematics-of-variable-fonts/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/06/24/fontlab-tv-design-space/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/07/15/briem-drawing-bold/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/07/22/the-long-awkward-adolescence-of-color-fonts/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/08/12/fontlab-seen-from-six-languages/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/08/19/made-with-fontlab-eduardo-tunni/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/08/26/calfonts-honing-letters/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/09/02/beyond-the-latin-sandbox-global-typography/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/09/09/fontlab-tv-opentype-features/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/09/23/making-hangul-in-fontlab/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/10/07/briem-drawing-italic/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/10/14/what-type-designers-actually-argue-about/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2025/10/27/hello-vexy-lines/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/11/04/the-briem-method-and-the-geometry-of-nothing/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/11/11/made-with-fontlab-vassil-kateliev/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/12/02/calfonts-italics/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/12/09/hello-vexy-lines-signal-processing/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/12/16/briem-on-brushes/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/12/23/vexy-lines-and-the-joy-of-halftone/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/12/30/the-vexy-lines-pipeline-into-fontlab/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/01/13/vexy-lines-and-the-useful-lie-of-engraving/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -326,7 +536,42 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2026/01/27/the-algorithmic-paintbrush-of-vexy-lines/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/02/10/fontlab-tv-glyph-construction/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/02/25/made-with-fontlab-yuri-gordon/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/03/10/variable-fonts-in-motion-and-ui/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2026/03/15/vexy-lines-effects/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/04/08/made-with-fontlab-fabio-duarte-martins/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/04/21/the-old-fonts-are-not-dead/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/05/05/opentype-is-where-good-manners-live/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -406,82 +651,22 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/archive/2000/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/archive/1994/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/archive/1992/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/news/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/vexy/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/fontlab/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/tutorial/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/blog/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/release/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/transtype/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/type1/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/video/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/events/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/category/history/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
         <loc>https://blog.fontlab.com/page/2/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://blog.fontlab.com/page/3/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/page/4/</loc>
+        <lastmod>2026-05-07</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/archive/2025/page/2/</loc>
         <lastmod>2026-05-07</lastmod>
         <changefreq>daily</changefreq>
     </url>

@@ -10,7 +10,7 @@ Sketch freely on the unlimited *Sketchboard* canvas, or dive straight into draft
 
 ## Edit and refine.
 
-Vector editing in FontLab is optimized for typeface design: from traditional to innovative. Reshape curves, splice contours and fill segments with *Contour*, *Knife*, and *Fill* tools. Drag points while others follow intelligently with *Nudge* and *Power Nudge*. Move nodes precisely without zooming in using the *Lever*. FontLab's editing tools keep the work flowing.
+Vector editing in FontLab is optimized for typeface design: from traditional to innovative. Reshape curves, splice contours and fill segments with *Contour*, *Knife*, and *Fill* tools. Drag points while others follow intelligently with *Nudge* and *Power Nudge*. Move nodes precisely without zooming in using the *Lever*. FontLab’s editing tools keep the work flowing.
 
 [Read more: Edit & refine ↗️](https://help.fontlab.com/fontlab/8/whats-new/whats-new-03-edit-refine/)
 
@@ -26,6 +26,6 @@ FontLab 8.2 adds dynamic numeric measurements for guides and anchors, easy align
 
 ## More on FontLab 8.2
 
-- [Hello, FontLab 8.2!](https://blog.fontlab.com/2023/08/09/hello-fontlab-82/index.md)
+- [Hello, FontLab 8.2!](https://blog.fontlab.com/2023/08/09/fontlab-82-released/index.md)
 - [OpenType features, kerning, and variable fonts](https://blog.fontlab.com/2023/09/20/fontlab-82-opentype-features-kerning-and-variable-fonts/index.md)
 - [Glyphs, font formats, scripting, and color](https://blog.fontlab.com/2023/10/11/fontlab-82-glyphs-font-formats-scripting-and-color/index.md)

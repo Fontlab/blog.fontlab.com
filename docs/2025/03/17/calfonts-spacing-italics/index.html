@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -19,10 +16,10 @@
         <link rel="canonical" href="https://blog.fontlab.com/2025/03/17/calfonts-spacing-italics/">
       
       
-        <link rel="prev" href="../../../../2024/11/19/designers-on-fontlab/">
+        <link rel="prev" href="../../../02/25/one-font-file-dozens-of-styles/">
       
       
-        <link rel="next" href="../../../10/27/hello-vexy-lines/">
+        <link rel="next" href="../../25/designing-variable-axes-well/">
       
       
         
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1422,16 +956,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1453,16 +987,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/tutorial/">Tutorial</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1493,29 +1017,72 @@
 
   <h1>Calligraphic fonts: spacing, italics, and family planning</h1>
 
-<p>Once your letterforms are drawn, the work shifts to spacing, quality control, and — if you're ambitious — building a family. This post distills Dave Lawrence's chapters on fitting and spacing, building italic variants, and planning a type family in FontLab 8.</p>
+<p>Once your letterforms are drawn, the work shifts to spacing, quality control, and — if
+you’re ambitious — building a family.
+This post distills Dave Lawrence’s chapters on fitting and spacing, building italic
+variants, and planning a type family in FontLab 8.</p>
 <!-- more -->
 
 <h2 id="fitting-and-spacing-letter-heights-first">Fitting and spacing: letter heights first<a class="headerlink" href="#fitting-and-spacing-letter-heights-first" title="Permanent link">&para;</a></h2>
-<p>Before setting sidebearings, establish your vertical metrics. FontLab's font-level dimensions — cap height, x-height, ascender, descender — define the proportional relationships governing the whole typeface. Some are used by applications to position glyphs on the baseline and calculate line spacing.</p>
-<p>Dave's "60 Second Quick Start Metrics" tutorial covers the fastest path to usable spacing: set letter heights in Font Info, then work through the control characters ('n', 'o' for lowercase; 'H', 'O' for caps) in the Metrics window. Drag sidebearing lines with the Metrics tool, or type values numerically. Once the control characters feel right in pseudo-words like "nnonoo", link other glyphs to them using metrics expressions.</p>
-<p>FontLab's <strong>auto-spacing</strong> function (<em>Font &gt; Auto Space</em>, or the semicolon key) gives every glyph a starting point at once. It's not a finished result — the algorithm doesn't know your design's intentions — but it eliminates starting from zero on secondary glyphs.</p>
+<p>Before setting sidebearings, establish your vertical metrics.
+FontLab’s font-level dimensions — cap height, x-height, ascender, descender — define the
+proportional relationships governing the whole typeface.
+Some are used by applications to position glyphs on the baseline and calculate line
+spacing.</p>
+<p>Dave’s “60 Second Quick Start Metrics” tutorial covers the fastest path to usable
+spacing: set letter heights in Font Info, then work through the control characters ('n',
+‘o’ for lowercase; ‘H’, ‘O’ for caps) in the Metrics window.
+Drag sidebearing lines with the Metrics tool, or type values numerically.
+Once the control characters feel right in pseudo-words like “nnonoo”, link other glyphs
+to them using metrics expressions.</p>
+<p>FontLab’s <strong>auto-spacing</strong> function (<em>Font &gt; Auto Space</em>, or the semicolon key) gives
+every glyph a starting point at once.
+It’s not a finished result — the algorithm doesn’t know your design’s intentions — but
+it eliminates starting from zero on secondary glyphs.</p>
 <h2 id="honing-and-path-fixing">Honing and path fixing<a class="headerlink" href="#honing-and-path-fixing" title="Permanent link">&para;</a></h2>
-<p>After drawing comes cleanup. Autotrace results, imported SVG artwork, and even carefully hand-drawn contours can contain problems: nearly flat curves that should be straight lines, overlapping paths creating rendering artifacts, contour directions wrong for export.</p>
-<p>FontLab's automatic path fixing (<em>Contour &gt; Auto Fix</em>) handles the most common issues. For manual work, the <strong>Eraser</strong> tool in toolbox mode removes nodes smoothly, and the <strong>Clean Up</strong> action simplifies over-complex paths while preserving the outline shape.</p>
-<p>The key insight from Dave's chapter on fixing paths by hand: don't fix everything at once. Work through problem types one at a time — open contours first, then direction errors, then unnecessary nodes.</p>
+<p>After drawing comes cleanup.
+Autotrace results, imported SVG artwork, and even carefully hand-drawn contours can
+contain problems: nearly flat curves that should be straight lines, overlapping paths
+creating rendering artifacts, contour directions wrong for export.</p>
+<p>FontLab’s automatic path fixing (<em>Contour &gt; Auto Fix</em>) handles the most common issues.
+For manual work, the <strong>Eraser</strong> tool in toolbox mode removes nodes smoothly, and the
+<strong>Clean Up</strong> action simplifies over-complex paths while preserving the outline shape.</p>
+<p>The key insight from Dave’s chapter on fixing paths by hand: don’t fix everything at
+once. Work through problem types one at a time — open contours first, then direction
+errors, then unnecessary nodes.</p>
 <h2 id="italic-design-in-fontlab">Italic design in FontLab<a class="headerlink" href="#italic-design-in-fontlab" title="Permanent link">&para;</a></h2>
-<p>Building an italic usually starts with the roman: select all glyphs, run <em>Tools &gt; Actions &gt; Slant</em> for an oblique starting point, then work through each glyph to make the shapes genuinely italic, not just slanted.</p>
-<p>True italics differ from obliques in more than angle. The lowercase 'a' typically becomes single-story. The 'f' gets a descender. Many letters adopt calligraphic forms distinct from their roman counterparts. How far you push this depends on the typeface's role — a formal serif italic stays closer to its roman than a loose, humanist one.</p>
-<p>Spacing the italic requires one specific check: roman-italic combinations. Technical and academic text mixes roman and italic in the same word. Italic sidebearings need to work against roman neighbors, not just other italic letters. Test by typing mixed-style text in the Metrics window.</p>
+<p>Building an italic usually starts with the roman: select all glyphs, run <em>Tools &gt;
+Actions &gt; Slant</em> for an oblique starting point, then work through each glyph to make the
+shapes genuinely italic, not just slanted.</p>
+<p>True italics differ from obliques in more than angle.
+The lowercase ‘a’ typically becomes single-story.
+The ‘f’ gets a descender.
+Many letters adopt calligraphic forms distinct from their roman counterparts.
+How far you push this depends on the typeface’s role — a formal serif italic stays
+closer to its roman than a loose, humanist one.</p>
+<p>Spacing the italic requires one specific check: roman-italic combinations.
+Technical and academic text mixes roman and italic in the same word.
+Italic sidebearings need to work against roman neighbors, not just other italic letters.
+Test by typing mixed-style text in the Metrics window.</p>
 <h2 id="family-planning">Family planning<a class="headerlink" href="#family-planning" title="Permanent link">&para;</a></h2>
-<p>A font becomes more useful — and more saleable — as part of a family. The minimum viable family is roman + italic, or regular + bold. The maximum is a variable font with continuous axes for weight, width, and optical size.</p>
-<p>Dave's approach: design two masters (regular and bold, or regular and condensed), run <em>Match Masters</em> to make them interpolation-compatible, then generate instances at intermediate positions with <em>Font &gt; Generate Instance</em>. FontLab's interpolation is the same algorithm used at runtime in variable fonts, so the preview reflects what users see.</p>
-<p>For a static family, export each instance as a separate OpenType file and name them in Font Info &gt; Instances. For a variable font, export as Variable TT and users get the full range in one file.</p>
-<p>The tutorials go much deeper on each topic. What's here is the skeleton; the flesh is in the full series.</p>
+<p>A font becomes more useful — and more saleable — as part of a family.
+The minimum viable family is roman + italic, or regular + bold.
+The maximum is a variable font with continuous axes for weight, width, and optical size.</p>
+<p>Dave’s approach: design two masters (regular and bold, or regular and condensed), run
+<em>Match Masters</em> to make them interpolation-compatible, then generate instances at
+intermediate positions with <em>Font &gt; Generate Instance</em>. FontLab’s interpolation is the
+same algorithm used at runtime in variable fonts, so the preview reflects what users
+see.</p>
+<p>For a static family, export each instance as a separate OpenType file and name them in
+Font Info &gt; Instances.
+For a variable font, export as Variable TT and users get the full range in one file.</p>
+<p>The tutorials go much deeper on each topic.
+What’s here is the skeleton; the flesh is in the full series.</p>
 <hr />
-<p>Dave Lawrence's full tutorial series is at <a href="https://help.fontlab.com/fontlab/8/tutorials/calfonts/">help.fontlab.com/fontlab/8/tutorials/calfonts/</a>.</p>
-<p><em>Previous: <a href="../../../../2024/09/23/calfonts-setup-shapes/">Drawing calligraphic fonts in FontLab: setup and shapes</a></em></p>
+<p>Dave Lawrence’s full tutorial series is at
+<a href="https://help.fontlab.com/fontlab/8/tutorials/calfonts/">help.fontlab.com/fontlab/8/tutorials/calfonts/</a>.</p>
+<p><em>Previous:
+<a href="../../../../2024/09/23/calfonts-setup-shapes/">Drawing calligraphic fonts in FontLab: setup and shapes</a></em></p>
 
 
   
@@ -1639,8 +1206,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

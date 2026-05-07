@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../css/extra.css">
     
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -850,480 +858,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1372,7 +906,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab-pad.png" alt="FontLab Pad">
           </span>
         
       </nav>
@@ -1381,11 +915,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2014-12-15 00:00:00+00:00">December 15, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1402,7 +931,8 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="dtl-otmaster-50-vfb2ufo-and-fontlab-pad-11"><a class="toclink" href="../../2014/12/15/otmaster-5-vfb2ufo-fontlab-pad-11/">DTL OTMaster 5.0, vfb2ufo, and FontLab Pad 1.1</a></h2>
-<p>December 2014 brought a major version of DTL OTMaster alongside two new free tools: a command-line UFO converter and an updated color font typesetter.</p>
+<p>December 2014 brought a major version of DTL OTMaster alongside two new free tools: a
+command-line UFO converter and an updated color font typesetter.</p>
 
     
       <nav class="md-post__action">
@@ -1421,7 +951,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1430,12 +960,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2014-06-18 00:00:00+00:00">June 18, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/tutorial/" class="md-meta__link">Tutorial</a>, 
-              <a href="../../category/video/" class="md-meta__link">Video</a></li>
         
         
           
@@ -1452,7 +976,11 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="color-fonts-the-next-big-thing-a-fontlab-tutorial"><a class="toclink" href="../../2014/06/18/color-fonts-tutorial/">Color fonts: the next big thing? A FontLab tutorial</a></h2>
-<p>In 2014, color fonts were an emerging frontier — and this 103-minute tutorial with Adam Twardoch was one of the first in-depth explorations of how to actually create them. It covers the technical standards, font editor workflows, and the promise of full-color type at a moment when emoji and display typography were pushing the format into the mainstream.</p>
+<p>In 2014, color fonts were an emerging frontier — and this 103-minute tutorial with Adam
+Twardoch was one of the first in-depth explorations of how to actually create them.
+It covers the technical standards, font editor workflows, and the promise of full-color
+type at a moment when emoji and display typography were pushing the format into the
+mainstream.</p>
 
     
       <nav class="md-post__action">
@@ -1471,7 +999,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -1480,11 +1008,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2014-03-15 00:00:00+00:00">March 15, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/events/" class="md-meta__link">Events</a></li>
         
         
           
@@ -1501,7 +1024,9 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="brush-romans-webinar-with-john-downer-and-paul-herrera"><a class="toclink" href="../../2014/03/15/brush-romans-webinar/">Brush Romans webinar with John Downer and Paul Herrera</a></h2>
-<p>On March 11, 2014, FontLab hosted a webinar on Roman capital letterforms and their origins in flat-brush writing, presented by sign painter and type designer John Downer and calligrapher Paul Herrera.</p>
+<p>On March 11, 2014, FontLab hosted a webinar on Roman capital letterforms and their
+origins in flat-brush writing, presented by sign painter and type designer John Downer
+and calligrapher Paul Herrera.</p>
 
     
       <nav class="md-post__action">
@@ -1520,7 +1045,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -1529,11 +1054,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2014-02-15 00:00:00+00:00">February 15, 2014</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/events/" class="md-meta__link">Events</a></li>
         
         
           
@@ -1550,7 +1070,8 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="matthew-carter-webinar"><a class="toclink" href="../../2014/02/15/matthew-carter-webinar/">Matthew Carter webinar</a></h2>
-<p>In February 2014, FontLab hosted a live webinar with Matthew Carter, one of the most consequential type designers of the digital era.</p>
+<p>In February 2014, FontLab hosted a live webinar with Matthew Carter, one of the most
+consequential type designers of the digital era.</p>
 
     
       <nav class="md-post__action">
@@ -1683,8 +1204,6 @@
     
     
       <script src="../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

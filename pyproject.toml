@@ -20,6 +20,7 @@ dependencies = [
     "mkdocs-copy-to-llm>=0.2",
     "properdocs>=1.6.7",
     "mkdocs-materialx>=10.1.4",
+    "flowmark>=0.6.5",
 ]
 
 [project.scripts]

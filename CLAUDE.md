@@ -18,20 +18,22 @@ The blog must be compatible with the MaterialX `blog` plugin (`jaywhj.github.io/
 
 ## The `reference/` tree
 
-Gitignored sibling repos cloned in for context. Three categories — respect them:
+The `reference/` directory contains gitignored sibling repos and assets cloned in for context. Four main categories — respect them:
 
 | Category | Examples | Rule |
 |---|---|---|
-| **Writable references** (have own remotes; OK to push fixes) | `fontlab-partners/`, `fldoc/`, `twardown-{docs,js,org,py}/` | `fontlab-partners` is in good shape — only fix obvious bugs. `fldoc` needs modernization. `twardown-*` to be prepped for PyPI/NPM publish with `hatch-vcs` + GitHub Actions. |
-| **Writable Python tools** (own repos, target PyPI) | `vexy-mkdocs-output-as-input/`, `vexy-mkdocs-strip-number-prefix/`, `vexy-mkdocs-text-export/`, `vexy-mkdocs-markdown-in-template/`, `vexy-mkdocs-tags/`, `vexy-mkdocs-tools/`, `vexy-marktripy/`, `vexy-python-markdown-steroids/` | Rename packages to `vexy-…` prefix where noted. Use `uv publish`, `uvx hatch test`, `uvx hatch build`. `hatch-vcs` + git semver tags; `__version__.py` gitignored. Each gets `build.sh` + `publish.sh` + GH Actions. Modernize for ProperDocs / Python-Markdown 3.10.2 / Python 3.12+. |
-| **Read-only references** | `properdocs/`, `mkdocs-materialx/`, `FontLabVI-help/`, `fontlab-com-oldpub/`, `pymdown-extensions/`, plus the `mkdocs-*` plugin clones | Don't edit. For non-published `mkdocs-*` plugins worth using, fork to `vexyart` org with `vexy-` prefix instead of editing in place. |
+| **Static Assets** | `i.fontlab.com/docs/`, `i.vexy.art/docs/`, `vexy-lines.static/`, `flum-unified-database.static/` | Hosted CDNs and static help sites. Used for shared components (e.g. `i.fontlab.com/menu/`). |
+| **Writable references** | `fontlab-partners/`, `fldoc/`, `twardown-{docs,js,org,py}/` | `fontlab-partners` is in good shape — only fix obvious bugs. `fldoc` needs modernization to ProperDocs/MaterialX. `twardown-*` to be prepped for PyPI/NPM publish with `hatch-vcs` + GitHub Actions. |
+| **Read-only references** | `FontLabVI-help/`, `fontlab-com-oldpub/` | Don't edit. Used as source material to port blog posts and news summaries to the new site. |
+| **Writable Python tools** | `vexy-mkdocs-*`, `vexy-marktripy/`, `vexy-python-markdown-steroids/` | Own repos, target PyPI. Rename packages to `vexy-…` prefix where noted. Use `uv publish`, `uvx hatch test`, `uvx hatch build`. `hatch-vcs` + git semver tags; `__version__.py` gitignored. Each gets `build.sh` + `publish.sh` + GH Actions. Modernize for ProperDocs / Python-Markdown 3.10.2 / Python 3.12+. |
+| **Read-only Python tools** | `properdocs/`, `mkdocs-materialx/`, `pymdown-extensions/`, plus the `mkdocs-*` plugins | Don't edit. If a non-published `mkdocs-*` plugin is needed, fork it to `./reference/github.vexyart/` with a `vexy-` prefix, add scaffolding, publish it, and add to `vexy-mkdocs-tools` requirements. |
 
 `vexy-mkdocs-tools` is the central Fire-based CLI that owns dependencies and exposes commands like `uvx vexy-mkdocs-tools build`. New work that isn't a plugin or Markdown extension goes there.
 
 ## Migration constraints (load-bearing)
 
 - **MkDocs → ProperDocs.** MkDocs is EOL; v2 will break. All new and modernized code targets ProperDocs.
-- **MkDocs Material → MaterialX.** Same story for the theme. Surgically extend, don't fork.
+- **MkDocs Material → MaterialX.** Same story for the theme. Surgically extend, don't fork. Familiarize yourself with MaterialX plugins for ProperDocs: `optimize`, `tags`, and absolutely crucially `blog`.
 - **Python-Markdown 3.10.2** and **Python 3.12+** are the floor for the Markdown-side tools.
 - No backwards-compatibility constraint for the new code we own.
 

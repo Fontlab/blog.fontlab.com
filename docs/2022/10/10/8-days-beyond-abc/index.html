@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1444,16 +978,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1475,16 +1009,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/tutorial/">Tutorial</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1515,31 +1039,66 @@
 
   <h1>Eight days of FontLab — day 3: beyond A-B-C</h1>
 
-<p>Fifty glyphs is a start. Five hundred is a font that works for most of Europe. Day 3 covers composites, diacritics, symbols, ligatures, and the FontLab tools — auto layers, anchors, auto features — that let you build a large glyph set without drawing each piece from scratch.</p>
+<p>Fifty glyphs is a start.
+Five hundred is a font that works for most of Europe.
+Day 3 covers composites, diacritics, symbols, ligatures, and the FontLab tools — auto
+layers, anchors, auto features — that let you build a large glyph set without drawing
+each piece from scratch.</p>
 <!-- more -->
 
 <h2 id="why-fonts-need-more-than-az">Why fonts need more than A–Z<a class="headerlink" href="#why-fonts-need-more-than-az" title="Permanent link">&para;</a></h2>
-<p>English gets by with the basic Latin alphabet, digits, and common punctuation. Most other Latin-script languages don't. French, Czech, Spanish, German, and dozens more rely on accented letters: àčñü and hundreds of variants. Add Greek, Cyrillic, or Devanagari and the number climbs fast.</p>
-<p>Ordinarily, each of these glyphs would require separate drawing. With FontLab's composite system, it doesn't.</p>
+<p>English gets by with the basic Latin alphabet, digits, and common punctuation.
+Most other Latin-script languages don’t. French, Czech, Spanish, German, and dozens more
+rely on accented letters: àčñü and hundreds of variants.
+Add Greek, Cyrillic, or Devanagari and the number climbs fast.</p>
+<p>Ordinarily, each of these glyphs would require separate drawing.
+With FontLab’s composite system, it doesn’t.</p>
 <p><img alt="Combination of base letters and diacritical marks to form new letters like accented vowels" src="../../../../media/fl8days-3-beyond-abc-expandyourfonts-02.png" /></p>
-<p>Draw a diaeresis once, combine it with your "a", and you have "ä". Include a set of diacritical marks, and one click in FontLab generates all composite letters for European languages. Whenever you change the base letterform, the composites update automatically.</p>
+<p>Draw a diaeresis once, combine it with your “a”, and you have “ä”. Include a set of
+diacritical marks, and one click in FontLab generates all composite letters for European
+languages. Whenever you change the base letterform, the composites update automatically.</p>
 <h2 id="symbols-without-unicode-codepoints">Symbols without Unicode codepoints<a class="headerlink" href="#symbols-without-unicode-codepoints" title="Permanent link">&para;</a></h2>
-<p>Every character in the Unicode standard has a dedicated code. The Euro sign is U+20AC; FontLab provides a slot for it. But what about symbols that have no Unicode at all?</p>
+<p>Every character in the Unicode standard has a dedicated code.
+The Euro sign is U+20AC; FontLab provides a slot for it.
+But what about symbols that have no Unicode at all?</p>
 <p><img alt="Symbols and icons stored as font glyphs, showing various pictographic characters in the Font window" src="../../../../media/fl8days-3-beyond-abc-expandyourfonts-05.png" /></p>
-<p>You can store custom symbols in a font under Private Use Area unicodes (U+E000 to U+F0FF). Or make a dedicated symbol font where typing "A" produces your first symbol, "B" produces the second, and so on.</p>
-<p>Adding symbols is simple: copy-paste from Illustrator or Affinity Designer, or drag-drop named image files and let Autotrace convert them to smooth contours.</p>
+<p>You can store custom symbols in a font under Private Use Area unicodes (U+E000 to
+U+F0FF). Or make a dedicated symbol font where typing “A” produces your first symbol,
+“B” produces the second, and so on.</p>
+<p>Adding symbols is simple: copy-paste from Illustrator or Affinity Designer, or drag-drop
+named image files and let Autotrace convert them to smooth contours.</p>
 <h2 id="ligatures-and-alternate-glyphs">Ligatures and alternate glyphs<a class="headerlink" href="#ligatures-and-alternate-glyphs" title="Permanent link">&para;</a></h2>
 <p><img alt="Alternate glyphs and ligature examples showing R_A ligature combination and stylistic variants" src="../../../../media/fl8days-3-beyond-abc-expandyourfonts-06.png" /></p>
-<p>Ligatures are glyphs that replace two or more adjacent characters with a single combined form. Name a glyph "R_A.liga" (underscore separating component names, ".liga" suffix), and FontLab's <strong>Add Auto Features</strong> command builds the OpenType code automatically. In any OpenType-aware application, typing "RA" will substitute the ligature glyph.</p>
-<p>You can also make substitutions context-dependent — different letter variants before or after specific neighbors. Script and handwriting fonts use this extensively to avoid repeating identical letterforms.</p>
+<p>Ligatures are glyphs that replace two or more adjacent characters with a single combined
+form. Name a glyph “R_A.liga” (underscore separating component names, “.liga” suffix),
+and FontLab’s <strong>Add Auto Features</strong> command builds the OpenType code automatically.
+In any OpenType-aware application, typing “RA” will substitute the ligature glyph.</p>
+<p>You can also make substitutions context-dependent — different letter variants before or
+after specific neighbors.
+Script and handwriting fonts use this extensively to avoid repeating identical
+letterforms.</p>
 <h2 id="diacritics-in-detail-anchors-and-auto-layers">Diacritics in detail: anchors and auto layers<a class="headerlink" href="#diacritics-in-detail-anchors-and-auto-layers" title="Permanent link">&para;</a></h2>
 <p><img alt="Diacritical marks panel in FontLab showing selection of marks for addition to the font" src="../../../../media/fl8days-3-beyond-abc-mark.png" /></p>
-<p>Need a diacritic your font is missing? Go to <em>Font &gt; Add Glyphs</em>, select the Nonspacing Mark category, click the cells you need, click OK. Double-click the added glyph and draw the mark — diacritics have simple shapes and take only a few minutes each.</p>
-<p>To create the composite "á": go to <em>Font &gt; Add Glyphs</em>, choose Lowercase Letter, select "aacute". If your font already has "a" and "acutecomb", FontLab builds the composite with the mark automatically centered above the base. Any future change to either component updates the composite.</p>
+<p>Need a diacritic your font is missing?
+Go to <em>Font &gt; Add Glyphs</em>, select the Nonspacing Mark category, click the cells you
+need, click OK. Double-click the added glyph and draw the mark — diacritics have simple
+shapes and take only a few minutes each.</p>
+<p>To create the composite “á”: go to <em>Font &gt; Add Glyphs</em>, choose Lowercase Letter, select
+“aacute”.
+If your font already has “a” and “acutecomb”, FontLab builds the composite with
+the mark automatically centered above the base.
+Any future change to either component updates the composite.</p>
 <p><img alt="Anchor points shown on base letters and combining marks, demonstrating anchor-based composite assembly" src="../../../../media/fl8days-3-beyond-abc-anchors.png" /></p>
-<p>For precision positioning, use <strong>anchors</strong>. In "a", add an anchor named "top" using the Guides tool with Shift-click. In "acutecomb", add a corresponding anchor named "_top" — the underscore prefix creates the link. Turn on <em>Glyph &gt; Auto Layer</em> in "aacute", and the mark snaps precisely to where the two anchors meet.</p>
+<p>For precision positioning, use <strong>anchors</strong>. In “a”, add an anchor named “top” using the
+Guides tool with Shift-click.
+In “acutecomb”, add a corresponding anchor named “_top” — the underscore prefix creates
+the link.
+Turn on <em>Glyph &gt; Auto Layer</em> in “aacute”, and the mark snaps precisely to where
+the two anchors meet.</p>
 <p><img alt="Cloud of diacritical mark composites built with auto layers in FontLab, showing the anchor system at work" src="../../../../media/fl8days-3-beyond-abc-anchorcloud.png" /></p>
-<p>Move the "_top" anchor in "acutecomb", and the accent shifts in every accented variant that uses it. Move "top" in "a", and all variants of "a" update together. One change, everywhere it applies.</p>
+<p>Move the “_top” anchor in “acutecomb”, and the accent shifts in every accented variant
+that uses it. Move “top” in “a”, and all variants of “a” update together.
+One change, everywhere it applies.</p>
 <h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://learn.scannerlicker.net/2014/11/14/on-legibility-in-typography-and-type-design/">On legibility: in typography and type design</a></li>
@@ -1679,8 +1238,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

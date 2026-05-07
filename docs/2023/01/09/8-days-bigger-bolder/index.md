@@ -2,25 +2,25 @@ One font is a typeface. A family of weights and widths is a tool. Day 6 covers t
 
 ## Collaboration without chaos: flags, tags, notes, stickers
 
-Type design doesn't have to be a solo project. But group work is hard when collaborators are in different time zones, all touching the same file.
+Type design doesn’t have to be a solo project. But group work is hard when collaborators are in different time zones, all touching the same file.
 
-FontLab's answer is to put communication inside the font. Four tools:
+FontLab’s answer is to put communication inside the font. Four tools:
 
-**Flags** are color codes on glyph cells in the Font window. Assign blue to one designer's glyphs, green to another's, red to glyphs needing review. Everyone sees the project's status at a glance.
+**Flags** are color codes on glyph cells in the Font window. Assign blue to one designer’s glyphs, green to another’s, red to glyphs needing review. Everyone sees the project’s status at a glance.
 
-**Tags** are labels that group glyphs logically — "linFig" for lining figures, "smallcap" for small capitals. Filter by tag in the Classes panel to work on a subset. Tags also apply to font guides and zones, letting FontLab show guides only in glyphs where they're relevant.
+**Tags** are labels that group glyphs logically — “linFig” for lining figures, “smallcap” for small capitals. Filter by tag in the Classes panel to work on a subset. Tags also apply to font guides and zones, letting FontLab show guides only in glyphs where they’re relevant.
 
 **Notes** are free-text fields. Per-font notes go in File › Font Info › Note. Per-glyph notes appear under the glyph cell or via right-click > Edit Note. A small yellow icon marks glyphs with notes so teammates spot them without opening every glyph.
 
-**Stickers** are visual annotations inside the Glyph window — circles, arrows, text callouts pointing to specific areas of the drawing. Activate the Guides tool to add them. Useful for "perhaps too bold here" or "descender should reach −30".
+**Stickers** are visual annotations inside the Glyph window — circles, arrows, text callouts pointing to specific areas of the drawing. Activate the Guides tool to add them. Useful for “perhaps too bold here” or “descender should reach −30”.
 
-None of this data goes into the exported OpenType font. It's for your team, not your users.
+None of this data goes into the exported OpenType font. It’s for your team, not your users.
 
 ## From single weight to type family
 
 Most fonts have family members: Bold, Italic, Condensed, ExtraLight. Each style is a *master* — a set of contours with the same point count arranged differently. FontLab interpolates between masters to produce everything in between.
 
-To prototype a condensed variant, open your Regular in FontLab. Choose *Add Variations* from the Font menu, type "Condensed", click OK. You now have a Width axis and two identical masters. Select some glyphs, open *Tools > Actions*, find *Change width* in the Adjust section, apply it to the Condensed master only. Select all glyphs, run *Match Masters*. You have variation.
+To prototype a condensed variant, open your Regular in FontLab. Choose *Add Variations* from the Font menu, type “Condensed”, click OK. You now have a Width axis and two identical masters. Select some glyphs, open *Tools > Actions*, find *Change width* in the Adjust section, apply it to the Condensed master only. Select all glyphs, run *Match Masters*. You have variation.
 
 Variation enables two kinds of output:
 

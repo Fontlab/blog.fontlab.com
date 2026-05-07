@@ -12,7 +12,7 @@ FontLab 7 focuses on stability, productivity, and technical excellence — four 
 
 FontLab 7 understands **glyph naming** from other font editors and can **automatically generate OpenType features** from different naming schemes — batch-renaming glyphs is straightforward too. Hold **F1** over any interface element for **Quick Help**. Built on a 64-bit foundation, FontLab 7 runs on **macOS Catalina**, **Windows 10**, older systems, and even Linux with Wine.
 
-[See what's new in FontLab 7](https://fontlab.com/font-editor/fontlab/7/)
+[See what’s new in FontLab 7](https://fontlab.com/font-editor/fontlab/7/)
 
 ## Download the 30-day trial
 
@@ -22,10 +22,10 @@ Download the **30-day trial**, which runs side-by-side with your existing FontLa
 
 ## What early adopters say
 
-**Fábio Duarte Martins** (Scannerlicker), designer of Optician Sans and Electrica: "This baby is a rock-solid font development software, from design to engineering. Drawing is a joy: FontLab has the best drawing tools I've ever seen, and they just got better!"
+**Fábio Duarte Martins** (Scannerlicker), designer of Optician Sans and Electrica: “This baby is a rock-solid font development software, from design to engineering. Drawing is a joy: FontLab has the best drawing tools I’ve ever seen, and they just got better!”
 
-**Eduardo Tunni**, designer of the Graduate variable superfont: "Great stuff! FontLab 7 is very stable. Congrats to the FontLab team."
+**Eduardo Tunni**, designer of the Graduate variable superfont: “Great stuff! FontLab 7 is very stable. Congrats to the FontLab team.”
 
-**Dave Lawrence** (California Type Foundry), designer of CAL Bodoni and CAL Zed: "If you want to make more fonts faster and better and if you want to stay ahead of the competition, go with FontLab 7. My favorite parts are auto layers, glyph masters, and FontAudit. Using these features, I was able to create an average of 167 ornamental glyphs (in two weights) per day."
+**Dave Lawrence** (California Type Foundry), designer of CAL Bodoni and CAL Zed: “If you want to make more fonts faster and better and if you want to stay ahead of the competition, go with FontLab 7. My favorite parts are auto layers, glyph masters, and FontAudit. Using these features, I was able to create an average of 167 ornamental glyphs (in two weights) per day.”
 
-**Vassil Kateliev** (Karandash / The FontMaker), co-designer of the Bolyar font family and developer of TypeRig: "FontLab 7 is superb. The best vector engine for drawing and manipulation I have seen in ages. Rock-steady interpolation engine that is also compliant with variable OpenType fonts. Start with an excellent multi-paradigm approach to type design — old-school outlines, element references, components, auto-generated glyphs, or all of them combined. Add auto layers, auto OpenType feature generation, a powerful Python API, and multi-platform support. FontLab 7 finally feels mature."
+**Vassil Kateliev** (Karandash / The FontMaker), co-designer of the Bolyar font family and developer of TypeRig: “FontLab 7 is superb. The best vector engine for drawing and manipulation I have seen in ages. Rock-steady interpolation engine that is also compliant with variable OpenType fonts. Start with an excellent multi-paradigm approach to type design — old-school outlines, element references, components, auto-generated glyphs, or all of them combined. Add auto layers, auto OpenType feature generation, a powerful Python API, and multi-platform support. FontLab 7 finally feels mature.”

@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1455,16 +989,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1486,16 +1020,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/release/">release</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1526,144 +1050,92 @@
 
   <h1>FontLab 8.2: glyphs, font formats, scripting, and color</h1>
 
-<p>FontLab 8.2 rounds out the release with improvements across the Font window, format interop, Python scripting, and color fonts. Highlights include COLRv1 support, temporary font installation on export, improved Glyphs file format support, Python 3.11.3 for 10–60% faster scripting, and case conversion in the Font window.</p>
+<p>FontLab 8.2 rounds out the release with improvements across the Font window, format
+interop, Python scripting, and color fonts.
+Highlights include COLRv1 support, temporary font installation on export, improved
+Glyphs file format support, Python 3.11.3 for 10–60% faster scripting, and case
+conversion in the Font window.</p>
 <!-- more -->
 
 <h2 id="test-and-adjust">Test and adjust.<a class="headerlink" href="#test-and-adjust" title="Permanent link">&para;</a></h2>
-<p>FontLab helps you iterate toward the ideal and test in real-world environments. Find and fix problems automatically, optimize contours, tweak tension and curvature, merge paths, and apply non-destructive tweaks like rounded corners and <em>Delta</em> adjustments. Change weight, convert contours, or transform glyphs. Preview current or custom text in multiple masters and multi-size waterfalls. With FontLab's built-in HarfBuzz and Microsoft ClearType, complex-script features and Windows screen rendering are the genuine article. Any glyph map, glyph, or custom text can be printed or exported to PDF.</p>
+<p>FontLab helps you iterate toward the ideal and test in real-world environments.
+Find and fix problems automatically, optimize contours, tweak tension and curvature,
+merge paths, and apply non-destructive tweaks like rounded corners and <em>Delta</em>
+adjustments. Change weight, convert contours, or transform glyphs.
+Preview current or custom text in multiple masters and multi-size waterfalls.
+With FontLab’s built-in HarfBuzz and Microsoft ClearType, complex-script features and
+Windows screen rendering are the genuine article.
+Any glyph map, glyph, or custom text can be printed or exported to PDF.</p>
 <figure class="aligncenter size-large">
-<img
-src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-1024x256.png"
-class="wp-image-3224" loading="lazy" decoding="async"
-data-attachment-id="3224"
-data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-08-delta/"
-data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta.png"
-data-orig-size="1920,480" data-comments-opened="0"
-data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-data-image-title="fl8-head-08-delta" data-image-description=""
-data-image-caption=""
-data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-300x75.png"
-data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-1024x256.png"
-srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta.png 1920w"
-sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024"
-height="256" />
+<img src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-1024x256.png" class="wp-image-3224" loading="lazy" decoding="async" data-attachment-id="3224" data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-08-delta/" data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta.png" data-orig-size="1920,480" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="fl8-head-08-delta" data-image-description="" data-image-caption="" data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-300x75.png" data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-1024x256.png" srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-08-delta.png 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024" height="256" />
 </figure>
 
-<p><a
-href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-08-test-adjust/"
-class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button"
-style="border-radius:0px;color:#3296fa" target="_blank"
-rel="noreferrer noopener">Read more: Test &amp; adjust ↗️</a></p>
-<p><strong>FontLab 8.2</strong> adds new <em>FontAudit</em> detection and fixing of short segments, new <em>Warp</em> and <em>Scribble &amp; Strokes</em> actions, a redesigned <em>Preview</em> panel, improved power guides, and easier copying of <em>Delta</em> filter settings to other masters.</p>
+<p><a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-08-test-adjust/" class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button" style="border-radius:0px;color:#3296fa" target="_blank" rel="noreferrer noopener">Read
+more: Test &amp; adjust ↗️</a></p>
+<p><strong>FontLab 8.2</strong> adds new <em>FontAudit</em> detection and fixing of short segments, new <em>Warp</em>
+and <em>Scribble &amp; Strokes</em> actions, a redesigned <em>Preview</em> panel, improved power guides,
+and easier copying of <em>Delta</em> filter settings to other masters.</p>
 <h2 id="color">Color.<a class="headerlink" href="#color" title="Permanent link">&para;</a></h2>
-<p>Paste, import, and edit color vectors, gradients, and images in many formats. Apply colors and visually designed gradients to fills and strokes. Overlay monochrome layers and export to all OpenType color font formats that work in any modern device, app, or browser.</p>
+<p>Paste, import, and edit color vectors, gradients, and images in many formats.
+Apply colors and visually designed gradients to fills and strokes.
+Overlay monochrome layers and export to all OpenType color font formats that work in any
+modern device, app, or browser.</p>
 <figure class="aligncenter size-large">
-<img
-src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-1024x256.png"
-class="wp-image-3225" loading="lazy" decoding="async"
-data-attachment-id="3225"
-data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-09-gradient/"
-data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient.png"
-data-orig-size="1920,480" data-comments-opened="0"
-data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-data-image-title="fl8-head-09-gradient" data-image-description=""
-data-image-caption=""
-data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-300x75.png"
-data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-1024x256.png"
-srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient.png 1920w"
-sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024"
-height="256" />
+<img src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-1024x256.png" class="wp-image-3225" loading="lazy" decoding="async" data-attachment-id="3225" data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-09-gradient/" data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient.png" data-orig-size="1920,480" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="fl8-head-09-gradient" data-image-description="" data-image-caption="" data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-300x75.png" data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-1024x256.png" srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-09-gradient.png 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024" height="256" />
 </figure>
 
-<p><a
-href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/"
-class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button"
-style="border-radius:0px;color:#3296fa" target="_blank"
-rel="noreferrer noopener">Read more: Color ↗️</a></p>
-<p><strong>FontLab 8.2</strong> adds support for the OpenType COLRv1 format and lets you export individual glyphs as SVG, PDF, or PNG artwork assets.</p>
+<p><a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/" class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button" style="border-radius:0px;color:#3296fa" target="_blank" rel="noreferrer noopener">Read
+more: Color ↗️</a></p>
+<p><strong>FontLab 8.2</strong> adds support for the OpenType COLRv1 format and lets you export
+individual glyphs as SVG, PDF, or PNG artwork assets.</p>
 <h2 id="glyphs-and-fonts">Glyphs and fonts.<a class="headerlink" href="#glyphs-and-fonts" title="Permanent link">&para;</a></h2>
-<p>Develop fonts for any Unicode writing system — Latin, Cyrillic, Greek, Arabic, Hebrew, Indic, CJK, emoji, symbols, and icons. Go from standard to professional with one-click glyph set expansion and automatic OpenType features. Analyze each lookup visually, add custom OpenType tables. Find differences between font versions in <em>Font Map</em>. Fine-tune for the screen with visual hinting. Find, filter, and rename glyphs.</p>
+<p>Develop fonts for any Unicode writing system — Latin, Cyrillic, Greek, Arabic, Hebrew,
+Indic, CJK, emoji, symbols, and icons.
+Go from standard to professional with one-click glyph set expansion and automatic
+OpenType features. Analyze each lookup visually, add custom OpenType tables.
+Find differences between font versions in <em>Font Map</em>. Fine-tune for the screen with
+visual hinting. Find, filter, and rename glyphs.</p>
 <figure class="aligncenter size-large">
-<img
-src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-1024x256.png"
-class="wp-image-3226" loading="lazy" decoding="async"
-data-attachment-id="3226"
-data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-10-fontwindow/"
-data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow.png"
-data-orig-size="1920,480" data-comments-opened="0"
-data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-data-image-title="fl8-head-10-fontwindow" data-image-description=""
-data-image-caption=""
-data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-300x75.png"
-data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-1024x256.png"
-srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow.png 1920w"
-sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024"
-height="256" />
+<img src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-1024x256.png" class="wp-image-3226" loading="lazy" decoding="async" data-attachment-id="3226" data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-10-fontwindow/" data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow.png" data-orig-size="1920,480" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="fl8-head-10-fontwindow" data-image-description="" data-image-caption="" data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-300x75.png" data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-1024x256.png" srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-10-fontwindow.png 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024" height="256" />
 </figure>
 
-<p><a
-href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-10-glyphs-fonts/"
-class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button"
-style="border-radius:0px;color:#3296fa" target="_blank"
-rel="noreferrer noopener">Read more: Glyphs &amp; fonts ↗️</a></p>
-<p><strong>FontLab 8.2</strong> brings case conversion in the Font window, title case conversion in the Glyph window, easier glyph renaming, better autohinting control, OpenType feature improvements, and improved comparison of glyph metrics across fonts.</p>
+<p><a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-10-glyphs-fonts/" class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button" style="border-radius:0px;color:#3296fa" target="_blank" rel="noreferrer noopener">Read
+more: Glyphs &amp; fonts ↗️</a></p>
+<p><strong>FontLab 8.2</strong> brings case conversion in the Font window, title case conversion in the
+Glyph window, easier glyph renaming, better autohinting control, OpenType feature
+improvements, and improved comparison of glyph metrics across fonts.</p>
 <h2 id="font-formats">Font formats.<a class="headerlink" href="#font-formats" title="Permanent link">&para;</a></h2>
-<p>Open and export any OpenType flavor: desktop, web, color, variable. Interchange with fontmake, Glyphs.app, RoboFont, Fontographer, FontLab Studio, and FontForge.</p>
+<p>Open and export any OpenType flavor: desktop, web, color, variable.
+Interchange with fontmake, Glyphs.app, RoboFont, Fontographer, FontLab Studio, and
+FontForge.</p>
 <figure class="aligncenter size-large">
-<img
-src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-1024x256.png"
-class="wp-image-3227" loading="lazy" decoding="async"
-data-attachment-id="3227"
-data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-11-multi-export/"
-data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export.png"
-data-orig-size="1920,480" data-comments-opened="0"
-data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-data-image-title="fl8-head-11-multi-export" data-image-description=""
-data-image-caption=""
-data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-300x75.png"
-data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-1024x256.png"
-srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export.png 1920w"
-sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024"
-height="256" />
+<img src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-1024x256.png" class="wp-image-3227" loading="lazy" decoding="async" data-attachment-id="3227" data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-11-multi-export/" data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export.png" data-orig-size="1920,480" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="fl8-head-11-multi-export" data-image-description="" data-image-caption="" data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-300x75.png" data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-1024x256.png" srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-11-multi-export.png 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024" height="256" />
 </figure>
 
-<p><a
-href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/"
-class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button"
-style="border-radius:0px;color:#3296fa" target="_blank"
-rel="noreferrer noopener">Read more: Font formats ↗️</a></p>
-<p>With <strong>FontLab 8.2</strong>, you can temporarily install a font on export, export glyphs and Sketchboard content as PDF, SVG, or PNG, open and export variable COLRv1 fonts, and open installed variable fonts. FontLab 8.2 improves support for the <code>.glyphs</code> file format, OpenType feature decompilation and editing, and import/export of right-to-left kerning between formats.</p>
+<p><a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/" class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button" style="border-radius:0px;color:#3296fa" target="_blank" rel="noreferrer noopener">Read
+more: Font formats ↗️</a></p>
+<p>With <strong>FontLab 8.2</strong>, you can temporarily install a font on export, export glyphs and
+Sketchboard content as PDF, SVG, or PNG, open and export variable COLRv1 fonts, and open
+installed variable fonts.
+FontLab 8.2 improves support for the <code>.glyphs</code> file format, OpenType feature
+decompilation and editing, and import/export of right-to-left kerning between formats.</p>
 <h2 id="scripting">Scripting.<a class="headerlink" href="#scripting" title="Permanent link">&para;</a></h2>
-<p>Write Python 3.11 scripts or run complex batch work and glyph transformations with extensions like the TypeRig package.</p>
+<p>Write Python 3.11 scripts or run complex batch work and glyph transformations with
+extensions like the TypeRig package.</p>
 <figure class="aligncenter size-large">
-<img
-src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-1024x256.png"
-class="wp-image-3228" loading="lazy" decoding="async"
-data-attachment-id="3228"
-data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-12-typerig/"
-data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig.png"
-data-orig-size="1920,480" data-comments-opened="0"
-data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-data-image-title="fl8-head-12-typerig" data-image-description=""
-data-image-caption=""
-data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-300x75.png"
-data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-1024x256.png"
-srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig.png 1920w"
-sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024"
-height="256" />
+<img src="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-1024x256.png" class="wp-image-3228" loading="lazy" decoding="async" data-attachment-id="3228" data-permalink="https://www.fontlab.com/hello/cpn1/attachment/fl8-head-12-typerig/" data-orig-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig.png" data-orig-size="1920,480" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="fl8-head-12-typerig" data-image-description="" data-image-caption="" data-medium-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-300x75.png" data-large-file="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-1024x256.png" srcset="https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-1024x256.png 1024w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-300x75.png 300w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-768x192.png 768w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig-1536x384.png 1536w, https://www.fontlab.com/wp-content/uploads/2023/07/fl8-head-12-typerig.png 1920w" sizes="auto, (max-width: 1024px) 100vw, 1024px" width="1024" height="256" />
 </figure>
 
-<p><a
-href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/"
-class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button"
-style="border-radius:0px;color:#3296fa" target="_blank"
-rel="noreferrer noopener">Read more: Scripting ↗️</a></p>
-<p><strong>FontLab 8.2</strong> bundles Python 3.11.3, which offers 10–60% faster scripting performance. TypeRig has numerous improvements and new dark-mode support.</p>
+<p><a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/" class="wp-block-button__link has-white-background-color has-text-color has-background wp-element-button" style="border-radius:0px;color:#3296fa" target="_blank" rel="noreferrer noopener">Read
+more: Scripting ↗️</a></p>
+<p><strong>FontLab 8.2</strong> bundles Python 3.11.3, which offers 10–60% faster scripting performance.
+TypeRig has numerous improvements and new dark-mode support.</p>
 <h2 id="smooth-and-stable">Smooth and stable.<a class="headerlink" href="#smooth-and-stable" title="Permanent link">&para;</a></h2>
-<p>With numerous fixes for issues reported by users, <strong>FontLab 8.2</strong> reaches a new level of reliability across the board.</p>
+<p>With numerous fixes for issues reported by users, <strong>FontLab 8.2</strong> reaches a new level of
+reliability across the board.</p>
 <h2 id="more-on-fontlab-82">More on FontLab 8.2<a class="headerlink" href="#more-on-fontlab-82" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../../08/09/hello-fontlab-82/">Hello, FontLab 8.2!</a></li>
+<li><a href="../../../08/09/fontlab-82-released/">Hello, FontLab 8.2!</a></li>
 <li><a href="../../../08/30/fontlab-82-drawing-stroke-and-contour-tools/">Drawing, stroke, and contour tools</a></li>
 <li><a href="../../../09/20/fontlab-82-opentype-features-kerning-and-variable-fonts/">OpenType features, kerning, and variable fonts</a></li>
 </ul>
@@ -1790,8 +1262,6 @@ rel="noreferrer noopener">Read more: Scripting ↗️</a></p>
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

@@ -1,10 +1,10 @@
 FontLab 8 launched in June 2022 with over 1,400 improvements over FontLab VI. For FL VI users considering the upgrade, here is a practical summary of what changed across every stage of the font-making workflow.
 
-FontLab VI was released in 2017. It introduced a lot — elements, variable font support, a new drawing engine — but it arrived before those ideas were fully settled. FontLab 7 (2019) consolidated the rough edges. FontLab 8 (2022) followed with what the team calls the "best and boldest upgrade ever," with FontLab 8.2, 8.3, and 8.4 extending it further through 2023–2024.
+FontLab VI was released in 2017. It introduced a lot — elements, variable font support, a new drawing engine — but it arrived before those ideas were fully settled. FontLab 7 (2019) consolidated the rough edges. FontLab 8 (2022) followed with what the team calls the “best and boldest upgrade ever,” with FontLab 8.2, 8.3, and 8.4 extending it further through 2023–2024.
 
 ## Interface and environment
 
-The most visible change is the optional **dark theme** — a common request from designers who spend long hours at a screen. Beyond aesthetics, the interface has been substantially reorganized. **Widgets** give quick access to properties for glyphs, components, and selections. Panels can be grouped into scrollable **panel docks**. Numeric values accept **slider** input and simple **calculations** (type "300+50" and get 350). Hold **F1** over any interface element to get a **Quick Help** popup explaining what it does.
+The most visible change is the optional **dark theme** — a common request from designers who spend long hours at a screen. Beyond aesthetics, the interface has been substantially reorganized. **Widgets** give quick access to properties for glyphs, components, and selections. Panels can be grouped into scrollable **panel docks**. Numeric values accept **slider** input and simple **calculations** (type “300+50” and get 350). Hold **F1** over any interface element to get a **Quick Help** popup explaining what it does.
 
 ## Drawing
 

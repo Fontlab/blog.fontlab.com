@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,8 +15,6 @@
       
         <link rel="canonical" href="https://blog.fontlab.com/2005/06/15/fontlab-studio-5-opentype-standard/">
       
-      
-        <link rel="prev" href="../../../../2000/01/15/fontlab-ltd-founded/">
       
       
         <link rel="next" href="../../../../2012/10/15/typetool-3-fontographer-5-updates/">
@@ -64,10 +59,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +80,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -835,480 +841,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1365,16 +897,31 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
+                    </span>
+                  </div>
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="/media/authors/fontographer.png" alt="Fontographer">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://www.fontlab.com/font-editor/fontographer/">Fontographer</a>
+                        
+                      </strong>
+                      <br>
+                      Classic font editor
                     </span>
                   </div>
                 
@@ -1396,16 +943,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/history/">History</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1436,13 +973,34 @@
 
   <h1>FontLab Studio 5 and the Fontographer acquisition</h1>
 
-<p>2005 was a pivotal year for Fontlab Ltd.: FontLab Studio 5 shipped and became the dominant professional font editor for the following decade, and the company acquired Fontographer from Macromedia, reviving a tool dormant since the mid-1990s.</p>
+<p>2005 was a pivotal year for Fontlab Ltd.: FontLab Studio 5 shipped and became the
+dominant professional font editor for the following decade, and the company acquired
+Fontographer from Macromedia, reviving a tool dormant since the mid-1990s.</p>
 <!-- more -->
 
-<p>FontLab Studio 5 succeeded FontLab 4, which had introduced the first OpenType editing capability in December 2001. Studio 5 refined and extended that foundation into the de-facto standard for professional type design and font production. Adobe, Apple, IBM, Microsoft, Monotype, Morisawa, and most major font foundries used it for production work. The fonts it helped produce include Calibri, Candara, Consolas, Myriad Pro, Palatino nova, PT Sans, and many others in wide daily use.</p>
-<p>In May 2005, Fontlab Ltd. licensed Fontographer from Macromedia. Fontographer had been the dominant font editor on the Macintosh through the late 1980s and early 1990s — it introduced graphical Bézier font editing to a wide audience — but development had stalled after Macromedia acquired it in 1995. Fontlab Ltd. took the rights and resumed development. Fontographer 5 eventually shipped in 2010.</p>
-<p>Also in 2005, the company released FontFlasher for pixel font creation and FogLamp, a utility for converting native Fontographer files into native FontLab files — a practical bridge for studios moving between the two tools.</p>
-<p>The OpenType editing work that began in FontLab 4 and matured in Studio 5 gave type designers direct access to the feature code layer of OpenType fonts — ligatures, alternate forms, positional variants, and script-specific rules — without requiring separate tools or hand-editing binary tables. That capability, combined with class-based kerning and visual TrueType hinting, made Studio 5 the tool of record for a generation of professional type production.</p>
+<p>FontLab Studio 5 succeeded FontLab 4, which had introduced the first OpenType editing
+capability in December 2001. Studio 5 refined and extended that foundation into the
+de-facto standard for professional type design and font production.
+Adobe, Apple, IBM, Microsoft, Monotype, Morisawa, and most major font foundries used it
+for production work.
+The fonts it helped produce include Calibri, Candara, Consolas, Myriad Pro, Palatino
+nova, PT Sans, and many others in wide daily use.</p>
+<p>In May 2005, Fontlab Ltd.
+licensed Fontographer from Macromedia.
+Fontographer had been the dominant font editor on the Macintosh through the late 1980s
+and early 1990s — it introduced graphical Bézier font editing to a wide audience — but
+development had stalled after Macromedia acquired it in 1995. Fontlab Ltd.
+took the rights and resumed development.
+Fontographer 5 eventually shipped in 2010.</p>
+<p>Also in 2005, the company released FontFlasher for pixel font creation and FogLamp, a
+utility for converting native Fontographer files into native FontLab files — a practical
+bridge for studios moving between the two tools.</p>
+<p>The OpenType editing work that began in FontLab 4 and matured in Studio 5 gave type
+designers direct access to the feature code layer of OpenType fonts — ligatures,
+alternate forms, positional variants, and script-specific rules — without requiring
+separate tools or hand-editing binary tables.
+That capability, combined with class-based kerning and visual TrueType hinting, made
+Studio 5 the tool of record for a generation of professional type production.</p>
 
 
   
@@ -1566,8 +1124,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

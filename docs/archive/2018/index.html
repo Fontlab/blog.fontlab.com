@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../css/extra.css">
     
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -850,480 +858,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1372,7 +906,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1381,11 +915,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2018-12-21 00:00:00+00:00">December 21, 2018</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1402,7 +931,12 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="fontlab-vi-12-releases-in-12-months"><a class="toclink" href="../../2018/12/21/fontlab-vi-12-releases-in-12-months/">FontLab VI: 12 releases in 12 months</a></h2>
-<p>FontLab VI shipped a free update every single month of 2018 — twelve releases in twelve months — evolving from the December 2017 launch through version 6.1.2. Each release incorporated feedback from type designers and font developers, steadily refining drawing tools, variable font support, and file interchange. The video and release notes below walk through what actually changed across the full year.</p>
+<p>FontLab VI shipped a free update every single month of 2018 — twelve releases in twelve
+months — evolving from the December 2017 launch through version 6.1.2. Each release
+incorporated feedback from type designers and font developers, steadily refining drawing
+tools, variable font support, and file interchange.
+The video and release notes below walk through what actually changed across the full
+year.</p>
 
     
       <nav class="md-post__action">
@@ -1421,7 +955,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
           </span>
         
       </nav>
@@ -1430,11 +964,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2018-11-22 00:00:00+00:00">November 22, 2018</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1451,7 +980,11 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="dtl-otmaster-79-available-now"><a class="toclink" href="../../2018/11/22/dtl-otmaster-79-available-now/">DTL OTMaster 7.9 available now</a></h2>
-<p>DTL OTMaster 7.9 adds first-class support for variable OpenType fonts — including the <code>fvar</code>, <code>gvar</code>, <code>CFF2</code>, <code>STAT</code>, <code>HVAR</code>, and <code>MVAR</code> tables — plus a new Proofing Tool for printing and exporting PDF specimens and a Side-by-Side Viewer that can show variation instances. Available for macOS, Windows, and Linux; a full license is US$228, upgrades from previous versions are US$57.</p>
+<p>DTL OTMaster 7.9 adds first-class support for variable OpenType fonts — including the
+<code>fvar</code>, <code>gvar</code>, <code>CFF2</code>, <code>STAT</code>, <code>HVAR</code>, and <code>MVAR</code> tables — plus a new Proofing Tool for
+printing and exporting PDF specimens and a Side-by-Side Viewer that can show variation
+instances. Available for macOS, Windows, and Linux; a full license is US$228, upgrades
+from previous versions are US$57.</p>
 
     
       <nav class="md-post__action">
@@ -1470,7 +1003,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+            <img src="/media/authors/fontlab.png" alt="FontLab">
           </span>
         
       </nav>
@@ -1479,11 +1012,6 @@
       <ul class="md-meta__list">
         <li class="md-meta__item">
           <time datetime="2018-10-25 00:00:00+00:00">October 25, 2018</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/release/" class="md-meta__link">release</a></li>
         
         
           
@@ -1500,7 +1028,11 @@
   </header>
   <div class="md-post__content md-typeset">
     <h2 id="fontlab-vi-61-components-sidebar-filters-and-metrics-expressions"><a class="toclink" href="../../2018/10/25/fontlab-vi-61/">FontLab VI 6.1: components, sidebar filters, and metrics expressions</a></h2>
-<p>FontLab VI 6.1 arrived in October 2018, adding standards-compliant components, a Font window sidebar for glyph filtering, and linked metrics expressions — three features that changed how designers structured and navigated their work. It was a free update to all FontLab VI users, and the biggest single leap since the December 2017 launch.</p>
+<p>FontLab VI 6.1 arrived in October 2018, adding standards-compliant components, a Font
+window sidebar for glyph filtering, and linked metrics expressions — three features that
+changed how designers structured and navigated their work.
+It was a free update to all FontLab VI users, and the biggest single leap since the
+December 2017 launch.</p>
 
     
       <nav class="md-post__action">
@@ -1633,8 +1165,6 @@
     
     
       <script src="../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

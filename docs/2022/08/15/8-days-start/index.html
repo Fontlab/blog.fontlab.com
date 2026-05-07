@@ -3,9 +3,6 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-<meta name="mkdocs-copy-to-llm-repo-url" content="https://raw.githubusercontent.com/Fontlab/blog.fontlab.com/main/src_docs/md">
-<meta name="mkdocs-site-name" content="FontLab Blog">
-<meta name="mkdocs-copy-to-llm-analytics" content="false">
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -64,10 +61,6 @@
     
       <link rel="stylesheet" href="../../../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm.css">
-    
-      <link rel="stylesheet" href="../../../../assets/copy-to-llm/copy-to-llm-custom.css">
-    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -89,13 +82,28 @@
     .md-footer { display: none !important; }
 
     /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
     .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
       max-width: 860px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       padding: 1rem 1.5rem 3rem !important;
     }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
     .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
   </style>
 
   <!-- FontLab menu/footer loader -->
@@ -840,480 +848,6 @@
 
               
             
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/2000/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    2000
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1994/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1994
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../archive/1992/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    1992
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Categories
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
-          </label>
-          <ul class="md-nav__list">
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/events/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Events
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/fontlab/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FontLab
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/news/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    News
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/transtype/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    TransType
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/tutorial/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tutorial
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/type1/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Type1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/vexy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vexy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/video/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Video
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/blog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    blog
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../category/release/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    release
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1433,16 +967,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/519108?v=4" alt="Adam Twardoch">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          <a href="https://www.fontlab.com/">Adam Twardoch</a>
+                          <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab</a>
                         
                       </strong>
                       <br>
-                      Fontlab Ltd.
+                      Professional font editor
                     </span>
                   </div>
                 
@@ -1464,16 +998,6 @@
                       </div>
                     </li>
                     
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/tutorial/">Tutorial</a></span>
-                        </div>
-                      </li>
                     
                     
                       
@@ -1504,31 +1028,65 @@
 
   <h1>Eight days of FontLab — day 1: start making fonts</h1>
 
-<p>Ever wanted to make your own font? FontLab 8 can take you from rough sketch to working OpenType file — and it handles more of the tedious precision work than you might expect. Day 1 covers what the software does, why it matters, and how Autotrace can cut hours off your first project.</p>
+<p>Ever wanted to make your own font?
+FontLab 8 can take you from rough sketch to working OpenType file — and it handles more
+of the tedious precision work than you might expect.
+Day 1 covers what the software does, why it matters, and how Autotrace can cut hours off
+your first project.</p>
 <!-- more -->
 
 <h2 id="making-a-font-is-harder-than-drawing-letters">Making a font is harder than drawing letters<a class="headerlink" href="#making-a-font-is-harder-than-drawing-letters" title="Permanent link">&para;</a></h2>
-<p>Whether you need a brand identity typeface, a movie title, or just want your own handwriting on screen, the gap between "nice sketches" and "working font" is real. What looks good on paper may fall apart on screen. Spacing that felt intuitive in a sketchbook can read like a ransom note in text. Until recently, bridging that gap required something close to programming skill.</p>
+<p>Whether you need a brand identity typeface, a movie title, or just want your own
+handwriting on screen, the gap between “nice sketches” and “working font” is real.
+What looks good on paper may fall apart on screen.
+Spacing that felt intuitive in a sketchbook can read like a ransom note in text.
+Until recently, bridging that gap required something close to programming skill.</p>
 <p>FontLab 8 exists to close that gap.</p>
 <p><img alt="FontLab 8 running in dark theme, showing a font with multiple glyphs" src="../../../../media/fl8days-1-start-fl8-shot-theme-dark.png" /></p>
-<p>FontLab 8 is a professional font editor built around drawing tools optimized for letterforms. You can import vector artwork from Illustrator or Affinity Designer, scan physical drawings and bring them in as bitmaps, or draw glyphs directly in FontLab. Most designers find they do all three at different stages of a project.</p>
+<p>FontLab 8 is a professional font editor built around drawing tools optimized for
+letterforms. You can import vector artwork from Illustrator or Affinity Designer, scan
+physical drawings and bring them in as bitmaps, or draw glyphs directly in FontLab.
+Most designers find they do all three at different stages of a project.</p>
 <h2 id="how-fontlab-keeps-things-consistent">How FontLab keeps things consistent<a class="headerlink" href="#how-fontlab-keeps-things-consistent" title="Permanent link">&para;</a></h2>
-<p>When you draw by hand, consistency comes from the tool and the hand. The same pen pressure, the same stroke angle, creates a rhythm across letters. FontLab replicates this digitally.</p>
-<p>The <strong>Power Brush</strong> tool lets you draw a vector skeleton and apply a live calligraphic stroke — adjustable at any time. Want all the strokes thicker? Change the stroke weight globally. FontLab also suggests common stem widths as you draw new paths, flags unusual widths in existing ones, and lets you draw a shape once as an <em>element</em> and reuse it as a reference across dozens of glyphs.</p>
+<p>When you draw by hand, consistency comes from the tool and the hand.
+The same pen pressure, the same stroke angle, creates a rhythm across letters.
+FontLab replicates this digitally.</p>
+<p>The <strong>Power Brush</strong> tool lets you draw a vector skeleton and apply a live calligraphic
+stroke — adjustable at any time.
+Want all the strokes thicker?
+Change the stroke weight globally.
+FontLab also suggests common stem widths as you draw new paths, flags unusual widths in
+existing ones, and lets you draw a shape once as an <em>element</em> and reuse it as a
+reference across dozens of glyphs.</p>
 <p><img alt="Spacing view in FontLab showing glyphs with sidebearing markers and metrics window" src="../../../../media/fl8days-1-start-fl8-shot-spacing.png" /></p>
-<p>For spacing, you start with auto-spacing and auto-kerning, then link the advance widths and sidebearings of related glyphs to each other. Class-based kerning handles groups of similar shapes in one operation.</p>
-<p><strong>FontAudit</strong> runs continuous checks on every node and curve in your font — flagging kinks, near-flat curves, open contours, and about 18 other issues that would cause problems later but are invisible on casual inspection.</p>
+<p>For spacing, you start with auto-spacing and auto-kerning, then link the advance widths
+and sidebearings of related glyphs to each other.
+Class-based kerning handles groups of similar shapes in one operation.</p>
+<p><strong>FontAudit</strong> runs continuous checks on every node and curve in your font — flagging
+kinks, near-flat curves, open contours, and about 18 other issues that would cause
+problems later but are invisible on casual inspection.</p>
 <h2 id="from-sketch-to-font-in-under-a-minute-with-autotrace">From sketch to font in under a minute with Autotrace<a class="headerlink" href="#from-sketch-to-font-in-under-a-minute-with-autotrace" title="Permanent link">&para;</a></h2>
-<p>Sometimes you don't need to build the mountain — you just need the tunnel. In FontLab 8, that tunnel is <strong>Autotrace</strong>.</p>
+<p>Sometimes you don’t need to build the mountain — you just need the tunnel.
+In FontLab 8, that tunnel is <strong>Autotrace</strong>.</p>
 <p><img alt="Autotrace panel in FontLab 8 showing a scanned word being converted to vector outlines" src="../../../../media/fl8days-1-start-autotrace-02-fl-autotrace.png" /></p>
-<p>Scan or photograph your sketches and drag them onto FontLab's <strong>Sketchboard</strong> window (for a word or full alphabet image) or drop individual glyph images directly onto Font window cells. FontLab's autotracer is tuned for font glyphs — sliders let you control smoothness and corner detection with a live preview.</p>
-<p>Use <strong>Optically Separate</strong> on the Sketchboard to isolate each glyph as its own element, select them with the Element tool, and <strong>Place As Glyphs</strong> to drop them into the right font slots. FontLab's built-in optical character recognition usually names them correctly; use the Glyph panel to fix anything it gets wrong.</p>
+<p>Scan or photograph your sketches and drag them onto FontLab’s <strong>Sketchboard</strong> window
+(for a word or full alphabet image) or drop individual glyph images directly onto Font
+window cells. FontLab’s autotracer is tuned for font glyphs — sliders let you control
+smoothness and corner detection with a live preview.</p>
+<p>Use <strong>Optically Separate</strong> on the Sketchboard to isolate each glyph as its own element,
+select them with the Element tool, and <strong>Place As Glyphs</strong> to drop them into the right
+font slots. FontLab’s built-in optical character recognition usually names them
+correctly; use the Glyph panel to fix anything it gets wrong.</p>
 <p><img alt="FontLab Font window showing autotraced glyphs placed into individual slots" src="../../../../media/fl8days-1-start-autotrace-04-fl-font.png" /></p>
-<p>Tweak sidebearings with the Metrics tool, and your hand-drawn alphabet is a working font. The whole process, start to export, can take less than a minute for a simple set of characters.</p>
-<p>That's the tunnel. Manual tracing is the mountain. Choose accordingly.</p>
+<p>Tweak sidebearings with the Metrics tool, and your hand-drawn alphabet is a working
+font.
+The whole process, start to export, can take less than a minute for a simple set of
+characters.</p>
+<p>That’s the tunnel. Manual tracing is the mountain.
+Choose accordingly.</p>
 <h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://help.fontlab.com/fontlab/8/tutorials/briem/">Briem's notes on type design</a></li>
+<li><a href="https://help.fontlab.com/fontlab/8/tutorials/briem/">Briem’s notes on type design</a></li>
 <li><a href="https://help.fontlab.com/fontlab/8/tutorials/calfonts/">FontLab 8 tutorials by Dave Lawrence</a></li>
 <li><a href="https://help.fontlab.com/fontlab/7/manual/">FontLab manual</a></li>
 </ul>
@@ -1667,8 +1225,6 @@
     
     
       <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
-      
-        <script src="../../../../assets/copy-to-llm/copy-to-llm.js"></script>
       
     
   </body>

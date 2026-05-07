@@ -2,7 +2,7 @@ Ever wanted to make your own font? FontLab 8 can take you from rough sketch to w
 
 ## Making a font is harder than drawing letters
 
-Whether you need a brand identity typeface, a movie title, or just want your own handwriting on screen, the gap between "nice sketches" and "working font" is real. What looks good on paper may fall apart on screen. Spacing that felt intuitive in a sketchbook can read like a ransom note in text. Until recently, bridging that gap required something close to programming skill.
+Whether you need a brand identity typeface, a movie title, or just want your own handwriting on screen, the gap between “nice sketches” and “working font” is real. What looks good on paper may fall apart on screen. Spacing that felt intuitive in a sketchbook can read like a ransom note in text. Until recently, bridging that gap required something close to programming skill.
 
 FontLab 8 exists to close that gap.
 
@@ -20,19 +20,19 @@ For spacing, you start with auto-spacing and auto-kerning, then link the advance
 
 ## From sketch to font in under a minute with Autotrace
 
-Sometimes you don't need to build the mountain — you just need the tunnel. In FontLab 8, that tunnel is **Autotrace**.
+Sometimes you don’t need to build the mountain — you just need the tunnel. In FontLab 8, that tunnel is **Autotrace**.
 
-Scan or photograph your sketches and drag them onto FontLab's **Sketchboard** window (for a word or full alphabet image) or drop individual glyph images directly onto Font window cells. FontLab's autotracer is tuned for font glyphs — sliders let you control smoothness and corner detection with a live preview.
+Scan or photograph your sketches and drag them onto FontLab’s **Sketchboard** window (for a word or full alphabet image) or drop individual glyph images directly onto Font window cells. FontLab’s autotracer is tuned for font glyphs — sliders let you control smoothness and corner detection with a live preview.
 
-Use **Optically Separate** on the Sketchboard to isolate each glyph as its own element, select them with the Element tool, and **Place As Glyphs** to drop them into the right font slots. FontLab's built-in optical character recognition usually names them correctly; use the Glyph panel to fix anything it gets wrong.
+Use **Optically Separate** on the Sketchboard to isolate each glyph as its own element, select them with the Element tool, and **Place As Glyphs** to drop them into the right font slots. FontLab’s built-in optical character recognition usually names them correctly; use the Glyph panel to fix anything it gets wrong.
 
 Tweak sidebearings with the Metrics tool, and your hand-drawn alphabet is a working font. The whole process, start to export, can take less than a minute for a simple set of characters.
 
-That's the tunnel. Manual tracing is the mountain. Choose accordingly.
+That’s the tunnel. Manual tracing is the mountain. Choose accordingly.
 
 ## Further reading
 
-- [Briem's notes on type design](https://help.fontlab.com/fontlab/8/tutorials/briem/)
+- [Briem’s notes on type design](https://help.fontlab.com/fontlab/8/tutorials/briem/)
 - [FontLab 8 tutorials by Dave Lawrence](https://help.fontlab.com/fontlab/8/tutorials/calfonts/)
 - [FontLab manual](https://help.fontlab.com/fontlab/7/manual/)
 

@@ -98,9 +98,9 @@ html {
 
 .md-typeset blockquote,
 .md-typeset blockquote p {
-  font-family: var(--fl-font-quote);
+  font-family: var(--fl-font-body);
   font-size: 1.05rem;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.45;
 }
 
@@ -125,10 +125,58 @@ html {
 
 .md-post--excerpt .md-post__content h2 {
   font-family: var(--fl-font-display);
-  font-size: 1.65rem;
+  font-size: 1.25rem;
   font-weight: 520;
-  line-height: 1.1;
-  margin: 0 0 0.45rem;
+  line-height: 1.15;
+    margin: 0 0 0.3rem;
+  }
+
+  /* "Continue reading" — inline, muted, small */
+  .md-post__action {
+    display: inline;
+    font-size: 0.85rem;
+    color: var(--fl-gray-text);
+    text-decoration: none;
+    margin: 0 0 0 0.35em;
+    white-space: nowrap;
+  }
+
+  .md-post__action::after {
+    content: " →";
+  }
+
+  .md-post__action:hover {
+    text-decoration: underline;
+    color: var(--fl-red);
+  }
+
+  /* Tighten gap between excerpt body and "Continue reading" */
+  .md-post--excerpt .md-post__content>*:last-child {
+    margin-bottom: 0.25rem;
+  }
+
+  /* In-content CTA button (.fl-help-cta applied via attr_list) */
+  .md-typeset a.fl-help-cta,
+  .md-typeset a.fl-help-cta:visited {
+    display: inline-block;
+    background: var(--fl-red);
+    color: var(--fl-white);
+    border-radius: 8px;
+    padding: 0.7rem 1.4rem;
+    font-family: var(--fl-font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: filter 0.18s ease, transform 0.18s ease;
+    margin-top: 1.5rem;
+  }
+
+  .md-typeset a.fl-help-cta:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: var(--fl-white);
 }
 
 .md-post--excerpt .md-post__content h2 a {
@@ -292,7 +340,7 @@ html {
 
 @media (min-width: 768px) {
   .md-post--excerpt .md-post__content h2 {
-    font-size: 1.9rem;
+    font-size: 1.45rem;
   }
 
   .fl-footer-cta__panel {

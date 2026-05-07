@@ -26,6 +26,6 @@ Build large font families and variable OpenType fonts. Interpolate and extrapola
 
 ## More on FontLab 8.2
 
-- [Hello, FontLab 8.2!](https://blog.fontlab.com/2023/08/09/hello-fontlab-82/index.md)
+- [Hello, FontLab 8.2!](https://blog.fontlab.com/2023/08/09/fontlab-82-released/index.md)
 - [Drawing, stroke, and contour tools](https://blog.fontlab.com/2023/08/30/fontlab-82-drawing-stroke-and-contour-tools/index.md)
 - [Glyphs, font formats, scripting, and color](https://blog.fontlab.com/2023/10/11/fontlab-82-glyphs-font-formats-scripting-and-color/index.md)
