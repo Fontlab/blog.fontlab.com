@@ -180,10 +180,12 @@ html {
 
 .md-typeset h2 {
   border-bottom: 0;
-  font-size: 1.35rem;
-  font-weight: 700;
+  text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    font-size: 1rem;
   line-height: 1.25;
-  margin: 2rem 0 0.75rem;
+  margin: 2rem 0 1rem;
 }
 
 .md-typeset h3 {
