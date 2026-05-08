@@ -182,7 +182,7 @@ html {
   border-bottom: 0;
   text-transform: uppercase;
     font-weight: 400;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     font-size: 1.2rem;
   line-height: 1.25;
   margin: 2rem 0 2rem;
@@ -303,7 +303,7 @@ html {
 .md-ellipsis {
   font-family: var(--fl-font-display);
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
