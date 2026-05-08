@@ -581,7 +581,7 @@ html {
   display: none !important;
 }
 
-.md-sidebar--primary .md-nav--primary,
+.md-nav--primary,
 .md-sidebar--secondary .md-nav--secondary {
   opacity: 0.5;
   margin-top: 0.9rem;
