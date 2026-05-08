@@ -49,22 +49,20 @@ photograph and turn it into something that looks like a Wall Street Journal hedc
 portrait, or a 1970s technical illustration, or a letterpress-ready design.
 The kind of aesthetic that takes hours to approximate by hand and seconds to miss.
 
-![Vector conversion example 5](../media/2026-05-07-newsletter-06.jpeg)
+![Retrofuturistic hedcut portrait example](../media/2026-05-07-newsletter-07.jpg)
 
 Vexy Lines runs on Mac and Windows.
 The price is US$99 — one payment, lifetime license, two devices.
 There is a free trial if you want to see what it does to your own images before
 committing.
 
-![Retrofuturistic hedcut portrait example](../media/2026-05-07-newsletter-07.jpg)
+![Mural-scale application example](../media/2026-05-07-newsletter-08.jpg)
 
 The software is available now at [vexy.art/lines](https://www.vexy.art/lines/). You can
 try it in the browser without installing anything via the
 [online playground](https://www.vexy.art/lines/#play).
 
 A bland image is, in the end, just a vector waiting for the right filter.
-
-![Mural-scale application example](../media/2026-05-07-newsletter-08.jpg)
 
 ## References
 
@@ -74,3 +72,11 @@ A bland image is, in the end, just a vector waiting for the right filter.
 - [Original Mailchimp campaign](https://us17.campaign-archive.com/?u=c154e78429d2d38aaae8383f7&id=113a96e4f4)
 
 [Read more →](https://vexy.art/lines/){ .fl-help-cta }
+
+* * *
+
+![Vexy Lines example](../media/2026-05-07-newsletter-04.jpeg)
+
+![Vexy Lines example](../media/2026-05-07-newsletter-05.jpeg)
+
+![Vexy Lines example](../media/2026-05-07-newsletter-06.jpeg)
