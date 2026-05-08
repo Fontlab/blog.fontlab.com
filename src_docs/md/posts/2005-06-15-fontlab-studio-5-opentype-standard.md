@@ -16,11 +16,11 @@ review:
     - "Fontographer 5 shipped in 2010 — verify exact year"
     - "FontFlasher released in 2005 — verify"
     - "Calibri, Myriad Pro etc. produced with Studio 5 — verify specific tool used"
-  image_status: weak
-  image_needs: ""
+  image_status: present
+  image_needs: "Added official FontLab Studio 5 OpenType Layout screenshot from the archived product page."
   weakness_verdict: keep
   consolidate_with: ""
-  notes: "Strong historical narrative with good specifics (named fonts, named companies). The Fontographer acquisition angle is the hook — lead with that more boldly. CTA is plain text, not a proper markdown link."
+  notes: "Strong historical narrative with good specifics (named fonts, named companies). The Fontographer acquisition angle is the hook — lead with that more boldly. CTA and image are now concrete."
 ---
 2005 was a pivotal year for Fontlab Ltd.
 The company shipped FontLab Studio 5, which became the dominant professional font editor
@@ -29,6 +29,8 @@ FontLab also acquired Fontographer from Macromedia, reviving a tool that had bee
 dormant since the mid-1990s.
 
 <!-- more -->
+
+![OpenType Layout feature editing in FontLab Studio 5](../media/fontlab-studio-5-opentype-layout.png)
 
 FontLab Studio 5 succeeded FontLab 4. The previous version introduced the first OpenType
 editing capability in December 2001. Studio 5 refined and extended that foundation.

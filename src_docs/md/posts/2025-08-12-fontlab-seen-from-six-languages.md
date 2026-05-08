@@ -17,8 +17,8 @@ review:
     - "ATypI 2020 talks on Chinese Buddhist manuscripts — verify this happened at ATypI 2020"
     - "Page Online (page-online.de) variable fonts article — verify URL is live"
     - "grafmag.pl and designpractice.pl Polish coverage — verify these sites exist and have relevant articles"
-  image_status: missing
-  image_needs: "Multilingual type specimen or world-languages collage — original art needed"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2025-04-22-variable-fonts-in-many-languages.md"
   notes: "Genuinely original editorial angle; geographic/cultural framing is stronger than the 2025-04-22 post — if merging, keep this voice."
@@ -28,6 +28,8 @@ If you read about it in Polish, Spanish, Japanese, Korean, Chinese, and German, 
 six.
 
 <!-- more -->
+
+![FontLab in many languages](../media/fl8-hero.png)
 
 <!-- image TBD -->
 

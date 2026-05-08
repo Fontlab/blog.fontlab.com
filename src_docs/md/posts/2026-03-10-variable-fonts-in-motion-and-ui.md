@@ -16,8 +16,8 @@ review:
     - "FontLab 8 supports custom per-glyph variation axes and variable components — verify"
     - "Webflow University variable fonts link — verify URL is live"
     - "Korean design-system writers using variable fonts for screen density — verify sources"
-  image_status: missing
-  image_needs: "Variable font axis animation screenshot or CSS animation example"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Good cross-product framing (FL8 + Vexy Lines for motion); the multilingual design-system angle is underused. CTA URL is fixed."
@@ -26,6 +26,8 @@ Typography on screen used to mean “pick a weight and hope for the best.”
 Now the weight can follow the user.
 
 <!-- more -->
+
+![Variable fonts in motion](../media/fl8-head-07-varcomponent.png)
 
 Web and motion tutorials increasingly treat variable fonts as standard tooling, not a
 novelty. Webflow University, Dinamo’s guides, and other educational pieces walk through

@@ -17,8 +17,8 @@ review:
     - "FontLab 8.4 added Unicode Variation Sequences support — verify version number"
     - "IJUP 2025 research on Ukrainian Cyrillic — verify source exists"
     - "Latin font ~500 glyphs vs CJK tens of thousands — verify ballpark"
-  image_status: missing
-  image_needs: "FontLab glyph panel showing Arabic or CJK, or multi-script specimen"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Solid overview but stays at the altitude of a Wikipedia entry; the Arabic section is the sharpest. CTA URL too generic — needs deep link to formats/scripts chapter."
@@ -28,6 +28,8 @@ ends with `Z`. In reality, Latin script is one small neighbourhood in a vast, co
 city of writing systems.
 
 <!-- more -->
+
+![Global typography](../media/fl8-hero.png)
 
 <!-- image TBD -->
 

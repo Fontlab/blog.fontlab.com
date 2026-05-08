@@ -17,8 +17,8 @@ review:
     - "Full Latin-Extended cut 90 KB, subset 12 KB — verify these are representative figures"
     - "TransType 4 released in 2013 — verify this is accurate for the web font context claim"
     - "Font Squirrel and Transfonter handle quick jobs — verify both tools are still actively maintained"
-  image_status: missing
-  image_needs: "No image; a waterfall loading diagram or before/after file-size comparison would be compelling"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "CTA at end is correctly formatted with .fl-help-cta class — the only post in this slice with a properly formatted CTA. The TransType historical tangent (2013) feels forced in a 2024 web performance post; tighten or cut it."
@@ -29,7 +29,7 @@ works in one app. You need web fonts that load fast and look right everywhere.
 
 <!-- more -->
 
-<!-- image TBD -->
+![Variable font components in FontLab 8](../media/fl8-head-07-varcomponent.png)
 
 The modern answer is brutally simple: WOFF2, subsetted, one file per family where
 possible. WOFF2 compresses better than anything else and every current browser

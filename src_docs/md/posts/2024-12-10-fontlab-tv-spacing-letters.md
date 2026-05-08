@@ -28,6 +28,8 @@ OpenType, before anything else that can mask bad sidebearings.
 
 <!-- more -->
 
+![FontLab TV spacing letters](../media/fontlab-tv1.png)
+
 ![FontLab TV — spacing letters from scratch](../media/fontlab-tv2.png)
 
 > 📺 Watch: [Spacing letters on FontLab TV](https://fontlab.tv/)

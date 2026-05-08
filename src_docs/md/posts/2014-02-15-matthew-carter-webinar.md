@@ -17,8 +17,8 @@ review:
     - "Verdana and Georgia designed mid-1990s for Microsoft — verify years"
     - "Carter started at Enschedé foundry in the 1950s — verify"
     - "Verified 2026-05-08: FontLab YouTube recording is the stable webinar deep link"
-  image_status: weak
-  image_needs: ""
+  image_status: present
+  image_needs: "Added local thumbnail from the verified FontLab YouTube recording."
   weakness_verdict: keep
   consolidate_with: "2014-03-15-brush-romans-webinar.md"
   notes: "Good biographical depth on Carter, specific enough to be valuable. The post describes the webinar but never says what Carter actually concluded or revealed — the 'so what' is missing. Could consolidate with brush-romans into a 'FontLab webinar series' roundup."
@@ -27,6 +27,8 @@ In February 2014, FontLab hosted a live webinar with Matthew Carter, a key figur
 digital type design.
 
 <!-- more -->
+
+![Matthew Carter webinar recording thumbnail](../media/matthew-carter-webinar.jpg)
 
 Carter’s career covers the entire evolution of type technology.
 He started by cutting punches for metal type at the Enschedé foundry in the 1950s. He

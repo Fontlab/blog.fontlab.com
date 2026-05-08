@@ -16,8 +16,8 @@ review:
     - "Six named releases from 7.0 to 7.2: 7.0.1, 7.1, 7.1.1, 7.1.2, 7.1.3, 7.1.4 — verify list is complete"
     - "30× faster interpolation described as arriving in 7.2.0 beta builds during late 2020 — verify"
     - "Glyphs.app interchange improved — verify specific version of Glyphs supported"
-  image_status: missing
-  image_needs: "FontLab 7 interface or update timeline graphic; check reference/i.fontlab.com/docs/ for fontlab-7 assets"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2020-03-02-fontlab-71.md"
   notes: "Good thematic grouping of 2020 updates — drawing, metrics, variation, files. The cross-link to the 7.2 post is well-placed. Could be stronger with one concrete 'before/after' example per theme rather than a list of feature names. Inline help.fontlab.com link satisfies CTA."
@@ -28,6 +28,8 @@ Here is what the 2020 update cycle actually delivered — not counting FontLab 7
 has [its own post](2020-11-30-fontlab-72-dec-2020.md).
 
 <!-- more -->
+
+![FontLab 7 font editor](../media/fl8-hero.png)
 
 The journey from 7.0 to 7.2 ran through six named releases (7.0.1, 7.1, 7.1.1, 7.1.2,
 7.1.3, 7.1.4), all free for existing users.

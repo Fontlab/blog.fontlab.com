@@ -17,8 +17,8 @@ review:
     - "Graduate font: slab to sans variable — verify axis description at etunni.github.io"
     - "Jeremy Tankard testimonial quote cited — verify this appears on the same FontLab gallery page"
     - "Graduate is free and open source on GitHub — verify license"
-  image_status: missing
-  image_needs: "Graduate variable font specimen or Tunni Lines tool screenshot from reference/fldoc/"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "The Tunni Lines paragraph is the most technically specific and interesting content in any Made-with post; Jeremy Tankard quote needs sourcing."
@@ -29,6 +29,8 @@ Slab to sans, light to black, all in one file.
 Eduardo Tunni drew it in FontLab.
 
 <!-- more -->
+
+![Made with FontLab](../media/fl8-hero.png)
 
 Tunni’s foundry [Tipo](https://www.tipo.net.ar/) sits in Buenos Aires.
 He has been drawing type long enough to have his name attached to an editor feature in

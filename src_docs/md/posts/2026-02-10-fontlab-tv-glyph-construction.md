@@ -16,8 +16,8 @@ review:
     - "YouTube URL https://www.youtube.com/watch?v=McFex__HSfk — verify video exists and is correct episode"
     - "Video title 'Assembling glyphs in FontLab 7, Part 1' — note says FontLab 7 but post context is FL8"
     - "Overshoot 1–2% of UPM — verify against FL8 docs"
-  image_status: missing
-  image_needs: "FontLab glyph cell with n drawn and metrics lines visible"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Clean tutorial post, the 'why n' rationale is perfectly concise. CTA now points to the FontLab 8 drawing basics tutorial. Video references FontLab 7 while post implies FL8; clarify later."
@@ -28,6 +28,8 @@ one letter — `n` — from a blank glyph cell to a finished, point-clean contou
 build a font around.
 
 <!-- more -->
+
+![FontLab TV glyph construction](../media/fontlab-tv1.png)
 
 > 📺 Watch:
 > [Assembling glyphs in FontLab 7, Part 1](https://www.youtube.com/watch?v=McFex__HSfk)

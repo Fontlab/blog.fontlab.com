@@ -15,8 +15,8 @@ review:
     - "OTMaster 5.0 described as 'massive upgrade from 4.x' — verify what 4.x lacked"
     - "vfb2ufo described as two-way conversion — verify it converted both VFB→UFO and UFO→VFB"
     - "FontLab Pad 1.1 ran on Mac OS X and Windows — verify platform support"
-  image_status: missing
-  image_needs: "OTMaster 5 or FontLab Pad screenshot; check reference/i.fontlab.com/docs/ for otmaster or pad assets"
+  image_status: present
+  image_needs: "Replaced generic FontLab 8 placeholder with an existing OTMaster hero screenshot."
   weakness_verdict: keep
   consolidate_with: "2018-11-22-dtl-otmaster-7-9-available.md"
   notes: "Three unrelated tools crammed into one post — a common 'December release dump' pattern. Worth splitting or consolidating each tool thread across its own posts. The vfb2ufo bullet is genuinely useful context for UFO-workflow readers."
@@ -25,6 +25,8 @@ December 2014 brought a major update to DTL OTMaster, plus two new free tools.
 We released a command-line UFO converter and an updated color font typesetter.
 
 <!-- more -->
+
+![DTL OTMaster interface](../media/otm-hero6-e1629877211343-1024x576.png)
 
 Here is what shipped in this release:
 

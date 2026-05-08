@@ -17,8 +17,8 @@ review:
     - "Tschichold condemned tight spacing in 1952 — verify source/year"
     - "Zapf popularised tight spacing with Palatino — verify historical claim"
     - "Control characters n, o, H, O for spacing — verify this matches Briem's actual method"
-  image_status: missing
-  image_needs: "FontLab metrics/sidebearings panel or nnnnn spacing string screenshot"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2025-10-07-briem-drawing-italic.md, 2025-12-16-fontlab-tv-briem-on-brushes.md"
   notes: "Strong title and opening; Tschichold/Zapf historical framing is the best paragraph. Briem series needs cross-links; standalone it buries the spacing workflow under too much preamble."
@@ -27,6 +27,8 @@ The most difficult part of drawing a typeface is not the black ink.
 It is the white space.
 
 <!-- more -->
+
+![The geometry of letter spacing](../media/fl8-8days-spacing.png)
 
 <!-- image TBD -->
 

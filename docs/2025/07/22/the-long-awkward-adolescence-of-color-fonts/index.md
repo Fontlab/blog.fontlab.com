@@ -38,15 +38,15 @@ We have been writing about color fonts since the earliest days of these format w
 
 - [Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes](/2026/05/03/color-fonts-in-2026/)
 - [Color fonts: the next big thing? A FontLab tutorial](/2014/06/18/color-fonts-tutorial/)
-- [8 days: Color](/2023/03/13/8-days-color/)
 - [Color scripts, color fonts](/2023/11/13/color-scripts-color-fonts/)
 - [FontLab TV: color fonts without tears](/2025/04/08/fontlab-tv-color-fonts/)
 
 ## References
 
 - [COLR table — Microsoft Typography](https://learn.microsoft.com/en-us/typography/opentype/spec/colr)
+- [CBDT table — Microsoft Typography](https://learn.microsoft.com/en-us/typography/opentype/spec/cbdt)
+- [CBLC table — Microsoft Typography](https://learn.microsoft.com/en-us/typography/opentype/spec/cblc)
 - [SVG in OpenType — W3C Community](https://www.w3.org/community/svgopentype/)
-- Color emoji v1 spec — Google
 - [Convert TTF to CBDT/CBLC — TypeDrawers](https://typedrawers.com/discussion/2392/convert-a-ttf-to-cbdt-cblc-format-color-font)
 - Color fonts in browsers — web.dev
 

@@ -16,8 +16,8 @@ review:
     - "FEA syntax 2.5 — verify Adobe FEA spec version number"
     - "Python 2.7 scripting engine update — verify was previously Python 2.6 or earlier"
     - "Free upgrade for AsiaFont Studio users — verify scope"
-  image_status: missing
-  image_needs: "FontLab Studio 5 Windows screenshot; check reference/i.fontlab.com/docs/ for fls5 assets"
+  image_status: present
+  image_needs: "Added official FontLab Studio 5 Bezier editor screenshot from the archived product page."
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Solid changelog-style post; bullet list is clear and specific. Intro buries the lede — '65,535 glyphs' and 'free upgrade' are the two hooks worth leading with. No narrative context for why these features matter to the reader."
@@ -26,6 +26,8 @@ FontLab Studio 5.2.1 for Windows shipped in December 2013. It builds on the 5.2
 foundation with new tools and hundreds of bug fixes.
 
 <!-- more -->
+
+![FontLab Studio 5 Bezier drawing interface](../media/fontlab-studio-5-bezier-editor.png)
 
 ### What’s new
 

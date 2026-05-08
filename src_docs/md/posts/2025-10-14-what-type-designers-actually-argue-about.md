@@ -16,8 +16,8 @@ review:
     - "FontLab 8.4 improved Autotrace — verify version number"
     - "FontLab 8 leans toward strict compatibility from first stroke — verify this is accurate product positioning"
     - "TypeDrawers thread URL — verify still live"
-  image_status: missing
-  image_needs: "TypeDrawers or forum screenshot, or illustrative debate-topic diagram"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Punchy editorial voice, the AI-in-workflow paragraph is the most timely section. CTA URL too generic; needs deep link to autotrace or variable font compatibility docs."
@@ -27,6 +27,8 @@ celebrating the same handful of features.
 The forums tell a different story.
 
 <!-- more -->
+
+![Type design](../media/fl8-hero.png)
 
 <!-- image TBD -->
 

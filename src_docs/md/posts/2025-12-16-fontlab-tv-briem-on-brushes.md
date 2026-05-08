@@ -16,8 +16,8 @@ review:
     - "Briem tutorial URL briem/2-0-basics/briem-2-01-basics/ — verify path on help.fontlab.com"
     - "No video for this tutorial — confirm it is written-only (contradicts 'FontLab TV' in title)"
     - "Pen angle 0°, 30°, 45° examples cited — verify against actual Briem content"
-  image_status: missing
-  image_needs: "Pen angle diagram or broad-pen letter strokes illustration"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2025-10-07-briem-drawing-italic.md, 2025-11-04-the-briem-method-and-the-geometry-of-nothing.md"
   notes: "Title says 'FontLab TV' but body admits there is no video — this is a factual mismatch that must be fixed. Pen-angle theory overlaps the italic post but the brush vs broad-edge distinction is unique."
@@ -30,6 +30,8 @@ Briem’s tutorial on brushes is the cleanest version of that argument you will 
 there is no video for this tutorial—it is purely a written masterclass.)
 
 <!-- more -->
+
+![FontLab TV Briem on brushes](../media/fontlab-tv1.png)
 
 ## What it covers
 

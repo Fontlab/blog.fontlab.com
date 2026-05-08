@@ -16,8 +16,8 @@ review:
     - "Font > Auto Space keyboard shortcut is semicolon — verify"
     - "Contour > Auto Fix menu path — verify in current FL8"
     - "Tools > Actions > Slant for oblique starting point — verify menu path"
-  image_status: missing
-  image_needs: "Metrics window or italic slant comparison from reference/fldoc/"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2024-09-23-calfonts-setup-shapes.md"
   notes: "No tags. CTA and tutorial URL now point at the current Calfonts tutorial index. Part of a two-post series with the setup post."
@@ -28,6 +28,8 @@ This post distills Dave Lawrence’s chapters on fitting and spacing, building i
 variants, and planning a type family in FontLab 8.
 
 <!-- more -->
+
+![Spacing and italics in FontLab 8](../media/fl8-8days-spacing.png)
 
 ## Fitting and spacing: letter heights first
 

@@ -6,7 +6,7 @@ date:
   created: 2014-03-15
 slug: brush-romans-webinar
 review:
-  cta_status: fallback-ok
+  cta_status: ok
   cta_target: "https://www.fontlab.tv/"
   title_case: ok
   title_suggested: ""
@@ -18,8 +18,8 @@ review:
     - "Herrera taught Catich's classes at St. Ambrose University through 1989 — verify"
     - "Webinar date March 11, 2014 — verify against original post"
     - "Verified 2026-05-08: no stable FontLab TV or YouTube recording URL found; FontLab TV fallback kept intentionally"
-  image_status: missing
-  image_needs: "Flat-brush Roman capital demonstration photo or Catich-style inscription; check reference/fontlab-com-oldpub/ for original post image"
+  image_status: present
+  image_needs: "Added local John Downer sign-painting thumbnail from the FontLab TV archive as a related visual."
   weakness_verdict: keep
   consolidate_with: "2014-02-15-matthew-carter-webinar.md"
   notes: "Unusually rich historical detail — Catich lineage and Downer's sign-painting career give this real texture. The connection between the webinar content and font design practice could be stated more crisply in the opener. Strong candidate to keep as a standalone deep-dive."
@@ -30,6 +30,8 @@ Sign painter and type designer John Downer presented alongside calligrapher Paul
 Herrera.
 
 <!-- more -->
+
+![John Downer sign-painting demonstration thumbnail](../media/brush-romans-john-downer.jpg)
 
 The session demonstrated how the structure of Imperial Roman capitals traces back to
 marks made by a flat brush on a vertical surface.

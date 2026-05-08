@@ -12,7 +12,7 @@
 - Added 2024–2026 roadmap posts for the Made with FontLab, FontLab TV, Briem, Calfonts, and Vexy Lines series.
 - Added a local Vexy Lines interface image for `vexy-lines-and-the-useful-lie-of-engraving`, replacing a broken `doc360/Images` reference.
 - Added `src_docs/md/posts/2026-05-03-color-fonts-in-2026.md`, a current consolidated color-font article covering COLR v1, variation, browser support, app/rendering support, and FontLab 8 support.
-- Added existing lead images to four posts that still had verified missing-image placeholders: TransType 4, FontLab TV variable fonts, variable fonts and file size, and color fonts in 2026.
+- Added local media references for FontLab Studio 5, Matthew Carter, Brush Romans, and FontLab TV posts that still had missing-image review markers.
 - Added the verified FontLab YouTube recording link for the 2014 Matthew Carter webinar.
 
 ### Changed
@@ -32,6 +32,8 @@
 - Reconciled `TASKS.md` and `TODO.md` so completed configuration, post-list styling, FontLab 8.2 split, excerpt, llms, browser-check, Made with FontLab, and shipped issue-203 post-file tasks are removed from the open checklist.
 - Tightened the template content container so narrow post pages no longer overflow horizontally.
 - Kept the Brush Romans webinar CTA on the FontLab TV fallback after current web/video research found no stable recording URL.
+- Rewrote `2018-12-21-fontlab-vi-12-releases-in-12-months.md` from the FontLab VI release-note archive instead of leaving it as a thin announcement.
+- Replaced generic FontLab 8 placeholder images in the OTMaster, TransType Type 1 rescue, and Vexy Lines pipeline posts with product-specific local media.
 
 ### Verified
 - `uv sync --frozen` completed with Flowmark in the lock file.
@@ -44,7 +46,7 @@
 - Local CTA audit found no split `.fl-help-cta` attributes and no mismatch between source `review.cta_target` values and Markdown CTA links.
 - HTTP checks returned 200 for the updated TransType 4, FontLab VI release notes, FontLab 7 importing artwork, FontLab 8 intro tutorial, FontLab 8 families & variation, and Scannerlicker catalogue CTA targets.
 - Local checks confirmed the four named offline draft consolidation candidates remain under `issues/draft-posts/` with `draft: true`.
-- Playwright browser check at `http://127.0.0.1:8026/` plus edited post pages found no horizontal overflow and no console errors.
+- Playwright browser smoke check at `http://127.0.0.1:8808/` covered home, Matthew Carter webinar, Brush Romans webinar, About, 2026 archive, and a retired color-font URL at desktop and mobile widths with no horizontal overflow, no relevant console errors, correct edited CTA hrefs, and HTTP 404 for the retired URL.
 - `uv sync --frozen` completed.
 - `./build.sh build` completed and generated root `llms.txt` and `llms-full.txt`.
 - `uvx ruff check src/` passed.
@@ -52,8 +54,7 @@
 - Local build output contains 79 generated public post pages, `docs/llms.txt` (9,916 bytes), and `docs/llms-full.txt` (251,703 bytes).
 - Local checks confirmed the three retired 2013 color-font pages are absent from generated `docs/`, the new 2026 color-font page exists, and no source or generated page links to the old color-font URLs.
 - Current web research found the Matthew Carter recording at `https://www.youtube.com/watch?v=ibJhxbsbqJ4`; searches found the Brush Romans event listing/preview but no stable recording URL.
-- Playwright screenshots were captured for home, single post, archive, and about at desktop and narrow mobile widths.
-- Playwright checks found no horizontal overflow and no console errors on home, the OpenType post, the Scannerlicker post, the variable-font file-size post, and the TransType post at desktop and mobile widths.
+- Playwright checks found no horizontal overflow and no relevant console errors on home, the Matthew Carter webinar post, the Brush Romans webinar post, About, the 2026 archive, and a retired color-font URL at desktop and mobile widths.
 
 ## [Unreleased] — 2026-05-07 (cont)
 

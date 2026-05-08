@@ -71,6 +71,7 @@ eggs/
 env.bak/
 env/
 htmlcov/
+output/
 instance/
 ipython_config.py
 lib/

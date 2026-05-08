@@ -12,4 +12,4 @@ The FontLab Studio 5 interface shown here is older, but the principles apply unc
 
 Watch on [FontLab TV](https://www.youtube.com/watch?v=tbc_O7bNROs).
 
-[Read more →](https://help.fontlab.com/fontlab/spacing-and-kerning/)
+[Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/)

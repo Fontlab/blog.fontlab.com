@@ -15,8 +15,8 @@ review:
     - "Briem taught at Royal Academy of Fine Arts Copenhagen in 1996 — verify institution and year"
     - "Alfred Fairbank's Handwriting Manual recommended by Briem — verify title and author spelling"
     - "Briem notes republished on FontLab documentation site with permission — confirm this is still live"
-  image_status: missing
-  image_needs: "No images in this post; add a sample from BriemAkademi typeface or broad-nib pen example"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2023-09-04-briem-decisions.md, 2024-04-08-briem-bold-italic-spacing.md"
   notes: "Distinctive voice and genuine editorial value — Briem's direct prose is a sharp contrast to product-launch boilerplate. Three Briem posts across the blog; consider consolidating into one 'Briem on type design' long-read or a tagged series."
@@ -28,6 +28,8 @@ Here is a distillation of his opening chapters on why you’d make a font and wh
 basics actually require.
 
 <!-- more -->
+
+![Spacing and metrics in FontLab](../media/fl8-8days-spacing.png)
 
 ## Would you like to make your own?
 

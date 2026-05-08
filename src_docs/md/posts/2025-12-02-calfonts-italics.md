@@ -16,8 +16,8 @@ review:
     - "Italic lowercase 5–10% narrower than roman — verify against Calfonts source"
     - "Slant range 8–14° cited here vs 6–14° in briem-drawing-italic — reconcile"
     - "Contrast axis tip from 30° roman to 40–50° italic — verify"
-  image_status: missing
-  image_needs: "Side-by-side roman vs italic structure comparison (single vs double-storey a)"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2025-10-07-briem-drawing-italic.md"
   notes: "Substantially overlaps 2025-10-07-briem-drawing-italic on structure and pen angle; the Calfonts framing and verification section differentiate it enough to keep. CTA now points to the FontLab 8 Calfonts italics intro."
@@ -28,6 +28,8 @@ The Calfonts italic tutorial walks through what it actually takes to draw an ita
 earns its place next to the roman.
 
 <!-- more -->
+
+![CALFonts italics](../media/fl8-8days-spacing.png)
 
 ## What the italic is for
 

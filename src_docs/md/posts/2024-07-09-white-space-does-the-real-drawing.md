@@ -16,8 +16,8 @@ review:
     - "Frutiger quote attribution — confirm exact source at typography.guru"
     - "Walter Tracy spacing logic — confirm book title is 'Letters of Credit'"
     - "FontLab metrics key linking behaviour (n → b, h, i, k, r)"
-  image_status: missing
-  image_needs: "spacing/metrics window screenshot from reference/fldoc/ or reference/FontLabVI-help/"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Sharp, well-argued editorial on spacing primacy. Frutiger quote needs a real citation URL; image placeholder must be resolved before publish."
@@ -27,7 +27,7 @@ them.
 
 <!-- more -->
 
-<!-- image TBD -->
+![Spacing and white space in FontLab 8](../media/fl8-8days-spacing.png)
 
 Adrian Frutiger’s old line — that the empty spaces are the crucial part of a typeface —
 remains the cleanest correction to beginner enthusiasm.

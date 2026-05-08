@@ -18,8 +18,8 @@ review:
     - "25 years of continued support after 1999 obsolete declaration — math checks out (1999-2023 = 24 years, close enough)"
     - "TransType 4 shipped in 2013 — verify release year"
     - "Type Network end-of-Type-1 article URL — verify live"
-  image_status: missing
-  image_needs: "Old font suitcase icons on desktop, or TransType 4 interface screenshot"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Best opener in the batch ('nothing gets old faster than a font format'); the rescue-boat framing is earned. CTA URL too generic — needs TransType product page or Type 1 rescue doc."
@@ -28,6 +28,8 @@ Nothing gets old faster than a font format — until a client opens a twenty-yea
 and suddenly it is everybody’s problem again.
 
 <!-- more -->
+
+![Reviving old fonts](../media/fl8-hero.png)
 
 Adobe ended authoring support for PostScript Type 1 fonts in updated Creative Cloud apps
 after January 2023. Type Network noted at the time that pre-OpenType documents could

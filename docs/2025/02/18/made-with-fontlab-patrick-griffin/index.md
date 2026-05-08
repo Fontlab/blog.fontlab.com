@@ -19,4 +19,4 @@ Ronaldson Pro is the case study. The original Ronaldson is a Philadelphia text f
 - [Goluska](https://canadatype.com/product/goluska/) — Canada Type (drawn by Rod McDonald)
 - [Ronaldson Pro](https://canadatype.com/2021/10/20/ronaldson-pro/) — Canada Type
 
-[Browse Canada Type →](https://canadatype.com/)
+[Browse Patrick Griffin →](https://www.myfonts.com/collections/patrick-griffin)

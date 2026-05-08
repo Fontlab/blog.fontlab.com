@@ -17,8 +17,8 @@ review:
     - "rclt and rvrn features for conditional substitution — verify both tags are correct"
     - "STAT table setup for OS/app font menu naming — verify this is covered in the episode"
     - "Custom axis examples XHGT, YOPQ — verify these are real registered axis tags"
-  image_status: missing
-  image_needs: "Design space visualization or Variation panel screenshot from reference/fldoc/"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Canonical conceptual intro to design space; absorbed the unique parts of 2025-03-25-designing-variable-axes-well.md."
@@ -28,6 +28,10 @@ or merely works. The FontLab TV design space episode is the conceptual foundatio
 everything you do with masters, axes, and instances.
 
 <!-- more -->
+
+![FontLab TV](../media/fontlab-tv1.png)
+
+![FontLab TV: design space tutorial](../media/fontlab-tv2.png)
 
 > 📺 Watch: [Design space basics on FontLab TV](https://fontlab.tv/)
 

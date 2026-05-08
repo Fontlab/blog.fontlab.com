@@ -17,8 +17,8 @@ review:
     - "FontLab 8 variable components and smart components for Hangul — verify feature exists"
     - "wdnote and pixso.net as Korean design sources — verify URLs are live"
     - "Roboto Flex cited as model for Hangul axis design — verify this is claimed in cited sources"
-  image_status: missing
-  image_needs: "Hangul syllable block decomposition diagram or FontLab component assembly screenshot"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Strong premise and unique content; the component-based assembly angle is the right hook. CTA URL too generic — needs deep link to variable components or Hangul workflow docs."
@@ -30,6 +30,8 @@ syllables, and getting them all to behave inside a single font is one of the har
 in modern type design.
 
 <!-- more -->
+
+![Hangul in FontLab](../media/fl8-hero.png)
 
 <!-- image TBD -->
 

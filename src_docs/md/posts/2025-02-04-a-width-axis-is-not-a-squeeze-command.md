@@ -17,8 +17,8 @@ review:
     - "justfont article URL — verify the blog.justfont.com link is correct and live"
     - "Underware 'Very-able fonts' 2018 — confirm publication date"
     - "Roboto Flex / Korean design-system reference — verify source"
-  image_status: missing
-  image_needs: "JustFont width comparison image or condensed master comparison from reference/fldoc/"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2025-05-13-variable-fonts-were-never-about-file-size.md"
   notes: "Strong argument with good multilingual sourcing. CTA now points to the FontLab 8 families and variation guide."
@@ -29,7 +29,7 @@ Variable fonts are not a flashy weight slider.
 
 <!-- more -->
 
-<!-- image TBD -->
+![Variable font width axis in FontLab 8](../media/fl8-head-07-varcomponent.png)
 
 Across all those languages, serious sources keep returning to the same point: variable
 fonts package multiple styles or axes into one OpenType file, help with responsive

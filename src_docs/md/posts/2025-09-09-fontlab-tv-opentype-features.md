@@ -15,8 +15,8 @@ review:
   facts_to_verify:
     - "YouTube URL https://www.youtube.com/watch?v=DitUgjL6T5s — verify video exists and is the correct episode"
     - "FontLab has built-in compiler and round-trips with Adobe makeotf — verify makeotf still supported in FL8"
-  image_status: missing
-  image_needs: "FontLab OpenType features panel screenshot or video thumbnail"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Feature list is accurate and practically ordered. CTA now points to the live FontLab 8 OpenType features tutorial section."
@@ -26,6 +26,8 @@ The FontLab TV OpenType episode walks through the feature tags you will actually
 what they do at runtime, and how to write them without breaking anything else.
 
 <!-- more -->
+
+![FontLab TV OpenType features](../media/fontlab-tv2.png)
 
 > 📺 Watch:
 > [OpenType features on FontLab TV](https://www.youtube.com/watch?v=DitUgjL6T5s)

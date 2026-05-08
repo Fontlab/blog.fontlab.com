@@ -17,8 +17,8 @@ review:
     - "COLR v1 support status — verify browser/OS support as of 2026"
     - "CBDT/sbix — verify Apple still uses sbix for emoji (not COLR)"
     - "CTA should deep-link to color fonts section"
-  image_status: missing
-  image_needs: "Color glyph / CPAL palette screenshot from reference/fldoc/ or gradient image"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2025-07-22-the-long-awkward-adolescence-of-color-fonts.md"
   notes: "Good four-format overview but thin; pairs with the color history post; FontLab TV link goes to homepage not episode."
@@ -29,6 +29,8 @@ The FontLab TV color font episode covers the four formats you actually have to t
 about and which to ship for which target.
 
 <!-- more -->
+
+![FontLab TV color fonts](../media/fontlab-tv2.png)
 
 > 📺 Watch: [Color fonts on FontLab TV](https://fontlab.tv/)
 

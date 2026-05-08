@@ -16,8 +16,8 @@ review:
     - "50% handle = 'circle' tension claim — verify against Calfonts source"
     - "55–65% handle range as standard — verify against Calfonts material"
     - "Overshoot 1–2% of UPM — verify standard range"
-  image_status: missing
-  image_needs: "Screenshot of FontLab contour optimization tools or before/after honing example"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Practical and grounded; the three-sizes heuristic is the kind of advice that earns a bookmark. CTA URL is too generic — needs deep link to contour/honing chapter."
@@ -27,6 +27,8 @@ ships.” The Calfonts honing tutorial — adapted here — covers the boring, d
 drawing: fixing paths automatically where you can, fixing them by hand where you must.
 
 <!-- more -->
+
+![Honing letter contours in FontLab 8](../media/fl8-8days-spacing.png)
 
 ## Step 1: automatic path fixing
 

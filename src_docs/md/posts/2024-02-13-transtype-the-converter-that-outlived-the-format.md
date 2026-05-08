@@ -17,8 +17,8 @@ review:
     - "Adobe removed Type 1 support from Creative Cloud in January 2023 — verify exact timing"
     - "Apple mirrored Type 1 deprecation on macOS — verify exact release context"
     - "TransType 4 shipped in 2013 — verify release date"
-  image_status: missing
-  image_needs: "Before/after Type 1 folder to OpenType family screenshot or TransType interface image"
+  image_status: present
+  image_needs: "Removed generic FontLab 8 placeholder; existing TransType hero remains."
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Consolidated Type 1 rescue article with legal, technical, and FontLab 8 pipeline sections plus a live TransType CTA."
@@ -29,7 +29,7 @@ PostScript Type 1 went the same way, and TransType 4 has been the moving van eve
 
 <!-- more -->
 
-<!-- image TBD -->
+![TransType font converter](../media/transtype-hero.png)
 
 ## The format that refused to leave on schedule
 

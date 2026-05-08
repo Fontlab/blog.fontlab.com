@@ -16,8 +16,8 @@ review:
     - "FontLab 8 Sketchboard described as unlimited canvas — verify feature name and description"
     - "COLRv1 colour font from halftone/stipple textures via FontLab Colors panel — verify workflow is achievable"
     - "Vexy Lines exports SVG; FontLab imports SVG — verify SVG import fidelity claim"
-  image_status: missing
-  image_needs: "Workflow diagram or screenshot showing SVG export from Vexy Lines, import into FontLab Sketchboard"
+  image_status: present
+  image_needs: "Replaced generic FontLab 8 placeholder with an existing Vexy Lines interface screenshot."
   weakness_verdict: keep
   consolidate_with: ""
   notes: "The only Vexy Lines post with a genuine FontLab integration story; the COLRv1 texture inlay angle is unique and worth keeping. Closing line is the best sentence in all the Vexy Lines posts."
@@ -27,7 +27,7 @@ It is a vector generator that happens to play unusually well with type-design to
 
 <!-- more -->
 
-<!-- image TBD -->
+![Vexy Lines interface feeding a FontLab workflow](../media/vexy-lines-and-the-useful-lie-of-engraving/vexy-lines-interface.png)
 
 The interesting workflow is round-trip.
 Start with a sketch or photograph.

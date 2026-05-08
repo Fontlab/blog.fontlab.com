@@ -17,8 +17,8 @@ review:
     - "Built-in preview uses Microsoft ClearType's actual rendering pipeline — verify technical accuracy"
     - ".glyphspackage stores each glyph as a separate file — confirm format spec"
     - "French designer white-gaps anecdote — flagged as illustrative; check it isn't fabricated"
-  image_status: missing
-  image_needs: "hinting panel or FontAudit panel screenshot from reference/fldoc/"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Covers hinting, FontAudit, overlapping contours, and .glyphspackage — arguably four posts squeezed into one; CTA should deep-link to hinting section."
@@ -30,6 +30,8 @@ The curves win the design argument.
 The pixels win the rendering argument.
 
 <!-- more -->
+
+![FontLab 8 font editor](../media/fl8-hero.png)
 
 ## What hinting actually is
 

@@ -16,8 +16,8 @@ review:
     - "Briem tutorial URL — verify the deep-link path is live at help.fontlab.com"
     - "'Bold is roughly 5–10% wider than regular' — confirm this is Briem's rule, not invented"
     - "Counter closing / join thickening claims — verify against Briem source text"
-  image_status: missing
-  image_needs: "Bold vs regular n comparison image from reference/fldoc/ or Briem tutorial assets"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Tightest craft post in the set — the three-failure-modes structure is immediately useful; CTA has a real deep link, the only FontLab TV / tutorial post that does."
@@ -29,6 +29,8 @@ Briem’s bold tutorial — adapted lightly here — is the cleanest argument fo
 obvious approach doesn’t work.
 
 <!-- more -->
+
+![Drawing bold letters](../media/fl8-8days-spacing.png)
 
 ## The wrong way
 

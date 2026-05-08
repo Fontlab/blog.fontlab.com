@@ -17,8 +17,8 @@ review:
     - "FontLab 8.4 released June 2024 — verify exact release date"
     - "Apple Silicon native build in 8.3 gives up to 2x speedup vs Rosetta 2 — verify this benchmark"
     - "Over 900 improvements vs FL7 in 8.4 — verify cumulative count"
-  image_status: missing
-  image_needs: "No images; Widgets UI screenshot or Match Moves multi-master demo from reference/fontlab-tv/ would illustrate the biggest additions"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Cleanest of the FL8.x release posts — specific feature names, concrete descriptions, no WordPress markup residue. Title uses wrong apostrophe in 'what's' — check encoding. Both closing links (fontlab.com and help.fontlab.com) are present and correct."
@@ -28,6 +28,8 @@ in December 2023 and 8.4 in June 2024. Together they add over 200 new features a
 improvements. Here is the short version.
 
 <!-- more -->
+
+![FontLab 8 font editor](../media/fl8-hero.png)
 
 Both updates are free for all FontLab 8 users.
 FontLab 8.4 also marks a milestone: over 900 improvements relative to FontLab 7, and

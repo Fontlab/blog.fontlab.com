@@ -16,8 +16,8 @@ review:
     - "FontLab ships native binaries for macOS, Windows, and Linux — verify Linux is currently supported"
     - "Conditional glyph substitutions in FontLab 8 — verify feature exists"
     - "Axis graph feature mentioned — verify what 'new axis graph' refers to in FL8"
-  image_status: missing
-  image_needs: "Scannerlicker font specimen or FontLab 8 axis graph screenshot"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
   notes: "Testimonial annotation is sharp — the 'design to engineering' and Linux observations are genuinely useful. CTA now points to the verified live Scannerlicker catalogue."
@@ -27,6 +27,8 @@ that actually names the FontLab features doing the work.
 It is, accidentally, a short manual on what to learn first.
 
 <!-- more -->
+
+![Made with FontLab](../media/fl8-hero.png)
 
 Most testimonials are vibes.
 Martins’s reads like a release-notes annotation, which is what makes it useful.

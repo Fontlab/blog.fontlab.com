@@ -16,8 +16,8 @@ review:
     - "FontLab 8 runs on Windows 8.1 — verify minimum Windows version"
     - "10-day free trial, fully functional — confirm current trial terms"
     - "Outer contours counter-clockwise, inner clockwise — confirm correct winding rule for OTF/TTF"
-  image_status: missing
-  image_needs: "calfonts tutorial screenshot from reference/fldoc/ or reference/fontlab-tv/"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2025-03-17-calfonts-spacing-italics.md"
   notes: "Good tutorial summary but no CTA and no tags; the series cross-link at the bottom is a relative path that may break — must be verified."
@@ -28,6 +28,8 @@ This post distills the first two chapters: getting your environment set up, and 
 fundamentals of drawing in FontLab’s glyph-oriented workflow.
 
 <!-- more -->
+
+![Drawing calligraphic fonts in FontLab 8](../media/fl8-8days-spacing.png)
 
 ## Getting FontLab 8 running
 

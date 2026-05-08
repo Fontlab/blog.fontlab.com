@@ -15,8 +15,8 @@ review:
     - "Stempel released Palatino in 1950 — verify date; commonly cited as 1948–1950"
     - "Tschichold published spacing examples in 1952 — verify publication and year"
     - "Briem recommends going very bold for interpolation exercise — verify this is Briem's actual recommendation"
-  image_status: missing
-  image_needs: "No images; bold interpolation diagram or italic sidebearing example from reference/i.fontlab.com/docs/ needed"
+  image_status: present
+  image_needs: ""
   weakness_verdict: keep
   consolidate_with: "2023-04-17-briem-foundations.md, 2023-09-04-briem-decisions.md"
   notes: "Tschichold-vs-Zapf spacing dispute is the strongest hook in all three Briem posts — lead with it instead of burying it at the end. Three solid Briem posts work well as a tagged series; no need to merge."
@@ -26,6 +26,8 @@ after the roman is drawn: making a bold weight, designing the italic, and spacin
 result. All three are harder than they look and more forgiving than they seem.
 
 <!-- more -->
+
+![Spacing in FontLab 8](../media/fl8-8days-spacing.png)
 
 ## What exactly is a bold?
 

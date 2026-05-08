@@ -2,7 +2,7 @@
 
 ## In progress
 
-- (none — session deliverables verified; commit pending)
+- (none — session deliverables shipped)
 
 ## Shipped (2026-05-08 sprint)
 
@@ -42,6 +42,8 @@
 - Replaced premature internal links to unshipped draft posts with plain text where needed.
 - Fixed narrow-post overflow in `mkdocs/mk-fontlab/main.html`.
 - Moved the Vexy Lines engraving post image to `src_docs/md/media/vexy-lines-and-the-useful-lie-of-engraving/` and updated the post link so the asset builds.
+- Rewrote the FontLab VI twelve-updates post from the release-note archive and updated it to the release-note archive CTA.
+- Replaced weak or generic images in seven posts with concrete local media: FontLab Studio 5 OpenType, FontLab Studio 5 Windows, Matthew Carter, Brush Romans / John Downer, OTMaster, TransType, and Vexy Lines.
 
 ### Verified
 - `uv run --with pytest python -m pytest -q` — clean.
@@ -51,7 +53,7 @@
 - CTA syntax check — all body Markdown CTA links use compact `.fl-help-cta` attributes or raw HTML anchors.
 - Verified CTA targets with HTTP 200: TransType 4, FontLab VI release notes, FontLab 7 importing artwork, FontLab 8 intro tutorial, FontLab 8 families & variation, and the Scannerlicker catalogue.
 - Verified the four named offline draft consolidation candidates still live under `issues/draft-posts/` with `draft: true`.
-- Playwright browser check at `http://127.0.0.1:8026/` plus edited post pages — no horizontal overflow and no console errors.
+- Playwright browser smoke check at `http://127.0.0.1:8808/` covered home, Matthew Carter webinar, Brush Romans webinar, About, 2026 archive, and a retired color-font URL at desktop and mobile widths — no horizontal overflow, no relevant console errors, edited CTA hrefs correct, retired URL returns HTTP 404.
 - `uv sync --frozen` — complete.
 - `uvx ruff check src/` — clean.
 - Source/generated HTML quote check — no smart-quote attribute delimiters in `src_docs/md` or `docs`.
@@ -59,7 +61,7 @@
 - Counts: 79 published source posts, 12 offline draft/research files, 79 generated public post pages.
 - Generated color-font page exists at `docs/2026/05/03/color-fonts-in-2026/index.html`; the three old generated 2013 color-font pages are absent.
 - `rg` found no source or generated links to the retired color-font URLs.
-- Browser checks: Playwright found no horizontal overflow and no console errors on home, the OpenType post, the Scannerlicker post, the variable-font file-size post, and the TransType post at desktop and mobile widths.
+- Browser checks: Playwright found no horizontal overflow and no relevant console errors on home, the Matthew Carter webinar post, the Brush Romans webinar post, About, the 2026 archive, and a retired color-font URL at desktop and mobile widths.
 
 ## Shipped (2026-05-07 session)
 

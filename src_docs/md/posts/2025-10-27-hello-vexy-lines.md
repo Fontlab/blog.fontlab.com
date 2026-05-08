@@ -18,8 +18,8 @@ review:
   image_status: present
   image_needs: ""
   weakness_verdict: keep
-  consolidate_with: "2025-12-09-hello-vexy-lines-signal-processing.md, 2026-01-27-the-algorithmic-paintbrush-of-vexy-lines.md"
-  notes: "Best intro post for Vexy Lines — punchy, image-rich, explains the product cleanly. The signal-processing and algorithmic-paintbrush posts heavily repeat this content; those are consolidation candidates, not this one."
+  consolidate_with: "2026-01-27-the-algorithmic-paintbrush-of-vexy-lines.md"
+  notes: "Best intro post for Vexy Lines — punchy, image-rich, explains the product cleanly. The retired signal-processing draft repeated this post; the algorithmic-paintbrush post remains a consolidation candidate."
 ---
 Drop a photo into Vexy Lines, and it hands you back a crisp vector drawing.
 It reads the brightness of your image and adjusts stroke thickness to match.
