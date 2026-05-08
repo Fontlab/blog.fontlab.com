@@ -7,7 +7,8 @@ date:
   created: 2026-04-14
 slug: money-lace-guilloche-intaglio-spirograph
 ---
-![](../media/illu/money-lace-guilloche-intaglio-spirograph-2.png){.illu-thumb}
+![](../media/illu/money-lace-guilloche-intaglio-spirograph-1.png){.illu-thumb
+.illu-index}
 
 The fine-line patterns on a banknote are a security feature.
 A British engineer made a toy of them in 1965 and sold 30 million units.

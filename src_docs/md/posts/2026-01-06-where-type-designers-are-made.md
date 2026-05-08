@@ -7,7 +7,7 @@ date:
   created: 2026-01-06
 slug: where-type-designers-are-made
 ---
-![](../media/illu/where-type-designers-are-made-3.png){.illu-thumb}
+![](../media/illu/where-type-designers-are-made-1.png){.illu-thumb .illu-index}
 
 Six programmes shape almost everyone working in type design in 2026. All six are small.
 Most are slow by design.

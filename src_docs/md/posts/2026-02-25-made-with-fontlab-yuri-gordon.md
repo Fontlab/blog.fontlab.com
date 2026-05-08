@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "The kerning-as-pleasure and micron-precision annotations around the testimonial are what make this series worth reading; Gordon's quote is better than most. Strong post."
 ---
-![](../media/illu/made-with-fontlab-yuri-gordon-3.png){.illu-thumb}
+![](../media/illu/made-with-fontlab-yuri-gordon-1.png){.illu-thumb .illu-index}
 
 [Acqua Aldina](https://yurigordon.com/) is a variable serif drawn by hand.
 [Baker Street 221B](https://yurigordon.com/en/shop/fonts/baker-street-221b-mr-holmes) is

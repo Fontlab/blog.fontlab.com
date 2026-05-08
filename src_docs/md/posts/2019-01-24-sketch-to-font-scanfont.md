@@ -21,7 +21,7 @@ review:
   consolidate_with: "2020-12-11-import-artwork-fontlab-7.md"
   notes: "One of the stronger short tutorial posts — the 40k views stat is a credible hook and the workflow steps are clear. 'The tracing isn't perfect' admission is good honest writing. Consolidation candidate with the 2020 import artwork post, which covers similar ground in FontLab 7."
 ---
-![](../media/illu/sketch-to-font-scanfont-1.png){.illu-thumb}
+![](../media/illu/sketch-to-font-scanfont-1.png){.illu-thumb .illu-index}
 
 This two-minute demo of the built-in ScanFont feature has over 40,000 views.
 It earns that attention by showing something genuinely useful in record time.

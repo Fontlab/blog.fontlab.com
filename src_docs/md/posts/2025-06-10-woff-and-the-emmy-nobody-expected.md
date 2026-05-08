@@ -7,7 +7,7 @@ date:
   created: 2025-06-10
 slug: woff-and-the-emmy-nobody-expected
 ---
-![](../media/illu/woff-and-the-emmy-nobody-expected-1.png){.illu-thumb}
+![](../media/illu/woff-and-the-emmy-nobody-expected-1.png){.illu-thumb .illu-index}
 
 In 2021 the Television Academy gave the W3C a Technology & Engineering Emmy for font
 standardisation on the web.

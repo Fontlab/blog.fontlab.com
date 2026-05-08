@@ -20,7 +20,7 @@ review:
   consolidate_with: ""
   notes: "The bridge paragraph connecting Studio 5 scripting to FontLab 7 is the post's strongest asset — it rescues an old tutorial from obsolescence. Lead is punchy. Could benefit from a note about which specific patterns no longer apply."
 ---
-![](../media/illu/python-scripting-fontlab-studio-5-3.png){.illu-thumb}
+![](../media/illu/python-scripting-fontlab-studio-5-1.png){.illu-thumb .illu-index}
 
 Automation unlocks the real power of a professional font editor.
 In this 70-minute tutorial, Adam Twardoch introduces Python scripting inside FontLab

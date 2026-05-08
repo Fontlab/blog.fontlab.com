@@ -24,7 +24,7 @@ review:
   consolidate_with: ""
   notes: "Re-pivoted: file size IS the point on mobile and watch, especially for multilingual coverage. The control story sits underneath."
 ---
-![](../media/illu/variable-fonts-file-size-1.png){.illu-thumb}
+![](../media/illu/variable-fonts-file-size-1.png){.illu-thumb .illu-index}
 
 The fashionable take is that variable fonts are not about file size.
 The fashionable take is wrong, or at least wrong by half.

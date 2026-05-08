@@ -22,7 +22,7 @@ review:
   consolidate_with: "2025-03-17-calfonts-spacing-italics.md"
   notes: "Good tutorial summary but no CTA and no tags; the series cross-link at the bottom is a relative path that may break — must be verified."
 ---
-![](../media/illu/calfonts-setup-shapes-1.png){.illu-thumb}
+![](../media/illu/calfonts-setup-shapes-1.png){.illu-thumb .illu-index}
 
 Dave Lawrence of California Type Foundry wrote a comprehensive set of tutorials for
 FontLab 8, from installation to finished font.

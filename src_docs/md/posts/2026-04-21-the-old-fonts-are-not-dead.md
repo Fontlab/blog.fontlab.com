@@ -24,7 +24,7 @@ review:
   consolidate_with: ""
   notes: "Best opener in the batch ('nothing gets old faster than a font format'); the rescue-boat framing is earned. CTA URL too generic — needs TransType product page or Type 1 rescue doc."
 ---
-![](../media/illu/the-old-fonts-are-not-dead-1.png){.illu-thumb}
+![](../media/illu/the-old-fonts-are-not-dead-1.png){.illu-thumb .illu-index}
 
 Nothing gets old faster than a font format — until a client opens a twenty-year-old file
 and suddenly it is everybody’s problem again.

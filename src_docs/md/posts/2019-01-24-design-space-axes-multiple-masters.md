@@ -20,7 +20,7 @@ review:
   consolidate_with: "2021-05-27-make-variable-fonts-better-fontlab-7.md"
   notes: "Concise and well-paced; the 'abstract made concrete' paragraph earns its place. The post covers FontLab VI but the feature carries forward — a one-line note pointing to current docs would extend its shelf life. Good cross-link candidate with the ATypI variable fonts quality talk."
 ---
-![](../media/illu/design-space-axes-multiple-masters-1.png){.illu-thumb}
+![](../media/illu/design-space-axes-multiple-masters-1.png){.illu-thumb .illu-index}
 
 Variable fonts force you to think in multiple dimensions at once.
 This four-minute video shows exactly how to set up a design space with axes and masters

@@ -7,7 +7,7 @@ date:
   created: 2026-04-02
 slug: drawing-the-invisible-minard
 ---
-![](../media/illu/drawing-the-invisible-minard-2.png){.illu-thumb}
+![](../media/illu/drawing-the-invisible-minard-1.png){.illu-thumb .illu-index}
 
 A contour line is a lie your map tells you so you can understand the truth.
 No hill has a line around it.

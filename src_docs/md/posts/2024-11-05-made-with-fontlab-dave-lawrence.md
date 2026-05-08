@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "Genuine interview with specific technical detail (fractional coords, Hi-res series); one of the stronger Made-with posts."
 ---
-![](../media/illu/made-with-fontlab-dave-lawrence-3.png){.illu-thumb}
+![](../media/illu/made-with-fontlab-dave-lawrence-1.png){.illu-thumb .illu-index}
 
 Bodoni Casale is not a Bodoni revival in the careful, museum-conservator sense.
 It’s three Bodoni revivals — Casale, Ferrara, Terracina — each a different printed

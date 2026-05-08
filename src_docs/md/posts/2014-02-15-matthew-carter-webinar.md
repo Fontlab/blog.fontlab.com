@@ -23,7 +23,7 @@ review:
   consolidate_with: "2014-03-15-brush-romans-webinar.md"
   notes: "Good biographical depth on Carter, specific enough to be valuable. The post describes the webinar but never says what Carter actually concluded or revealed — the 'so what' is missing. Could consolidate with brush-romans into a 'FontLab webinar series' roundup."
 ---
-![](../media/illu/matthew-carter-webinar-3.png){.illu-thumb}
+![](../media/illu/matthew-carter-webinar-1.png){.illu-thumb .illu-index}
 
 In February 2014, FontLab hosted a live webinar with Matthew Carter, a key figure in
 digital type design.

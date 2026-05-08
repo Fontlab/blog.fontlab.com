@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Canonical OpenType-features-as-UX post; absorbed the weaker 2025-01-14 invisible-logic post."
 ---
-![](../media/illu/opentype-features-as-ux-1.png){.illu-thumb}
+![](../media/illu/opentype-features-as-ux-1.png){.illu-thumb .illu-index}
 
 Most readers never notice when typography is right.
 They only notice when reading feels like work.

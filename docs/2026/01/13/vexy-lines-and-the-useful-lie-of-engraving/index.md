@@ -1,3 +1,5 @@
+{.illu-thumb .illu-index}
+
 Engraving is a useful lie. A hedcut looks old, sober, authoritative, and a little expensive — even when it was made yesterday.
 
 That is why the style keeps working. The Wall Street Journal hedcut tradition leans on dots and hatch lines to imitate older engravings. The trick succeeds because the image refuses full realism without giving up recognisability. It is edited likeness, not likeness alone. You see the method as you see the face.

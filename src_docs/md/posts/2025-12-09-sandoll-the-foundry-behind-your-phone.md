@@ -7,7 +7,7 @@ date:
   created: 2025-12-09
 slug: sandoll-the-foundry-behind-your-phone
 ---
-![](../media/illu/sandoll-the-foundry-behind-your-phone-2.png){.illu-thumb}
+![](../media/illu/sandoll-the-foundry-behind-your-phone-1.png){.illu-thumb .illu-index}
 
 If you read Korean on a phone, you are almost certainly reading a Sandoll typeface.
 That is not an accident — it is four decades of infrastructure work.

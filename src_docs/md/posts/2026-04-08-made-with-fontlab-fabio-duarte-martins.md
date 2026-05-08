@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Testimonial annotation is sharp — the 'design to engineering' and Linux observations are genuinely useful. CTA now points to the verified live Scannerlicker catalogue."
 ---
-![](../media/illu/made-with-fontlab-fabio-duarte-martins-3.png){.illu-thumb}
+![](../media/illu/made-with-fontlab-fabio-duarte-martins-1.png){.illu-thumb .illu-index}
 
 Scannerlicker is Fábio Duarte Martins’s foundry, and his testimonial is one of the few
 that actually names the FontLab features doing the work.

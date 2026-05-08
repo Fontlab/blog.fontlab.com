@@ -7,7 +7,7 @@ date:
   created: 2026-02-03
 slug: animating-font-variation-settings
 ---
-![](../media/illu/animating-font-variation-settings-1.png){.illu-thumb}
+![](../media/illu/animating-font-variation-settings-1.png){.illu-thumb .illu-index}
 
 Browsers have shipped robust `font-variation-settings` support since 2018, and animating
 those axes works the way the rest of CSS animation works.

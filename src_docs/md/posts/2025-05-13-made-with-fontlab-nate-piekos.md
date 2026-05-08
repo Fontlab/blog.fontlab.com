@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "Good genre-focused Made-with post; dark-mode testimonial is specific and human; five product links should be verified as live."
 ---
-![](../media/illu/made-with-fontlab-nate-piekos-1.png){.illu-thumb}
+![](../media/illu/made-with-fontlab-nate-piekos-1.png){.illu-thumb .illu-index}
 
 If you’ve read a comic in the last twenty years, you’ve read Blambot.
 Nate Piekos’s foundry has supplied the lettering fonts for an absurd share of the medium

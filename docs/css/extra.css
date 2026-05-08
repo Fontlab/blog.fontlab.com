@@ -45,22 +45,27 @@
     display: flow-root;
     /* still contain stray floats */
   }
-  
-  .md-post--excerpt .md-post__content {
-    position: relative;
-    /* containing block for the absolute thumb */
-    padding-right: 220px;
-    /* image (200) + gap (20) */
-    min-height: 210px;
-    /* keep the box at least image-tall */
+
+  /* On the blog index, the post excerpt hides its illu image by default.
+     Add the .illu-index modifier in markdown to opt the image back in. */
+  .md-post--excerpt .md-typeset .illu-thumb {
+    display: none;
   }
 
-  .md-post--excerpt .md-typeset .illu-thumb {
+  /* When .illu-index is present: render the thumbnail anchored to the top-
+     right of the excerpt and reserve space on the right of the content so
+     the H2 title and body wrap around it cleanly. */
+  .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index) {
+    position: relative;
+    padding-right: 220px;     /* image (200) + gap (20) */
+    min-height: 210px;        /* keep the box at least image-tall */
+  }
+  .md-post--excerpt .md-typeset .illu-thumb.illu-index {
+    display: block;
     position: absolute;
     top: -1rem;
     right: 0;
     float: none;
-    /* override the post-page rule */
     clear: none;
     width: 200px;
     max-width: 200px;
@@ -68,14 +73,13 @@
     object-fit: contain;
     margin: 0;
   }
-  
+
   /* Optional flip-to-left modifier on the index. */
-  .md-post--excerpt .md-typeset .illu-thumb.illu-left {
+  .md-post--excerpt .md-typeset .illu-thumb.illu-index.illu-left {
     right: auto;
     left: 0;
   }
-  
-  .md-post--excerpt .md-post__content:has(> p > .illu-thumb.illu-left) {
+  .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index.illu-left) {
     padding-right: 0;
     padding-left: 220px;
   }

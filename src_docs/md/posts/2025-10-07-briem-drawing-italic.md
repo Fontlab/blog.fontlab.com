@@ -22,7 +22,7 @@ review:
   consolidate_with: "2025-11-04-the-briem-method-and-the-geometry-of-nothing.md, 2025-12-16-fontlab-tv-briem-on-brushes.md"
   notes: "Best of the three Briem posts — concrete, actionable, the practical exercise is excellent. Overlaps with the other Briem posts in pen-angle theory; flag for series navigation links."
 ---
-![](../media/illu/briem-bold-italic-spacing-3.png){.illu-thumb}
+![](../media/illu/briem-drawing-italic-1.png){.illu-thumb .illu-index}
 
 Italic is not roman tilted to the right.
 Slant your upright `a` and what you get is a tilted `a`, not an italic `a` — the

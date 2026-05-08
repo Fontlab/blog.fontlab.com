@@ -1,3 +1,5 @@
+{.illu-thumb .illu-index}
+
 If you only read industry marketing, you might think type designers spend their time celebrating the same handful of features. The forums tell a different story.
 
 The arguments on TypeDrawers, Reddit’s r/typography, and the various national mailing lists are surprisingly consistent. Outline drawing direction. Whether overlap removal should be destructive. Whether `calt` is being abused. Whether autotrace is ever good enough. Whether RoboFont’s “build your own tools” philosophy is liberating or exhausting. Whether FontForge counts as software. Whether the right way to space a typeface is Tracy or Briem or neither.

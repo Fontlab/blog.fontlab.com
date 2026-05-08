@@ -7,7 +7,8 @@ date:
   created: 2025-09-16
 slug: tazugane-gothic-monotype-first-japanese
 ---
-![](../media/illu/tazugane-gothic-monotype-first-japanese-1.png){.illu-thumb}
+![](../media/illu/tazugane-gothic-monotype-first-japanese-1.png){.illu-thumb
+.illu-index}
 
 The problem with Japanese set in Helvetica has annoyed transit designers for fifty
 years. In January 2017, Akira Kobayashi did something about it.

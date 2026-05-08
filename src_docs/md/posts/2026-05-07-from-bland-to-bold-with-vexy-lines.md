@@ -7,7 +7,7 @@ date:
   created: 2026-05-07
 slug: from-bland-to-bold-with-vexy-lines
 ---
-![](../media/illu/from-bland-to-bold-with-vexy-lines-1.png){.illu-thumb}
+![](../media/illu/from-bland-to-bold-with-vexy-lines-1.png){.illu-thumb .illu-index}
 
 A photograph is not a vector.
 A sketch is not a vector.

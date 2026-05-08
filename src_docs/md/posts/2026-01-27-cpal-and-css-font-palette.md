@@ -7,7 +7,7 @@ date:
   created: 2026-01-27
 slug: cpal-and-css-font-palette
 ---
-![](../media/illu/cpal-and-css-font-palette-3.png){.illu-thumb}
+![](../media/illu/cpal-and-css-font-palette-1.png){.illu-thumb .illu-index}
 
 A colour font with one palette is a coloured drawing.
 A colour font with thirty palettes is a theme system.

@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Covers essential workflow for multilingual fonts; CTA should deep-link to anchors/components section; FontLab TV link is homepage-only."
 ---
-![](../media/illu/fontlab-tv-anchors-components-1.png){.illu-thumb}
+![](../media/illu/fontlab-tv-anchors-components-1.png){.illu-thumb .illu-index}
 
 If you are still drawing every accented letter by hand, this is the episode that retires
 that habit. Anchors plus components mean you draw `a` and `acute` once, and FontLab

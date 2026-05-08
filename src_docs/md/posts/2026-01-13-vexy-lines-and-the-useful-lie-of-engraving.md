@@ -22,7 +22,8 @@ review:
   consolidate_with: "2025-12-23-vexy-lines-and-the-joy-of-halftone.md"
   notes: "Best conceptual Vexy Lines post — 'tasteful loss is the whole craft' is the line the others are trying to write. The five-fills practical test section is the clearest feature explanation in the series."
 ---
-![](../media/illu/vexy-lines-and-the-useful-lie-of-engraving-1.png){.illu-thumb}
+![](../media/illu/vexy-lines-and-the-useful-lie-of-engraving-1.png){.illu-thumb
+.illu-index}
 
 Engraving is a useful lie.
 A hedcut looks old, sober, authoritative, and a little expensive — even when it was made

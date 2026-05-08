@@ -21,7 +21,7 @@ review:
   consolidate_with: ""
   notes: "Absorbed the high-level VM-options summary from the Oct 29 migration post; the deep step-by-step Parallels guide was dropped as stale."
 ---
-![](../media/illu/fls5-fog5-tt3-macos-catalina-1.png){.illu-thumb}
+![](../media/illu/fls5-fog5-tt3-macos-catalina-1.png){.illu-thumb .illu-index}
 
 macOS 10.15 Catalina drops all 32-bit app support, which means FontLab Studio 5,
 Fontographer 5, TypeTool 3, and BitFonter 3 for Mac will not run on it — and porting

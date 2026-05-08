@@ -7,7 +7,7 @@ date:
   created: 2026-01-20
 slug: color-font-wars-ten-years-on
 ---
-![](../media/illu/color-font-wars-ten-years-on-1.png){.illu-thumb}
+![](../media/illu/color-font-wars-ten-years-on-1.png){.illu-thumb .illu-index}
 
 In 2013, four companies each decided the same thing: OpenType needed color.
 They each decided it differently.

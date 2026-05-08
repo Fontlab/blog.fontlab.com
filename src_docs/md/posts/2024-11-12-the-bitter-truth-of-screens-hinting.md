@@ -1,6 +1,6 @@
 ---
 this_file: src_docs/md/posts/2024-11-12-the-bitter-truth-of-screens-hinting.md
-title: "The bitter truth of screens: testing and hinting"
+title: "Hinting and screen testing: the craft of small sizes"
 authors: [fontlab]
 tags: [hinting, fontaudit, rendering, opentype, fontlab-8]
 date:
@@ -21,99 +21,110 @@ review:
   image_needs: ""
   weakness_verdict: keep
   consolidate_with: ""
-  notes: "Covers hinting, FontAudit, overlapping contours, and .glyphspackage — arguably four posts squeezed into one; CTA should deep-link to hinting section."
+  notes: "Re-pivoted to a celebratory tone: hinting as craft, not 'bitter truth'."
 ---
-![](../media/illu/the-bitter-truth-of-screens-hinting-1.png){.illu-thumb}
+![](../media/illu/the-bitter-truth-of-screens-hinting-1.png){.illu-thumb .illu-index}
 
-You can spend six months agonising over the curvature of a lowercase ‘s’, and then your
-font is rendered by a ruthless grid of pixels on somebody’s second monitor at 1366×768.
-Translating smooth Bézier curves onto a low-resolution raster is a violent process.
-The curves win the design argument.
-The pixels win the rendering argument.
+You can spend six months refining the curvature of a lowercase ‘s’, and then your font
+gets rendered onto a generous grid of pixels on someone’s second monitor at 1366 × 768.
+Translating a smooth Bézier into that grid is one of the more delicate handovers in
+typography, and the people who built the tools that handle it have been wonderfully
+inventive about it.
 
 <!-- more -->
 
 ## What hinting actually is
 
-Hinting is a set of mathematical instructions embedded in the font that tells the
-operating system how to distort the outline so it lands properly on the pixel grid.
+Hinting is a set of mathematical instructions, embedded in the font, that tells the
+operating system how to land an outline elegantly on the pixel grid.
 The instructions snap stems to whole pixels, align the cap height across the alphabet,
-and keep the relationship between hairlines and main strokes legible at small sizes.
-Without hinting, a 10-pixel-tall ‘e’ on a Windows machine in 2024 reads as a smudge.
-With hinting, it reads as an ‘e’.
+and protect the relationship between hairlines and main strokes at small sizes.
+Without hinting, a 10-pixel-tall ‘e’ on a Windows machine reads as a smudge.
+With hinting, it reads as an ‘e’. That craft was developed across decades by engineers
+at Apple, Microsoft, Adobe, and a long line of independent type foundries who cared
+deeply about how letters appear on screen.
 
 FontLab 8 ships both automatic and manual hinting controls.
-The auto-hinter handles the bulk of a Latin alphabet acceptably; the manual controls
-exist for the specific glyphs where the auto-hinter’s assumptions are wrong, which is
-usually the lowercase ‘g’, the ampersand, and any italic that has structure the
-auto-hinter is not expecting.
+The auto-hinter handles the bulk of a Latin alphabet beautifully.
+The manual controls exist for the specific glyphs where the auto-hinter’s assumptions
+need a second opinion — typically a lowercase ‘g’, the ampersand, and any italic with an
+unusual structure.
+Catching those by hand is satisfying work, and it pays back the moment
+you see the result on screen.
 
 The built-in preview uses Microsoft ClearType’s actual rendering pipeline, which is the
-closest you can get to seeing what a Windows user will see, short of running Windows.
-This matters because the FontLab editor on macOS otherwise renders fonts the way macOS
-renders them, and macOS is much more forgiving than Windows.
-A font that previews well on macOS may still need hinting work to survive a Windows
-render.
+closest you can get to seeing what a Windows reader will see, short of running Windows
+itself.
+This is a generous gift from the platform — macOS otherwise renders fonts the way
+macOS does, and macOS is more forgiving than Windows.
+A font that previews well on macOS may still benefit from a hinting pass to look its
+best in a Windows render, and having both pipelines at hand inside the editor is a real
+treat.
 
-## The trap of overlapping contours
+## A common gotcha worth knowing about: overlapping contours
 
-A French designer recently posted a typical horror story: their font looked flawless in
-FontLab’s preview, but when they exported and tested it in Microsoft Word, white gaps
-appeared at the joints of the letters at small zoom levels.
-The culprit was overlapping contours.
+A French designer recently shared a useful story: their font looked flawless in
+FontLab’s preview, but when they exported and tested it in Microsoft Word, faint white
+gaps appeared at the joints of letters at small zoom levels.
+The cause was overlapping contours.
 
-This is the rendering-engine equivalent of the law of unintended consequences.
-Variable fonts effectively *require* contours to overlap so that interpolation between
-masters produces consistent shapes — the curves of the bowl have to overlap the stem to
-keep the bowl-stem junction smooth across the weight axis.
+Variable fonts effectively *want* contours to overlap so that interpolation between
+masters keeps shapes consistent — a bowl curve overlapping a stem helps the bowl-stem
+junction stay smooth across the weight axis.
 Modern rendering engines handle the overlap correctly, treating it as a single filled
-shape. The rendering engine buried inside Microsoft Word, which is several generations
-old, does not. It interprets the overlap as a knockout — a transparent hole — and
-produces white gaps at the junctions.
+shape. The rendering engine inside older versions of Microsoft Word, which carries
+decades of compatibility with it, treats the overlap as a knockout, which is where the
+gaps come from.
 
-The fix is to remove overlaps on export.
-FontLab does this non-destructively: the editing file keeps the overlaps so
-interpolation works; the export produces a flattened static OTF or TTF whose contours
-have been merged. The variable-font export keeps the overlap because it has to.
+The fix is straightforward and FontLab handles it elegantly: remove overlaps on export,
+non-destructively. The editing file keeps the overlaps so interpolation stays clean; the
+static OTF or TTF export ships with merged contours; the variable-font export keeps the
+overlap because it has to.
+Three different deliverables, one source file.
+That is a lovely piece of engineering on the export side.
 
-## FontAudit, the pedantic accountant
+## FontAudit, the patient second pair of eyes
 
-[FontLab 8’s FontAudit panel](2024-10-15-scripting-the-mundane-python-fontlab.md) is the
-safety net most users do not know they have.
-It scans the font for the kind of structural issues that pass visual inspection but fail
-at the rendering stage: open contours that should be closed, unnecessary points sitting
-between two true on-curve points, near-flat curves that ought to be straight lines,
-segments that double back on themselves, contours running in the wrong direction.
-Each finding gets flagged with a location and a severity.
+[FontLab 8’s FontAudit panel](2024-10-15-scripting-the-mundane-python-fontlab.md) is a
+quiet, generous safety net.
+It scans the font for the kind of structural details that pass visual inspection but
+matter at the rendering stage: open contours that should be closed, redundant points
+sitting between two true on-curve points, near-flat curves that ought to be straight
+lines, segments that double back, contours running in the wrong direction.
+Each finding is flagged with a location and a severity, and you can decide what to do
+with it.
 
-The auditing role is the right one for software.
-Visually, you can stare at a glyph for ten minutes and miss the redundant on-curve point
-that is making the rendering subtly off.
-FontAudit finds it in milliseconds and tells you exactly where it is.
+This is the right kind of work to ask software to do.
+You can stare at a glyph for ten minutes and miss the redundant on-curve point that is
+making the rendering subtly off.
+FontAudit finds it in milliseconds and points you at it.
+The hours it gives back are a small daily kindness.
 
 ## The .glyphspackage opening
 
-FontLab 8 supports the `.glyphspackage` format alongside its native FLP. The interesting
-thing about `.glyphspackage` is that it stores each glyph as a separate file inside a
-folder structure, which makes it Git-friendly.
+FontLab 8 supports the `.glyphspackage` format alongside its native FLP. The delightful
+detail is that `.glyphspackage` stores each glyph as a separate file inside a folder
+structure, which makes it Git-friendly.
 Two designers working on the same font can edit different glyphs in parallel and merge
-the changes through a normal pull request.
-This is mundane in software development; it is novel in font development, where for
-years the unit of version control was the entire font file.
+through a normal pull request.
 
-The implication is that font production starts to look like software production.
+That feels mundane in software development and entirely novel in font development, where
+the unit of version control was, for years, the entire font file.
 Branches, pull requests, code review, CI pipelines that build the font and check it
-against regression tests — all of it becomes possible because the source format is
-finally decomposable.
+against regression tests — every familiar software workflow becomes possible the moment
+the source format is decomposable.
+It is an exciting time to ship type teams.
 
-## The moral
+## The takeaway
 
-Type design is an exercise in engineering as much as in art.
-The drawing is the first half of the job.
-Surviving the brutal reality of the screen is the second half.
+Type design lives at the meeting point of art and engineering, and the rendering side is
+full of tiny acts of craft.
 Hinting, audit, and a clean export pipeline are not glamour features.
-They are the difference between a font that looks beautiful in your editor and a font
-that looks beautiful on a stranger’s laptop in 2024.
+They are the load-bearing parts of the work — the parts that make a font look beautiful
+not just in your editor but on a stranger’s laptop, on someone’s phone on the train, on
+a kiosk screen at an airport.
+The tools to do all of this well are mature, generous, and a pleasure to use, and they
+are standing on a long line of shoulders.
 
 ## References
 

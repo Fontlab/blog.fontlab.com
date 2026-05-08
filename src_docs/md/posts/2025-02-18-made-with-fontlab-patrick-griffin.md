@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "Real quote, real history, and the software-generation narrative is unusually revealing; one of the best Made-with posts."
 ---
-![](../media/illu/made-with-fontlab-patrick-griffin-1.png){.illu-thumb}
+![](../media/illu/made-with-fontlab-patrick-griffin-1.png){.illu-thumb .illu-index}
 
 Bananas is a casual brush face that is mostly an excuse to grin while you set it.
 Ronaldson Pro is a 19th-century revival that took years to draw and exists because

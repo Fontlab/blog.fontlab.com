@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "Canonical conceptual intro to design space; absorbed the unique parts of 2025-03-25-designing-variable-axes-well.md."
 ---
-![](../media/illu/fontlab-tv-design-space-1.png){.illu-thumb}
+![](../media/illu/fontlab-tv-design-space-1.png){.illu-thumb .illu-index}
 
 Design space is the part of variable font work that decides whether your font feels good
 or merely works. The FontLab TV design space episode is the conceptual foundation for

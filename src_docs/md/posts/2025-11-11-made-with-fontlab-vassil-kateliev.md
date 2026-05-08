@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "One of the stronger Made With posts — the TypeRig angle elevates it above testimonial-dump territory. The 'endless ocean' annotation is the kind of editorial judgment that makes these posts readable."
 ---
-![](../media/illu/made-with-fontlab-vassil-kateliev-3.png){.illu-thumb}
+![](../media/illu/made-with-fontlab-vassil-kateliev-1.png){.illu-thumb .illu-index}
 
 [Science Gothic](https://github.com/tphinney/science-gothic) is a four-axis variable
 font drawn by Thomas Phinney, Brandon Buerkle, and Vassil Kateliev.

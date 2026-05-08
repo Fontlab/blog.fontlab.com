@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Crisp product explainer with good voice; CTA lands on broad manual page — should deep-link to Power Brush section when available."
 ---
-![](../media/illu/drawing-with-strokes-power-brush-3.png){.illu-thumb}
+![](../media/illu/drawing-with-strokes-power-brush-1.png){.illu-thumb .illu-index}
 
 The standard method for digitising a font is to draw the outline.
 You map the exterior boundary of the shape with Bezier curves, and you push and pull

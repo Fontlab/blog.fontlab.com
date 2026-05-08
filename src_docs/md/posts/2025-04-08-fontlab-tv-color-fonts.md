@@ -23,7 +23,7 @@ review:
   consolidate_with: "2025-07-22-the-long-awkward-adolescence-of-color-fonts.md"
   notes: "Good four-format overview but thin; pairs with the color history post; FontLab TV link goes to homepage not episode."
 ---
-![](../media/illu/fontlab-tv-color-fonts-2.png){.illu-thumb}
+![](../media/illu/fontlab-tv-color-fonts-1.png){.illu-thumb .illu-index}
 
 Color fonts have stopped being a novelty and started being a deliverable — emoji,
 branded display faces, multi-layered display work.

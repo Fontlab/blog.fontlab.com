@@ -23,7 +23,8 @@ review:
   consolidate_with: ""
   notes: "Solid overview but stays at the altitude of a Wikipedia entry; the Arabic section is the sharpest. CTA URL too generic — needs deep link to formats/scripts chapter."
 ---
-![](../media/illu/beyond-the-latin-sandbox-global-typography-1.png){.illu-thumb}
+![](../media/illu/beyond-the-latin-sandbox-global-typography-1.png){.illu-thumb
+.illu-index}
 
 It is a common myopia in Western design to assume that typography begins with `A` and
 ends with `Z`. In reality, Latin script is one small neighbourhood in a vast, complex

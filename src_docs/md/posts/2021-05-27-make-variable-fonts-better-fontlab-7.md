@@ -21,7 +21,7 @@ review:
   consolidate_with: "2019-01-24-design-space-axes-multiple-masters.md"
   notes: "Conference talk framing is well-handled — 'assumes more prior knowledge than an introductory tutorial' sets expectations correctly. The failure modes list (nodes drift, contours flip, anchors interpolate incorrectly) is genuinely useful and specific. No CTA to help docs is a miss for a QA-focused post."
 ---
-![](../media/illu/make-variable-fonts-better-fontlab-7-1.png){.illu-thumb}
+![](../media/illu/make-variable-fonts-better-fontlab-7-1.png){.illu-thumb .illu-index}
 
 This 19-minute presentation by Adam Twardoch, delivered at ATypI Tech Talks 2021, goes
 beyond building variable fonts to the harder question: making them good.

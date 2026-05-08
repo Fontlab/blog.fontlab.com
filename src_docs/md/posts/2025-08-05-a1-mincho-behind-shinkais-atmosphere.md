@@ -7,7 +7,7 @@ date:
   created: 2025-08-05
 slug: a1-mincho-behind-shinkais-atmosphere
 ---
-![](../media/illu/a1-mincho-behind-shinkais-atmosphere-2.png){.illu-thumb}
+![](../media/illu/a1-mincho-behind-shinkais-atmosphere-1.png){.illu-thumb .illu-index}
 
 One of Morisawa’s oldest typefaces made it into *Your Name* because it was imperfect in
 exactly the right way.

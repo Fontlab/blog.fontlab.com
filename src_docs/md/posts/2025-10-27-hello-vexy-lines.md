@@ -21,7 +21,7 @@ review:
   consolidate_with: "2026-01-27-the-algorithmic-paintbrush-of-vexy-lines.md"
   notes: "Best intro post for Vexy Lines — punchy, image-rich, explains the product cleanly. The retired signal-processing draft repeated this post; the algorithmic-paintbrush post remains a consolidation candidate."
 ---
-![](../media/illu/hello-vexy-lines-1.png){.illu-thumb}
+![](../media/illu/hello-vexy-lines-1.png){.illu-thumb .illu-index}
 
 Drop a photo into Vexy Lines, and it hands you back a crisp vector drawing.
 It reads the brightness of your image and adjusts stroke thickness to match.

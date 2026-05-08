@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Tightest craft post in the set — the three-failure-modes structure is immediately useful; CTA has a real deep link, the only FontLab TV / tutorial post that does."
 ---
-![](../media/illu/briem-drawing-bold-3.png){.illu-thumb}
+![](../media/illu/briem-drawing-bold-1.png){.illu-thumb .illu-index}
 
 A bold weight is not a thicker version of the regular.
 It is a different design that has to share a family with the regular and pretend they

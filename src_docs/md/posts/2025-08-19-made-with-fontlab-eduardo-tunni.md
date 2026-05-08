@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "The Tunni Lines paragraph is the most technically specific and interesting content in any Made-with post; Jeremy Tankard quote needs sourcing."
 ---
-![](../media/illu/made-with-fontlab-eduardo-tunni-1.png){.illu-thumb}
+![](../media/illu/made-with-fontlab-eduardo-tunni-1.png){.illu-thumb .illu-index}
 
 [Graduate](https://etunni.github.io/Graduate-Variable-Font/) is the kind of variable
 font that makes the case for the format without having to argue.

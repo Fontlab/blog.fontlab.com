@@ -7,7 +7,7 @@ date:
   created: 2026-04-16
 slug: from-spirograph-to-fidenza
 ---
-![](../media/illu/from-spirograph-to-fidenza-2.png){.illu-thumb}
+![](../media/illu/from-spirograph-to-fidenza-1.png){.illu-thumb .illu-index}
 
 The generative line has a genealogy.
 It runs from a physics lecture in 1815 through a children’s toy in 1965 and a university

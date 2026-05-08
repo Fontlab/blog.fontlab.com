@@ -63,7 +63,9 @@ def inject(path: Path) -> str:
     if not (ILLU / f"{slug}-1.png").exists():
         return "no-image"
 
-    md_line = f"![]({img_rel}){{.illu-thumb}}"
+    # `.illu-index` opts the image into the blog-index excerpt; remove it by
+    # hand to keep an image on its post page only and hide it from the index.
+    md_line = f"![]({img_rel}){{.illu-thumb .illu-index}}"
     block = md_line + "\n\n"
 
     if _PREV_INJECTION.search(body):

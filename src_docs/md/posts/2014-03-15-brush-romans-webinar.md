@@ -24,7 +24,7 @@ review:
   consolidate_with: "2014-02-15-matthew-carter-webinar.md"
   notes: "Unusually rich historical detail — Catich lineage and Downer's sign-painting career give this real texture. The connection between the webinar content and font design practice could be stated more crisply in the opener. Strong candidate to keep as a standalone deep-dive."
 ---
-![](../media/illu/brush-romans-webinar-3.png){.illu-thumb}
+![](../media/illu/brush-romans-webinar-1.png){.illu-thumb .illu-index}
 
 On March 11, 2014, FontLab hosted a webinar on Roman capital letterforms and their
 origins in flat-brush writing.

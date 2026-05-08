@@ -21,7 +21,7 @@ review:
   consolidate_with: ""
   notes: "Straight announcement post — factual, well-structured, the curriculum overview is genuinely useful. Reads slightly like a press release; could use one sentence of editorial opinion to lift it."
 ---
-![](../media/illu/fontlab-tv-variable-font-course-1.png){.illu-thumb}
+![](../media/illu/fontlab-tv-variable-font-course-1.png){.illu-thumb .illu-index}
 
 FontLab TV has published a 50-hour video course on variable font design, organized into
 25 playlists. It runs from absolute fundamentals — coordinates, contours, metrics —

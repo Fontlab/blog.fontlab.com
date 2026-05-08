@@ -7,7 +7,7 @@ date:
   created: 2025-06-03
 slug: from-multiple-master-to-variable
 ---
-![](../media/illu/from-multiple-master-to-variable-2.png){.illu-thumb}
+![](../media/illu/from-multiple-master-to-variable-1.png){.illu-thumb .illu-index}
 
 Variable fonts are not new.
 They are the third attempt at the same idea, by mostly the same engineers, after

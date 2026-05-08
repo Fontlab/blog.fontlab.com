@@ -1,3 +1,5 @@
+{.illu-thumb .illu-index}
+
 NT$1.5 million in eighty minutes. NT$26 million in the end. A typeface named after a tea proved that East Asian type had an audience willing to pay for it.
 
 In **August 2015**, justfont launched **金萱 (Jin Xuan)** on the Taiwanese crowdfunding platform flyingV. The campaign hit NT$1.5 million in eighty minutes. Final tally: roughly **NT$26 million from 7,800 backers** — the most successful Taiwanese crowdfund of its time, and the first public proof that East Asian display type could be funded the way Western indie type had been funded for years.

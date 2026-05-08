@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "CTA at end is correctly formatted with .fl-help-cta class — the only post in this slice with a properly formatted CTA. The TransType historical tangent (2013) feels forced in a 2024 web performance post; tighten or cut it."
 ---
-![](../media/illu/web-fonts-too-heavy-the-fix-2.png){.illu-thumb}
+![](../media/illu/web-fonts-too-heavy-the-fix-1.png){.illu-thumb .illu-index}
 
 You inherit a folder of old PostScript Type 1 fonts.
 Or a client sends a family with broken names, duplicate glyphs, and kerning that only

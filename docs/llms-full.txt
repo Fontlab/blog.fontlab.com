@@ -612,6 +612,8 @@ TransType is available at [fontlab.com/font-converter/transtype/](https://www.fo
 
 [Read more →](https://www.fontlab.com/font-converter/transtype/)
 
+{.illu-thumb .illu-index}
+
 Apple’s macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing the system Python 2.7 that FontLab depended on. FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need to install a bundled Python 2.7 package alongside the app. A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644 does not have that problem.
 
 **Note:** If you open a font and all glyphs unintentionally have a transparent or colored fill, scroll to the end of this post for instructions on how to fix it.
@@ -946,6 +948,8 @@ ______________________________________________________________________
 Full documentation is in the FontLab 8 What’s New chapters on [Color](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/) and [Scripts & extensions](https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/).
 
 [Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/)
+
+{.illu-thumb .illu-index}
 
 Digital formats do not die of natural causes. They are smothered in their sleep by the companies that invented them. PostScript Type 1 went the same way, and TransType 4 has been the moving van ever since.
 
@@ -1321,39 +1325,39 @@ The skeleton-based Stroke panel and Thickness tool he mentions are the FontLab 8
 
 [Browse California Type Foundry →](https://www.myfonts.com/collections/california-type-foundry/)
 
-You can spend six months agonising over the curvature of a lowercase ‘s’, and then your font is rendered by a ruthless grid of pixels on somebody’s second monitor at 1366×768. Translating smooth Bézier curves onto a low-resolution raster is a violent process. The curves win the design argument. The pixels win the rendering argument.
+You can spend six months refining the curvature of a lowercase ‘s’, and then your font gets rendered onto a generous grid of pixels on someone’s second monitor at 1366 × 768. Translating a smooth Bézier into that grid is one of the more delicate handovers in typography, and the people who built the tools that handle it have been wonderfully inventive about it.
 
 ## What hinting actually is
 
-Hinting is a set of mathematical instructions embedded in the font that tells the operating system how to distort the outline so it lands properly on the pixel grid. The instructions snap stems to whole pixels, align the cap height across the alphabet, and keep the relationship between hairlines and main strokes legible at small sizes. Without hinting, a 10-pixel-tall ‘e’ on a Windows machine in 2024 reads as a smudge. With hinting, it reads as an ‘e’.
+Hinting is a set of mathematical instructions, embedded in the font, that tells the operating system how to land an outline elegantly on the pixel grid. The instructions snap stems to whole pixels, align the cap height across the alphabet, and protect the relationship between hairlines and main strokes at small sizes. Without hinting, a 10-pixel-tall ‘e’ on a Windows machine reads as a smudge. With hinting, it reads as an ‘e’. That craft was developed across decades by engineers at Apple, Microsoft, Adobe, and a long line of independent type foundries who cared deeply about how letters appear on screen.
 
-FontLab 8 ships both automatic and manual hinting controls. The auto-hinter handles the bulk of a Latin alphabet acceptably; the manual controls exist for the specific glyphs where the auto-hinter’s assumptions are wrong, which is usually the lowercase ‘g’, the ampersand, and any italic that has structure the auto-hinter is not expecting.
+FontLab 8 ships both automatic and manual hinting controls. The auto-hinter handles the bulk of a Latin alphabet beautifully. The manual controls exist for the specific glyphs where the auto-hinter’s assumptions need a second opinion — typically a lowercase ‘g’, the ampersand, and any italic with an unusual structure. Catching those by hand is satisfying work, and it pays back the moment you see the result on screen.
 
-The built-in preview uses Microsoft ClearType’s actual rendering pipeline, which is the closest you can get to seeing what a Windows user will see, short of running Windows. This matters because the FontLab editor on macOS otherwise renders fonts the way macOS renders them, and macOS is much more forgiving than Windows. A font that previews well on macOS may still need hinting work to survive a Windows render.
+The built-in preview uses Microsoft ClearType’s actual rendering pipeline, which is the closest you can get to seeing what a Windows reader will see, short of running Windows itself. This is a generous gift from the platform — macOS otherwise renders fonts the way macOS does, and macOS is more forgiving than Windows. A font that previews well on macOS may still benefit from a hinting pass to look its best in a Windows render, and having both pipelines at hand inside the editor is a real treat.
 
-## The trap of overlapping contours
+## A common gotcha worth knowing about: overlapping contours
 
-A French designer recently posted a typical horror story: their font looked flawless in FontLab’s preview, but when they exported and tested it in Microsoft Word, white gaps appeared at the joints of the letters at small zoom levels. The culprit was overlapping contours.
+A French designer recently shared a useful story: their font looked flawless in FontLab’s preview, but when they exported and tested it in Microsoft Word, faint white gaps appeared at the joints of letters at small zoom levels. The cause was overlapping contours.
 
-This is the rendering-engine equivalent of the law of unintended consequences. Variable fonts effectively *require* contours to overlap so that interpolation between masters produces consistent shapes — the curves of the bowl have to overlap the stem to keep the bowl-stem junction smooth across the weight axis. Modern rendering engines handle the overlap correctly, treating it as a single filled shape. The rendering engine buried inside Microsoft Word, which is several generations old, does not. It interprets the overlap as a knockout — a transparent hole — and produces white gaps at the junctions.
+Variable fonts effectively *want* contours to overlap so that interpolation between masters keeps shapes consistent — a bowl curve overlapping a stem helps the bowl-stem junction stay smooth across the weight axis. Modern rendering engines handle the overlap correctly, treating it as a single filled shape. The rendering engine inside older versions of Microsoft Word, which carries decades of compatibility with it, treats the overlap as a knockout, which is where the gaps come from.
 
-The fix is to remove overlaps on export. FontLab does this non-destructively: the editing file keeps the overlaps so interpolation works; the export produces a flattened static OTF or TTF whose contours have been merged. The variable-font export keeps the overlap because it has to.
+The fix is straightforward and FontLab handles it elegantly: remove overlaps on export, non-destructively. The editing file keeps the overlaps so interpolation stays clean; the static OTF or TTF export ships with merged contours; the variable-font export keeps the overlap because it has to. Three different deliverables, one source file. That is a lovely piece of engineering on the export side.
 
-## FontAudit, the pedantic accountant
+## FontAudit, the patient second pair of eyes
 
-[FontLab 8’s FontAudit panel](https://blog.fontlab.com/2024/10/15/scripting-the-mundane-python-fontlab/index.md) is the safety net most users do not know they have. It scans the font for the kind of structural issues that pass visual inspection but fail at the rendering stage: open contours that should be closed, unnecessary points sitting between two true on-curve points, near-flat curves that ought to be straight lines, segments that double back on themselves, contours running in the wrong direction. Each finding gets flagged with a location and a severity.
+[FontLab 8’s FontAudit panel](https://blog.fontlab.com/2024/10/15/scripting-the-mundane-python-fontlab/index.md) is a quiet, generous safety net. It scans the font for the kind of structural details that pass visual inspection but matter at the rendering stage: open contours that should be closed, redundant points sitting between two true on-curve points, near-flat curves that ought to be straight lines, segments that double back, contours running in the wrong direction. Each finding is flagged with a location and a severity, and you can decide what to do with it.
 
-The auditing role is the right one for software. Visually, you can stare at a glyph for ten minutes and miss the redundant on-curve point that is making the rendering subtly off. FontAudit finds it in milliseconds and tells you exactly where it is.
+This is the right kind of work to ask software to do. You can stare at a glyph for ten minutes and miss the redundant on-curve point that is making the rendering subtly off. FontAudit finds it in milliseconds and points you at it. The hours it gives back are a small daily kindness.
 
 ## The .glyphspackage opening
 
-FontLab 8 supports the `.glyphspackage` format alongside its native FLP. The interesting thing about `.glyphspackage` is that it stores each glyph as a separate file inside a folder structure, which makes it Git-friendly. Two designers working on the same font can edit different glyphs in parallel and merge the changes through a normal pull request. This is mundane in software development; it is novel in font development, where for years the unit of version control was the entire font file.
+FontLab 8 supports the `.glyphspackage` format alongside its native FLP. The delightful detail is that `.glyphspackage` stores each glyph as a separate file inside a folder structure, which makes it Git-friendly. Two designers working on the same font can edit different glyphs in parallel and merge through a normal pull request.
 
-The implication is that font production starts to look like software production. Branches, pull requests, code review, CI pipelines that build the font and check it against regression tests — all of it becomes possible because the source format is finally decomposable.
+That feels mundane in software development and entirely novel in font development, where the unit of version control was, for years, the entire font file. Branches, pull requests, code review, CI pipelines that build the font and check it against regression tests — every familiar software workflow becomes possible the moment the source format is decomposable. It is an exciting time to ship type teams.
 
-## The moral
+## The takeaway
 
-Type design is an exercise in engineering as much as in art. The drawing is the first half of the job. Surviving the brutal reality of the screen is the second half. Hinting, audit, and a clean export pipeline are not glamour features. They are the difference between a font that looks beautiful in your editor and a font that looks beautiful on a stranger’s laptop in 2024.
+Type design lives at the meeting point of art and engineering, and the rendering side is full of tiny acts of craft. Hinting, audit, and a clean export pipeline are not glamour features. They are the load-bearing parts of the work — the parts that make a font look beautiful not just in your editor but on a stranger’s laptop, on someone’s phone on the train, on a kiosk screen at an airport. The tools to do all of this well are mature, generous, and a pleasure to use, and they are standing on a long line of shoulders.
 
 ## References
 
@@ -1665,6 +1669,8 @@ The “never about file size” line was written by people whose typography neve
 
 [Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 
+{.illu-thumb .illu-index}
+
 A variable font isn’t a new file format. It’s an OpenType file with a few extra tables nailed on, and once you know what each one does, the whole thing stops being magic.
 
 The core stack:
@@ -1809,26 +1815,22 @@ Most variable font problems are design space problems. This episode is the frami
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
 
-Paul de Casteljau invented the Bézier curve in 1958. His employer made him keep quiet about it for 27 years.
+In 1958, **Paul de Casteljau** at Citroën worked out the mathematics of the curves we now draw with every day. A few years later **Pierre Bézier** at Renault arrived at the same idea independently and published it in 1962. Two engineers, two French car companies, one of the most useful ideas in twentieth-century geometry — and an act of mathematical generosity from de Casteljau that took twenty-seven years to surface publicly.
 
-**Pierre Bézier** worked at Renault. He published his parametric curve method in 1962. **Paul de Casteljau** worked at Citroën. He had the same mathematics in 1958–59.
+Citroën, like many companies of the era, considered de Casteljau’s work a competitive advantage and asked him not to publish. He honoured that, and quietly used the technique inside the company’s CAD systems. By the time he was finally free to write it up in 1985, the wider science community had named the curves after Bézier — who had published first and openly. The compromise the field settled on is the one your textbook still teaches: *Bézier curves, de Casteljau algorithm.* Same mathematics, two names on the mantelpiece, both well earned.
 
-Citroën, deciding the technique was a competitive advantage, **forbade publication**. Twenty-seven years passed. By the time de Casteljau was finally allowed to publish in 1985, the science community had long since named the curves after Bézier. The compromise was to name the *evaluation algorithm* after de Casteljau — which is why every renderer textbook says *Bézier curve, de Casteljau algorithm*.
-
-They mean the same thing. The names mark which company let its engineer publish.
+The story is a lovely reminder that big ideas tend to arrive twice. Two thoughtful engineers, working independently in adjacent buildings of French industry, ended up giving designers and font tools their daily geometry.
 
 ______________________________________________________________________
 
-For type design the consequence of this automotive argument is the cubic/quadratic split that any FontLab user lives with every day:
+For type design the gift took shape in two complementary flavours that any FontLab user works with every day:
 
-- **PostScript / CFF / CFF2** — cubic Béziers (4 control points per segment). Adobe’s choice.
-- **TrueType** — quadratic Béziers (3 control points per segment). Apple’s choice, made in the late 1980s for one reason: the arithmetic was cheaper to render on an 8 MHz machine at 72 dpi.
+- **PostScript / CFF / CFF2** — cubic Béziers (4 control points per segment). Adobe’s choice, with extra expressive room per segment.
+- **TrueType** — quadratic Béziers (3 control points per segment). Apple’s choice in the late 1980s, brilliantly pragmatic for the 8 MHz machines and 72 dpi screens of the moment.
 
-On faster hardware, at higher resolution, Adobe’s reasoning looked better. But both choices were already locked in by the time it mattered.
+Both choices were the right ones for their time, and **OpenType (1996)** stitched them together generously: one font container, either flavour inside. Every modern font you read is one or the other on disk, and FontLab gives you tools to move between them. A round trip from cubic to quadratic and back is, mathematically, not lossless — the two parametric forms describe slightly different families — but the conversion is careful and faithful. Where the curve shifts, it shifts because the geometry itself is honest about the difference. That is not a flaw. That is the shape of two great ideas politely meeting in the middle.
 
-**OpenType (1996)** solved the standoff by wrapping both: one font container, either flavour inside. Every modern font is still one or the other on disk. Conversion between them is not lossless — a round trip from cubic to quadratic and back will, in general, change the curve. FontLab’s conversion tools do the best they can, which is quite good, but the geometry does not survive perfectly. That is not a bug. It is the shape of the original disagreement.
-
-The historical footnote worth keeping is small but worth saying out loud: the geometry of every digital letter you read descends from a French car company that almost classified it. The algorithm ran in Citroën’s CAD systems for nearly three decades before a typographer ever used it. De Casteljau got his name on the evaluation step. Bézier got his name on the curve. Renault got the credit, Citroën got the car doors, and the rest of us got the handles.
+The footnote worth saying out loud is small and rather wonderful: the geometry of every digital letter you read descends from car-body engineering done in two French studios in the 1950s. The algorithm ran in Citroën’s CAD systems for nearly three decades before a typographer ever used it. De Casteljau’s name rides with the evaluation step. Bézier’s name rides with the curve. Renault and Citroën got the car doors. The rest of us got the handles, and they have served us beautifully.
 
 ## References
 
@@ -1895,6 +1897,8 @@ If the regular and bold are two masters of a variable font, all of the above has
 Draw a regular `n`. Then draw a bold `n` from scratch — same height, same x-height — without scaling the regular. Compare. The differences you find on `n` are the differences you will need to apply across the rest of the lowercase.
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/)
+
+{.illu-thumb .illu-index}
 
 Type spent five hundred years in black and white. Then mobile phones demanded emoji, and four large companies sat down separately and proposed four entirely incompatible ways to put color into a font. The decade since has been an awkward growing-up.
 
@@ -2055,6 +2059,8 @@ You stop honing when you cannot identify a specific change that would make the g
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
 
+{.illu-thumb .illu-index}
+
 It is a common myopia in Western design to assume that typography begins with `A` and ends with `Z`. In reality, Latin script is one small neighbourhood in a vast, complex city of writing systems.
 
 Modern font editors must accommodate the structural realities of Cyrillic, Arabic, Hebrew, Devanagari, and the massive CJK ideographic sets. The technical requirements are demanding. Arabic is inherently cursive and context-dependent — a single letter alters its geometry depending on whether it stands at the beginning, middle, or end of a word, or alone. To draw an Arabic font, the designer must produce these positional variants and lean heavily on contextual alternates (`calt`) and right-to-left kerning. FontLab 8.2 refined the right-to-left kerning workflow specifically.
@@ -2104,6 +2110,8 @@ OpenType features are the part of font design where text becomes typography. The
 Almost every modern type design ships with at least a dozen OpenType features. Getting them right is what separates a “font” from a typography product.
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8)
+
+{.illu-thumb .illu-index}
 
 The problem with Japanese set in Helvetica has annoyed transit designers for fifty years. In January 2017, Akira Kobayashi did something about it.
 
@@ -2211,6 +2219,8 @@ Draw `i n o a` four times: once at 0° slant with cursive structure, once at 12�
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-3-italic/briem-4-31-italic/)
 
+{.illu-thumb .illu-index}
+
 If you only read industry marketing, you might think type designers spend their time celebrating the same handful of features. The forums tell a different story.
 
 The arguments on TypeDrawers, Reddit’s r/typography, and the various national mailing lists are surprisingly consistent. Outline drawing direction. Whether overlap removal should be destructive. Whether `calt` is being abused. Whether autotrace is ever good enough. Whether RoboFont’s “build your own tools” philosophy is liberating or exhausting. Whether FontForge counts as software. Whether the right way to space a typeface is Tracy or Briem or neither.
@@ -2230,6 +2240,8 @@ Reading these debates is one of the better ways to learn type design. The produc
 - [Awesome typography — Jolg42](https://github.com/Jolg42/awesome-typography)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
+{.illu-thumb .illu-index}
 
 NT$1.5 million in eighty minutes. NT$26 million in the end. A typeface named after a tea proved that East Asian type had an audience willing to pay for it.
 
@@ -2273,6 +2285,8 @@ Try Vexy Lines right now in your browser for free. If you need full-resolution S
 Go play with it at [vexy.art](https://vexy.art/).
 
 [Read more →](https://vexy.art/)
+
+{.illu-thumb .illu-index}
 
 The most difficult part of drawing a typeface is not the black ink. It is the white space.
 
@@ -2343,6 +2357,8 @@ The character set is large. The work is not impossible. Now there is a book that
 - [Variable components in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
+{.illu-thumb .illu-index}
 
 King Sejong personally invented the Korean alphabet in 1443. Its instruction manual was lost for four centuries, then carried through the Korean War inside a man’s coat.
 
@@ -2523,6 +2539,8 @@ None of them produces many graduates per year. None of them is meant to. Type de
 - [ANRT Nancy](https://anrt-nancy.fr/)
 
 [Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
+{.illu-thumb .illu-index}
 
 Engraving is a useful lie. A hedcut looks old, sober, authoritative, and a little expensive — even when it was made yesterday.
 
@@ -3014,6 +3032,8 @@ The Linux remark is not throwaway. FontLab ships native binaries for macOS, Wind
 - [Scannerlicker on MyFonts](https://www.myfonts.com/collections/scannerlicker-foundry)
 
 [Browse Scannerlicker →](https://fonts.scannerlicker.net/)
+
+{.illu-thumb .illu-index}
 
 The fine-line patterns on a banknote are a security feature. A British engineer made a toy of them in 1965 and sold 30 million units.
 

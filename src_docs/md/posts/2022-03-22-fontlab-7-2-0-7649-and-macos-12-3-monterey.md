@@ -21,7 +21,8 @@ review:
   consolidate_with: ""
   notes: "Exemplary crisis/patch post — clear problem statement, explicit numbered install steps for two macOS variants, and a dedicated fix for the transparent-fill regression. The 'Note:' callout at the top for the fill bug is well-placed. Download link in inline text satisfies CTA effectively."
 ---
-![](../media/illu/fontlab-7-2-0-7649-and-macos-12-3-monterey-1.png){.illu-thumb}
+![](../media/illu/fontlab-7-2-0-7649-and-macos-12-3-monterey-1.png){.illu-thumb
+.illu-index}
 
 Apple’s macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing
 the system Python 2.7 that FontLab depended on.

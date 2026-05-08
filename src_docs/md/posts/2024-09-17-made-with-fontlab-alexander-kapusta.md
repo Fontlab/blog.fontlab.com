@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Real interview with real quote; four font links all point to the same homepage — needs individual product URLs."
 ---
-![](../media/illu/made-with-fontlab-alexander-kapusta-1.png){.illu-thumb}
+![](../media/illu/made-with-fontlab-alexander-kapusta-1.png){.illu-thumb .illu-index}
 
 YFF Becha looks like a poster you’d find tacked behind a bar in Lviv — heavy, slightly
 off, deliberately so.

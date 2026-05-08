@@ -1,3 +1,5 @@
+{.illu-thumb .illu-index}
+
 Digital formats do not die of natural causes. They are smothered in their sleep by the companies that invented them. PostScript Type 1 went the same way, and TransType 4 has been the moving van ever since.
 
 ## The format that refused to leave on schedule

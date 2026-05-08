@@ -22,7 +22,8 @@ review:
   consolidate_with: ""
   notes: "Punchy editorial voice, the AI-in-workflow paragraph is the most timely section. CTA URL too generic; needs deep link to autotrace or variable font compatibility docs."
 ---
-![](../media/illu/what-type-designers-actually-argue-about-2.png){.illu-thumb}
+![](../media/illu/what-type-designers-actually-argue-about-1.png){.illu-thumb
+.illu-index}
 
 If you only read industry marketing, you might think type designers spend their time
 celebrating the same handful of features.

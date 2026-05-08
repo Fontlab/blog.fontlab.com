@@ -7,7 +7,7 @@ date:
   created: 2026-03-03
 slug: gsub-gpos-and-harfbuzz
 ---
-![](../media/illu/gsub-gpos-and-harfbuzz-2.png){.illu-thumb}
+![](../media/illu/gsub-gpos-and-harfbuzz-1.png){.illu-thumb .illu-index}
 
 Every OpenType feature — ligatures, kerning, small caps, Arabic joining forms — runs
 through two tables and one engine.

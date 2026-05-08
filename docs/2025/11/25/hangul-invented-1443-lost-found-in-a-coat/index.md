@@ -1,3 +1,5 @@
+{.illu-thumb .illu-index}
+
 King Sejong personally invented the Korean alphabet in 1443. Its instruction manual was lost for four centuries, then carried through the Korean War inside a man’s coat.
 
 Hangul is unusual among writing systems in having a known author, a known date, and a documented rationale. King Sejong of Joseon invented it in **1443** — Sejong year 25, lunar 12 月. Twenty-eight letters: seventeen consonants drawn from the shape of the speech organs that produce them, and eleven vowels modelled on the philosophical triad of Heaven (ㆍ), Earth (ㅡ), and Human (ㅣ).

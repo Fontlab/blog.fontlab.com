@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Clean tutorial post, the 'why n' rationale is perfectly concise. CTA now points to the FontLab 8 drawing basics tutorial. Video references FontLab 7 while post implies FL8; clarify later."
 ---
-![](../media/illu/fontlab-tv-glyph-construction-3.png){.illu-thumb}
+![](../media/illu/fontlab-tv-glyph-construction-1.png){.illu-thumb .illu-index}
 
 The first letter is the hardest.
 The FontLab TV glyph construction episode is a calm, deliberate walkthrough of drawing

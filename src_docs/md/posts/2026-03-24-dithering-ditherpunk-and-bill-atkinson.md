@@ -7,7 +7,7 @@ date:
   created: 2026-03-24
 slug: dithering-ditherpunk-and-bill-atkinson
 ---
-![](../media/illu/dithering-ditherpunk-and-bill-atkinson-1.png){.illu-thumb}
+![](../media/illu/dithering-ditherpunk-and-bill-atkinson-1.png){.illu-thumb .illu-index}
 
 A one-bit display has no grey.
 Dithering is the sixty-year argument that it doesn’t need one.

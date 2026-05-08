@@ -21,7 +21,7 @@ review:
   consolidate_with: "2020-12-16-basics-of-spacing-fontlab-7.md"
   notes: "Best opener of the tutorial posts — 'Spacing is where type design lives or dies' is a keeper. Title is Title Case when it should be sentence case. Consolidation candidate with the FontLab 7 spacing basics post, or keep both with explicit cross-links."
 ---
-![](../media/illu/how-to-space-a-font-1.png){.illu-thumb}
+![](../media/illu/how-to-space-a-font-1.png){.illu-thumb .illu-index}
 
 Spacing is where type design lives or dies.
 This 53-minute tutorial with Thomas Phinney is one of the clearest explanations of the

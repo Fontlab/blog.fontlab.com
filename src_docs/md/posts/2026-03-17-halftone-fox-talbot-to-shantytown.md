@@ -7,7 +7,7 @@ date:
   created: 2026-03-17
 slug: halftone-fox-talbot-to-shantytown
 ---
-![](../media/illu/halftone-fox-talbot-to-shantytown-1.png){.illu-thumb}
+![](../media/illu/halftone-fox-talbot-to-shantytown-1.png){.illu-thumb .illu-index}
 
 Photography arrived in the 1830s. Printing photographs in newspapers took another fifty
 years.

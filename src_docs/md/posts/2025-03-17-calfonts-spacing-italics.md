@@ -22,7 +22,7 @@ review:
   consolidate_with: "2024-09-23-calfonts-setup-shapes.md"
   notes: "No tags. CTA and tutorial URL now point at the current Calfonts tutorial index. Part of a two-post series with the setup post."
 ---
-![](../media/illu/calfonts-spacing-italics-1.png){.illu-thumb}
+![](../media/illu/calfonts-spacing-italics-1.png){.illu-thumb .illu-index}
 
 Once your letterforms are drawn, the work shifts to spacing, quality control, and — if
 you’re ambitious — building a family.

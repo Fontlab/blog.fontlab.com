@@ -22,7 +22,7 @@ review:
   consolidate_with: "2025-10-07-briem-drawing-italic.md"
   notes: "Substantially overlaps 2025-10-07-briem-drawing-italic on structure and pen angle; the Calfonts framing and verification section differentiate it enough to keep. CTA now points to the FontLab 8 Calfonts italics intro."
 ---
-![](../media/illu/calfonts-italics-2.png){.illu-thumb}
+![](../media/illu/calfonts-italics-1.png){.illu-thumb .illu-index}
 
 Italics are the part of a font family that most often gets shipped wrong — slanted
 romans, no cursive structure, lopsided ovals.

@@ -7,7 +7,7 @@ date:
   created: 2026-03-31
 slug: warhol-august-1962-silkscreen-pivot
 ---
-![](../media/illu/warhol-august-1962-silkscreen-pivot-1.png){.illu-thumb}
+![](../media/illu/warhol-august-1962-silkscreen-pivot-1.png){.illu-thumb .illu-index}
 
 Andy Warhol started screenprinting in August 1962. His explanation: “I wanted something
 stronger that gave more of an assembly line effect.”

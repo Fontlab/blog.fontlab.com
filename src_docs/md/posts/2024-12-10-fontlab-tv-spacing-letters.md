@@ -22,7 +22,7 @@ review:
   consolidate_with: "2024-07-09-white-space-does-the-real-drawing.md"
   notes: "Useful companion to the white-space editorial post but thin on its own. CTA URL is now fixed."
 ---
-![](../media/illu/fontlab-tv-spacing-letters-1.png){.illu-thumb}
+![](../media/illu/fontlab-tv-spacing-letters-1.png){.illu-thumb .illu-index}
 
 Spacing is what separates a font that exists from a font that reads.
 The FontLab TV spacing episode is the one to watch first — before kerning, before

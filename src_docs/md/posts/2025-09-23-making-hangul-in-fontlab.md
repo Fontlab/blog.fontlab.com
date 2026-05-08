@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Rewritten 2026-05-08 to focus on Kwon Gun-oh's Korean FontLab Type Design book from issues/draft-posts/404-deepseek.md."
 ---
-![](../media/illu/making-hangul-in-fontlab-1.png){.illu-thumb}
+![](../media/illu/making-hangul-in-fontlab-1.png){.illu-thumb .illu-index}
 
 In April 2025, a Korean book appeared with a modest title and a very specific promise:
 *폰트랩 타입 디자인* — *FontLab Type Design*. Its subtitle is even better: “FontLab and Hangul

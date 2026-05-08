@@ -7,7 +7,7 @@ date:
   created: 2026-04-07
 slug: sister-corita-kent-the-silkscreen-nun
 ---
-![](../media/illu/sister-corita-kent-the-silkscreen-nun-2.png){.illu-thumb}
+![](../media/illu/sister-corita-kent-the-silkscreen-nun-1.png){.illu-thumb .illu-index}
 
 Frances Kent took her students to see Warhol’s Campbell’s Soup show, came back to
 Immaculate Heart College, and turned supermarket packaging into devotional art.

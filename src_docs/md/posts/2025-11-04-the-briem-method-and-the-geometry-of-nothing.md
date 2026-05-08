@@ -23,7 +23,8 @@ review:
   consolidate_with: "2025-10-07-briem-drawing-italic.md, 2025-12-16-fontlab-tv-briem-on-brushes.md"
   notes: "Strong title and opening; Tschichold/Zapf historical framing is the best paragraph. Briem series needs cross-links; standalone it buries the spacing workflow under too much preamble."
 ---
-![](../media/illu/the-briem-method-and-the-geometry-of-nothing-2.png){.illu-thumb}
+![](../media/illu/the-briem-method-and-the-geometry-of-nothing-1.png){.illu-thumb
+.illu-index}
 
 The most difficult part of drawing a typeface is not the black ink.
 It is the white space.

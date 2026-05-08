@@ -22,7 +22,7 @@ review:
   consolidate_with: ""
   notes: "Best editorial voice in the set — the house/plumbing metaphor earns its place; title is already sentence case despite version number."
 ---
-![](../media/illu/the-heavy-machinery-of-fontlab-8-2.png){.illu-thumb}
+![](../media/illu/the-heavy-machinery-of-fontlab-8-1.png){.illu-thumb .illu-index}
 
 Drawing letters for a living turns out to be mostly an exercise in being perpetually
 disappointed by optical illusions.
