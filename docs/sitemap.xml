@@ -241,11 +241,6 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/2025/02/04/a-width-axis-is-not-a-squeeze-command/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
         <loc>https://blog.fontlab.com/2025/02/18/made-with-fontlab-patrick-griffin/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
@@ -271,7 +266,7 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/2025/05/13/variable-fonts-were-never-about-file-size/</loc>
+        <loc>https://blog.fontlab.com/2025/05/13/variable-fonts-file-size/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -332,11 +327,6 @@
     </url>
     <url>
         <loc>https://blog.fontlab.com/2025/08/05/a1-mincho-behind-shinkais-atmosphere/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/2025/08/12/fontlab-seen-from-six-languages/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -451,7 +441,7 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/2026/01/20/colour-font-wars-ten-years-on/</loc>
+        <loc>https://blog.fontlab.com/2026/01/20/color-font-wars-ten-years-on/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>

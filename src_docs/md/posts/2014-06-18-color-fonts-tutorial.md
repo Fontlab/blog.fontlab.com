@@ -21,6 +21,8 @@ review:
   consolidate_with: "2013-09-19 and 2013-10-10 and 2013-11-07 color font series if those exist in this blog"
   notes: "Strong opener and good historical framing. The 'watching it now' retrospective angle is the post's best hook — lean into it harder. Image thumbnail present and relevant."
 ---
+![](../media/illu/color-fonts-tutorial-3.png){.illu-thumb}
+
 Back in 2014, color fonts were a brand new frontier.
 This 103-minute tutorial with Adam Twardoch was one of the first deep dives into how to
 actually make them.
@@ -30,12 +32,12 @@ the mainstream.
 
 <!-- more -->
 
-[![Color fonts: the next big thing?](../media/fontlabtv-Yit1ZpClwAk.jpg)](https://www.youtube.com/watch?v=Yit1ZpClwAk)
-
 Traditional fonts render in a single color chosen by the app.
 Color fonts break that rule.
 They embed layered outlines, bitmaps, or SVG artwork directly in the font file.
 This lets a single glyph display multiple colors, gradients, or photographic detail.
+
+[![Color fonts: the next big thing?](../media/fontlabtv-Yit1ZpClwAk.jpg)](https://www.youtube.com/watch?v=Yit1ZpClwAk)
 
 This tutorial walks through the color font formats available at the time:
 

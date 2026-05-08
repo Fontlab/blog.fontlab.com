@@ -23,6 +23,8 @@ review:
   consolidate_with: ""
   notes: "Consolidated Type 1 rescue article with legal, technical, and FontLab 8 pipeline sections plus a live TransType CTA."
 ---
+![](../media/illu/transtype-4-2){.illu-thumb}
+
 Digital formats do not die of natural causes.
 They are smothered in their sleep by the companies that invented them.
 PostScript Type 1 went the same way, and TransType 4 has been the moving van ever since.

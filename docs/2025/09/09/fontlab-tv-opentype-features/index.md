@@ -1,6 +1,6 @@
 OpenType features are the part of font design where text becomes typography. The FontLab TV OpenType episode walks through the feature tags you will actually use, what they do at runtime, and how to write them without breaking anything else.
 
-> 📺 Watch: [OpenType features on FontLab TV](https://www.youtube.com/watch?v=DitUgjL6T5s)
+> 📺 Watch: [Auto OpenType features in FontLab 7 on FontLab TV](https://www.youtube.com/watch?v=ehkuzMvmjbY)
 
 ## What it covers
 

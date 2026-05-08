@@ -105,3 +105,6 @@ plugins:
 extra_css:
   - css/fontlab-chrome.css
   - css/extra.css
+
+extra_javascript:
+  - js/illu-link.js

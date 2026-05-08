@@ -22,12 +22,12 @@ review:
   consolidate_with: ""
   notes: "Sharp, well-argued editorial on spacing primacy. Frutiger quote needs a real citation URL; image placeholder must be resolved before publish."
 ---
+![](../media/illu/white-space-does-the-real-drawing-3.png){.illu-thumb}
+
 Letterforms are made of black shapes, but type is judged by the white around and inside
 them.
 
 <!-- more -->
-
-![Spacing and white space in FontLab 8](../media/fl8-8days-spacing.png)
 
 Adrian Frutiger’s old line — that the empty spaces are the crucial part of a typeface —
 remains the cleanest correction to beginner enthusiasm.

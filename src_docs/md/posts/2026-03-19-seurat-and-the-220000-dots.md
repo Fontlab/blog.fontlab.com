@@ -7,6 +7,8 @@ date:
   created: 2026-03-19
 slug: seurat-and-the-220000-dots
 ---
+![](../media/illu/seurat-and-the-220000-dots-1.png){.illu-thumb}
+
 Georges Seurat spent two years applying roughly 220,000 dots to a canvas.
 The painting works because the dots don’t blend on the canvas.
 They blend in your eye.

@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "Good cross-product framing (FL8 + Vexy Lines for motion); the multilingual design-system angle is underused. CTA URL is fixed."
 ---
+![](../media/illu/variable-fonts-in-motion-and-ui-1.png){.illu-thumb}
+
 Typography on screen used to mean “pick a weight and hope for the best.”
 Now the weight can follow the user.
 

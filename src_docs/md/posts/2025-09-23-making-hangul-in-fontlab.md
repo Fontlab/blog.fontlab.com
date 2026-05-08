@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "Rewritten 2026-05-08 to focus on Kwon Gun-oh's Korean FontLab Type Design book from issues/draft-posts/404-deepseek.md."
 ---
+![](../media/illu/making-hangul-in-fontlab-1.png){.illu-thumb}
+
 In April 2025, a Korean book appeared with a modest title and a very specific promise:
 *폰트랩 타입 디자인* — *FontLab Type Design*. Its subtitle is even better: “FontLab and Hangul
 2780, an enjoyable story.”
@@ -29,8 +31,6 @@ That is not just a manual.
 It is a map through one of the hardest jobs in type design.
 
 <!-- more -->
-
-<!-- image TBD -->
 
 Kwon Gun-oh (권군오) wrote the book for people who want to make Hangul fonts in FontLab.
 That sounds narrow until you remember what Hangul asks from a font editor.

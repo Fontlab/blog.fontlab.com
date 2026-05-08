@@ -7,6 +7,8 @@ date:
   created: 2026-05-07
 slug: from-bland-to-bold-with-vexy-lines
 ---
+![](../media/illu/from-bland-to-bold-with-vexy-lines-1.png){.illu-thumb}
+
 A photograph is not a vector.
 A sketch is not a vector.
 A scanned logo is definitely not a vector.

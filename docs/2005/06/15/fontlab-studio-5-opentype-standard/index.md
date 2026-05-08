@@ -1,5 +1,3 @@
-{ .illu-thumb }
-
 2005 was a pivotal year for Fontlab Ltd. The company shipped FontLab Studio 5, which became the dominant professional font editor for the next decade. FontLab also acquired Fontographer from Macromedia, reviving a tool that had been dormant since the mid-1990s.
 
 FontLab Studio 5 succeeded FontLab 4. The previous version introduced the first OpenType editing capability in December 2001. Studio 5 refined and extended that foundation. It quickly became the standard for professional type design and font production.

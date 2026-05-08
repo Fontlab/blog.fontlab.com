@@ -23,17 +23,19 @@ review:
   consolidate_with: "2014-03-15-brush-romans-webinar.md"
   notes: "Good biographical depth on Carter, specific enough to be valuable. The post describes the webinar but never says what Carter actually concluded or revealed — the 'so what' is missing. Could consolidate with brush-romans into a 'FontLab webinar series' roundup."
 ---
+![](../media/illu/matthew-carter-webinar-3.png){.illu-thumb}
+
 In February 2014, FontLab hosted a live webinar with Matthew Carter, a key figure in
 digital type design.
 
 <!-- more -->
 
-![Matthew Carter webinar recording thumbnail](../media/matthew-carter-webinar.jpg)
-
 Carter’s career covers the entire evolution of type technology.
 He started by cutting punches for metal type at the Enschedé foundry in the 1950s. He
 then moved through the phototypesetting era and into digital design.
 In 1981, he co-founded Bitstream, the first digital type foundry.
+
+![Matthew Carter webinar recording thumbnail](../media/matthew-carter-webinar.jpg)
 
 His typefaces shape how we read every day:
 

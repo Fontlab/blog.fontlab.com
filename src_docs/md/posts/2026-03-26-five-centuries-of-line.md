@@ -7,6 +7,8 @@ date:
   created: 2026-03-26
 slug: five-centuries-of-line
 ---
+![](../media/illu/five-centuries-of-line-3.png){.illu-thumb}
+
 A line can carry tone, texture, shadow, and emotion — and never once pretend to be a
 photograph. That is the whole argument of five centuries of printmaking, made with a
 burin, a graver, and eventually a stylus.

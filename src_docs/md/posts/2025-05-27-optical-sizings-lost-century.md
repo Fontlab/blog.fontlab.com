@@ -7,6 +7,8 @@ date:
   created: 2025-05-27
 slug: optical-sizings-lost-century
 ---
+![](../media/illu/optical-sizings-lost-century-2.png){.illu-thumb}
+
 William Caslon knew something in 1720 that digital type spent a century forgetting: a
 six-point letter is not a twelve-point letter made smaller.
 

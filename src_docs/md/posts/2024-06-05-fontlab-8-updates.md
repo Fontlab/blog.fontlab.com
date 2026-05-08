@@ -23,6 +23,8 @@ review:
   consolidate_with: ""
   notes: "Cleanest of the FL8.x release posts — specific feature names, concrete descriptions, no WordPress markup residue. Title uses wrong apostrophe in 'what's' — check encoding. Both closing links (fontlab.com and help.fontlab.com) are present and correct."
 ---
+![](../media/illu/fontlab-8-updates-1.png){.illu-thumb}
+
 Since the FontLab 8.2 release in August 2023, two major free updates have shipped: 8.3
 in December 2023 and 8.4 in June 2024. Together they add over 200 new features and
 improvements. Here is the short version.

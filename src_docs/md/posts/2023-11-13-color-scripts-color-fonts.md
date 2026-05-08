@@ -21,6 +21,8 @@ review:
   consolidate_with: ""
   notes: "Original consolidation targets were already merged elsewhere; this post stands as the reference for the four color OpenType formats and the Python/TypeRig scripting workflow."
 ---
+![](../media/illu/color-scripts-color-fonts-1.png){.illu-thumb}
+
 FontLab 8 supports every current color OpenType format and ships with Python 3.11
 scripting and the TypeRig library.
 This post covers the color workflow and scripting capabilities from the “Color” and

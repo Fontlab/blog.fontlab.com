@@ -7,6 +7,8 @@ date:
   created: 2025-06-10
 slug: woff-and-the-emmy-nobody-expected
 ---
+![](../media/illu/woff-and-the-emmy-nobody-expected-1.png){.illu-thumb}
+
 In 2021 the Television Academy gave the W3C a Technology & Engineering Emmy for font
 standardisation. One of the recipients was the CEO of FontLab Ltd — one of the few times
 a font tool company has won a piece of broadcast hardware named after a 1940s televised

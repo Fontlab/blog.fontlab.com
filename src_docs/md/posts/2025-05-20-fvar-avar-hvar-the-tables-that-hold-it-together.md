@@ -7,6 +7,8 @@ date:
   created: 2025-05-20
 slug: fvar-avar-hvar-the-tables-that-hold-it-together
 ---
+![](../media/illu/fvar-avar-hvar-the-tables-that-hold-it-together-2.png){.illu-thumb}
+
 A variable font isn’t a new file format.
 It’s an OpenType file with a few extra tables nailed on, and once you know what each one
 does, the whole thing stops being magic.

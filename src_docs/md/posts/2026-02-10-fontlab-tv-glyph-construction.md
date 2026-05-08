@@ -22,14 +22,14 @@ review:
   consolidate_with: ""
   notes: "Clean tutorial post, the 'why n' rationale is perfectly concise. CTA now points to the FontLab 8 drawing basics tutorial. Video references FontLab 7 while post implies FL8; clarify later."
 ---
+![](../media/illu/fontlab-tv-glyph-construction-3.png){.illu-thumb}
+
 The first letter is the hardest.
 The FontLab TV glyph construction episode is a calm, deliberate walkthrough of drawing
 one letter — `n` — from a blank glyph cell to a finished, point-clean contour you can
 build a font around.
 
 <!-- more -->
-
-![FontLab TV glyph construction](../media/fontlab-tv1.png)
 
 > 📺 Watch:
 > [Assembling glyphs in FontLab 7, Part 1](https://www.youtube.com/watch?v=McFex__HSfk)

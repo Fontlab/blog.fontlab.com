@@ -21,13 +21,13 @@ review:
   consolidate_with: ""
   notes: "Straight announcement post — factual, well-structured, the curriculum overview is genuinely useful. Reads slightly like a press release; could use one sentence of editorial opinion to lift it."
 ---
+![](../media/illu/fontlab-tv-variable-font-course-1.png){.illu-thumb}
+
 FontLab TV has published a 50-hour video course on variable font design, organized into
 25 playlists. It runs from absolute fundamentals — coordinates, contours, metrics —
 through production, hinting, export, and font business basics.
 
 <!-- more -->
-
-![FontLab TV course banner](../media/fontlabtv-banner.png)
 
 The course was created and directed by Alexander Kapusta
 ([@YourFontFetish](https://www.youtube.com/@YourFontFetish)) and co-produced by FontLab
@@ -43,6 +43,8 @@ Ltd. All content is on YouTube.
 - Production: font testing, hinting for screen and print, export configuration, quality
   auditing
 - Business: licensing structures, copyright basics, revenue models
+
+![FontLab TV course banner](../media/fontlabtv-banner.png)
 
 **Who it is for.** The course is structured sequentially, but individual playlists are
 self-contained enough to work as reference material for designers with some type design

@@ -22,6 +22,8 @@ review:
   consolidate_with: "2013-12-15-transtype-4.md"
   notes: "Best practical-advice post in the set — clear urgency (Adobe deadline), honest licensing caveat, specific technical caveats (256-glyph limit, hinting). The 'two decades of real value' closer lands well. Inline link to fontlab.com/font-converter/transtype/ satisfies CTA."
 ---
+![](../media/illu/rescue-postscript-type1-transtype-1.png){.illu-thumb}
+
 PostScript Type 1 fonts are on their way out.
 Adobe is ending Type 1 support in Creative Cloud applications in early 2023, and Apple
 has signalled the same direction in macOS. If you have a library of Type 1 fonts — and

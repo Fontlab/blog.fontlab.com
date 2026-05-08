@@ -22,6 +22,8 @@ review:
   consolidate_with: "2024-07-09-white-space-does-the-real-drawing.md"
   notes: "Useful companion to the white-space editorial post but thin on its own. CTA URL is now fixed."
 ---
+![](../media/illu/fontlab-tv-spacing-letters-1.png){.illu-thumb}
+
 Spacing is what separates a font that exists from a font that reads.
 The FontLab TV spacing episode is the one to watch first — before kerning, before
 OpenType, before anything else that can mask bad sidebearings.
@@ -32,7 +34,8 @@ OpenType, before anything else that can mask bad sidebearings.
 
 ![FontLab TV — spacing letters from scratch](../media/fontlab-tv2.png)
 
-> 📺 Watch: [Spacing letters on FontLab TV](https://fontlab.tv/)
+> 📺 Watch:
+> [Basics of spacing on FontLab TV](https://www.youtube.com/watch?v=cmDocLGmw4A)
 
 ## What it covers
 

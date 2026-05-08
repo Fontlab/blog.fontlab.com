@@ -7,6 +7,8 @@ date:
   created: 2025-07-29
 slug: hiragino-drawn-by-a-tiny-tokyo-studio
 ---
+![](../media/illu/hiragino-drawn-by-a-tiny-tokyo-studio-2.png){.illu-thumb}
+
 The Japanese font on your iPhone has been drawn since 1989 by a studio of three people.
 
 <!-- more -->

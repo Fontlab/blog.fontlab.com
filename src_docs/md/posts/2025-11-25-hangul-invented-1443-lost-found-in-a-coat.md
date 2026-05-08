@@ -7,6 +7,8 @@ date:
   created: 2025-11-25
 slug: hangul-invented-1443-lost-found-in-a-coat
 ---
+![](../media/illu/hangul-invented-1443-lost-found-in-a-coat-3.png){.illu-thumb}
+
 King Sejong personally invented the Korean alphabet in 1443. Its instruction manual was
 lost for four centuries, then carried through the Korean War inside a man’s coat.
 

@@ -7,6 +7,8 @@ date:
   created: 2025-10-21
 slug: justfont-and-taiwans-crowdfunded-typeface
 ---
+![](../media/illu/justfont-and-taiwans-crowdfunded-typeface-1.png){.illu-thumb}
+
 NT$1.5 million in eighty minutes.
 NT$26 million in the end.
 A typeface named after a tea proved that East Asian type had an audience willing to pay

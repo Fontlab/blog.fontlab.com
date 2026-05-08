@@ -21,6 +21,8 @@ review:
   consolidate_with: "2023-09-04-briem-decisions.md, 2024-04-08-briem-bold-italic-spacing.md"
   notes: "Distinctive voice and genuine editorial value — Briem's direct prose is a sharp contrast to product-launch boilerplate. Three Briem posts across the blog; consider consolidating into one 'Briem on type design' long-read or a tagged series."
 ---
+![](../media/illu/briem-foundations-1.png){.illu-thumb}
+
 Gunnlaugur SE Briem taught type design at the Royal Academy of Fine Arts in Copenhagen
 in 1996. His notes from that course — precise, practical, free of mystification — have
 been republished with permission on the FontLab documentation site.

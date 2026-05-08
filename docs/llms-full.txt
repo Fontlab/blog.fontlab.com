@@ -43,8 +43,6 @@ Our current product line covers the full range of font work. FontLab 8 is the co
 Type designers around the world have used our tools to create fonts you encounter daily: Adelle, Calibri, Candara, Consolas, Helvetica World, Myriad Pro, Palatino nova, PT Sans, Zapfino Extra, and tens of thousands more. We are a small company. We take that as a point of pride.
 # Blog posts
 
-{ .illu-thumb }
-
 2005 was a pivotal year for Fontlab Ltd. The company shipped FontLab Studio 5, which became the dominant professional font editor for the next decade. FontLab also acquired Fontographer from Macromedia, reviving a tool that had been dormant since the mid-1990s.
 
 FontLab Studio 5 succeeded FontLab 4. The previous version introduced the first OpenType editing capability in December 2001. Studio 5 refined and extended that foundation. It quickly became the standard for professional type design and font production.
@@ -77,8 +75,6 @@ Here’s what it does:
 This release replaced TransType 3. The older version handled basic cross-platform format conversion but predated the OpenType and web font era.
 
 [Read more →](https://help.fontlab.com/transtype-4/)
-
-{ .illu-thumb }
 
 FontLab Studio 5.2.1 for Windows shipped in December 2013. It builds on the 5.2 foundation with new tools and hundreds of bug fixes.
 
@@ -1371,7 +1367,7 @@ Type design is an exercise in engineering as much as in art. The drawing is the 
 
 Spacing is what separates a font that exists from a font that reads. The FontLab TV spacing episode is the one to watch first — before kerning, before OpenType, before anything else that can mask bad sidebearings.
 
-> 📺 Watch: [Spacing letters on FontLab TV](https://fontlab.tv/)
+> 📺 Watch: [Basics of spacing on FontLab TV](https://www.youtube.com/watch?v=cmDocLGmw4A)
 
 ## What it covers
 
@@ -1450,7 +1446,7 @@ OpenType features are user experience for text. They are how a font behaves unde
 
 If you are still drawing every accented letter by hand, this is the episode that retires that habit. Anchors plus components mean you draw `a` and `acute` once, and FontLab assembles `aacute`, `acircumflex`, `agrave`, and the other 700-odd accented forms for you.
 
-> 📺 Watch: [Anchors and components on FontLab TV](https://fontlab.tv/)
+> 📺 Watch: [Auto layers — composite glyphs on FontLab TV](https://www.youtube.com/watch?v=l36FY1YKAek)
 
 ## What it covers
 
@@ -1467,27 +1463,6 @@ If you are still drawing every accented letter by hand, this is the episode that
 Most languages that use Latin script need a lot of accented glyphs. Anchors and components are how you ship them without losing your weekend. They are also what makes Vietnamese, Polish, Czech, and Eastern European Latin coverage achievable for solo designers.
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
-
-Read enough writing on variable fonts in German, French, Spanish, Italian, Portuguese, Polish, Russian, Chinese, Japanese, and Korean and the cliché falls apart. Variable fonts are not a flashy weight slider.
-
-Across all those languages, serious sources keep returning to the same point: variable fonts package multiple styles or axes into one OpenType file, help with responsive typography, and — more importantly — give designers finer control over width, slant, optical size, and motion. The details differ. The pattern is strikingly consistent.
-
-A justfont article from Taipei makes the case better than half the English-language hype ever did. The image is three lines of the same word at the same width target. The top line is the original. The lower-left is brute-force horizontal squeezing. The lower-right is the designer’s condensed version. Same characters, same width, very different result. The violent compression disturbs stroke logic and texture; the designed version keeps the character’s voice. That is the article. That is the whole article.
-
-This is what a width axis is for. It is not a CSS transform that distorts strokes. It is a separate, designed cut — narrow enough to fit, drawn carefully enough that the rhythm survives the trip. FontLab 8 makes this concrete: you draw the Light Condensed and the Light Wide as masters, the engine interpolates the in-between widths, and you check the intermediate decisions live.
-
-Underware’s writing on variable fonts is still the useful antidote to timid thinking. Their argument is that the format gets interesting when you stop treating old categories as sacred — time can be an axis, motion can be an axis, contrast can be an axis. Korean design-system writing around Roboto Flex makes a similar point: fine-grained parameters are valuable because they let a designer build a better hierarchy, not because they make a software demo look busy.
-
-A width axis matters because somebody drew and checked the intermediate decisions. Anything else is a transform.
-
-## References
-
-- [Tearfont and variable fonts — justfont](https://blog.justfont.com/2024/07/tearfont_variable-fonts/)
-- [Very-able fonts — Underware](https://www.underware.nl/blog/2018/06/very-able-fonts-com/)
-- [Thinking beyond the static — Type Network](https://typenetwork.com/articles/thinking-beyond-the-static)
-- [Variable fonts — web.dev](https://web.dev/articles/variable-fonts)
-
-[Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 
 Bananas is a casual brush face that is mostly an excuse to grin while you set it. Ronaldson Pro is a 19th-century revival that took years to draw and exists because Patrick Griffin would not let the original die. Both are Canada Type. Both came out of FontLab.
 
@@ -1558,18 +1533,17 @@ Dave Lawrence’s full [Calfonts tutorial series](https://help.fontlab.com/fontl
 
 Color fonts have stopped being a novelty and started being a deliverable — emoji, branded display faces, multi-layered display work. The FontLab TV color font episode covers the four formats you actually have to think about and which to ship for which target.
 
-> 📺 Watch: [Color fonts on FontLab TV](https://fontlab.tv/)
+> 📺 Watch: [Color fonts: the next big thing? on FontLab TV](https://www.youtube.com/watch?v=Yit1ZpClwAk)
 
 ## What it covers
 
 **The four formats.**
 
-- **COLR/CPAL v0** — layered solid-color glyphs. Tiny file size, broad support. The default for branded display work.
-- **COLR v1** — gradients, transforms, paint graphs. The new hotness. Increasing browser and OS support.
-- **SVG-in-OpenType** — full SVG glyphs. Maximum flexibility, larger files.
-- **CBDT/sbix** — bitmap glyph tables. Used by Apple emoji and similar.
+- **OpenType+COLR v0** — layered solid-color glyphs. Tiny file size, broad support. The default for branded display work. (What’s not covered is **COLR v1**: gradients, transforms, paint graphs. The new hotness. Increasing browser and OS support.)
+- **OpenType+SVG** — full SVG glyphs. Maximum flexibility, larger files.
+- **OpenType+sbix** and **OpenType+CBDT** — bitmap glyph tables. Used by Apple emoji and similar.
 
-**The episode walks through which to use when.** Layered (COLR v0) is the safe default. SVG when you need raster effects or photographic content. COLR v1 when you can require modern renderers.
+**The episode walks through which to use when.** Layered (COLR v0) is the safe default. COLR v1 and SVG when you need gradients (COLR v1 works in Chrome-based browsers, SVG works in Safari, Firefox, in macOS and in Adobe apps).
 
 **Drawing layered glyphs.** FontLab handles the layered approach via element-based glyph composition: each color in the final glyph is a separate element with its own fill. The video shows the workflow for building, previewing, and exporting.
 
@@ -1579,7 +1553,7 @@ Color fonts have stopped being a novelty and started being a deliverable — emo
 
 ## Why it matters
 
-Color fonts are now production-grade for display, branding, and app-icon contexts — not just emoji. This episode is the fastest way from “I have a layered illustration” to “I have a working color OTF that ships.”
+Color fonts are now production-grade for display, branding, and app-icon contexts — not just emoji. This episode is the fastest way from “I have a layered illustration” to “I have a working color OpenType that ships.”
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
 
@@ -1632,64 +1606,61 @@ The way Piekos works is the case for FontLab in genre work that nobody writes lo
 
 [Browse Blambot →](https://blambot.com/)
 
-The marketing for variable fonts has spent a decade promising smaller downloads. The smaller downloads are real. They are also the least interesting thing about the format.
+The fashionable take is that variable fonts are not about file size. The fashionable take is wrong, or at least wrong by half.
 
-## Yes, the page weight drops
+Variable fonts are absolutely about file size. They are about it the same way airliners are about fuel economy: the design of the thing only makes sense once you accept the constraint. The constraint, on every device that fits in a pocket or a wrist, is bytes.
 
-We used to ship eighteen separate font files just to make a website look decent. It was a dark time. Now you ship one, and the browser handles the math. CSS does the rest:
+## Latin makes file size look optional
 
-```css
-@font-face {
-  font-family: 'Roboto Flex';
-  src: url('roboto-flex.woff2') format('woff2-variations');
-  font-weight: 100 1000;
-  font-stretch: 25% 151%;
-}
-```
+If your typography lives on a desktop browser, in English, with maybe Spanish or German in the same family, you can ignore weight. A static Roboto family is a few hundred kilobytes. The variable version saves you something, but the savings disappear into the megabyte page weight that already shipped a hero video and a JavaScript framework. The file-size argument feels like accountancy.
 
-You write `font-variation-settings: 'wght' 700, 'wdth' 85;` and the text responds instantly. No flicker. Layouts stay put. Performance wins twice — smaller payload, smoother animation. Google’s Roboto Flex specimen shows the full range live; Monotype rebuilt FF Meta as a variable font and replaced a small library with a single file.
+This is the part of the room where the “never about file size” line was written. It is true for that room. That room is not the world.
 
-The Google Fonts and web.dev articles have repeated this story for years and they are correct. They are also where the conversation usually stops, which is a shame, because the file-size argument is the boring half.
+## The world is multilingual and the device is small
 
-## The maths underneath, briefly
+A modern phone or smartwatch has to render text in every language the user might touch. That means at minimum:
 
-For five hundred years, making a letter bolder meant casting a new chunk of lead. Digital typography clung to the habit for decades. You wanted bold italic, you bought a separate file. Then in 2016, Apple, Adobe, Google, and Microsoft agreed on OpenType Font Variations, and a whole family started fitting inside one file.
+- **Latin** with diacritics for European languages.
+- **Cyrillic** and **Greek** for Eastern Europe and the Balkans.
+- **Arabic** and **Hebrew** for right-to-left readers.
+- **Devanagari**, **Bengali**, **Tamil**, **Gujarati**, **Telugu**, **Kannada**, **Malayalam**, **Gurmukhi** — every Indic script the OS supports.
+- **Thai**, **Lao**, **Khmer**, **Burmese**.
+- **Chinese** (Simplified and Traditional), **Japanese**, **Korean**.
+- **Emoji**, which is its own font, and a fat one.
 
-A variable font stores a default master design plus a dense set of mathematical instructions for stretching and squishing it along continuous axes. Two axes — weight and width — define a square with four corners: Light Condensed, Light Wide, Black Condensed, Black Wide. The renderer interpolates any point inside the square on demand. Add an axis and you get a cube. Add another and your design lives in a hyperspace nobody can draw on paper, but the file does not care.
+Each of these arrives as a separate font file because they have to. Source Han Sans (the joint Adobe/Google CJK family that ships as Noto Sans CJK on Android) is a hundred-plus megabytes across its weights. Noto Sans Devanagari is roughly half a megabyte per weight; multiply by seven weights and you have a few megabytes for one script. Repeat for ten scripts. Now do it on a watch with a strict app-storage cap and a need to keep several weights live so the UI can render hierarchy without falling back to bitmap.
 
-Linear interpolation has limits. Letters do not get bolder at a constant rate. If you interpolate straight from a hairline to an ultra-black, the middle weights look anaemic or muddy. The fix is intermediate masters: a corrected drawing at, say, the 700 weight position, which warps the interpolation path through that anchor. Sometimes a glyph needs to change shape entirely — a single-storey `g` past weight 850 — and the format handles that through the `rvrn` feature.
+A smartphone OS bundles fonts for billions of users it has not met yet. A smartwatch syncs fonts down a Bluetooth pipe to a battery-bound 32 GB. Web platforms in India and Southeast Asia serve users on metered data plans where every megabyte is a real cost. The file-size argument is not vanity in those rooms. It is the entire reason the format exists.
 
-## Continuous control changes the design itself
+## What variability actually buys
 
-A static family forces the typesetter to choose between Regular and Bold, with nothing in between. A variable family lets the typesetter pick 525 — between Medium and Semibold — because that is the weight the column actually wants. UI teams use this for hierarchy. Editorial teams use it for colour balance on a tight page. Motion designers use it because the same axis that controls weight in CSS controls the keyframe in After Effects.
+OpenType Font Variations, agreed in 2016 by Apple, Adobe, Google, and Microsoft, lets a single file describe a continuous design space — weight, width, optical size, custom axes — instead of a discrete grid of static cuts. The renderer interpolates the exact instance the UI asks for.
 
-Underware’s argument from 2018 still holds: variable fonts get interesting when you stop treating old categories as sacred. Time can be an axis. Motion can be an axis. The interface itself can become part of the typeface experience. A weight slider is the start, not the destination.
+For Latin that means going from eighteen files to one. For CJK it means a single ~25 MB variable family replacing a ~125 MB static one across weights. For an Indic typeface it means one weight-range file in place of seven static weights. The savings compound across scripts and across devices, and they compound exactly where bytes are expensive: in flash storage on the watch, in OTA update windows on the phone, in cellular data on the train, in cache budgets on the next screen.
 
-## The argument crosses every language
+## And then, also, the control
 
-The same case for variable fonts has been made, in slightly different accents, in Polish, Spanish, Chinese, Japanese, and Korean tutorials over the past few years. They all converge. Chinese and Japanese guides explain variation axes as levers for weight, width, slant, and optical size, noting that axes can be continuous ranges or simple on–off switches. Polish and Spanish articles speak the language of practice: fewer HTTP requests, smoother responsive type scales, the comfort of adjusting weight in fine steps instead of jumping between Regular and Bold. Korean writing goes further, treating variable fonts as part of design systems — using Roboto Flex and similar families to tune stroke width, counter size, and contrast for specific screen densities and hierarchy levels.
+Once you stop paying for weight in megabytes, you start using it as a continuous parameter. UI teams pick weight 525 because that is what the column wants. Motion designers animate the same axis that makes a glyph bolder to make it land harder. Editorial teams adjust the colour balance of a paragraph by a slider rather than a dropdown. Polish, Spanish, Chinese, Japanese, and Korean tutorials over the past few years have all converged on this practical reading: weight, width, slant, and optical size become design tokens, not file picks.
 
-A Spanish primer on Runebook puts it bluntly: if your OS and browser are even vaguely current, your bottleneck is no longer technology. It is whether your typeface is ready.
+This is the half of the variable-font story most people lead with, because it sounds more interesting than logistics. It is also strictly downstream of the file-size win. You only get to play with the slider on the wrist after the bytes have already left the data centre.
 
 ## What the production tool has to do
 
-Building these files needs capable software. FontLab 8 treats the variation space as a primary unit. Open a Light and a Black as masters; the engine establishes the axis automatically. Add an intermediate master where linear interpolation muddies the middle. Tag a single-storey `g` to swap in past weight 850 via `rvrn`. Match Moves propagates a node adjustment across all visible masters at once — often the difference between meeting and missing a deadline on a serious family.
+Building these files needs capable software. FontLab 8 treats the variation space as the primary unit. Open a Light and a Black master and the engine establishes the axis. Add an intermediate master where linear interpolation muddies the middle weights. Tag a single-storey `g` to swap in past weight 850 via `rvrn`. Match Moves propagates a node adjustment across all visible masters at once — often the difference between shipping and missing a deadline on a serious multi-script family.
 
-External reviewers have flagged FontLab 8 as a complete variable-font production environment on macOS and Windows, closing the long-standing gap for Windows-based designers who needed robust interpolation, OpenType features, and export in one app. In practice, that means you can draw a Light and a Black, interpolate the in-between masters, define `wght`, `wdth`, and custom axes, and export one file that speaks fluently to a Korean news site, a Japanese app UI, and a Polish cultural portal. All those multilingual tutorials stop being aspirational. They describe what you can ship today.
+External reviewers flagged FontLab 8 as a complete variable-font production environment on macOS and Windows: interpolation, OpenType features, multi-axis export, all in one app. That is the back end behind every smartphone keyboard that does not stutter when you switch input language.
 
 ## The point
 
-Look at Roboto Flex or IBM Plex Sans Variable. A single file acts as a complete typography system. UX teams get granular control without licensing a new weight every time a client changes their mind. Designers get a continuum instead of a ladder.
-
-The savings on bandwidth are nice. The control is the point.
+The “never about file size” line was written by people whose typography never had to fly economy. The smaller files are not a side effect. They are the reason the format shipped, the reason it shipped joint among the four platforms, and the reason your phone can render Latin, Devanagari, and Hangul without sounding the low-storage warning. The continuous control is the lovely consequence. The bytes are the load-bearing wall.
 
 ## References
 
 - [Variable fonts on the web — web.dev](https://web.dev/articles/variable-fonts)
 - [Variable fonts — MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Fonts/Variable_fonts)
 - [OpenType Font Variations — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
-- [Very-able fonts — Underware](https://www.underware.nl/blog/2018/06/very-able-fonts-com/)
-- [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
+- [Source Han Sans / Noto Sans CJK — GitHub](https://github.com/adobe-fonts/source-han-sans)
+- [Noto fonts](https://fonts.google.com/noto)
 - [Migrating to variable fonts — Google Codelabs](https://codelabs.developers.google.com/migrating-variable-fonts)
 
 [Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
@@ -1818,7 +1789,7 @@ The reason this matters for a font tool is that emoji forced the colour-font que
 
 Design space is the part of variable font work that decides whether your font feels good or merely works. The FontLab TV design space episode is the conceptual foundation for everything you do with masters, axes, and instances.
 
-> 📺 Watch: [Design space basics on FontLab TV](https://fontlab.tv/)
+> 📺 Watch: [Design space axes & multiple masters on FontLab TV](https://www.youtube.com/watch?v=AijDkf3DBk8)
 
 ## What it covers
 
@@ -1888,8 +1859,6 @@ justfont, Taiwan’s type foundry, has stated the resolution as plainly as it de
 > 「明體跟宋體都一樣，無論稱呼哪一個，意義是一樣的」 — “Mingti and Songti are the same — whichever name you use, the meaning is identical.”
 
 For a FontLab user designing a CJK serif, the practical implication is that the *style* is settled across all three names, but the local conventions are not. Preferred radical proportions, stroke contrast, where the brush memory shows — these draw differently in Tokyo, Taipei, and Beijing. Three names, one style, three sets of subtly different strokes.
-
-That is probably a feature.
 
 ## References
 
@@ -2025,29 +1994,6 @@ Sumi-damari in a film title that earned over $380 million worldwide is the kind 
 
 [Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
-If you read about FontLab only in English, you get one picture. If you read about it in Polish, Spanish, Japanese, Korean, Chinese, and German, you get six.
-
-The German trade press tends to focus on production rigour. Power Brush and the Lever get praise as tools that finally let calligraphic designers experiment fluidly without losing the precision the format demands. There is an emphasis on hinting, on Microsoft ClearType preview, on the boring engineering parts that keep a font from breaking in Word.
-
-Spanish-language reviews lean toward the variable-fonts story. A Runebook primer puts it bluntly: the bottleneck is no longer technology, it is whether your typeface is ready. Pixartprinting’s Italian and Spanish blog posts agree: variable fonts are not a feature you tick on the brief, they are a discipline.
-
-Japanese coverage — `ics.media`, `note.com`, the JustFont team in Taiwan — is closer to typography theory. The width axis comparison from JustFont, showing brute-force squeezing next to a designed condensed, says more about variable fonts than most English articles ever will. There is a strong Hanzi presence too: ATypI 2020 talks on digital revivals of Chinese Buddhist manuscripts and the integration of Chinese cultural motifs into modern Hanzi design.
-
-Korean writing leans on design-system framing. Roboto Flex appears constantly. So do discussions of slant, optical clarity, and fine-grained parameters as design-system tokens. The argument is that a variable font is not a typography feature; it is a tool for hierarchy.
-
-Polish coverage from `typoteka.pl`, `grafmag.pl`, and `designpractice.pl` is more historical. Variable fonts are placed in the long arc from screen typography to the modern web. Tools like FontLab and TransType show up as preservation infrastructure as much as production tools.
-
-The composite picture is more useful than any single regional view. FontLab is a calligraphy tool, a variable-font factory, a Cyrillic-and-CJK-capable production environment, a hinting engine, and a preservation utility. Different languages emphasise different parts. The software has to do all of it.
-
-## References
-
-- [So funktionieren Variable Fonts — Page Online](https://page-online.de/typografie/so-funktionieren-variable-fonts-in-der-praxis/)
-- [JustFont on variable fonts](https://blog.justfont.com/2024/07/tearfont_variable-fonts/)
-- [Variable fonts and screen typography — Typoteka](https://typoteka.pl/en/period/variable-fonts-and-screen-typography)
-- [Roboto Flex in design systems — wdnote](https://wdnote.tistory.com/197)
-
-[Read more →](https://help.fontlab.com/fontlab/8/manual/)
-
 [Graduate](https://etunni.github.io/Graduate-Variable-Font/) is the kind of variable font that makes the case for the format without having to argue. Slab to sans, light to black, all in one file. Eduardo Tunni drew it in FontLab.
 
 Tunni’s foundry [Tipo](https://www.tipo.net.ar/) sits in Buenos Aires. He has been drawing type long enough to have his name attached to an editor feature in basically every modern editor — Tunni Lines, the technique for adjusting Bézier curve tension by handle ratios, named after his work and built into FontLab’s drawing engine. So when Tunni talks about FontLab, he’s talking about software that has a piece of his fingerprint baked into it.
@@ -2132,7 +2078,7 @@ A font that respects six scripts respects the readers of those scripts. The tool
 
 OpenType features are the part of font design where text becomes typography. The FontLab TV OpenType episode walks through the feature tags you will actually use, what they do at runtime, and how to write them without breaking anything else.
 
-> 📺 Watch: [OpenType features on FontLab TV](https://www.youtube.com/watch?v=DitUgjL6T5s)
+> 📺 Watch: [Auto OpenType features in FontLab 7 on FontLab TV](https://www.youtube.com/watch?v=ehkuzMvmjbY)
 
 ## What it covers
 
@@ -2619,7 +2565,7 @@ The course was created and directed by Alexander Kapusta ([@YourFontFetish](http
 
 FontLab 8 is used throughout. At 50 hours, this is one of the more comprehensive publicly available type design curricula — comparable in scope to paid courses from dedicated type design programs.
 
-In 2013, four companies each decided the same thing: OpenType needed colour. They each decided it differently.
+In 2013, four companies each decided the same thing: OpenType needed color. They each decided it differently.
 
 Apple shipped `sbix` — PNG bitmaps locked to a pixel size, the format behind the original iPhone emoji. Google shipped `CBDT/CBLC` — also bitmaps, also PNG, but with size-table machinery borrowed from the old monochrome strike system. Microsoft and Adobe went vector, in opposite directions: Microsoft proposed `COLR`, a palette of layered outlines; Adobe and Mozilla proposed `SVG-in-OpenType`, full SVG documents embedded inside the font.
 
@@ -2635,7 +2581,7 @@ Roel Nieskens, who had been among OT-SVG’s advocates, put it plainly:
 
 The thing the “COLRv1 won” headline got wrong is that OT-SVG didn’t lose. It just lost *that fight*. Safari still renders it. Adobe Photoshop, Illustrator, and InDesign still author with it. The split as of late 2026 is COLRv1 across Chromium and Firefox, OT-SVG across Safari and Adobe’s apps. One-format-fits-all remains aspirational.
 
-For anyone designing a colour font today, the practical conclusion is unglamorous: know your target. A web display face bound for Chromium browsers should start with COLRv1 and a monochrome fallback. If the same face needs to work in Adobe apps or on Safari, the SVG table still earns its place. The four-format argument from 2013 did not resolve into a winner. It resolved into a division of labour.
+For anyone designing a color font today, the practical conclusion is unglamorous: know your target. A web display face bound for Chromium browsers should start with COLRv1 and a monochrome fallback. If the same face needs to work in Adobe apps or on Safari, the SVG table still earns its place. The four-format argument from 2013 did not resolve into a winner. It resolved into a division of labour.
 
 ## References
 
@@ -3156,9 +3102,9 @@ Hedcuts are © Dow Jones. Link to the National Portrait Gallery collection; do n
 
 [Read more →](https://vexy.art/lines/)
 
-In 2013, color OpenType looked like a standards argument with four exits. Apple had `sbix`. Google had `CBDT/CBLC`. Microsoft had `COLR/CPAL`. Adobe and Mozilla had SVG-in-OpenType. The question then was which proposal would win.
+In 2013, color OpenType looked like a standards argument with four exits. Apple had `sbix`. Google had `CBDT/CBLC`. Microsoft had `COLR/CPAL`. Adobe and Mozilla had SVG-in-OpenType. The question then was which proposal would win. In 2026, the answer is less tidy and more useful: they all became real OpenType color font formats, but they did not become equally useful everywhere.
 
-In 2026, the answer is less tidy and more useful: they all became real OpenType color font formats, but they did not become equally useful everywhere. For scalable color display type on the web, `COLR` v1 is now the format to understand first. For Apple and many design-app workflows, SVG and bitmap flavors still matter. For emoji and legacy platform compatibility, `sbix` and `CBDT/CBLC` are still in the room, looking faintly pleased with themselves.
+For scalable color display type on the web, `COLR` v1 is now the format to understand first. For Apple and many design-app workflows, SVG and bitmap flavors still matter. For emoji and legacy platform compatibility, `sbix` and `CBDT/CBLC` are still in the room, looking faintly pleased with themselves.
 
 ## What actually shipped
 
@@ -3248,11 +3194,9 @@ Use `COLR` v1 when you need compact, scalable, palette-aware, variable-capable c
 
 The dream of one color-font flavor everywhere is still premature. The good news is that the source workflow no longer has to be premature. FontLab 8 lets the designer work once, then ship the color formats the world actually uses.
 
-## Fact-check trail
+## References
 
-The main claims above were checked against three independent kinds of source: the OpenType specification, browser or rendering-engine documentation, and vendor application documentation.
-
-| Claim group                                                        | Sources checked                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Item                                                               | Sources                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `COLR` v0/v1, `CPAL`, gradients, paint graphs and COLRv1 variation | [OpenType `COLR`](https://learn.microsoft.com/en-us/typography/opentype/spec/colr), [OpenType `CPAL`](https://learn.microsoft.com/en-us/typography/opentype/spec/cpal), [Chrome COLRv1 notes](https://developer.chrome.com/blog/colrv1-fonts), [FontLab 8 formats](https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/)                                                                                                                                                                                                                                                                                                       |
 | SVG-in-OpenType capabilities and limits                            | [OpenType `SVG`](https://learn.microsoft.com/en-us/typography/opentype/spec/svg), [OpenType `CPAL` relation to SVG](https://learn.microsoft.com/en-us/typography/opentype/spec/cpal), [Adobe OpenType-SVG help](https://helpx.adobe.com/fonts/using/ot-svg-color-fonts.html)                                                                                                                                                                                                                                                                                                                                                                 |

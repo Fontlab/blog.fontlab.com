@@ -19,6 +19,8 @@ review:
   consolidate_with: ""
   notes: "Merged 2017-12-08-introducing-fontlab-vi.md video embed into this canonical launch post."
 ---
+![](../media/illu/_dtl-otmaster-7-9-available-1.png){.illu-thumb}
+
 # FontLab VI is here
 
 FontLab Studio 5 was a workhorse.

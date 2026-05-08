@@ -7,6 +7,8 @@ date:
   created: 2025-09-30
 slug: source-han-sans-the-opentype-ceiling
 ---
+![](../media/illu/source-han-sans-the-opentype-ceiling-3.png){.illu-thumb}
+
 Seven weights. Four regional variants.
 65,535 glyphs each — the maximum an OpenType font can hold.
 Adobe and Google hit the ceiling on purpose.

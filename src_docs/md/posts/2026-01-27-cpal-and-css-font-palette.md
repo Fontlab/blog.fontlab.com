@@ -7,6 +7,8 @@ date:
   created: 2026-01-27
 slug: cpal-and-css-font-palette
 ---
+![](../media/illu/cpal-and-css-font-palette-3.png){.illu-thumb}
+
 A colour font with one palette is a coloured drawing.
 A colour font with thirty palettes is a theme system.
 The difference is `CPAL`, and most people walk right past it.

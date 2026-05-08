@@ -21,6 +21,8 @@ review:
   consolidate_with: "2018-11-22-dtl-otmaster-7-9-available.md"
   notes: "Three unrelated tools crammed into one post — a common 'December release dump' pattern. Worth splitting or consolidating each tool thread across its own posts. The vfb2ufo bullet is genuinely useful context for UFO-workflow readers."
 ---
+![](../media/illu/otmaster-5-vfb2ufo-fontlab-pad-11-3.png){.illu-thumb}
+
 December 2014 brought a major update to DTL OTMaster, plus two new free tools.
 We released a command-line UFO converter and an updated color font typesetter.
 

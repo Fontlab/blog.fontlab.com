@@ -7,6 +7,8 @@ date:
   created: 2026-04-28
 slug: the-hedcut-at-45
 ---
+![](../media/illu/the-hedcut-at-45-1.png){.illu-thumb}
+
 In 1979, a *Wall Street Journal* illustrator named Kevin Sprouls introduced a stipple
 portrait to the paper.
 Forty-five years later, the same form is still running on the front page.

@@ -23,6 +23,8 @@ review:
   consolidate_with: "2025-07-22-the-long-awkward-adolescence-of-color-fonts.md"
   notes: "Good four-format overview but thin; pairs with the color history post; FontLab TV link goes to homepage not episode."
 ---
+![](../media/illu/fontlab-tv-color-fonts-2.png){.illu-thumb}
+
 Color fonts have stopped being a novelty and started being a deliverable — emoji,
 branded display faces, multi-layered display work.
 The FontLab TV color font episode covers the four formats you actually have to think
@@ -30,27 +32,26 @@ about and which to ship for which target.
 
 <!-- more -->
 
-![FontLab TV color fonts](../media/fontlab-tv2.png)
-
-> 📺 Watch: [Color fonts on FontLab TV](https://fontlab.tv/)
+> 📺 Watch: [Color fonts: the next big thing?
+> on FontLab TV](https://www.youtube.com/watch?v=Yit1ZpClwAk)
 
 ## What it covers
 
 **The four formats.**
 
-- **COLR/CPAL v0** — layered solid-color glyphs.
+- **OpenType+COLR v0** — layered solid-color glyphs.
   Tiny file size, broad support.
   The default for branded display work.
-- **COLR v1** — gradients, transforms, paint graphs.
-  The new hotness. Increasing browser and OS support.
-- **SVG-in-OpenType** — full SVG glyphs.
+  (What’s not covered is **COLR v1**: gradients, transforms, paint graphs.
+  The new hotness. Increasing browser and OS support.)
+- **OpenType+SVG** — full SVG glyphs.
   Maximum flexibility, larger files.
-- **CBDT/sbix** — bitmap glyph tables.
+- **OpenType+sbix** and **OpenType+CBDT** — bitmap glyph tables.
   Used by Apple emoji and similar.
 
 **The episode walks through which to use when.** Layered (COLR v0) is the safe default.
-SVG when you need raster effects or photographic content.
-COLR v1 when you can require modern renderers.
+COLR v1 and SVG when you need gradients (COLR v1 works in Chrome-based browsers, SVG
+works in Safari, Firefox, in macOS and in Adobe apps).
 
 **Drawing layered glyphs.** FontLab handles the layered approach via element-based glyph
 composition: each color in the final glyph is a separate element with its own fill.
@@ -69,6 +70,6 @@ in modern OS rendering.
 
 Color fonts are now production-grade for display, branding, and app-icon contexts — not
 just emoji. This episode is the fastest way from “I have a layered illustration” to “I
-have a working color OTF that ships.”
+have a working color OpenType that ships.”
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

@@ -1,6 +1,6 @@
 Spacing is what separates a font that exists from a font that reads. The FontLab TV spacing episode is the one to watch first — before kerning, before OpenType, before anything else that can mask bad sidebearings.
 
-> 📺 Watch: [Spacing letters on FontLab TV](https://fontlab.tv/)
+> 📺 Watch: [Basics of spacing on FontLab TV](https://www.youtube.com/watch?v=cmDocLGmw4A)
 
 ## What it covers
 

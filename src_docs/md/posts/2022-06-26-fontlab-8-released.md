@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "Strong lead and specific feature bullets; good show-don't-tell tone. Closing link goes to fontlab.com not help.fontlab.com — needs a proper deep-link CTA with .fl-help-cta class."
 ---
+![](../media/illu/fontlab-8-released-1.png){.illu-thumb}
+
 Two years into FontLab 7, users had a clear message: the drawing engine is excellent,
 the variable font support is solid, now make the rest of the application match.
 FontLab 8, shipping today, is our answer.

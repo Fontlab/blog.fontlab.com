@@ -7,6 +7,8 @@ date:
   created: 2025-06-17
 slug: emoji-is-older-than-you-think
 ---
+![](../media/illu/emoji-is-older-than-you-think-1.png){.illu-thumb}
+
 The story everyone tells is that Shigetaka Kurita designed emoji at NTT Docomo in 1999.
 It is a good story. It is also wrong.
 

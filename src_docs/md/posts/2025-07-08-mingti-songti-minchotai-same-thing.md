@@ -7,6 +7,8 @@ date:
   created: 2025-07-08
 slug: mingti-songti-minchotai-same-thing
 ---
+![](../media/illu/mingti-songti-minchotai-same-thing-1.png){.illu-thumb}
+
 Three names. One style.
 A 19th-century missionary print shop at the centre of all of them.
 
@@ -52,8 +54,6 @@ is settled across all three names, but the local conventions are not.
 Preferred radical proportions, stroke contrast, where the brush memory shows — these
 draw differently in Tokyo, Taipei, and Beijing.
 Three names, one style, three sets of subtly different strokes.
-
-That is probably a feature.
 
 ## References
 

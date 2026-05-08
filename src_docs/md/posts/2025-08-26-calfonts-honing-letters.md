@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "Practical and grounded; the three-sizes heuristic is the kind of advice that earns a bookmark. CTA URL is too generic — needs deep link to contour/honing chapter."
 ---
+![](../media/illu/calfonts-honing-letters-2.png){.illu-thumb}
+
 Honing is the part of font design between “I have a sketch” and “I have a glyph that
 ships.” The Calfonts honing tutorial — adapted here — covers the boring, decisive 80% of
 drawing: fixing paths automatically where you can, fixing them by hand where you must.

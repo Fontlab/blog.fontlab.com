@@ -7,6 +7,8 @@ date:
   created: 2026-02-03
 slug: animating-font-variation-settings
 ---
+![](../media/illu/animating-font-variation-settings-2.png){.illu-thumb}
+
 Browser support for `font-variation-settings` has been broad since September 2018.
 Animating the value works the way other CSS animation works.
 What the tutorials skip is what happens to the GPU when you do it at scale.

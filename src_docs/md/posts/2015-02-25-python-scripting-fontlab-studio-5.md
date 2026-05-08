@@ -20,6 +20,8 @@ review:
   consolidate_with: ""
   notes: "The bridge paragraph connecting Studio 5 scripting to FontLab 7 is the post's strongest asset — it rescues an old tutorial from obsolescence. Lead is punchy. Could benefit from a note about which specific patterns no longer apply."
 ---
+![](../media/illu/python-scripting-fontlab-studio-5-3.png){.illu-thumb}
+
 Automation unlocks the real power of a professional font editor.
 In this 70-minute tutorial, Adam Twardoch introduces Python scripting inside FontLab
 Studio 5. You get a clear look at the scripting environment, the FontLab object model,
@@ -27,13 +29,13 @@ and practical examples that go well beyond “hello world.”
 
 <!-- more -->
 
-[![Basics of Python Scripting in FontLab Studio 5](../media/fontlabtv-QCSKRYZ1Qko.jpg)](https://www.youtube.com/watch?v=QCSKRYZ1Qko)
-
 FontLab Studio 5 opened its internals through a rich Python API. Type designers use it
 to write scripts and automate repetitive tasks.
 You can batch-transform glyphs, generate metrics, manipulate anchors, or build entire
 font families from a single master.
 This tutorial walks you through that API from the ground up.
+
+[![Basics of Python Scripting in FontLab Studio 5](../media/fontlabtv-QCSKRYZ1Qko.jpg)](https://www.youtube.com/watch?v=QCSKRYZ1Qko)
 
 Adam starts with the built-in macro editor and the Python console.
 He then moves through the object hierarchy:

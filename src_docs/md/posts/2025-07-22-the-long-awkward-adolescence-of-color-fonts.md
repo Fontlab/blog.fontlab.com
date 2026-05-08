@@ -23,6 +23,8 @@ review:
   consolidate_with: "2025-04-08-fontlab-tv-color-fonts.md"
   notes: "Best history post in the set — the duct-tape paragraph is a keeper; future-dated internal link to '2026/05/03' post must exist before publish."
 ---
+![](../media/illu/the-long-awkward-adolescence-of-color-fonts-3.png){.illu-thumb}
+
 Type spent five hundred years in black and white.
 Then mobile phones demanded emoji, and four large companies sat down separately and
 proposed four entirely incompatible ways to put color into a font.

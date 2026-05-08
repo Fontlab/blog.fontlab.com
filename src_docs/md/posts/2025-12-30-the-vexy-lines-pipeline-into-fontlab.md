@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "The only Vexy Lines post with a genuine FontLab integration story; the COLRv1 texture inlay angle is unique and worth keeping. Closing line is the best sentence in all the Vexy Lines posts."
 ---
+![](../media/illu/the-vexy-lines-pipeline-into-fontlab-1.png){.illu-thumb}
+
 Vexy Lines is not a font tool.
 It is a vector generator that happens to play unusually well with type-design tools.
 

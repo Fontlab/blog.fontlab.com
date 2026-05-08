@@ -7,6 +7,8 @@ date:
   created: 2025-11-18
 slug: the-fontlab-book-in-korean
 ---
+![](../media/illu/the-fontlab-book-in-korean-1.png){.illu-thumb}
+
 Most font editors grew up thinking about Latin.
 In April 2025, a Korean designer published the book that translates FontLab into Hangul
 terms.

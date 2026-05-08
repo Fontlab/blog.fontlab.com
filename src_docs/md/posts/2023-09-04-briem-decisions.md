@@ -21,6 +21,8 @@ review:
   consolidate_with: "2023-04-17-briem-foundations.md, 2024-04-08-briem-bold-italic-spacing.md"
   notes: "Best-written post in the Briem series — Briem's own voice comes through clearly via direct quotes. The Bell Centennial anecdote is a genuine hook. Tag all three Briem posts as a series rather than consolidating."
 ---
+![](../media/illu/briem-decisions-3.png){.illu-thumb}
+
 The hardest part of designing a typeface isn’t drawing — it’s deciding.
 Which letterforms? How wide?
 How much contrast? Gunnlaugur SE Briem’s notes on decisions and modules offer two

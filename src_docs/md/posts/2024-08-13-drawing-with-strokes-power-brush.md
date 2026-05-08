@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "Crisp product explainer with good voice; CTA lands on broad manual page — should deep-link to Power Brush section when available."
 ---
+![](../media/illu/drawing-with-strokes-power-brush-3.png){.illu-thumb}
+
 The standard method for digitising a font is to draw the outline.
 You map the exterior boundary of the shape with Bezier curves, and you push and pull
 nodes until the silhouette behaves.
@@ -29,8 +31,6 @@ This works fine for rigid sans-serifs.
 For a script font, it feels like sculpting in oven mitts.
 
 <!-- more -->
-
-![Power Brush in FontLab 8](/media/fl8days-2-abc-strokes-4.png)
 
 FontLab 8 sidesteps the problem entirely.
 Instead of drawing the skin, you draw the skeleton — a single central line, the nervous

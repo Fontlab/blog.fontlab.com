@@ -7,6 +7,8 @@ date:
   created: 2025-07-01
 slug: bezier-vs-de-casteljau
 ---
+![](../media/illu/bezier-vs-de-casteljau-1.png){.illu-thumb}
+
 Paul de Casteljau invented the Bézier curve in 1958. His employer made him keep quiet
 about it for 27 years.
 

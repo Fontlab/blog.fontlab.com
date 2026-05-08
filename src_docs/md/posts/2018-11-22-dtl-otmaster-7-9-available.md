@@ -21,6 +21,8 @@ review:
   consolidate_with: "2014-12-15-otmaster-5-vfb2ufo-fontlab-pad-11.md"
   notes: "Thorough and well-structured — the DTL quote adds authentic voice. Pricing will be stale; add a note or remove. The 'pairs well with FontLab VI' closer is good cross-sell copy worth keeping."
 ---
+![](../media/illu/dtl-otmaster-7-9-available-3.png){.illu-thumb}
+
 DTL OTMaster 7.9 adds support for variable OpenType fonts.
 This includes the `fvar`, `gvar`, `CFF2`, `STAT`, `HVAR`, and `MVAR` tables.
 It includes a new Proofing Tool for printing and exporting PDF specimens, and a

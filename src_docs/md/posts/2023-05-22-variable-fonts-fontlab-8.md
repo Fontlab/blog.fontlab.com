@@ -21,6 +21,8 @@ review:
   consolidate_with: ""
   notes: "Closing CTA link is malformed — missing leading slash in path (fontlab/8/whats-new/... instead of /fontlab/8/...). Variable components section is the strongest part; the Matchmaker tool and tilde-tag conditional substitution are underexplained for a post about them."
 ---
+![](../media/illu/variable-fonts-fontlab-8-1.png){.illu-thumb}
+
 Variable fonts pack an entire type family into one file, letting users slide
 continuously between weights, widths, and other axes rather than jumping between
 predetermined styles.

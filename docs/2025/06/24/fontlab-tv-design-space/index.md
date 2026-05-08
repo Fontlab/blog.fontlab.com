@@ -1,6 +1,6 @@
 Design space is the part of variable font work that decides whether your font feels good or merely works. The FontLab TV design space episode is the conceptual foundation for everything you do with masters, axes, and instances.
 
-> 📺 Watch: [Design space basics on FontLab TV](https://fontlab.tv/)
+> 📺 Watch: [Design space axes & multiple masters on FontLab TV](https://www.youtube.com/watch?v=AijDkf3DBk8)
 
 ## What it covers
 

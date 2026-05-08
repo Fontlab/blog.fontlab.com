@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "Covers essential workflow for multilingual fonts; CTA should deep-link to anchors/components section; FontLab TV link is homepage-only."
 ---
+![](../media/illu/fontlab-tv-anchors-components-1.png){.illu-thumb}
+
 If you are still drawing every accented letter by hand, this is the episode that retires
 that habit. Anchors plus components mean you draw `a` and `acute` once, and FontLab
 assembles `aacute`, `acircumflex`, `agrave`, and the other 700-odd accented forms for
@@ -31,7 +33,8 @@ you.
 
 ![FontLab TV — anchors, components, and accented glyphs](../media/fontlab-tv1.png)
 
-> 📺 Watch: [Anchors and components on FontLab TV](https://fontlab.tv/)
+> 📺 Watch:
+> [Auto layers — composite glyphs on FontLab TV](https://www.youtube.com/watch?v=l36FY1YKAek)
 
 ## What it covers
 

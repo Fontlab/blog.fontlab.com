@@ -1,25 +1,103 @@
 /* this_file: src_docs/md/css/extra.css */
 /* FontLab blog typography and footer CTA customizations. */
 
-/* Pencil-sketch post thumbnail (floats right, wraps text) */
+/* ============================================================
+   Post illustrations — black-on-transparent line-art PNGs.
+
+   Markdown classes (set via attr_list, e.g. `{ .illu-thumb }`):
+     .illu-thumb   default — float right, wraps text on left
+     .illu-left    modifier — flip to float left
+
+   Sizing is contextual:
+     - Inside .md-post--excerpt (blog index card) → small thumbnail
+     - On the post page itself                  → hero (max 512px)
+
+   Dark-mode recolor: PNGs ship pure black, so a single CSS filter
+   inverts black → light gray. No mask wiring needed, no per-image
+   --src plumbing — works directly on the markdown-emitted <img>.
+   ============================================================ */
+
+/* Hero on the post page (default size). */
 .md-typeset .illu-thumb {
   float: right;
-  width: 200px;
-  height: 200px;
-  margin: 0.25rem 0 1rem 1.5rem;
-  border-radius: 6px;
-  object-fit: cover;
-  shape-outside: inset(0 round 6px);
-  background: #f5f4f0;
+  width: 50%;
+    max-width: 512px;
+    height: auto;
+    margin: 0 0 -3rem 0.5rem;
+    position: relative;
+    top: -3rem;
+    shape-outside: margin-box;
+  }
+  
+  /* Flipped float modifier. */
+  .md-typeset .illu-thumb.illu-left {
+    float: left;
+    margin: 0 0.5rem -3rem 0;
+  }
+  
+  /* On the blog-index card, anchor the thumbnail to the top-right of the
+                                           excerpt so the H2 title wraps around it (not just the body paragraph).
+                                           We can't move the image *before* the title in DOM order — the blog
+                                           plugin emits the H2 from the post's first heading — so we lift it out
+                                           of flow with absolute positioning and reserve space on the right via
+                                           padding-right on the post content. */
+  .md-post--excerpt {
+    display: flow-root;
+    /* still contain stray floats */
+  }
+  
+  .md-post--excerpt .md-post__content {
+    position: relative;
+    /* containing block for the absolute thumb */
+    padding-right: 220px;
+    /* image (200) + gap (20) */
+    min-height: 210px;
+    /* keep the box at least image-tall */
+  }
+
+  .md-post--excerpt .md-typeset .illu-thumb {
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    float: none;
+    /* override the post-page rule */
+    clear: none;
+    width: 200px;
+    max-width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0;
+  }
+  
+  /* Optional flip-to-left modifier on the index. */
+  .md-post--excerpt .md-typeset .illu-thumb.illu-left {
+    right: auto;
+    left: 0;
+  }
+  
+  .md-post--excerpt .md-post__content:has(> p > .illu-thumb.illu-left) {
+    padding-right: 0;
+    padding-left: 220px;
+  }
+  
+  /* Dark mode: turn black ink into light gray.
+                                           .85 ≈ rgb(217,217,217); tweak if a particular shade is preferred. */
+  [data-md-color-scheme="slate"] .md-typeset .illu-thumb {
+    filter: invert(0.86);
 }
-@media (max-width: 600px) {
-  .md-typeset .illu-thumb {
+/* Mobile: stop floating, center, give it room. */
+@media (max-width: 720px) {
+
+  .md-typeset .illu-thumb,
+  .md-typeset .illu-thumb.illu-left,
+  .md-post--excerpt .md-typeset .illu-thumb,
+  .md-post--excerpt .md-typeset .illu-thumb.illu-left {
     float: none;
     display: block;
-    margin: 0 auto 1rem;
-    width: 70%;
+    width: 65%;
+      max-width: 360px;
     height: auto;
-    aspect-ratio: 1 / 1;
+    margin: 0.5rem auto 1.25rem;
   }
 }
 
@@ -62,6 +140,8 @@ html {
 .md-typeset th {
   font-size: 0.95rem;
   line-height: 1.6;
+  text-wrap: pretty;
+    text-wrap-style: pretty;
 }
 
 .md-typeset h1,
@@ -82,8 +162,9 @@ html {
 
 .md-typeset h1 {
   font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.1;
+  font-weight: 200;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
   margin: 0.5rem 0 1.25rem;
 }
 
@@ -152,8 +233,8 @@ html {
 .md-post--excerpt .md-post__content h2 {
   font-family: var(--fl-font-display);
   font-size: 1.25rem;
-  font-weight: 520;
-  line-height: 1.15;
+  font-weight: 300;
+    line-height: 1.1;
   margin: 0 0 0.3rem;
 }
 

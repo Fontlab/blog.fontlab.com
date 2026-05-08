@@ -21,6 +21,8 @@ review:
   consolidate_with: "2015-11-13-how-to-space-a-font.md"
   notes: "Tight and well-written — the 'deliberately brief' acknowledgment is honest and appropriate. Strong closer: 'Getting it consistent is what separates a draft font from a usable one.' Consolidation candidate with the 2015 Phinney spacing tutorial; both cover the same concept at different software versions."
 ---
+![](../media/illu/basics-of-spacing-fontlab-7-1.png){.illu-thumb}
+
 Spacing is the invisible work that determines whether a font feels effortless or labored
 to read.
 This five-minute tutorial from Dave Lawrence’s FontLab 7 series strips the topic

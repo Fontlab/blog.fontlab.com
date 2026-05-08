@@ -19,6 +19,8 @@ review:
   consolidate_with: ""
   notes: "Rewritten as a real year-in-review using the local FontLab VI release-note inventory and the original WordPress announcement. The 12-release claim is the official FontLab news framing; the release-note archive also lists individual hotfix builds."
 ---
+![](../media/illu/fontlab-vi-12-releases-in-12-months-3.png){.illu-thumb}
+
 FontLab VI 6.1.2 shipped today.
 That made twelve updates in twelve months after the first public version of our new font
 editor.

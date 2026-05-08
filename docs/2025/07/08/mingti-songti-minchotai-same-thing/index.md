@@ -20,8 +20,6 @@ justfont, Taiwan’s type foundry, has stated the resolution as plainly as it de
 
 For a FontLab user designing a CJK serif, the practical implication is that the *style* is settled across all three names, but the local conventions are not. Preferred radical proportions, stroke contrast, where the brush memory shows — these draw differently in Tokyo, Taipei, and Beijing. Three names, one style, three sets of subtly different strokes.
 
-That is probably a feature.
-
 ## References
 
 - [justfont: 明體？宋體？ (Mingti or Songti?)](https://blog.justfont.com/2013/09/mingti_or_songti_1/)

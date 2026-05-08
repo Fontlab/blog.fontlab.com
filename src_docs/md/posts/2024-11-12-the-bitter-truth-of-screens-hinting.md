@@ -23,6 +23,8 @@ review:
   consolidate_with: ""
   notes: "Covers hinting, FontAudit, overlapping contours, and .glyphspackage — arguably four posts squeezed into one; CTA should deep-link to hinting section."
 ---
+![](../media/illu/the-bitter-truth-of-screens-hinting-1.png){.illu-thumb}
+
 You can spend six months agonising over the curvature of a lowercase ‘s’, and then your
 font is rendered by a ruthless grid of pixels on somebody’s second monitor at 1366×768.
 Translating smooth Bézier curves onto a low-resolution raster is a violent process.

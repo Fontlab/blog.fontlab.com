@@ -7,6 +7,8 @@ date:
   created: 2025-05-06
 slug: roboto-flex-thirteen-axes
 ---
+![](../media/illu/roboto-flex-thirteen-axes-2.png){.illu-thumb}
+
 Christian Robertson drew Roboto in 2011 for Android.
 Ten years later, David Berlow’s team turned it into something with thirteen knobs.
 

@@ -7,6 +7,8 @@ date:
   created: 2025-12-23
 slug: the-open-tool-ecosystem
 ---
+![](../media/illu/the-open-tool-ecosystem-1.png){.illu-thumb}
+
 Most of the world’s text passes through a library most people have never heard of.
 
 <!-- more -->

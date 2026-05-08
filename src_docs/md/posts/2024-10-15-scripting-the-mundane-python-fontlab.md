@@ -23,6 +23,8 @@ review:
   consolidate_with: ""
   notes: "Strongest technical post in the set — the 'rule of five' framing is sharp; CTA could deep-link to scripting section."
 ---
+![](../media/illu/scripting-the-mundane-python-fontlab-1.png){.illu-thumb}
+
 Type design is an art form.
 Font production is a factory job.
 Once the aesthetic decisions are settled on the core alphabet, you face the unglamorous

@@ -23,6 +23,8 @@ review:
   consolidate_with: ""
   notes: "Canonical conceptual intro to design space; absorbed the unique parts of 2025-03-25-designing-variable-axes-well.md."
 ---
+![](../media/illu/fontlab-tv-design-space-1.png){.illu-thumb}
+
 Design space is the part of variable font work that decides whether your font feels good
 or merely works. The FontLab TV design space episode is the conceptual foundation for
 everything you do with masters, axes, and instances.
@@ -33,7 +35,8 @@ everything you do with masters, axes, and instances.
 
 ![FontLab TV: design space tutorial](../media/fontlab-tv2.png)
 
-> 📺 Watch: [Design space basics on FontLab TV](https://fontlab.tv/)
+> 📺 Watch:
+> [Design space axes & multiple masters on FontLab TV](https://www.youtube.com/watch?v=AijDkf3DBk8)
 
 ## What it covers
 

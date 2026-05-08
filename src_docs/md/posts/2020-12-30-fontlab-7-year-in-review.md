@@ -22,6 +22,8 @@ review:
   consolidate_with: "2020-03-02-fontlab-71.md"
   notes: "Good thematic grouping of 2020 updates — drawing, metrics, variation, files. The cross-link to the 7.2 post is well-placed. Could be stronger with one concrete 'before/after' example per theme rather than a list of feature names. Inline help.fontlab.com link satisfies CTA."
 ---
+![](../media/illu/fontlab-7-year-in-review-1.png){.illu-thumb}
+
 FontLab 7 launched in December 2019 with over 250 new features.
 Twelve months later, it has rather more than that.
 Here is what the 2020 update cycle actually delivered — not counting FontLab 7.2, which

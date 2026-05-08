@@ -21,6 +21,8 @@ review:
   consolidate_with: "2023-04-17-briem-foundations.md, 2023-09-04-briem-decisions.md"
   notes: "Tschichold-vs-Zapf spacing dispute is the strongest hook in all three Briem posts — lead with it instead of burying it at the end. Three solid Briem posts work well as a tagged series; no need to merge."
 ---
+![](../media/illu/briem-bold-italic-spacing-1.png){.illu-thumb}
+
 Three chapters from Gunnlaugur SE Briem’s notes on type design cover the work that comes
 after the roman is drawn: making a bold weight, designing the italic, and spacing the
 result. All three are harder than they look and more forgiving than they seem.

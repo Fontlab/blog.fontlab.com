@@ -22,8 +22,7 @@ review:
   consolidate_with: ""
   notes: "Solid changelog-style post; bullet list is clear and specific. Intro buries the lede — '65,535 glyphs' and 'free upgrade' are the two hooks worth leading with. No narrative context for why these features matter to the reader."
 ---
-![FontLab Studio 5.2.1 for Windows](../media/illu/fontlab-studio-521-windows.png){
-.illu-thumb }
+![](../media/illu/fontlab-studio-521-windows-1.png){.illu-thumb}
 
 FontLab Studio 5.2.1 for Windows shipped in December 2013. It builds on the 5.2
 foundation with new tools and hundreds of bug fixes.

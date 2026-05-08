@@ -21,16 +21,16 @@ review:
   consolidate_with: ""
   notes: "Feature list is accurate and practically ordered. CTA now points to the live FontLab 8 OpenType features tutorial section."
 ---
+![](../media/illu/fontlab-tv-opentype-features-2.png){.illu-thumb}
+
 OpenType features are the part of font design where text becomes typography.
 The FontLab TV OpenType episode walks through the feature tags you will actually use,
 what they do at runtime, and how to write them without breaking anything else.
 
 <!-- more -->
 
-![FontLab TV OpenType features](../media/fontlab-tv2.png)
-
 > 📺 Watch:
-> [OpenType features on FontLab TV](https://www.youtube.com/watch?v=DitUgjL6T5s)
+> [Auto OpenType features in FontLab 7 on FontLab TV](https://www.youtube.com/watch?v=ehkuzMvmjbY)
 
 ## What it covers
 

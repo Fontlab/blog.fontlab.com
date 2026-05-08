@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "Merged into a single FontLab 8.2 release article with stripped WordPress residue and a live FontLab 8 what's-new CTA."
 ---
+![](../media/illu/fontlab-82-released-1.png){.illu-thumb}
+
 FontLab 8.2 lands with around 250 changes on top of 8.0 — a consolidation release that
 touches every corner of the app, from the Sketchboard to the export dialog.
 Drawing tools get smoother handles and snappier strokes; kerning learns to read

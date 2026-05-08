@@ -22,6 +22,8 @@ review:
   consolidate_with: ""
   notes: "Canonical OpenType-features-as-UX post; absorbed the weaker 2025-01-14 invisible-logic post."
 ---
+![](../media/illu/opentype-features-as-ux-1.png){.illu-thumb}
+
 Most readers never notice when typography is right.
 They only notice when reading feels like work.
 The features that decide which side of that line a font lands on are mostly the

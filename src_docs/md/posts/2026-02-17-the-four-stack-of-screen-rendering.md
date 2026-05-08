@@ -7,6 +7,8 @@ date:
   created: 2026-02-17
 slug: the-four-stack-of-screen-rendering
 ---
+![](../media/illu/the-four-stack-of-screen-rendering-2.png){.illu-thumb}
+
 Most type designers know their fonts will be rendered differently on macOS and Windows.
 Fewer know the names of the four pieces of plumbing responsible.
 The names are worth knowing, because the plumbing shapes everything.

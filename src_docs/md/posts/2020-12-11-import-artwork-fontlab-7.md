@@ -21,6 +21,8 @@ review:
   consolidate_with: "2019-01-24-sketch-to-font-scanfont.md"
   notes: "Clean, focused tutorial post. The closing sentence ('Once that step is smooth, the drawing and refinement workflow opens up considerably') is good motivation but arrives too late — move it to the opener. No CTA link to help docs is a miss for a how-to post."
 ---
+![](../media/illu/import-artwork-fontlab-7-1.png){.illu-thumb}
+
 Most type designers don’t draw directly in the font editor — they sketch in pencil,
 refine in Illustrator or Affinity Designer, then need to get that artwork into FontLab
 cleanly.

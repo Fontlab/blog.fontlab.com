@@ -22,19 +22,21 @@ review:
   consolidate_with: "2025-12-23-vexy-lines-and-the-joy-of-halftone.md"
   notes: "Best conceptual Vexy Lines post — 'tasteful loss is the whole craft' is the line the others are trying to write. The five-fills practical test section is the clearest feature explanation in the series."
 ---
+![](../media/illu/vexy-lines-and-the-useful-lie-of-engraving-1.png){.illu-thumb}
+
 Engraving is a useful lie.
 A hedcut looks old, sober, authoritative, and a little expensive — even when it was made
 yesterday.
 
 <!-- more -->
 
-![Vexy Lines interface](/media/vexy-lines-and-the-useful-lie-of-engraving/vexy-lines-interface.png)
-
 That is why the style keeps working.
 The Wall Street Journal hedcut tradition leans on dots and hatch lines to imitate older
 engravings. The trick succeeds because the image refuses full realism without giving up
 recognisability. It is edited likeness, not likeness alone.
 You see the method as you see the face.
+
+![Vexy Lines interface](/media/vexy-lines-and-the-useful-lie-of-engraving/vexy-lines-interface.png)
 
 Halftones do a related trick with different maths.
 Screen-printing guides describe them as grids of dots translating greyscale into
