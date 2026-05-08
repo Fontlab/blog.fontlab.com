@@ -2,12 +2,12 @@
 authors:
   fontlab:
     name: FontLab
-    description: Professional font editor
+    description: Font editor
     avatar: /media/authors/fontlab.png
     url: https://www.fontlab.com/font-editor/fontlab/
   vexy-lines:
     name: Vexy Lines
-    description: Vector artwork tool
+    description: Vector app
     avatar: /media/authors/vexy-lines.png
     url: https://vexy.art/lines/
   transtype:
@@ -17,7 +17,7 @@ authors:
     url: https://www.fontlab.com/font-converter/transtype/
   typetool:
     name: TypeTool
-    description: Basic font editor
+    description: Font editor
     avatar: /media/authors/typetool.png
     url: https://www.fontlab.com/font-editor/typetool/
   fontographer:
@@ -27,7 +27,7 @@ authors:
     url: https://www.fontlab.com/font-editor/fontographer/
   fontlab-pad:
     name: FontLab Pad
-    description: Color font typesetter
+    description: Typesetter
     avatar: /media/authors/fontlab-pad.png
     url: https://www.fontlab.com/fontlab-pad/
   adam:

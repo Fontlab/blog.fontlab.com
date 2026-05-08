@@ -19,7 +19,7 @@
         {%- set _readtime = lang.t("readtime.other") | replace("#", _time) -%}
       {%- endif -%}
     {%- endif -%}
-    {%- set _meta -%}<span class="md-post__metaline"> <time datetime="{{ post.config.date.created }}">{{ post.config.date.created | date }}</time>{% if _readtime %} <a class="md-post__readlink" href="{{ post.url | url }}">{{ _readtime }} →</a>{% else %} <a class="md-post__readlink" href="{{ post.url | url }}">→</a>{% endif %}</span>{%- endset -%}
+    {%- set _meta -%}{{ " " }}<span class="md-post__metaline"><time datetime="{{ post.config.date.created }}">{{ post.config.date.created | date }}</time>{% if _readtime %} <a class="md-post__readlink" href="{{ post.url | url }}">{{ _readtime }} →</a>{% else %} <a class="md-post__readlink" href="{{ post.url | url }}">→</a>{% endif %}</span>{%- endset -%}
     {%- set _content = post.content | string -%}
     {%- set _idx = _content.rfind('</p>') -%}
     {%- if _idx >= 0 -%}

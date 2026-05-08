@@ -13,9 +13,9 @@ A line can carry tone, texture, shadow, and emotion — and never once pretend t
 
 <!-- more -->
 
-[![Albrecht Dürer, Knight, Death and the Devil, 1513](../media/external/wikimedia-albrecht-durer-knight-death-and-devil-1513-nga-598.jpg)](https://commons.wikimedia.org/wiki/Category:Knight,_Death_and_the_Devil_by_Albrecht_D%C3%BCrer)
-
 **Albrecht Dürer, 1513.** *Knight, Death and the Devil* is copperplate burin engraving, 24.5 × 19.1 cm — one of his three *Meisterstiche*. Dürer called it simply *Der Reuter*, the Rider. There is no halftone anywhere in it. Every shadow is parallel hatching; every curved surface is cross-hatching that turns with the form. The shadow on the horse’s flank follows the muscle. The shadow in the hollow of the knight’s armour follows the concavity. Direction *is* the information.
+
+[![Albrecht Dürer, Knight, Death and the Devil, 1513](../media/external/wikimedia-albrecht-durer-knight-death-and-devil-1513-nga-598.jpg)](https://commons.wikimedia.org/wiki/Category:Knight,_Death_and_the_Devil_by_Albrecht_D%C3%BCrer)
 
 **William Hogarth, 1735.** *A Rake’s Progress* was published the day the Engravers’ Copyright Act 1734 — “Hogarth’s Act” — took effect. It was the first copyright law in any country to protect engravers, passed because pirates had flooded the market with knock-offs of *A Harlot’s Progress* three years earlier. Hogarth had essentially co-authored the law that made his next series possible. The prints reward that attention: they are satirical journalism, using hatch density and line weight to carry what caption text would have been too polite to say.
 
