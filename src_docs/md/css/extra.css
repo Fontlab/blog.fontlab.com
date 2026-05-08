@@ -238,6 +238,9 @@ html {
   display: none;
 }
 
+.md-nav--secondary>.md-nav__list {
+  padding-top: 0;
+}
 /* Hide the "Metadata" label that appears above the post sidebar's
    author/date/read-time block. */
 .md-post__title {
