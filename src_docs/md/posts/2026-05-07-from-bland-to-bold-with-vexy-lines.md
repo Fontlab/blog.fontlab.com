@@ -16,11 +16,11 @@ Vexy Lines exists to fix that, one image at a time.
 
 <!-- more -->
 
-![Vexy Lines product banner](../media/2026-05-07-newsletter-01.jpg)
-
 The promise is simple: hand Vexy Lines a sketched drawing, a photograph, a scan, or
 anything you generated with an AI tool, and it returns a scalable vector you can
 actually use. SVG, EPS, PDF, PNG, JPG — take your pick.
+
+![Vexy Lines product banner](../media/2026-05-07-newsletter-01.jpg)
 
 The less simple part is everything that happens in between.
 Vexy Lines does not just trace edges.
@@ -41,34 +41,34 @@ doing.
 
 ![Vector conversion example 3](../media/2026-05-07-newsletter-04.jpeg)
 
-![Vector conversion example 4](../media/2026-05-07-newsletter-05.jpeg)
-
 Vexy Lines also supports variable fonts — yes, fonts — for linear and wave fills.
 Multicolor halftone and flowlines/trace fill round out the effect options.
 If you have spent time in Illustrator trying to fake these looks manually, the appeal is
 immediate.
 
-![Vector conversion example 5](../media/2026-05-07-newsletter-06.jpeg)
+![Vector conversion example 4](../media/2026-05-07-newsletter-05.jpeg)
 
 The retrofuturistic use case is a good example of what the tool does well: take a
 photograph and turn it into something that looks like a Wall Street Journal hedcut
 portrait, or a 1970s technical illustration, or a letterpress-ready design.
 The kind of aesthetic that takes hours to approximate by hand and seconds to miss.
 
-![Retrofuturistic hedcut portrait example](../media/2026-05-07-newsletter-07.jpg)
-
-![Mural-scale application example](../media/2026-05-07-newsletter-08.jpg)
+![Vector conversion example 5](../media/2026-05-07-newsletter-06.jpeg)
 
 Vexy Lines runs on Mac and Windows.
 The price is US$99 — one payment, lifetime license, two devices.
 There is a free trial if you want to see what it does to your own images before
 committing.
 
+![Retrofuturistic hedcut portrait example](../media/2026-05-07-newsletter-07.jpg)
+
 The software is available now at [vexy.art/lines](https://www.vexy.art/lines/). You can
 try it in the browser without installing anything via the
 [online playground](https://www.vexy.art/lines/#play).
 
 A bland image is, in the end, just a vector waiting for the right filter.
+
+![Mural-scale application example](../media/2026-05-07-newsletter-08.jpg)
 
 ## References
 
