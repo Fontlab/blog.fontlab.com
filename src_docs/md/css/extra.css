@@ -188,6 +188,13 @@ html {
   margin: 2rem 0 1rem;
 }
 
+.md-typeset .md-post--excerpt h2 {
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  margin: 2rem 0 1rem;
+}
 .md-typeset h3 {
   font-family: var(--fl-font-display);
   font-size: 1.3rem;
