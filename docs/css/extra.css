@@ -585,6 +585,8 @@ html {
 }
 
 .md-sidebar--secondary .md-nav--secondary .md-ellipsis {
+  font-family: var(--fl-font-body);
+    font-size: 1rem;
   text-transform: none;
   font-weight: 400;
   letter-spacing: 0;
