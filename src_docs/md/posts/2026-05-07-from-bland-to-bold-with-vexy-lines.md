@@ -42,6 +42,8 @@ Multicolor halftone and flowlines/trace fill round out the effect options.
 If you have spent time in Illustrator trying to fake these looks manually, the appeal is
 immediate.
 
+![Vexy Lines](../media/2026-05-07-newsletter-03.jpg)
+
 The retrofuturistic use case is a good example of what the tool does well: take a
 photograph and turn it into something that looks like a Wall Street Journal hedcut
 portrait, or a 1970s technical illustration, or a letterpress-ready design.
