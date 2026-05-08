@@ -1,6 +1,10 @@
-Browser support for `font-variation-settings` has been broad since September 2018. Animating the value works the way other CSS animation works. What the tutorials skip is what happens to the GPU when you do it at scale.
+Browser support for `font-variation-settings` has been broad since September 2018. Animating the value works the way other CSS animation works.
 
-The syntax is straightforward:
+What the tutorials skip is what happens to the GPU when you do it at scale.
+
+The `font-variation-settings` CSS property is the low-level mechanism for controlling the axes of variable fonts. Its syntax lets you set the values of registered axes—like `"wght"` for weight, `"wdth"` for width, or custom axes defined by the font—by specifying axis tags and numeric values. By changing these settings, you can fine-tune the appearance of type, smoothly morphing its shape and weight along the font’s design space, often beyond what traditional static fonts allow.
+
+To animate a variable font with CSS keyframes, you can use:
 
 ```css
 @keyframes breathe {
@@ -25,13 +29,9 @@ document.querySelectorAll('.animated-heading')
   .forEach(el => observer.observe(el));
 ```
 
-This is not clever. It is the difference between a page that renders well and one that performs a side-show no one asked for.
+This is the difference between a page that renders well and one that performs a side-show no one asked for.
 
 Two reference points worth keeping in mind. Laurence Penney launched **Axis-Praxis** in late 2016, before the variable font specification was even finished — the first public playground for exploring what the axes could do. Nick Sherman launched **v-fonts.com** at Robothon in March 2018, still the best gallery for fonts worth animating. Both predate the “variable fonts are mainstream” moment by years; both are still the right places to start.
-
-The mistake people make is treating the weight slider as the thing to demonstrate. It is not. The interesting animation is the one you do not notice: `opsz` drifting as the viewport narrows, `wght` tightening at small sizes, `GRAD` nudging on dark mode. These are invisible by design. They make text more readable without announcing they are doing so.
-
-Animation that reveals the system is worth doing. Animation that performs the system is a screensaver.
 
 ## References
 
