@@ -1341,7 +1341,7 @@ The fix is to remove overlaps on export. FontLab does this non-destructively: th
 
 ## FontAudit, the pedantic accountant
 
-[FontLab 8’s FontAudit panel](/2024/10/15/scripting-the-mundane-python-fontlab/) is the safety net most users do not know they have. It scans the font for the kind of structural issues that pass visual inspection but fail at the rendering stage: open contours that should be closed, unnecessary points sitting between two true on-curve points, near-flat curves that ought to be straight lines, segments that double back on themselves, contours running in the wrong direction. Each finding gets flagged with a location and a severity.
+[FontLab 8’s FontAudit panel](https://blog.fontlab.com/2024/10/15/scripting-the-mundane-python-fontlab/index.md) is the safety net most users do not know they have. It scans the font for the kind of structural issues that pass visual inspection but fail at the rendering stage: open contours that should be closed, unnecessary points sitting between two true on-curve points, near-flat curves that ought to be straight lines, segments that double back on themselves, contours running in the wrong direction. Each finding gets flagged with a location and a severity.
 
 The auditing role is the right one for software. Visually, you can stare at a glyph for ten minutes and miss the redundant on-curve point that is making the rendering subtly off. FontAudit finds it in milliseconds and tells you exactly where it is.
 
@@ -1934,10 +1934,10 @@ There is a charming detail in the early-2010s lore. Before the editors caught up
 
 We have been writing about color fonts since the earliest days of these format wars. If you want to dive deeper into the history and mechanics, start with the current consolidated guide:
 
-- [Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes](/2026/05/03/color-fonts-in-2026/)
-- [Color fonts: the next big thing? A FontLab tutorial](/2014/06/18/color-fonts-tutorial/)
-- [Color scripts, color fonts](/2023/11/13/color-scripts-color-fonts/)
-- [FontLab TV: color fonts without tears](/2025/04/08/fontlab-tv-color-fonts/)
+- [Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes](https://blog.fontlab.com/2026/05/03/color-fonts-in-2026/index.md)
+- [Color fonts: the next big thing? A FontLab tutorial](https://blog.fontlab.com/2014/06/18/color-fonts-tutorial/index.md)
+- [Color scripts, color fonts](https://blog.fontlab.com/2023/11/13/color-scripts-color-fonts/index.md)
+- [FontLab TV: color fonts without tears](https://blog.fontlab.com/2025/04/08/fontlab-tv-color-fonts/index.md)
 
 ## References
 
@@ -2360,14 +2360,14 @@ The manuscript is now National Treasure No. 70 (1962) and a UNESCO Memory of the
 
 For typography, the importance is specific. Hangul is the only major writing system whose articulatory logic is documented by its inventor. You can read why ㄱ is shaped the way it is — it is a side view of the back of the tongue against the soft palate. ㄴ is the tongue tip at the alveolar ridge. ㅁ is the shape of closed lips. No Latin letter has its design rationale on record in this way.
 
-If you are designing Hangul fonts in FontLab today, as Kwon Gun-oh’s [2025 Korean guide](https://blog.fontlab.com/2025/11/25/hangul-invented-1443-lost-found-in-a-coat/2026-08-25-the-fontlab-book-in-korean.md) explains in detail, you are working with a system whose geometric logic was set down in 1443 and has never needed to be re-argued. That is a strange and rather useful position to be in.
+If you are designing Hangul fonts in FontLab today, as Kwon Gun-oh’s [2025 Korean guide](https://blog.fontlab.com/2025/11/18/the-fontlab-book-in-korean/index.md) explains in detail, you are working with a system whose geometric logic was set down in 1443 and has never needed to be re-argued. That is a strange and rather useful position to be in.
 
 ## References
 
 - [Hunminjeongeum — Wikipedia](https://en.wikipedia.org/wiki/Hunminjeongeum)
 - [Hunminjeongeum — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Hunminjeongeum)
 - [Hangul — Wikipedia](https://en.wikipedia.org/wiki/Hangul)
-- [The FontLab book in Korean](https://blog.fontlab.com/2025/11/25/hangul-invented-1443-lost-found-in-a-coat/2026-08-25-the-fontlab-book-in-korean.md)
+- [The FontLab book in Korean](https://blog.fontlab.com/2025/11/18/the-fontlab-book-in-korean/index.md)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
 

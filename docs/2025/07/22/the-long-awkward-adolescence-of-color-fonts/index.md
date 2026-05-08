@@ -36,10 +36,10 @@ There is a charming detail in the early-2010s lore. Before the editors caught up
 
 We have been writing about color fonts since the earliest days of these format wars. If you want to dive deeper into the history and mechanics, start with the current consolidated guide:
 
-- [Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes](/2026/05/03/color-fonts-in-2026/)
-- [Color fonts: the next big thing? A FontLab tutorial](/2014/06/18/color-fonts-tutorial/)
-- [Color scripts, color fonts](/2023/11/13/color-scripts-color-fonts/)
-- [FontLab TV: color fonts without tears](/2025/04/08/fontlab-tv-color-fonts/)
+- [Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes](https://blog.fontlab.com/2026/05/03/color-fonts-in-2026/index.md)
+- [Color fonts: the next big thing? A FontLab tutorial](https://blog.fontlab.com/2014/06/18/color-fonts-tutorial/index.md)
+- [Color scripts, color fonts](https://blog.fontlab.com/2023/11/13/color-scripts-color-fonts/index.md)
+- [FontLab TV: color fonts without tears](https://blog.fontlab.com/2025/04/08/fontlab-tv-color-fonts/index.md)
 
 ## References
 

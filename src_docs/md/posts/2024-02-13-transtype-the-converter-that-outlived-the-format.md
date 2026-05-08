@@ -23,7 +23,7 @@ review:
   consolidate_with: ""
   notes: "Consolidated Type 1 rescue article with legal, technical, and FontLab 8 pipeline sections plus a live TransType CTA."
 ---
-![](../media/illu/transtype-4-2){.illu-thumb}
+![](../media/illu/transtype-4-2.png){.illu-thumb}
 
 Digital formats do not die of natural causes.
 They are smothered in their sleep by the companies that invented them.

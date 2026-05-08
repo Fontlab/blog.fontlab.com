@@ -34,7 +34,7 @@ dread.
 
 <!-- more -->
 
-![TypeRig running inside FontLab 8](/media/scripting-the-mundane-python-fontlab/fl8-head-12-typerig.png)
+![TypeRig running inside FontLab 8](../media/scripting-the-mundane-python-fontlab/fl8-head-12-typerig.png)
 
 ## The boring 90%
 

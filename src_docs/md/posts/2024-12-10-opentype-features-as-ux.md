@@ -32,7 +32,7 @@ handle the friction the user never sees.
 
 <!-- more -->
 
-![OpenType feature panel in FontLab 8](/media/opentype-features-as-ux/fl8-8days-opentype.png)
+![OpenType feature panel in FontLab 8](../media/opentype-features-as-ux/fl8-8days-opentype.png)
 
 ## The features users never see
 

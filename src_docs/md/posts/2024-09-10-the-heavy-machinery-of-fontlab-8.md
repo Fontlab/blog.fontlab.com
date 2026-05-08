@@ -33,7 +33,7 @@ the truth.
 
 <!-- more -->
 
-![Power Nudge in the FontLab 8 toolbox](/media/the-heavy-machinery-of-fontlab-8/fl8-head-03-toolbox-powernudge.png)
+![Power Nudge in the FontLab 8 toolbox](../media/the-heavy-machinery-of-fontlab-8/fl8-head-03-toolbox-powernudge.png)
 
 ## A font is not a vector drawing
 

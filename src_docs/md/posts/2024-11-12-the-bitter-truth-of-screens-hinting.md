@@ -78,7 +78,7 @@ have been merged. The variable-font export keeps the overlap because it has to.
 
 ## FontAudit, the pedantic accountant
 
-[FontLab 8’s FontAudit panel](/2024/10/15/scripting-the-mundane-python-fontlab/) is the
+[FontLab 8’s FontAudit panel](2024-10-15-scripting-the-mundane-python-fontlab.md) is the
 safety net most users do not know they have.
 It scans the font for the kind of structural issues that pass visual inspection but fail
 at the rendering stage: open contours that should be closed, unnecessary points sitting

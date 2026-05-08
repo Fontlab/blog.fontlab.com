@@ -36,7 +36,7 @@ engravings. The trick succeeds because the image refuses full realism without gi
 recognisability. It is edited likeness, not likeness alone.
 You see the method as you see the face.
 
-![Vexy Lines interface](/media/vexy-lines-and-the-useful-lie-of-engraving/vexy-lines-interface.png)
+![Vexy Lines interface](../media/vexy-lines-and-the-useful-lie-of-engraving/vexy-lines-interface.png)
 
 Halftones do a related trick with different maths.
 Screen-printing guides describe them as grids of dots translating greyscale into

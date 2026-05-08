@@ -55,7 +55,7 @@ the tongue against the soft palate.
 No Latin letter has its design rationale on record in this way.
 
 If you are designing Hangul fonts in FontLab today, as Kwon Gun-oh’s
-[2025 Korean guide](2026-08-25-the-fontlab-book-in-korean.md) explains in detail, you
+[2025 Korean guide](2025-11-18-the-fontlab-book-in-korean.md) explains in detail, you
 are working with a system whose geometric logic was set down in 1443 and has never
 needed to be re-argued.
 That is a strange and rather useful position to be in.
@@ -65,6 +65,6 @@ That is a strange and rather useful position to be in.
 - [Hunminjeongeum — Wikipedia](https://en.wikipedia.org/wiki/Hunminjeongeum)
 - [Hunminjeongeum — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Hunminjeongeum)
 - [Hangul — Wikipedia](https://en.wikipedia.org/wiki/Hangul)
-- [The FontLab book in Korean](2026-08-25-the-fontlab-book-in-korean.md)
+- [The FontLab book in Korean](2025-11-18-the-fontlab-book-in-korean.md)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/){ .fl-help-cta }

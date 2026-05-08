@@ -18,7 +18,7 @@ The fix is to remove overlaps on export. FontLab does this non-destructively: th
 
 ## FontAudit, the pedantic accountant
 
-[FontLab 8’s FontAudit panel](/2024/10/15/scripting-the-mundane-python-fontlab/) is the safety net most users do not know they have. It scans the font for the kind of structural issues that pass visual inspection but fail at the rendering stage: open contours that should be closed, unnecessary points sitting between two true on-curve points, near-flat curves that ought to be straight lines, segments that double back on themselves, contours running in the wrong direction. Each finding gets flagged with a location and a severity.
+[FontLab 8’s FontAudit panel](https://blog.fontlab.com/2024/10/15/scripting-the-mundane-python-fontlab/index.md) is the safety net most users do not know they have. It scans the font for the kind of structural issues that pass visual inspection but fail at the rendering stage: open contours that should be closed, unnecessary points sitting between two true on-curve points, near-flat curves that ought to be straight lines, segments that double back on themselves, contours running in the wrong direction. Each finding gets flagged with a location and a severity.
 
 The auditing role is the right one for software. Visually, you can stare at a glyph for ten minutes and miss the redundant on-curve point that is making the rendering subtly off. FontAudit finds it in milliseconds and tells you exactly where it is.
 
