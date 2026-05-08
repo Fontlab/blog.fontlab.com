@@ -94,18 +94,32 @@
   filter: invert(0.86);
 }
 
-/* Mobile: stop floating, center, give it room. */
+/* Mobile: on the article page, stop floating and stack full-width.
+   On the blog index, hide the thumbnail entirely — list density wins. */
 @media (max-width: 720px) {
   .md-typeset .illu-thumb,
-  .md-typeset .illu-thumb.illu-left,
-  .md-post--excerpt .md-typeset .illu-thumb,
-  .md-post--excerpt .md-typeset .illu-thumb.illu-left {
+  .md-typeset .illu-thumb.illu-left {
     float: none;
     display: block;
-    width: 65%;
-    max-width: 360px;
+    width: 100%;
+    max-width: none;
     height: auto;
-    margin: 0.5rem auto 1.25rem;
+    position: static;
+    top: auto;
+    margin: 0.5rem 0 1.25rem;
+  }
+
+  .md-post--excerpt .md-typeset .illu-thumb,
+  .md-post--excerpt .md-typeset .illu-thumb.illu-index,
+  .md-post--excerpt .md-typeset .illu-thumb.illu-index.illu-left {
+    display: none;
+  }
+
+  .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index),
+  .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index.illu-left) {
+    padding-right: 0;
+    padding-left: 2rem;
+    min-height: 0;
   }
 }
 
