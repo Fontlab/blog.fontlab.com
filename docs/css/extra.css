@@ -188,7 +188,7 @@ html {
   margin: 2rem 0 1rem;
 }
 
-.md-typeset .md-post--excerpt h2 {
+.md-post--excerpt .md-typeset h2 {
   text-transform: none;
   font-weight: 400;
   letter-spacing: 0;
