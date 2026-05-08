@@ -1,5 +1,3 @@
-{.illu-thumb .illu-index}
-
 The most difficult part of drawing a typeface is not the black ink. It is the white space.
 
 Letters are social creatures, and how much personal space they afford one another decides whether a paragraph is a joy to read or a chore. Gunnlaugur SE Briem, who taught type design at the Royal Academy of Fine Arts in Copenhagen in 1996, distilled this into a relentlessly practical methodology that eschews inspiration in favour of systematic testing.

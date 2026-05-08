@@ -998,10 +998,8 @@
 
   <h1>Calfonts: honing letters from rough sketches to clean curves</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/calfonts-honing-letters-1.png" /></p>
-<p>Honing is the part of font design between “I have a sketch” and “I have a glyph that
-ships.” The Calfonts honing tutorial — adapted here — covers the boring, decisive 80% of
-drawing: fixing paths automatically where you can, fixing them by hand where you must.</p>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/calfonts-honing-letters-2.png" /></p>
+<p>Honing is the part of font design between “I have a sketch” and “I have a glyph that ships.” The Calfonts honing tutorial — adapted here — covers the boring, decisive 80% of drawing: fixing paths automatically where you can, fixing them by hand where you must.</p>
 <!-- more -->
 
 <h2 id="step-1-automatic-path-fixing">Step 1: automatic path fixing<a class="headerlink" href="#step-1-automatic-path-fixing" title="Permanent link">&para;</a></h2>
@@ -1009,47 +1007,25 @@ drawing: fixing paths automatically where you can, fixing them by hand where you
 <ul>
 <li><strong>Optimize contours</strong> removes superfluous points without changing the shape.</li>
 <li><strong>Convert to TrueType / PostScript</strong> rewrites curves in the target curve type cleanly.</li>
-<li><strong>Reverse path direction</strong> fixes paths whose winding is wrong (outer counterclockwise,
-  inner clockwise — or the reverse, depending on PostScript vs TrueType).</li>
+<li><strong>Reverse path direction</strong> fixes paths whose winding is wrong (outer counterclockwise, inner clockwise — or the reverse, depending on PostScript vs TrueType).</li>
 <li><strong>Heal openings and overlaps</strong> fixes contours that have been broken by editing.</li>
 </ul>
-<p>Run these first. They are fast, conservative, and remove the kind of contour debris that
-makes hand-fixing harder than it needs to be.</p>
+<p>Run these first. They are fast, conservative, and remove the kind of contour debris that makes hand-fixing harder than it needs to be.</p>
 <h2 id="step-2-fixing-paths-by-hand">Step 2: fixing paths by hand<a class="headerlink" href="#step-2-fixing-paths-by-hand" title="Permanent link">&para;</a></h2>
 <p>What automation can’t fix:</p>
 <ul>
-<li><strong>Visual proportions.</strong> A counter that is too small.
-  A bowl that is asymmetric in a way the design does not justify.
-  The shoulder of <code>n</code> that meets the stem at a wrong angle.</li>
-<li><strong>Curve quality.</strong> Inflection points where there shouldn’t be any.
-  Bézier handles that don’t align with the curve direction at on-curve points (which
-  produces a small but visible kink).</li>
-<li><strong>Spurious points.</strong> Two on-curve points where one would do.
-  Three points where two would do.
-  The rule: if removing a point doesn’t change the shape, remove it.</li>
+<li><strong>Visual proportions.</strong> A counter that is too small. A bowl that is asymmetric in a way the design does not justify. The shoulder of <code>n</code> that meets the stem at a wrong angle.</li>
+<li><strong>Curve quality.</strong> Inflection points where there shouldn’t be any. Bézier handles that don’t align with the curve direction at on-curve points (which produces a small but visible kink).</li>
+<li><strong>Spurious points.</strong> Two on-curve points where one would do. Three points where two would do. The rule: if removing a point doesn’t change the shape, remove it.</li>
 </ul>
-<p>The Calfonts heuristic is to look at every glyph at three sizes: the size you are
-designing at (large), the intended use size (small), and a deliberately-too-large size
-(200pt+). Different problems show at different sizes.</p>
+<p>The Calfonts heuristic is to look at every glyph at three sizes: the size you are designing at (large), the intended use size (small), and a deliberately-too-large size (200pt+). Different problems show at different sizes.</p>
 <h2 id="step-3-curve-types-and-tension">Step 3: curve types and tension<a class="headerlink" href="#step-3-curve-types-and-tension" title="Permanent link">&para;</a></h2>
-<p>The Calfonts material spends real time on curve tension — the question of how full or
-how empty a curve looks at a given handle length.
-A 50% handle (the so-called “circle” tension) makes a curve that looks like part of a
-circle. Shorter handles produce flatter, more rectangular curves.
-Longer handles produce ballooning curves that often look wrong.</p>
-<p>Most letterforms want handles in the 55–65% range.
-Going outside that range is a deliberate design choice; getting there by accident is a
-bug.</p>
+<p>The Calfonts material spends real time on curve tension — the question of how full or how empty a curve looks at a given handle length. A 50% handle (the so-called “circle” tension) makes a curve that looks like part of a circle. Shorter handles produce flatter, more rectangular curves. Longer handles produce ballooning curves that often look wrong.</p>
+<p>Most letterforms want handles in the 55–65% range. Going outside that range is a deliberate design choice; getting there by accident is a bug.</p>
 <h2 id="step-4-optical-adjustment">Step 4: optical adjustment<a class="headerlink" href="#step-4-optical-adjustment" title="Permanent link">&para;</a></h2>
-<p>Curved letters need to overshoot straight ones — <code>o</code> extends slightly above and below
-<code>n</code>. Diagonals (<code>v</code>, <code>w</code>, <code>y</code>) usually overshoot more than rounds.
-These adjustments are tiny in number (1–2% of UPM) and enormous in effect.
-The Calfonts tutorial recommends setting overshoot zones in FontLab so that the values
-apply consistently across glyphs rather than being eyeballed per glyph.</p>
+<p>Curved letters need to overshoot straight ones — <code>o</code> extends slightly above and below <code>n</code>. Diagonals (<code>v</code>, <code>w</code>, <code>y</code>) usually overshoot more than rounds. These adjustments are tiny in number (1–2% of UPM) and enormous in effect. The Calfonts tutorial recommends setting overshoot zones in FontLab so that the values apply consistently across glyphs rather than being eyeballed per glyph.</p>
 <h2 id="when-honing-is-done">When honing is done<a class="headerlink" href="#when-honing-is-done" title="Permanent link">&para;</a></h2>
-<p>You stop honing when you cannot identify a specific change that would make the glyph
-better. That is not “when you are tired of it” or “when the deadline arrives” — though
-both happen. The Calfonts standard is the higher one.</p>
+<p>You stop honing when you cannot identify a specific change that would make the glyph better. That is not “when you are tired of it” or “when the deadline arrives” — though both happen. The Calfonts standard is the higher one.</p>
 <p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/manual/">Read more →</a></p>
 
 

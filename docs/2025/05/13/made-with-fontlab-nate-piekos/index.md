@@ -14,7 +14,7 @@ Dark mode looks trivial as a feature on a release-notes page. It is not trivial 
 
 The Blambot catalogue on the gallery — [Budrick BB](https://blambot.com/products/budrick), [Inkcantation BB](https://blambot.com/products/inkcantation), [Ready for Anything BB](https://blambot.com/products/ready-for-anything), [Shrunken Head BB](https://blambot.com/products/shrunken-head), [Thunderclap BB](https://blambot.com/products/thunderclap) — covers the genre’s working ranges: a sturdy dialogue letterer, an ink-saturated horror display, a brassy action display, a heavy display headline, a thunderous SFX font. All five out of one studio, in one editor, with one consistent set of metrics across the family.
 
-The way Piekos works is the case for FontLab in genre work that nobody writes long blog posts about: not the prestige Latin text family that gets the design awards, but the high-volume working catalogue that pays the rent and ends up everywhere.
+The way Piekos works is the case for FontLab in the kind of genre work that quietly fills the world: not the prestige Latin text family that gets the design awards, but the high-volume working catalogue that lives inside thousands of comics and ends up everywhere readers look.
 
 ## More from Nate Piekos
 

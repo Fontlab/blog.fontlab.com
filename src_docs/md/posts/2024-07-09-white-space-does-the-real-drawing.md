@@ -22,44 +22,21 @@ review:
   consolidate_with: ""
   notes: "Sharp, well-argued editorial on spacing primacy. Frutiger quote needs a real citation URL; image placeholder must be resolved before publish."
 ---
-![](../media/illu/white-space-does-the-real-drawing-1.png){.illu-thumb .illu-index}
+![](../media/illu/white-space-does-the-real-drawing-3.png){.illu-thumb .illu-index}
 
-Letterforms are made of black shapes, but type is judged by the white around and inside
-them.
+Letterforms are made of black shapes, but type is judged by the white around and inside them.
 
 <!-- more -->
 
-Adrian Frutiger’s old line — that the empty spaces are the crucial part of a typeface —
-remains the cleanest correction to beginner enthusiasm.
-People fall in love with terminals, serifs, and flamboyant tails.
-The page falls apart because the counters and sidebearings were treated as
-afterthoughts.
+Adrian Frutiger’s old line — that the empty spaces are the crucial part of a typeface — remains the cleanest correction to beginner enthusiasm. People fall in love with terminals, serifs, and flamboyant tails. The page falls apart because the counters and sidebearings were treated as afterthoughts.
 
-Walter Tracy’s spacing logic is useful precisely because it is unfancy.
-Start with a few key letters.
-Think in groups. Build rhythm before you chase exceptions.
-Do not confuse kerning with structural spacing.
-Research on spacing methods makes the same point in more formal language: fitting is not
-cosmetic repair after drawing.
-It is part of the drawing.
+Walter Tracy’s spacing logic is useful precisely because it is unfancy. Start with a few key letters. Think in groups. Build rhythm before you chase exceptions. Do not confuse kerning with structural spacing. Research on spacing methods makes the same point in more formal language: fitting is not cosmetic repair after drawing. It is part of the drawing.
 
-That is a perfect FontLab 8 theme because it turns the software away from “how to kern
-fast” and toward the harder truth: if the default rhythm is wrong, you are decorating a
-problem.
-FontLab’s metrics keys let you set the sidebearing of `n` once and link the left
-sidebearings of `b`, `h`, `i`, `k`, and `r` to it; tighten the `n` later and everything
-linked tightens with it.
-Class-based kerning extends the same logic to pairs.
-You group all left-leaning diagonals — `V`, `W`, `Y` and their diacritical variants —
-into one class, all right-leaning diagonals into another, and kern the class once.
+That is a perfect FontLab 8 theme because it turns the software away from “how to kern fast” and toward the harder truth: if the default rhythm is wrong, you are decorating a problem. FontLab’s metrics keys let you set the sidebearing of `n` once and link the left sidebearings of `b`, `h`, `i`, `k`, and `r` to it; tighten the `n` later and everything linked tightens with it. Class-based kerning extends the same logic to pairs. You group all left-leaning diagonals — `V`, `W`, `Y` and their diacritical variants — into one class, all right-leaning diagonals into another, and kern the class once.
 
-Optical sizes push the same idea further: text and display cuts are not vanity
-variations, but different answers to different spatial problems.
-The smaller the type, the more air the letters need.
-The larger the type, the tighter the rhythm can sit without falling apart.
+Optical sizes push the same idea further: text and display cuts are not vanity variations, but different answers to different spatial problems. The smaller the type, the more air the letters need. The larger the type, the tighter the rhythm can sit without falling apart.
 
-The drawing is the part students notice.
-The spacing is the part professionals get paid for.
+The drawing is the part students notice. The spacing is the part professionals get paid for.
 
 ## References
 

@@ -999,76 +999,35 @@
   <h1>Color, scripts, and color-font formats</h1>
 
 <p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/color-scripts-color-fonts-1.png" /></p>
-<p>FontLab 8 supports every current color OpenType format and ships with Python 3.11
-scripting and the TypeRig library.
-This post covers the color workflow and scripting capabilities from the “Color” and
-“Scripts &amp; extensions” chapters of the What’s New documentation.</p>
+<p>FontLab 8 supports every current color OpenType format and ships with Python 3.11 scripting and the TypeRig library. This post covers the color workflow and scripting capabilities from the “Color” and “Scripts &amp; extensions” chapters of the What’s New documentation.</p>
 <!-- more -->
 
 <h2 id="color-in-fontlab-8">Color in FontLab 8<a class="headerlink" href="#color-in-fontlab-8" title="Permanent link">&para;</a></h2>
 <p>Color work starts with the redesigned <strong>Colors panel</strong>.</p>
 <p><img alt="FontLab 8 color feature header showing gradient fills applied to letterforms" src="../../../../media/fl8-head-09-gradient.png" /></p>
-<p>The panel has three sections: a <strong>color type selector</strong> at the top (stroke or fill;
-solid, linear gradient, radial gradient, or conical gradient); a <strong>color and gradient
-bar</strong> showing the current value; and gradient point controls for adding, removing, and
-repositioning stops when a gradient is active.</p>
-<p>For gradients, the <strong>visual gradient editor</strong> opens in the Glyph window.
-You see the direction and stops overlaid on the actual glyph and edit them by dragging
-directly on the canvas — considerably faster than editing coordinates numerically.</p>
-<p>Colors in FontLab are per-element.
-Different colors in different parts of a glyph require separate elements, one per color
-region. This maps directly to how OpenType color formats work internally.</p>
+<p>The panel has three sections: a <strong>color type selector</strong> at the top (stroke or fill; solid, linear gradient, radial gradient, or conical gradient); a <strong>color and gradient bar</strong> showing the current value; and gradient point controls for adding, removing, and repositioning stops when a gradient is active.</p>
+<p>For gradients, the <strong>visual gradient editor</strong> opens in the Glyph window. You see the direction and stops overlaid on the actual glyph and edit them by dragging directly on the canvas — considerably faster than editing coordinates numerically.</p>
+<p>Colors in FontLab are per-element. Different colors in different parts of a glyph require separate elements, one per color region. This maps directly to how OpenType color formats work internally.</p>
 <h2 id="the-four-color-formats">The four color formats<a class="headerlink" href="#the-four-color-formats" title="Permanent link">&para;</a></h2>
 <p>FontLab 8 exports all four current OpenType color formats:</p>
-<p><strong>OpenType+COLR v0</strong> — Vector layers with flat colors.
-Widely supported, compact, works in browsers and most desktop applications.
-Good for layered designs with solid fills.</p>
-<p><strong>OpenType+COLR v1</strong> — Adds gradients, compositing operations, and variable color
-(gradient stops can vary along a variation axis).
-Supported in Chrome, Firefox, and recent design tools.
-The format for ambitious color designs.</p>
-<p><strong>OpenType+SVG</strong> — Full SVG graphics per glyph, supporting anything SVG supports.
-Supported in Firefox and some Adobe CC apps.
-Larger file sizes.</p>
-<p><strong>OpenType+sbix / CBDT</strong> — PNG bitmap images per glyph.
-Apple and Google’s original emoji formats.
-Supported everywhere emoji work.
-Multiple bitmap sizes are embedded at different resolutions rather than scaling from a
-single source.</p>
-<p>A single color font project can export all four simultaneously.
-Users and distributors pick the format their environment supports.</p>
+<p><strong>OpenType+COLR v0</strong> — Vector layers with flat colors. Widely supported, compact, works in browsers and most desktop applications. Good for layered designs with solid fills.</p>
+<p><strong>OpenType+COLR v1</strong> — Adds gradients, compositing operations, and variable color (gradient stops can vary along a variation axis). Supported in Chrome, Firefox, and recent design tools. The format for ambitious color designs.</p>
+<p><strong>OpenType+SVG</strong> — Full SVG graphics per glyph, supporting anything SVG supports. Supported in Firefox and some Adobe CC apps. Larger file sizes.</p>
+<p><strong>OpenType+sbix / CBDT</strong> — PNG bitmap images per glyph. Apple and Google’s original emoji formats. Supported everywhere emoji work. Multiple bitmap sizes are embedded at different resolutions rather than scaling from a single source.</p>
+<p>A single color font project can export all four simultaneously. Users and distributors pick the format their environment supports.</p>
 <h2 id="dark-mode-palette">Dark-mode palette<a class="headerlink" href="#dark-mode-palette" title="Permanent link">&para;</a></h2>
-<p>FontLab 8 can automatically generate a <strong>dark-mode palette</strong> companion for a COLR v1
-font. The palette remaps light-background colors to dark-background equivalents — the
-mechanism that lets emoji and color fonts adapt to system light/dark mode without a
-separate font file.</p>
+<p>FontLab 8 can automatically generate a <strong>dark-mode palette</strong> companion for a COLR v1 font. The palette remaps light-background colors to dark-background equivalents — the mechanism that lets emoji and color fonts adapt to system light/dark mode without a separate font file.</p>
 <h2 id="scripting-with-python-311">Scripting with Python 3.11<a class="headerlink" href="#scripting-with-python-311" title="Permanent link">&para;</a></h2>
 <p><img alt="FontLab 8 scripting header showing TypeRig library interface and Python output panel" src="../../../../media/fl8-head-12-typerig.png" /></p>
-<p>FontLab 8 bundles Python 3.11 as a self-contained package — no system Python
-installation needed.
-On macOS and Windows, place FontLab-specific packages in the <code>python/3.11/site-packages</code>
-folder inside the FontLab user data directory.</p>
-<p>Python 3.11 is 10–60% faster than the 3.10 in FontLab 8.0, and dramatically faster than
-the Python 2.7 in FontLab VI. The scripting panel provides an interactive console and a
-script editor.</p>
+<p>FontLab 8 bundles Python 3.11 as a self-contained package — no system Python installation needed. On macOS and Windows, place FontLab-specific packages in the <code>python/3.11/site-packages</code> folder inside the FontLab user data directory.</p>
+<p>Python 3.11 is 10–60% faster than the 3.10 in FontLab 8.0, and dramatically faster than the Python 2.7 in FontLab VI. The scripting panel provides an interactive console and a script editor.</p>
 <h2 id="typerig">TypeRig<a class="headerlink" href="#typerig" title="Permanent link">&para;</a></h2>
-<p><strong>TypeRig</strong> — developed by Vassil Kateliev of Karandash type foundry — is a
-comprehensive Python library for type design operations, shipped with FontLab 8. It
-exposes glyph-level operations, metric manipulation, contour transformations, and batch
-processing in a clean Python API.</p>
-<p>For designers processing large glyph sets — adjusting stem weights across a master,
-applying systematic metric changes, building custom audit scripts — TypeRig turns hours
-of manual work into a few lines of code.</p>
-<p>From FontLab 8.3, a <strong>post-export script</strong> can run automatically after every export.
-Point it at a TypeRig-based script that renames files, copies them to a distribution
-folder, or runs additional processing, and every export triggers it.</p>
-<p>FontLab 8 imports and exports cleanly to and from RoboFont (UFO), Glyphs (<code>.glyphs</code>),
-FontForge (SFD), and other common formats.
-Cross-tool collaboration is practical.</p>
+<p><strong>TypeRig</strong> — developed by Vassil Kateliev of Karandash type foundry — is a comprehensive Python library for type design operations, shipped with FontLab 8. It exposes glyph-level operations, metric manipulation, contour transformations, and batch processing in a clean Python API.</p>
+<p>For designers processing large glyph sets — adjusting stem weights across a master, applying systematic metric changes, building custom audit scripts — TypeRig turns hours of manual work into a few lines of code.</p>
+<p>From FontLab 8.3, a <strong>post-export script</strong> can run automatically after every export. Point it at a TypeRig-based script that renames files, copies them to a distribution folder, or runs additional processing, and every export triggers it.</p>
+<p>FontLab 8 imports and exports cleanly to and from RoboFont (UFO), Glyphs (<code>.glyphs</code>), FontForge (SFD), and other common formats. Cross-tool collaboration is practical.</p>
 <hr />
-<p>Full documentation is in the FontLab 8 What’s New chapters on
-<a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/">Color</a> and
-<a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/">Scripts &amp; extensions</a>.</p>
+<p>Full documentation is in the FontLab 8 What’s New chapters on <a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/">Color</a> and <a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/">Scripts &amp; extensions</a>.</p>
 <p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/">Read more →</a></p>
 
 

@@ -965,41 +965,21 @@
 
   <h1>FontLab TV: glyph construction from scratch</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-tv-glyph-construction-1.png" /></p>
-<p>The first letter is the hardest.
-The FontLab TV glyph construction episode is a calm, deliberate walkthrough of drawing
-one letter — <code>n</code> — from a blank glyph cell to a finished, point-clean contour you can
-build a font around.</p>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/fontlab-tv-glyph-construction-3.png" /></p>
+<p>The first letter is the hardest. The FontLab TV glyph construction episode is a calm, deliberate walkthrough of drawing one letter — <code>n</code> — from a blank glyph cell to a finished, point-clean contour you can build a font around.</p>
 <!-- more -->
 
 <blockquote>
-<p>📺 Watch:
-<a href="https://www.youtube.com/watch?v=McFex__HSfk">Assembling glyphs in FontLab 7, Part 1</a></p>
+<p>📺 Watch: <a href="https://www.youtube.com/watch?v=McFex__HSfk">Assembling glyphs in FontLab 7, Part 1</a></p>
 </blockquote>
 <h2 id="what-it-covers">What it covers<a class="headerlink" href="#what-it-covers" title="Permanent link">&para;</a></h2>
-<p><strong>The starting point.</strong> Before drawing, set the UPM, ascender, descender, x-height,
-cap-height, and overshoot lines.
-The episode shows where these go in FontLab and why getting them right at the start
-saves rework later.</p>
-<p><strong>Why <code>n</code>.</strong> Three vertical stems, one curve, the basic stress axis — <code>n</code> contains the
-DNA of every other lowercase letter.
-Get it right and <code>h</code>, <code>m</code>, <code>u</code>, <code>i</code>, <code>r</code> follow.</p>
-<p><strong>Bézier discipline.</strong> Two on-curve points per extremum, handles aligned to the curve
-direction, no spurious points.
-The episode shows the difference between a clean two-point curve and the same shape
-drawn with five points and offers a concrete heuristic: if removing a point does not
-change the shape, remove the point.</p>
-<p><strong>Overshoot.</strong> Curved letters need to extend slightly above and below straight letters
-to look the same height.
-The episode shows the standard overshoot values (1–2% of UPM) and how to apply them via
-overshoot zones rather than per-glyph fudging.</p>
-<p><strong>Quality checks.</strong> FontLab’s contour audit catches reversed paths, duplicate points,
-near-collinear handles, and other geometry sins.
-Run it before you call a glyph done.</p>
+<p><strong>The starting point.</strong> Before drawing, set the UPM, ascender, descender, x-height, cap-height, and overshoot lines. The episode shows where these go in FontLab and why getting them right at the start saves rework later.</p>
+<p><strong>Why <code>n</code>.</strong> Three vertical stems, one curve, the basic stress axis — <code>n</code> contains the DNA of every other lowercase letter. Get it right and <code>h</code>, <code>m</code>, <code>u</code>, <code>i</code>, <code>r</code> follow.</p>
+<p><strong>Bézier discipline.</strong> Two on-curve points per extremum, handles aligned to the curve direction, no spurious points. The episode shows the difference between a clean two-point curve and the same shape drawn with five points and offers a concrete heuristic: if removing a point does not change the shape, remove the point.</p>
+<p><strong>Overshoot.</strong> Curved letters need to extend slightly above and below straight letters to look the same height. The episode shows the standard overshoot values (1–2% of UPM) and how to apply them via overshoot zones rather than per-glyph fudging.</p>
+<p><strong>Quality checks.</strong> FontLab’s contour audit catches reversed paths, duplicate points, near-collinear handles, and other geometry sins. Run it before you call a glyph done.</p>
 <h2 id="why-it-matters">Why it matters<a class="headerlink" href="#why-it-matters" title="Permanent link">&para;</a></h2>
-<p>Every glyph after the first is a variation on a structure you set up at the start.
-This episode is the patient version of “draw one letter properly” — and it pays off
-across the entire font.</p>
+<p>Every glyph after the first is a variation on a structure you set up at the start. This episode is the patient version of “draw one letter properly” — and it pays off across the entire font.</p>
 <p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/tutorials/calfonts/1.%20Drawing/01b%20Basics%20of%20Drawing%20in%20FontLab/">Read more →</a></p>
 
 

@@ -25,53 +25,23 @@ review:
 ---
 ![](../media/illu/made-with-fontlab-eduardo-tunni-1.png){.illu-thumb .illu-index}
 
-[Graduate](https://etunni.github.io/Graduate-Variable-Font/) is the kind of variable
-font that makes the case for the format without having to argue.
-Slab to sans, light to black, all in one file.
-Eduardo Tunni drew it in FontLab.
+[Graduate](https://etunni.github.io/Graduate-Variable-Font/) is the kind of variable font that makes the case for the format without having to argue. Slab to sans, light to black, all in one file. Eduardo Tunni drew it in FontLab.
 
 <!-- more -->
 
-Tunni’s foundry [Tipo](https://www.tipo.net.ar/) sits in Buenos Aires.
-He has been drawing type long enough to have his name attached to an editor feature in
-basically every modern editor — Tunni Lines, the technique for adjusting Bézier curve
-tension by handle ratios, named after his work and built into FontLab’s drawing engine.
-So when Tunni talks about FontLab, he’s talking about software that has a piece of his
-fingerprint baked into it.
+Tunni’s foundry [Tipo](https://www.tipo.net.ar/) sits in Buenos Aires. He has been drawing type long enough to have his name attached to an editor feature in basically every modern editor — Tunni Lines, the technique for adjusting Bézier curve tension by handle ratios, named after his work and built into FontLab’s drawing engine. So when Tunni talks about FontLab, he’s talking about software that has a piece of his fingerprint baked into it.
 
 His testimonial is the cleanest summary of FontLab’s pitch on offer:
 
-> Discover the amazing and innovative drawing tools integrated with a complete set of
-> functionalities that is necessary to design and produce high-quality fonts.
-> FontLab 8 is definitely the all-inclusive app for typographers.
+> Discover the amazing and innovative drawing tools integrated with a complete set of functionalities that is necessary to design and produce high-quality fonts. FontLab 8 is definitely the all-inclusive app for typographers.
 
-— Eduardo Tunni, [Tipo](https://www.tipo.net.ar/), designer of
-[Graduate](https://etunni.github.io/Graduate-Variable-Font/)
+— Eduardo Tunni, [Tipo](https://www.tipo.net.ar/), designer of [Graduate](https://etunni.github.io/Graduate-Variable-Font/)
 
-The phrase to underline is “all-inclusive app.”
-Variable-font production used to mean stitching together an outline editor, a separate
-variation-axis tool, an OpenType feature compiler, and a TTX wrangler — four programs
-and a lot of glue. Graduate is the kind of project that proves the all-in-one approach
-works: the whole family was developed and shipped from inside the editor, including the
-conditional substitutions and axis configuration that make a single binary behave like a
-whole library.
+The phrase to underline is “all-inclusive app.” Variable-font production used to mean stitching together an outline editor, a separate variation-axis tool, an OpenType feature compiler, and a TTX wrangler — four programs and a lot of glue. Graduate is the kind of project that proves the all-in-one approach works: the whole family was developed and shipped from inside the editor, including the conditional substitutions and axis configuration that make a single binary behave like a whole library.
 
-Tunni Lines themselves are worth a paragraph.
-The traditional way to refine a Bézier curve is to grab a handle and pull.
-Tunni Lines instead let you grab a tension ratio between the two handles of a segment
-and adjust them in concert, keeping the curvature distribution sane while you tune the
-shape. Once you’ve used them, the bare-handle workflow feels like editing with mittens
-on. They are also fundamentally a typographer’s tool — they make the curve do the right
-thing for a letterform, not the right thing for an arbitrary illustration.
-Jeremy Tankard, in a separate testimonial on the same page, calls them “brilliant” and
-the editor “the best vector curve editor out there by a mile.”
-That’s two designers from different continents, with different houses, agreeing on the
-same feature.
+Tunni Lines themselves are worth a paragraph. The traditional way to refine a Bézier curve is to grab a handle and pull. Tunni Lines instead let you grab a tension ratio between the two handles of a segment and adjust them in concert, keeping the curvature distribution sane while you tune the shape. Once you’ve used them, the bare-handle workflow feels like editing with mittens on. They are also fundamentally a typographer’s tool — they make the curve do the right thing for a letterform, not the right thing for an arbitrary illustration. Jeremy Tankard, in a separate testimonial on the same page, calls them “brilliant” and the editor “the best vector curve editor out there by a mile.” That’s two designers from different continents, with different houses, agreeing on the same feature.
 
-The catalogue at [Tipo](https://www.tipo.net.ar/) is broader than Graduate alone — text
-and display families across many years of work — and Graduate’s variable-font release is
-the public face of how Tunni currently ships.
-Free, open source, distributed on GitHub, drawn end to end in FontLab.
+The catalogue at [Tipo](https://www.tipo.net.ar/) is broader than Graduate alone — text and display families across many years of work — and Graduate’s variable-font release is the public face of how Tunni currently ships. Free, open source, distributed on GitHub, drawn end to end in FontLab.
 
 ## More from Eduardo Tunni
 

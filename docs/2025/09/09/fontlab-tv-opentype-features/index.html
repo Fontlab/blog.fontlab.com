@@ -965,46 +965,30 @@
 
   <h1>FontLab TV: OpenType features made simple</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-tv-opentype-features-1.png" /></p>
-<p>OpenType features are the part of font design where text becomes typography.
-The FontLab TV OpenType episode walks through the feature tags you will actually use,
-what they do at runtime, and how to write them without breaking anything else.</p>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-tv-opentype-features-2.png" /></p>
+<p>OpenType features are the part of font design where text becomes typography. The FontLab TV OpenType episode walks through the feature tags you will actually use, what they do at runtime, and how to write them without breaking anything else.</p>
 <!-- more -->
 
 <blockquote>
-<p>📺 Watch:
-<a href="https://www.youtube.com/watch?v=ehkuzMvmjbY">Auto OpenType features in FontLab 7 on FontLab TV</a></p>
+<p>📺 Watch: <a href="https://www.youtube.com/watch?v=ehkuzMvmjbY">Auto OpenType features in FontLab 7 on FontLab TV</a></p>
 </blockquote>
 <h2 id="what-it-covers">What it covers<a class="headerlink" href="#what-it-covers" title="Permanent link">&para;</a></h2>
 <p><strong>The features that matter most.</strong></p>
 <ul>
-<li><code>kern</code> — pair kerning.
-  Always on.</li>
+<li><code>kern</code> — pair kerning. Always on.</li>
 <li><code>liga</code> — standard ligatures (<code>fi</code>, <code>fl</code>). Almost always on.</li>
 <li><code>dlig</code> — discretionary ligatures (<code>st</code>, <code>ct</code>). User-toggled.</li>
 <li><code>smcp</code> / <code>c2sc</code> — small caps from lowercase / from uppercase.</li>
-<li><code>onum</code> / <code>lnum</code> / <code>tnum</code> / <code>pnum</code> — old-style / lining / tabular / proportional
-  figures.</li>
-<li><code>ss01</code>–<code>ss20</code> — stylistic sets.
-  Twenty buckets for alternates.</li>
+<li><code>onum</code> / <code>lnum</code> / <code>tnum</code> / <code>pnum</code> — old-style / lining / tabular / proportional figures.</li>
+<li><code>ss01</code>–<code>ss20</code> — stylistic sets. Twenty buckets for alternates.</li>
 <li><code>salt</code> / <code>calt</code> — stylistic alternates / contextual alternates.</li>
 <li><code>locl</code> — language-specific forms (Polish kreska, Catalan punt volat, Dutch IJ).</li>
 </ul>
-<p><strong>FEA syntax, the practical bits.</strong> The episode covers substitution rules
-(<code>sub a by a.alt;</code>), classes (<code>@uppercase = [A B C ...];</code>), context-sensitive rules
-(<code>sub a' b by a.alt;</code>), and lookup ordering.
-Most feature bugs come from the wrong feature firing first; FontLab’s compiler error
-messages and trace tools help.</p>
-<p><strong>Compiling and testing.</strong> FontLab has both a built-in compiler and round-trips with
-Adobe’s <code>makeotf</code>. The video shows the compile-test loop and the small set of system
-fonts (Adobe Fonts test pages, browser dev tools, OS font palettes) that surface feature
-bugs fastest.</p>
-<p><strong>The mark and mkmk features briefly.</strong> These are auto-generated from anchors, but you
-should still understand what they emit — they are often the source of “why is my accent
-in the wrong place” bugs.</p>
+<p><strong>FEA syntax, the practical bits.</strong> The episode covers substitution rules (<code>sub a by a.alt;</code>), classes (<code>@uppercase = [A B C ...];</code>), context-sensitive rules (<code>sub a' b by a.alt;</code>), and lookup ordering. Most feature bugs come from the wrong feature firing first; FontLab’s compiler error messages and trace tools help.</p>
+<p><strong>Compiling and testing.</strong> FontLab has both a built-in compiler and round-trips with Adobe’s <code>makeotf</code>. The video shows the compile-test loop and the small set of system fonts (Adobe Fonts test pages, browser dev tools, OS font palettes) that surface feature bugs fastest.</p>
+<p><strong>The mark and mkmk features briefly.</strong> These are auto-generated from anchors, but you should still understand what they emit — they are often the source of “why is my accent in the wrong place” bugs.</p>
 <h2 id="why-it-matters">Why it matters<a class="headerlink" href="#why-it-matters" title="Permanent link">&para;</a></h2>
-<p>Almost every modern type design ships with at least a dozen OpenType features.
-Getting them right is what separates a “font” from a typography product.</p>
+<p>Almost every modern type design ships with at least a dozen OpenType features. Getting them right is what separates a “font” from a typography product.</p>
 <p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8">Read more →</a></p>
 
 

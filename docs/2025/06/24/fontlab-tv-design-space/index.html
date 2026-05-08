@@ -966,43 +966,22 @@
   <h1>FontLab TV: design space basics</h1>
 
 <p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-tv-design-space-1.png" /></p>
-<p>Design space is the part of variable font work that decides whether your font feels good
-or merely works. The FontLab TV design space episode is the conceptual foundation for
-everything you do with masters, axes, and instances.</p>
+<p>Design space is the part of variable font work that decides whether your font feels good or merely works. The FontLab TV design space episode is the conceptual foundation for everything you do with masters, axes, and instances.</p>
 <!-- more -->
 
 <p><img alt="FontLab TV" src="../../../../media/fontlab-tv1.png" /></p>
 <p><img alt="FontLab TV: design space tutorial" src="../../../../media/fontlab-tv2.png" /></p>
 <blockquote>
-<p>📺 Watch:
-<a href="https://www.youtube.com/watch?v=AijDkf3DBk8">Design space axes &amp; multiple masters on FontLab TV</a></p>
+<p>📺 Watch: <a href="https://www.youtube.com/watch?v=AijDkf3DBk8">Design space axes &amp; multiple masters on FontLab TV</a></p>
 </blockquote>
 <h2 id="what-it-covers">What it covers<a class="headerlink" href="#what-it-covers" title="Permanent link">&para;</a></h2>
-<p><strong>The space, not the masters.</strong> A design space is a coordinate system.
-Masters are points in it.
-Instances — what users see when they pick “Bold” or set a slider — are coordinates in
-that same space. Once you think this way, axis design starts to feel like a normal
-modeling problem.</p>
-<p><strong>Choosing axes.</strong> The five registered axes (Weight, Width, Italic, Slant, Optical Size)
-cover most cases, but custom axes solve things the registered ones cannot — <code>XHGT</code> for
-x-height, <code>YOPQ</code> for stroke contrast, the kind of thing the variable-font spec was
-designed to make extensible.</p>
-<p><strong>Master placement.</strong> Masters at the corners of the space define the linear
-interpolation. The episode shows when corners are enough and when you need an interior
-master to control a specific instance — for instance to keep the Bold from being
-mathematically the average of Light and Black.</p>
-<p><strong>Instance design.</strong> Named instances (<code>Light</code>, <code>Regular</code>, <code>Bold</code>, <code>Black</code>) are
-coordinates plus a name table entry.
-The video shows how to set up the STAT table so that operating systems and apps name
-your instances correctly in font menus.</p>
-<p><strong>Axis ranges and conditional substitution.</strong> A late-episode topic worth knowing about:
-the <code>rclt</code> and <code>rvrn</code> features let you substitute one glyph for another when the design
-space crosses a threshold.
-Useful for letterforms that need to change shape at certain weights.</p>
+<p><strong>The space, not the masters.</strong> A design space is a coordinate system. Masters are points in it. Instances — what users see when they pick “Bold” or set a slider — are coordinates in that same space. Once you think this way, axis design starts to feel like a normal modeling problem.</p>
+<p><strong>Choosing axes.</strong> The five registered axes (Weight, Width, Italic, Slant, Optical Size) cover most cases, but custom axes solve things the registered ones cannot — <code>XHGT</code> for x-height, <code>YOPQ</code> for stroke contrast, the kind of thing the variable-font spec was designed to make extensible.</p>
+<p><strong>Master placement.</strong> Masters at the corners of the space define the linear interpolation. The episode shows when corners are enough and when you need an interior master to control a specific instance — for instance to keep the Bold from being mathematically the average of Light and Black.</p>
+<p><strong>Instance design.</strong> Named instances (<code>Light</code>, <code>Regular</code>, <code>Bold</code>, <code>Black</code>) are coordinates plus a name table entry. The video shows how to set up the STAT table so that operating systems and apps name your instances correctly in font menus.</p>
+<p><strong>Axis ranges and conditional substitution.</strong> A late-episode topic worth knowing about: the <code>rclt</code> and <code>rvrn</code> features let you substitute one glyph for another when the design space crosses a threshold. Useful for letterforms that need to change shape at certain weights.</p>
 <h2 id="why-it-matters">Why it matters<a class="headerlink" href="#why-it-matters" title="Permanent link">&para;</a></h2>
-<p>Most variable font problems are design space problems.
-This episode is the framing that lets you debug VF behaviour by drawing diagrams instead
-of guessing.</p>
+<p>Most variable font problems are design space problems. This episode is the framing that lets you debug VF behaviour by drawing diagrams instead of guessing.</p>
 <p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/manual/">Read more →</a></p>
 
 

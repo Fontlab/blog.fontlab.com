@@ -1,5 +1,3 @@
-{.illu-thumb .illu-index}
-
 Type spent five hundred years in black and white. Then mobile phones demanded emoji, and four large companies sat down separately and proposed four entirely incompatible ways to put color into a font. The decade since has been an awkward growing-up.
 
 ## The four-way standoff

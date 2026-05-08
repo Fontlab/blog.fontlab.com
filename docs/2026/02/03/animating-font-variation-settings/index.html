@@ -976,36 +976,21 @@
 
   <h1>Animating font-variation-settings: keeping motion buttery at scale</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/animating-font-variation-settings-1.png" /></p>
-<p>Browsers have shipped robust <code>font-variation-settings</code> support since 2018, and animating
-those axes works the way the rest of CSS animation works.
-That is a small miracle, and the people who built it deserve a round of applause.</p>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/animating-font-variation-settings-1.png" /></p>
+<p>Browsers have shipped robust <code>font-variation-settings</code> support since 2018, and animating those axes works the way the rest of CSS animation works. That is a small miracle, and the people who built it deserve a round of applause.</p>
 <!-- more -->
 
-<p><code>font-variation-settings</code> is the low-level handle on a variable font’s design space.
-You name an axis tag — <code>"wght"</code>, <code>"wdth"</code>, an <code>"opsz"</code> for optical size, or any custom
-axis the type designer defined — and you give it a value.
-The renderer interpolates between masters in real time, so a single keyframe block can
-take a headline from 200 to 800 weight without a flicker:</p>
+<p><code>font-variation-settings</code> is the low-level handle on a variable font’s design space. You name an axis tag — <code>"wght"</code>, <code>"wdth"</code>, an <code>"opsz"</code> for optical size, or any custom axis the type designer defined — and you give it a value. The renderer interpolates between masters in real time, so a single keyframe block can take a headline from 200 to 800 weight without a flicker:</p>
 <div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">@</span><span class="k">keyframes</span><span class="w"> </span><span class="nt">breathe</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">from</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-variation-settings</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wght&quot;</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">to</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="k">font-variation-settings</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wght&quot;</span><span class="w"> </span><span class="mi">800</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">animation</span><span class="p">:</span><span class="w"> </span><span class="n">breathe</span><span class="w"> </span><span class="mi">4</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-in-out</span><span class="w"> </span><span class="kc">infinite</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div>
-<p>The first time this works on a real page, it feels a little magical.
-The browser is re-interpolating glyph outlines and re-rasterising them every frame, and
-it does so fluidly because graphics teams at Apple, Google, Mozilla, and Microsoft put
-years into making it fluid.</p>
+<p>The first time this works on a real page, it feels a little magical. The browser is re-interpolating glyph outlines and re-rasterising them every frame, and it does so fluidly because graphics teams at Apple, Google, Mozilla, and Microsoft put years into making it fluid.</p>
 <h2 id="a-generous-tip-from-the-community">A generous tip from the community<a class="headerlink" href="#a-generous-tip-from-the-community" title="Permanent link">&para;</a></h2>
-<p>When you start animating <em>many</em> headings on the same page — section titles, pull-quotes,
-a sticky nav, ten card heroes in a long scroll — every one of those animations keeps
-running even when its element is off-screen.
-That is normal CSS-animation behaviour, but it is also a great place to be a good
-neighbour to your reader’s CPU.</p>
-<p>Mandy Michael published a clean pattern for this back when variable fonts first hit the
-web, and it still works beautifully today: pause animations on elements that are
-scrolled out of view using <code>IntersectionObserver</code>.</p>
+<p>When you start animating <em>many</em> headings on the same page — section titles, pull-quotes, a sticky nav, ten card heroes in a long scroll — every one of those animations keeps running even when its element is off-screen. That is normal CSS-animation behaviour, but it is also a great place to be a good neighbour to your reader’s CPU.</p>
+<p>Mandy Michael published a clean pattern for this back when variable fonts first hit the web, and it still works beautifully today: pause animations on elements that are scrolled out of view using <code>IntersectionObserver</code>.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">observer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">IntersectionObserver</span><span class="p">(</span><span class="nx">entries</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">entries</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">e</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">animationPlayState</span><span class="w"> </span><span class="o">=</span>
@@ -1015,22 +1000,14 @@ scrolled out of view using <code>IntersectionObserver</code>.</p>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;.animated-heading&quot;</span><span class="p">)</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">el</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">observer</span><span class="p">.</span><span class="nx">observe</span><span class="p">(</span><span class="nx">el</span><span class="p">));</span>
 </span></code></pre></div>
-<p>A handful of lines, and the whole page stays smooth.
-It is a lovely bit of craft from a community that has been generous with its lessons
-since variable fonts were brand new.</p>
+<p>A handful of lines, and the whole page stays smooth. It is a lovely bit of craft from a community that has been generous with its lessons since variable fonts were brand new.</p>
 <h2 id="two-playgrounds-worth-bookmarking">Two playgrounds worth bookmarking<a class="headerlink" href="#two-playgrounds-worth-bookmarking" title="Permanent link">&para;</a></h2>
 <p>Two more places that opened the door before variable fonts were officially mainstream:</p>
 <ul>
-<li><strong>Axis-Praxis</strong>, by Laurence Penney, launched in late 2016 — before the variable font
-  specification was even finalised.
-  It was the first public playground for exploring what the axes could do, and it is
-  still one of the most enjoyable.</li>
-<li><strong>v-fonts.com</strong>, by Nick Sherman, launched at Robothon in March 2018. It remains the
-  best gallery for fonts worth animating today.</li>
+<li><strong>Axis-Praxis</strong>, by Laurence Penney, launched in late 2016 — before the variable font specification was even finalised. It was the first public playground for exploring what the axes could do, and it is still one of the most enjoyable.</li>
+<li><strong>v-fonts.com</strong>, by Nick Sherman, launched at Robothon in March 2018. It remains the best gallery for fonts worth animating today.</li>
 </ul>
-<p>Both predate the moment “variable fonts” became a mainstream phrase, and both are still
-the right place to start when you want inspiration.
-Stand on those shoulders — they were put there for you.</p>
+<p>Both predate the moment “variable fonts” became a mainstream phrase, and both are still the right place to start when you want inspiration. Stand on those shoulders — they were put there for you.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://web.dev/articles/variable-fonts">Variable fonts on the web — web.dev</a></li>

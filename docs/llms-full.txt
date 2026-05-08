@@ -190,8 +190,6 @@ Watch on [FontLab TV](https://www.youtube.com/watch?v=tbc_O7bNROs).
 
 [Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/)
 
-# FontLab VI is here
-
 FontLab Studio 5 was a workhorse. It shipped in 2004 and carried a generation of type designers through the OpenType transition. The app aged gracefully, right up until it didn’t. On 7 December 2017, we replaced it.
 
 **FontLab VI** is a complete rebuild for macOS and Windows. It is 64-bit, native, and built around a drawing model that reflects how type designers work. Here is what you get on day one:
@@ -612,8 +610,6 @@ TransType is available at [fontlab.com/font-converter/transtype/](https://www.fo
 
 [Read more →](https://www.fontlab.com/font-converter/transtype/)
 
-{.illu-thumb .illu-index}
-
 Apple’s macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing the system Python 2.7 that FontLab depended on. FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need to install a bundled Python 2.7 package alongside the app. A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644 does not have that problem.
 
 **Note:** If you open a font and all glyphs unintentionally have a transparent or colored fill, scroll to the end of this post for instructions on how to fix it.
@@ -949,9 +945,7 @@ Full documentation is in the FontLab 8 What’s New chapters on [Color](https://
 
 [Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/)
 
-{.illu-thumb .illu-index}
-
-Digital formats do not die of natural causes. They are smothered in their sleep by the companies that invented them. PostScript Type 1 went the same way, and TransType 4 has been the moving van ever since.
+Digital formats rarely retire on their own. New ones arrive, the world picks them up, and the older format is gradually sunsetted by the companies that built it. PostScript Type 1 followed exactly that arc, and TransType 4 has been the friendly moving van ever since — keeping the typefaces inside those old files alive on modern systems.
 
 ## The format that refused to leave on schedule
 
@@ -973,13 +967,13 @@ It is not a font editor. It is a moving van. The point is to relocate the typefa
 
 The same engine had a side career in the early colour-font experiments — designers stacked monochrome fonts via TransType’s overlay feature into rough chromatic typefaces, years before COLRv1 was a settled standard. Duct tape, but the kind that holds.
 
-## The legal question nobody wants to ask
+## A friendly note on licensing
 
-Converting a font you bought in 1998 to a format you can use in 2026 sounds like a technical problem. Often it is a licence problem first.
+Converting a font you bought in 1998 to a format you can use in 2026 sounds like a technical problem, and it is also a licensing question worth a moment of care.
 
-Most Type 1 EULAs from the 1990s and early 2000s did not anticipate format conversion. They predate OpenType. Some explicitly forbid modifying the file. Some say nothing. A handful permit conversion for personal use only. The result, in 2026, is that a designer with a perfectly legal old library and a brand-new copy of InDesign can land in a small grey area that nobody at the original foundry is around to clarify.
+Most Type 1 EULAs from the 1990s and early 2000s simply did not anticipate format conversion — they predate OpenType. Some explicitly forbid modifying the file; some say nothing; a handful permit conversion for personal use. The practical result in 2026 is that a designer with a perfectly legal old library and a brand-new copy of InDesign may land in a small grey area, sometimes complicated by the original foundry no longer being around to clarify.
 
-The honest answer is to read the EULA. Many foundries — Adobe, Linotype, Monotype, Bitstream’s successors — have published modern statements about format migration. Some offer free or discounted upgrades to OpenType for licensed users. Others ask you to repurchase. A few have quietly accepted that the alternative is the file disappearing from active studios entirely, which helps nobody.
+The kind thing to do is read the EULA. Many foundries — Adobe, Linotype, Monotype, Bitstream’s successors — have published modern statements about format migration. Some offer free or discounted upgrades to OpenType for licensed users. Others ask you to repurchase. A few have generously accepted that the alternative is the file disappearing from active studios entirely, and chosen to keep the designs in working hands.
 
 Where the answer is “yes, you may convert”, TransType is the practical tool. It does not strip embedding bits. It does not alter licence metadata. The new file is, technically and legally, a wrapper around the same design you paid for. Where the answer is “no”, license a current OpenType cut from the foundry. The conversion route was never about saving money. It was about not abandoning a typeface that had been doing real work for two decades.
 
@@ -991,11 +985,11 @@ TransType handles the format jump: Type 1 in, clean OpenType out, names sane, ke
 
 The combination lets studios rescue 1990s typefaces without abandoning the years of design work locked inside the outlines and the kerning tables. The format changed. The work the font was doing did not. A careful conversion respects both.
 
-## The graveyard is full of files nobody bothered to move
+## Worth moving, worth keeping
 
-A converter is supposed to be a footnote. TransType 4 keeps showing up in working studios because the format it converts away from keeps refusing to die quietly, and because the fonts inside that format are still inside live identities, half-finished books, and active brand guidelines.
+A converter is supposed to be a footnote. TransType 4 keeps showing up in working studios because the typefaces inside the old Type 1 files are still doing real work — inside live identities, half-finished books, and active brand guidelines that took years to establish.
 
-If a font is worth keeping, it is worth converting carefully. Otherwise it joins the graveyard of files nobody bothered to move.
+If a font is worth keeping, it is worth converting carefully. That is the whole brief, and it is a quietly satisfying one.
 
 ## References
 
@@ -1074,7 +1068,7 @@ FontLab 8.4 and all prior 8.x updates are free for FontLab 8 license holders. Do
 
 You inherit a folder of old PostScript Type 1 fonts. Or a client sends a family with broken names, duplicate glyphs, and kerning that only works in one app. You need web fonts that load fast and look right everywhere.
 
-The modern answer is brutally simple: WOFF2, subsetted, one file per family where possible. WOFF2 compresses better than anything else and every current browser understands it. Guides from DebugBear and Wholegrain Digital repeat the same checklist: convert once, subset to the characters you actually use, serve with the right `@font-face` syntax, and test the waterfall.
+The modern answer is delightfully simple: WOFF2, subsetted, one file per family where possible. WOFF2 compresses better than anything else and every current browser understands it. Guides from DebugBear and Wholegrain Digital repeat the same checklist: convert once, subset to the characters you actually use, serve with the right `@font-face` syntax, and test the waterfall.
 
 Subsetting is where most of the weight goes. A full Latin-Extended pan-European cut might be 90 KB. A subset that covers only the characters your homepage actually contains can be 12 KB. The browser does not need every Vietnamese tone mark on a marketing page that does not contain Vietnamese.
 
@@ -1598,7 +1592,7 @@ Dark mode looks trivial as a feature on a release-notes page. It is not trivial 
 
 The Blambot catalogue on the gallery — [Budrick BB](https://blambot.com/products/budrick), [Inkcantation BB](https://blambot.com/products/inkcantation), [Ready for Anything BB](https://blambot.com/products/ready-for-anything), [Shrunken Head BB](https://blambot.com/products/shrunken-head), [Thunderclap BB](https://blambot.com/products/thunderclap) — covers the genre’s working ranges: a sturdy dialogue letterer, an ink-saturated horror display, a brassy action display, a heavy display headline, a thunderous SFX font. All five out of one studio, in one editor, with one consistent set of metrics across the family.
 
-The way Piekos works is the case for FontLab in genre work that nobody writes long blog posts about: not the prestige Latin text family that gets the design awards, but the high-volume working catalogue that pays the rent and ends up everywhere.
+The way Piekos works is the case for FontLab in the kind of genre work that quietly fills the world: not the prestige Latin text family that gets the design awards, but the high-volume working catalogue that lives inside thousands of comics and ends up everywhere readers look.
 
 ## More from Nate Piekos
 
@@ -1668,8 +1662,6 @@ The “never about file size” line was written by people whose typography neve
 - [Migrating to variable fonts — Google Codelabs](https://codelabs.developers.google.com/migrating-variable-fonts)
 
 [Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
-
-{.illu-thumb .illu-index}
 
 A variable font isn’t a new file format. It’s an OpenType file with a few extra tables nailed on, and once you know what each one does, the whole thing stops being magic.
 
@@ -1898,8 +1890,6 @@ Draw a regular `n`. Then draw a bold `n` from scratch — same height, same x-he
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-2-bold/briem-4-21-exercise2/)
 
-{.illu-thumb .illu-index}
-
 Type spent five hundred years in black and white. Then mobile phones demanded emoji, and four large companies sat down separately and proposed four entirely incompatible ways to put color into a font. The decade since has been an awkward growing-up.
 
 ## The four-way standoff
@@ -2059,8 +2049,6 @@ You stop honing when you cannot identify a specific change that would make the g
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
 
-{.illu-thumb .illu-index}
-
 It is a common myopia in Western design to assume that typography begins with `A` and ends with `Z`. In reality, Latin script is one small neighbourhood in a vast, complex city of writing systems.
 
 Modern font editors must accommodate the structural realities of Cyrillic, Arabic, Hebrew, Devanagari, and the massive CJK ideographic sets. The technical requirements are demanding. Arabic is inherently cursive and context-dependent — a single letter alters its geometry depending on whether it stands at the beginning, middle, or end of a word, or alone. To draw an Arabic font, the designer must produce these positional variants and lean heavily on contextual alternates (`calt`) and right-to-left kerning. FontLab 8.2 refined the right-to-left kerning workflow specifically.
@@ -2110,8 +2098,6 @@ OpenType features are the part of font design where text becomes typography. The
 Almost every modern type design ships with at least a dozen OpenType features. Getting them right is what separates a “font” from a typography product.
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8)
-
-{.illu-thumb .illu-index}
 
 The problem with Japanese set in Helvetica has annoyed transit designers for fifty years. In January 2017, Akira Kobayashi did something about it.
 
@@ -2219,15 +2205,13 @@ Draw `i n o a` four times: once at 0° slant with cursive structure, once at 12�
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/4-3-italic/briem-4-31-italic/)
 
-{.illu-thumb .illu-index}
-
-If you only read industry marketing, you might think type designers spend their time celebrating the same handful of features. The forums tell a different story.
+Type designers, like every healthy craft community, love a good debate. The forums where they gather — TypeDrawers, r/typography, the various national mailing lists — are full of long, careful, generously-argued threads about exactly the kind of detail that makes a difference at 9pt.
 
 The arguments on TypeDrawers, Reddit’s r/typography, and the various national mailing lists are surprisingly consistent. Outline drawing direction. Whether overlap removal should be destructive. Whether `calt` is being abused. Whether autotrace is ever good enough. Whether RoboFont’s “build your own tools” philosophy is liberating or exhausting. Whether FontForge counts as software. Whether the right way to space a typeface is Tracy or Briem or neither.
 
 These arguments are not noise. They are how the discipline calibrates itself. The designer who claims they have a definitive opinion on overlap removal has usually not shipped enough fonts to have changed their mind yet.
 
-A few specific debates keep coming back. Variable-font compatibility: do you allow incompatible masters and let the variation engine warn you, or do you enforce strict compatibility from the first stroke? FontLab 8 leans toward the second. Hinting: do you rely on the auto-hinter, or do you maintain hand-tuned hints for the weights that need them most? Both, usually, but the ratio is contested. CJK design: should the font editor expose every encoded variant, or hide them behind a more curated UI? The honest answer is that nobody has solved this.
+A few specific debates keep coming back. Variable-font compatibility: do you allow incompatible masters and let the variation engine warn you, or do you enforce strict compatibility from the first stroke? FontLab 8 leans toward the second. Hinting: do you rely on the auto-hinter, or do you maintain hand-tuned hints for the weights that need them most? Both, usually, but the ratio is contested. CJK design: should the font editor expose every encoded variant, or hide them behind a more curated UI? An open question, and the field is still working out the best balance — which is part of what makes following the conversation rewarding.
 
 The interesting argument in 2025 is about AI in the workflow. Some designers use machine-learning autotracers and generative tools as raw material — concepts to break, not finished work to ship. Others reject the practice entirely. The middle position, which is winning, is that AI is a sketching tool whose output is unusable without human editing. FontLab 8.4’s improved Autotrace fits this view: it is much better than the autotracers of five years ago, and it still requires a human to clean up.
 
@@ -2240,8 +2224,6 @@ Reading these debates is one of the better ways to learn type design. The produc
 - [Awesome typography — Jolg42](https://github.com/Jolg42/awesome-typography)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
-
-{.illu-thumb .illu-index}
 
 NT$1.5 million in eighty minutes. NT$26 million in the end. A typeface named after a tea proved that East Asian type had an audience willing to pay for it.
 
@@ -2285,8 +2267,6 @@ Try Vexy Lines right now in your browser for free. If you need full-resolution S
 Go play with it at [vexy.art](https://vexy.art/).
 
 [Read more →](https://vexy.art/)
-
-{.illu-thumb .illu-index}
 
 The most difficult part of drawing a typeface is not the black ink. It is the white space.
 
@@ -2357,8 +2337,6 @@ The character set is large. The work is not impossible. Now there is a book that
 - [Variable components in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
-
-{.illu-thumb .illu-index}
 
 King Sejong personally invented the Korean alphabet in 1443. Its instruction manual was lost for four centuries, then carried through the Korean War inside a man’s coat.
 
@@ -2539,8 +2517,6 @@ None of them produces many graduates per year. None of them is meant to. Type de
 - [ANRT Nancy](https://anrt-nancy.fr/)
 
 [Read more →](https://www.fontlab.com/font-editor/fontlab/)
-
-{.illu-thumb .illu-index}
 
 Engraving is a useful lie. A hedcut looks old, sober, authoritative, and a little expensive — even when it was made yesterday.
 
@@ -3032,8 +3008,6 @@ The Linux remark is not throwaway. FontLab ships native binaries for macOS, Wind
 - [Scannerlicker on MyFonts](https://www.myfonts.com/collections/scannerlicker-foundry)
 
 [Browse Scannerlicker →](https://fonts.scannerlicker.net/)
-
-{.illu-thumb .illu-index}
 
 The fine-line patterns on a banknote are a security feature. A British engineer made a toy of them in 1965 and sold 30 million units.
 

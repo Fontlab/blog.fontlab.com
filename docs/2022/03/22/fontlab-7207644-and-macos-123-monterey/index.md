@@ -1,5 +1,3 @@
-{.illu-thumb .illu-index}
-
 Apple’s macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing the system Python 2.7 that FontLab depended on. FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need to install a bundled Python 2.7 package alongside the app. A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644 does not have that problem.
 
 **Note:** If you open a font and all glyphs unintentionally have a transparent or colored fill, scroll to the end of this post for instructions on how to fix it.

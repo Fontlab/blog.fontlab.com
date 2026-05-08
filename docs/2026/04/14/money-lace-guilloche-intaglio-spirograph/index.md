@@ -1,5 +1,3 @@
-{.illu-thumb .illu-index}
-
 The fine-line patterns on a banknote are a security feature. A British engineer made a toy of them in 1965 and sold 30 million units.
 
 Guilloché, from the French *guillocher* — to engrave with a rose engine. The rose engine is a lathe with an eccentric cam that moves the cutting head in a programmed path while the workpiece rotates. The result is interlocking curves no hand can reproduce consistently, which is exactly what you want if you’re trying to stop forgery.

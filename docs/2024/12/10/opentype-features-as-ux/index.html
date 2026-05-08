@@ -1020,103 +1020,36 @@
 
   <h1>OpenType features as invisible UX</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/opentype-features-as-ux-1.png" /></p>
-<p>Most readers never notice when typography is right.
-They only notice when reading feels like work.
-The features that decide which side of that line a font lands on are mostly the
-unglamorous ones — kerning, standard ligatures, contextual alternates — the parts that
-handle the friction the user never sees.</p>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/opentype-features-as-ux-1.png" /></p>
+<p>Most readers never notice when typography is right. They only notice when reading feels like work. The features that decide which side of that line a font lands on are mostly the unglamorous ones — kerning, standard ligatures, contextual alternates — the parts that handle the friction the user never sees.</p>
 <!-- more -->
 
-<p><img alt="OpenType feature panel in FontLab 8" src="../../../../media/opentype-features-as-ux/fl8-8days-opentype.png" /></p>
 <h2 id="the-features-users-never-see">The features users never see<a class="headerlink" href="#the-features-users-never-see" title="Permanent link">&para;</a></h2>
-<p>OpenType features get sold on the showy ones: swashes, discretionary ligatures,
-alternate numerals, fancy stylistic sets.
-Those are the ones that show up in marketing copy and design-blog round-ups.
-The serious typographic work happens in the boring features.</p>
-<p><code>kern</code> for kerning. <code>liga</code> for the default ligatures that fix collisions like <code>fi</code> and
-<code>fl</code>. <code>calt</code> for the contextual substitutions that keep cursive scripts from looking
-like they were typed by a machine.
-<code>mark</code> and <code>mkmk</code> for the diacritic positioning that keeps an ‘é’ vertically aligned
-across every base it sits on.
-None of those features are flashy.
-All of them are the difference between text that reads as text and text that reads as a
-series of characters.</p>
-<p>Type Network frames it well: standard ligatures are a “font superpower” precisely
-because they turn a raw glyph set into a text system that behaves intelligently.
-The user never thinks about the <code>fi</code> ligature.
-They think about how the paragraph reads.</p>
+<p>OpenType features get sold on the showy ones: swashes, discretionary ligatures, alternate numerals, fancy stylistic sets. Those are the ones that show up in marketing copy and design-blog round-ups. The serious typographic work happens in the boring features.</p>
+<p><img alt="OpenType feature panel in FontLab 8" src="../../../../media/opentype-features-as-ux/fl8-8days-opentype.png" /></p>
+<p><code>kern</code> for kerning. <code>liga</code> for the default ligatures that fix collisions like <code>fi</code> and <code>fl</code>. <code>calt</code> for the contextual substitutions that keep cursive scripts from looking like they were typed by a machine. <code>mark</code> and <code>mkmk</code> for the diacritic positioning that keeps an ‘é’ vertically aligned across every base it sits on. None of those features are flashy. All of them are the difference between text that reads as text and text that reads as a series of characters.</p>
+<p>Type Network frames it well: standard ligatures are a “font superpower” precisely because they turn a raw glyph set into a text system that behaves intelligently. The user never thinks about the <code>fi</code> ligature. They think about how the paragraph reads.</p>
 <h2 id="kerning-the-load-bearing-feature">Kerning, the load-bearing feature<a class="headerlink" href="#kerning-the-load-bearing-feature" title="Permanent link">&para;</a></h2>
-<p>Of all the OpenType features, kerning carries the most weight in user perception.
-A poorly kerned font reads as cheap, because the eye notices the gaps before it notices
-the letters. A well-kerned font reads as professional, because the eye doesn’t notice
-anything at all.</p>
-<p>Modern kerning is class-based.
-Rather than kerning every individual pair (the V/A cuts, the T/o tucks, the L/Y
-collisions), you group letters into classes — left-side diagonals, right-side diagonals,
-round shoulders, narrow stems — and kern at the class level.
-The result is a smaller table, faster lookups in the rendering engine, and consistency
-across accented variants you might otherwise forget to kern.</p>
-<p>FontLab 8’s kerning panel handles the class structure natively.
-You tag a glyph as belonging to a class, define the class once, kern the class once, and
-every member of the class — including the eight Eastern European accented variants of
-the base glyph — gets the kerning applied.
-This matters most for languages with heavy accent coverage, where kerning every pair
-manually is the opposite of feasible.</p>
+<p>Of all the OpenType features, kerning carries the most weight in user perception. A poorly kerned font reads as cheap, because the eye notices the gaps before it notices the letters. A well-kerned font reads as professional, because the eye doesn’t notice anything at all.</p>
+<p>Modern kerning is class-based. Rather than kerning every individual pair (the V/A cuts, the T/o tucks, the L/Y collisions), you group letters into classes — left-side diagonals, right-side diagonals, round shoulders, narrow stems — and kern at the class level. The result is a smaller table, faster lookups in the rendering engine, and consistency across accented variants you might otherwise forget to kern.</p>
+<p>FontLab 8’s kerning panel handles the class structure natively. You tag a glyph as belonging to a class, define the class once, kern the class once, and every member of the class — including the eight Eastern European accented variants of the base glyph — gets the kerning applied. This matters most for languages with heavy accent coverage, where kerning every pair manually is the opposite of feasible.</p>
 <h2 id="contextual-alternates-the-engine-behind-connected-scripts">Contextual alternates, the engine behind connected scripts<a class="headerlink" href="#contextual-alternates-the-engine-behind-connected-scripts" title="Permanent link">&para;</a></h2>
-<p><code>calt</code> is the OpenType feature that decides which version of a glyph to substitute based
-on the surrounding context.
-Its native habitat is connected scripts — Arabic, Devanagari, cursive Latin, blackletter
-— where the entry stroke of one letter has to match the exit stroke of the previous one
-or the script falls apart visually.</p>
-<p>Arabic is the demanding case.
-A single letter changes shape depending on whether it sits at the beginning, middle, or
-end of a word, or stands alone.
-The OpenType layout engine handles the positional substitution automatically through the
-<code>init</code>, <code>medi</code>, <code>fina</code>, and <code>isol</code> features.
-A handwriting font in any script may use thousands of contextual rules to vary glyph
-shapes so that the same letter never appears identically in a row, mimicking the natural
-variation of a human hand.</p>
-<p>FontLab 8 generates the substitution syntax automatically when glyphs are named with the
-right conventions. A small-cap glyph named <code>a.sc</code> ends up in the <code>smcp</code> feature without
-anybody writing the feature code by hand.
-A swash glyph named <code>A.swsh</code> ends up in the <code>swsh</code> feature.
-The naming conventions are the schema; the feature code is the compiled output.</p>
+<p><code>calt</code> is the OpenType feature that decides which version of a glyph to substitute based on the surrounding context. Its native habitat is connected scripts — Arabic, Devanagari, cursive Latin, blackletter — where the entry stroke of one letter has to match the exit stroke of the previous one or the script falls apart visually.</p>
+<p>Arabic is the demanding case. A single letter changes shape depending on whether it sits at the beginning, middle, or end of a word, or stands alone. The OpenType layout engine handles the positional substitution automatically through the <code>init</code>, <code>medi</code>, <code>fina</code>, and <code>isol</code> features. A handwriting font in any script may use thousands of contextual rules to vary glyph shapes so that the same letter never appears identically in a row, mimicking the natural variation of a human hand.</p>
+<p>FontLab 8 generates the substitution syntax automatically when glyphs are named with the right conventions. A small-cap glyph named <code>a.sc</code> ends up in the <code>smcp</code> feature without anybody writing the feature code by hand. A swash glyph named <code>A.swsh</code> ends up in the <code>swsh</code> feature. The naming conventions are the schema; the feature code is the compiled output.</p>
 <h2 id="the-messy-reality">The messy reality<a class="headerlink" href="#the-messy-reality" title="Permanent link">&para;</a></h2>
-<p>In practice, OpenType features do not always work as cleanly as the spec suggests.
-Discussion threads among type designers note that the OpenType specification
-<em>recommends</em> certain default behaviours but does not require them, and applications are
-free to ignore the recommendations.
-Firefox’s early OpenType support, in particular, made discretionary-ligature decisions
-that broke German words and Turkish dotted/dotless <code>i</code> distinctions because the engine
-ignored language-specific rules baked into the fonts.</p>
-<p>This is why font engineers obsess over language system tags, feature ordering, and test
-strings. The user shouldn’t have to know that German wants <code>Auflauf</code> to behave
-differently from English <code>office</code>, only that both read correctly.
-The engineering work happens at the feature level so the user’s reading experience stays
-unbroken.</p>
+<p>In practice, OpenType features do not always work as cleanly as the spec suggests. Discussion threads among type designers note that the OpenType specification <em>recommends</em> certain default behaviours but does not require them, and applications are free to ignore the recommendations. Firefox’s early OpenType support, in particular, made discretionary-ligature decisions that broke German words and Turkish dotted/dotless <code>i</code> distinctions because the engine ignored language-specific rules baked into the fonts.</p>
+<p>This is why font engineers obsess over language system tags, feature ordering, and test strings. The user shouldn’t have to know that German wants <code>Auflauf</code> to behave differently from English <code>office</code>, only that both read correctly. The engineering work happens at the feature level so the user’s reading experience stays unbroken.</p>
 <h2 id="css-the-application-side">CSS, the application side<a class="headerlink" href="#css-the-application-side" title="Permanent link">&para;</a></h2>
-<p>For web designers engaging these features, the CSS surface is straightforward in theory
-and messy in practice.
-High-level properties like <code>font-variant-ligatures</code> and <code>font-kerning</code> cover the common
-cases. The low-level escape hatch is <code>font-feature-settings</code>, which takes raw OpenType
-feature tags and lets you force a browser to obey your typographic will:</p>
+<p>For web designers engaging these features, the CSS surface is straightforward in theory and messy in practice. High-level properties like <code>font-variant-ligatures</code> and <code>font-kerning</code> cover the common cases. The low-level escape hatch is <code>font-feature-settings</code>, which takes raw OpenType feature tags and lets you force a browser to obey your typographic will:</p>
 <div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">.</span><span class="nc">body-text</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">font-feature-settings</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;kern&quot;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;liga&quot;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;calt&quot;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;onum&quot;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="k">font-variant-ligatures</span><span class="p">:</span><span class="w"> </span><span class="n">contextual</span><span class="w"> </span><span class="n">common-ligatures</span><span class="p">;</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>The trick is that some browsers respect the high-level properties and some require the
-low-level tags; in production code, you write both, in that order.
-Browsers favour the more specific declaration, which means the <code>font-feature-settings</code>
-line wins where it matters.</p>
+<p>The trick is that some browsers respect the high-level properties and some require the low-level tags; in production code, you write both, in that order. Browsers favour the more specific declaration, which means the <code>font-feature-settings</code> line wins where it matters.</p>
 <h2 id="the-moral">The moral<a class="headerlink" href="#the-moral" title="Permanent link">&para;</a></h2>
-<p>OpenType features are user experience for text.
-They are how a font behaves under pressure — long paragraphs, mixed scripts, accented
-characters, contextual letter combinations, language-specific rules.
-The features that decide whether the user has a good time are mostly the ones the user
-will never consciously notice.
-That is the point. Good UX, in any medium, is invisible until somebody removes it.</p>
+<p>OpenType features are user experience for text. They are how a font behaves under pressure — long paragraphs, mixed scripts, accented characters, contextual letter combinations, language-specific rules. The features that decide whether the user has a good time are mostly the ones the user will never consciously notice. That is the point. Good UX, in any medium, is invisible until somebody removes it.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://practice.typekit.com/lesson/caring-about-opentype-features/">Caring about OpenType features — Typekit Practice</a></li>

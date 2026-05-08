@@ -1,5 +1,3 @@
-{.illu-thumb .illu-index}
-
 A variable font isn’t a new file format. It’s an OpenType file with a few extra tables nailed on, and once you know what each one does, the whole thing stops being magic.
 
 The core stack:

@@ -23,53 +23,23 @@ review:
   consolidate_with: "2025-10-07-briem-drawing-italic.md, 2025-12-16-fontlab-tv-briem-on-brushes.md"
   notes: "Strong title and opening; Tschichold/Zapf historical framing is the best paragraph. Briem series needs cross-links; standalone it buries the spacing workflow under too much preamble."
 ---
-![](../media/illu/the-briem-method-and-the-geometry-of-nothing-1.png){.illu-thumb
-.illu-index}
+![](../media/illu/the-briem-method-and-the-geometry-of-nothing-2.png){.illu-thumb }
 
-The most difficult part of drawing a typeface is not the black ink.
-It is the white space.
+The most difficult part of drawing a typeface is not the black ink. It is the white space.
 
 <!-- more -->
 
-Letters are social creatures, and how much personal space they afford one another
-decides whether a paragraph is a joy to read or a chore.
-Gunnlaugur SE Briem, who taught type design at the Royal Academy of Fine Arts in
-Copenhagen in 1996, distilled this into a relentlessly practical methodology that
-eschews inspiration in favour of systematic testing.
+Letters are social creatures, and how much personal space they afford one another decides whether a paragraph is a joy to read or a chore. Gunnlaugur SE Briem, who taught type design at the Royal Academy of Fine Arts in Copenhagen in 1996, distilled this into a relentlessly practical methodology that eschews inspiration in favour of systematic testing.
 
-Briem’s foundational advice is grounded in optical illusions.
-If you rely purely on mathematics, the result will look terrible.
-Human vision requires compensation.
-Briem advocated for a modular approach to rough out a design quickly — assembling
-letters from a basic rectangle, a curve, and a diagonal — before spending the majority
-of the time on optical correction.
-You literally chop away the parts that look wrong until it looks right.
+Briem’s foundational advice is grounded in optical illusions. If you rely purely on mathematics, the result will look terrible. Human vision requires compensation. Briem advocated for a modular approach to rough out a design quickly — assembling letters from a basic rectangle, a curve, and a diagonal — before spending the majority of the time on optical correction. You literally chop away the parts that look wrong until it looks right.
 
-Spacing, Briem argued, is not about finding a universal mathematical truth.
-It is about establishing rhythm.
-In FontLab 8, this is managed through sidebearings and metrics keys.
-You do not space all twenty-six letters independently.
-You establish control characters — typically the lowercase `n` and `o`, the uppercase
-`H` and `O`. You adjust the space around the `n` until a string of `nnnnn` feels
-comfortable. Then you link the left sidebearing of `b`, `h`, `i`, `k`, and `r` to the
-left sidebearing of `n`.
+Spacing, Briem argued, is not about finding a universal mathematical truth. It is about establishing rhythm. In FontLab 8, this is managed through sidebearings and metrics keys. You do not space all twenty-six letters independently. You establish control characters — typically the lowercase `n` and `o`, the uppercase `H` and `O`. You adjust the space around the `n` until a string of `nnnnn` feels comfortable. Then you link the left sidebearing of `b`, `h`, `i`, `k`, and `r` to the left sidebearing of `n`.
 
-FontLab handles the linkage through mathematical expressions.
-If you later decide your typeface needs to be tighter, you narrow the spacing on the
-`n`, and every linked glyph updates.
-It brings programmatic efficiency to an aesthetic judgement.
+FontLab handles the linkage through mathematical expressions. If you later decide your typeface needs to be tighter, you narrow the spacing on the `n`, and every linked glyph updates. It brings programmatic efficiency to an aesthetic judgement.
 
-When sidebearing logic fails, you resort to kerning.
-The `V` next to the `A` will always need a per-pair adjustment.
-To avoid kerning ten thousand individual pairs, FontLab uses class-based kerning.
-Group all left-leaning diagonals into one class, all right-leaning diagonals into
-another, kern the class once, and the adjustment propagates.
+When sidebearing logic fails, you resort to kerning. The `V` next to the `A` will always need a per-pair adjustment. To avoid kerning ten thousand individual pairs, FontLab uses class-based kerning. Group all left-leaning diagonals into one class, all right-leaning diagonals into another, kern the class once, and the adjustment propagates.
 
-Spacing evolves with technology and taste.
-Tschichold condemned tight spacing in 1952; Zapf popularised it with Palatino soon
-after. The fundamentals do not change.
-Letters must relate to one another logically, and the white between them is where the
-relationship lives.
+Spacing evolves with technology and taste. Tschichold condemned tight spacing in 1952; Zapf popularised it with Palatino soon after. The fundamentals do not change. Letters must relate to one another logically, and the white between them is where the relationship lives.
 
 ## References
 

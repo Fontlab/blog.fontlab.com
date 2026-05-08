@@ -148,6 +148,8 @@ class Build:
             "--cleanups",
             "--smartquotes",
             "--ellipses",
+            "--width",
+            "0",  # disable column wrapping; attr_list lines stay intact
             str(src_docs_dir),
         ]
         _run_command(cmd, self._root)

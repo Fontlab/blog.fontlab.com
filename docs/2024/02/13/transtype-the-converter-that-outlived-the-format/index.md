@@ -1,6 +1,4 @@
-{.illu-thumb .illu-index}
-
-Digital formats do not die of natural causes. They are smothered in their sleep by the companies that invented them. PostScript Type 1 went the same way, and TransType 4 has been the moving van ever since.
+Digital formats rarely retire on their own. New ones arrive, the world picks them up, and the older format is gradually sunsetted by the companies that built it. PostScript Type 1 followed exactly that arc, and TransType 4 has been the friendly moving van ever since — keeping the typefaces inside those old files alive on modern systems.
 
 ## The format that refused to leave on schedule
 
@@ -22,13 +20,13 @@ It is not a font editor. It is a moving van. The point is to relocate the typefa
 
 The same engine had a side career in the early colour-font experiments — designers stacked monochrome fonts via TransType’s overlay feature into rough chromatic typefaces, years before COLRv1 was a settled standard. Duct tape, but the kind that holds.
 
-## The legal question nobody wants to ask
+## A friendly note on licensing
 
-Converting a font you bought in 1998 to a format you can use in 2026 sounds like a technical problem. Often it is a licence problem first.
+Converting a font you bought in 1998 to a format you can use in 2026 sounds like a technical problem, and it is also a licensing question worth a moment of care.
 
-Most Type 1 EULAs from the 1990s and early 2000s did not anticipate format conversion. They predate OpenType. Some explicitly forbid modifying the file. Some say nothing. A handful permit conversion for personal use only. The result, in 2026, is that a designer with a perfectly legal old library and a brand-new copy of InDesign can land in a small grey area that nobody at the original foundry is around to clarify.
+Most Type 1 EULAs from the 1990s and early 2000s simply did not anticipate format conversion — they predate OpenType. Some explicitly forbid modifying the file; some say nothing; a handful permit conversion for personal use. The practical result in 2026 is that a designer with a perfectly legal old library and a brand-new copy of InDesign may land in a small grey area, sometimes complicated by the original foundry no longer being around to clarify.
 
-The honest answer is to read the EULA. Many foundries — Adobe, Linotype, Monotype, Bitstream’s successors — have published modern statements about format migration. Some offer free or discounted upgrades to OpenType for licensed users. Others ask you to repurchase. A few have quietly accepted that the alternative is the file disappearing from active studios entirely, which helps nobody.
+The kind thing to do is read the EULA. Many foundries — Adobe, Linotype, Monotype, Bitstream’s successors — have published modern statements about format migration. Some offer free or discounted upgrades to OpenType for licensed users. Others ask you to repurchase. A few have generously accepted that the alternative is the file disappearing from active studios entirely, and chosen to keep the designs in working hands.
 
 Where the answer is “yes, you may convert”, TransType is the practical tool. It does not strip embedding bits. It does not alter licence metadata. The new file is, technically and legally, a wrapper around the same design you paid for. Where the answer is “no”, license a current OpenType cut from the foundry. The conversion route was never about saving money. It was about not abandoning a typeface that had been doing real work for two decades.
 
@@ -40,11 +38,11 @@ TransType handles the format jump: Type 1 in, clean OpenType out, names sane, ke
 
 The combination lets studios rescue 1990s typefaces without abandoning the years of design work locked inside the outlines and the kerning tables. The format changed. The work the font was doing did not. A careful conversion respects both.
 
-## The graveyard is full of files nobody bothered to move
+## Worth moving, worth keeping
 
-A converter is supposed to be a footnote. TransType 4 keeps showing up in working studios because the format it converts away from keeps refusing to die quietly, and because the fonts inside that format are still inside live identities, half-finished books, and active brand guidelines.
+A converter is supposed to be a footnote. TransType 4 keeps showing up in working studios because the typefaces inside the old Type 1 files are still doing real work — inside live identities, half-finished books, and active brand guidelines that took years to establish.
 
-If a font is worth keeping, it is worth converting carefully. Otherwise it joins the graveyard of files nobody bothered to move.
+If a font is worth keeping, it is worth converting carefully. That is the whole brief, and it is a quietly satisfying one.
 
 ## References
 

@@ -954,33 +954,15 @@
 
   <h1>Roboto Flex and the thirteen axes</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/roboto-flex-thirteen-axes-1.png" /></p>
-<p>Christian Robertson drew Roboto in 2011 for Android.
-Ten years later, David Berlow’s team turned it into something with thirteen knobs.</p>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/roboto-flex-thirteen-axes-2.png" /></p>
+<p>Christian Robertson drew Roboto in 2011 for Android. Ten years later, David Berlow’s team turned it into something with thirteen knobs.</p>
 <!-- more -->
 
-<p>Roboto Flex shipped in September 2021. The team — Santiago Orozco, Irene Vlachou, Ilya
-Ruderman, Yury Ostromentsky, Mikhail Strukov — inherited the architecture from
-Amstelvar, Berlow’s 2017 experiment that first tried the parametric idea at scale.</p>
-<p>The axis count breaks down like this.
-Five are standard: <code>wght</code>, <code>wdth</code>, <code>opsz</code>, <code>GRAD</code>, <code>slnt</code>. Eight are parametric: <code>XTRA</code>,
-<code>XOPQ</code>, <code>YOPQ</code>, <code>YTLC</code>, <code>YTUC</code>, <code>YTAS</code>, <code>YTDE</code>, <code>YTFI</code>. The parametric set reaches into
-the geometry of the letters themselves — x-height separately from cap height, ascenders
-separately from descenders, contrast separately from overall weight.
-Things that used to require a new drawing now require a slider.</p>
-<p>Eight parametric axes is a lot to hand to a working designer.
-Type Network built <code>typeroof</code> and <code>videoproof</code> to demonstrate that the thirteen-
-dimensional space is actually coherent — that the eye accepts what it sees at every
-position, not just at the corners.
-It holds up.</p>
-<p>The lesson for anyone working in FontLab 8 isn’t “ship thirteen axes.”
-Most fonts don’t need three.
-The lesson is that the toolchain has caught up.
-Designspace, mastering, delta interpolation, axis validation — the infrastructure that
-makes something this large work in browsers shipped today is stable.
-Variable fonts stopped being an experiment somewhere around the time Roboto Flex landed.</p>
-<p>Version 3.200 shipped in 2023. The source is on GitHub.
-It is, as Robertson might say, a complete family.</p>
+<p>Roboto Flex shipped in September 2021. The team — Santiago Orozco, Irene Vlachou, Ilya Ruderman, Yury Ostromentsky, Mikhail Strukov — inherited the architecture from Amstelvar, Berlow’s 2017 experiment that first tried the parametric idea at scale.</p>
+<p>The axis count breaks down like this. Five are standard: <code>wght</code>, <code>wdth</code>, <code>opsz</code>, <code>GRAD</code>, <code>slnt</code>. Eight are parametric: <code>XTRA</code>, <code>XOPQ</code>, <code>YOPQ</code>, <code>YTLC</code>, <code>YTUC</code>, <code>YTAS</code>, <code>YTDE</code>, <code>YTFI</code>. The parametric set reaches into the geometry of the letters themselves — x-height separately from cap height, ascenders separately from descenders, contrast separately from overall weight. Things that used to require a new drawing now require a slider.</p>
+<p>Eight parametric axes is a lot to hand to a working designer. Type Network built <code>typeroof</code> and <code>videoproof</code> to demonstrate that the thirteen- dimensional space is actually coherent — that the eye accepts what it sees at every position, not just at the corners. It holds up.</p>
+<p>The lesson for anyone working in FontLab 8 isn’t “ship thirteen axes.” Most fonts don’t need three. The lesson is that the toolchain has caught up. Designspace, mastering, delta interpolation, axis validation — the infrastructure that makes something this large work in browsers shipped today is stable. Variable fonts stopped being an experiment somewhere around the time Roboto Flex landed.</p>
+<p>Version 3.200 shipped in 2023. The source is on GitHub. It is, as Robertson might say, a complete family.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://typenetwork.com/articles/finesse-and-express">Type Network: Finesse and Express</a></li>

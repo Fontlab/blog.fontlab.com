@@ -22,67 +22,25 @@ review:
   consolidate_with: ""
   notes: "Rewritten 2026-05-08 to focus on Kwon Gun-oh's Korean FontLab Type Design book from issues/draft-posts/404-deepseek.md."
 ---
-![](../media/illu/making-hangul-in-fontlab-1.png){.illu-thumb .illu-index}
+![](../media/illu/making-hangul-in-fontlab-1.png){.illu-thumb }
 
-In April 2025, a Korean book appeared with a modest title and a very specific promise:
-*폰트랩 타입 디자인* — *FontLab Type Design*. Its subtitle is even better: “FontLab and Hangul
-2780, an enjoyable story.”
-That is not just a manual.
-It is a map through one of the hardest jobs in type design.
+In April 2025, a Korean book appeared with a modest title and a very specific promise: *폰트랩 타입 디자인* — *FontLab Type Design*. Its subtitle is even better: “FontLab and Hangul 2780, an enjoyable story.” That is not just a manual. It is a map through one of the hardest jobs in type design.
 
 <!-- more -->
 
-Kwon Gun-oh (권군오) wrote the book for people who want to make Hangul fonts in FontLab.
-That sounds narrow until you remember what Hangul asks from a font editor.
-Latin teaches you to think in hundreds of glyphs.
-Korean starts at a different scale.
-A practical Hangul font may need 2,780 syllables for common production coverage, and
-full modern Hangul coverage reaches 11,172 syllables before you have drawn a digit, a
-Latin letter, or a punctuation mark.
+Kwon Gun-oh (권군오) wrote the book for people who want to make Hangul fonts in FontLab. That sounds narrow until you remember what Hangul asks from a font editor. Latin teaches you to think in hundreds of glyphs. Korean starts at a different scale. A practical Hangul font may need 2,780 syllables for common production coverage, and full modern Hangul coverage reaches 11,172 syllables before you have drawn a digit, a Latin letter, or a punctuation mark.
 
-This is why the book matters.
-It does not treat Hangul as a Latin workflow with a larger shopping list.
-It starts from the actual Korean problem: syllable blocks built from reusable jamo (자모)
-parts. Each block can contain an initial consonant, a vowel, and an optional final
-consonant. Those pieces do not merely sit in a row.
-They change position, proportion, and sometimes shape depending on the slot they fill.
-The same component that behaves one way as an initial may need another shape as a final.
+This is why the book matters. It does not treat Hangul as a Latin workflow with a larger shopping list. It starts from the actual Korean problem: syllable blocks built from reusable jamo (자모) parts. Each block can contain an initial consonant, a vowel, and an optional final consonant. Those pieces do not merely sit in a row. They change position, proportion, and sometimes shape depending on the slot they fill. The same component that behaves one way as an initial may need another shape as a final.
 
-FontLab’s component, reference, and element workflows are the way through that maze.
-Draw the reusable parts.
-Connect them. Assemble the syllables.
-Then change the source part and let the dependent glyphs update instead of redrawing
-hundreds of near-identical forms by hand.
-The book’s own sample text says it explains how to draw 2,780 Hangul glyphs using
-references, and how to keep those connections editable with delta filters.
-That is the difference between a weekend fantasy and a working production method.
+FontLab’s component, reference, and element workflows are the way through that maze. Draw the reusable parts. Connect them. Assemble the syllables. Then change the source part and let the dependent glyphs update instead of redrawing hundreds of near-identical forms by hand. The book’s own sample text says it explains how to draw 2,780 Hangul glyphs using references, and how to keep those connections editable with delta filters. That is the difference between a weekend fantasy and a working production method.
 
-The other quiet fact is language.
-FontLab documentation exists in English, and the software itself grew out of a
-Latin-heavy professional culture.
-Korean type designers have always had to translate more than words: they have had to
-translate assumptions.
-What counts as a “base glyph”?
-What counts as a component?
-How much shape variation is structural, and how much is design taste?
-Where do the edge cases hide?
+The other quiet fact is language. FontLab documentation exists in English, and the software itself grew out of a Latin-heavy professional culture. Korean type designers have always had to translate more than words: they have had to translate assumptions. What counts as a “base glyph”? What counts as a component? How much shape variation is structural, and how much is design taste? Where do the edge cases hide?
 
-A Korean guidebook answers those questions in the place where they are actually being
-asked. It makes FontLab legible to designers who think in Hangul first, not after the
-Latin section is finished.
-That is a small publishing event and a large workflow event.
+A Korean guidebook answers those questions in the place where they are actually being asked. It makes FontLab legible to designers who think in Hangul first, not after the Latin section is finished. That is a small publishing event and a large workflow event.
 
-There are already signs that Korean FontLab practice is mixing traditional font
-production with newer tools.
-One Korean video shows a designer using Seedream-generated material and FontLab 8 to
-work through a 2,780-glyph Hangul project.
-The interesting part is not the AI garnish.
-The interesting part is that the unit of ambition is no longer “try a few letters.”
-It is “build the system.”
+There are already signs that Korean FontLab practice is mixing traditional font production with newer tools. One Korean video shows a designer using Seedream-generated material and FontLab 8 to work through a 2,780-glyph Hangul project. The interesting part is not the AI garnish. The interesting part is that the unit of ambition is no longer “try a few letters.” It is “build the system.”
 
-Hangul is not impossible in FontLab.
-It is just not a Latin problem.
-Kwon’s book says that clearly, in Korean, with the workflow attached.
+Hangul is not impossible in FontLab. It is just not a Latin problem. Kwon’s book says that clearly, in Korean, with the workflow attached.
 
 ## References
 

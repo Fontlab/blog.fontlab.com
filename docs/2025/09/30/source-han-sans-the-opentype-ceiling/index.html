@@ -954,47 +954,18 @@
 
   <h1>Source Han Sans, the OpenType ceiling</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/source-han-sans-the-opentype-ceiling-1.png" /></p>
-<p>Seven weights. Four regional variants.
-65,535 glyphs each — the maximum an OpenType font can hold.
-Adobe and Google hit the ceiling on purpose.</p>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/source-han-sans-the-opentype-ceiling-3.png" /></p>
+<p>Seven weights. Four regional variants. 65,535 glyphs each — the maximum an OpenType font can hold. Adobe and Google hit the ceiling on purpose.</p>
 <!-- more -->
 
-<p><strong>Source Han Sans</strong> was released on <strong>15 July 2014</strong>. Lead designer: <strong>Ryoko Nishizuka</strong>
-at Adobe Tokyo. Project architect: <strong>Dr Ken Lunde</strong>, who has spent three decades writing
-the reference books on CJK Unicode that everyone else cites.
-Foundry partners: <strong>Iwata</strong> (Japan), <strong>Sandoll</strong> (Korea — designers Joo-Yeon Kang and
-Soo-Young Jang), <strong>Changzhou SinoType</strong> (China).
-The Latin, Greek, and Cyrillic glyphs come from Source Sans (Paul Hunt), scaled to
-<strong>115%</strong> to match the CJK x-height.</p>
-<p>Seven weights × 65,535 glyphs each.
-Four regional variants — Simplified Chinese, Traditional Chinese, Japanese, Korean —
-switching via the OpenType <code>locl</code> feature: the same Unicode code point resolves to a
-different glyph depending on the document’s language tag.
-Total across weights and variants approaches <strong>450,000 glyphs</strong>. Latest version is
-2.005, released June 2025.</p>
+<p><strong>Source Han Sans</strong> was released on <strong>15 July 2014</strong>. Lead designer: <strong>Ryoko Nishizuka</strong> at Adobe Tokyo. Project architect: <strong>Dr Ken Lunde</strong>, who has spent three decades writing the reference books on CJK Unicode that everyone else cites. Foundry partners: <strong>Iwata</strong> (Japan), <strong>Sandoll</strong> (Korea — designers Joo-Yeon Kang and Soo-Young Jang), <strong>Changzhou SinoType</strong> (China). The Latin, Greek, and Cyrillic glyphs come from Source Sans (Paul Hunt), scaled to <strong>115%</strong> to match the CJK x-height.</p>
+<p>Seven weights × 65,535 glyphs each. Four regional variants — Simplified Chinese, Traditional Chinese, Japanese, Korean — switching via the OpenType <code>locl</code> feature: the same Unicode code point resolves to a different glyph depending on the document’s language tag. Total across weights and variants approaches <strong>450,000 glyphs</strong>. Latest version is 2.005, released June 2025.</p>
 <blockquote>
-<p>“These fonts achieve the goal of ‘No More Tofu,’ meaning no empty glyphs when
-typesetting Unicode.”
-— Geumho Seok, CEO of Sandoll</p>
+<p>“These fonts achieve the goal of ‘No More Tofu,’ meaning no empty glyphs when typesetting Unicode.” — Geumho Seok, CEO of Sandoll</p>
 </blockquote>
-<p>The cultural fact, which is harder to find in the documentation, is what it took to get
-four foundries to agree.
-Weight curves, stroke proportions, which radicals were drawn consistently across regions
-and which needed to differ — these are not technical questions with technical answers.
-The same Unicode code point genuinely is a different character in a Tokyo newspaper and
-a Beijing one. The same character looks different because it <em>is</em> different: different
-calligraphic tradition, different stroke memory, different reader expectation.
-Source Han Sans is the negotiated result of four teams arguing about that in detail
-across multiple time zones.</p>
-<p>For a FontLab user the technical payoff is concrete.
-Source Han’s regional switching is the largest production deployment of language-tagged
-glyph substitution (<code>locl</code>) that has ever shipped.
-Reading its sources — the full project is on GitHub under an open licence — is the
-fastest way to understand what <code>locl</code> is actually for, at a scale that no tutorial can
-fake.</p>
-<p>The project is also a reminder that “pan-CJK” is not a style claim.
-It is an engineering commitment with a very specific cost.</p>
+<p>The cultural fact, which is harder to find in the documentation, is what it took to get four foundries to agree. Weight curves, stroke proportions, which radicals were drawn consistently across regions and which needed to differ — these are not technical questions with technical answers. The same Unicode code point genuinely is a different character in a Tokyo newspaper and a Beijing one. The same character looks different because it <em>is</em> different: different calligraphic tradition, different stroke memory, different reader expectation. Source Han Sans is the negotiated result of four teams arguing about that in detail across multiple time zones.</p>
+<p>For a FontLab user the technical payoff is concrete. Source Han’s regional switching is the largest production deployment of language-tagged glyph substitution (<code>locl</code>) that has ever shipped. Reading its sources — the full project is on GitHub under an open licence — is the fastest way to understand what <code>locl</code> is actually for, at a scale that no tutorial can fake.</p>
+<p>The project is also a reminder that “pan-CJK” is not a style claim. It is an engineering commitment with a very specific cost.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://blog.typekit.com/2014/07/15/introducing-source-han-sans/">Introducing Source Han Sans — Adobe blog (2014)</a></li>

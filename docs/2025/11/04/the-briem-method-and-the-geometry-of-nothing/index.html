@@ -954,46 +954,16 @@
 
   <h1>The Briem method and the geometry of nothing</h1>
 
-<p><img alt="" src="../../../../media/illu/the-briem-method-and-the-geometry-of-nothing-1.png" />{.illu-thumb
-.illu-index}</p>
-<p>The most difficult part of drawing a typeface is not the black ink.
-It is the white space.</p>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/the-briem-method-and-the-geometry-of-nothing-2.png" /></p>
+<p>The most difficult part of drawing a typeface is not the black ink. It is the white space.</p>
 <!-- more -->
 
-<p>Letters are social creatures, and how much personal space they afford one another
-decides whether a paragraph is a joy to read or a chore.
-Gunnlaugur SE Briem, who taught type design at the Royal Academy of Fine Arts in
-Copenhagen in 1996, distilled this into a relentlessly practical methodology that
-eschews inspiration in favour of systematic testing.</p>
-<p>Briem’s foundational advice is grounded in optical illusions.
-If you rely purely on mathematics, the result will look terrible.
-Human vision requires compensation.
-Briem advocated for a modular approach to rough out a design quickly — assembling
-letters from a basic rectangle, a curve, and a diagonal — before spending the majority
-of the time on optical correction.
-You literally chop away the parts that look wrong until it looks right.</p>
-<p>Spacing, Briem argued, is not about finding a universal mathematical truth.
-It is about establishing rhythm.
-In FontLab 8, this is managed through sidebearings and metrics keys.
-You do not space all twenty-six letters independently.
-You establish control characters — typically the lowercase <code>n</code> and <code>o</code>, the uppercase
-<code>H</code> and <code>O</code>. You adjust the space around the <code>n</code> until a string of <code>nnnnn</code> feels
-comfortable. Then you link the left sidebearing of <code>b</code>, <code>h</code>, <code>i</code>, <code>k</code>, and <code>r</code> to the
-left sidebearing of <code>n</code>.</p>
-<p>FontLab handles the linkage through mathematical expressions.
-If you later decide your typeface needs to be tighter, you narrow the spacing on the
-<code>n</code>, and every linked glyph updates.
-It brings programmatic efficiency to an aesthetic judgement.</p>
-<p>When sidebearing logic fails, you resort to kerning.
-The <code>V</code> next to the <code>A</code> will always need a per-pair adjustment.
-To avoid kerning ten thousand individual pairs, FontLab uses class-based kerning.
-Group all left-leaning diagonals into one class, all right-leaning diagonals into
-another, kern the class once, and the adjustment propagates.</p>
-<p>Spacing evolves with technology and taste.
-Tschichold condemned tight spacing in 1952; Zapf popularised it with Palatino soon
-after. The fundamentals do not change.
-Letters must relate to one another logically, and the white between them is where the
-relationship lives.</p>
+<p>Letters are social creatures, and how much personal space they afford one another decides whether a paragraph is a joy to read or a chore. Gunnlaugur SE Briem, who taught type design at the Royal Academy of Fine Arts in Copenhagen in 1996, distilled this into a relentlessly practical methodology that eschews inspiration in favour of systematic testing.</p>
+<p>Briem’s foundational advice is grounded in optical illusions. If you rely purely on mathematics, the result will look terrible. Human vision requires compensation. Briem advocated for a modular approach to rough out a design quickly — assembling letters from a basic rectangle, a curve, and a diagonal — before spending the majority of the time on optical correction. You literally chop away the parts that look wrong until it looks right.</p>
+<p>Spacing, Briem argued, is not about finding a universal mathematical truth. It is about establishing rhythm. In FontLab 8, this is managed through sidebearings and metrics keys. You do not space all twenty-six letters independently. You establish control characters — typically the lowercase <code>n</code> and <code>o</code>, the uppercase <code>H</code> and <code>O</code>. You adjust the space around the <code>n</code> until a string of <code>nnnnn</code> feels comfortable. Then you link the left sidebearing of <code>b</code>, <code>h</code>, <code>i</code>, <code>k</code>, and <code>r</code> to the left sidebearing of <code>n</code>.</p>
+<p>FontLab handles the linkage through mathematical expressions. If you later decide your typeface needs to be tighter, you narrow the spacing on the <code>n</code>, and every linked glyph updates. It brings programmatic efficiency to an aesthetic judgement.</p>
+<p>When sidebearing logic fails, you resort to kerning. The <code>V</code> next to the <code>A</code> will always need a per-pair adjustment. To avoid kerning ten thousand individual pairs, FontLab uses class-based kerning. Group all left-leaning diagonals into one class, all right-leaning diagonals into another, kern the class once, and the adjustment propagates.</p>
+<p>Spacing evolves with technology and taste. Tschichold condemned tight spacing in 1952; Zapf popularised it with Palatino soon after. The fundamentals do not change. Letters must relate to one another logically, and the white between them is where the relationship lives.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://help.fontlab.com/fontlab/8/tutorials/briem/1-0-intro/briem-1-00-intro/">Briem method tutorial — FontLab</a></li>

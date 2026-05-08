@@ -1,5 +1,3 @@
-{.illu-thumb .illu-index}
-
 The problem with Japanese set in Helvetica has annoyed transit designers for fifty years. In January 2017, Akira Kobayashi did something about it.
 
 The structural problem is this. Japanese kanji sit taller than Latin caps. Japanese kana sit shorter. The Latin baseline and the CJK optical centre don’t agree. On a sign, in a brochure, in a UI — any line that mixes Japanese and European type in a sans-serif has a vertical alignment problem that the layout software cannot fix, because the mismatch is baked into the fonts themselves.

@@ -59,8 +59,15 @@ def inject(path: Path) -> str:
     fm_block, body = m.group(1), m.group(2)
 
     slug = slug_for(path.stem)
-    img_rel = f"../media/illu/{slug}-1.png"
-    if not (ILLU / f"{slug}-1.png").exists():
+
+    # Respect a previously hand-picked variant suffix (-1, -2, -3, …) if one is
+    # already present in the post; only fall back to -1 for fresh injections.
+    existing = re.search(
+        rf"!\[\][^\n]*\.\./media/illu/{re.escape(slug)}-(\d+)\.png", body
+    )
+    variant = existing.group(1) if existing else "1"
+    img_rel = f"../media/illu/{slug}-{variant}.png"
+    if not (ILLU / f"{slug}-{variant}.png").exists():
         return "no-image"
 
     # `.illu-index` opts the image into the blog-index excerpt; remove it by

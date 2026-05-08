@@ -1,6 +1,6 @@
 You inherit a folder of old PostScript Type 1 fonts. Or a client sends a family with broken names, duplicate glyphs, and kerning that only works in one app. You need web fonts that load fast and look right everywhere.
 
-The modern answer is brutally simple: WOFF2, subsetted, one file per family where possible. WOFF2 compresses better than anything else and every current browser understands it. Guides from DebugBear and Wholegrain Digital repeat the same checklist: convert once, subset to the characters you actually use, serve with the right `@font-face` syntax, and test the waterfall.
+The modern answer is delightfully simple: WOFF2, subsetted, one file per family where possible. WOFF2 compresses better than anything else and every current browser understands it. Guides from DebugBear and Wholegrain Digital repeat the same checklist: convert once, subset to the characters you actually use, serve with the right `@font-face` syntax, and test the waterfall.
 
 Subsetting is where most of the weight goes. A full Latin-Extended pan-European cut might be 90 KB. A subset that covers only the characters your homepage actually contains can be 12 KB. The browser does not need every Vietnamese tone mark on a marketing page that does not contain Vietnamese.
 

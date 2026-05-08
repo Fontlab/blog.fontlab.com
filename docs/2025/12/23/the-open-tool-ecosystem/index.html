@@ -958,49 +958,22 @@
 <p>Most of the world’s text passes through a library most people have never heard of.</p>
 <!-- more -->
 
-<p><strong>HarfBuzz</strong> — Persian حرف‌باز, meaning “open type” with a secondary sense of
-“insincerely talkative” — is the shaping engine behind Chrome, Firefox, Android, GNOME,
-LibreOffice, Flutter, and Unreal Engine.
-<strong>Behdad Esfahbod</strong> began rewriting it in C++ in 2005. Mozilla’s Jonathan Kew helped
-stabilise harfbuzz-ng around 2012. Esfahbod won the O’Reilly Open Source Award in 2013.
-The library is everywhere type renders.
-The people who rely on it, almost to a person, have no idea it exists.</p>
+<p><strong>HarfBuzz</strong> — Persian حرف‌باز, meaning “open type” with a secondary sense of “insincerely talkative” — is the shaping engine behind Chrome, Firefox, Android, GNOME, LibreOffice, Flutter, and Unreal Engine. <strong>Behdad Esfahbod</strong> began rewriting it in C++ in 2005. Mozilla’s Jonathan Kew helped stabilise harfbuzz-ng around 2012. Esfahbod won the O’Reilly Open Source Award in 2013. The library is everywhere type renders. The people who rely on it, almost to a person, have no idea it exists.</p>
 <hr />
-<p><strong>FontTools / TTX</strong> was started by Just van Rossum in 1999. It is the Python library
-that lets you open any font file, inspect every table, change one byte, and write it
-back out. Esfahbod revived the project around 2013 inside Google.
-At TypeCon 2014 he said:</p>
+<p><strong>FontTools / TTX</strong> was started by Just van Rossum in 1999. It is the Python library that lets you open any font file, inspect every table, change one byte, and write it back out. Esfahbod revived the project around 2013 inside Google. At TypeCon 2014 he said:</p>
 <blockquote>
-<p>“I’ll make a bet — no matter what you use to create a font, if you round trip it
-through TTX, it will be functionally the same.”</p>
+<p>“I’ll make a bet — no matter what you use to create a font, if you round trip it through TTX, it will be functionally the same.”</p>
 </blockquote>
 <p>That bet has held well enough to be a practical standard.</p>
-<p><strong>FontGoggles</strong> (Just van Rossum, funded by Google Fonts) is a macOS preview tool.
-Drop any <code>.ufo</code>, <code>.designspace</code>, or <code>.ttf</code> on it and the preview reloads as you save.
-Stephen Nixon, on first use: <em>“WOW. Font Goggles is just so good.
-It allows me to open a preview of the full Recursive designspace in maybe 4 or 5
-seconds.”</em> For variable font work it shortens the edit-and-check loop to something that
-doesn’t interrupt thought.</p>
-<p><strong>Wakamai Fondue</strong> (Roel Nieskens, wakamaifondue.com) tells you what’s inside any font
-dropped into a browser tab — features, axes, glyph counts, languages supported.
-A major release in <strong>April 2026</strong> at Fontstand Berlin swapped the old Fontkit backend
-for <strong>LibFont</strong>.</p>
-<p><strong>fontdrop.info</strong> (Viktor Nübel) is the same diagnostic idea with a stricter scope and a
-smaller payload: under 1.5 MB, all client-side.
-It started in 2016 from a German publishing-house consulting job.
-The scope discipline is visible: it does one thing well and does not grow.</p>
+<p><strong>FontGoggles</strong> (Just van Rossum, funded by Google Fonts) is a macOS preview tool. Drop any <code>.ufo</code>, <code>.designspace</code>, or <code>.ttf</code> on it and the preview reloads as you save. Stephen Nixon, on first use: <em>“WOW. Font Goggles is just so good. It allows me to open a preview of the full Recursive designspace in maybe 4 or 5 seconds.”</em> For variable font work it shortens the edit-and-check loop to something that doesn’t interrupt thought.</p>
+<p><strong>Wakamai Fondue</strong> (Roel Nieskens, wakamaifondue.com) tells you what’s inside any font dropped into a browser tab — features, axes, glyph counts, languages supported. A major release in <strong>April 2026</strong> at Fontstand Berlin swapped the old Fontkit backend for <strong>LibFont</strong>.</p>
+<p><strong>fontdrop.info</strong> (Viktor Nübel) is the same diagnostic idea with a stricter scope and a smaller payload: under 1.5 MB, all client-side. It started in 2016 from a German publishing-house consulting job. The scope discipline is visible: it does one thing well and does not grow.</p>
 <hr />
-<p>The right way to use these five together is unromantic.
-HarfBuzz and FontTools are infrastructure — the water and drains of a modern font
-workflow. FontGoggles is the fast inner loop for day-to-day iteration.
-Wakamai Fondue and fontdrop are diagnostics for when something breaks.</p>
-<p>A font workflow that doesn’t lean on at least three of them is doing more manual work
-than it needs to. None of them requires a subscription.
-All of them existed before they were fashionable.</p>
+<p>The right way to use these five together is unromantic. HarfBuzz and FontTools are infrastructure — the water and drains of a modern font workflow. FontGoggles is the fast inner loop for day-to-day iteration. Wakamai Fondue and fontdrop are diagnostics for when something breaks.</p>
+<p>A font workflow that doesn’t lean on at least three of them is doing more manual work than it needs to. None of them requires a subscription. All of them existed before they were fashionable.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://harfbuzz.github.io/why-is-it-called-harfbuzz.html">Why is it called HarfBuzz?
-  — HarfBuzz documentation</a></li>
+<li><a href="https://harfbuzz.github.io/why-is-it-called-harfbuzz.html">Why is it called HarfBuzz? — HarfBuzz documentation</a></li>
 <li><a href="https://fontgoggles.org/">FontGoggles</a></li>
 <li><a href="https://wakamaifondue.com/">Wakamai Fondue</a></li>
 <li><a href="https://fontdrop.info/">fontdrop.info</a></li>

@@ -1,5 +1,3 @@
-# FontLab VI is here
-
 FontLab Studio 5 was a workhorse. It shipped in 2004 and carried a generation of type designers through the OpenType transition. The app aged gracefully, right up until it didn’t. On 7 December 2017, we replaced it.
 
 **FontLab VI** is a complete rebuild for macOS and Windows. It is 64-bit, native, and built around a drawing model that reflects how type designers work. Here is what you get on day one:

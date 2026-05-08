@@ -954,27 +954,13 @@
 
   <h1>A colour font is a black-and-white machine</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/cpal-and-css-font-palette-1.png" /></p>
-<p>A colour font with one palette is a coloured drawing.
-A colour font with thirty palettes is a theme system.
-The difference is <code>CPAL</code>, and most people walk right past it.</p>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/cpal-and-css-font-palette-3.png" /></p>
+<p>A colour font with one palette is a coloured drawing. A colour font with thirty palettes is a theme system. The difference is <code>CPAL</code>, and most people walk right past it.</p>
 <!-- more -->
 
-<p><code>CPAL</code> — the Color Palette table — is the OpenType table that holds the colours a <code>COLR</code>
-font uses. The architecture is straightforward: each palette is a list of sRGB colour
-records, indexed from zero.
-Palette 0 is the default.
-Version 1 of <code>CPAL</code> can label palettes and mark them as appropriate for light or dark
-backgrounds, so a renderer can pick the right one automatically.</p>
-<p>One index is reserved: <code>0xFFFF</code> means “the foreground colour” — whatever <code>color</code> the CSS
-or application context has set.
-That single convention is quietly load-bearing.
-Any glyph layer assigned <code>0xFFFF</code> will follow the text colour into dark mode, into a
-coloured heading, into a print stylesheet with black-on-white.
-The parts that should look like text <em>do</em> look like text, without extra CSS.</p>
-<p>On the web side, CSS caught up properly with <code>@font-palette-values</code>. The rule lets a
-page override palette entries or compose an entirely new palette for a family, without
-touching the font file:</p>
+<p><code>CPAL</code> — the Color Palette table — is the OpenType table that holds the colours a <code>COLR</code> font uses. The architecture is straightforward: each palette is a list of sRGB colour records, indexed from zero. Palette 0 is the default. Version 1 of <code>CPAL</code> can label palettes and mark them as appropriate for light or dark backgrounds, so a renderer can pick the right one automatically.</p>
+<p>One index is reserved: <code>0xFFFF</code> means “the foreground colour” — whatever <code>color</code> the CSS or application context has set. That single convention is quietly load-bearing. Any glyph layer assigned <code>0xFFFF</code> will follow the text colour into dark mode, into a coloured heading, into a print stylesheet with black-on-white. The parts that should look like text <em>do</em> look like text, without extra CSS.</p>
+<p>On the web side, CSS caught up properly with <code>@font-palette-values</code>. The rule lets a page override palette entries or compose an entirely new palette for a family, without touching the font file:</p>
 <div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">@</span><span class="k">font-palette-values</span><span class="w"> </span><span class="nt">--night</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bradley Initials&quot;</span><span class="o">;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">base-palette</span><span class="o">:</span><span class="w"> </span><span class="nt">2</span><span class="o">;</span>
@@ -982,24 +968,10 @@ touching the font file:</p>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">.</span><span class="nc">heading</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-palette</span><span class="p">:</span><span class="w"> </span><span class="o">--</span><span class="n">night</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </span></code></pre></div>
-<p>WebKit’s “Customizing Color Fonts on the Web” demo, built on DJR’s Bradley Initials,
-remains the cleanest live example of what this makes possible: a single font file, half
-a dozen radically different looks, no export step.</p>
-<p>Underware’s Plakato Color Grade pushes the concept as far as it currently goes: the font
-ships <strong>1,360 palette entries</strong> in <code>CPAL</code>. Not thirty palettes — 1,360 individual colour
-records across a large palette library.
-Swap a palette and the entire feel of the font changes.
-The outlines never move.</p>
-<p>The mental shift worth making is this: a colour font is not a coloured drawing.
-It is a black-and-white machine that gets coloured in by CSS. The outlines are the
-machine. The palettes are the paint.
-Once you see it that way, the design problem becomes “what palettes ship by default” —
-the same problem every stylesheet has always had, just with a font table attached.</p>
-<p>Safari can select and override <code>CPAL</code> palettes via CSS <code>font-palette</code> and
-<code>@font-palette-values</code> even while it does not yet render <code>COLRv1</code> glyph colour.
-Those are different layers of the stack.
-The CSS theming surface is broadly supported; the glyph rendering varies by browser.
-Test both, separately.</p>
+<p>WebKit’s “Customizing Color Fonts on the Web” demo, built on DJR’s Bradley Initials, remains the cleanest live example of what this makes possible: a single font file, half a dozen radically different looks, no export step.</p>
+<p>Underware’s Plakato Color Grade pushes the concept as far as it currently goes: the font ships <strong>1,360 palette entries</strong> in <code>CPAL</code>. Not thirty palettes — 1,360 individual colour records across a large palette library. Swap a palette and the entire feel of the font changes. The outlines never move.</p>
+<p>The mental shift worth making is this: a colour font is not a coloured drawing. It is a black-and-white machine that gets coloured in by CSS. The outlines are the machine. The palettes are the paint. Once you see it that way, the design problem becomes “what palettes ship by default” — the same problem every stylesheet has always had, just with a font table attached.</p>
+<p>Safari can select and override <code>CPAL</code> palettes via CSS <code>font-palette</code> and <code>@font-palette-values</code> even while it does not yet render <code>COLRv1</code> glyph colour. Those are different layers of the stack. The CSS theming surface is broadly supported; the glyph rendering varies by browser. Test both, separately.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://webkit.org/blog/12662/customizing-color-fonts-on-the-web/">Customizing color fonts on the web — WebKit blog</a></li>

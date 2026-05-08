@@ -1,5 +1,3 @@
-{.illu-thumb .illu-index}
-
 It is a common myopia in Western design to assume that typography begins with `A` and ends with `Z`. In reality, Latin script is one small neighbourhood in a vast, complex city of writing systems.
 
 Modern font editors must accommodate the structural realities of Cyrillic, Arabic, Hebrew, Devanagari, and the massive CJK ideographic sets. The technical requirements are demanding. Arabic is inherently cursive and context-dependent — a single letter alters its geometry depending on whether it stands at the beginning, middle, or end of a word, or alone. To draw an Arabic font, the designer must produce these positional variants and lean heavily on contextual alternates (`calt`) and right-to-left kerning. FontLab 8.2 refined the right-to-left kerning workflow specifically.

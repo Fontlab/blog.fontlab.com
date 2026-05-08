@@ -998,74 +998,31 @@
 
   <h1>Variable fonts in FontLab 8</h1>
 
-<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/variable-fonts-fontlab-8-1.png" /></p>
-<p>Variable fonts pack an entire type family into one file, letting users slide
-continuously between weights, widths, and other axes rather than jumping between
-predetermined styles.
-FontLab 8 treats variable font creation as a first-class workflow, not a post-production
-step. Here’s what the “Families &amp; variation” chapter of the What’s New documentation
-covers.</p>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/variable-fonts-fontlab-8-1.png" /></p>
+<p>Variable fonts pack an entire type family into one file, letting users slide continuously between weights, widths, and other axes rather than jumping between predetermined styles. FontLab 8 treats variable font creation as a first-class workflow, not a post-production step. Here’s what the “Families &amp; variation” chapter of the What’s New documentation covers.</p>
 <!-- more -->
 
 <h2 id="building-from-static-fonts">Building from static fonts<a class="headerlink" href="#building-from-static-fonts" title="Permanent link">&para;</a></h2>
-<p>If you already have several static weights, you don’t need to rebuild from scratch to
-make a variable font.</p>
+<p>If you already have several static weights, you don’t need to rebuild from scratch to make a variable font.</p>
 <p><img alt="FontLab 8 families and variation header showing variable components and multi-master workflow" src="../../../../media/fl8-head-07-varcomponent.png" /></p>
-<p>Select multiple static fonts in the Fonts panel (Shift-click to select more than one),
-then choose <em>Fonts &gt; Merge Fonts to Masters</em>. FontLab creates a new multi-master font
-with each source as a master.
-If the sources differ in weight or width, FontLab builds the variation axes and assigns
-design coordinates. Mask layers carry over.</p>
-<p>To add a new master to an existing project: <em>Font &gt; Add Variation</em> adds a duplicate
-master and a new axis.
-From FontLab 8.3, you can specify an action set to run on the new master immediately —
-useful for automatically generating a condensed or bold variant from the regular.</p>
+<p>Select multiple static fonts in the Fonts panel (Shift-click to select more than one), then choose <em>Fonts &gt; Merge Fonts to Masters</em>. FontLab creates a new multi-master font with each source as a master. If the sources differ in weight or width, FontLab builds the variation axes and assigns design coordinates. Mask layers carry over.</p>
+<p>To add a new master to an existing project: <em>Font &gt; Add Variation</em> adds a duplicate master and a new axis. From FontLab 8.3, you can specify an action set to run on the new master immediately — useful for automatically generating a condensed or bold variant from the regular.</p>
 <h2 id="variable-components">Variable components<a class="headerlink" href="#variable-components" title="Permanent link">&para;</a></h2>
-<p>The most significant addition to FontLab 8’s variation workflow is <strong>variable
-components</strong> — components that reference not a static glyph, but an interpolated
-<em>instance</em> of a glyph at a specific location on the variation axes.</p>
-<p>Design a lowercase ‘o’ with weight variation.
-Then build ‘c’, ‘e’, ‘G’, and ‘Q’ as variable components referencing ‘o’ at specific
-positions. Adjust the ‘o’ master and all those letters update.
-Each component can be placed at a different axis position — the ‘c’ might reference a
-slightly lighter interpolation of ‘o’ than the ‘G’, giving per-glyph weight compensation
-without manual drawing.</p>
-<p>Variable components are adjusted with sliders in the Glyph window.
-No code, no special panel.</p>
+<p>The most significant addition to FontLab 8’s variation workflow is <strong>variable components</strong> — components that reference not a static glyph, but an interpolated <em>instance</em> of a glyph at a specific location on the variation axes.</p>
+<p>Design a lowercase ‘o’ with weight variation. Then build ‘c’, ‘e’, ‘G’, and ‘Q’ as variable components referencing ‘o’ at specific positions. Adjust the ‘o’ master and all those letters update. Each component can be placed at a different axis position — the ‘c’ might reference a slightly lighter interpolation of ‘o’ than the ‘G’, giving per-glyph weight compensation without manual drawing.</p>
+<p>Variable components are adjusted with sliders in the Glyph window. No code, no special panel.</p>
 <h2 id="contour-compatibility">Contour compatibility<a class="headerlink" href="#contour-compatibility" title="Permanent link">&para;</a></h2>
-<p>For interpolation to work, all masters of a glyph must have the same number of contours,
-points, and components in the same order.
-This is the main technical challenge of variable font production.</p>
-<p><strong>Match when Editing</strong> propagates contour operations — set start point, reverse contour
-— to all matching masters automatically.
-The <strong>Matchmaker</strong> tool visualizes which nodes correspond between masters, color-coding
-matched and unmatched points.
-If masters are incompatible, Matchmaker shows where the divergence happens so you can
-re-establish correspondence manually.</p>
-<p><strong>Group layers</strong> in the layers panel organizes masters by family relationship.
-<strong>Master cousins</strong> shows all masters simultaneously as colored wireframes in the Glyph
-window — draw with one master active while seeing the others as context.</p>
+<p>For interpolation to work, all masters of a glyph must have the same number of contours, points, and components in the same order. This is the main technical challenge of variable font production.</p>
+<p><strong>Match when Editing</strong> propagates contour operations — set start point, reverse contour — to all matching masters automatically. The <strong>Matchmaker</strong> tool visualizes which nodes correspond between masters, color-coding matched and unmatched points. If masters are incompatible, Matchmaker shows where the divergence happens so you can re-establish correspondence manually.</p>
+<p><strong>Group layers</strong> in the layers panel organizes masters by family relationship. <strong>Master cousins</strong> shows all masters simultaneously as colored wireframes in the Glyph window — draw with one master active while seeing the others as context.</p>
 <h2 id="intermediate-masters-and-axis-mapping">Intermediate masters and axis mapping<a class="headerlink" href="#intermediate-masters-and-axis-mapping" title="Permanent link">&para;</a></h2>
-<p>Standard variable font interpolation is linear.
-If your design curve isn’t — a bold typically needs more weight change near the light
-end than near the dark — you have two options.</p>
-<p><strong>Intermediate masters</strong> add a master at a specific axis position.
-FontLab exports these as intermediate glyph masters in the variable font, giving you
-non-linear interpolation without avar.</p>
-<p><strong>The Axis Graph</strong> maps your internal design coordinates to the user-facing coordinates
-in the variable font (the avar table).
-A curved mapping means users see a perceptually even weight ramp even when the design
-space isn’t linearly distributed.</p>
+<p>Standard variable font interpolation is linear. If your design curve isn’t — a bold typically needs more weight change near the light end than near the dark — you have two options.</p>
+<p><strong>Intermediate masters</strong> add a master at a specific axis position. FontLab exports these as intermediate glyph masters in the variable font, giving you non-linear interpolation without avar.</p>
+<p><strong>The Axis Graph</strong> maps your internal design coordinates to the user-facing coordinates in the variable font (the avar table). A curved mapping means users see a perceptually even weight ramp even when the design space isn’t linearly distributed.</p>
 <h2 id="conditional-glyph-substitutions">Conditional glyph substitutions<a class="headerlink" href="#conditional-glyph-substitutions" title="Permanent link">&para;</a></h2>
-<p>Variable fonts can swap glyphs at axis boundaries — switching to a different ‘a’ design
-above a certain weight, for example.
-FontLab 8 implements this with <strong>tilde glyph tags</strong>: name a glyph <code>a~wt&gt;850</code> and FontLab
-exports an <code>rvrn</code> rule substituting it for ‘a’ when the weight axis exceeds 850. This
-handles design decisions that can’t be interpolated, like switching from a two-story to
-a one-story ‘a’ at a specific weight threshold.</p>
+<p>Variable fonts can swap glyphs at axis boundaries — switching to a different ‘a’ design above a certain weight, for example. FontLab 8 implements this with <strong>tilde glyph tags</strong>: name a glyph <code>a~wt&gt;850</code> and FontLab exports an <code>rvrn</code> rule substituting it for ‘a’ when the weight axis exceeds 850. This handles design decisions that can’t be interpolated, like switching from a two-story to a one-story ‘a’ at a specific weight threshold.</p>
 <hr />
-<p>Full documentation is in the
-<a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/">FontLab 8 What’s New: Families &amp; variation</a>.</p>
+<p>Full documentation is in the <a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/">FontLab 8 What’s New: Families &amp; variation</a>.</p>
 <p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/">Read more →</a></p>
 
 
