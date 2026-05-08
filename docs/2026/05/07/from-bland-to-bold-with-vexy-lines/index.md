@@ -1,8 +1,8 @@
 A photograph is not a vector. A sketch is not a vector. A scanned logo is definitely not a vector. Vexy Lines exists to fix that, one image at a time.
 
-The promise is simple: hand Vexy Lines a sketched drawing, a photograph, a scan, or anything you generated with an AI tool, and it returns a scalable vector you can actually use. SVG, EPS, PDF, PNG, JPG — take your pick.
+The promise is simple: hand Vexy Lines a sketched drawing, a photograph, a scan, or anything you generated with an AI tool, and it returns a scalable vector you can actually use. SVG, EPS, PDF, PNG, JPG — take your pick. The less simple part is everything that happens in between.
 
-The less simple part is everything that happens in between. Vexy Lines does not just trace edges. It applies halftone patterns, dithering effects, stipple designs and linear engraving styles. The output looks deliberate, not mechanical.
+Vexy Lines does not just trace edges. It applies halftone patterns, dithering effects, stipple designs and linear engraving styles. The output looks deliberate, not mechanical.
 
 That matters in practice. Screen printers need artwork that separates cleanly. Muralists need files that scale to a wall without going soft. Tattoo artists need line work that holds at small sizes and prints well on skin. None of these people want an auto-traced blob. They want something that looks like it was drawn by someone who knew what they were doing.
 

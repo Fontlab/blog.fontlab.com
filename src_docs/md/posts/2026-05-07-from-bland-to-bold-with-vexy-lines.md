@@ -19,13 +19,13 @@ Vexy Lines exists to fix that, one image at a time.
 The promise is simple: hand Vexy Lines a sketched drawing, a photograph, a scan, or
 anything you generated with an AI tool, and it returns a scalable vector you can
 actually use. SVG, EPS, PDF, PNG, JPG — take your pick.
-
 The less simple part is everything that happens in between.
+
+![Vexy Lines product banner](../media/2026-05-07-newsletter-01.jpg)
+
 Vexy Lines does not just trace edges.
 It applies halftone patterns, dithering effects, stipple designs and linear engraving
 styles. The output looks deliberate, not mechanical.
-
-![Vexy Lines product banner](../media/2026-05-07-newsletter-01.jpg)
 
 That matters in practice.
 Screen printers need artwork that separates cleanly.
@@ -35,14 +35,14 @@ None of these people want an auto-traced blob.
 They want something that looks like it was drawn by someone who knew what they were
 doing.
 
-![Vexy Lines](../media/2026-05-07-newsletter-02.jpg)
+![Vexy Lines](../media/2026-05-07-newsletter-02.jpeg)
 
 Vexy Lines also supports variable fonts for line-based fills.
 Multicolor halftone and flowlines/trace fill round out the effect options.
 If you have spent time in Illustrator trying to fake these looks manually, the appeal is
 immediate.
 
-![Vexy Lines](../media/2026-05-07-newsletter-03.jpg)
+![Vexy Lines](../media/2026-05-07-newsletter-03.jpeg)
 
 The retrofuturistic use case is a good example of what the tool does well: take a
 photograph and turn it into something that looks like a Wall Street Journal hedcut
