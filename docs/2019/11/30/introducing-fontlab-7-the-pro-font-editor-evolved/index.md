@@ -1,4 +1,6 @@
-FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of concentrated work, with more than 250 new features, fixes, and improvements. Highlights include auto-generated OpenType features, both-sided kerning classes, kerning clash detection, variable font intermediate masters and conditional glyph substitution, and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who purchased on or after August 1, 2019 qualify for a free upgrade.
+FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of concentrated work, with more than 250 new features, fixes, and improvements.
+
+Highlights include auto-generated OpenType features, both-sided kerning classes, kerning clash detection, variable font intermediate masters and conditional glyph substitution, and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who purchased on or after August 1, 2019 qualify for a free upgrade.
 
 Until **December 22, 2019**, you can buy FontLab 7 or upgrade from FontLab Studio 5, Fontographer, or TypeTool 3 at a **25% discount**. If you have **FontLab VI**, you can upgrade to 7 for just $99 — and if you bought FontLab VI on August 1 or later, or hold a full educational license, the upgrade is **free**.
 

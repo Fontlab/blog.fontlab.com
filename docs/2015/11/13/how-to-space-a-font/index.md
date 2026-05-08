@@ -1,4 +1,4 @@
-Spacing is where type design lives or dies. This 53-minute tutorial with Thomas Phinney is one of the clearest explanations of the craft ever recorded. Phinney, a type designer and font technologist with decades of experience, walks through sidebearings, optical principles, and the practical workflow inside FontLab Studio 5.
+Spacing is where type design lives or dies. In this 53-minute tutorial, Thomas Phinney walks through sidebearings, optical principles, and the practical workflow inside FontLab Studio 5.
 
 Spacing is not just about numbers. It is about the visual texture a font creates when set at reading size. Getting it wrong makes even well-drawn letterforms look awkward. Phinney begins with first principles:
 

@@ -23,9 +23,11 @@ review:
 ---
 ![](../media/illu/color-fonts-tutorial-3.png){.illu-thumb .illu-index}
 
-Back in 2014, color fonts were a brand new frontier. This 103-minute tutorial with Adam Twardoch was one of the first deep dives into how to actually make them. It covers technical standards, font editor workflows, and the promise of full-color type right when emoji and display typography were pushing the format into the mainstream.
+Back in 2014, color fonts were a brand new frontier. This 103-minute tutorial with Adam Twardoch was one of the first deep dives into how to actually make them.
 
 <!-- more -->
+
+It covers technical standards, font editor workflows, and the promise of full-color type right when emoji and display typography were pushing the format into the mainstream.
 
 Traditional fonts render in a single color chosen by the app. Color fonts break that rule. They embed layered outlines, bitmaps, or SVG artwork directly in the font file. This lets a single glyph display multiple colors, gradients, or photographic detail.
 

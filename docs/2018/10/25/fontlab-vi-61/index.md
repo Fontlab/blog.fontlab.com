@@ -1,4 +1,4 @@
-FontLab VI 6.1 arrived in October 2018. It added standards-compliant components, a Font window sidebar for glyph filtering, and linked metrics expressions. These features gave designers new ways to structure and navigate their work. This was a free update for all FontLab VI users.
+FontLab VI 6.1 arrived in October 2018. It added standards-compliant components, a Font window sidebar for glyph filtering, and linked metrics expressions.
 
 FontLab VI 6.1 shipped across four point releases between October 2018 and April 2019 (6.1.0 through 6.1.4). Each release refined the core features.
 

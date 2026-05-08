@@ -1,4 +1,6 @@
-In 1958, **Paul de Casteljau** at Citroën worked out the mathematics of the curves we now draw with every day. A few years later **Pierre Bézier** at Renault arrived at the same idea independently and published it in 1962. Two engineers, two French car companies, one of the most useful ideas in twentieth-century geometry — and an act of mathematical generosity from de Casteljau that took twenty-seven years to surface publicly.
+In 1958, Paul de Casteljau at Citroën worked out the mathematics of the curves we now draw with every day. A few years later Pierre Bézier at Renault arrived at the same idea independently and published it in 1962.
+
+Two engineers, two French car companies, one of the most useful ideas in twentieth-century geometry — and an act of mathematical generosity from de Casteljau that took twenty-seven years to surface publicly.
 
 Citroën, like many companies of the era, considered de Casteljau’s work a competitive advantage and asked him not to publish. He honoured that, and quietly used the technique inside the company’s CAD systems. By the time he was finally free to write it up in 1985, the wider science community had named the curves after Bézier — who had published first and openly. The compromise the field settled on is the one your textbook still teaches: *Bézier curves, de Casteljau algorithm.* Same mathematics, two names on the mantelpiece, both well earned.
 

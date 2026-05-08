@@ -126,7 +126,9 @@ The webinar drew a direct line from historical stonecutting and brushwork to the
 
 [Read more →](https://www.fontlab.tv/)
 
-Back in 2014, color fonts were a brand new frontier. This 103-minute tutorial with Adam Twardoch was one of the first deep dives into how to actually make them. It covers technical standards, font editor workflows, and the promise of full-color type right when emoji and display typography were pushing the format into the mainstream.
+Back in 2014, color fonts were a brand new frontier. This 103-minute tutorial with Adam Twardoch was one of the first deep dives into how to actually make them.
+
+It covers technical standards, font editor workflows, and the promise of full-color type right when emoji and display typography were pushing the format into the mainstream.
 
 Traditional fonts render in a single color chosen by the app. Color fonts break that rule. They embed layered outlines, bitmaps, or SVG artwork directly in the font file. This lets a single glyph display multiple colors, gradients, or photographic detail.
 
@@ -155,7 +157,9 @@ Here is what shipped in this release:
 
 [Read more →](https://www.fontlab.com/font-utility/dtl-otmaster/)
 
-Automation unlocks the real power of a professional font editor. In this 70-minute tutorial, Adam Twardoch introduces Python scripting inside FontLab Studio 5. You get a clear look at the scripting environment, the FontLab object model, and practical examples that go well beyond “hello world.”
+Automation unlocks the real power of a professional font editor. In this 70-minute tutorial, Adam Twardoch introduces Python scripting inside FontLab Studio 5.
+
+You get a clear look at the scripting environment, the FontLab object model, and practical examples that go well beyond “hello world.”
 
 FontLab Studio 5 opened its internals through a rich Python API. Type designers use it to write scripts and automate repetitive tasks. You can batch-transform glyphs, generate metrics, manipulate anchors, or build entire font families from a single master. This tutorial walks you through that API from the ground up.
 
@@ -174,7 +178,7 @@ Watch on [FontLab TV](https://www.youtube.com/watch?v=QCSKRYZ1Qko).
 
 [Read more →](https://help.fontlab.com/fontlab/7/manual/Scripting-with-Python/)
 
-Spacing is where type design lives or dies. This 53-minute tutorial with Thomas Phinney is one of the clearest explanations of the craft ever recorded. Phinney, a type designer and font technologist with decades of experience, walks through sidebearings, optical principles, and the practical workflow inside FontLab Studio 5.
+Spacing is where type design lives or dies. In this 53-minute tutorial, Thomas Phinney walks through sidebearings, optical principles, and the practical workflow inside FontLab Studio 5.
 
 Spacing is not just about numbers. It is about the visual texture a font creates when set at reading size. Getting it wrong makes even well-drawn letterforms look awkward. Phinney begins with first principles:
 
@@ -212,7 +216,7 @@ Download FontLab VI from the [FontLab product page](https://www.fontlab.com/font
 
 [Read more →](https://help.fontlab.com/)
 
-FontLab VI 6.1 arrived in October 2018. It added standards-compliant components, a Font window sidebar for glyph filtering, and linked metrics expressions. These features gave designers new ways to structure and navigate their work. This was a free update for all FontLab VI users.
+FontLab VI 6.1 arrived in October 2018. It added standards-compliant components, a Font window sidebar for glyph filtering, and linked metrics expressions.
 
 FontLab VI 6.1 shipped across four point releases between October 2018 and April 2019 (6.1.0 through 6.1.4). Each release refined the core features.
 
@@ -400,7 +404,9 @@ The videos below show how to run FontLab Studio 5, Fontographer 5, TypeTool 3, a
 
 [Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
-FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of concentrated work, with more than 250 new features, fixes, and improvements. Highlights include auto-generated OpenType features, both-sided kerning classes, kerning clash detection, variable font intermediate masters and conditional glyph substitution, and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who purchased on or after August 1, 2019 qualify for a free upgrade.
+FontLab 7 is a major upgrade to FontLab VI, arriving after a summer and autumn of concentrated work, with more than 250 new features, fixes, and improvements.
+
+Highlights include auto-generated OpenType features, both-sided kerning classes, kerning clash detection, variable font intermediate masters and conditional glyph substitution, and 64-bit native performance on macOS Catalina and Windows 10. FontLab VI users who purchased on or after August 1, 2019 qualify for a free upgrade.
 
 Until **December 22, 2019**, you can buy FontLab 7 or upgrade from FontLab Studio 5, Fontographer, or TypeTool 3 at a **25% discount**. If you have **FontLab VI**, you can upgrade to 7 for just $99 — and if you bought FontLab VI on August 1 or later, or hold a full educational license, the upgrade is **free**.
 
@@ -1807,7 +1813,9 @@ Most variable font problems are design space problems. This episode is the frami
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
 
-In 1958, **Paul de Casteljau** at Citroën worked out the mathematics of the curves we now draw with every day. A few years later **Pierre Bézier** at Renault arrived at the same idea independently and published it in 1962. Two engineers, two French car companies, one of the most useful ideas in twentieth-century geometry — and an act of mathematical generosity from de Casteljau that took twenty-seven years to surface publicly.
+In 1958, Paul de Casteljau at Citroën worked out the mathematics of the curves we now draw with every day. A few years later Pierre Bézier at Renault arrived at the same idea independently and published it in 1962.
+
+Two engineers, two French car companies, one of the most useful ideas in twentieth-century geometry — and an act of mathematical generosity from de Casteljau that took twenty-seven years to surface publicly.
 
 Citroën, like many companies of the era, considered de Casteljau’s work a competitive advantage and asked him not to publish. He honoured that, and quietly used the technique inside the company’s CAD systems. By the time he was finally free to write it up in 1985, the wider science community had named the curves after Bézier — who had published first and openly. The compromise the field settled on is the one your textbook still teaches: *Bézier curves, de Casteljau algorithm.* Same mathematics, two names on the mantelpiece, both well earned.
 
