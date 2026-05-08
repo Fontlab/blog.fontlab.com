@@ -6,6 +6,11 @@
 
 ## Shipped (2026-05-08 sprint)
 
+### Hangul book rewrite
+- Rewrote `src_docs/md/posts/2025-09-23-making-hangul-in-fontlab.md` to focus on Kwon Gun-oh's Korean *FontLab Type Design* book from `issues/draft-posts/404-deepseek.md`.
+- Replaced the old wdnote/Pixso/Roboto Flex angle with the book's 2,780-glyph Hangul workflow, reference/component production method, and Korean-language documentation milestone.
+- Updated the post CTA to the live Aladin book page and refreshed the references with Aladin, Yes24, the Seedream/FontLab 8 Hangul video, and GetGo Fonts.
+
 ### Flowmark build formatting
 - Added Flowmark 0.6.5 to the locked project dependencies.
 - Added `blog-fontlab format` / `./build.sh format` for in-place formatting of `src_docs/md/`.
@@ -65,6 +70,10 @@
 - Generated color-font page exists at `docs/2026/05/03/color-fonts-in-2026/index.html`; the three old generated 2013 color-font pages are absent.
 - `rg` found no source or generated links to the retired color-font URLs.
 - Browser checks: Playwright found no horizontal overflow and no relevant console errors on home, the Matthew Carter webinar post, the Brush Romans webinar post, About, the 2026 archive, and a retired color-font URL at desktop and mobile widths.
+- Hangul rewrite source check: the updated post's `review.cta_target` matches its `.fl-help-cta` body link.
+- `uv run properdocs build -f mkdocs/mkdocs.yml -d /tmp/blog-fontlab-hangul-build` — complete; generated the rewritten Hangul page and emitted only existing absolute-link informational notices.
+- `uvx ruff check src tests` — clean.
+- `uv run --with pytest python -m pytest -q` — blocked by existing 2026 posts without `review:` metadata; the same baseline issue also blocks the focused content-state CTA test before it reaches the edited post.
 
 ## Shipped (2026-05-07 session)
 

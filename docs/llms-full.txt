@@ -1579,6 +1579,27 @@ Color fonts are now production-grade for display, branding, and app-icon context
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
 
+Christian Robertson drew Roboto in 2011 for Android. Ten years later, David Berlow’s team turned it into something with thirteen knobs.
+
+Roboto Flex shipped in September 2021. The team — Santiago Orozco, Irene Vlachou, Ilya Ruderman, Yury Ostromentsky, Mikhail Strukov — inherited the architecture from Amstelvar, Berlow’s 2017 experiment that first tried the parametric idea at scale.
+
+The axis count breaks down like this. Five are standard: `wght`, `wdth`, `opsz`, `GRAD`, `slnt`. Eight are parametric: `XTRA`, `XOPQ`, `YOPQ`, `YTLC`, `YTUC`, `YTAS`, `YTDE`, `YTFI`. The parametric set reaches into the geometry of the letters themselves — x-height separately from cap height, ascenders separately from descenders, contrast separately from overall weight. Things that used to require a new drawing now require a slider.
+
+Eight parametric axes is a lot to hand to a working designer. Type Network built `typeroof` and `videoproof` to demonstrate that the thirteen- dimensional space is actually coherent — that the eye accepts what it sees at every position, not just at the corners. It holds up.
+
+The lesson for anyone working in FontLab 8 isn’t “ship thirteen axes.” Most fonts don’t need three. The lesson is that the toolchain has caught up. Designspace, mastering, delta interpolation, axis validation — the infrastructure that makes something this large work in browsers shipped today is stable. Variable fonts stopped being an experiment somewhere around the time Roboto Flex landed.
+
+Version 3.200 shipped in 2023. The source is on GitHub. It is, as Robertson might say, a complete family.
+
+## References
+
+- [Type Network: Finesse and Express](https://typenetwork.com/articles/finesse-and-express)
+- [Roboto Flex on GitHub](https://github.com/googlefonts/roboto-flex)
+- [ATypI: Amstelvar and Roboto Flex](https://atypi.org/presentation/amstelvar-and-roboto-flex-unprecedented-flexibility-in-text-typography/)
+- [Roboto Flex on Google Fonts](https://fonts.google.com/specimen/Roboto+Flex)
+
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-7-variable/)
+
 If you’ve read a comic in the last twenty years, you’ve read Blambot. Nate Piekos’s foundry has supplied the lettering fonts for an absurd share of the medium — the dialogue balloons, the SFX, the display titles. Five of his Blambot families sit in the public made-with-fontlab gallery, all drawn in FontLab 7.
 
 Comic lettering fonts have a specific brief that text fonts don’t: they must read fast, in tight balloons, at small sizes on cheap paper or backlit screens, alongside artwork that’s always more visually demanding than they are. Get the rhythm wrong and the page reads stiff. Piekos has been getting that rhythm right for long enough that “Blambot fonts” is functionally a generic term in the trade.
@@ -1669,6 +1690,128 @@ The savings on bandwidth are nice. The control is the point.
 
 [Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 
+A variable font isn’t a new file format. It’s an OpenType file with a few extra tables nailed on, and once you know what each one does, the whole thing stops being magic.
+
+The core stack:
+
+**`fvar`** declares the axes the font supports — their names, ranges, and defaults — plus any named instances ("Bold", “Condensed Italic”) the designer wanted to bake in. Without `fvar`, the renderer doesn’t know the font varies at all.
+
+**`gvar`** (for TrueType outlines) or **`CFF2`** (for PostScript outlines) holds the deltas: the per-axis offsets that move each point as you slide a value. This is where the actual interpolation data lives.
+
+**`avar`** handles non-linear axis remapping. A slider midpoint doesn’t have to be a visual midpoint. If the weight axis looks thin for the bottom half of its range and fat for the top, `avar` lets the designer remap the curve so the slider feels even.
+
+**`HVAR`** stores per-instance advance-width deltas so layout engines don’t have to interpolate metrics from scratch. Without it, spacing can drift between instances in ways that look like bugs and are.
+
+**`MVAR`** covers font-wide metric variations — cap height, x-height, line gap — that need to shift as axes change.
+
+**`STAT`** is the table that makes named instances findable. It’s what lets an app understand that “Bold Condensed” in a variable font is the same concept as “Bold Condensed” in a static family.
+
+All of this was announced at ATypI Warsaw in September 2016 — Adobe, Apple, Google, and Microsoft on the same stage. John Hudson’s Medium essay from that month remains the most readable single account of what the format is and why it was built the way it was.
+
+The practical reason to know this is dull and useful. When something renders correctly in Chrome but breaks in Safari, the answer is almost always one of these tables disagreeing with another — `avar` misread, `HVAR` missing, `STAT` entries that contradict `fvar` ranges. Knowing what each table is for shortens the debug from a day to twenty minutes.
+
+## References
+
+- [OpenType variations overview — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
+- [Introducing OpenType variable fonts — John Hudson, Medium](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369)
+- [Variable fonts — Typolexikon (German)](https://www.typolexikon.de/variable-fonts/)
+- [Variable fonts guide — Google Fonts](https://googlefonts.github.io/gf-guide/variable.html)
+
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-7-variable/)
+
+William Caslon knew something in 1720 that digital type spent a century forgetting: a six-point letter is not a twelve-point letter made smaller.
+
+Open Caslon’s 1720 specimen and you see it immediately. Every size of every face is a different drawing. The six-point is thicker, wider, more open — cut from a different punch by a punchcutter who understood that ink squashes and eyes strain at small sizes. The sixty-point is crisper, more refined, its spacing tighter because it can afford to be.
+
+Phototype killed this. One master, photographed up and down. A 72-point headline and a 9-point caption came from the same piece of film, scaled. Nobody at the photo house was cutting a different punch for each size. It was efficient and it looked mediocre and it became the norm.
+
+Digital didn’t fix it. PostScript took the same shortcut. So did TrueType, and most OpenType fonts right up to the variable era.
+
+The `opsz` axis finally brings it back. Set the axis value to the intended size in points, and the font swaps in shapes drawn for that size — heavier strokes and looser spacing at 6pt, finer strokes and tighter spacing at 60pt. Amstelvar (2017, ranging from 8 to 144pt) and Roboto Flex pioneered the continuous version. Adobe’s Source Serif 4 took a different position in January 2021: five discrete `opsz` styles rather than infinite interpolation. Frank Grießhammer’s argument was that five carefully drawn sizes beat an infinite number of mediocre ones. Both approaches are defensible.
+
+There is still an unresolved argument over what `opsz` units actually mean. Physical points? CSS pixels? GitHub issue roboto-flex#104 has been open for years, with Adam Twardoch, Laurence Penney, John Hudson, and Dave Crossland trading positions. It matters more than it sounds: `font-optical-sizing: auto` is the default in most browsers, and “auto” is doing slightly different things on each platform.
+
+Caslon would have an opinion. He would probably be terse about it.
+
+## References
+
+- [Optical sizing — Wikipedia](https://en.wikipedia.org/wiki/Optical_sizing)
+- [roboto-flex issue #104 — opsz units](https://github.com/googlefonts/roboto-flex/issues/104)
+- [Introducing Source Serif 4 — Adobe blog](https://blog.adobe.com/en/publish/2021/01/12/introducing-source-serif-4)
+
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-7-variable/)
+
+Variable fonts are not new. They are the third attempt at the same idea, by mostly the same engineers, after twenty-five years of finding out what didn’t work.
+
+Adobe announced **Multiple Master** in 1991. Myriad MM had four masters — light/black × condensed/extended — and let you interpolate any instance in between. Minion MM added an optical-size axis, Caption to Display. It was, technically, beautiful.
+
+Commercially it died slowly. Tamye Riggs’s *Adobe Originals Silver Anniversary* essay puts it best: users had to generate a separate instance for every variation they wanted to use, resulting in hard drives full of files named things like `MinioMM_578 BD 465 CN 11 OP`. The last MM release was 1999.
+
+Apple shipped its own answer the same year, inside QuickDraw GX: **TrueType GX Variations**. Same idea, different table layout. It worked. It also lost, mostly because GX as a whole lost. When an operating system dies, it takes its font format with it.
+
+Then nothing, for sixteen years.
+
+Then ATypI Warsaw, September 2016: Adobe, Apple, Google, and Microsoft stood on the same stage and announced OpenType 1.8 with variations support. The mechanism is essentially TrueType GX with the lessons of Multiple Master applied — continuous interpolation, standard axis tags, named instances that don’t require generating static files.
+
+FontLab Ltd was inside the working group pushing for it, and shipped support in FontLab VI when the spec landed. David Lemon was at Adobe through both eras. The continuity is unusual. Most format wars don’t have the same people on both ends.
+
+The reason Multiple Master failed wasn’t the technology. It was the workflow: too many files, too many names, too much manual work to get from “this font varies” to “I can use this font.” OpenType variables solved that. The variation is in the file. The instance names are in `fvar`. Nothing lives on the hard drive that didn’t need to be generated.
+
+FontLab 8 inherits a direct line from that Warsaw announcement. The axes you define, the masters you draw, the designspace you set up — it’s the same idea Myriad MM was, made fit to use.
+
+## References
+
+- [The Adobe Originals Silver Anniversary — Typekit blog](https://blog.typekit.com/2014/07/30/the-adobe-originals-silver-anniversary-story-how-the-originals-endured-in-an-ever-changing-industry/)
+- [Multiple master fonts — Wikipedia](https://en.wikipedia.org/wiki/Multiple_master_fonts)
+- [TrueType GX — Wikipedia](https://en.wikipedia.org/wiki/TrueType_GX)
+
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-7-variable/)
+
+In 2021 the Television Academy gave the W3C a Technology & Engineering Emmy for font standardisation. One of the recipients was the CEO of FontLab Ltd — one of the few times a font tool company has won a piece of broadcast hardware named after a 1940s televised play.
+
+The Web Open Font Format started in 2009 with three names on the draft: **Jonathan Kew** (Mozilla), **Tal Leming**, and **Erik van Blokland**. Submitted to the W3C in April 2010, recommendation status by December 2012. The mechanism was modest: a thin wrapper around an OpenType file, with metadata and zlib compression. The politics were not modest. Type foundries had refused to license desktop fonts for raw `.otf` web embedding for years. WOFF was the format they would license. That was the actual invention — not the wrapper, but the agreement.
+
+WOFF2 followed in April 2012. The compression switched to **Brotli**, developed by Jyrki Alakuijala and Zoltán Szabadka at Google. The wrong-footing detail: Brotli was built for fonts *first*, before it became the general-purpose web compression algorithm you now encounter everywhere. RFC 7932 in July 2016 standardised it for everything else. WOFF2 became a W3C Recommendation in March 2018.
+
+The size numbers are not subtle. WOFF2 vs WOFF: roughly 30% smaller on average across the Google Fonts corpus. For CJK fonts: over 50% smaller. Full Noto Emoji as CBDT bitmap tables: 9 MB. The same set as COLRv1 plus WOFF2: 1.85 MB.
+
+The lesson is not that WOFF was technically hard. It isn’t. The lesson is that the parties who had to agree — Mozilla, Adobe, Microsoft, Apple, Google, every type foundry that mattered, and the W3C — had no obvious reason to agree on anything, and somehow did. The format works because the people behind it had spent twenty years arguing about everything else, and eventually ran out of objections.
+
+Some arguments do end. Slowly, expensively, with an Emmy at the finish line.
+
+## References
+
+- [WOFF2 specification — W3C](https://w3c.github.io/woff/woff2/)
+- [WOFF2 on GitHub — Google](https://github.com/google/woff2)
+- [W3C Technology & Engineering Emmy — W3C blog](https://www.w3.org/blog/2021/w3c-technology-engineering-emmy/)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
+The story everyone tells is that Shigetaka Kurita designed emoji at NTT Docomo in 1999. It is a good story. It is also wrong.
+
+Emojipedia corrected the record in 2019. The first commercial emoji set shipped on the **SoftBank/J-Phone SkyWalker DP-211SW in 1997** — ninety glyphs, monochrome, twelve by twelve pixels. The pile of poo was already there. Kurita’s 1999 set was influential, better documented, and designed by someone with a name attached to the project. It was not first.
+
+That correction matters more than a trivia point. The SoftBank set arrived two years before Docomo’s, which means emoji were a competitive feature before anyone had decided they were culturally significant. They weren’t designed as art or communication theory. They were designed to sell phones.
+
+**Apple Color Emoji** shipped on November 21, 2008, with iPhone OS 2.2 — 471 glyphs, originally Japan-only, tied to SoftBank’s exclusivity deal with Apple. The designers were Raymond Sepulveda, Angela Guzman, and Ollie Wagner. Guzman later wrote about the process: every glyph had to read at 20 × 20 pixels and hold up at larger sizes, which meant simplifying and then simplifying again until the thing that remained still looked like itself.
+
+Two years after that, Unicode 6.0 (2010) accepted emoji as proper code points. The characters that teenagers were sending each other had to be added to the same standard that encodes ancient Sumerian.
+
+The easter eggs in the Apple set are still there. The 📰 newspaper headline reads “The Apple Times.” The 📅 calendar shows **July 17** — the day Apple announced iCal in 2002, and the day Emojipedia eventually designated World Emoji Day.
+
+**Microsoft open-sourced 1,538 Fluent Emoji on August 10, 2022**, under MIT licence — the first major vendor to make their emoji set actually free to reuse. The rest remain proprietary.
+
+The reason this matters for a font tool is that emoji forced the colour-font question. Every “should fonts have colour” argument from the 2000s lost the moment a Japanese teenager could send a smiley face. Apple shipped SBIX (PNG bitmaps). Google shipped CBDT. Microsoft and Adobe proposed COLR and OT-SVG respectively. COLRv1 arrived in 2021 and the browsers followed through 2022. The whole stack — CPAL, `@font-palette-values`, colour font tooling in FontLab — exists because in 1997 someone at J-Phone decided ninety tiny pictures would sell a handset.
+
+## References
+
+- [Correcting the record on the first emoji set — Emojipedia](https://blog.emojipedia.org/correcting-the-record-on-the-first-emoji-set/)
+- [Apple Emoji turns 10 — Emojipedia](https://blog.emojipedia.org/apple-emoji-turns-10/)
+- [Apple did not invent emoji — eev.ee](https://eev.ee/blog/2016/04/12/apple-did-not-invent-emoji/)
+- [Bringing new emoji to Windows 11 — Microsoft Design](https://microsoft.design/articles/bringing-new-emoji-to-windows-11/)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
 Design space is the part of variable font work that decides whether your font feels good or merely works. The FontLab TV design space episode is the conceptual foundation for everything you do with masters, axes, and instances.
 
 > 📺 Watch: [Design space basics on FontLab TV](https://fontlab.tv/)
@@ -1690,6 +1833,67 @@ Design space is the part of variable font work that decides whether your font fe
 Most variable font problems are design space problems. This episode is the framing that lets you debug VF behaviour by drawing diagrams instead of guessing.
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
+Paul de Casteljau invented the Bézier curve in 1958. His employer made him keep quiet about it for 27 years.
+
+**Pierre Bézier** worked at Renault. He published his parametric curve method in 1962. **Paul de Casteljau** worked at Citroën. He had the same mathematics in 1958–59.
+
+Citroën, deciding the technique was a competitive advantage, **forbade publication**. Twenty-seven years passed. By the time de Casteljau was finally allowed to publish in 1985, the science community had long since named the curves after Bézier. The compromise was to name the *evaluation algorithm* after de Casteljau — which is why every renderer textbook says *Bézier curve, de Casteljau algorithm*.
+
+They mean the same thing. The names mark which company let its engineer publish.
+
+______________________________________________________________________
+
+For type design the consequence of this automotive argument is the cubic/quadratic split that any FontLab user lives with every day:
+
+- **PostScript / CFF / CFF2** — cubic Béziers (4 control points per segment). Adobe’s choice.
+- **TrueType** — quadratic Béziers (3 control points per segment). Apple’s choice, made in the late 1980s for one reason: the arithmetic was cheaper to render on an 8 MHz machine at 72 dpi.
+
+On faster hardware, at higher resolution, Adobe’s reasoning looked better. But both choices were already locked in by the time it mattered.
+
+**OpenType (1996)** solved the standoff by wrapping both: one font container, either flavour inside. Every modern font is still one or the other on disk. Conversion between them is not lossless — a round trip from cubic to quadratic and back will, in general, change the curve. FontLab’s conversion tools do the best they can, which is quite good, but the geometry does not survive perfectly. That is not a bug. It is the shape of the original disagreement.
+
+The historical footnote worth keeping is small but worth saying out loud: the geometry of every digital letter you read descends from a French car company that almost classified it. The algorithm ran in Citroën’s CAD systems for nearly three decades before a typographer ever used it. De Casteljau got his name on the evaluation step. Bézier got his name on the curve. Renault got the credit, Citroën got the car doors, and the rest of us got the handles.
+
+## References
+
+- [Bézier curve — Wikipedia](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
+- [A Primer on Bézier Curves — Pomax](https://pomax.github.io/bezierinfo/)
+- [The Bézier curve: how car design influenced CAD — Bricsys](https://www.bricsys.com/blog/the-bezier-curve-how-car-design-influenced-cad)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
+Three names. One style. A 19th-century missionary print shop at the centre of all of them.
+
+The standard book serif of East Asian typography is not one name. In Taiwan and Hong Kong it is **Mingti** (明體). In mainland China it is **Songti** (宋體). In Japan it is **Minchōtai** (明朝体). Three names implying descent from either the Ming or the Song dynasty.
+
+Neither implication is accurate.
+
+The shape we call Mincho descends much more directly from **19th-century missionary lead type** — specifically the **美華書館 (American Presbyterian Mission Press)** in Shanghai, under the American printer **William Gamble** in the 1860s. Gamble standardised the form in electrotype, which was cheap to produce and cheap to distribute. It spread across China and Japan precisely because it was easy to manufacture, not because it was calligraphically correct.
+
+The Qing scholar **錢大鏞** noticed the problem at the time. In *Ming Wen Zai* he wrote:
+
+> “Old books were written by skilled calligraphers… only in late Ming did engraving artisans create what was called Songti — vulgar and inferior.”
+
+He was the first person on record to draw a typographic line between hand-drawn and tool-drawn calligraphic forms — four hundred years before the same distinction came to matter in font editing software.
+
+How the three names diverged is a distribution story, not a design story. Mainland China and Hong Kong kept *Songti* from the dominant local naming tradition. Taiwan inherited *Mincho* via **Showa-era Japanese phototype imports**: Japanese vendors shipped film fonts under their own labels, and those labels never got removed. The name stayed, in Japanese, on Taiwanese type, for decades.
+
+justfont, Taiwan’s type foundry, has stated the resolution as plainly as it deserves:
+
+> 「明體跟宋體都一樣，無論稱呼哪一個，意義是一樣的」 — “Mingti and Songti are the same — whichever name you use, the meaning is identical.”
+
+For a FontLab user designing a CJK serif, the practical implication is that the *style* is settled across all three names, but the local conventions are not. Preferred radical proportions, stroke contrast, where the brush memory shows — these draw differently in Tokyo, Taipei, and Beijing. Three names, one style, three sets of subtly different strokes.
+
+That is probably a feature.
+
+## References
+
+- [justfont: 明體？宋體？ (Mingti or Songti?)](https://blog.justfont.com/2013/09/mingti_or_songti_1/)
+- [Ming typefaces — Wikipedia](<https://en.wikipedia.org/wiki/Ming_(typefaces)>)
+- [American Presbyterian Mission Press — American Bible Society archives](https://www.americanbible.org)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
 A bold weight is not a thicker version of the regular. It is a different design that has to share a family with the regular and pretend they were drawn together. Briem’s bold tutorial — adapted lightly here — is the cleanest argument for why the obvious approach doesn’t work.
 
@@ -1772,6 +1976,50 @@ We have been writing about color fonts since the earliest days of these format w
 - Color fonts in browsers — web.dev
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
+The Japanese font on your iPhone has been drawn since 1989 by a studio of three people.
+
+**字游工房 Jiyukobo** was founded in September 1989 by three designers who had left Sha-Ken, one of the large Japanese type manufacturers: **Torinoumi Osamu** (born 1955), **Suzuki Tsutomu**, and **Katada Keiichi**. In 1990 they signed with Dainippon Screen for what became the **Hiragino** series.
+
+Torinoumi drew the kana for Hiragino Mincho — the part of a Japanese typeface where the personality is. Kanji can be copied or derived; kana are drawn, and the kana are what you feel. The result has been the iPhone’s Japanese system font since 2007. The story passed around inside Apple at the time was that Steve Jobs’s reaction was monosyllabic: “Cool!”
+
+> *「日本人にとって文字は水であり、米である」* “For the Japanese, type is water and rice.” — Torinoumi Osamu, often citing his teacher Kozuka Masahiko
+
+The studio collected recognition slowly. The 2002 Sato Keinosuke Prize. The 2024 Yoshikawa Eiji Cultural Prize — one of Japan’s significant cultural honours. In 2019, Jiyukobo became a subsidiary of Morisawa, and Torinoumi stepped down as president, staying on as a designer.
+
+The arithmetic of scale is worth sitting with. Three people founded the studio. For most of its life it has employed a handful of designers. Hiragino now ships on every iPhone sold, every Mac made, in every iOS keyboard in Japan — which puts it in daily contact with over a hundred million people. That is not an industrial outcome. It is the work of a small workshop that happens to be on the global hot path.
+
+For a type designer, the practical lesson is mundane and important: Japanese type is not one thing. A Japanese typeface is kanji — tens of thousands of them — plus hiragana plus katakana plus Latin plus punctuation, each subsystem with its own optical standards, and all of them needing to sit together without fighting. The Hiragino series handles that. Jiyukobo draws it.
+
+## References
+
+- [Torinoumi Osamu interview — 1101.com (2024)](https://www.1101.com/n/s/torinoumi/2024-05-16.html)
+- [Hiragino typeface guide — stone-type.jp](https://stone-type.jp/tebiki/562/)
+- [Hiragino — Wikipedia](https://en.wikipedia.org/wiki/Hiragino)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
+One of Morisawa’s oldest typefaces made it into *Your Name* because it was imperfect in exactly the right way.
+
+**A1 Mincho** is old enough that the metal version had ink-pool ridges at every stroke crossing — places where wet ink pooled before it dried. The Japanese term is **墨だまり (sumi-damari)**, literally “ink pool.” These are not defects. They are the trace of a physical process: metal type, ink, paper, pressure, time.
+
+When Morisawa reissued A1 digitally, they made a choice. The ridges stayed. The face is therefore a digital font that quietly remembers it used to be hot metal.
+
+Makoto Shinkai’s *君の名は (Your Name)* (2016) used A1 Mincho as the standard typeface in its marketing and subtitles, paired with **Shin Go**. The film is famous for light — backlit clouds, golden-hour Tokyo, the precise quality of late afternoon. The type does the same job at smaller scale. The sumi-damari where strokes meet catch the eye in the way a backlit cloud catches it: not by being bright, but by being specific. The text feels physical even on a digital projector.
+
+The technical lesson is simple enough to state in a sentence. A reissued metal face that fixes its imperfections becomes a different typeface from the one designers remember. Morisawa’s bet on A1 was that the imperfections were the design.
+
+For a FontLab user working on a revival or a digital interpretation of a historical face, the same question comes up: which irregularities are noise and which are signal? With A1, the answer turned out to be all of them. Not every face works that way — some hot-metal quirks are just the punch-cutter having a bad day. The job is knowing the difference.
+
+Sumi-damari in a film title that earned over $380 million worldwide is the kind of outcome that makes the argument for you.
+
+## References
+
+- [Morisawa A1 Mincho overview — dorawei.xyz](https://dorawei.xyz/morisawa-a1-mincho/)
+- [A1 Mincho specimen — Morisawa](https://www.morisawa.co.jp/fonts/specimen/229)
+- [Your Name — Wikipedia](https://en.wikipedia.org/wiki/Your_Name)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
 If you read about FontLab only in English, you get one picture. If you read about it in Polish, Spanish, Japanese, Korean, Chinese, and German, you get six.
 
@@ -1907,26 +2155,75 @@ Almost every modern type design ships with at least a dozen OpenType features. G
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8)
 
-Hangul looks deceptively simple to a Latin-trained eye. Twenty-four basic letters, written in tidy syllabic blocks. The reality is that those letters combine into more than eleven thousand pre-composed syllables, and getting them all to behave inside a single font is one of the harder jobs in modern type design.
+The problem with Japanese set in Helvetica has annoyed transit designers for fifty years. In January 2017, Akira Kobayashi did something about it.
 
-Each syllable block is built from up to three components: an initial consonant, a vowel, and an optional final consonant. The components do not sit side by side. They tile, stack, and resize depending on which slot they fill. The same `ㅁ` that takes up half a block as an initial takes up a quarter as a final. Designers who try to draw eleven thousand syllables one by one are still drawing them five years later.
+The structural problem is this. Japanese kanji sit taller than Latin caps. Japanese kana sit shorter. The Latin baseline and the CJK optical centre don’t agree. On a sign, in a brochure, in a UI — any line that mixes Japanese and European type in a sans-serif has a vertical alignment problem that the layout software cannot fix, because the mismatch is baked into the fonts themselves.
 
-The way out is component-based design. You draw the components — initial, medial, final — in the positions and sizes they need, then assemble them into syllables programmatically. Korean designers have done this in various tools for years; FontLab 8’s variable components and smart components make it considerably less painful.
+Sign painters and book designers have worked around it for half a century. **Akira Kobayashi**, working with **Kazuhiro Yamada** and **Ryota Doi**, designed **Tazugane Gothic** to fix the specific version of the problem that bothered him most: Japanese with Helvetica, on transit signage, looking visually broken.
 
-The Korean web and design-system community has interesting things to say about this. `wdnote` and `pixso.net` write about Hangul fonts as design-system tokens, treating weight, width, and contrast as parameters that the brand controls. Roboto Flex is invoked constantly as a model. The argument is that a Hangul family ought to expose the same axis design as a serious Latin family — not because Hangul mimics Latin, but because typography systems are typography systems.
+Released on **25 January 2017**, Tazugane is built as a partner for **Adrian Frutiger’s Neue Frutiger 1450**. The solution is precise rather than approximate: Frutiger glyphs are scaled to **108%** with the baseline shifted down, so Latin caps and kanji visually align without either feeling stretched or repositioned. Ten weights, Ultra Light through Extra Black.
 
-FontLab 8 supports the workflow end to end. Component-based assembly. Variable components for syllable-level interpolation. OpenType feature code for the substitution rules that actually compose Hangul on screen. Proper export to OpenType variable fonts that the browser, the iOS keyboard, and the Korean news site all understand.
+The name is the surprise. **Tazugane** is an archaic Japanese word for crane — 鶴, a symbol of longevity.
 
-The character set is large. The work is not impossible. The tools have caught up.
+> “I had never heard of the archaic Japanese word for Tazugane but I immediately liked it as it reminded me of the grace and elegance of the crane.” — Akira Kobayashi
+
+**Monotype acquired Fontworks in 2023**, which puts Tazugane and the Tsukushi family — most of the Japanese type Apple ships — under one corporate roof with most of what Monotype already owned. The Japanese type landscape consolidated faster than most people expected.
+
+For a FontLab designer working on a mixed-script family, Tazugane is a useful case study in what “harmonised” actually means in practice. It is not “make things look similar.” It is “decide exactly which numbers need to change, and by how much, so that the eye stops noticing the join.”
 
 ## References
 
-- [Hangul typography on wdnote](https://wdnote.tistory.com/197)
-- [Pixso — HTML and Korean fonts](https://pixso.net/kr/articles/html-pixso-fonts-design/)
-- [Variable components in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
-- [The Type — typography podcast](https://www.thetype.com/typechat/feed/)
+- [Tazugane Gothic — Monotype](https://www.monotype.com/resources/font-stories/tazugane-gothic-a-japanese-typeface-with-the-elegance-of-a-crane)
+- [Monotype acquires Fontworks — Print Mag](https://www.printmag.com/type-tuesday/monotype-acquires-fontworks-interview-akira-kobayashi/)
 
-[Read more →](https://help.fontlab.com/fontlab/8/manual/)
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
+In April 2025, a Korean book appeared with a modest title and a very specific promise: *폰트랩 타입 디자인* — *FontLab Type Design*. Its subtitle is even better: “FontLab and Hangul 2780, an enjoyable story.” That is not just a manual. It is a map through one of the hardest jobs in type design.
+
+Kwon Gun-oh (권군오) wrote the book for people who want to make Hangul fonts in FontLab. That sounds narrow until you remember what Hangul asks from a font editor. Latin teaches you to think in hundreds of glyphs. Korean starts at a different scale. A practical Hangul font may need 2,780 syllables for common production coverage, and full modern Hangul coverage reaches 11,172 syllables before you have drawn a digit, a Latin letter, or a punctuation mark.
+
+This is why the book matters. It does not treat Hangul as a Latin workflow with a larger shopping list. It starts from the actual Korean problem: syllable blocks built from reusable jamo (자모) parts. Each block can contain an initial consonant, a vowel, and an optional final consonant. Those pieces do not merely sit in a row. They change position, proportion, and sometimes shape depending on the slot they fill. The same component that behaves one way as an initial may need another shape as a final.
+
+FontLab’s component, reference, and element workflows are the way through that maze. Draw the reusable parts. Connect them. Assemble the syllables. Then change the source part and let the dependent glyphs update instead of redrawing hundreds of near-identical forms by hand. The book’s own sample text says it explains how to draw 2,780 Hangul glyphs using references, and how to keep those connections editable with delta filters. That is the difference between a weekend fantasy and a working production method.
+
+The other quiet fact is language. FontLab documentation exists in English, and the software itself grew out of a Latin-heavy professional culture. Korean type designers have always had to translate more than words: they have had to translate assumptions. What counts as a “base glyph”? What counts as a component? How much shape variation is structural, and how much is design taste? Where do the edge cases hide?
+
+A Korean guidebook answers those questions in the place where they are actually being asked. It makes FontLab legible to designers who think in Hangul first, not after the Latin section is finished. That is a small publishing event and a large workflow event.
+
+There are already signs that Korean FontLab practice is mixing traditional font production with newer tools. One Korean video shows a designer using Seedream-generated material and FontLab 8 to work through a 2,780-glyph Hangul project. The interesting part is not the AI garnish. The interesting part is that the unit of ambition is no longer “try a few letters.” It is “build the system.”
+
+Hangul is not impossible in FontLab. It is just not a Latin problem. Kwon’s book says that clearly, in Korean, with the workflow attached.
+
+## References
+
+- [폰트랩 타입 디자인 — Aladin](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362506917)
+- [폰트랩 타입 디자인 — Yes24](https://www.yes24.com/product/goods/145331896)
+- [Seedream으로 생성한 폰트랩 8로 한글 2780자 디자인 — YouTube](https://www.youtube.com/watch?v=XyCx4KnQ8UA)
+- [GetGo Fonts for FontLab](https://fontlabcom.github.io/getgo-fonts/)
+
+[See the book →](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362506917)
+
+Seven weights. Four regional variants. 65,535 glyphs each — the maximum an OpenType font can hold. Adobe and Google hit the ceiling on purpose.
+
+**Source Han Sans** was released on **15 July 2014**. Lead designer: **Ryoko Nishizuka** at Adobe Tokyo. Project architect: **Dr Ken Lunde**, who has spent three decades writing the reference books on CJK Unicode that everyone else cites. Foundry partners: **Iwata** (Japan), **Sandoll** (Korea — designers Joo-Yeon Kang and Soo-Young Jang), **Changzhou SinoType** (China). The Latin, Greek, and Cyrillic glyphs come from Source Sans (Paul Hunt), scaled to **115%** to match the CJK x-height.
+
+Seven weights × 65,535 glyphs each. Four regional variants — Simplified Chinese, Traditional Chinese, Japanese, Korean — switching via the OpenType `locl` feature: the same Unicode code point resolves to a different glyph depending on the document’s language tag. Total across weights and variants approaches **450,000 glyphs**. Latest version is 2.005, released June 2025.
+
+> “These fonts achieve the goal of ‘No More Tofu,’ meaning no empty glyphs when typesetting Unicode.” — Geumho Seok, CEO of Sandoll
+
+The cultural fact, which is harder to find in the documentation, is what it took to get four foundries to agree. Weight curves, stroke proportions, which radicals were drawn consistently across regions and which needed to differ — these are not technical questions with technical answers. The same Unicode code point genuinely is a different character in a Tokyo newspaper and a Beijing one. The same character looks different because it *is* different: different calligraphic tradition, different stroke memory, different reader expectation. Source Han Sans is the negotiated result of four teams arguing about that in detail across multiple time zones.
+
+For a FontLab user the technical payoff is concrete. Source Han’s regional switching is the largest production deployment of language-tagged glyph substitution (`locl`) that has ever shipped. Reading its sources — the full project is on GitHub under an open licence — is the fastest way to understand what `locl` is actually for, at a scale that no tutorial can fake.
+
+The project is also a reminder that “pan-CJK” is not a style claim. It is an engineering commitment with a very specific cost.
+
+## References
+
+- [Introducing Source Han Sans — Adobe blog (2014)](https://blog.typekit.com/2014/07/15/introducing-source-han-sans/)
+- [Source Han Sans — Wikipedia](https://en.wikipedia.org/wiki/Source_Han_Sans)
+- [Source Han Sans — GitHub](https://github.com/adobe-fonts/source-han-sans)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
 Italic is not roman tilted to the right. Slant your upright `a` and what you get is a tilted `a`, not an italic `a` — the structure is wrong, the rhythm is wrong, the connection points are wrong. Briem’s italic tutorial, lightly modernized, walks through what an italic actually is.
 
@@ -1983,6 +2280,26 @@ Reading these debates is one of the better ways to learn type design. The produc
 - [Awesome typography — Jolg42](https://github.com/Jolg42/awesome-typography)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
+NT$1.5 million in eighty minutes. NT$26 million in the end. A typeface named after a tea proved that East Asian type had an audience willing to pay for it.
+
+In **August 2015**, justfont launched **金萱 (Jin Xuan)** on the Taiwanese crowdfunding platform flyingV. The campaign hit NT$1.5 million in eighty minutes. Final tally: roughly **NT$26 million from 7,800 backers** — the most successful Taiwanese crowdfund of its time, and the first public proof that East Asian display type could be funded the way Western indie type had been funded for years.
+
+The concept was a hybrid: 「明體的情感」+「黑體的簡潔」 — *the emotion of Mincho plus the simplicity of Hei*. Not a pure serif, not a pure sans. The face was named after 金萱 Jin Xuan, a Taiwanese oolong tea, and shipped in three weights branded as *sweetness levels*: 半糖 (half sugar), 三分糖 (thirty percent sugar), 七分糖 (seventy percent sugar). The branding is doing real work — it translates an abstract weight axis into something sensory and culturally specific.
+
+What followed was bigger. **jf 蘭陽明體 (Lanyangming, 2021–22)** — Lin Xia’s most ambitious project — drew on Republican-era engraving from 《澗于集》, later identified as the work of Eileen Chang’s grandfather **Zhang Peilun**. It supports **Taiwanese-Hokkien** Tâi-lô romanisation and **indigenous Formosan** romanisations. Languages that historically had to be set in approximate Latin substitutes finally have a Hanzi face that matches.
+
+The interesting design question is why this happened in Taiwan rather than elsewhere. A Hanzi typeface needs around 13,000 glyphs for reasonable coverage. The per-backer cost of producing that is real — it can’t be hidden in the economics the way a Latin crowdfund can. Taiwan happens to have a design community willing to share that cost, a track record of supporting cultural projects, and justfont’s decade of education work making the case for why type matters.
+
+You can’t crowdfund a Latin family the same way. The community that makes it possible is not the platform.
+
+## References
+
+- [Jin Xuan crowdfunding campaign — justfont blog (2015)](https://blog.justfont.com/2015/08/jf-crowdfunding/)
+- [Lanyangming project — justfont blog](https://blog.justfont.com/tag/lanyang/)
+- [Jin Xuan at ATypI — atypi.org](https://atypi.org/presentation/jin-xuan-the-worlds-first-crowdfunded-east-asian-ideographic-typeface/)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
 Drop a photo into Vexy Lines, and it hands you back a crisp vector drawing. It reads the brightness of your image and adjusts stroke thickness to match. Dark areas get heavy lines. Light areas get fine ones. It’s simple math, but the results look like magic.
 
@@ -2056,6 +2373,54 @@ The “endless ocean of opportunities” line is salesman language only if you d
 
 [Browse Karandash →](http://karandash.eu/)
 
+Most font editors grew up thinking about Latin. In April 2025, a Korean designer published the book that translates FontLab into Hangul terms.
+
+Kwon Gun-oh (권건오) published **《폰트랩 타입 디자인》 (FontLab Type Design)** — the first Korean-language guide to designing fonts, and specifically Hangul fonts, in FontLab. The book covers the toolset on FontLab’s own terms: glyph window, masters, mastering, components, OpenType features. Then it pairs each chapter with the practical methods Korean designers actually use.
+
+That second half is where it earns its place. Korean has 11,172 modern Hangul syllables. Each syllable block is assembled from up to three components — initial consonant (초성), vowel (중성), and optional final consonant (종성) — that tile, stack, and resize depending on which slot they fill. The same ㄱ that takes up half a block as an initial takes a quarter as a final. Drawing 11,172 variations one by one is a career, not a project. The answer is component-based design, and the book explains how to do it in FontLab specifically.
+
+I wrote about the component workflow last year in [Making Hangul in FontLab](https://blog.fontlab.com/2025/09/23/making-hangul-in-fontlab/index.md) — the variable components, the smart components, the substitution logic. Kwon’s book covers that ground in Korean, with the practical judgment calls that don’t make it into documentation: which jamo (자모) shapes to draw first, how to handle the contextual sizing, where the edge cases hide.
+
+A font editor that makes components awkward is unusable for Hangul. A guide in the wrong language doubles the cost of learning. A book by a Korean designer for Korean designers, published in Korean, quietly enlarges what FontLab is — not by changing the software, but by making it legible to the people who need it.
+
+The character set is large. The work is not impossible. Now there is a book that says so, in Korean.
+
+## References
+
+- [폰트랩 타입 디자인 — Kyobo Books](https://product.kyobobook.co.kr/) *(search 폰트랩 타입 디자인)*
+- [Hangul — Wikipedia](https://en.wikipedia.org/wiki/Hangul)
+- [Making Hangul in FontLab](https://blog.fontlab.com/2025/09/23/making-hangul-in-fontlab/index.md)
+- [Variable components in FontLab 8](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
+
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
+King Sejong personally invented the Korean alphabet in 1443. Its instruction manual was lost for four centuries, then carried through the Korean War inside a man’s coat.
+
+Hangul is unusual among writing systems in having a known author, a known date, and a documented rationale. King Sejong of Joseon invented it in **1443** — Sejong year 25, lunar 12 月. Twenty-eight letters: seventeen consonants drawn from the shape of the speech organs that produce them, and eleven vowels modelled on the philosophical triad of Heaven (ㆍ), Earth (ㅡ), and Human (ㅣ).
+
+It was promulgated in **1446** as **훈민정음 Hunminjeongeum** — “the proper sounds for the instruction of the people.” The same year, the Hall of Worthies scholars produced the **Haerye**, an explanatory volume that argued, against considerable literati resistance, why the country needed an alphabet at all.
+
+> “The speech of our country differs from that of China and does not link with the Chinese characters…” — Sejong, preface to Hunminjeongeum
+
+The literati won the political argument for centuries. Hangul was treated as a script for women, children, and Buddhist texts — not the official register. The Haerye was lost around the early 1500s.
+
+It was **rediscovered in 1940 in Andong** by collector **Jeon Hyeong-pil (Gansong)**. The seller asked 1,000 won. Gansong paid 10,000 — the price of ten houses — on the grounds that the manuscript was worth more than the seller knew. During the Korean War, as Gansong evacuated south, he carried the Haerye **inside his coat**.
+
+The manuscript is now National Treasure No. 70 (1962) and a UNESCO Memory of the World (1997).
+
+For typography, the importance is specific. Hangul is the only major writing system whose articulatory logic is documented by its inventor. You can read why ㄱ is shaped the way it is — it is a side view of the back of the tongue against the soft palate. ㄴ is the tongue tip at the alveolar ridge. ㅁ is the shape of closed lips. No Latin letter has its design rationale on record in this way.
+
+If you are designing Hangul fonts in FontLab today, as Kwon Gun-oh’s [2025 Korean guide](https://blog.fontlab.com/2025/11/25/hangul-invented-1443-lost-found-in-a-coat/2026-08-25-the-fontlab-book-in-korean.md) explains in detail, you are working with a system whose geometric logic was set down in 1443 and has never needed to be re-argued. That is a strange and rather useful position to be in.
+
+## References
+
+- [Hunminjeongeum — Wikipedia](https://en.wikipedia.org/wiki/Hunminjeongeum)
+- [Hunminjeongeum — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Hunminjeongeum)
+- [Hangul — Wikipedia](https://en.wikipedia.org/wiki/Hangul)
+- [The FontLab book in Korean](https://blog.fontlab.com/2025/11/25/hangul-invented-1443-lost-found-in-a-coat/2026-08-25-the-fontlab-book-in-korean.md)
+
+[Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
 Italics are the part of a font family that most often gets shipped wrong — slanted romans, no cursive structure, lopsided ovals. The Calfonts italic tutorial walks through what it actually takes to draw an italic that earns its place next to the roman.
 
 ## What the italic is for
@@ -2095,6 +2460,32 @@ Set the italic next to the roman at text size — 9 to 11 point — and read a p
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/6.%20Italics/6a%20Intro%20to%20Italics/)
 
+If you read Korean on a phone, you are almost certainly reading a Sandoll typeface. That is not an accident — it is four decades of infrastructure work.
+
+**산돌 Sandoll** was founded in **1984** by **Seok Geum-ho (석금호)** as 산돌타이포그라픽스 — Korea’s first independent type foundry in the modern sense. In 1995, Sandoll released 산돌고딕 and 산돌명조, the foundational sans and serif of Korean digital typography. Those two faces set the tone for what Korean screen type looked like through the desktop era.
+
+The infrastructural commissions followed. In **2002**, Microsoft asked Sandoll to draw **맑은 고딕 (Malgun Gothic)** as the Korean UI typeface for Windows Vista. In **2011**, Apple replaced its older Korean system font with **Apple SD Gothic Neo** — also a Sandoll design — and that is still the Korean interface face on every iPhone shipped today.
+
+In **2021**, Sandoll drew **Toss Product Sans** for the Korean fintech Toss, which became the benchmark for Korean product typography in consumer apps.
+
+> “These fonts achieve the goal of ‘No More Tofu,’ meaning no empty glyphs when typesetting Unicode.” — Seok Geum-ho, on Sandoll’s contribution to Source Han Sans
+
+Sandoll was also one of the foundry partners on **Source Han Sans** (released 2014) — designers Joo-Yeon Kang and Soo-Young Jang handled the Korean glyphs in what became the largest pan-CJK typeface ever published.
+
+Seok Geum-ho passed away on **23 May 2024**.
+
+The counterpoint that emerged in the same period is worth noting. **Pretendard** — an open-source neo-grotesque by Hyeong-jin Kil, based on Inter, Source Han, and M PLUS 1p — was adopted by the Korean government in **April 2024** as the default typeface for the national UI/UX system. A free font is now the default voice of the Korean state interface. Beside it, on every Korean iPhone, is a Sandoll face.
+
+Two poles of the same ecosystem. One traces back to 1984 and a founder who spent forty years building Korean type as professional infrastructure. The other traces back to a developer who published a free font and a government that chose it. Both are serving Korean readers. Neither makes the other redundant.
+
+## References
+
+- [Seok Geum-ho profile — design.co.kr](https://design.co.kr/article/33896)
+- [Pretendard — Adobe Korea blog](https://blog.adobe.com/ko/publish/2022/09/19/font-of-the-month-pretendard)
+- [Sandoll — Wikipedia](https://en.wikipedia.org/wiki/Sandoll)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
 Gunnlaugur SE Briem has spent a career arguing that you cannot draw a serious typeface without understanding how a broad-edged pen makes letters. Briem’s tutorial on brushes is the cleanest version of that argument you will find. (Note: Unlike other FontLab TV episodes like [this playlist](https://www.youtube.com/playlist?list=PLj-8PzlEWrCF8M0bmHFhI0BfVk4sRCm1b), there is no video for this tutorial—it is purely a written masterclass.)
 
 ## What it covers
@@ -2112,6 +2503,40 @@ Gunnlaugur SE Briem has spent a career arguing that you cannot draw a serious ty
 Most “stiff” letters come from designers who have never held a broad-edged pen. This tutorial is a fix for that — and a useful re-read every six months.
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/2-0-basics/briem-2-01-basics/)
+
+Most of the world’s text passes through a library most people have never heard of.
+
+**HarfBuzz** — Persian حرف‌باز, meaning “open type” with a secondary sense of “insincerely talkative” — is the shaping engine behind Chrome, Firefox, Android, GNOME, LibreOffice, Flutter, and Unreal Engine. **Behdad Esfahbod** began rewriting it in C++ in 2005. Mozilla’s Jonathan Kew helped stabilise harfbuzz-ng around 2012. Esfahbod won the O’Reilly Open Source Award in 2013. The library is everywhere type renders. The people who rely on it, almost to a person, have no idea it exists.
+
+______________________________________________________________________
+
+**FontTools / TTX** was started by Just van Rossum in 1999. It is the Python library that lets you open any font file, inspect every table, change one byte, and write it back out. Esfahbod revived the project around 2013 inside Google. At TypeCon 2014 he said:
+
+> “I’ll make a bet — no matter what you use to create a font, if you round trip it through TTX, it will be functionally the same.”
+
+That bet has held well enough to be a practical standard.
+
+**FontGoggles** (Just van Rossum, funded by Google Fonts) is a macOS preview tool. Drop any `.ufo`, `.designspace`, or `.ttf` on it and the preview reloads as you save. Stephen Nixon, on first use: *“WOW. Font Goggles is just so good. It allows me to open a preview of the full Recursive designspace in maybe 4 or 5 seconds.”* For variable font work it shortens the edit-and-check loop to something that doesn’t interrupt thought.
+
+**Wakamai Fondue** (Roel Nieskens, wakamaifondue.com) tells you what’s inside any font dropped into a browser tab — features, axes, glyph counts, languages supported. A major release in **April 2026** at Fontstand Berlin swapped the old Fontkit backend for **LibFont**.
+
+**fontdrop.info** (Viktor Nübel) is the same diagnostic idea with a stricter scope and a smaller payload: under 1.5 MB, all client-side. It started in 2016 from a German publishing-house consulting job. The scope discipline is visible: it does one thing well and does not grow.
+
+______________________________________________________________________
+
+The right way to use these five together is unromantic. HarfBuzz and FontTools are infrastructure — the water and drains of a modern font workflow. FontGoggles is the fast inner loop for day-to-day iteration. Wakamai Fondue and fontdrop are diagnostics for when something breaks.
+
+A font workflow that doesn’t lean on at least three of them is doing more manual work than it needs to. None of them requires a subscription. All of them existed before they were fashionable.
+
+## References
+
+- [Why is it called HarfBuzz? — HarfBuzz documentation](https://harfbuzz.github.io/why-is-it-called-harfbuzz.html)
+- [FontGoggles](https://fontgoggles.org/)
+- [Wakamai Fondue](https://wakamaifondue.com/)
+- [fontdrop.info](https://fontdrop.info/)
+- [FontTools — GitHub](https://github.com/fonttools/fonttools)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
 Vexy Lines is not a font tool. It is a vector generator that happens to play unusually well with type-design tools.
 
@@ -2133,6 +2558,39 @@ The pipeline is short. The amount of fun you can have with it is not.
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
+Six programmes shape almost everyone working in type design in 2026. All six are small. Most are slow by design.
+
+**KABK Type & Media**, Den Haag. MA founded September 2002. Roughly twelve students per year. Head: **Erik van Blokland**. Alumni include Andy Clymer, Antonio Cavedoni, Stephen Nixon, Frederik Berlaen — most of whom are now teaching the people who will teach the next cohort. The feedback loop is short enough to be visible.
+
+**Reading MATD**, University of Reading. Launched 1999. Programme director **Gerry Leonidas**. Field trips to **Plantin-Moretus** in Antwerp and **Museum Meermanno** in The Hague. The late Gerard Unger taught six weeks a year for two decades. Leonidas on what the programme is:
+
+> “The MATD is founded on the idea that typeface design exists at the junction of design practice, a historical and technological environment, and a cultural context.”
+
+**Type@Cooper**, New York City. Founded 2010, co-founded by Cooper Union and the TDC. Runs the **Typographics** festival each June, which has become the main annual gathering for the field in North America.
+
+**ECAL Master Type Design**, Lausanne. Launched 2016. Uniquely, it is two years — most others are one. Lecturers across the years include Matthew Carter, Bruno Maag, Dafi Kühne. The extra year shows in the work.
+
+**Type West** at the **Letterform Archive**, San Francisco. Independent from October 2018, after a 2015–18 partnership with Cooper Union. The archive itself is the curriculum advantage: students study original drawings, not facsimiles. The difference between looking at a reproduction and holding the actual thing is the difference between reading a review and seeing the film.
+
+**ANRT Nancy**. A French state-funded research lab, originally founded by Jack Lang in 1985, paused 2006–2013, and reborn under **Thomas Huot-Marchand** on the ARTEM campus. The only programme on the list with a research mandate rather than a vocational one. It produces designers who ask why the conventions exist, not just how to use them.
+
+______________________________________________________________________
+
+The pattern across all six is the same: small cohorts, slow projects, a heavy reading list, and at least one alumni network dense enough that a graduate’s first job offer probably comes through it.
+
+None of them produces many graduates per year. None of them is meant to. Type design is slow work, and the programmes that produce it well have decided not to apologise for that.
+
+## References
+
+- [KABK Type & Media](https://typemedia.org/)
+- [Reading MATD](https://www.reading.ac.uk/typography/postgraduate/typeface-design)
+- [Type@Cooper](https://coopertype.org/)
+- [ECAL Master Type Design](https://ecal.ch/en/3097/master/master-type-design)
+- [Type West at Letterform Archive](https://typewest.letterformarchive.org/)
+- [ANRT Nancy](https://anrt-nancy.fr/)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
 Engraving is a useful lie. A hedcut looks old, sober, authoritative, and a little expensive — even when it was made yesterday.
 
@@ -2175,6 +2633,114 @@ The course was created and directed by Alexander Kapusta ([@YourFontFetish](http
 
 FontLab 8 is used throughout. At 50 hours, this is one of the more comprehensive publicly available type design curricula — comparable in scope to paid courses from dedicated type design programs.
 
+In 2013, four companies each decided the same thing: OpenType needed colour. They each decided it differently.
+
+Apple shipped `sbix` — PNG bitmaps locked to a pixel size, the format behind the original iPhone emoji. Google shipped `CBDT/CBLC` — also bitmaps, also PNG, but with size-table machinery borrowed from the old monochrome strike system. Microsoft and Adobe went vector, in opposite directions: Microsoft proposed `COLR`, a palette of layered outlines; Adobe and Mozilla proposed `SVG-in-OpenType`, full SVG documents embedded inside the font.
+
+That last pairing felt like it had the momentum. Photoshop CC 2017 shipped the first commercial OT-SVG release, Trajan Color Concept. Type With Pride’s Gilbert typeface, the rainbow tribute to Gilbert Baker, launched in April 2017 and put OT-SVG on the front page of every design magazine. SVG was richer, more expressive, more obviously “the right answer.” For a while in the late 2010s, `COLR`’s spare palette-and-layers architecture looked like the budget option.
+
+Then the numbers arrived.
+
+COLRv1 — the joint Google and Microsoft revision, shipping in OpenType 1.9 in 2021 — added the pieces that had made `COLR` feel limited: gradients, blend modes, transforms, a full paint-tree model. Chrome 98 shipped it in February 2022, driven by Dominik Röttsches. Edge followed via Chromium. Firefox 107 in November 2022. And the file size argument was decisive: the full Noto Emoji set as `CBDT` weighs 9 MB. The same set as COLRv1 with WOFF2 compression weighs 1.85 MB. That is roughly a fivefold reduction — the kind of number that ends arguments.
+
+Roel Nieskens, who had been among OT-SVG’s advocates, put it plainly:
+
+> “I used to say the OpenType-SVG format was the best… until I realized this is just too complex for a low-level job like text rendering. … So I switched sides to COLR.”
+
+The thing the “COLRv1 won” headline got wrong is that OT-SVG didn’t lose. It just lost *that fight*. Safari still renders it. Adobe Photoshop, Illustrator, and InDesign still author with it. The split as of late 2026 is COLRv1 across Chromium and Firefox, OT-SVG across Safari and Adobe’s apps. One-format-fits-all remains aspirational.
+
+For anyone designing a colour font today, the practical conclusion is unglamorous: know your target. A web display face bound for Chromium browsers should start with COLRv1 and a monochrome fallback. If the same face needs to work in Adobe apps or on Safari, the SVG table still earns its place. The four-format argument from 2013 did not resolve into a winner. It resolved into a division of labour.
+
+## References
+
+- [Chrome COLRv1 blog post — developer.chrome.com](https://developer.chrome.com/blog/colrv1-fonts)
+- [COLRv1 and CSS font-palette — CSS-Tricks](https://css-tricks.com/colrv1-and-css-font-palette-web-typography/)
+- [SVG OpenType genesis — Typekit blog (2013)](https://blog.typekit.com/2013/10/08/svg-opentype-genesis/)
+- [OpenType COLR table — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/colr)
+- [Type With Pride — Gilbert Color font](https://www.typewithpride.com/)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
+A colour font with one palette is a coloured drawing. A colour font with thirty palettes is a theme system. The difference is `CPAL`, and most people walk right past it.
+
+`CPAL` — the Color Palette table — is the OpenType table that holds the colours a `COLR` font uses. The architecture is straightforward: each palette is a list of sRGB colour records, indexed from zero. Palette 0 is the default. Version 1 of `CPAL` can label palettes and mark them as appropriate for light or dark backgrounds, so a renderer can pick the right one automatically.
+
+One index is reserved: `0xFFFF` means “the foreground colour” — whatever `color` the CSS or application context has set. That single convention is quietly load-bearing. Any glyph layer assigned `0xFFFF` will follow the text colour into dark mode, into a coloured heading, into a print stylesheet with black-on-white. The parts that should look like text *do* look like text, without extra CSS.
+
+On the web side, CSS caught up properly with `@font-palette-values`. The rule lets a page override palette entries or compose an entirely new palette for a family, without touching the font file:
+
+```css
+@font-palette-values --night {
+  font-family: "Bradley Initials";
+  base-palette: 2;
+  override-colors: 0 #f0c, 1 #14213d;
+}
+.heading { font-palette: --night; }
+```
+
+WebKit’s “Customizing Color Fonts on the Web” demo, built on DJR’s Bradley Initials, remains the cleanest live example of what this makes possible: a single font file, half a dozen radically different looks, no export step.
+
+Underware’s Plakato Color Grade pushes the concept as far as it currently goes: the font ships **1,360 palette entries** in `CPAL`. Not thirty palettes — 1,360 individual colour records across a large palette library. Swap a palette and the entire feel of the font changes. The outlines never move.
+
+The mental shift worth making is this: a colour font is not a coloured drawing. It is a black-and-white machine that gets coloured in by CSS. The outlines are the machine. The palettes are the paint. Once you see it that way, the design problem becomes “what palettes ship by default” — the same problem every stylesheet has always had, just with a font table attached.
+
+Safari can select and override `CPAL` palettes via CSS `font-palette` and `@font-palette-values` even while it does not yet render `COLRv1` glyph colour. Those are different layers of the stack. The CSS theming surface is broadly supported; the glyph rendering varies by browser. Test both, separately.
+
+## References
+
+- [Customizing color fonts on the web — WebKit blog](https://webkit.org/blog/12662/customizing-color-fonts-on-the-web/)
+- [OpenType CPAL table — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/cpal)
+- [Bradley Initials colour demo — DJR](https://tools.djr.com/misc/bradley-initials/)
+- [Plakato Color Grade — Underware](https://underware.nl/fonts/plakato/features/color/)
+- [CSS font-palette — MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/font-palette)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
+Browser support for `font-variation-settings` has been broad since September 2018. Animating the value works the way other CSS animation works. What the tutorials skip is what happens to the GPU when you do it at scale.
+
+The syntax is straightforward:
+
+```css
+@keyframes breathe {
+  from { font-variation-settings: "wght" 200; }
+  to   { font-variation-settings: "wght" 800; }
+}
+h1 { animation: breathe 4s ease-in-out infinite; }
+```
+
+That works. The problem is what “works” costs. Every frame, the renderer has to interpolate glyph outlines between masters and re-rasterise the result. A single animated headline is fine. Twenty animated headings on a long page — section titles, pull-quotes, a sticky nav — and the laptop fan will tell you what you’ve done.
+
+Mandy Michael’s recommendation, which has held up since she made it: wrap animated text in an `IntersectionObserver` and pause the animation when the element scrolls off screen.
+
+```js
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    e.target.style.animationPlayState =
+      e.isIntersecting ? 'running' : 'paused';
+  });
+});
+document.querySelectorAll('.animated-heading')
+  .forEach(el => observer.observe(el));
+```
+
+This is not clever. It is the difference between a page that renders well and one that performs a side-show no one asked for.
+
+Two reference points worth keeping in mind. Laurence Penney launched **Axis-Praxis** in late 2016, before the variable font specification was even finished — the first public playground for exploring what the axes could do. Nick Sherman launched **v-fonts.com** at Robothon in March 2018, still the best gallery for fonts worth animating. Both predate the “variable fonts are mainstream” moment by years; both are still the right places to start.
+
+The mistake people make is treating the weight slider as the thing to demonstrate. It is not. The interesting animation is the one you do not notice: `opsz` drifting as the viewport narrows, `wght` tightening at small sizes, `GRAD` nudging on dark mode. These are invisible by design. They make text more readable without announcing they are doing so.
+
+Animation that reveals the system is worth doing. Animation that performs the system is a screensaver.
+
+## References
+
+- [Variable fonts on the web — web.dev](https://web.dev/articles/variable-fonts)
+- [Getting started with variable fonts — variablefonts.dev](https://variablefonts.dev/getting-started)
+- [Using variable fonts on the web — Dinamo](https://abcdinamo.com/news/using-variable-fonts-on-the-web)
+- [v-fonts.com — variable font gallery](https://v-fonts.com)
+- [Axis-Praxis — variable font playground](https://www.axis-praxis.org)
+
+[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-7-variable/)
+
 The first letter is the hardest. The FontLab TV glyph construction episode is a calm, deliberate walkthrough of drawing one letter — `n` — from a blank glyph cell to a finished, point-clean contour you can build a font around.
 
 > 📺 Watch: [Assembling glyphs in FontLab 7, Part 1](https://www.youtube.com/watch?v=McFex__HSfk)
@@ -2196,6 +2762,34 @@ The first letter is the hardest. The FontLab TV glyph construction episode is a 
 Every glyph after the first is a variation on a structure you set up at the start. This episode is the patient version of “draw one letter properly” — and it pays off across the entire font.
 
 [Read more →](https://help.fontlab.com/fontlab/8/tutorials/calfonts/1.%20Drawing/01b%20Basics%20of%20Drawing%20in%20FontLab/)
+
+Most type designers know their fonts will be rendered differently on macOS and Windows. Fewer know the names of the four pieces of plumbing responsible. The names are worth knowing, because the plumbing shapes everything.
+
+**ClearType.** Bill Gates announced it at COMDEX/Fall on 15 November 1998: *“a major obstacle to ubiquitous on-screen reading… overcome.”* The technique exploited the physical structure of LCD panels — each pixel is three coloured stripes, and by treating each stripe as an independent sample, ClearType tripled horizontal rendering resolution at the cost of slight colour fringing. It was, for low-resolution screens, a genuine improvement.
+
+Apple deprecated subpixel anti-aliasing in macOS Mojave in 2018. The reasoning was that display resolutions had increased to the point where the fringing cost outweighed the clarity gain. At 220 ppi, you don’t need the trick. The core ClearType patents expired worldwide by August 2019.
+
+**TextKit 2.** Introduced at WWDC 2021 by Donna Tom and Chris Willmore ("Meet TextKit 2"). It replaced TextKit 1, which had been part of OpenStep since the early 1990s — meaning Apple’s text layout engine had been running on architecture from the NeXT era through five major macOS versions. TextKit 2 moves from a glyph-run model to a paragraph-graph model, which handles bidirectional text and CJK layout substantially better. It had already been powering TextEdit and AppKit text fields since macOS Big Sur in 2020; WWDC 2021 made it official.
+
+Apple’s renderer has ignored TrueType hints since OS X. This is not a bug. At high resolutions, the mathematical distortions that hinting imposes on outlines — snapping stems to pixel boundaries, aligning cap heights — are more visible than the pixel-grid problems they were designed to solve.
+
+**DirectWrite + DWriteCore.** DirectWrite is the Windows text stack. Colour font support arrived in stages: `COLR` in Windows 8.1, SVG/CBDT/sbix in the Windows 10 Anniversary Update in 2016, full COLRv1 paint-tree support later. DWriteCore — part of the Windows App SDK — extends DirectWrite cross-platform, making it possible to ship a text application that renders identically on Windows and on other systems that bundle it.
+
+On Windows, hints are read and applied. The same font that renders unhinted on macOS renders with its full TrueType instruction set on Windows DirectWrite.
+
+**ttfautohint.** Werner Lemberg’s open-source hinter. Google Fonts adopted it in 2012 as the standard autohinting pipeline for fonts added to the library. It supports 22 scripts and, deliberately, only adds hints along the y-axis — the vertical stems that most affect legibility at small sizes on Windows screens. Lemberg’s scope choice is a design decision: y-axis hinting solves most of the problem without the complexity and fragility of full TrueType hinting.
+
+The practical consequence for a type designer is this: a face that hints itself elegantly on Windows DirectWrite renders unhinted on macOS TextKit 2. Two different stacks, two different assumptions, one font file. Designing for both means trusting neither fully — which means testing on both, not previewing on one and hoping.
+
+## References
+
+- [Microsoft announces ClearType — Microsoft News (1998)](https://news.microsoft.com/source/1998/11/15/microsoft-research-announces-screen-display-breakthrough-at-comdexfall-98/)
+- [Meet TextKit 2 — WWDC 2021](https://developer.apple.com/videos/play/wwdc2021/10061/)
+- [Apple text layout architecture evolution — atadistance.net](https://atadistance.net/2021/07/13/apple-text-layout-architecture-evolution-textkit-reboot/)
+- [ttfautohint — freetype.org](https://freetype.org/ttfautohint/)
+- [ClearType overview — Microsoft Typography](https://learn.microsoft.com/en-us/typography/cleartype/)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
 
 [Acqua Aldina](https://yurigordon.com/) is a variable serif drawn by hand. [Baker Street 221B](https://yurigordon.com/en/shop/fonts/baker-street-221b-mr-holmes) is a three-font Sherlockian set with a font for the detective, the doctor, and the housekeeper. Yuri Gordon’s catalogue does not pretend to fit one mood, and he’s open about why FontLab works for the spread.
 
@@ -2225,6 +2819,40 @@ The “manual kerning is a pleasure” comment is the load-bearing one for worki
 
 [Browse yurigordon.com →](https://yurigordon.com/)
 
+Every OpenType feature — ligatures, kerning, small caps, Arabic joining forms — runs through two tables and one engine. Most type designers know the features exist. Fewer know what the tables look like from the inside.
+
+**GSUB** substitutes glyphs. `f` followed by `i` becomes `fi`. `1/2` becomes ½. An Arabic isolated form becomes a medial form depending on its neighbours. **GPOS** positions them — kerning between pairs, mark attachment so combining accents land correctly, cursive connection so joined scripts flow. Both tables share the same architectural layout:
+
+ScriptList → FeatureList → LookupList
+
+The ScriptList identifies the writing system — Latin, Arabic, Devanagari. The FeatureList names the behaviours an application can ask for: `liga` for standard ligatures, `kern` for kerning, `mark` for mark-to-base positioning. The LookupList contains the actual rules — the substitution tables, the value records, the coverage arrays that say which glyphs the rule applies to.
+
+This three-tier structure is not incidental. It means the same font can behave differently for different scripts, different languages, and different feature selections — all from one set of tables. The `locl` feature fires language-specific substitutions: the same Unicode codepoint for dotless-i renders differently under a Turkish locale tag. The rules fire in Lookup order, and that order is the font designer’s responsibility to get right.
+
+**HarfBuzz** — Persian حرف‌باز, literally “open type” — is the shaping engine that walks those tables and produces the run of positioned glyphs an application then draws. It is what Chrome, Firefox, Android, GNOME, LibreOffice, Flutter, and Unreal Engine all use. Behdad Esfahbod began rewriting it in C++ in 2005 from an earlier C codebase; the harfbuzz-ng rewrite stabilised around 2012 with Mozilla’s Jonathan Kew contributing core work. Esfahbod received the 2013 O’Reilly Open Source Award. Most of the world’s user-facing text in 2026 passes through this library; most of the people whose text passes through it have never heard of it.
+
+For variable fonts there is one mechanism worth knowing specifically: **FeatureVariations**. It lets a font apply a different GSUB lookup at different points in the design space. A light-weight instance and a black-weight instance can substitute different glyphs — a higher-contrast shape at the heavy end, a more open form at the light end — and the substitution happens as part of shaping, not as a separate styling step. It is the correct way to encode design decisions that differ across the weight axis, and it is under-used.
+
+The pragmatic point: GSUB and GPOS errors live at the rendering boundary. A feature that looks correct in FontLab’s preview may shape wrong in HarfBuzz, because the preview and HarfBuzz may not execute the same lookup chain. The honest test is to render through the same shaper Chrome will use.
+
+The tool for that is `hb-shape`, a command-line utility that ships with HarfBuzz:
+
+```bash
+hb-shape --font-file=myfont.ttf --features=liga,kern "fi 1/2"
+```
+
+It outputs the glyph IDs, advance widths, and offsets HarfBuzz produces for that input string. When a ligature isn’t forming, or a kern pair is the wrong value, or an Arabic word is breaking in the wrong place, `hb-shape` tells you what the shaper actually received and what it actually returned. It solves an enormous category of bugs in a single step.
+
+## References
+
+- [OpenType GSUB table — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/gsub)
+- [OpenType GPOS table — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/gpos)
+- [Why do I need a shaping engine? — HarfBuzz](https://harfbuzz.github.io/why-do-i-need-a-shaping-engine.html)
+- [Fonts and Layout for Global Scripts — Simon Cozens](https://simoncozens.github.io/fonts-and-layout/features.html)
+- [OpenType feature tags registry — Microsoft](https://learn.microsoft.com/en-us/typography/opentype/spec/featuretags)
+
+[Read more →](https://www.fontlab.com/font-editor/fontlab/)
+
 Typography on screen used to mean “pick a weight and hope for the best.” Now the weight can follow the user.
 
 Web and motion tutorials increasingly treat variable fonts as standard tooling, not a novelty. Webflow University, Dinamo’s guides, and other educational pieces walk through using CSS to animate weight and width on hover, scroll, and viewport changes — a single VF file replacing multiple static fonts in interactive layouts. YouTube tutorials demonstrate animating variable fonts in After Effects, driving axes through text animators to create kinetic type where the motion lives inside the font itself.
@@ -2246,9 +2874,112 @@ The future the multilingual tutorials describe is already here. The tools just m
 
 [Read more →](https://help.fontlab.com/fontlab/8/whats-new/whats-new-07-families-variation/)
 
+Photography arrived in the 1830s. Printing photographs in newspapers took another fifty years.
+
+William Henry Fox Talbot floated the idea of “photographic veils” in the early 1850s — a fine mesh laid over a photographic plate to break a continuous tone into something a printing press could hold. Presses did not hold continuous tone. Presses held ink or they held nothing. The mesh was a lie the press could believe.
+
+It took another generation to make the lie commercial. **Stephen H. Horgan** ran the first newspaper photograph — Steinway Hall, unremarkable — in the *New York Daily Graphic* on **December 2, 1873**. Seven years later, on **March 4, 1880**, he ran *A Scene in Shantytown, New York*: the first full-tone halftone in an American newspaper. **Frederic Ives** patented a commercially viable method in 1881. **Georg Meisenbach’s** “Autotypie” followed in Munich in 1882. By 1890 the halftone screen was standard equipment in every serious print shop.
+
+The numbers that drove the next century: newspapers ran around **85 lines per inch**, magazines **133–150 lpi**, fine art catalogues higher. CMYK colour printing layered four screens at carefully chosen angles — typically 15°, 45°, 75°, 0° — so the dot patterns from each ink wouldn’t fight each other. Get the angles wrong and the page blooms with a rosette nobody ordered.
+
+The screen’s job was always translation. Continuous tone on one side, discrete marks on the other. The marks are not the image; they are a code the eye decodes back into the image. The 1880 broadsheet and a 2026 SVG export are running the same algorithm — different output devices, same deal.
+
+For Vexy Lines, halftone is foundational rather than decorative. When you adjust dot size and frequency in the halftone fill, you are doing exactly what Ives patented in 1881: choosing how much of the continuous tone to throw away, and how much the marks can carry before the lie stops working.
+
+The craft is knowing when to stop.
+
+## References
+
+- [Halftone — Wikipedia](https://en.wikipedia.org/wiki/Halftone)
+- [Stephen Horgan — Wikipedia](https://en.wikipedia.org/wiki/Stephen_Horgan)
+- [Eastman Museum: halftone process](https://archives.eastman.org/subjects/290)
+- [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
+
+A one-bit display has no grey. Dithering is the sixty-year argument that it doesn’t need one.
+
+The lineage is short and famous if you know where to look.
+
+**Larry Roberts**, MIT, 1961 — the first paper on adding calibrated noise to a grayscale image to make the eye see more tones than the device has. The idea is older than digital: printers had been using similar tricks with mezzotint and aquatint for centuries. Roberts just proved it mathematically and pointed it at a computer.
+
+**Bryce Bayer**, Kodak, 1973 — the recursive matrix dither still named after him, still in every digital camera sensor made today.
+
+**Floyd–Steinberg**, 1976 — error diffusion with the canonical 7/16, 3/16, 5/16, 1/16 weights. Instead of rounding each pixel independently, the algorithm propagates the rounding error to its neighbours. The laser printer industry ran on this.
+
+**Bill Atkinson**, Apple, 1983–84 — a variant for the original Macintosh’s one-bit display that **discards 25% of the error** at each pixel rather than passing it all forward. The discard sounds like sloppiness. In practice it produces sharper, higher-contrast images on cheap screens, which is what MacPaint and HyperCard actually needed. Atkinson died on **June 5, 2025**, of pancreatic cancer, aged 74.
+
+After Atkinson the story gets quieter and stranger. **Mark Ferrari** drew dithered EGA backgrounds for LucasArts (*Zak McKracken*, *Loom*, *Monkey Island*) in the late 1980s and pioneered colour cycling — animation by rotating the palette rather than redrawing the frame. His palettes were small enough to count; his images looked like nothing else on the hardware.
+
+**Lucas Pope’s *Return of the Obra Dinn*** (2018) made the genre legible to a generation that had never lived through one-bit displays. The game is a murder mystery aboard a tall ship, rendered entirely in 1-bit dither. Most players under thirty had never seen the aesthetic before. Most found it uncomfortable and then beautiful.
+
+**Surma’s** 2021 essay gave the style its name: *ditherpunk*.
+
+The reason this history matters when you’re working in Vexy Lines: dithering is the original argument that *line is enough*. You don’t need tone. You don’t need colour. You need a pattern of marks placed with enough precision that the eye fills in the rest. Every modern halftone, hatching, and stipple effect descends from somebody at MIT in 1961 deciding the retina can be fooled.
+
+It still can.
+
+## References
+
+- [Floyd–Steinberg dithering — Wikipedia](https://en.wikipedia.org/wiki/Floyd%E2%80%93Steinberg_dithering)
+- [Ditherpunk — Surma (2021)](https://surma.dev/things/ditherpunk/)
+- [Mark Ferrari interview — Effect Games](http://www.effectgames.com/effect/article-Q_A_with_Mark_J_Ferrari.html)
+- [Bill Atkinson — Wikipedia](https://en.wikipedia.org/wiki/Bill_Atkinson)
+- [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
+
+Andy Warhol started screenprinting in August 1962. His explanation: “I wanted something stronger that gave more of an assembly line effect.”
+
+The explanation is a little too clean, which makes it probably true. Warhol had been making paintings — hand-painted Campbell’s Soup cans, hand-traced comic panels — and the hand was getting in the way. Silkscreen removed it. The image went through a mesh and arrived on the canvas without fingers.
+
+Within weeks of Marilyn Monroe’s death that August, he produced the **Marilyn Diptych**: fifty images of Monroe arranged in a grid, all derived from a single 1953 Gene Kornman publicity still for *Niagara*. Half in colour, half in fading black and white — the colour half vivid and off-register, the black-and-white half going pale. The 1967 portfolio used Day-Glo fluorescent inks on ten 36 × 36-inch screens in an edition of 250.
+
+*Shot Sage Blue Marilyn* sold at Christie’s in May 2022 for **$195 million**.
+
+What’s worth holding from a print-making angle is that Warhol’s silkscreen is a technology of **registration error**. Each colour is a separate pass through a separate screen. Each pass lands slightly off. The slip is not a defect he tolerated; it is a texture he kept. The eye reads four screens that don’t quite line up and assembles a face from the difference.
+
+Newspaper halftones had the same property by accident — the CMYK screens drifted a little at press speed and the image acquired a visible grain. Warhol made the drift intentional. Once it was intentional, it was available to everyone as a method rather than a mistake.
+
+All Warhol images remain © Andy Warhol Foundation/ARS. The Tate’s *Marilyn Diptych* page (linked below) is the canonical public reference — do not reproduce the works.
+
+## References
+
+- [Marilyn Diptych — Tate Modern](https://www.tate.org.uk/art/artworks/warhol-marilyn-diptych-t03093)
+- [Andy Warhol Museum](https://www.warhol.org)
+- [Marilyn Diptych — Wikipedia](https://en.wikipedia.org/wiki/Marilyn_Diptych)
+- [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
+
+Frances Kent took her students to see Warhol’s Campbell’s Soup show, came back to Immaculate Heart College, and turned supermarket packaging into devotional art.
+
+Frances Elizabeth Kent (1918–1986) joined the Sisters of the Immaculate Heart of Mary in 1936, took the name Sister Mary Corita, and learned silkscreen in **1951** from Maria Sodi de Ramos Martínez. She was already teaching art at Immaculate Heart College in Los Angeles.
+
+In **1962** — the same year Warhol started screenprinting in New York — she took her students to the Ferus Gallery to see Warhol’s Campbell’s Soup show. She walked back to campus and started lifting the visual grammar of supermarket packaging into prints that were formally devotional and grammatically commercial. The two registers were the point.
+
+*The juiciest tomato of all* (1964) reads: “Mary mother is the juiciest tomato of all.” It borrows a Del Monte slogan to praise the Virgin. Cardinal James Francis McIntyre called the work “blasphemous.” She continued. She left the order in **1968**.
+
+The public works are harder to ignore than the controversy. *Rainbow Swash* (1971) — six 150-foot vertical bands of paint on a Boston natural-gas tank — is sometimes described as “the largest copyrighted work of art in the world.” Her **1985 USPS Love stamp** sold over **700 million copies**. Neither required the silkscreen to be subtle.
+
+What makes Kent relevant to anyone thinking about typography and tools is that she treated words as physical material. Text was cut, layered, screened, set in a hand that wasn’t quite trained, and deliberately misaligned. The discipline came from the medium. You couldn’t undo a silkscreen pass. You planned the misregistration or you lived with it.
+
+Anyone working with variable fonts or vector fills today is in a similar position: the method shows, and showing the method is the design.
+
+Works remain © Corita Art Center. The Hammer and Harvard collections (linked below) are the appropriate public references — do not reproduce the prints.
+
+## References
+
+- [Corita Kent — Hammer Museum](https://hammer.ucla.edu/collections/grunwald-center-collection/corita-kent/process)
+- [Corita Kent — Harvard Art Museums](https://harvardartmuseums.org/exhibitions/4830)
+- [Corita Art Center](https://corita.org/)
+- [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
+
 Scannerlicker is Fábio Duarte Martins’s foundry, and his testimonial is one of the few that actually names the FontLab features doing the work. It is, accidentally, a short manual on what to learn first.
 
-Most testimonials are vibes. Martins’s reads like a release-notes annotation, which is what makes it useful. He runs Scannerlicker out of Portugal, builds variable fonts, and writes about the editor the way somebody writes about a daily driver they have actually opened.
+Most testimonials are vibes. Martins’s reads like a release-notes annotation, which is what makes it useful. He runs Scannerlicker out of Portugal, builds fonts, and writes about the editor the way somebody writes about a daily driver they have actually opened.
 
 His full statement on FontLab 8:
 
@@ -2262,19 +2993,41 @@ His full statement on FontLab 8:
 
 — Fábio Duarte Martins, Scannerlicker
 
-The phrase “from design to engineering” is the one to keep. Modern variable font work is not just drawing — it’s also a non-trivial engineering job, with conditional substitutions, design-space configuration, OpenType feature compilation, and binary table editing. The traditional split between “designer who draws” and “engineer who packages” is exactly what the modern editor has to collapse.
-
-Martins’s bread-and-butter pair is **expressions and tags.** Tags let you label glyphs ("punctuation", “uppercase”, “Cyrillic”, whatever), then drive kerning classes and OpenType feature generation off the tags rather than off hand-edited lists. Expressions let you parametrise glyph metrics — set this sidebearing equal to that one minus three units — and propagate the relationship across all masters with one click. Together, they turn the tedious bookkeeping of a large family into something approaching automation.
-
-The Linux remark is not throwaway. FontLab ships native binaries for macOS, Windows, and — yes — Linux. Most of the working type-design world is on the first two; the people who are on Linux either run a one-person foundry or work inside a larger pipeline where Linux is the only choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece of cross-platform engineering for an industry that mostly assumes Mac.
-
-The [Scannerlicker catalogue](https://www.myfonts.com/collections/scannerlicker-foundry) is the proof. Variable fonts shipped, conditional substitutions configured, design space defined, all out of one editor and one studio.
+The Linux remark is not throwaway. FontLab ships native binaries for macOS, Windows, and the Windows versions work on Linux with Wine. Most of the working type-design world is on the first two; the people who are on Linux either run a one-person foundry or work inside a larger pipeline where Linux is the only choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece of cross-platform engineering for an industry that mostly assumes Mac.
 
 ## More from Fábio Duarte Martins
 
-- [Scannerlicker catalogue — variable fonts and retail families](https://www.myfonts.com/collections/scannerlicker-foundry)
+- [Scannerlicker fonts](https://fonts.scannerlicker.net/)
+- [Scannerlicker on MyFonts](https://www.myfonts.com/collections/scannerlicker-foundry)
 
-[Browse Scannerlicker →](https://www.myfonts.com/collections/scannerlicker-foundry)
+[Browse Scannerlicker →](https://fonts.scannerlicker.net/)
+
+The fine-line patterns on a banknote are a security feature. A British engineer made a toy of them in 1965 and sold 30 million units.
+
+Guilloché, from the French *guillocher* — to engrave with a rose engine. The rose engine is a lathe with an eccentric cam that moves the cutting head in a programmed path while the workpiece rotates. The result is interlocking curves no hand can reproduce consistently, which is exactly what you want if you’re trying to stop forgery.
+
+Peter Hubert Desvignes patented a “Speiragraph” in **1827** — a geared drawing machine that produced the same curves on paper. The **Penny Black** (1840), the world’s first adhesive postage stamp, used guilloché as its anti-counterfeit measure. The US **Bureau of Engraving and Printing** was authorised in 1862, took over US currency production from the American Bank Note Company in 1877, and has printed all US notes by **dry intaglio since 1968**.
+
+Intaglio printing cuts the image into a metal plate. The ink sits in the grooves. Paper is pressed into the plate under enormous pressure and picks up the ink from inside the cut. Run your finger across a US banknote and you can feel the ridges — that’s intaglio. It cannot be photocopied accurately. It cannot be reproduced on an inkjet. For a century it was the best available defence against counterfeiting, paired with guilloché patterns too complex to draw by hand.
+
+Then **Denys Fisher** built the Spirograph from Meccano gears in 1962–65, debuted it at the **1965 Nuremberg Toy Fair**, won UK Toy of the Year in 1967, and sold 30 million units by 1977. A child with a 50p toy and a ballpoint pen could draw, in five minutes, the kind of curve that had previously been a national security infrastructure.
+
+The Bank of Canada Museum puts it plainly: “In the 1970s, bank notes were decorated with guilloche patterns that can be easily reproduced with a Spirograph. These were not just beautiful details, but security features designed to make reproducing the notes extremely difficult.”
+
+The pattern stayed on banknotes anyway. By the 1970s it had stopped being purely functional and started being the *look* of money — a visual convention that says *this is official* regardless of whether it still defeats forgery. The guilloché border on a diploma or a certificate today is doing the same semiotic work: it is performing authority, not preventing fraud.
+
+For Vexy Lines, guilloché is the ancestral algorithm. Every parametric line tool — from a CSS animated SVG to a long-form generative art piece — descends from a French rose engine and a British toy.
+
+The security feature became a style. The style became a toy. The toy became a tool.
+
+## References
+
+- [Bureau of Engraving and Printing — how money is made](https://www.bep.gov/currency/how-money-is-made)
+- [The art of guilloché — Bank of Canada Museum](https://www.bankofcanadamuseum.ca/2020/07/the-art-of-guilloche/)
+- [Spirograph at the Smithsonian](https://americanhistory.si.edu/collections/object/nmah_1292825)
+- [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
 
 Nothing gets old faster than a font format — until a client opens a twenty-year-old file and suddenly it is everybody’s problem again.
 
@@ -2296,6 +3049,29 @@ The fonts in those folders are not dead. They are just waiting for someone to mo
 - [TransType 4 — FontLab](https://www.fontlab.com/font-converter/transtype/)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
+
+In 1979, a *Wall Street Journal* illustrator named Kevin Sprouls introduced a stipple portrait to the paper. Forty-five years later, the same form is still running on the front page. That is unusual enough to warrant an explanation.
+
+“Hedcut” is newsroom shorthand for “headline cut” — a portrait reduced to dots and hatch lines, light enough to sit beside text in a broadsheet column, specific enough that you knew which paper you were reading without looking at the masthead. Sprouls developed the technique from stipple engraving traditions; the constraint was practical. Newsprint couldn’t hold photographic halftones at column width without mudding. Dots could.
+
+**Noli Novak**, Croatian-American, has drawn hedcuts for the *Journal* since 1987. Her process has not changed much: photograph, grayscale conversion, contrast adjustment, print it, trace it on vellum, scan the trace. Three to five hours per portrait. The institutional record of that labour became visible in 2002, when the Smithsonian’s National Portrait Gallery acquired **66 original hedcut drawings** after the *Journal* downsized its New York office following September 11. The NPG now holds them as a permanent collection.
+
+In **December 2019**, the *Journal*’s R&D team — Francesco Marconi, Eric Bolton, and Cynthia Hua — trained a generative adversarial network on roughly 2,000 hedcuts and built a “draw your own” tool for members. Bolton’s framing was careful at the time: *“Artists will still draw the hedcuts for journalists and for celebrities… we are far from replacing the artist.”* Five years on, that prediction looks accurate. The tool is a curiosity. The illustrators are still there.
+
+The interesting question is why the form has lasted at all. It was engineered for newsprint resolution and a four-colour press, neither of which defines how most people read the *Journal* in 2026. It persists because the dot pattern carries a signal that a photograph cannot: this person is a profile subject, this paper has standards, this portrait was made by someone for the occasion. A photograph is evidence. A hedcut is a judgment.
+
+The style works the same way engraving did for two centuries — not by describing a face with full fidelity, but by describing it with enough fidelity that you believe the rest. The method shows; that is the point.
+
+Hedcuts are © Dow Jones. Link to the National Portrait Gallery collection; do not reproduce.
+
+## References
+
+- [Hedcut — Wikipedia](https://en.wikipedia.org/wiki/Hedcut)
+- [A history of WSJ hedcuts — hedcut.com](https://www.hedcut.com/blog--news/a-history-of-wall-street-journal-hedcuts)
+- [How the WSJ developed its make-your-own hedcut feature — Storybench](https://www.storybench.org/how-the-wall-street-journal-developed-its-make-your-own-hedcut-feature/)
+- [National Portrait Gallery — WSJ hedcut collection](https://npg.si.edu/)
+
+[Read more →](https://vexy.art/lines/)
 
 In 2013, color OpenType looked like a standards argument with four exits. Apple had `sbix`. Google had `CBDT/CBLC`. Microsoft had `COLR/CPAL`. Adobe and Mozilla had SVG-in-OpenType. The question then was which proposal would win.
 
@@ -2404,16 +3180,126 @@ The main claims above were checked against three independent kinds of source: th
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)
 
-A font with manners reads like a person who knows when not to interrupt. You don’t notice it. You notice the one without.
+A photograph is not a vector. A sketch is not a vector. A scanned logo is definitely not a vector. Vexy Lines exists to fix that, one image at a time.
 
-Look at that picture. Three lines. The middle one is real small caps — a separate set of glyphs, drawn at the right weight and width to sit next to lowercase without shouting. The top one is what your word processor does when you tick the “small caps” box without an OpenType-aware font: it scales the capitals down. The colour goes weak, the weight goes spindly, the proportions go wrong. Once you see it, every menu and business card in the world becomes a small personal injury.
+The promise is simple: hand Vexy Lines a sketched drawing, a photograph, a scan, or anything you generated with an AI tool, and it returns a scalable vector you can actually use. SVG, EPS, PDF, PNG, JPG — take your pick.
 
-That difference lives in OpenType. The `smcp` feature is one tag among hundreds, and each one is a tiny social contract the font keeps with the layout engine. `liga` for fi and fl. `kern` for the gap between Y and o. `locl` for language-specific local forms when the same script needs different glyphs. `smcp` and `c2sc` for real small caps instead of shrunken capitals. `init`, `medi`, `fina`, `isol` so Arabic joins itself together without your help. `frac` so ½ stops looking like a typo.
+The less simple part is everything that happens in between. Vexy Lines does not just trace edges. It applies halftone patterns, dithering effects, stipple designs and linear engraving styles. The output looks deliberate, not mechanical.
 
-Compiling these correctly is the actual job of FontLab’s Features panel. Turkish locals must not collide with the default. Arabic substitutions must fire in the right order or the word disconnects mid-air. Fractions need to look intentional, not like two numbers shoved together by gravity. The editor handles the bookkeeping; the designer decides what good behaviour looks like.
+That matters in practice. Screen printers need artwork that separates cleanly. Muralists need files that scale to a wall without going soft. Tattoo artists need line work that holds at small sizes and prints well on skin. None of these people want an auto-traced blob. They want something that looks like it was drawn by someone who knew what they were doing.
 
-For the underlying logic, [Simon Cozens’ *Fonts and Layout*](https://simoncozens.github.io/fonts-and-layout/opentype.html) is the clearest plain-English account, with companion chapters on [features](https://simoncozens.github.io/fonts-and-layout/features.html) and [localisation](https://simoncozens.github.io/fonts-and-layout/localisation.html). Microsoft’s [feature tag registry](https://learn.microsoft.com/en-us/typography/opentype/spec/featuretags), [small-caps feature notes](https://learn.microsoft.com/en-us/typography/opentype/spec/features_pt#tag-smcp), and [spec overview](https://learn.microsoft.com/en-us/typography/opentype/spec/overview) are the receipts. FontLab’s own [FontLab 8 OpenType features tutorial](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8) shows where those rules get written, tested, compiled, and exported.
+Vexy Lines also supports variable fonts — yes, fonts — for linear and wave fills. Multicolor halftone and flowlines/trace fill round out the effect options. If you have spent time in Illustrator trying to fake these looks manually, the appeal is immediate.
 
-Good manners are invisible. Bad manners ruin dinner.
+The retrofuturistic use case is a good example of what the tool does well: take a photograph and turn it into something that looks like a Wall Street Journal hedcut portrait, or a 1970s technical illustration, or a letterpress-ready design. The kind of aesthetic that takes hours to approximate by hand and seconds to miss.
 
-[Read more →](https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-4-clever/#opentype-features-empowering-your-font-in-fontlab-8)
+Vexy Lines runs on Mac and Windows. The price is US$99 — one payment, lifetime license, two devices. There is a free trial if you want to see what it does to your own images before committing.
+
+The software is available now at [vexy.art/lines](https://www.vexy.art/lines/). You can try it in the browser without installing anything via the [online playground](https://www.vexy.art/lines/#play).
+
+A bland image is, in the end, just a vector waiting for the right filter.
+
+## References
+
+- [Vexy Lines — product page](https://www.vexy.art/lines/)
+- [Try Vexy Lines online](https://www.vexy.art/lines/#play)
+- [Buy Vexy Lines (US$99)](https://www.vexy.art/lines/#buy)
+- [Original Mailchimp campaign](https://us17.campaign-archive.com/?u=c154e78429d2d38aaae8383f7&id=113a96e4f4)
+
+[Read more →](https://vexy.art/lines/)
+
+Georges Seurat spent two years applying roughly 220,000 dots to a canvas. The painting works because the dots don’t blend on the canvas. They blend in your eye.
+
+*A Sunday on La Grande Jatte — 1884* (1884–86), now at the Art Institute of Chicago, measures **207.5 × 308.1 cm**. The science behind it predates the painting by decades.
+
+**Michel Eugène Chevreul** published *De la loi du contraste simultané des couleurs* in **1839** — the foundational text on how colours placed adjacent to each other change each other on the retina. A red dot next to a yellow dot does not produce orange on the canvas. It produces orange in the viewer’s visual cortex, which is a different thing entirely. **Ogden Rood’s** *Modern Chromatics* (1879) brought the principle to a broader audience. Seurat and **Paul Signac** read both.
+
+They called their method *Divisionism* or *Chromo-Luminarism*. The press called it pointillism and the name stuck.
+
+Félix Fénéon’s 1888 essay captures the theory with unusual precision:
+
+> “These colors, isolated on the canvas, recombine on the retina; we have, therefore, not a mixture of material colors (pigments), but a mixture of differently colored rays of light.”
+
+The distinction matters. Mixing pigments produces darker results — every colour you add absorbs more light. Mixing light produces brighter results. Seurat wanted the brightness of mixed light from the physical substance of pigment. The dots are a workaround for the laws of chemistry.
+
+The technique has never fully gone away. The Smithsonian still employs scientific illustrators who draw stippled moth scales **0.0079 inches across** — smaller than the dots in La Grande Jatte, the same optical logic.
+
+For a vector tool the lesson is pointed. A million dots placed by an algorithm is not what Seurat did. What Seurat did is decide which dots, where, and what colour each one contributes to its neighbours. The interesting part is the rule set, not the raster count. Resolution without intent is just noise.
+
+Seurat died in **1891**, aged 31, two days after his son. He left seven finished paintings.
+
+## References
+
+- [A Sunday on La Grande Jatte — Art Institute of Chicago](https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884)
+- [Pointillism — Wikipedia](https://en.wikipedia.org/wiki/Pointillism)
+- [A Sunday on La Grande Jatte — Wikipedia](https://en.wikipedia.org/wiki/A_Sunday_on_La_Grande_Jatte)
+- [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
+
+A line can carry tone, texture, shadow, and emotion — and never once pretend to be a photograph. That is the whole argument of five centuries of printmaking, made with a burin, a graver, and eventually a stylus.
+
+**Albrecht Dürer, 1513.** *Knight, Death and the Devil* is copperplate burin engraving, 24.5 × 19.1 cm — one of his three *Meisterstiche*. Dürer called it simply *Der Reuter*, the Rider. There is no halftone anywhere in it. Every shadow is parallel hatching; every curved surface is cross-hatching that turns with the form. The shadow on the horse’s flank follows the muscle. The shadow in the hollow of the knight’s armour follows the concavity. Direction *is* the information.
+
+**William Hogarth, 1735.** *A Rake’s Progress* was published the day the Engravers’ Copyright Act 1734 — “Hogarth’s Act” — took effect. It was the first copyright law in any country to protect engravers, passed because pirates had flooded the market with knock-offs of *A Harlot’s Progress* three years earlier. Hogarth had essentially co-authored the law that made his next series possible. The prints reward that attention: they are satirical journalism, using hatch density and line weight to carry what caption text would have been too polite to say.
+
+**Thomas Bewick, 1797.** Bewick revived wood engraving in Northumberland — end-grain boxwood, white-line technique, fine enough to hold detail that competed with copper. *History of British Birds* was the proof. But the structural innovation was quieter: his blocks could be locked into letterpress alongside movable type at the same height. Illustrated journalism became economically possible the day that happened. The nineteenth-century picture press — the cheap weeklies, the illustrated magazines, the whole visual culture — is downstream of one craftsman in Newcastle cutting white lines into boxwood.
+
+**Gustave Doré, 1861.** Dante’s *Inferno*, self-published after no Paris house would take the production cost. It sold out and kept selling. The economy of horror in a Doré plate is that nothing is rendered in tone — every shadow is a different *kind* of line, and the eye reads them all as the same darkness anyway. Curved lines for flesh. Ragged lines for stone. Tight parallel hatching for the pit. The variety is invisible until you look for it, and then you can’t stop seeing it.
+
+For Vexy Lines, this is the canon. Every modern hatching, stipple, or vector engraving algorithm is attempting to reproduce something one of these four printmakers did with a tool small enough to hold in one hand. The constraint was never a limitation. It was the point.
+
+## References
+
+- [Knight, Death and the Devil — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Knight,_Death_and_the_Devil_by_Albrecht_D%C3%BCrer)
+- [Engraving Copyright Act 1734 — Wikipedia](https://en.wikipedia.org/wiki/Engraving_Copyright_Act_1734)
+- [Thomas Bewick — Wikipedia](https://en.wikipedia.org/wiki/Thomas_Bewick)
+- [Gustave Doré, Inferno illustrations — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Gustave_Dor%C3%A9_-_Inferno)
+
+[Read more →](https://vexy.art/lines/)
+
+A contour line is a lie your map tells you so you can understand the truth. No hill has a line around it. The line is what you draw when the hill refuses to fit on a flat page.
+
+The history of that lie is longer than most people expect.
+
+**Pieter Bruinsz, 1584.** The first known isobath — a line of equal water depth — was drawn for the Spaarne river near Haarlem. Not a coastline, not a road, not a boundary: a line representing a number. The same number everywhere along its length. This was a quiet invention. It didn’t look dramatic and it was not immediately copied.
+
+**Edmond Halley, 1701.** The first published isogonic map, charting magnetic declination across the Atlantic. Halley’s lines connected points where a compass needle deviated the same number of degrees from true north. Again, not a physical feature — a property of the world, drawn as if it had edges.
+
+**Alexander von Humboldt, 1817.** The isotherm map. Humboldt connected points of equal mean annual temperature across the globe and started what a later century called the “isoline craze” in cartography. Isotherms, isobars, isohyets — the nineteenth century found a new thing a line could mean, and used it for everything.
+
+The endpoint of the genre is **Charles Joseph Minard’s 1869 figurative map of Napoleon’s Russian campaign of 1812.**
+
+Six variables on a single sheet: army size, geographic location in two dimensions, direction of travel, date, and temperature during the retreat. The Grande Armée crosses the Niemen at **422,000 men**. It returns with **10,000**. The band shrinks across the page — literally, measurably, proportionally — and the temperature graph below it shows −30° at the worst crossings. Edward Tufte called it “the best statistical graphic ever drawn.” Minard’s contemporary Étienne-Jules Marey called it “a defiance of the pen of the historian in its brutal eloquence.”
+
+None of these images is *about* lines. They are about quantities that can only be drawn as lines. The tool is incidental. Once that’s clear, contour mode in Vexy Lines stops being a stylistic option and starts being the thing cartography has been doing since 1584: making the invisible visible by giving it an edge.
+
+## References
+
+- [Charles Joseph Minard — Wikipedia](https://en.wikipedia.org/wiki/Charles_Joseph_Minard)
+- [Contour line — Wikipedia](https://en.wikipedia.org/wiki/Contour_line)
+- [Edward Tufte posters — edwardtufte.com](https://www.edwardtufte.com/tufte/posters)
+
+[Read more →](https://vexy.art/lines/)
+
+The generative line has a genealogy. It runs from a physics lecture in 1815 through a children’s toy in 1965 and a university lab in 2001, and it ends — so far — with an algorithm that sold for five million dollars.
+
+**Nathaniel Bowditch, 1815.** The figures that bear Lissajous’s name were drawn first by Bowditch, a Massachusetts navigator who traced them while studying compound pendulum motion. **Jules Antoine Lissajous** worked out the optics independently in 1857, which is when the physics community caught up. **Hugh Blackburn’s harmonograph** (1844) was the first parametric drawing machine built for a parlour — two pendulums, one table, sand falling from a stylus. The curves it drew were not planned; they emerged from the ratio of the periods.
+
+**Denys Fisher’s Spirograph, 1965.** Plastic gears, ballpoint pens, a sheet of paper pinned to cardboard. Fisher’s toy was a mechanical Lissajous machine for children — the output was determined entirely by which gear you chose and where you put the pen. No programming required. The constraint set was the product.
+
+**Casey Reas and Ben Fry, 2001.** Processing, released from John Maeda’s group at MIT, gave the harmograph’s logic to anyone with a text editor. Golden Nica 2005. *De facto* lingua franca of generative art for a decade. **Anders Hoff** (publishing as “Inconvergent”) built stochastic line tangles inside that ecosystem you can still identify at a glance — paths that avoid each other by a field of repulsion, wandering across the page with the patience of a surveyor who has nowhere to be. Argentina’s **Manolo Naon** went the other direction: chunky pop-colour grids, the pixel treated as a physical object.
+
+**Tyler Hobbs, June 2021.** *Fidenza* released on Art Blocks — 999 outputs from a single algorithm. By August, Starry Night Capital had spent roughly **$5 million** acquiring pieces. By May 2023 the floor sat above 60 ETH. Hobbs coined the phrase **“long-form generative art”** in May 2021 to describe the discipline of writing a program where *every* output is good — not selecting a hundred from ten thousand runs. The algorithm has a flow field, a colour palette, and a curve sampler. The outputs are all different; they are unmistakably the same thing.
+
+See the outputs and the thinking at [tylerxhobbs.com](https://www.tylerxhobbs.com/words/fidenza).
+
+The lesson for a tool like Vexy Lines is that the interesting part of a generative system is not the renderer. It is the constraint set. A Spirograph has two gears. A harmonograph has three pendulums. Fidenza has about a dozen parameters that matter. Everything else is taste.
+
+## References
+
+- [Lissajous curve — Wikipedia](https://en.wikipedia.org/wiki/Lissajous_curve)
+- [Processing — processing.org](https://processing.org/)
+- [Anders Hoff / Inconvergent — inconvergent.net](https://inconvergent.net/)
+- [Tyler Hobbs on Fidenza — tylerxhobbs.com](https://www.tylerxhobbs.com/words/fidenza)
+
+[Read more →](https://vexy.art/lines/)

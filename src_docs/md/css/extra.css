@@ -119,6 +119,10 @@ html {
   display: none;
 }
 
+.md-sidebar--secondary .md-nav--secondary > .md-nav__title[for="__toc"] {
+  display: none;
+}
+
 .md-post--excerpt {
   margin-bottom: 2.25rem;
 }

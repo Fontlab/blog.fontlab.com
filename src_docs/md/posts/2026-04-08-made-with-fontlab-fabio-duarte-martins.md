@@ -30,8 +30,8 @@ It is, accidentally, a short manual on what to learn first.
 
 Most testimonials are vibes.
 Martins’s reads like a release-notes annotation, which is what makes it useful.
-He runs Scannerlicker out of Portugal, builds fonts, and writes about the
-editor the way somebody writes about a daily driver they have actually opened.
+He runs Scannerlicker out of Portugal, builds fonts, and writes about the editor the way
+somebody writes about a daily driver they have actually opened.
 
 His full statement on FontLab 8:
 
@@ -55,12 +55,11 @@ His full statement on FontLab 8:
 — Fábio Duarte Martins, Scannerlicker
 
 The Linux remark is not throwaway.
-FontLab ships native binaries for macOS, Windows, and the Windows versions work on Linux with Wine.
-Most of the working type-design world is on the first two; the people who are on Linux
-either run a one-person foundry or work inside a larger pipeline where Linux is the only
-choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece
-of cross-platform engineering for an industry that mostly assumes Mac.
-
+FontLab ships native binaries for macOS, Windows, and the Windows versions work on Linux
+with Wine. Most of the working type-design world is on the first two; the people who are
+on Linux either run a one-person foundry or work inside a larger pipeline where Linux is
+the only choice. Either way, “running flawlessly on my Linux machine” is an unusually
+quiet piece of cross-platform engineering for an industry that mostly assumes Mac.
 
 ## More from Fábio Duarte Martins
 

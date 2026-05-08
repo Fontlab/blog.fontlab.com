@@ -18,6 +18,7 @@
 
 ### Changed
 - `./build.sh build` now runs Flowmark against `src_docs/md/` before cleaning `docs/` and running ProperDocs.
+- Rewrote `2025-09-23-making-hangul-in-fontlab.md` to focus on Kwon Gun-oh's Korean *FontLab Type Design* book and its 2,780-glyph Hangul workflow instead of the older generic component-design angle.
 - Build-time Flowmark formatting restores ASCII quote delimiters inside raw HTML tags and rejoins `.fl-help-cta` Markdown attribute lists after smart quote/line-wrap conversion, so legacy WordPress HTML attributes and CTA styling remain valid.
 - Consolidated the three 2013 color-font proposal posts into the new 2026-05-03 article and updated the archive link in `2025-07-22-the-long-awkward-adolescence-of-color-fonts.md`.
 - Replaced dead `calfonts.com` links in Dave Lawrence / California Type Foundry posts with the current MyFonts collection URL.
@@ -59,6 +60,9 @@
 - Local checks confirmed the three retired 2013 color-font pages are absent from generated `docs/`, the new 2026 color-font page exists, and no source or generated page links to the old color-font URLs.
 - Current web research found the Matthew Carter recording at `https://www.youtube.com/watch?v=ibJhxbsbqJ4`; searches found the Brush Romans event listing/preview but no stable recording URL.
 - Playwright checks found no horizontal overflow and no relevant console errors on home, the Matthew Carter webinar post, the Brush Romans webinar post, About, the 2026 archive, and a retired color-font URL at desktop and mobile widths.
+- Verified the rewritten Hangul post against Aladin and Yes24 book metadata, and confirmed the post CTA target matches its `.fl-help-cta` body link.
+- `uv run properdocs build -f mkdocs/mkdocs.yml -d /tmp/blog-fontlab-hangul-build` completed with only existing absolute-link informational notices.
+- `uvx ruff check src tests` passed.
 
 ## [Unreleased] — 2026-05-07 (cont)
 

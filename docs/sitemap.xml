@@ -261,6 +261,11 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2025/05/06/roboto-flex-thirteen-axes/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2025/05/13/made-with-fontlab-nate-piekos/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
@@ -271,7 +276,42 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2025/05/20/fvar-avar-hvar-the-tables-that-hold-it-together/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/05/27/optical-sizings-lost-century/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/06/03/from-multiple-master-to-variable/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/06/10/woff-and-the-emmy-nobody-expected/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/06/17/emoji-is-older-than-you-think/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2025/06/24/fontlab-tv-design-space/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/07/01/bezier-vs-de-casteljau/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/07/08/mingti-songti-minchotai-same-thing/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -282,6 +322,16 @@
     </url>
     <url>
         <loc>https://blog.fontlab.com/2025/07/22/the-long-awkward-adolescence-of-color-fonts/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/07/29/hiragino-drawn-by-a-tiny-tokyo-studio/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/08/05/a1-mincho-behind-shinkais-atmosphere/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -311,7 +361,17 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2025/09/16/tazugane-gothic-monotype-first-japanese/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2025/09/23/making-hangul-in-fontlab/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/09/30/source-han-sans-the-opentype-ceiling/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -322,6 +382,11 @@
     </url>
     <url>
         <loc>https://blog.fontlab.com/2025/10/14/what-type-designers-actually-argue-about/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/10/21/justfont-and-taiwans-crowdfunded-typeface/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -341,7 +406,22 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2025/11/18/the-fontlab-book-in-korean/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/11/25/hangul-invented-1443-lost-found-in-a-coat/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2025/12/02/calfonts-italics/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2025/12/09/sandoll-the-foundry-behind-your-phone/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -351,7 +431,17 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2025/12/23/the-open-tool-ecosystem/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2025/12/30/the-vexy-lines-pipeline-into-fontlab/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/01/06/where-type-designers-are-made/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -366,7 +456,27 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2026/01/20/colour-font-wars-ten-years-on/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/01/27/cpal-and-css-font-palette/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/02/03/animating-font-variation-settings/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2026/02/10/fontlab-tv-glyph-construction/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/02/17/the-four-stack-of-screen-rendering/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -376,7 +486,32 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2026/03/03/gsub-gpos-and-harfbuzz/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2026/03/10/variable-fonts-in-motion-and-ui/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/03/17/halftone-fox-talbot-to-shantytown/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/03/24/dithering-ditherpunk-and-bill-atkinson/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/03/31/warhol-august-1962-silkscreen-pivot/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/04/07/sister-corita-kent-the-silkscreen-nun/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -386,7 +521,17 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2026/04/14/money-lace-guilloche-intaglio-spirograph/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2026/04/21/the-old-fonts-are-not-dead/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/04/28/the-hedcut-at-45/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -396,7 +541,27 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/2026/05/05/opentype-is-where-good-manners-live/</loc>
+        <loc>https://blog.fontlab.com/2026/05/07/from-bland-to-bold-with-vexy-lines/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/05/12/seurat-and-the-220000-dots/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/05/19/five-centuries-of-line/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/05/26/drawing-the-invisible-minard/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/05/29/from-spirograph-to-fidenza/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -477,6 +642,16 @@
     </url>
     <url>
         <loc>https://blog.fontlab.com/page/3/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/page/4/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/archive/2025/page/2/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
