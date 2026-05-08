@@ -3,6 +3,7 @@
 ## [Unreleased] — 2026-05-08 (continued)
 
 ### Added
+- Added `mkdocs-rss-plugin` (>=1.17, installed 1.19) and configured RSS 2.0 + JSON Feed 1.1 generation for `posts/*` with materialx blog integration (`use_material_blog: true`); produces `feed_rss_created.xml`, `feed_rss_updated.xml`, `feed_json_created.json`, `feed_json_updated.json` at the site root, with `<link rel="alternate">` autodiscovery wired into `mk-fontlab/main.html` `extrahead`.
 - Added 40 localized external-image assets under `src_docs/md/media/external/`.
 - Added `src_docs/md/media/external/_sources.txt` with source/fetch URL provenance for the localized image set.
 - Added content-state regression tests for CTA targets, image review markers, and TODO summary counts.

@@ -18,6 +18,7 @@ dependencies = [
     "mkdocs-include-markdown-plugin>=7.2",
     "mkdocs-llmstxt>=0.2",
     "mkdocs-copy-to-llm>=0.2",
+    "mkdocs-rss-plugin>=1.17",
     "properdocs>=1.6.7",
     "mkdocs-materialx>=10.1.4",
     "flowmark>=0.6.5",
