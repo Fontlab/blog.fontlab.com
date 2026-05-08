@@ -54,21 +54,6 @@ His full statement on FontLab 8:
 
 — Fábio Duarte Martins, Scannerlicker
 
-The phrase “from design to engineering” is the one to keep.
-Modern font work is not just drawing — it’s also a non-trivial engineering job,
-with conditional substitutions, design-space configuration, OpenType feature
-compilation, and binary table editing.
-The traditional split between “designer who draws” and “engineer who packages” is
-exactly what the modern editor has to collapse.
-
-Martins’s bread-and-butter pair is **expressions and tags.** Tags let you label glyphs
-("punctuation", “uppercase”, “Cyrillic”, whatever), then drive kerning classes and
-OpenType feature generation off the tags rather than off hand-edited lists.
-Expressions let you parametrise glyph metrics — set this sidebearing equal to that one
-minus three units — and propagate the relationship across all masters with one click.
-Together, they turn the tedious bookkeeping of a large family into something approaching
-automation.
-
 The Linux remark is not throwaway.
 FontLab ships native binaries for macOS, Windows, and the Windows versions work on Linux with Wine.
 Most of the working type-design world is on the first two; the people who are on Linux
