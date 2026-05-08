@@ -51,7 +51,6 @@ News, technical writing, and product updates from FontLab.
 - [The heavy machinery of FontLab 8.4](https://blog.fontlab.com/2024/09/10/the-heavy-machinery-of-fontlab-8/index.md)
 - [Made with FontLab: Alexander Kapusta](https://blog.fontlab.com/2024/09/17/made-with-fontlab-alexander-kapusta/index.md)
 - [Drawing calligraphic fonts in FontLab: setup and shapes](https://blog.fontlab.com/2024/09/23/calfonts-setup-shapes/index.md)
-- [FontLab TV: variable fonts crash course](https://blog.fontlab.com/2024/10/08/fontlab-tv-variable-fonts-crash-course/index.md)
 - [Scripting the mundane: letting Python do the dishes](https://blog.fontlab.com/2024/10/15/scripting-the-mundane-python-fontlab/index.md)
 - [Made with FontLab: Dave Lawrence](https://blog.fontlab.com/2024/11/05/made-with-fontlab-dave-lawrence/index.md)
 - [The bitter truth of screens: testing and hinting](https://blog.fontlab.com/2024/11/12/the-bitter-truth-of-screens-hinting/index.md)

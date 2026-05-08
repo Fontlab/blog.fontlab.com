@@ -32,6 +32,7 @@
 - Reconciled `TASKS.md` and `TODO.md` so completed configuration, post-list styling, FontLab 8.2 split, excerpt, llms, browser-check, Made with FontLab, and shipped issue-203 post-file tasks are removed from the open checklist.
 - Tightened the template content container so narrow post pages no longer overflow horizontally.
 - Kept the Brush Romans webinar CTA on the FontLab TV fallback after current web/video research found no stable recording URL.
+- Retired the duplicate 2025-12-09 Vexy Lines signal/halftone draft after confirming the live Vexy Lines intro and engraving posts already cover the material.
 - Rewrote `2018-12-21-fontlab-vi-12-releases-in-12-months.md` from the FontLab VI release-note archive instead of leaving it as a thin announcement.
 - Replaced generic FontLab 8 placeholder images in the OTMaster, TransType Type 1 rescue, and Vexy Lines pipeline posts with product-specific local media.
 
@@ -50,7 +51,7 @@
 - `uv sync --frozen` completed.
 - `./build.sh build` completed and generated root `llms.txt` and `llms-full.txt`.
 - `uvx ruff check src/` passed.
-- Local checks confirmed all current published posts include `<!-- more -->`, no post uses `authors: [editorial]` or `categories:`, CI sanity-check target files exist, `src_docs/md/posts/` currently contains 79 published Markdown posts, and 12 offline draft/research files live under `issues/draft-posts/`.
+- Local checks confirmed all current published posts include `<!-- more -->`, no post uses `authors: [editorial]` or `categories:`, CI sanity-check target files exist, `src_docs/md/posts/` currently contains 79 published Markdown posts, and 11 offline draft/research files live under `issues/draft-posts/`.
 - Local build output contains 79 generated public post pages, `docs/llms.txt` (9,916 bytes), and `docs/llms-full.txt` (251,703 bytes).
 - Local checks confirmed the three retired 2013 color-font pages are absent from generated `docs/`, the new 2026 color-font page exists, and no source or generated page links to the old color-font URLs.
 - Current web research found the Matthew Carter recording at `https://www.youtube.com/watch?v=ibJhxbsbqJ4`; searches found the Brush Romans event listing/preview but no stable recording URL.

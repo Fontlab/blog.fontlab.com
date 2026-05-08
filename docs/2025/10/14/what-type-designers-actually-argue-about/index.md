@@ -14,7 +14,6 @@ Reading these debates is one of the better ways to learn type design. The produc
 
 - [TypeDrawers — best free font editor thread](https://typedrawers.com/discussion/5400/which-is-the-best-free-font-editor)
 - [r/typography — what program for fonts](https://www.reddit.com/r/typography/comments/10jslv4/what_program_is_the_goto_for_creating_fonts_in/)
-- [Alex John Lucas on FontLab vs RoboFont vs Glyphs](https://alexjohnlucas.com/type/software)
 - [Awesome typography — Jolg42](https://github.com/Jolg42/awesome-typography)
 
 [Read more →](https://help.fontlab.com/fontlab/8/manual/)

@@ -38,7 +38,6 @@ The goal of Python in a font editor is to eliminate clicking. The clicks that re
 
 - [What’s new in FontLab 8 — scripts and extensions](https://help.fontlab.com/fontlab/8/whats-new/whats-new-12-scripts-extensions/)
 - [TypeRig on GitHub](https://github.com/kateliev/TypeRig)
-- [FontLab vs RoboFont vs GlyphsApp — Alex John Lucas](https://alexjohnlucas.com/type/software)
 - [Awesome typography — curated list](https://github.com/Jolg42/awesome-typography)
 - [FontLab 8 — overview](https://www.fontlab.com/font-editor/fontlab/)
 
