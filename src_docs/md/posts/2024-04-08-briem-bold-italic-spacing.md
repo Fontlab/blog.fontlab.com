@@ -29,8 +29,6 @@ result. All three are harder than they look and more forgiving than they seem.
 
 <!-- more -->
 
-![Spacing in FontLab 8](../media/fl8-8days-spacing.png)
-
 ## What exactly is a bold?
 
 “If you haven’t got an opinion about bold letters,” Briem writes, “now is the time to

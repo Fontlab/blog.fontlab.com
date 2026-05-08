@@ -31,8 +31,6 @@ basics actually require.
 
 <!-- more -->
 
-![Spacing and metrics in FontLab](../media/fl8-8days-spacing.png)
-
 ## Would you like to make your own?
 
 “Take your characters and turn them into fonts,” Briem begins.

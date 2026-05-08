@@ -32,8 +32,6 @@ obvious approach doesn’t work.
 
 <!-- more -->
 
-![Drawing bold letters](../media/fl8-8days-spacing.png)
-
 ## The wrong way
 
 Take the regular, scale every contour outward by 30 units, ship it as Bold.

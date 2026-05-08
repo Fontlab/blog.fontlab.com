@@ -30,10 +30,6 @@ It is the white space.
 
 <!-- more -->
 
-![The geometry of letter spacing](../media/fl8-8days-spacing.png)
-
-<!-- image TBD -->
-
 Letters are social creatures, and how much personal space they afford one another
 decides whether a paragraph is a joy to read or a chore.
 Gunnlaugur SE Briem, who taught type design at the Royal Academy of Fine Arts in

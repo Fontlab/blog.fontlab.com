@@ -31,8 +31,6 @@ Briem’s italic tutorial, lightly modernized, walks through what an italic actu
 
 <!-- more -->
 
-![FontLab 8 spacing workflow](../media/fl8-8days-spacing.png)
-
 ## What an italic is
 
 Italics descend from cursive handwriting — letters drawn quickly with a broad-edged pen,

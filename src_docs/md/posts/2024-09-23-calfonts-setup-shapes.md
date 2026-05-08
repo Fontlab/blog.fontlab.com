@@ -31,8 +31,6 @@ fundamentals of drawing in FontLab’s glyph-oriented workflow.
 
 <!-- more -->
 
-![Drawing calligraphic fonts in FontLab 8](../media/fl8-8days-spacing.png)
-
 ## Getting FontLab 8 running
 
 Installation on Mac occasionally hits a security gate.

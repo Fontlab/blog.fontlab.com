@@ -31,8 +31,6 @@ variants, and planning a type family in FontLab 8.
 
 <!-- more -->
 
-![Spacing and italics in FontLab 8](../media/fl8-8days-spacing.png)
-
 ## Fitting and spacing: letter heights first
 
 Before setting sidebearings, establish your vertical metrics.

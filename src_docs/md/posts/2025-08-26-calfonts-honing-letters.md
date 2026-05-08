@@ -30,8 +30,6 @@ drawing: fixing paths automatically where you can, fixing them by hand where you
 
 <!-- more -->
 
-![Honing letter contours in FontLab 8](../media/fl8-8days-spacing.png)
-
 ## Step 1: automatic path fixing
 
 FontLab’s automatic tools resolve a surprising amount of contour mess:
