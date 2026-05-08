@@ -281,7 +281,7 @@ OTMaster pairs well with [FontLab VI](https://www.fontlab.com/font-editor/fontla
 
 [Read more →](https://www.fontlab.com/font-utility/dtl-otmaster/)
 
-FontLab VI 6.1.2 shipped today. That made twelve releases in twelve months since the first public version of our new font editor.
+FontLab VI 6.1.2 shipped today. That made twelve updates in twelve months after the first public version of our new font editor.
 
 A year earlier, FontLab VI was a large, slightly terrifying promise: a cross-platform font editor with modern drawing tools, variable fonts, color fonts, interpolation, scripting, and a new file format under the hood. By the end of 2018, it was no longer just a promise. It had been dragged through real jobs by type designers, students, production engineers, and the patient sort of people who can describe a kerning bug without raising their voice.
 

@@ -12,3 +12,6 @@ Live sprint tasks. Keep this shorter than `TODO.md`; move completed implementati
 - [x] Retire the duplicate Vexy Lines signal/halftone draft after consolidation review.
 - [x] Replace stale generated `TODO.md` with the current live backlog.
 - [x] Commit the verified sprint.
+- [x] Add pytest guard for concrete CTA targets and body CTA links.
+- [x] Add pytest guard for missing/weak image review markers.
+- [x] Add pytest guard for TODO summary counts matching live content state.

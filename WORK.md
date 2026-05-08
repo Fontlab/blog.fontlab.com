@@ -15,7 +15,7 @@
 
 ### Content and task reconciliation
 - Reconciled `TASKS.md` and `TODO.md` against the current root-layout site.
-- Current source tree: 79 published Markdown posts in `src_docs/md/posts/`.
+- Current source tree: 78 published Markdown posts in `src_docs/md/posts/`.
 - Eleven offline draft/research files live in `issues/draft-posts/` so MaterialX cannot list them on the public blog index.
 - Issue 203 draft expansion: 32 of 35 post files exist and build. Remaining open slugs: `nabla-colrv1-and-color-fonts`, `when-type-becomes-texture`, `distortion-as-defense-2026`.
 - Completed post-list/CTA styling, Made with FontLab series, browser-check, llms, and stale configuration items were removed from the open checklist and recorded in `CHANGELOG.md`.
@@ -45,8 +45,10 @@
 - Moved the Vexy Lines engraving post image to `src_docs/md/media/vexy-lines-and-the-useful-lie-of-engraving/` and updated the post link so the asset builds.
 - Rewrote the FontLab VI twelve-updates post from the release-note archive and updated it to the release-note archive CTA.
 - Replaced weak or generic images in seven posts with concrete local media: FontLab Studio 5 OpenType, FontLab Studio 5 Windows, Matthew Carter, Brush Romans / John Downer, OTMaster, TransType, and Vexy Lines.
+- Reopened `TODO.md` with the remaining 13 generic placeholder image candidates discovered during verification.
 
 ### Verified
+- Added pytest guardrails for concrete CTA targets, missing/weak image review markers, and TODO summary counts.
 - `uv run --with pytest python -m pytest -q` — clean.
 - `uvx ruff check src tests` — clean.
 - `uv run blog-fontlab format` — complete; no `.bak` or `.orig` files created.
@@ -59,7 +61,7 @@
 - `uvx ruff check src/` — clean.
 - Source/generated HTML quote check — no smart-quote attribute delimiters in `src_docs/md` or `docs`.
 - Output sanity: `docs/index.html`, `docs/about/index.html`, `docs/CNAME`, `docs/.nojekyll`, `docs/llms.txt`, `docs/llms-full.txt` exist.
-- Counts: 79 published source posts, 11 offline draft/research files, 79 generated public post pages.
+- Counts: 78 published source posts, 11 offline draft/research files, 78 generated public post pages.
 - Generated color-font page exists at `docs/2026/05/03/color-fonts-in-2026/index.html`; the three old generated 2013 color-font pages are absent.
 - `rg` found no source or generated links to the retired color-font URLs.
 - Browser checks: Playwright found no horizontal overflow and no relevant console errors on home, the Matthew Carter webinar post, the Brush Romans webinar post, About, the 2026 archive, and a retired color-font URL at desktop and mobile widths.

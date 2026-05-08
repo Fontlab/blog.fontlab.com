@@ -3,6 +3,7 @@
 ## [Unreleased] — 2026-05-08 (continued)
 
 ### Added
+- Added content-state regression tests for CTA targets, image review markers, and TODO summary counts.
 - Added Flowmark 0.6.5 as a locked build dependency.
 - Added `./build.sh format` / `blog-fontlab format` to format `src_docs/md/` in place with semantic line breaks, safe cleanups, smart quotes, and ellipses.
 - Added focused CLI tests for build ordering and Flowmark smart-quote HTML tag repair.
@@ -35,10 +36,12 @@
 - Retired the duplicate 2025-12-09 Vexy Lines signal/halftone draft after confirming the live Vexy Lines intro and engraving posts already cover the material.
 - Rewrote `2018-12-21-fontlab-vi-12-releases-in-12-months.md` from the FontLab VI release-note archive instead of leaving it as a thin announcement.
 - Replaced generic FontLab 8 placeholder images in the OTMaster, TransType Type 1 rescue, and Vexy Lines pipeline posts with product-specific local media.
+- Added a `TODO.md` follow-up section for the 13 remaining generic placeholder image candidates that are not marked missing/weak in front matter.
 
 ### Verified
+- `uv run --with pytest python -m pytest -q` now covers the content-state guardrails.
 - `uv sync --frozen` completed with Flowmark in the lock file.
-- `uv run blog-fontlab format` completed against the current 79 published Markdown source files with no `.bak` or `.orig` files.
+- `uv run blog-fontlab format` completed against the current 78 published Markdown source files with no `.bak` or `.orig` files.
 - `uv run --with pytest python -m pytest -q` passed.
 - `uvx ruff check src tests` passed.
 - `./build.sh build` completed after running Flowmark first.
@@ -51,8 +54,8 @@
 - `uv sync --frozen` completed.
 - `./build.sh build` completed and generated root `llms.txt` and `llms-full.txt`.
 - `uvx ruff check src/` passed.
-- Local checks confirmed all current published posts include `<!-- more -->`, no post uses `authors: [editorial]` or `categories:`, CI sanity-check target files exist, `src_docs/md/posts/` currently contains 79 published Markdown posts, and 11 offline draft/research files live under `issues/draft-posts/`.
-- Local build output contains 79 generated public post pages, `docs/llms.txt` (9,916 bytes), and `docs/llms-full.txt` (251,703 bytes).
+- Local checks confirmed all current published posts include `<!-- more -->`, no post uses `authors: [editorial]` or `categories:`, CI sanity-check target files exist, `src_docs/md/posts/` currently contains 78 published Markdown posts, and 11 offline draft/research files live under `issues/draft-posts/`.
+- Local build output contains 78 generated public post pages, `docs/llms.txt`, and `docs/llms-full.txt`.
 - Local checks confirmed the three retired 2013 color-font pages are absent from generated `docs/`, the new 2026 color-font page exists, and no source or generated page links to the old color-font URLs.
 - Current web research found the Matthew Carter recording at `https://www.youtube.com/watch?v=ibJhxbsbqJ4`; searches found the Brush Romans event listing/preview but no stable recording URL.
 - Playwright checks found no horizontal overflow and no relevant console errors on home, the Matthew Carter webinar post, the Brush Romans webinar post, About, the 2026 archive, and a retired color-font URL at desktop and mobile widths.
