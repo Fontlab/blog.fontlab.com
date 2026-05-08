@@ -44,7 +44,7 @@ Create a range of variants, from subtle to obvious, and compare.
 Details bump into each other.
 Confusion looms. That’s when a method will save you.”
 
-![Graduated test variants for a letterform decision](https://i.fontlab.com/fl8/briem/gif/briem-3-01-test.gif)
+![Graduated test variants for a letterform decision](../media/external/fontlab-briem-3-01-test.gif)
 
 **Study masterpieces.** Not to copy, but to understand the problems they solved.
 Matthew Carter made Bell Centennial to survive high-speed printing on rough paper with
@@ -53,7 +53,7 @@ cheap ink. Compensation for brutal handling is built into every detail.
 They, too, run into technical problems.
 They find solutions, and put them into their work.”
 
-![Bell Centennial: ink trap details built into every curve](https://i.fontlab.com/fl8/briem/gif/briem-3-01-bell.gif)
+![Bell Centennial: ink trap details built into every curve](../media/external/fontlab-briem-3-01-bell.gif)
 
 A correspondent once asked Briem: “How can I look for solutions?
 I don’t even know what the problems are.”
@@ -63,7 +63,7 @@ Each specific question has an answer.
 
 ## Modules on a grid: a typeface in a day
 
-![Golden section applied to x-height, ascenders, descenders, and cap height](https://i.fontlab.com/fl8/briem/gif/briem-3-03-golden.gif)
+![Golden section applied to x-height, ascenders, descenders, and cap height](../media/external/fontlab-briem-3-03-golden.gif)
 
 The chapter on modules shows his most direct teaching method.
 As a first exercise at the Royal Academy, Briem assembled what became the
@@ -96,7 +96,7 @@ rhythm — and they often need to work with text they weren’t designed for.
 Lining figures align at top and bottom; oldstyle figures have ascenders and descenders.
 Both are legitimate; the choice depends on use.
 
-![Numeral zero variants showing how figure spacing and proportion interact](https://i.fontlab.com/fl8/briem/gif/briem-3-06-zeros.gif)
+![Numeral zero variants showing how figure spacing and proportion interact](../media/external/fontlab-briem-3-06-zeros.gif)
 
 Spacing is where most first drafts fail.
 The chapter on squeezing — condensing type to fit a narrower space — explains why it’s
@@ -106,7 +106,7 @@ Counters shrink disproportionately.
 Curves go near-flat.
 A condensed design needs redrawing, not rescaling.
 
-![Narrowing a design from dozens of options down to the final seven candidates](https://i.fontlab.com/fl8/briem/gif/briem-3-04-final-seven.gif)
+![Narrowing a design from dozens of options down to the final seven candidates](../media/external/fontlab-briem-3-04-final-seven.gif)
 
 * * *
 

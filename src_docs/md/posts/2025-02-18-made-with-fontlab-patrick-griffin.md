@@ -31,7 +31,7 @@ Both came out of FontLab.
 
 <!-- more -->
 
-![Bananas by Patrick Griffin / Canada Type](https://i.fontlab.com/made-with-fontlab/fonts-black/CanadaType-Bananas.png)
+![Bananas by Patrick Griffin / Canada Type](../media/external/fontlab-canadatype-bananas.png)
 
 Griffin runs [Canada Type](https://canadatype.com/) and has spent more than two and a
 half decades shipping revival and original families.
@@ -56,7 +56,7 @@ His testimonial is one sentence long and lands clean:
 
 — Patrick Griffin, [Canada Type](https://canadatype.com/)
 
-![Ronaldson Pro by Patrick Griffin / Canada Type](https://i.fontlab.com/made-with-fontlab/fonts-black/CanadaType-RonaldsonPro.png)
+![Ronaldson Pro by Patrick Griffin / Canada Type](../media/external/fontlab-canadatype-ronaldsonpro.png)
 
 Twenty-seven years of trying every editor on the market is a long apprenticeship in what
 the alternatives don’t do.

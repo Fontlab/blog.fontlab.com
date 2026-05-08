@@ -1,0 +1,35 @@
+{# this_file: mkdocs/mk-fontlab/partials/post.html #}
+{#- Custom blog post excerpt:
+    - Author avatar appears small, inline-before the title (same line)
+    - Date + read time appended at the end of the intro paragraph
+    - "Continue reading" replaced by hyperlinked "<N> min read →" -#}
+<article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset">
+    {%- if post.authors -%}
+      {%- set _author = post.authors[0] -%}
+      <span class="md-post__avatar md-author" title="{{ _author.name }}">
+        <img src="{{ _author.avatar | url }}" alt="{{ _author.name }}">
+      </span>
+    {%- endif -%}
+    {%- if post.config.readtime -%}
+      {%- set _time = post.config.readtime -%}
+      {%- if _time == 1 -%}
+        {%- set _readtime = lang.t("readtime.one") -%}
+      {%- else -%}
+        {%- set _readtime = lang.t("readtime.other") | replace("#", _time) -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- set _meta -%}<span class="md-post__metaline"> <time datetime="{{ post.config.date.created }}">{{ post.config.date.created | date }}</time>{% if _readtime %} <a class="md-post__readlink" href="{{ post.url | url }}">{{ _readtime }} →</a>{% else %} <a class="md-post__readlink" href="{{ post.url | url }}">→</a>{% endif %}</span>{%- endset -%}
+    {%- set _content = post.content | string -%}
+    {%- set _idx = _content.rfind('</p>') -%}
+    {%- if _idx >= 0 -%}
+      {{ _content[:_idx] | safe }}{{ _meta | safe }}{{ _content[_idx:] | safe }}
+    {%- else -%}
+      {{ post.content }}
+      <p>{{ _meta | safe }}</p>
+    {%- endif -%}
+    {%- if post.config.pin -%}
+      <hr>
+    {%- endif -%}
+  </div>
+</article>

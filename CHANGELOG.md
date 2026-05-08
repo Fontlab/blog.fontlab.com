@@ -3,6 +3,8 @@
 ## [Unreleased] — 2026-05-08 (continued)
 
 ### Added
+- Added 40 localized external-image assets under `src_docs/md/media/external/`.
+- Added `src_docs/md/media/external/_sources.txt` with source/fetch URL provenance for the localized image set.
 - Added content-state regression tests for CTA targets, image review markers, and TODO summary counts.
 - Added Flowmark 0.6.5 as a locked build dependency.
 - Added `./build.sh format` / `blog-fontlab format` to format `src_docs/md/` in place with semantic line breaks, safe cleanups, smart quotes, and ellipses.
@@ -17,6 +19,8 @@
 - Added the verified FontLab YouTube recording link for the 2014 Matthew Carter webinar.
 
 ### Changed
+- Rewrote 19 post files so embedded image references use `../media/external/...` instead of external `i.ytimg.com`, `i.fontlab.com`, Cloudinary, or Wikimedia image URLs.
+- Resolved stale Wikimedia image paths through current Commons file URLs before localization.
 - `./build.sh build` now runs Flowmark against `src_docs/md/` before cleaning `docs/` and running ProperDocs.
 - Rewrote `2025-09-23-making-hangul-in-fontlab.md` to focus on Kwon Gun-oh's Korean *FontLab Type Design* book and its 2,780-glyph Hangul workflow instead of the older generic component-design angle.
 - Build-time Flowmark formatting restores ASCII quote delimiters inside raw HTML tags and rejoins `.fl-help-cta` Markdown attribute lists after smart quote/line-wrap conversion, so legacy WordPress HTML attributes and CTA styling remain valid.
@@ -40,6 +44,12 @@
 - Added a `TODO.md` follow-up section for the 13 remaining generic placeholder image candidates that are not marked missing/weak in front matter.
 
 ### Verified
+- Checked all `src_docs/md/posts/*.md` files for embedded external image URLs; none remain.
+- Verified all 40 localized external-image files with `file` and `magick identify`.
+- Built and visually inspected contact sheets for YouTube, FontLab/Briem, and Cloudinary/Wikimedia localized images.
+- `uv run properdocs build -f mkdocs/mkdocs.yml -d /tmp/blog-fontlab-external-image-build` completed with only existing absolute-link and missing-post warnings.
+- `uv run properdocs build -f mkdocs/mkdocs.yml` regenerated `docs/` and copied all 40 localized external images to `docs/media/external/`.
+- `uv run --with pytest python -m pytest -q` remains blocked by the existing published-post `review:` metadata failures.
 - `uv run --with pytest python -m pytest -q` now covers the content-state guardrails.
 - `uv sync --frozen` completed with Flowmark in the lock file.
 - `uv run blog-fontlab format` completed against the current 78 published Markdown source files with no `.bak` or `.orig` files.

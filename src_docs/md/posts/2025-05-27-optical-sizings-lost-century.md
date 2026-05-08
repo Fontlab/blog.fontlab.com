@@ -12,7 +12,7 @@ six-point letter is not a twelve-point letter made smaller.
 
 <!-- more -->
 
-[![Caslon 1720 specimen showing every size cut as a separate punch](https://upload.wikimedia.org/wikipedia/commons/9/93/Caslon-schriftmusterblatt.jpeg)](https://en.wikipedia.org/wiki/Optical_sizing)
+[![Caslon 1720 specimen showing every size cut as a separate punch](../media/external/wikimedia-a-specimen-by-william-caslon.jpg)](https://en.wikipedia.org/wiki/Optical_sizing)
 
 Open Caslon’s 1720 specimen and you see it immediately.
 Every size of every face is a different drawing.

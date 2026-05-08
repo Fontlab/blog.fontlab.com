@@ -31,7 +31,7 @@ about why FontLab works for the spread.
 
 <!-- more -->
 
-![Acqua Aldina by Yuri Gordon](https://i.fontlab.com/made-with-fontlab/fonts-black/YuriGordon-AcquaAldinaVF.png)
+![Acqua Aldina by Yuri Gordon](../media/external/fontlab-yurigordon-acquaaldinavf.png)
 
 Gordon’s public catalogue at [yurigordon.com](https://yurigordon.com/) covers seven
 entries on the made-with-fontlab gallery: [Acqua Aldina](https://yurigordon.com/), the
@@ -61,7 +61,7 @@ cleanly:
 
 — [Yuri Gordon](https://yurigordon.com/)
 
-![Villon VF by Yuri Gordon](https://i.fontlab.com/made-with-fontlab/fonts-black/YuriGordon-Villon.png)
+![Villon VF by Yuri Gordon](../media/external/fontlab-yurigordon-villon.png)
 
 The line worth keeping is “verified to a micron, and just as easily draw a crazy
 variable font by hand.”

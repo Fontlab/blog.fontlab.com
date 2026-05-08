@@ -31,7 +31,7 @@ That’s the California Type Foundry house style, and Dave Lawrence does it in F
 
 <!-- more -->
 
-![Bodoni Casale by Dave Lawrence / California Type Foundry](https://i.fontlab.com/made-with-fontlab/fonts-black/CALFonts-BodoniCasale.png)
+![Bodoni Casale by Dave Lawrence / California Type Foundry](../media/external/fontlab-calfonts-bodonicasale.png)
 
 Lawrence calls them the Hi-res Font™ Series — pitch-perfect classics from hi-res scans.
 The catalogue runs to seven public entries on the gallery: three Bodonis,
@@ -68,7 +68,7 @@ Asked what FontLab gives him, Lawrence is unusually direct for a type designer:
 — Dave Lawrence,
 [California Type Foundry](https://www.myfonts.com/collections/california-type-foundry/)
 
-![CAL Grotesk by Dave Lawrence / California Type Foundry](https://i.fontlab.com/made-with-fontlab/fonts-black/CALFonts-CALGrotesk.png)
+![CAL Grotesk by Dave Lawrence / California Type Foundry](../media/external/fontlab-calfonts-calgrotesk.png)
 
 The “fractional coordinates” remark elsewhere in his testimonial is the giveaway about
 how Hi-res actually works.

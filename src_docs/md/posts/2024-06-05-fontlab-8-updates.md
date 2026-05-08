@@ -29,8 +29,6 @@ improvements. Here is the short version.
 
 <!-- more -->
 
-![FontLab 8 font editor](../media/fl8-hero.png)
-
 Both updates are free for all FontLab 8 users.
 FontLab 8.4 also marks a milestone: over 900 improvements relative to FontLab 7, and
 over 500 relative to the original 8.0 release.

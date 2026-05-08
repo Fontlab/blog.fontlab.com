@@ -29,8 +29,6 @@ and suddenly it is everybody’s problem again.
 
 <!-- more -->
 
-![Reviving old fonts](../media/fl8-hero.png)
-
 Adobe ended authoring support for PostScript Type 1 fonts in updated Creative Cloud apps
 after January 2023. Type Network noted at the time that pre-OpenType documents could
 still hide replacement problems in spacing, kerning, line breaks, expert sets, and old

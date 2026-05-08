@@ -30,7 +30,7 @@ pipeline — is partly because Kateliev wrote the toolkit that did the heavy lif
 
 <!-- more -->
 
-![Science Gothic by Thomas Phinney, Brandon Buerkle, Vassil Kateliev](https://i.fontlab.com/made-with-fontlab/fonts-black/ThomasPhinney-ScienceGothic.png)
+![Science Gothic by Thomas Phinney, Brandon Buerkle, Vassil Kateliev](../media/external/fontlab-thomasphinney-sciencegothic.png)
 
 Kateliev runs [Karandash type foundry](http://karandash.eu/) and
 [The FontMaker](http://thefontmaker.com/), and he’s the developer behind

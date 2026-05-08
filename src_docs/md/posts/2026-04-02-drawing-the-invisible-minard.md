@@ -37,7 +37,7 @@ mean, and used it for everything.
 The endpoint of the genre is **Charles Joseph Minard’s 1869 figurative map of Napoleon’s
 Russian campaign of 1812.**
 
-[![Charles Joseph Minard’s figurative map of Napoleon’s Russian campaign, 1869](https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png)](https://en.wikipedia.org/wiki/Charles_Joseph_Minard)
+[![Charles Joseph Minard’s figurative map of Napoleon’s Russian campaign, 1869](../media/external/wikimedia-minard.png)](https://en.wikipedia.org/wiki/Charles_Joseph_Minard)
 
 Six variables on a single sheet: army size, geographic location in two dimensions,
 direction of travel, date, and temperature during the retreat.

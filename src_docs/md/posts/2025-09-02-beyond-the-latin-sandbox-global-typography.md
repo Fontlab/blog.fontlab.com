@@ -29,8 +29,6 @@ city of writing systems.
 
 <!-- more -->
 
-![Global typography](../media/fl8-hero.png)
-
 <!-- image TBD -->
 
 Modern font editors must accommodate the structural realities of Cyrillic, Arabic,

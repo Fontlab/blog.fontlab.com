@@ -6,6 +6,23 @@
 
 ## Shipped (2026-05-08 sprint)
 
+### External image localization
+- Checked every `src_docs/md/posts/*.md` file for embedded external image URLs.
+- Localized 40 external images used by 19 posts into `src_docs/md/media/external/`.
+- Added `src_docs/md/media/external/_sources.txt` to record each original source URL and the resolved fetch URL where stale Wikimedia paths had moved.
+- Rewrote the affected Markdown and raw HTML image references to `../media/external/...`, while preserving surrounding YouTube and Commons page links.
+- Resolved stale Wikimedia image paths through the Commons API before downloading: Caslon, Hunminjeongeumhaerye, Shantytown, Seurat, Dürer, and Penny Black.
+
+### External image verification
+- Confirmed there are 40 downloaded image files under `src_docs/md/media/external/`.
+- `rg` check found no remaining embedded external image URLs in `src_docs/md/posts/*.md`.
+- Local target check found 0 missing `../media/external/...` image files.
+- `magick identify` opened every downloaded PNG, JPEG, and GIF and reported valid dimensions.
+- Built contact sheets at `/tmp/blog-fontlab-external-image-sheets/` and visually inspected the YouTube, FontLab/Briem, and Cloudinary/Wikimedia groups.
+- `uv run properdocs build -f mkdocs/mkdocs.yml -d /tmp/blog-fontlab-external-image-build` completed; only existing absolute-link and missing-post warnings were emitted.
+- `uv run properdocs build -f mkdocs/mkdocs.yml` regenerated `docs/` with the localized images copied to `docs/media/external/`.
+- Baseline `uv run --with pytest python -m pytest -q` remains blocked by the existing content-state failures for published posts without `review:` metadata.
+
 ### Hangul book rewrite
 - Rewrote `src_docs/md/posts/2025-09-23-making-hangul-in-fontlab.md` to focus on Kwon Gun-oh's Korean *FontLab Type Design* book from `issues/draft-posts/404-deepseek.md`.
 - Replaced the old wdnote/Pixso/Roboto Flex angle with the book's 2,780-glyph Hangul workflow, reference/component production method, and Korean-language documentation milestone.

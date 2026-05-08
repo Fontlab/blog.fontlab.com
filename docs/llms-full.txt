@@ -43,6 +43,8 @@ Our current product line covers the full range of font work. FontLab 8 is the co
 Type designers around the world have used our tools to create fonts you encounter daily: Adelle, Calibri, Candara, Consolas, Helvetica World, Myriad Pro, Palatino nova, PT Sans, Zapfino Extra, and tens of thousands more. We are a small company. We take that as a point of pride.
 # Blog posts
 
+{ .illu-thumb }
+
 2005 was a pivotal year for Fontlab Ltd. The company shipped FontLab Studio 5, which became the dominant professional font editor for the next decade. FontLab also acquired Fontographer from Macromedia, reviving a tool that had been dormant since the mid-1990s.
 
 FontLab Studio 5 succeeded FontLab 4. The previous version introduced the first OpenType editing capability in December 2001. Studio 5 refined and extended that foundation. It quickly became the standard for professional type design and font production.
@@ -75,6 +77,8 @@ Here’s what it does:
 This release replaced TransType 3. The older version handled basic cross-platform format conversion but predated the OpenType and web font era.
 
 [Read more →](https://help.fontlab.com/transtype-4/)
+
+{ .illu-thumb }
 
 FontLab Studio 5.2.1 for Windows shipped in December 2013. It builds on the 5.2 foundation with new tools and hundreds of bug fixes.
 
@@ -2485,24 +2489,6 @@ Two poles of the same ecosystem. One traces back to 1984 and a founder who spent
 - [Sandoll — Wikipedia](https://en.wikipedia.org/wiki/Sandoll)
 
 [Read more →](https://www.fontlab.com/font-editor/fontlab/)
-
-Gunnlaugur SE Briem has spent a career arguing that you cannot draw a serious typeface without understanding how a broad-edged pen makes letters. Briem’s tutorial on brushes is the cleanest version of that argument you will find. (Note: Unlike other FontLab TV episodes like [this playlist](https://www.youtube.com/playlist?list=PLj-8PzlEWrCF8M0bmHFhI0BfVk4sRCm1b), there is no video for this tutorial—it is purely a written masterclass.)
-
-## What it covers
-
-**Why broad-pen first.** Roman letters were drawn with broad-edged tools. The contrast distribution in any text serif — thick verticals, thin horizontals, the diagonal axis on `o` — is a direct fossil of the pen angle. Without this you are reverse-engineering shapes you cannot defend.
-
-**The pen angle.** Hold a flat-edged tool at roughly 30° from the baseline and the contrast falls out automatically: thicks on the down-strokes, thins on the up- and horizontal-strokes. The tutorial shows the same letter drawn with the pen at 0°, 30°, and 45° — the third one is what produces the typical Italic axis.
-
-**Brush vs broad-edge.** A pointed brush adds pressure as a third variable. Same axis, but with continuous contrast modulation rather than the on/off contrast of a flat pen. Brush letters explain almost every italic and a lot of script type.
-
-**Mapping calligraphy onto digital drawing.** Briem’s claim is not that you should literally draw with a brush in FontLab. It is that the curves you draw with the pen tool should be the curves a flat-edged pen would have produced. The tutorial shows side-by-side comparisons of curves drawn “by feel” vs curves drawn after twenty minutes with a pen.
-
-## Why it matters
-
-Most “stiff” letters come from designers who have never held a broad-edged pen. This tutorial is a fix for that — and a useful re-read every six months.
-
-[Read more →](https://help.fontlab.com/fontlab/8/tutorials/briem/2-0-basics/briem-2-01-basics/)
 
 Most of the world’s text passes through a library most people have never heard of.
 

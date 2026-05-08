@@ -28,8 +28,6 @@ The forums tell a different story.
 
 <!-- more -->
 
-![Type design](../media/fl8-hero.png)
-
 <!-- image TBD -->
 
 The arguments on TypeDrawers, Reddit’s r/typography, and the various national mailing

@@ -1,3 +1,5 @@
+{ .illu-thumb }
+
 FontLab Studio 5.2.1 for Windows shipped in December 2013. It builds on the 5.2 foundation with new tools and hundreds of bug fixes.
 
 ### What’s new

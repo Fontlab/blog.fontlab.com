@@ -31,8 +31,6 @@ The pixels win the rendering argument.
 
 <!-- more -->
 
-![FontLab 8 font editor](../media/fl8-hero.png)
-
 ## What hinting actually is
 
 Hinting is a set of mathematical instructions embedded in the font that tells the

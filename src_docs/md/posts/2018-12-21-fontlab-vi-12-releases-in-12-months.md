@@ -74,7 +74,7 @@ That is the unglamorous part of a font editor’s first year.
 Not one grand unveiling, but a dozen rounds of listening, fixing, and sharpening.
 The receipts are in the release notes, version by version.
 
-[![FontLab VI year in review](https://i.ytimg.com/vi/uyyAPvoeEHo/maxresdefault.jpg)](https://www.youtube.com/watch?v=uyyAPvoeEHo)
+[![FontLab VI year in review](../media/external/youtube-uyyapvoeeho-maxresdefault.jpg)](https://www.youtube.com/watch?v=uyyAPvoeEHo)
 
 Thank you to every type designer, student, font engineer, and professionally suspicious
 beta tester who filed a bug, sent a sample file, or cornered us at a conference.

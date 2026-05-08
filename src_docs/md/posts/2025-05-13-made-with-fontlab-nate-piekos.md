@@ -31,7 +31,7 @@ FontLab 7.
 
 <!-- more -->
 
-![Thunderclap BB by Nate Piekos / Blambot](https://i.fontlab.com/made-with-fontlab/fonts-black/Blambot-ThunderclapBB.png)
+![Thunderclap BB by Nate Piekos / Blambot](../media/external/fontlab-blambot-thunderclapbb.png)
 
 Comic lettering fonts have a specific brief that text fonts don’t: they must read fast,
 in tight balloons, at small sizes on cheap paper or backlit screens, alongside artwork
@@ -53,7 +53,7 @@ After waiting years for one specific feature:
 
 — Nate Piekos, [Blambot](https://blambot.com/)
 
-![Inkcantation BB by Nate Piekos / Blambot](https://i.fontlab.com/made-with-fontlab/fonts-black/Blambot-InkcantationBB.png)
+![Inkcantation BB by Nate Piekos / Blambot](../media/external/fontlab-blambot-inkcantationbb.png)
 
 Dark mode looks trivial as a feature on a release-notes page.
 It is not trivial when you spend nine hours a day staring at a glyph window.

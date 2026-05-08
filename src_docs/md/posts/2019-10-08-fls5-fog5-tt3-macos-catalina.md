@@ -31,7 +31,7 @@ upgrading to the 64-bit FontLab 7.
 <!-- more -->
 
 <figure class="aligncenter">
-<img src="https://res.cloudinary.com/fontlab/images/v1629415725/fls5-fog5-tt3/fls5-fog5-tt3.png?_i=AA" class="wp-image-2314" decoding="async" />
+<img src="/media/external/cloudinary-fls5-fog5-tt3.png" class="wp-image-2314" decoding="async" />
 <figcaption>FontLab Studio 5, Fontographer 5, TypeTool 3 on macOS Catalina</figcaption>
 </figure>
 
@@ -129,7 +129,7 @@ CrossOver 19 — they run fine.
 to Windows versions.
 
 <figure class="wp-block-image size-large">
-<img src="https://res.cloudinary.com/fontlab/images/w_2560,h_1440/v1629415719/fontlab-studio5-win-crossover19-macos-catalina/fontlab-studio5-win-crossover19-macos-catalina.png?_i=AA" decoding="async" />
+<img src="/media/external/cloudinary-fontlab-studio5-win-crossover19-macos-catalina.png" decoding="async" />
 </figure>
 
 ### Videos: how to run classic FontLab apps on macOS Catalina
@@ -141,13 +141,13 @@ BitFonter 3 on macOS Catalina using Codeweavers CrossOver Mac 19 or newer.
 You also need to install the Windows version of the FontLab app.
 We don’t offer technical support for our Windows apps running inside CrossOver.*
 
-[![How to run FontLab Studio 5 on macOS Catalina using CrossOver Mac](https://i.ytimg.com/vi/NQQ5boHSZw4/maxresdefault.jpg)](https://www.youtube.com/watch?v=NQQ5boHSZw4)
+[![How to run FontLab Studio 5 on macOS Catalina using CrossOver Mac](../media/external/youtube-nqq5bohszw4-maxresdefault.jpg)](https://www.youtube.com/watch?v=NQQ5boHSZw4)
 
-[![How to run Fontographer 5 on macOS Catalina using CrossOver Mac](https://i.ytimg.com/vi/yUe1Eixahig/maxresdefault.jpg)](https://www.youtube.com/watch?v=yUe1Eixahig)
+[![How to run Fontographer 5 on macOS Catalina using CrossOver Mac](../media/external/youtube-yue1eixahig-maxresdefault.jpg)](https://www.youtube.com/watch?v=yUe1Eixahig)
 
-[![How to run TypeTool 3 on macOS Catalina using CrossOver Mac](https://i.ytimg.com/vi/T9O1HpCoFTE/maxresdefault.jpg)](https://www.youtube.com/watch?v=T9O1HpCoFTE)
+[![How to run TypeTool 3 on macOS Catalina using CrossOver Mac](../media/external/youtube-t9o1hpcofte-maxresdefault.jpg)](https://www.youtube.com/watch?v=T9O1HpCoFTE)
 
-[![How to run BitFonter 3 on macOS using CrossOver Mac](https://i.ytimg.com/vi/OpkzTyQETts/maxresdefault.jpg)](https://www.youtube.com/watch?v=OpkzTyQETts)
+[![How to run BitFonter 3 on macOS using CrossOver Mac](../media/external/youtube-opkztyqetts-maxresdefault.jpg)](https://www.youtube.com/watch?v=OpkzTyQETts)
 
 ## Summary
 

@@ -30,8 +30,6 @@ It is a map through one of the hardest jobs in type design.
 
 <!-- more -->
 
-![Hangul in FontLab](../media/fl8-hero.png)
-
 <!-- image TBD -->
 
 Kwon Gun-oh (권군오) wrote the book for people who want to make Hangul fonts in FontLab.

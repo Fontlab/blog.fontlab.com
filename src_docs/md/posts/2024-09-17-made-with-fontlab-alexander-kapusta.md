@@ -29,7 +29,7 @@ Alexander Kapusta at his one-person foundry, Your Font Fetish.
 
 <!-- more -->
 
-![YFF Becha by Alexander Kapusta / Your Font Fetish](https://i.fontlab.com/made-with-fontlab/fonts-black/AlexanderKapusta-YFFBecha.png)
+![YFF Becha by Alexander Kapusta / Your Font Fetish](../media/external/fontlab-alexanderkapusta-yffbecha.png)
 
 Kapusta runs [Your Font Fetish](https://www.yourfontfetish.com/) as a small, opinionated
 catalogue: four families currently in the public made-with-fontlab gallery, each with a
@@ -56,7 +56,7 @@ stare at while the deadline crawls toward you.
 Kapusta’s pitch for FontLab is not that it makes the work easy — he is explicit that it
 does not — but that the tool stays out of the way of the part that’s already hard.
 
-![YFF Zarya by Alexander Kapusta / Your Font Fetish](https://i.fontlab.com/made-with-fontlab/fonts-black/AlexanderKapusta-YFFZarya.png)
+![YFF Zarya by Alexander Kapusta / Your Font Fetish](../media/external/fontlab-alexanderkapusta-yffzarya.png)
 
 The “friendly interface for such a complex working tool” is the right framing.
 FontLab is not a beginner’s app — it ships with FontAudit, expressions, masters and

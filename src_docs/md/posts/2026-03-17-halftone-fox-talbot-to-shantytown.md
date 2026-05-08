@@ -27,7 +27,7 @@ American newspaper. **Frederic Ives** patented a commercially viable method in 1
 **Georg Meisenbach’s** “Autotypie” followed in Munich in 1882. By 1890 the halftone
 screen was standard equipment in every serious print shop.
 
-![*A Scene in Shantytown, New York*, first full-tone newspaper halftone, March 4, 1880](https://upload.wikimedia.org/wikipedia/commons/9/93/A_Scene_in_Shantytown%2C_New_York_%281880%29.png)
+![*A Scene in Shantytown, New York*, first full-tone newspaper halftone, March 4, 1880](../media/external/wikimedia-a-scene-in-shantytown-new-york-1880.png)
 
 The numbers that drove the next century: newspapers ran around **85 lines per inch**,
 magazines **133–150 lpi**, fine art catalogues higher.

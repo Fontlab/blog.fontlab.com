@@ -13,7 +13,7 @@ burin, a graver, and eventually a stylus.
 
 <!-- more -->
 
-[![Albrecht Dürer, Knight, Death and the Devil, 1513](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/D%C3%BCrer_-_Ritter%2C_Tod_und_Teufel_%28Recto%29.jpg/600px-D%C3%BCrer_-_Ritter%2C_Tod_und_Teufel_%28Recto%29.jpg)](https://commons.wikimedia.org/wiki/Category:Knight,_Death_and_the_Devil_by_Albrecht_D%C3%BCrer)
+[![Albrecht Dürer, Knight, Death and the Devil, 1513](../media/external/wikimedia-albrecht-durer-knight-death-and-devil-1513-nga-598.jpg)](https://commons.wikimedia.org/wiki/Category:Knight,_Death_and_the_Devil_by_Albrecht_D%C3%BCrer)
 
 **Albrecht Dürer, 1513.** *Knight, Death and the Devil* is copperplate burin engraving,
 24.5 × 19.1 cm — one of his three *Meisterstiche*. Dürer called it simply *Der Reuter*,

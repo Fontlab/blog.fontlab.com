@@ -29,8 +29,6 @@ six.
 
 <!-- more -->
 
-![FontLab in many languages](../media/fl8-hero.png)
-
 <!-- image TBD -->
 
 The German trade press tends to focus on production rigour.

@@ -22,6 +22,9 @@ review:
   consolidate_with: ""
   notes: "Strong historical narrative with good specifics (named fonts, named companies). The Fontographer acquisition angle is the hook — lead with that more boldly. CTA and image are now concrete."
 ---
+![FontLab Studio 5 and the Fontographer acquisition](../media/illu/fontlab-studio-5-opentype-standard.png){
+.illu-thumb }
+
 2005 was a pivotal year for Fontlab Ltd.
 The company shipped FontLab Studio 5, which became the dominant professional font editor
 for the next decade.

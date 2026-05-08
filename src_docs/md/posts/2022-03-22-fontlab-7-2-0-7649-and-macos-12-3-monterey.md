@@ -56,7 +56,7 @@ The download contains two editions of FontLab 7: one for macOS 12.3 or newer, on
 macOS 12.2 or older.
 To check your macOS version, click the Apple menu and choose *About This Mac*.
 
-![After you download and double-click the DMG, choose the right installation procedure for your macOS version.](https://res.cloudinary.com/fontlab/images/w_1024,h_806,c_scale/v1647359144/blog/fontlab7-monterey-installer/fontlab7-monterey-installer-1024x806.png?_i=AA)
+![After you download and double-click the DMG, choose the right installation procedure for your macOS version.](../media/external/cloudinary-fontlab7-monterey-installer-1024x806.png)
 
 ## Install on macOS 12.2 Monterey or older
 

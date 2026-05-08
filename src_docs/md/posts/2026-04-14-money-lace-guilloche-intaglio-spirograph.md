@@ -35,7 +35,7 @@ It cannot be reproduced on an inkjet.
 For a century it was the best available defence against counterfeiting, paired with
 guilloché patterns too complex to draw by hand.
 
-![Penny Black, the world’s first adhesive postage stamp, 1840](https://upload.wikimedia.org/wikipedia/commons/0/04/Penny_black.jpg)
+![Penny Black, the world’s first adhesive postage stamp, 1840](../media/external/wikimedia-penny-black.jpg)
 
 Then **Denys Fisher** built the Spirograph from Meccano gears in 1962–65, debuted it at
 the **1965 Nuremberg Toy Fair**, won UK Toy of the Year in 1967, and sold 30 million

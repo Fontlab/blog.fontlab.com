@@ -31,7 +31,7 @@ purchased on or after August 1, 2019 qualify for a free upgrade.
 
 <!-- more -->
 
-[![Introducing FontLab 7: the pro font editor, evolved](https://i.ytimg.com/vi/9tQxrLxdbXI/maxresdefault.jpg)](https://www.youtube.com/watch?v=9tQxrLxdbXI)
+[![Introducing FontLab 7: the pro font editor, evolved](../media/external/youtube-9tqxrlxdbxi-maxresdefault.jpg)](https://www.youtube.com/watch?v=9tQxrLxdbXI)
 
 Until **December 22, 2019**, you can buy FontLab 7 or upgrade from FontLab Studio 5,
 Fontographer, or TypeTool 3 at a **25% discount**. If you have **FontLab VI**, you can

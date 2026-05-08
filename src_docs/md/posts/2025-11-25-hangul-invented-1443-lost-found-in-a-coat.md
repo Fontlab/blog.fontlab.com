@@ -42,7 +42,7 @@ coat**.
 The manuscript is now National Treasure No.
 70 (1962) and a UNESCO Memory of the World (1997).
 
-[![Hunminjeongeum Haerye manuscript, 1446 (rediscovered 1940)](https://upload.wikimedia.org/wikipedia/commons/2/2c/Hunmin_Jeongeum.jpg)](https://commons.wikimedia.org/wiki/Category:Hunminjeongeum)
+[![Hunminjeongeum Haerye manuscript, 1446 (rediscovered 1940)](../media/external/wikimedia-hunminjeongeumhaerye.jpg)](https://commons.wikimedia.org/wiki/Category:Hunminjeongeum)
 
 For typography, the importance is specific.
 Hangul is the only major writing system whose articulatory logic is documented by its

@@ -1,6 +1,28 @@
 /* this_file: src_docs/md/css/extra.css */
 /* FontLab blog typography and footer CTA customizations. */
 
+/* Pencil-sketch post thumbnail (floats right, wraps text) */
+.md-typeset .illu-thumb {
+  float: right;
+  width: 200px;
+  height: 200px;
+  margin: 0.25rem 0 1rem 1.5rem;
+  border-radius: 6px;
+  object-fit: cover;
+  shape-outside: inset(0 round 6px);
+  background: #f5f4f0;
+}
+@media (max-width: 600px) {
+  .md-typeset .illu-thumb {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+    width: 70%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
 :root {
   --fl-black: #000000;
   --fl-white: #ffffff;
@@ -132,37 +154,62 @@ html {
   font-size: 1.25rem;
   font-weight: 520;
   line-height: 1.15;
-    margin: 0 0 0.3rem;
-  }
+  margin: 0 0 0.3rem;
+}
 
-  /* Glue "Continue reading" inline to the end of the excerpt paragraph */
-  .md-post--excerpt .md-post__content > p:last-of-type {
-    display: inline;
-  }
+/* Author avatar: appears inline-before the title; abstract aligns with title */
+.md-post--excerpt .md-post__content {
+  position: relative;
+  padding-left: 2rem;
+}
 
-  /* "Continue reading" — inline, muted, small */
-  .md-post__action {
-    display: inline;
-    font-size: 0.85rem;
-    color: var(--fl-gray-text);
-    text-decoration: none;
-    margin: 0 0 0 0.35em;
-    white-space: nowrap;
-  }
+.md-post--excerpt .md-post__avatar {
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+}
 
-  .md-post__action::after {
-    content: " →";
-  }
 
-  .md-post__action:hover {
-    text-decoration: underline;
-    color: var(--fl-red);
-  }
+.md-post--excerpt .md-post__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
 
-  /* Tighten gap between excerpt body and "Continue reading" */
-  .md-post--excerpt .md-post__content>*:last-child {
-    margin-bottom: 0.25rem;
-  }
+/* Inline date + "N min read →" appended at the end of the intro paragraph */
+.md-post__metaline {
+  margin-left: 0.5em;
+  font-size: 0.85rem;
+  color: var(--fl-gray-text);
+  white-space: nowrap;
+}
+
+.md-post__metaline time {
+  font-variant-numeric: tabular-nums;
+}
+
+.md-post__readlink {
+  color: var(--fl-gray-text);
+  text-decoration: none;
+  margin-left: 0.35em;
+  white-space: nowrap;
+}
+
+.md-post__readlink:hover {
+  text-decoration: underline;
+  color: var(--fl-red);
+}
+
+.md-post--excerpt .md-post__content > *:last-child {
+  margin-bottom: 0.25rem;
+}
 
   /* In-content CTA button (.fl-help-cta applied via attr_list) */
   .md-typeset a.fl-help-cta,

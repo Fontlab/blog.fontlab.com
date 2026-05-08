@@ -29,8 +29,6 @@ has [its own post](2020-11-30-fontlab-72-dec-2020.md).
 
 <!-- more -->
 
-![FontLab 7 font editor](../media/fl8-hero.png)
-
 The journey from 7.0 to 7.2 ran through six named releases (7.0.1, 7.1, 7.1.1, 7.1.2,
 7.1.3, 7.1.4), all free for existing users.
 The highlights, grouped by theme:

@@ -39,7 +39,7 @@ Mixing light produces brighter results.
 Seurat wanted the brightness of mixed light from the physical substance of pigment.
 The dots are a workaround for the laws of chemistry.
 
-![*A Sunday on La Grande Jatte — 1884*, Georges Seurat, 1884–86 (Art Institute of Chicago)](https://upload.wikimedia.org/wikipedia/commons/7/7d/Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg)
+![*A Sunday on La Grande Jatte — 1884*, Georges Seurat, 1884–86 (Art Institute of Chicago)](../media/external/wikimedia-georges-seurat-a-sunday-on-la-grande-jatte-1884-google-art-project.jpg)
 
 The technique has never fully gone away.
 The Smithsonian still employs scientific illustrators who draw stippled moth scales
