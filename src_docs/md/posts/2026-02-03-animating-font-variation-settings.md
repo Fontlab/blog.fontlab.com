@@ -1,30 +1,25 @@
 ---
 this_file: src_docs/md/posts/2026-02-03-animating-font-variation-settings.md
-title: "Animating font-variation-settings: the performance problem nobody mentions"
+title: "Animating font-variation-settings: keeping motion buttery at scale"
 authors: [fontlab]
 tags: [variable-fonts, css, animation, web, performance]
 date:
   created: 2026-02-03
 slug: animating-font-variation-settings
 ---
-![](../media/illu/animating-font-variation-settings-2.png){.illu-thumb}
+![](../media/illu/animating-font-variation-settings-1.png){.illu-thumb}
 
-Browser support for `font-variation-settings` has been broad since September 2018.
-Animating the value works the way other CSS animation works.
-
-What the tutorials skip is what happens to the GPU when you do it at scale.
+Browsers have shipped robust `font-variation-settings` support since 2018, and animating
+those axes works the way the rest of CSS animation works.
+That is a small miracle, and the people who built it deserve a round of applause.
 
 <!-- more -->
 
-The `font-variation-settings` CSS property is the low-level mechanism for controlling
-the axes of variable fonts.
-Its syntax lets you set the values of registered axes—like `"wght"` for weight, `"wdth"`
-for width, or custom axes defined by the font—by specifying axis tags and numeric
-values. By changing these settings, you can fine-tune the appearance of type, smoothly
-morphing its shape and weight along the font’s design space, often beyond what
-traditional static fonts allow.
-
-To animate a variable font with CSS keyframes, you can use:
+`font-variation-settings` is the low-level handle on a variable font’s design space.
+You name an axis tag — `"wght"`, `"wdth"`, an `"opsz"` for optical size, or any custom
+axis the type designer defined — and you give it a value.
+The renderer interpolates between masters in real time, so a single keyframe block can
+take a headline from 200 to 800 weight without a flicker:
 
 ```css
 @keyframes breathe {
@@ -34,39 +29,52 @@ To animate a variable font with CSS keyframes, you can use:
 h1 { animation: breathe 4s ease-in-out infinite; }
 ```
 
-That works. The problem is what “works” costs.
-Every frame, the renderer has to interpolate glyph outlines between masters and
-re-rasterise the result.
-A single animated headline is fine.
-Twenty animated headings on a long page — section titles, pull-quotes, a sticky nav —
-and the laptop fan will tell you what you’ve done.
+The first time this works on a real page, it feels a little magical.
+The browser is re-interpolating glyph outlines and re-rasterising them every frame, and
+it does so fluidly because graphics teams at Apple, Google, Mozilla, and Microsoft put
+years into making it fluid.
 
-Mandy Michael’s recommendation, which has held up since she made it: wrap animated text
-in an `IntersectionObserver` and pause the animation when the element scrolls off
-screen.
+## A generous tip from the community
+
+When you start animating *many* headings on the same page — section titles, pull-quotes,
+a sticky nav, ten card heroes in a long scroll — every one of those animations keeps
+running even when its element is off-screen.
+That is normal CSS-animation behaviour, but it is also a great place to be a good
+neighbour to your reader’s CPU.
+
+Mandy Michael published a clean pattern for this back when variable fonts first hit the
+web, and it still works beautifully today: pause animations on elements that are
+scrolled out of view using `IntersectionObserver`.
 
 ```js
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     e.target.style.animationPlayState =
-      e.isIntersecting ? 'running' : 'paused';
+      e.isIntersecting ? "running" : "paused";
   });
 });
-document.querySelectorAll('.animated-heading')
+document.querySelectorAll(".animated-heading")
   .forEach(el => observer.observe(el));
 ```
 
-This is the difference between a page that renders well and one that performs a
-side-show no one asked for.
+A handful of lines, and the whole page stays smooth.
+It is a lovely bit of craft from a community that has been generous with its lessons
+since variable fonts were brand new.
 
-Two reference points worth keeping in mind.
-Laurence Penney launched **Axis-Praxis** in late 2016, before the variable font
-specification was even finished — the first public playground for exploring what the
-axes could do.
-Nick Sherman launched **v-fonts.com** at Robothon in March 2018, still the
-best gallery for fonts worth animating.
-Both predate the “variable fonts are mainstream” moment by years; both are still the
-right places to start.
+## Two playgrounds worth bookmarking
+
+Two more places that opened the door before variable fonts were officially mainstream:
+
+- **Axis-Praxis**, by Laurence Penney, launched in late 2016 — before the variable font
+  specification was even finalised.
+  It was the first public playground for exploring what the axes could do, and it is
+  still one of the most enjoyable.
+- **v-fonts.com**, by Nick Sherman, launched at Robothon in March 2018. It remains the
+  best gallery for fonts worth animating today.
+
+Both predate the moment “variable fonts” became a mainstream phrase, and both are still
+the right place to start when you want inspiration.
+Stand on those shoulders — they were put there for you.
 
 ## References
 

@@ -29,8 +29,6 @@ Now the weight can follow the user.
 
 <!-- more -->
 
-![Variable fonts in motion](../media/fl8-head-07-varcomponent.png)
-
 Web and motion tutorials increasingly treat variable fonts as standard tooling, not a
 novelty. Webflow University, Dinamo’s guides, and other educational pieces walk through
 using CSS to animate weight and width on hover, scroll, and viewport changes — a single
@@ -38,6 +36,8 @@ VF file replacing multiple static fonts in interactive layouts.
 YouTube tutorials demonstrate animating variable fonts in After Effects, driving axes
 through text animators to create kinetic type where the motion lives inside the font
 itself.
+
+![Variable fonts in motion](../media/fl8-head-07-varcomponent.png)
 
 All of that assumes you have a variable font worth animating.
 FontLab 8’s multi-master and variation tools are designed for exactly this.
@@ -47,9 +47,8 @@ Reviews keep noting that this matters most for UI and motion work, where interme
 weights and widths are not theoretical — you will see them when a button animates or
 text reflows.
 
-Articles in Japanese, Korean, and Chinese make a useful point: some of the most
-interesting variable axes are not weight or width but contrast, corner roundness, or
-serif size — parameters that directly affect legibility and brand voice.
+Some of the most interesting variable axes are not weight or width but contrast, corner
+roundness, or serif size — parameters that directly affect legibility and brand voice.
 Korean design-system writers describe using variable fonts to fine-tune label weight and
 tracking for different screen densities, improving clarity without needing distinct font
 families.
