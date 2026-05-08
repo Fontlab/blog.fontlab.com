@@ -1,6 +1,6 @@
 ---
 this_file: src_docs/md/posts/2025-12-02-calfonts-italics.md
-title: "Calfonts: italics that aren't just slanted romans"
+title: "Calfonts: italics that aren’t just slanted romans"
 authors: [fontlab]
 tags: [italic, cursive, slant, drawing, fontlab-8]
 date:

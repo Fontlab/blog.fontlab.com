@@ -90,7 +90,7 @@ News, technical writing, and product updates from FontLab.
 - [Made with FontLab: Vassil Kateliev](https://blog.fontlab.com/2025/11/11/made-with-fontlab-vassil-kateliev/index.md)
 - [The FontLab book in Korean](https://blog.fontlab.com/2025/11/18/the-fontlab-book-in-korean/index.md)
 - [Hangul — invented in 1443, lost, found in a coat](https://blog.fontlab.com/2025/11/25/hangul-invented-1443-lost-found-in-a-coat/index.md)
-- [Calfonts: italics that aren't just slanted romans](https://blog.fontlab.com/2025/12/02/calfonts-italics/index.md)
+- [Calfonts: italics that aren’t just slanted romans](https://blog.fontlab.com/2025/12/02/calfonts-italics/index.md)
 - [Sandoll, the foundry behind your phone](https://blog.fontlab.com/2025/12/09/sandoll-the-foundry-behind-your-phone/index.md)
 - [The open tool ecosystem](https://blog.fontlab.com/2025/12/23/the-open-tool-ecosystem/index.md)
 - [The Vexy Lines pipeline into FontLab](https://blog.fontlab.com/2025/12/30/the-vexy-lines-pipeline-into-fontlab/index.md)
