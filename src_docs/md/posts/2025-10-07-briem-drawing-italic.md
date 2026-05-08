@@ -24,11 +24,12 @@ review:
 ---
 ![](../media/illu/briem-drawing-italic-1.png){.illu-thumb .illu-index}
 
-Italic is not roman tilted to the right. Slant your upright `a` and what you get is a tilted `a`, not an italic `a` — the structure is wrong, the rhythm is wrong, the connection points are wrong. Briem’s italic tutorial, lightly modernized, walks through what an italic actually is.
-
+Italic is not roman tilted to the right. Slant your upright `a` and what you get is a tilted `a`, not an italic `a` — the structure is wrong, the rhythm is wrong, the connection points are wrong.
 <!-- more -->
 
 ## What an italic is
+
+Briem’s italic tutorial walks through what an italic actually is.
 
 Italics descend from cursive handwriting — letters drawn quickly with a broad-edged pen, joined where joining was natural, simplified where simplification saved time. The four hallmarks:
 
