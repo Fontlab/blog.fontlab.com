@@ -235,7 +235,8 @@ html {
 }
 
 .md-sidebar--secondary .md-nav--secondary>.md-nav__title[for='__toc'] {
-  display: none;
+  display: block;
+    /* Show the "Contents" label */
 }
 
 /* Hide the "Metadata" label that appears above the post sidebar's
