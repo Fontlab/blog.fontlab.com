@@ -584,6 +584,11 @@ html {
   margin-top: 0.9rem;
 }
 
+.md-sidebar--secondary .md-nav--secondary .md-ellipsis {
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+}
 
 [dir=ltr] .md-typeset blockquote {
   border-left: none;
