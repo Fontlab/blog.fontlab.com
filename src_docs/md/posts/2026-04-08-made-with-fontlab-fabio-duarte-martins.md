@@ -28,11 +28,9 @@ It is, accidentally, a short manual on what to learn first.
 
 <!-- more -->
 
-![Made with FontLab](../media/fl8-hero.png)
-
 Most testimonials are vibes.
 Martins’s reads like a release-notes annotation, which is what makes it useful.
-He runs Scannerlicker out of Portugal, builds variable fonts, and writes about the
+He runs Scannerlicker out of Portugal, builds fonts, and writes about the
 editor the way somebody writes about a daily driver they have actually opened.
 
 His full statement on FontLab 8:
@@ -57,7 +55,7 @@ His full statement on FontLab 8:
 — Fábio Duarte Martins, Scannerlicker
 
 The phrase “from design to engineering” is the one to keep.
-Modern variable font work is not just drawing — it’s also a non-trivial engineering job,
+Modern font work is not just drawing — it’s also a non-trivial engineering job,
 with conditional substitutions, design-space configuration, OpenType feature
 compilation, and binary table editing.
 The traditional split between “designer who draws” and “engineer who packages” is
@@ -72,18 +70,16 @@ Together, they turn the tedious bookkeeping of a large family into something app
 automation.
 
 The Linux remark is not throwaway.
-FontLab ships native binaries for macOS, Windows, and — yes — Linux.
+FontLab ships native binaries for macOS, Windows, and the Windows versions work on Linux with Wine.
 Most of the working type-design world is on the first two; the people who are on Linux
 either run a one-person foundry or work inside a larger pipeline where Linux is the only
 choice. Either way, “running flawlessly on my Linux machine” is an unusually quiet piece
 of cross-platform engineering for an industry that mostly assumes Mac.
 
-The [Scannerlicker catalogue](https://www.myfonts.com/collections/scannerlicker-foundry)
-is the proof. Variable fonts shipped, conditional substitutions configured, design space
-defined, all out of one editor and one studio.
 
 ## More from Fábio Duarte Martins
 
-- [Scannerlicker catalogue — variable fonts and retail families](https://www.myfonts.com/collections/scannerlicker-foundry)
+- [Scannerlicker fonts](https://fonts.scannerlicker.net/)
+- [Scannerlicker on MyFonts](https://www.myfonts.com/collections/scannerlicker-foundry)
 
-[Browse Scannerlicker →](https://www.myfonts.com/collections/scannerlicker-foundry){ .fl-help-cta }
+[Browse Scannerlicker →](https://fonts.scannerlicker.net/){ .fl-help-cta }

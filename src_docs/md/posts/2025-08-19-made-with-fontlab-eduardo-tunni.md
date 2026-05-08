@@ -30,8 +30,6 @@ Eduardo Tunni drew it in FontLab.
 
 <!-- more -->
 
-![Made with FontLab](../media/fl8-hero.png)
-
 Tunni’s foundry [Tipo](https://www.tipo.net.ar/) sits in Buenos Aires.
 He has been drawing type long enough to have his name attached to an editor feature in
 basically every modern editor — Tunni Lines, the technique for adjusting Bézier curve
