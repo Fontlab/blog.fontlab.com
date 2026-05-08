@@ -2897,6 +2897,35 @@ The craft is knowing when to stop.
 
 [Read more →](https://vexy.art/lines/)
 
+Georges Seurat spent two years applying roughly 220,000 dots to a canvas. The painting works because the dots don’t blend on the canvas. They blend in your eye.
+
+*A Sunday on La Grande Jatte — 1884* (1884–86), now at the Art Institute of Chicago, measures **207.5 × 308.1 cm**. The science behind it predates the painting by decades.
+
+**Michel Eugène Chevreul** published *De la loi du contraste simultané des couleurs* in **1839** — the foundational text on how colours placed adjacent to each other change each other on the retina. A red dot next to a yellow dot does not produce orange on the canvas. It produces orange in the viewer’s visual cortex, which is a different thing entirely. **Ogden Rood’s** *Modern Chromatics* (1879) brought the principle to a broader audience. Seurat and **Paul Signac** read both.
+
+They called their method *Divisionism* or *Chromo-Luminarism*. The press called it pointillism and the name stuck.
+
+Félix Fénéon’s 1888 essay captures the theory with unusual precision:
+
+> “These colors, isolated on the canvas, recombine on the retina; we have, therefore, not a mixture of material colors (pigments), but a mixture of differently colored rays of light.”
+
+The distinction matters. Mixing pigments produces darker results — every colour you add absorbs more light. Mixing light produces brighter results. Seurat wanted the brightness of mixed light from the physical substance of pigment. The dots are a workaround for the laws of chemistry.
+
+The technique has never fully gone away. The Smithsonian still employs scientific illustrators who draw stippled moth scales **0.0079 inches across** — smaller than the dots in La Grande Jatte, the same optical logic.
+
+For a vector tool the lesson is pointed. A million dots placed by an algorithm is not what Seurat did. What Seurat did is decide which dots, where, and what colour each one contributes to its neighbours. The interesting part is the rule set, not the raster count. Resolution without intent is just noise.
+
+Seurat died in **1891**, aged 31, two days after his son. He left seven finished paintings.
+
+## References
+
+- [A Sunday on La Grande Jatte — Art Institute of Chicago](https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884)
+- [Pointillism — Wikipedia](https://en.wikipedia.org/wiki/Pointillism)
+- [A Sunday on La Grande Jatte — Wikipedia](https://en.wikipedia.org/wiki/A_Sunday_on_La_Grande_Jatte)
+- [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
+
 A one-bit display has no grey. Dithering is the sixty-year argument that it doesn’t need one.
 
 The lineage is short and famous if you know where to look.
@@ -2929,6 +2958,27 @@ It still can.
 
 [Read more →](https://vexy.art/lines/)
 
+A line can carry tone, texture, shadow, and emotion — and never once pretend to be a photograph. That is the whole argument of five centuries of printmaking, made with a burin, a graver, and eventually a stylus.
+
+**Albrecht Dürer, 1513.** *Knight, Death and the Devil* is copperplate burin engraving, 24.5 × 19.1 cm — one of his three *Meisterstiche*. Dürer called it simply *Der Reuter*, the Rider. There is no halftone anywhere in it. Every shadow is parallel hatching; every curved surface is cross-hatching that turns with the form. The shadow on the horse’s flank follows the muscle. The shadow in the hollow of the knight’s armour follows the concavity. Direction *is* the information.
+
+**William Hogarth, 1735.** *A Rake’s Progress* was published the day the Engravers’ Copyright Act 1734 — “Hogarth’s Act” — took effect. It was the first copyright law in any country to protect engravers, passed because pirates had flooded the market with knock-offs of *A Harlot’s Progress* three years earlier. Hogarth had essentially co-authored the law that made his next series possible. The prints reward that attention: they are satirical journalism, using hatch density and line weight to carry what caption text would have been too polite to say.
+
+**Thomas Bewick, 1797.** Bewick revived wood engraving in Northumberland — end-grain boxwood, white-line technique, fine enough to hold detail that competed with copper. *History of British Birds* was the proof. But the structural innovation was quieter: his blocks could be locked into letterpress alongside movable type at the same height. Illustrated journalism became economically possible the day that happened. The nineteenth-century picture press — the cheap weeklies, the illustrated magazines, the whole visual culture — is downstream of one craftsman in Newcastle cutting white lines into boxwood.
+
+**Gustave Doré, 1861.** Dante’s *Inferno*, self-published after no Paris house would take the production cost. It sold out and kept selling. The economy of horror in a Doré plate is that nothing is rendered in tone — every shadow is a different *kind* of line, and the eye reads them all as the same darkness anyway. Curved lines for flesh. Ragged lines for stone. Tight parallel hatching for the pit. The variety is invisible until you look for it, and then you can’t stop seeing it.
+
+For Vexy Lines, this is the canon. Every modern hatching, stipple, or vector engraving algorithm is attempting to reproduce something one of these four printmakers did with a tool small enough to hold in one hand. The constraint was never a limitation. It was the point.
+
+## References
+
+- [Knight, Death and the Devil — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Knight,_Death_and_the_Devil_by_Albrecht_D%C3%BCrer)
+- [Engraving Copyright Act 1734 — Wikipedia](https://en.wikipedia.org/wiki/Engraving_Copyright_Act_1734)
+- [Thomas Bewick — Wikipedia](https://en.wikipedia.org/wiki/Thomas_Bewick)
+- [Gustave Doré, Inferno illustrations — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Gustave_Dor%C3%A9_-_Inferno)
+
+[Read more →](https://vexy.art/lines/)
+
 Andy Warhol started screenprinting in August 1962. His explanation: “I wanted something stronger that gave more of an assembly line effect.”
 
 The explanation is a little too clean, which makes it probably true. Warhol had been making paintings — hand-painted Campbell’s Soup cans, hand-traced comic panels — and the hand was getting in the way. Silkscreen removed it. The image went through a mesh and arrived on the canvas without fingers.
@@ -2949,6 +2999,30 @@ All Warhol images remain © Andy Warhol Foundation/ARS. The Tate’s *Marilyn Di
 - [Andy Warhol Museum](https://www.warhol.org)
 - [Marilyn Diptych — Wikipedia](https://en.wikipedia.org/wiki/Marilyn_Diptych)
 - [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
+
+A contour line is a lie your map tells you so you can understand the truth. No hill has a line around it. The line is what you draw when the hill refuses to fit on a flat page.
+
+The history of that lie is longer than most people expect.
+
+**Pieter Bruinsz, 1584.** The first known isobath — a line of equal water depth — was drawn for the Spaarne river near Haarlem. Not a coastline, not a road, not a boundary: a line representing a number. The same number everywhere along its length. This was a quiet invention. It didn’t look dramatic and it was not immediately copied.
+
+**Edmond Halley, 1701.** The first published isogonic map, charting magnetic declination across the Atlantic. Halley’s lines connected points where a compass needle deviated the same number of degrees from true north. Again, not a physical feature — a property of the world, drawn as if it had edges.
+
+**Alexander von Humboldt, 1817.** The isotherm map. Humboldt connected points of equal mean annual temperature across the globe and started what a later century called the “isoline craze” in cartography. Isotherms, isobars, isohyets — the nineteenth century found a new thing a line could mean, and used it for everything.
+
+The endpoint of the genre is **Charles Joseph Minard’s 1869 figurative map of Napoleon’s Russian campaign of 1812.**
+
+Six variables on a single sheet: army size, geographic location in two dimensions, direction of travel, date, and temperature during the retreat. The Grande Armée crosses the Niemen at **422,000 men**. It returns with **10,000**. The band shrinks across the page — literally, measurably, proportionally — and the temperature graph below it shows −30° at the worst crossings. Edward Tufte called it “the best statistical graphic ever drawn.” Minard’s contemporary Étienne-Jules Marey called it “a defiance of the pen of the historian in its brutal eloquence.”
+
+None of these images is *about* lines. They are about quantities that can only be drawn as lines. The tool is incidental. Once that’s clear, contour mode in Vexy Lines stops being a stylistic option and starts being the thing cartography has been doing since 1584: making the invisible visible by giving it an edge.
+
+## References
+
+- [Charles Joseph Minard — Wikipedia](https://en.wikipedia.org/wiki/Charles_Joseph_Minard)
+- [Contour line — Wikipedia](https://en.wikipedia.org/wiki/Contour_line)
+- [Edward Tufte posters — edwardtufte.com](https://www.edwardtufte.com/tufte/posters)
 
 [Read more →](https://vexy.art/lines/)
 
@@ -3026,6 +3100,29 @@ The security feature became a style. The style became a toy. The toy became a to
 - [The art of guilloché — Bank of Canada Museum](https://www.bankofcanadamuseum.ca/2020/07/the-art-of-guilloche/)
 - [Spirograph at the Smithsonian](https://americanhistory.si.edu/collections/object/nmah_1292825)
 - [Vexy Lines — official](https://vexy.art/lines/)
+
+[Read more →](https://vexy.art/lines/)
+
+The generative line has a genealogy. It runs from a physics lecture in 1815 through a children’s toy in 1965 and a university lab in 2001, and it ends — so far — with an algorithm that sold for five million dollars.
+
+**Nathaniel Bowditch, 1815.** The figures that bear Lissajous’s name were drawn first by Bowditch, a Massachusetts navigator who traced them while studying compound pendulum motion. **Jules Antoine Lissajous** worked out the optics independently in 1857, which is when the physics community caught up. **Hugh Blackburn’s harmonograph** (1844) was the first parametric drawing machine built for a parlour — two pendulums, one table, sand falling from a stylus. The curves it drew were not planned; they emerged from the ratio of the periods.
+
+**Denys Fisher’s Spirograph, 1965.** Plastic gears, ballpoint pens, a sheet of paper pinned to cardboard. Fisher’s toy was a mechanical Lissajous machine for children — the output was determined entirely by which gear you chose and where you put the pen. No programming required. The constraint set was the product.
+
+**Casey Reas and Ben Fry, 2001.** Processing, released from John Maeda’s group at MIT, gave the harmograph’s logic to anyone with a text editor. Golden Nica 2005. *De facto* lingua franca of generative art for a decade. **Anders Hoff** (publishing as “Inconvergent”) built stochastic line tangles inside that ecosystem you can still identify at a glance — paths that avoid each other by a field of repulsion, wandering across the page with the patience of a surveyor who has nowhere to be. Argentina’s **Manolo Naon** went the other direction: chunky pop-colour grids, the pixel treated as a physical object.
+
+**Tyler Hobbs, June 2021.** *Fidenza* released on Art Blocks — 999 outputs from a single algorithm. By August, Starry Night Capital had spent roughly **$5 million** acquiring pieces. By May 2023 the floor sat above 60 ETH. Hobbs coined the phrase **“long-form generative art”** in May 2021 to describe the discipline of writing a program where *every* output is good — not selecting a hundred from ten thousand runs. The algorithm has a flow field, a colour palette, and a curve sampler. The outputs are all different; they are unmistakably the same thing.
+
+See the outputs and the thinking at [tylerxhobbs.com](https://www.tylerxhobbs.com/words/fidenza).
+
+The lesson for a tool like Vexy Lines is that the interesting part of a generative system is not the renderer. It is the constraint set. A Spirograph has two gears. A harmonograph has three pendulums. Fidenza has about a dozen parameters that matter. Everything else is taste.
+
+## References
+
+- [Lissajous curve — Wikipedia](https://en.wikipedia.org/wiki/Lissajous_curve)
+- [Processing — processing.org](https://processing.org/)
+- [Anders Hoff / Inconvergent — inconvergent.net](https://inconvergent.net/)
+- [Tyler Hobbs on Fidenza — tylerxhobbs.com](https://www.tylerxhobbs.com/words/fidenza)
 
 [Read more →](https://vexy.art/lines/)
 
@@ -3204,102 +3301,5 @@ A bland image is, in the end, just a vector waiting for the right filter.
 - [Try Vexy Lines online](https://www.vexy.art/lines/#play)
 - [Buy Vexy Lines (US$99)](https://www.vexy.art/lines/#buy)
 - [Original Mailchimp campaign](https://us17.campaign-archive.com/?u=c154e78429d2d38aaae8383f7&id=113a96e4f4)
-
-[Read more →](https://vexy.art/lines/)
-
-Georges Seurat spent two years applying roughly 220,000 dots to a canvas. The painting works because the dots don’t blend on the canvas. They blend in your eye.
-
-*A Sunday on La Grande Jatte — 1884* (1884–86), now at the Art Institute of Chicago, measures **207.5 × 308.1 cm**. The science behind it predates the painting by decades.
-
-**Michel Eugène Chevreul** published *De la loi du contraste simultané des couleurs* in **1839** — the foundational text on how colours placed adjacent to each other change each other on the retina. A red dot next to a yellow dot does not produce orange on the canvas. It produces orange in the viewer’s visual cortex, which is a different thing entirely. **Ogden Rood’s** *Modern Chromatics* (1879) brought the principle to a broader audience. Seurat and **Paul Signac** read both.
-
-They called their method *Divisionism* or *Chromo-Luminarism*. The press called it pointillism and the name stuck.
-
-Félix Fénéon’s 1888 essay captures the theory with unusual precision:
-
-> “These colors, isolated on the canvas, recombine on the retina; we have, therefore, not a mixture of material colors (pigments), but a mixture of differently colored rays of light.”
-
-The distinction matters. Mixing pigments produces darker results — every colour you add absorbs more light. Mixing light produces brighter results. Seurat wanted the brightness of mixed light from the physical substance of pigment. The dots are a workaround for the laws of chemistry.
-
-The technique has never fully gone away. The Smithsonian still employs scientific illustrators who draw stippled moth scales **0.0079 inches across** — smaller than the dots in La Grande Jatte, the same optical logic.
-
-For a vector tool the lesson is pointed. A million dots placed by an algorithm is not what Seurat did. What Seurat did is decide which dots, where, and what colour each one contributes to its neighbours. The interesting part is the rule set, not the raster count. Resolution without intent is just noise.
-
-Seurat died in **1891**, aged 31, two days after his son. He left seven finished paintings.
-
-## References
-
-- [A Sunday on La Grande Jatte — Art Institute of Chicago](https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884)
-- [Pointillism — Wikipedia](https://en.wikipedia.org/wiki/Pointillism)
-- [A Sunday on La Grande Jatte — Wikipedia](https://en.wikipedia.org/wiki/A_Sunday_on_La_Grande_Jatte)
-- [Vexy Lines — official](https://vexy.art/lines/)
-
-[Read more →](https://vexy.art/lines/)
-
-A line can carry tone, texture, shadow, and emotion — and never once pretend to be a photograph. That is the whole argument of five centuries of printmaking, made with a burin, a graver, and eventually a stylus.
-
-**Albrecht Dürer, 1513.** *Knight, Death and the Devil* is copperplate burin engraving, 24.5 × 19.1 cm — one of his three *Meisterstiche*. Dürer called it simply *Der Reuter*, the Rider. There is no halftone anywhere in it. Every shadow is parallel hatching; every curved surface is cross-hatching that turns with the form. The shadow on the horse’s flank follows the muscle. The shadow in the hollow of the knight’s armour follows the concavity. Direction *is* the information.
-
-**William Hogarth, 1735.** *A Rake’s Progress* was published the day the Engravers’ Copyright Act 1734 — “Hogarth’s Act” — took effect. It was the first copyright law in any country to protect engravers, passed because pirates had flooded the market with knock-offs of *A Harlot’s Progress* three years earlier. Hogarth had essentially co-authored the law that made his next series possible. The prints reward that attention: they are satirical journalism, using hatch density and line weight to carry what caption text would have been too polite to say.
-
-**Thomas Bewick, 1797.** Bewick revived wood engraving in Northumberland — end-grain boxwood, white-line technique, fine enough to hold detail that competed with copper. *History of British Birds* was the proof. But the structural innovation was quieter: his blocks could be locked into letterpress alongside movable type at the same height. Illustrated journalism became economically possible the day that happened. The nineteenth-century picture press — the cheap weeklies, the illustrated magazines, the whole visual culture — is downstream of one craftsman in Newcastle cutting white lines into boxwood.
-
-**Gustave Doré, 1861.** Dante’s *Inferno*, self-published after no Paris house would take the production cost. It sold out and kept selling. The economy of horror in a Doré plate is that nothing is rendered in tone — every shadow is a different *kind* of line, and the eye reads them all as the same darkness anyway. Curved lines for flesh. Ragged lines for stone. Tight parallel hatching for the pit. The variety is invisible until you look for it, and then you can’t stop seeing it.
-
-For Vexy Lines, this is the canon. Every modern hatching, stipple, or vector engraving algorithm is attempting to reproduce something one of these four printmakers did with a tool small enough to hold in one hand. The constraint was never a limitation. It was the point.
-
-## References
-
-- [Knight, Death and the Devil — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Knight,_Death_and_the_Devil_by_Albrecht_D%C3%BCrer)
-- [Engraving Copyright Act 1734 — Wikipedia](https://en.wikipedia.org/wiki/Engraving_Copyright_Act_1734)
-- [Thomas Bewick — Wikipedia](https://en.wikipedia.org/wiki/Thomas_Bewick)
-- [Gustave Doré, Inferno illustrations — Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Gustave_Dor%C3%A9_-_Inferno)
-
-[Read more →](https://vexy.art/lines/)
-
-A contour line is a lie your map tells you so you can understand the truth. No hill has a line around it. The line is what you draw when the hill refuses to fit on a flat page.
-
-The history of that lie is longer than most people expect.
-
-**Pieter Bruinsz, 1584.** The first known isobath — a line of equal water depth — was drawn for the Spaarne river near Haarlem. Not a coastline, not a road, not a boundary: a line representing a number. The same number everywhere along its length. This was a quiet invention. It didn’t look dramatic and it was not immediately copied.
-
-**Edmond Halley, 1701.** The first published isogonic map, charting magnetic declination across the Atlantic. Halley’s lines connected points where a compass needle deviated the same number of degrees from true north. Again, not a physical feature — a property of the world, drawn as if it had edges.
-
-**Alexander von Humboldt, 1817.** The isotherm map. Humboldt connected points of equal mean annual temperature across the globe and started what a later century called the “isoline craze” in cartography. Isotherms, isobars, isohyets — the nineteenth century found a new thing a line could mean, and used it for everything.
-
-The endpoint of the genre is **Charles Joseph Minard’s 1869 figurative map of Napoleon’s Russian campaign of 1812.**
-
-Six variables on a single sheet: army size, geographic location in two dimensions, direction of travel, date, and temperature during the retreat. The Grande Armée crosses the Niemen at **422,000 men**. It returns with **10,000**. The band shrinks across the page — literally, measurably, proportionally — and the temperature graph below it shows −30° at the worst crossings. Edward Tufte called it “the best statistical graphic ever drawn.” Minard’s contemporary Étienne-Jules Marey called it “a defiance of the pen of the historian in its brutal eloquence.”
-
-None of these images is *about* lines. They are about quantities that can only be drawn as lines. The tool is incidental. Once that’s clear, contour mode in Vexy Lines stops being a stylistic option and starts being the thing cartography has been doing since 1584: making the invisible visible by giving it an edge.
-
-## References
-
-- [Charles Joseph Minard — Wikipedia](https://en.wikipedia.org/wiki/Charles_Joseph_Minard)
-- [Contour line — Wikipedia](https://en.wikipedia.org/wiki/Contour_line)
-- [Edward Tufte posters — edwardtufte.com](https://www.edwardtufte.com/tufte/posters)
-
-[Read more →](https://vexy.art/lines/)
-
-The generative line has a genealogy. It runs from a physics lecture in 1815 through a children’s toy in 1965 and a university lab in 2001, and it ends — so far — with an algorithm that sold for five million dollars.
-
-**Nathaniel Bowditch, 1815.** The figures that bear Lissajous’s name were drawn first by Bowditch, a Massachusetts navigator who traced them while studying compound pendulum motion. **Jules Antoine Lissajous** worked out the optics independently in 1857, which is when the physics community caught up. **Hugh Blackburn’s harmonograph** (1844) was the first parametric drawing machine built for a parlour — two pendulums, one table, sand falling from a stylus. The curves it drew were not planned; they emerged from the ratio of the periods.
-
-**Denys Fisher’s Spirograph, 1965.** Plastic gears, ballpoint pens, a sheet of paper pinned to cardboard. Fisher’s toy was a mechanical Lissajous machine for children — the output was determined entirely by which gear you chose and where you put the pen. No programming required. The constraint set was the product.
-
-**Casey Reas and Ben Fry, 2001.** Processing, released from John Maeda’s group at MIT, gave the harmograph’s logic to anyone with a text editor. Golden Nica 2005. *De facto* lingua franca of generative art for a decade. **Anders Hoff** (publishing as “Inconvergent”) built stochastic line tangles inside that ecosystem you can still identify at a glance — paths that avoid each other by a field of repulsion, wandering across the page with the patience of a surveyor who has nowhere to be. Argentina’s **Manolo Naon** went the other direction: chunky pop-colour grids, the pixel treated as a physical object.
-
-**Tyler Hobbs, June 2021.** *Fidenza* released on Art Blocks — 999 outputs from a single algorithm. By August, Starry Night Capital had spent roughly **$5 million** acquiring pieces. By May 2023 the floor sat above 60 ETH. Hobbs coined the phrase **“long-form generative art”** in May 2021 to describe the discipline of writing a program where *every* output is good — not selecting a hundred from ten thousand runs. The algorithm has a flow field, a colour palette, and a curve sampler. The outputs are all different; they are unmistakably the same thing.
-
-See the outputs and the thinking at [tylerxhobbs.com](https://www.tylerxhobbs.com/words/fidenza).
-
-The lesson for a tool like Vexy Lines is that the interesting part of a generative system is not the renderer. It is the constraint set. A Spirograph has two gears. A harmonograph has three pendulums. Fidenza has about a dozen parameters that matter. Everything else is taste.
-
-## References
-
-- [Lissajous curve — Wikipedia](https://en.wikipedia.org/wiki/Lissajous_curve)
-- [Processing — processing.org](https://processing.org/)
-- [Anders Hoff / Inconvergent — inconvergent.net](https://inconvergent.net/)
-- [Tyler Hobbs on Fidenza — tylerxhobbs.com](https://www.tylerxhobbs.com/words/fidenza)
 
 [Read more →](https://vexy.art/lines/)

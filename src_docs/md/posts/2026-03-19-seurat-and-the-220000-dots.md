@@ -1,10 +1,10 @@
 ---
-this_file: src_docs/md/posts/2026-05-12-seurat-and-the-220000-dots.md
+this_file: src_docs/md/posts/2026-03-19-seurat-and-the-220000-dots.md
 title: "Seurat and the 220,000 dots"
 authors: [vexy-lines]
 tags: [vexy-lines, pointillism, history, art]
 date:
-  created: 2026-05-12
+  created: 2026-03-19
 slug: seurat-and-the-220000-dots
 ---
 Georges Seurat spent two years applying roughly 220,000 dots to a canvas.

@@ -501,12 +501,27 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2026/03/19/seurat-and-the-220000-dots/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2026/03/24/dithering-ditherpunk-and-bill-atkinson/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/2026/03/26/five-centuries-of-line/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/2026/03/31/warhol-august-1962-silkscreen-pivot/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/04/02/drawing-the-invisible-minard/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -522,6 +537,11 @@
     </url>
     <url>
         <loc>https://blog.fontlab.com/2026/04/14/money-lace-guilloche-intaglio-spirograph/</loc>
+        <lastmod>2026-05-08</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/2026/04/16/from-spirograph-to-fidenza/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>
@@ -542,26 +562,6 @@
     </url>
     <url>
         <loc>https://blog.fontlab.com/2026/05/07/from-bland-to-bold-with-vexy-lines/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/2026/05/12/seurat-and-the-220000-dots/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/2026/05/19/five-centuries-of-line/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/2026/05/26/drawing-the-invisible-minard/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/2026/05/29/from-spirograph-to-fidenza/</loc>
         <lastmod>2026-05-08</lastmod>
         <changefreq>daily</changefreq>
     </url>

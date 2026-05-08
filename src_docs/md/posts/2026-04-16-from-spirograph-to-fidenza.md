@@ -1,10 +1,10 @@
 ---
-this_file: src_docs/md/posts/2026-05-29-from-spirograph-to-fidenza.md
+this_file: src_docs/md/posts/2026-04-16-from-spirograph-to-fidenza.md
 title: "From Spirograph to Fidenza"
 authors: [vexy-lines]
 tags: [vexy-lines, generative, history, processing]
 date:
-  created: 2026-05-29
+  created: 2026-04-16
 slug: from-spirograph-to-fidenza
 ---
 The generative line has a genealogy.

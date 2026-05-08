@@ -1,10 +1,10 @@
 ---
-this_file: src_docs/md/posts/2026-05-26-drawing-the-invisible-minard.md
+this_file: src_docs/md/posts/2026-04-02-drawing-the-invisible-minard.md
 title: "Drawing the invisible — contour lines and Minard"
 authors: [vexy-lines]
 tags: [vexy-lines, history, data-visualization, cartography]
 date:
-  created: 2026-05-26
+  created: 2026-04-02
 slug: drawing-the-invisible-minard
 ---
 A contour line is a lie your map tells you so you can understand the truth.

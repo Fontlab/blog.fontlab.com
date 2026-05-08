@@ -1,10 +1,10 @@
 ---
-this_file: src_docs/md/posts/2026-05-19-five-centuries-of-line.md
+this_file: src_docs/md/posts/2026-03-26-five-centuries-of-line.md
 title: "Five centuries of line — Dürer, Hogarth, Bewick, Doré"
 authors: [vexy-lines]
 tags: [vexy-lines, history, engraving, illustration]
 date:
-  created: 2026-05-19
+  created: 2026-03-26
 slug: five-centuries-of-line
 ---
 A line can carry tone, texture, shadow, and emotion — and never once pretend to be a

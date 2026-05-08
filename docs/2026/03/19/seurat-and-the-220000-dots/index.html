@@ -13,11 +13,13 @@
         <meta name="author" content="Fontlab Ltd.">
       
       
-        <link rel="canonical" href="https://blog.fontlab.com/2026/05/29/from-spirograph-to-fidenza/">
+        <link rel="canonical" href="https://blog.fontlab.com/2026/03/19/seurat-and-the-220000-dots/">
       
       
-        <link rel="prev" href="../../26/drawing-the-invisible-minard/">
+        <link rel="prev" href="../../17/halftone-fox-talbot-to-shantytown/">
       
+      
+        <link rel="next" href="../../24/dithering-ditherpunk-and-bill-atkinson/">
       
       
         
@@ -34,7 +36,7 @@
     
     
       
-        <title>From Spirograph to Fidenza - FontLab Blog</title>
+        <title>Seurat and the 220,000 dots - FontLab Blog</title>
       
     
     
@@ -185,7 +187,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              From Spirograph to Fidenza
+              Seurat and the 220,000 dots
             
           </span>
         </div>
@@ -918,7 +920,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2026-05-29 00:00:00+00:00" class="md-ellipsis">May 29, 2026</time>
+                        <time datetime="2026-03-19 00:00:00+00:00" class="md-ellipsis">March 19, 2026</time>
                       </div>
                     </li>
                     
@@ -950,58 +952,53 @@
       
         
 
-  <h1>From Spirograph to Fidenza</h1>
+  <h1>Seurat and the 220,000 dots</h1>
 
-<p>The generative line has a genealogy.
-It runs from a physics lecture in 1815 through a children’s toy in 1965 and a university
-lab in 2001, and it ends — so far — with an algorithm that sold for five million
-dollars.</p>
+<p>Georges Seurat spent two years applying roughly 220,000 dots to a canvas.
+The painting works because the dots don’t blend on the canvas.
+They blend in your eye.</p>
 <!-- more -->
 
-<p><strong>Nathaniel Bowditch, 1815.</strong> The figures that bear Lissajous’s name were drawn first by
-Bowditch, a Massachusetts navigator who traced them while studying compound pendulum
-motion.
-<strong>Jules Antoine Lissajous</strong> worked out the optics independently in 1857, which is
-when the physics community caught up.
-<strong>Hugh Blackburn’s harmonograph</strong> (1844) was the first parametric drawing machine built
-for a parlour — two pendulums, one table, sand falling from a stylus.
-The curves it drew were not planned; they emerged from the ratio of the periods.</p>
-<p><strong>Denys Fisher’s Spirograph, 1965.</strong> Plastic gears, ballpoint pens, a sheet of paper
-pinned to cardboard.
-Fisher’s toy was a mechanical Lissajous machine for children — the output was determined
-entirely by which gear you chose and where you put the pen.
-No programming required.
-The constraint set was the product.</p>
-<p><strong>Casey Reas and Ben Fry, 2001.</strong> Processing, released from John Maeda’s group at MIT,
-gave the harmograph’s logic to anyone with a text editor.
-Golden Nica 2005. <em>De facto</em> lingua franca of generative art for a decade.
-<strong>Anders Hoff</strong> (publishing as “Inconvergent”) built stochastic line tangles inside that
-ecosystem you can still identify at a glance — paths that avoid each other by a field of
-repulsion, wandering across the page with the patience of a surveyor who has nowhere to
-be. Argentina’s <strong>Manolo Naon</strong> went the other direction: chunky pop-colour grids, the
-pixel treated as a physical object.</p>
-<p><strong>Tyler Hobbs, June 2021.</strong> <em>Fidenza</em> released on Art Blocks — 999 outputs from a single
-algorithm. By August, Starry Night Capital had spent roughly <strong>$5 million</strong> acquiring
-pieces. By May 2023 the floor sat above 60 ETH. Hobbs coined the phrase <strong>“long-form
-generative art”</strong> in May 2021 to describe the discipline of writing a program where
-<em>every</em> output is good — not selecting a hundred from ten thousand runs.
-The algorithm has a flow field, a colour palette, and a curve sampler.
-The outputs are all different; they are unmistakably the same thing.</p>
-<p>See the outputs and the thinking at
-<a href="https://www.tylerxhobbs.com/words/fidenza">tylerxhobbs.com</a>.</p>
-<p>The lesson for a tool like Vexy Lines is that the interesting part of a generative
-system is not the renderer.
-It is the constraint set.
-A Spirograph has two gears.
-A harmonograph has three pendulums.
-Fidenza has about a dozen parameters that matter.
-Everything else is taste.</p>
+<p><em>A Sunday on La Grande Jatte — 1884</em> (1884–86), now at the Art Institute of Chicago,
+measures <strong>207.5 × 308.1 cm</strong>. The science behind it predates the painting by decades.</p>
+<p><strong>Michel Eugène Chevreul</strong> published <em>De la loi du contraste simultané des couleurs</em> in
+<strong>1839</strong> — the foundational text on how colours placed adjacent to each other change
+each other on the retina.
+A red dot next to a yellow dot does not produce orange on the canvas.
+It produces orange in the viewer’s visual cortex, which is a different thing entirely.
+<strong>Ogden Rood’s</strong> <em>Modern Chromatics</em> (1879) brought the principle to a broader audience.
+Seurat and <strong>Paul Signac</strong> read both.</p>
+<p>They called their method <em>Divisionism</em> or <em>Chromo-Luminarism</em>. The press called it
+pointillism and the name stuck.</p>
+<p>Félix Fénéon’s 1888 essay captures the theory with unusual precision:</p>
+<blockquote>
+<p>“These colors, isolated on the canvas, recombine on the retina; we have, therefore,
+not a mixture of material colors (pigments), but a mixture of differently colored rays
+of light.”</p>
+</blockquote>
+<p>The distinction matters.
+Mixing pigments produces darker results — every colour you add absorbs more light.
+Mixing light produces brighter results.
+Seurat wanted the brightness of mixed light from the physical substance of pigment.
+The dots are a workaround for the laws of chemistry.</p>
+<p><img alt="*A Sunday on La Grande Jatte — 1884*, Georges Seurat, 1884–86 (Art Institute of Chicago)" src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg" /></p>
+<p>The technique has never fully gone away.
+The Smithsonian still employs scientific illustrators who draw stippled moth scales
+<strong>0.0079 inches across</strong> — smaller than the dots in La Grande Jatte, the same optical
+logic.</p>
+<p>For a vector tool the lesson is pointed.
+A million dots placed by an algorithm is not what Seurat did.
+What Seurat did is decide which dots, where, and what colour each one contributes to its
+neighbours. The interesting part is the rule set, not the raster count.
+Resolution without intent is just noise.</p>
+<p>Seurat died in <strong>1891</strong>, aged 31, two days after his son.
+He left seven finished paintings.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Lissajous_curve">Lissajous curve — Wikipedia</a></li>
-<li><a href="https://processing.org/">Processing — processing.org</a></li>
-<li><a href="https://inconvergent.net/">Anders Hoff / Inconvergent — inconvergent.net</a></li>
-<li><a href="https://www.tylerxhobbs.com/words/fidenza">Tyler Hobbs on Fidenza — tylerxhobbs.com</a></li>
+<li><a href="https://www.artic.edu/artworks/27992/a-sunday-on-la-grande-jatte-1884">A Sunday on La Grande Jatte — Art Institute of Chicago</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pointillism">Pointillism — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/A_Sunday_on_La_Grande_Jatte">A Sunday on La Grande Jatte — Wikipedia</a></li>
+<li><a href="https://vexy.art/lines/">Vexy Lines — official</a></li>
 </ul>
 <p><a class="fl-help-cta" href="https://vexy.art/lines/">Read more →</a></p>
 
@@ -1015,7 +1012,7 @@ Everything else is taste.</p>
       
       
       
-        <span class="md-tag md-tag-icon">generative</span>
+        <span class="md-tag md-tag-icon">art</span>
       
     
       
@@ -1029,7 +1026,7 @@ Everything else is taste.</p>
       
       
       
-        <span class="md-tag md-tag-icon">processing</span>
+        <span class="md-tag md-tag-icon">pointillism</span>
       
     
       
