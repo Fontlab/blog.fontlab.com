@@ -23,16 +23,16 @@
   width: 50%;
   max-width: 512px;
     height: auto;
-    margin: 0 0 -2.5rem 0.5rem;
+    margin: 0 0 -1.5rem 0.5rem;
     position: relative;
-    top: -2rem;
+    top: -1.5rem;
     shape-outside: margin-box;
   }
   
   /* Flipped float modifier. */
   .md-typeset .illu-thumb.illu-left {
     float: left;
-    margin: 0 0.5rem -3rem 0;
+    margin: 0 0.5rem -1.5rem 0;
   }
   
   /* On the blog-index card, anchor the thumbnail to the top-right of the
