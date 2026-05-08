@@ -39,11 +39,12 @@ def inject(path: Path) -> str:
     title = str(fm.get("title", path.stem)).replace('"', "'")
 
     slug = slug_for(path.stem)
-    img_path = ILLU / f"{slug}.png"
+    # Default to variant 1 (literal). Reviewer can swap to -2 or -3 later.
+    img_path = ILLU / f"{slug}-1.png"
     if not img_path.exists():
         return "no-image"
 
-    md = f"![{title}](../media/illu/{slug}.png){{ .illu-thumb }}"
+    md = f"![{title}](../media/illu/{slug}-1.png){{ .illu-thumb }}"
     if "media/illu/" in body:
         # Already injected; refresh in case slug changed
         body_new = re.sub(
