@@ -2,13 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Repository state
+## Repository state (2026-05-08)
 
-Greenfield. The only authored content is `IDEA.md` (the master spec — read it first), a `docs/CNAME` pinned to `blog.fontlab.com`, and a large `reference/` tree that is **gitignored** and treated as read-only or selectively-writable input material. There is no build system, no source code, no tests yet. Do not invent commands that aren't grounded in `IDEA.md`.
+Live and building. ProperDocs 1.6.7 + MaterialX 10.1.4 site at `mkdocs/mkdocs.yml`, blog moved to site root (`blog_dir: .`, posts at `/yyyy/mm/dd/slug/`). 78 published posts in `src_docs/md/posts/`, 11 offline drafts under `issues/draft-posts/`. RSS + JSON Feed, `llms.txt` / `llms-full.txt` generated. Build via `./build.sh build` (Flowmark format → ProperDocs build); preview via `./build.sh serve`. CI deploys on git tag `v*.*.*` via `peaceiris/actions-gh-pages@v4`.
+
+Source: `IDEA.md` (master spec, read first), `spec/00-toc.md` + `spec/01.md`–`spec/15.md` (chapters incl. editorial roadmap and content series), `TODO.md` (open work), `CHANGELOG.md` (history). Latest release tag: `v1.0.58`.
+
+Open work right now (see `TODO.md`): 13 generic-placeholder image follow-ups. Everything else from the recent rewrite/title-case/CTA/consolidation/missing-image sprints has shipped.
 
 ## Goal (from IDEA.md)
 
-Build a modern (May 2026) **ProperDocs**-based blog at `blog.fontlab.com`, deployed to GitHub Pages from `docs/`. Source Markdown lives in `src_docs/md/`. A small `uv`-driven CLI in this repo wraps `vexy-mkdocs-tools` to build and publish, and a GitHub Action runs on git tags.
+Modern (May 2026) **ProperDocs**-based blog at `blog.fontlab.com`, GitHub Pages from `docs/`. Source Markdown in `src_docs/md/`. `uv`-driven CLI wraps build + publish; GitHub Action runs on tag.
 
 Content is ported (selectively, blog-only, no promos) from:
 - `reference/fontlab-com-oldpub/2013…2023/` — keep blog-style posts mostly verbatim, preserve original dates
