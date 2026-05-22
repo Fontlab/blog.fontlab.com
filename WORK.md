@@ -4,6 +4,36 @@
 
 - (none — session deliverables shipped)
 
+## Shipped (2026-05-22 publish helper)
+
+### Publish script
+- Added `publish.sh` as the local release entry point: build the site, verify required generated files, then run `uvx gitnextver --directory <repo>` so the next `v*.*.*` tag is pushed.
+- Documented the script in `README.md`.
+- The existing GitHub Actions workflow remains the actual Pages deploy mechanism; it runs on pushed `v*.*.*` tags.
+
+### Verified
+- `bash -n publish.sh` passed.
+- `./publish.sh` was not executed because it would commit, tag, and push.
+
+## Shipped (2026-05-22 author-profile update)
+
+### Author profiles as topic pages
+- Enabled MaterialX generated author profiles in `mkdocs/mkdocs.yml` with `/author/{slug}/` URLs and a navigation label of `Topics`.
+- Updated `src_docs/md/authors.yml` so author/topic entries no longer set external `url` fields; MaterialX can now assign local profile URLs to post sidebar author links.
+- Expanded author descriptions to reflect their actual use as topic/category labels.
+- Added hand-authored profile intro pages under `src_docs/md/author/` for `fontlab`, `vexy-lines`, `transtype`, `typetool`, `fontographer`, `fontlab-pad`, and `adam`. Each page has a brief bio/topic note plus the external product/person link; MaterialX appends the matching post list.
+- Added a regression test that fails if an author entry reintroduces `url:` or lacks a matching local profile source page.
+
+### Verified
+- `./build.sh build` completed successfully.
+- `uv run --with pytest python -m pytest -q tests/test_content_state.py::test_authors_resolve_to_local_profile_pages` passed.
+- `uvx ruff check src tests` passed.
+- `git diff --check -- . ':(exclude)docs/**'` passed.
+- Confirmed `docs/2026/04/28/the-hedcut-at-45/index.html` links Vexy Lines to `../../../../author/vexy-lines/`.
+- Confirmed `docs/author/vexy-lines/index.html` contains the Vexy Lines bio and generated post excerpts, including `The hedcut at 45`.
+- Full `uv run --with pytest python -m pytest -q` remains blocked by existing published posts without `review:` metadata; the new author-profile regression itself passes.
+- Full `git diff --check` remains blocked by generated `docs/**/*.html` trailing whitespace emitted by the site build.
+
 ## Shipped (2026-05-08 sprint)
 
 ### External image localization

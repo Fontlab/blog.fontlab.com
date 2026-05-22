@@ -5,11 +5,14 @@ import re
 from pathlib import Path
 
 import frontmatter
+import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "src_docs" / "md" / "posts"
 TODO_PATH = ROOT / "TODO.md"
 DRAFT_POSTS_DIR = ROOT / "issues" / "draft-posts"
+AUTHORS_PATH = ROOT / "src_docs" / "md" / "authors.yml"
+AUTHOR_DIR = ROOT / "src_docs" / "md" / "author"
 
 
 def _published_posts() -> list[tuple[Path, frontmatter.Post]]:
@@ -67,3 +70,20 @@ def test_todo_summary_matches_live_content_state() -> None:
 
     missing_lines = [line for line in expected_lines if line not in todo]
     assert not missing_lines, "\n".join(missing_lines)
+
+
+def test_authors_resolve_to_local_profile_pages() -> None:
+    data = yaml.safe_load(AUTHORS_PATH.read_text(encoding="utf-8"))
+    authors = data.get("authors", {})
+    failures: list[str] = []
+
+    for author_id, author in authors.items():
+        if author.get("url"):
+            failures.append(f"{author_id}: author.url bypasses generated profile page")
+
+        slug = author.get("slug") or author_id
+        profile = AUTHOR_DIR / f"{slug}.md"
+        if not profile.is_file():
+            failures.append(f"{author_id}: missing {profile.relative_to(ROOT)}")
+
+    assert not failures, "\n".join(failures)

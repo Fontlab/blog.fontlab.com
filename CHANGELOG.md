@@ -1,5 +1,41 @@
 # Changelog
 
+## [Unreleased] — 2026-05-22 — Publish helper
+
+### Added
+- Added `./publish.sh`, which runs `./build.sh build`, verifies required `docs/` outputs, then runs `uvx gitnextver --directory <repo>` to commit/tag/push and trigger the existing tag-based GitHub Pages deploy workflow.
+- Documented `./publish.sh` in `README.md`.
+
+### Verified
+- `bash -n publish.sh` passes.
+- `./publish.sh` was not executed because it would create a git commit/tag and push.
+
+## [Unreleased] — 2026-05-22 — Author profile topic pages
+
+### Added
+- Enabled MaterialX author profile generation for `/author/{slug}/` pages and labelled the generated navigation section `Topics`, matching the site's use of `authors` as product/topic categories.
+- Added source profile pages under `src_docs/md/author/` for FontLab, Vexy Lines, TransType, TypeTool, Fontographer, FontLab Pad, and Adam Twardoch. Each page provides a short topic bio and external product/person link; MaterialX appends the matching post list.
+- Added a content-state regression test that requires every author/topic entry to resolve to a local profile page instead of an external `url:`.
+
+### Changed
+- Updated `src_docs/md/authors.yml` descriptions and replaced external `url:` fields with explicit `slug:` fields so single-post author links now point to local profile pages.
+
+### Verified
+- `./build.sh build` completes successfully.
+- Focused author-profile regression test passes.
+- The hedcut post now links its Vexy Lines author entry to `/author/vexy-lines/`.
+- `/author/vexy-lines/` renders the Vexy Lines bio followed by generated post excerpts, including "The hedcut at 45".
+
+## [Unreleased] — 2026-05-22 — RSS date metadata fix
+
+### Fixed
+- `mkdocs/mkdocs.yml` RSS plugin: changed `date_from_meta.as_creation` from `date` to `date.created` and `as_update` from `git` to `date.updated`. The plugin was reading the whole `date` mapping (`{created, updated}`) and failing to parse it, which logged "Creation date … has not been recognized" for **every** post (126 INFO lines). With the dotted keys it reads the scalar creation date directly (falling back to git for posts without `date.updated`). A clean `./build.sh build` now emits **zero** date-retrieval messages.
+- The separate "Dates could not be retrieved for page" messages on the 19 newly ported posts were resolved when those files were committed (they had been untracked, so the git date lookup found no history).
+
+### Verified
+- `./build.sh build` completes in ~4s with no ERROR/WARNING and no RSS date INFO messages.
+- `docs/feed_rss_created.xml` / `feed_json_created.json` carry correct historical post dates (e.g. 2026-05-07, 2026-05-03 …) rather than build-date fallbacks; channel `pubDate` is the build date, as expected.
+
 ## [Unreleased] — 2026-05-22 — Old-blog migration gap audit
 
 ### Audit summary

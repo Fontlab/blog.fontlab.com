@@ -8,6 +8,7 @@ Build orchestrator for the FontLab blog, deployed to [blog.fontlab.com](https://
 uv sync          # install dependencies into .venv/
 ./build.sh build # Flowmark-format src_docs/md, then build docs/
 ./build.sh serve # live-reload preview at http://localhost:8000
+./publish.sh    # build docs/, create next v*.*.* tag, push to trigger deploy
 ```
 
 ## Layout
@@ -35,6 +36,7 @@ blog.fontlab.com/
 | `./build.sh format` | Run Flowmark on `src_docs/md/` with semantic breaks, smart quotes, ellipses, and safe cleanups |
 | `./build.sh serve` | Run properdocs serve (live reload) |
 | `./build.sh clean` | Remove docs/ contents, preserve CNAME |
+| `./publish.sh` | Build, sanity-check `docs/`, then run `uvx gitnextver` to commit, tag, and push; GitHub Actions deploys the tag |
 
 ## The `reference/` directory
 

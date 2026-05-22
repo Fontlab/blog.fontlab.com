@@ -2,36 +2,36 @@
 authors:
   fontlab:
     name: FontLab
-    description: Font editor
+    description: Font editor posts, tutorials, releases, and type-making notes
     avatar: /media/authors/fontlab.png
-    url: https://www.fontlab.com/font-editor/fontlab/
+    slug: fontlab
   vexy-lines:
     name: Vexy Lines
-    description: Vector app
+    description: Vector drawing, engraving, hatching, guilloche, and line art
     avatar: /media/authors/vexy-lines.png
-    url: https://vexy.art/lines/
+    slug: vexy-lines
   transtype:
     name: TransType
-    description: Font converter
+    description: Font conversion, legacy rescue, and format migration
     avatar: /media/authors/transtype.png
-    url: https://www.fontlab.com/font-converter/transtype/
+    slug: transtype
   typetool:
     name: TypeTool
-    description: Font editor
+    description: Lightweight font editing and older TypeTool notes
     avatar: /media/authors/typetool.png
-    url: https://www.fontlab.com/font-editor/typetool/
+    slug: typetool
   fontographer:
     name: Fontographer
-    description: Classic font editor
+    description: Classic Fontographer notes and compatibility history
     avatar: /media/authors/fontographer.png
-    url: https://www.fontlab.com/font-editor/fontographer/
+    slug: fontographer
   fontlab-pad:
     name: FontLab Pad
-    description: Typesetter
+    description: FontLab Pad, typesetting, and companion-tool posts
     avatar: /media/authors/fontlab-pad.png
-    url: https://www.fontlab.com/fontlab-pad/
+    slug: fontlab-pad
   adam:
     name: Adam Twardoch
-    description: Fontlab Ltd.
+    description: Editorial essays, interviews, and Made with FontLab stories
     avatar: /media/authors/adam-twardoch.png
-    url: https://github.com/twardoch
+    slug: adam

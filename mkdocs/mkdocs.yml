@@ -98,6 +98,9 @@ plugins:
       categories: false
       authors: true
       authors_file: authors.yml
+      authors_profiles: true
+      authors_profiles_name: Topics
+      authors_profiles_url_format: "author/{slug}"
       pagination_per_page: 30
       draft_on_serve: true
       draft_if_future_date: false
@@ -108,8 +111,8 @@ plugins:
       categories:
         - tags
       date_from_meta:
-        as_creation: date
-        as_update: git
+        as_creation: date.created
+        as_update: date.updated
         default_timezone: UTC
       feed_title: FontLab Blog
       feed_description: News, technical writing, and updates from FontLab.
