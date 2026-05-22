@@ -1,5 +1,5 @@
 ---
-this_file: src_docs/md/author/transtype.md
+this_file: src_docs/md/topic/transtype.md
 ---
 # TransType
 

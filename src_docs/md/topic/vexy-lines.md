@@ -1,5 +1,5 @@
 ---
-this_file: src_docs/md/author/vexy-lines.md
+this_file: src_docs/md/topic/vexy-lines.md
 ---
 # Vexy Lines
 

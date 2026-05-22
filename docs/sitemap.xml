@@ -11,41 +11,6 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/author/adam/</loc>
-        <lastmod>2026-05-22</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/author/fontlab-pad/</loc>
-        <lastmod>2026-05-22</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/author/fontlab/</loc>
-        <lastmod>2026-05-22</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/author/fontographer/</loc>
-        <lastmod>2026-05-22</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/author/transtype/</loc>
-        <lastmod>2026-05-22</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/author/typetool/</loc>
-        <lastmod>2026-05-22</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://blog.fontlab.com/author/vexy-lines/</loc>
-        <lastmod>2026-05-22</lastmod>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
         <loc>https://blog.fontlab.com/2005/06/15/fontlab-studio-5-opentype-standard/</loc>
         <lastmod>2026-05-22</lastmod>
         <changefreq>daily</changefreq>
@@ -681,6 +646,41 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/topic/adam/</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/topic/fontlab-pad/</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/topic/fontlab/</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/topic/fontographer/</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/topic/transtype/</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/topic/typetool/</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.fontlab.com/topic/vexy-lines/</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/archive/2026/</loc>
         <lastmod>2026-05-22</lastmod>
         <changefreq>daily</changefreq>
@@ -781,17 +781,17 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/author/fontlab/page/2/</loc>
+        <loc>https://blog.fontlab.com/topic/fontlab/page/2/</loc>
         <lastmod>2026-05-22</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/author/fontlab/page/3/</loc>
+        <loc>https://blog.fontlab.com/topic/fontlab/page/3/</loc>
         <lastmod>2026-05-22</lastmod>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://blog.fontlab.com/author/fontlab/page/4/</loc>
+        <loc>https://blog.fontlab.com/topic/fontlab/page/4/</loc>
         <lastmod>2026-05-22</lastmod>
         <changefreq>daily</changefreq>
     </url>

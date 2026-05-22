@@ -1,5 +1,5 @@
 ---
-this_file: src_docs/md/author/fontlab-pad.md
+this_file: src_docs/md/topic/fontlab-pad.md
 ---
 # FontLab Pad
 

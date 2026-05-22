@@ -1,5 +1,5 @@
 ---
-this_file: src_docs/md/author/typetool.md
+this_file: src_docs/md/topic/typetool.md
 ---
 # TypeTool
 

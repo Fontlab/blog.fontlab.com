@@ -15,13 +15,23 @@
 - `bash -n publish.sh` passed.
 - `./publish.sh` was not executed because it would commit, tag, and push.
 
+## Shipped (2026-05-22 topic CTA spacing)
+
+### Topic CTA style
+- Reduced `.fl-help-cta` visual weight from a large filled red button to a smaller outline link-button.
+- Tightened the top margin above standalone CTA links and increased the bottom margin before the generated post excerpt list.
+
+### Verified
+- `./build.sh build` completed successfully.
+- Confirmed the generated `/topic/vexy-lines/` page includes the updated CTA CSS.
+
 ## Shipped (2026-05-22 author-profile update)
 
 ### Author profiles as topic pages
-- Enabled MaterialX generated author profiles in `mkdocs/mkdocs.yml` with `/author/{slug}/` URLs and a navigation label of `Topics`.
+- Enabled MaterialX generated author profiles in `mkdocs/mkdocs.yml` with `/topic/{slug}/` URLs and a navigation label of `Topics`.
 - Updated `src_docs/md/authors.yml` so author/topic entries no longer set external `url` fields; MaterialX can now assign local profile URLs to post sidebar author links.
 - Expanded author descriptions to reflect their actual use as topic/category labels.
-- Added hand-authored profile intro pages under `src_docs/md/author/` for `fontlab`, `vexy-lines`, `transtype`, `typetool`, `fontographer`, `fontlab-pad`, and `adam`. Each page has a brief bio/topic note plus the external product/person link; MaterialX appends the matching post list.
+- Added hand-authored profile intro pages under `src_docs/md/topic/` for `fontlab`, `vexy-lines`, `transtype`, `typetool`, `fontographer`, `fontlab-pad`, and `adam`. Each page has a brief bio/topic note plus the external product/person link; MaterialX appends the matching post list.
 - Added a regression test that fails if an author entry reintroduces `url:` or lacks a matching local profile source page.
 
 ### Verified
@@ -29,8 +39,8 @@
 - `uv run --with pytest python -m pytest -q tests/test_content_state.py::test_authors_resolve_to_local_profile_pages` passed.
 - `uvx ruff check src tests` passed.
 - `git diff --check -- . ':(exclude)docs/**'` passed.
-- Confirmed `docs/2026/04/28/the-hedcut-at-45/index.html` links Vexy Lines to `../../../../author/vexy-lines/`.
-- Confirmed `docs/author/vexy-lines/index.html` contains the Vexy Lines bio and generated post excerpts, including `The hedcut at 45`.
+- Confirmed `docs/2026/04/28/the-hedcut-at-45/index.html` links Vexy Lines to `../../../../topic/vexy-lines/`.
+- Confirmed `docs/topic/vexy-lines/index.html` contains the Vexy Lines bio and generated post excerpts, including `The hedcut at 45`.
 - Full `uv run --with pytest python -m pytest -q` remains blocked by existing published posts without `review:` metadata; the new author-profile regression itself passes.
 - Full `git diff --check` remains blocked by generated `docs/**/*.html` trailing whitespace emitted by the site build.
 

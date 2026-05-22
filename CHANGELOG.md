@@ -10,11 +10,20 @@
 - `bash -n publish.sh` passes.
 - `./publish.sh` was not executed because it would create a git commit/tag and push.
 
+## [Unreleased] — 2026-05-22 — Topic CTA spacing
+
+### Changed
+- Made in-content `.fl-help-cta` links more modest: smaller outline treatment, lighter weight, tighter top gap, and larger bottom gap before generated post lists.
+
+### Verified
+- `./build.sh build` completes successfully.
+- Confirmed `/topic/vexy-lines/` renders the updated CTA style.
+
 ## [Unreleased] — 2026-05-22 — Author profile topic pages
 
 ### Added
-- Enabled MaterialX author profile generation for `/author/{slug}/` pages and labelled the generated navigation section `Topics`, matching the site's use of `authors` as product/topic categories.
-- Added source profile pages under `src_docs/md/author/` for FontLab, Vexy Lines, TransType, TypeTool, Fontographer, FontLab Pad, and Adam Twardoch. Each page provides a short topic bio and external product/person link; MaterialX appends the matching post list.
+- Enabled MaterialX author profile generation for `/topic/{slug}/` pages and labelled the generated navigation section `Topics`, matching the site's use of `authors` as product/topic categories.
+- Added source profile pages under `src_docs/md/topic/` for FontLab, Vexy Lines, TransType, TypeTool, Fontographer, FontLab Pad, and Adam Twardoch. Each page provides a short topic bio and external product/person link; MaterialX appends the matching post list.
 - Added a content-state regression test that requires every author/topic entry to resolve to a local profile page instead of an external `url:`.
 
 ### Changed
@@ -23,8 +32,8 @@
 ### Verified
 - `./build.sh build` completes successfully.
 - Focused author-profile regression test passes.
-- The hedcut post now links its Vexy Lines author entry to `/author/vexy-lines/`.
-- `/author/vexy-lines/` renders the Vexy Lines bio followed by generated post excerpts, including "The hedcut at 45".
+- The hedcut post now links its Vexy Lines author entry to `/topic/vexy-lines/`.
+- `/topic/vexy-lines/` renders the Vexy Lines bio followed by generated post excerpts, including "The hedcut at 45".
 
 ## [Unreleased] — 2026-05-22 — RSS date metadata fix
 

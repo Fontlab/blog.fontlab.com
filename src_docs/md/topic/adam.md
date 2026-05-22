@@ -1,5 +1,5 @@
 ---
-this_file: src_docs/md/author/adam.md
+this_file: src_docs/md/topic/adam.md
 ---
 # Adam Twardoch
 

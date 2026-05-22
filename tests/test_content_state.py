@@ -12,7 +12,7 @@ POSTS_DIR = ROOT / "src_docs" / "md" / "posts"
 TODO_PATH = ROOT / "TODO.md"
 DRAFT_POSTS_DIR = ROOT / "issues" / "draft-posts"
 AUTHORS_PATH = ROOT / "src_docs" / "md" / "authors.yml"
-AUTHOR_DIR = ROOT / "src_docs" / "md" / "author"
+TOPIC_DIR = ROOT / "src_docs" / "md" / "topic"
 
 
 def _published_posts() -> list[tuple[Path, frontmatter.Post]]:
@@ -82,7 +82,7 @@ def test_authors_resolve_to_local_profile_pages() -> None:
             failures.append(f"{author_id}: author.url bypasses generated profile page")
 
         slug = author.get("slug") or author_id
-        profile = AUTHOR_DIR / f"{slug}.md"
+        profile = TOPIC_DIR / f"{slug}.md"
         if not profile.is_file():
             failures.append(f"{author_id}: missing {profile.relative_to(ROOT)}")
 

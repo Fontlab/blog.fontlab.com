@@ -100,7 +100,7 @@ plugins:
       authors_file: authors.yml
       authors_profiles: true
       authors_profiles_name: Topics
-      authors_profiles_url_format: "author/{slug}"
+      authors_profiles_url_format: "topic/{slug}"
       pagination_per_page: 30
       draft_on_serve: true
       draft_if_future_date: false
