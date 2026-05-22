@@ -25,6 +25,16 @@
 - `./build.sh build` completed successfully.
 - Confirmed the generated `/topic/vexy-lines/` page includes the updated CTA CSS.
 
+## Shipped (2026-05-22 topic overview page)
+
+### Topic index
+- Added `src_docs/md/topic/index.md` so `/topic/` exists as a human-readable overview of all topic/profile pages.
+- Added a regression test that checks every topic slug from `authors.yml` is linked from the overview page.
+
+### Verified
+- `./build.sh build` completed successfully and generated `docs/topic/index.html`.
+- The topic overview source links resolve through the Markdown pages, so ProperDocs emits clean `/topic/<slug>/` links.
+
 ## Shipped (2026-05-22 author-profile update)
 
 ### Author profiles as topic pages

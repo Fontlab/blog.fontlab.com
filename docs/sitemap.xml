@@ -646,6 +646,11 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://blog.fontlab.com/topic/</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://blog.fontlab.com/topic/adam/</loc>
         <lastmod>2026-05-22</lastmod>
         <changefreq>daily</changefreq>

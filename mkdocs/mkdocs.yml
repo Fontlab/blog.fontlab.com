@@ -19,6 +19,7 @@ theme:
   font: false
   features:
     - navigation.top
+    - navigation.indexes
     - toc.follow
     - content.code.copy
   palette:
@@ -31,7 +32,7 @@ extra:
   generator: false
 
 nav:
-  - Home: index.md
+  - News: index.md
   - About: about.md
 
 markdown_extensions:
@@ -91,16 +92,20 @@ plugins:
   - materialx/tags
   - materialx/blog:
       blog_dir: .
+      blog_toc: false
       post_dir: posts
       post_url_format: "{date}/{slug}"
       post_excerpt: optional
       archive: true
+      archive_name: Archive
+      archive_toc: true
       categories: false
       authors: true
       authors_file: authors.yml
       authors_profiles: true
       authors_profiles_name: Topics
       authors_profiles_url_format: "topic/{slug}"
+      authors_profiles_toc: true
       pagination_per_page: 30
       draft_on_serve: true
       draft_if_future_date: false

@@ -7,4 +7,4 @@ Vexy Lines is a Mac & Windows app that transforms raster bitmap images into high
 
 Vexy Lines has over a dozen sophisticated algorithmic fills: linear engraved lines, waves, radials, spirals, halftones, scribbles, fractals, text patterns, and handmade directional strokes, which dynamically pull their thickness and optional colors directly from the source image.
 
-[Visit Vexy Lines](https://vexy.art/lines/){ .fl-help-cta }
+[Discover Vexy Lines](https://vexy.art/lines/){ .fl-help-cta }

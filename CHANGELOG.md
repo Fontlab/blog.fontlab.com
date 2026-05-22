@@ -19,6 +19,15 @@
 - `./build.sh build` completes successfully.
 - Confirmed `/topic/vexy-lines/` renders the updated CTA style.
 
+## [Unreleased] — 2026-05-22 — Topic overview page
+
+### Added
+- Added `src_docs/md/topic/index.md`, a hand-authored `/topic/` overview page listing all topic/profile pages.
+- Added a regression test that requires every `authors.yml` topic slug to be linked from the topic overview page.
+
+### Verified
+- `./build.sh build` completes successfully and generates `docs/topic/index.html`.
+
 ## [Unreleased] — 2026-05-22 — Author profile topic pages
 
 ### Added

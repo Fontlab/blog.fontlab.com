@@ -13,6 +13,7 @@ TODO_PATH = ROOT / "TODO.md"
 DRAFT_POSTS_DIR = ROOT / "issues" / "draft-posts"
 AUTHORS_PATH = ROOT / "src_docs" / "md" / "authors.yml"
 TOPIC_DIR = ROOT / "src_docs" / "md" / "topic"
+TOPIC_INDEX_PATH = TOPIC_DIR / "index.md"
 
 
 def _published_posts() -> list[tuple[Path, frontmatter.Post]]:
@@ -85,5 +86,19 @@ def test_authors_resolve_to_local_profile_pages() -> None:
         profile = TOPIC_DIR / f"{slug}.md"
         if not profile.is_file():
             failures.append(f"{author_id}: missing {profile.relative_to(ROOT)}")
+
+    assert not failures, "\n".join(failures)
+
+
+def test_topic_index_links_all_author_profiles() -> None:
+    data = yaml.safe_load(AUTHORS_PATH.read_text(encoding="utf-8"))
+    authors = data.get("authors", {})
+    topic_index = TOPIC_INDEX_PATH.read_text(encoding="utf-8")
+    failures: list[str] = []
+
+    for author_id, author in authors.items():
+        slug = author.get("slug") or author_id
+        if f"]({slug}.md)" not in topic_index:
+            failures.append(f"{author_id}: missing topic index link to {slug}.md")
 
     assert not failures, "\n".join(failures)

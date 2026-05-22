@@ -6,6 +6,7 @@ News, technical writing, and product updates from FontLab.
 
 # Main pages
 
+# Blog
 
 Fontlab Ltd. has been making font editors since 1992 — longer than most of the fonts on your computer have existed. We build the professional tools that type designers use to create, modify, and ship fonts: from quick pixel doodles to the complex variable OpenType families shipping inside major operating systems. If you have used a computer in the last thirty years, you have almost certainly set text in a font made with one of our apps.
 
