@@ -349,37 +349,43 @@ html {
   margin-bottom: 0.25rem;
 }
 
-/* In-content CTA button (.fl-help-cta applied via attr_list) */
+/* In-content CTA link (.fl-help-cta applied via attr_list) */
 .md-typeset p:has(> a.fl-help-cta:only-child) {
-  margin: 0.65rem 0 2.35rem;
+  margin: 0.35rem 0 3rem;
+  line-height: 1.2;
 }
 
 .md-typeset a.fl-help-cta,
 .md-typeset a.fl-help-cta:visited {
   display: inline-block;
-  background: transparent;
-  border: 1px solid currentcolor;
+  background: transparent !important;
+  border: 0 !important;
   color: var(--fl-red);
-  border-radius: 6px;
-  padding: 0.32rem 0.7rem;
+  border-radius: 0;
+  box-shadow: none !important;
+  padding: 0;
   font-family: var(--fl-font-display);
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 400;
   text-decoration: none;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   transition:
-      background-color 0.18s ease,
       color 0.18s ease,
-      transform 0.18s ease;
+      text-decoration-color 0.18s ease;
   margin-top: 0;
 }
 
 .md-typeset a.fl-help-cta:hover {
-  background: var(--fl-red);
-  color: var(--fl-white);
-  transform: translateY(-1px);
-  text-decoration: none;
+  background: transparent !important;
+  color: var(--fl-black);
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset a.fl-help-cta::after {
+  content: " →";
 }
 
 .md-post--excerpt .md-post__content h2 a {

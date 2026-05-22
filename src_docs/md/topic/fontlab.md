@@ -3,6 +3,6 @@ this_file: src_docs/md/topic/fontlab.md
 ---
 # FontLab
 
-FontLab is the main topic stream for posts about font editing, type-production workflow, OpenType, variable fonts, color fonts, FontLab releases, and the long business of making type tools behave.
+FontLab is our flagship font editor for Mac and Windows that helps you create fonts from start to finish, from a simple design to a complex project, and brings a spark of magic into type design.
 
-[Visit FontLab](https://www.fontlab.com/font-editor/fontlab/){ .fl-help-cta }
+[Discover FontLab](https://www.fontlab.com/font-editor/fontlab/){ .fl-help-cta }

@@ -18,7 +18,7 @@
 ## Shipped (2026-05-22 topic CTA spacing)
 
 ### Topic CTA style
-- Reduced `.fl-help-cta` visual weight from a large filled red button to a smaller outline link-button.
+- Reduced `.fl-help-cta` visual weight from a large filled red button to a plain text link.
 - Tightened the top margin above standalone CTA links and increased the bottom margin before the generated post excerpt list.
 
 ### Verified

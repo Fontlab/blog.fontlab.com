@@ -13,7 +13,7 @@
 ## [Unreleased] — 2026-05-22 — Topic CTA spacing
 
 ### Changed
-- Made in-content `.fl-help-cta` links more modest: smaller outline treatment, lighter weight, tighter top gap, and larger bottom gap before generated post lists.
+- Made in-content `.fl-help-cta` links more modest: plain text-link treatment, lighter weight, tighter top gap, and larger bottom gap before generated post lists.
 
 ### Verified
 - `./build.sh build` completes successfully.
