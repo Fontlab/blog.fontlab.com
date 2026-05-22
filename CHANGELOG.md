@@ -1,5 +1,38 @@
 # Changelog
 
+## [Unreleased] — 2026-05-22 — Old-blog migration gap audit
+
+### Audit summary
+- Scanned the WordPress static export in `private/blog/` against `src_docs/md/posts/` to find articles that were never migrated and are **not** sale/discount/pricing announcements.
+- The export's canonical posts were identified by mapping each `/{yyyy}/{mm}/{dd}/` daily-archive page to its post permalink (the deepest non-category, non-feed, non-author, non-paginated link). 92 daily archives were found.
+- **Snapshot is incomplete:** of the ~92 referenced posts, only **35 unique post pages have captured HTML** (48 files counting category-path duplicates). The rest — most `varia/*`, `learn/webinars/*`, `type-design/*`, and deep `fontlab/fontlab-studio-5/*` posts (e.g. "Sumner Stone superfamilies", "How to make stroke-only fonts", "Remembering Hermann Zapf", the webinar announcements) — exist only as links; **their content was never downloaded into this snapshot and cannot be ported from here.**
+- Of the 35 captured unique posts: **10 already exist** in the new blog (color-font proposals → consolidated into `2026-05-03-color-fonts-in-2026`; create-multi-color-fonts → `2014-06-18-color-fonts-tutorial`; vfb2ufo → `2014-12-15-otmaster-5-vfb2ufo-fontlab-pad-11`; plus fontlab-vi-6-1, dtl-otmaster-7-9, 12-releases-in-12-months, fls5-fog5-tt3-catalina, introducing-fontlab-7, fontlab-72-dec-2020, and fontlab-vi-for-mac-and-windows → `2017-12-07-fontlab-vi-released`).
+- **6 are sale/pricing/discount announcements — intentionally skipped** per the migration rule: cyber-monday-typetool-sale, 33-off-sale-605-update, fontlab-vi-1-3-off-to-august-31, fontlab-vi-2018-cyber-monday-sale, new-fontlab-vi-price-usd-459, fontlab-education-discounts-free-posters.
+
+### Added
+- Ported the **19 remaining non-sale posts** that were missing from the new blog, rewritten in the house editorial voice (strong lead, `<!-- more -->` excerpt, `.fl-help-cta` link, full `review:` front-matter block, `authors: [fontlab]`, original WordPress dates and slugs preserved, external image URLs dropped with `image_status: missing`):
+  - `2013-09-18-fractional-coordinates.md` — technical explainer on fractional/floating-point outline coordinates.
+  - `2013-09-22-opentype-layout-feature-classification.md` — reference article with the full OpenType Layout feature classification table.
+  - `2013-10-30-fontlab-products-ok-mavericks-osx.md` — macOS 10.9 Mavericks compatibility note.
+  - `2016-01-03-fontlab-vi-public-preview-2.md`, `2016-04-29-fontlab-vi-pp4-mac.md`, `2016-11-10-free-fontlab-vi-preview-windows.md` — FontLab VI public-preview milestones.
+  - `2016-09-14-fontlab-opentype-variations.md` — FontLab's plans for OpenType 1.8 variable fonts (substantive vision/tech post).
+  - `2016-12-19-fontlab-vi-ship-update.md` — VI development/ship status update.
+  - `2016-12-28-deprecated-vs-discontinued.md` — explainer on how FontLab labels deprecated vs. discontinued products.
+  - `2017-06-17-fontlab-vi-on-mac-os-10-9.md` — VI on macOS 10.9 support note.
+  - `2017-09-19-update-2017-09.md` — "What's up with VI @ FontLab?" development status update.
+  - `2017-09-26-fontlab-macos-high-sierra.md` — FontLab Studio / TypeTool / old TransType issues on macOS 10.13 High Sierra advisory.
+  - `2018-08-13-fontlab-vi-6-0-9-update.md` — VI 6.0.9 release.
+  - `2018-08-17-free-fontlab-vi-workshops-at-atypi-antwerp.md` — ATypI Antwerp 2018 workshops, rewritten as a past-tense historical record.
+  - `2018-10-25-font-filters-components-and-metrics-in-fontlab-vi-6-1.md` — large 6.1 feature deep-dive (companion to the existing `2018-10-25-fontlab-vi-61` release post).
+  - `2018-12-21-fontlab-vi-6-1-2.md`, `2019-03-26-fontlab-vi-6-1-3.md`, `2019-04-20-fontlab-vi-6-1-4.md` — VI 6.1.x point releases (each `review.consolidate_with` references the `2018-12-21-fontlab-vi-12-releases-in-12-months` roundup).
+  - `2019-04-04-fontlab-studio-typetool-fontographer-mac-updates.md` — classic-app (Studio 5 / TypeTool / Fontographer) macOS compatibility updates.
+
+### Verified
+- `./build.sh build` completed in ~5s with no errors or warnings beyond the pre-existing RSS-plugin "creation date not recognized" informational notices; total published posts now 127.
+- All 19 new files validated for required structure (single `<!-- more -->`, `.fl-help-cta` link, `this_file:`, `slug:`).
+- Confirmed generated pages exist at their date-based URLs (e.g. `docs/2013/09/18/fractional-coordinates/`, `docs/2019/04/20/fontlab-vi-6-1-4/`).
+- Several posts carry `cta_status: todo` (deprecated-vs-discontinued, high-sierra, atypi-workshops, mac-updates) where no clean live "read more" target was available; flagged in front matter for follow-up.
+
 ## [Unreleased] — 2026-05-08 (continued)
 
 ### Added

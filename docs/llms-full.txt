@@ -61,6 +61,212 @@ That capability changed the industry. Combined with class-based kerning and visu
 
 [Read more →](https://help.fontlab.com/pdf/FLS5WinManual.pdf)
 
+Round a number too early and the error never leaves. That is the whole case for working in fractional coordinates while you design, and rounding to a grid only when you ship.
+
+OpenType PS (`.otf`, CFF outlines) permits fractional coordinates in principle. There are technical caveats, and the final font you ship is effectively expected to sit on an integer grid. But there is a real difference between the grid you ship on and the grid you work on.
+
+## Why precision during editing matters
+
+Say you draw your glyphs on an integer grid, then start adjusting. You make a glyph slightly narrower, then a touch wider. You slant it a few degrees, then slant it back. You nudge a small rotation, or scale the shape down and then up again.
+
+On an integer grid, each of those operations rounds its result to whole units. The errors do not cancel out — they accumulate. After a handful of transforms, your control points, angles, and stem thicknesses have all drifted from the original design, and there is no way to recover the values you started with.
+
+On a fractional grid, none of that happens. The positions of the control points, the angles, the stem thicknesses — everything stays exactly as designed, no matter how many times you transform the shape and transform it back.
+
+## The practical takeaway
+
+A hardwired integer grid, like the one in FontLab Studio, puts a quiet limit on the designer: every edit costs a little precision. A fractional grid, like the one in Fontographer, lets you avoid that loss entirely during the design process.
+
+The rounding still has to happen — just at the right moment. When you generate or ship the font, you align the points to an integer grid (or the software does it for you). The difference is that you round once, from clean source values, instead of accumulating rounding error across every edit along the way.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Drawing/)
+
+OpenType Layout features drive the correct display of complex scripts like Arabic and Indic, and they let users apply advanced typographic formatting. This is a classification of the registered feature tags, written for developers building UI to expose them.
+
+OpenType Layout features live in the `GSUB` and `GPOS` tables of an SFNT font. They cover two jobs at once: making complex scripts render correctly, and giving readers and designers control over typographic niceties like ligatures, small caps, and figure styles.
+
+This classification was built on the OpenType spec version 1.6, with extra entries for removed features and the Microsoft-only Math features tied to the `MATH` table. It is a 2013 snapshot — the registry has changed since, and a few tags listed here have shifted status — so treat it as a design reference rather than a normative source. It is aimed squarely at developers who want to build a sensible UI for applying these features.
+
+## The feature table
+
+The table classifies each tag along several axes: which spec it comes from, whether and how it should appear in a UI, the text level it applies at, the scripts it serves, where it sits relative to shaping, whether it is on by default, and a loose functional grouping.
+
+| Tag         | Friendly name                           | Spec     | Access    | Show in UI | UI level            | Script                       | Script-specific | Default     | Group      | Subgroup                |
+| ----------- | --------------------------------------- | -------- | --------- | ---------- | ------------------- | ---------------------------- | --------------- | ----------- | ---------- | ----------------------- |
+| `aalt`      | Access All Alternates                   | OpenType | opt-in    | special    | character, word     | ALL                          | outside         | never       | Typography | variants                |
+| `abvf`      | Above-Base Forms                        | OpenType | mandatory | no         | none                | khmr                         | during          | shaping     | Language   | complex scripts         |
+| `abvm`      | Above-Base Mark Positioning             | OpenType | mandatory | no         | none                | INDIC, khmr                  | after           | shaping     | Language   | complex scripts         |
+| `abvs`      | Above-Base Substitutions                | OpenType | mandatory | no         | none                | INDIC, khmr                  | during          | shaping     | Language   | complex scripts         |
+| `afrc`      | Alternative Fractions                   | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `akhn`      | Akhands                                 | OpenType | mandatory | no         | none                | INDIC                        | during          | shaping     | Language   | complex scripts         |
+| `altv`      | Alternate Vertical Metrics              | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `blwf`      | Below-Base Forms                        | OpenType | mandatory | no         | none                | INDIC, khmr                  | during          | shaping     | Language   | complex scripts         |
+| `blwm`      | Below-Base Mark Positioning             | OpenType | mandatory | no         | none                | INDIC, khmr                  | after           | shaping     | Language   | complex scripts         |
+| `blws`      | Below-Base Substitutions                | OpenType | mandatory | no         | none                | INDIC, khmr                  | during          | shaping     | Language   | complex scripts         |
+| `c2pc`      | Petite Capitals From Capitals           | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | letter case             |
+| `c2sc`      | Small Capitals From Capitals            | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | letter case             |
+| `calt`      | Contextual Alternates                   | OpenType | opt-out   | yes        | word, paragraph     | ALL, (except) hani           | after           | always      | Typography | basic support           |
+| `case`      | Case-Sensitive Forms                    | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | letter case             |
+| `ccmp`      | Glyph Composition/Decomposition         | OpenType | mandatory | no         | none                | ALL                          | before          | always      | Language   | basic support           |
+| `cfar`      | Conjunct Form After Ro                  | OpenType | mandatory | no         | none                | khmr                         | during          | shaping     | Language   | complex scripts         |
+| `cjct`      | Conjunct Forms                          | OpenType | mandatory | no         | none                | ALL                          | during          | shaping     | Language   | complex scripts         |
+| `clig`      | Contextual Ligatures                    | OpenType | opt-out   | yes        | word, paragraph     | ALL                          | after           | always      | Typography | basic support           |
+| `cpsp`      | Capital Spacing                         | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | letter case             |
+| `crcy`      | Currency                                | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `cswh`      | Contextual Swash                        | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | variants                |
+| `curs`      | Cursive Positioning                     | OpenType | mandatory | no         | none                | ALL                          | after           | always      | Language   | complex scripts         |
+| `cv[01-99]` | Character Variant [01-99]               | OpenType | opt-in    | yes        | special             | ALL                          | after           | never       | Typography | variants                |
+| `dflt`      | Default Processing                      | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `dist`      | Distances                               | OpenType | mandatory | no         | none                | INDIC, khmr                  | after           | shaping     | Language   | complex scripts         |
+| `dlig`      | Discretionary Ligatures                 | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | variants                |
+| `dnom`      | Denominators                            | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `dpng`      | Diphthongs                              | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `dtls`      | Dotless Forms                           | Math     | mandatory | no         | math                | math                         | during          | shaping     | Typography | numerals and scientific |
+| `expt`      | Expert Forms                            | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | maybe       | Typography | Asian CJK               |
+| `falt`      | Final Glyph Alternates                  | OpenType | opt-in    | yes        | paragraph, document | CURSIVE, syrc                | after           | never       | Typography | complex scripts         |
+| `fin2`      | Terminal Forms #2                       | OpenType | mandatory | no         | none                | syrc                         | during          | shaping     | Language   | complex scripts         |
+| `fin3`      | Terminal Forms #3                       | OpenType | mandatory | no         | none                | syrc                         | during          | shaping     | Language   | complex scripts         |
+| `fina`      | Terminal Forms                          | OpenType | special   | special    | none                | word, paragraph\*            | ARABIC, syrc    | ALL         | during     | shaping                 |
+| `flac`      | Flattened Accents over Capitals         | Math     | mandatory | no         | math                | math                         | during          | shaping     | Typography | numerals and scientific |
+| `frac`      | Fractions                               | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `fwid`      | Full Width                              | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `half`      | Half Forms                              | OpenType | mandatory | no         | none                | INDIC                        | during          | shaping     | Language   | complex scripts         |
+| `haln`      | Halant Forms                            | OpenType | mandatory | no         | none                | INDIC                        | during          | shaping     | Language   | complex scripts         |
+| `halt`      | Alternate Half Width                    | OpenType | opt-in    | yes        | paragraph, document | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `hist`      | Historical Forms                        | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | variants                |
+| `hkna`      | Horizontal Kana Alternates              | OpenType | special   | special    | orientation         | kana                         | after           | orientation | Language   | Asian CJK               |
+| `hlig`      | Historical Ligatures                    | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | variants                |
+| `hngl`      | Hangul                                  | OpenType | opt-in    | yes        | character, word     | hang, hani                   | after           | never       | Language   | Asian CJK               |
+| `hojo`      | Hojo Kanji Forms (JIS X 212-1990)       | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `hwid`      | Half Width                              | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `init`      | Initial Forms                           | OpenType | special   | special    | none                | word, paragraph\*            | ARABIC, syrc    | ALL         | during     | shaping                 |
+| `isol`      | Isolated Forms                          | OpenType | special   | special    | none                | word, paragraph\*            | ARABIC, syrc    | ALL         | during     | shaping                 |
+| `ital`      | Italics                                 | OpenType | opt-in    | yes        | word, paragraph     | latn, cyrl, grek             | after           | never       | Typography | Asian CJK               |
+| `jajp`      | Japanese Forms                          | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `jalt`      | Justification Alternatives              | OpenType | opt-in    | yes        | paragraph, document | ALL                          | after           | never       | Typography | basic support           |
+| `jp03`      | JIS03 Forms                             | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `jp04`      | JIS2004 Forms                           | OpenType | opt-in    | yes        | character, word     | hani, kana                   | after           | never       | Language   | Asian CJK               |
+| `jp78`      | JIS78 Forms                             | OpenType | opt-in    | yes        | character, word     | hani, kana                   | after           | never       | Language   | Asian CJK               |
+| `jp83`      | JIS83 Forms                             | OpenType | opt-in    | yes        | character, word     | hani, kana                   | after           | never       | Language   | Asian CJK               |
+| `jp90`      | JIS90 Forms                             | OpenType | opt-in    | yes        | character, word     | hani, kana                   | after           | never       | Language   | Asian CJK               |
+| `kern`      | Kerning                                 | OpenType | mandatory | no         | document            | ALL                          | after           | always      | Typography | basic support           |
+| `kokr`      | Korean Forms                            | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `lfbd`      | Left Bounds                             | OpenType | mandatory | no         | document            | ALL                          | after           | always      | Typography | basic support           |
+| `liga`      | Standard Ligatures                      | OpenType | opt-out   | yes        | word, paragraph     | ALL                          | after           | always      | Typography | basic support           |
+| `ljmo`      | Leading Jamo Forms                      | OpenType | mandatory | no         | none                | hang, jamo                   | during          | shaping     | Language   | Asian CJK               |
+| `lnum`      | Lining Figures                          | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `locl`      | Localized Forms                         | OpenType | mandatory | special    | language selection  | ALL                          | before          | always      | Language   | basic support           |
+| `ltra`      | Left-to-right alternates                | OpenType | mandatory | no         | none                | RTL                          | before          | bidi        | Language   | complex scripts         |
+| `ltrm`      | Left-to-right mirrored forms            | OpenType | mandatory | no         | none                | RTL                          | before          | bidi        | Language   | complex scripts         |
+| `mark`      | Mark Positioning                        | OpenType | mandatory | no         | none                | ALL                          | after           | always      | Language   | basic support           |
+| `med2`      | Medial Forms #2                         | OpenType | mandatory | no         | none                | syrc                         | during          | always      | Language   | complex scripts         |
+| `medi`      | Medial Forms                            | OpenType | special   | special    | none                | word, paragraph\*            | ARABIC, syrc    | ALL         | during     | shaping                 |
+| `mgrk`      | Mathematical Greek                      | OpenType | opt-in    | yes        | character, word     | grek                         | after           | never       | Typography | numerals and scientific |
+| `mkmk`      | Mark to Mark Positioning                | OpenType | mandatory | no         | none                | ALL                          | after           | always      | Language   | basic support           |
+| `mset`      | Mark Positioning via Substitution       | OpenType | mandatory | no         | none                | ALL                          | after           | always      | Language   | basic support           |
+| `nalt`      | Alternate Annotation Forms              | OpenType | opt-in    | yes        | character, word     | hani, kana, latn, cyrl, grek | after           | never       | Typography | Asian CJK               |
+| `nlck`      | NLC Kanji Forms                         | OpenType | opt-in    | yes        | character, word     | hani, kana                   | after           | never       | Language   | Asian CJK               |
+| `nukt`      | Nukta Forms                             | OpenType | mandatory | no         | none                | INDIC                        | during          | shaping     | Language   | complex scripts         |
+| `numr`      | Numerators                              | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `onum`      | Old Style Figures                       | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `opbd`      | Optical Bounds                          | OpenType | mandatory | special    | document            | ALL                          | after           | always      | Typography | basic support           |
+| `ordn`      | Ordinals                                | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | basic support           |
+| `ornm`      | Ornaments                               | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | variants                |
+| `palt`      | Proportional Alternate Width            | OpenType | opt-in    | yes        | word, paragraph     | hani, kana, latn, cyrl, grek | after           | never       | Typography | Asian CJK               |
+| `pcap`      | Petite Capitals                         | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | letter case             |
+| `pkna`      | Proportional Kana                       | OpenType | opt-in    | yes        | word, paragraph     | kana                         | after           | never       | Typography | Asian CJK               |
+| `pnum`      | Proportional Figures                    | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `pref`      | Pre-base Forms                          | OpenType | mandatory | no         | none                | INDIC, khmr                  | during          | shaping     | Language   | complex scripts         |
+| `pres`      | Pre-base Substitutions                  | OpenType | mandatory | no         | none                | INDIC, khmr                  | during          | shaping     | Language   | complex scripts         |
+| `pstf`      | Post-base Forms                         | OpenType | mandatory | no         | none                | INDIC, khmr                  | during          | shaping     | Language   | complex scripts         |
+| `psts`      | Post-base Substitutions                 | OpenType | mandatory | no         | none                | INDIC, khmr                  | during          | shaping     | Language   | complex scripts         |
+| `pwid`      | Proportional Widths                     | OpenType | opt-in    | yes        | word, paragraph     | hani, kana, latn, cyrl, grek | after           | never       | Typography | Asian CJK               |
+| `qwid`      | Quarter Widths                          | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `rand`      | Randomize                               | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | variants                |
+| `rclt`      | Required Contextual Forms               | Proposed | opt-out   | no         | none                | ALL                          | after?          | always      | Typography | basic support           |
+| `rkrf`      | Rakar Forms                             | OpenType | mandatory | no         | none                | INDIC                        | during          | shaping     | Language   | complex scripts         |
+| `rlig`      | Required Ligatures                      | OpenType | mandatory | no         | none                | ALL                          | during          | always      | Language   | basic support           |
+| `rphf`      | Reph Form                               | OpenType | mandatory | no         | none                | INDIC                        | during          | shaping     | Language   | complex scripts         |
+| `rtbd`      | Right Bounds                            | OpenType | mandatory | no         | document            | ALL                          | after           | always      | Typography | basic support           |
+| `rtla`      | Right-To-Left Alternates                | OpenType | mandatory | no         | none                | RTL                          | before          | shaping     | Language   | complex scripts         |
+| `ruby`      | Ruby Notation Forms                     | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `salt`      | Stylistic Alternates                    | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | variants                |
+| `sinf`      | Scientific Inferiors                    | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `size`      | Optical Size                            | OpenType | mandatory | special    | document            | ALL                          | before          | always      | Typography | basic support           |
+| `smcp`      | Small Capitals                          | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | letter case             |
+| `smpl`      | Simplified Forms                        | OpenType | opt-in    | yes        | document            | hani, kana                   | after           | never       | Language   | Asian CJK               |
+| `ss[01-20]` | Stylistic Set [01-20]                   | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | variants                |
+| `ssty`      | Script Style                            | Math     | mandatory | no         | math                | math                         | during          | shaping     | Typography | numerals and scientific |
+| `subs`      | Subscript                               | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `sups`      | Superscript                             | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `swsh`      | Swash                                   | OpenType | opt-in    | yes        | character, word     | ALL                          | after           | never       | Typography | variants                |
+| `titl`      | Titling                                 | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | variants                |
+| `tjmo`      | Trailing Jamo Forms                     | OpenType | mandatory | no         | none                | hang, jamo                   | during          | shaping     | Language   | Asian CJK               |
+| `tnam`      | Traditional Name Forms                  | OpenType | opt-in    | yes        | document            | hani, kana                   | after           | never       | Language   | Asian CJK               |
+| `tnum`      | Tabular Figures                         | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `trad`      | Traditional Forms                       | OpenType | opt-in    | yes        | document            | hani, kana                   | after           | never       | Language   | Asian CJK               |
+| `twid`      | Third Widths                            | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `unic`      | Unicase                                 | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | letter case             |
+| `valt`      | Alternate Vertical Metrics              | OpenType | special   | special    | orientation         | hani, kana                   | after           | orientation | Typography | Asian CJK               |
+| `vatu`      | Vattu Variants                          | OpenType | mandatory | no         | none                | INDIC                        | during          | shaping     | Language   | complex scripts         |
+| `vert`      | Vertical Writing                        | OpenType | special   | special    | orientation         | hani, kana                   | after           | orientation | Typography | Asian CJK               |
+| `vhal`      | Alternate Vertical Half Metrics         | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `vivn`      | Vietnamese Forms                        | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `vjmo`      | Vowel Jamo Forms                        | OpenType | mandatory | no         | none                | hang, jamo                   | during          | shaping     | Language   | Asian CJK               |
+| `vkna`      | Vertical Kana Alternates                | OpenType | special   | special    | orientation         | kana                         | after           | orientation | Typography | Asian CJK               |
+| `vkrn`      | Vertical Kerning                        | OpenType | special   | special    | orientation         | hani, kana                   | after           | orientation | Typography | Asian CJK               |
+| `vpal`      | Proportional Alternate Vertical Metrics | OpenType | opt-in    | yes        | word, paragraph     | hani, kana                   | after           | never       | Typography | Asian CJK               |
+| `vrt2`      | Vertical Rotation                       | OpenType | special   | special    | orientation         | hani, kana                   | after           | orientation | Typography | Asian CJK               |
+| `zero`      | Slashed Zero                            | OpenType | opt-in    | yes        | word, paragraph     | ALL                          | after           | never       | Typography | numerals and scientific |
+| `zhcn`      | Simplified Chinese Forms                | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+| `zntw`      | Traditional Chinese Forms               | Removed  | never     | no         | none                | NONE                         | none            | never       | Removed    | none                    |
+
+A few tags carry notes: `fina`, `init`, `isol`, and `medi` are marked “special” because they only need UI where shaping does not already require them. `rclt` was a proposed feature (August 2012) at the time of writing.
+
+## How to read the columns
+
+**Spec.** Where the tag comes from: `OpenType`, `Math` (Microsoft-only, tied to the `MATH` table), or `Removed`.
+
+**Tag.** The four-letter OpenType feature tag. Numbered families are written as ranges: `cv[01-99]` covers `cv01` through `cv99`, and `ss[01-20]` covers `ss01` through `ss20`.
+
+**Friendly name.** The official feature name as registered in the specification.
+
+**Show in UI.** One of `no`, `yes`, or `special`. “No” means no UI is needed; “yes” means the app should expose a control directly tied to the feature; “special” means the feature is better tied to a general application or document preference (for example optical bounds, or CJK orientation) than to a per-run toggle.
+
+**UI level.** Where a control belongs: `none`, `character`, `word`, `paragraph`, or `document`. Some features make sense on a single character or two; others apply to long runs of text.
+
+**Script.** A generalization of which features serve which scripts: `ALL`, `INDIC`, `RTL`, `ARABIC`, `CURSIVE`, `NONE`, or specific four-letter script tags. This is not exact — the spec sometimes uses loose wording like “Indic scripts similar to Devanagari” — so the column mixes concrete script tags with generic groupings. A worthwhile follow-up would be an exhaustive mapping of every registered feature to every registered script tag, grouped by family (European, Indic, Arabetic, CJK) and writing direction (LTR, RTL, vertical).
+
+**Script-specific shaping.** When a feature is applied relative to shaping: `before`, `during`, `after`, or `outside`. Only four features land cleanly in “before”: `ccmp`, `locl`, `rtla`, and `size`. Adobe describes its CJK features differently from Microsoft — Microsoft documents them as a shaping specification, Adobe spreads the behavior across individual feature descriptions — so all of Adobe’s CJK features are classified here as “applied after shaping,” since shaping is not formally defined in that context.
+
+**Applied by default.** Whether the feature is on by default: `never`, `shaping`, `always`, `maybe`, or (for CJK) `orientation`-driven.
+
+**Functional category.** A loose grouping into `Language`, `Typography`, or `Removed`. The split between “language” (needed for correct rendering) and “typography” (optional refinement) already exists in the script-specific specs.
+
+**Functional subcategory.** A finer grouping useful for organizing UI: `Asian CJK`, `complex scripts`, `basic support`, `numerals and scientific`, `letter case`, or `variants`.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/OpenType-features/)
+
+FontLab tested its current product line against macOS 10.9 Mavericks. Everything passed.
+
+We ran our current products through testing on macOS 10.9 (Mavericks) and found no problems, nor have we had any reports of trouble from customers.
+
+These Mac Intel products are fully compatible with Mavericks:
+
+- **FontLab Studio** 5.1.4
+- **Fontographer** 5.2.3
+- **TypeTool** 3.1.2
+- **TransType** 4.0.0
+
+Two more products work correctly on Mavericks when you use the “Lion Compatibility Pack” edition:
+
+- **BitFonter** 3
+- **ScanFont** 5
+
+Older versions of these products may not run correctly under Mavericks. If you are on an earlier release, update to the version listed above.
+
+[Read more →](https://www.fontlab.com/)
+
 TransType 4 arrived in December 2013 as a complete rewrite of our font conversion app. It added multi-color OpenType output and web font export to its core toolkit.
 
 You can convert virtually any font format into modern OpenType PS (.otf), TrueType (.ttf), and @font-face web fonts. This includes VFB and UFO source files. The app runs on both Mac and Windows.
@@ -194,6 +400,197 @@ Watch on [FontLab TV](https://www.youtube.com/watch?v=tbc_O7bNROs).
 
 [Read more →](https://help.fontlab.com/fontlab/7/manual/Spacing-and-Kerning/)
 
+FontLab VI Public Preview 2 (build 5844) is out for Mac, following the expiry of the first preview. We are still not calling it a beta.
+
+This release focuses less on visible features and more on architecture changes that needed doing before the app could stabilize. A few bugs are fixed, but the bulk of the work happened under the hood.
+
+Here is what changed:
+
+- **OpenGL drawing:** Anti-aliased on-screen drawing can now use OpenGL, offloading work to the graphics processor for a large speed boost on complex shapes. It is off by default in this build (enable it in **Preferences › General**) because it was not yet stable on Windows. Machines without a dedicated graphics card see little change.
+- **Native VFC file format:** FontLab VI’s own VFC format is in place, though not yet well tested. You can also set the app to auto-save in UFO, VFB, or XFO.
+- **Windows or tabs:** In **Preferences › General** you can turn off **Open new windows as tabs**. With it off, the Font, Glyphs, and Metrics windows each open separately after a restart, closer to the FontLab Studio 5 experience.
+- **Crash reporting:** An early crash-reporting system is going in. Opt-out and screenshot options are still to come.
+- **Internal messaging:** The messaging layer the app uses to communicate between its parts is being rewritten.
+
+A Windows version is also in progress.
+
+Public Preview 2 does not run on OS X 10.6.8 or earlier.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+A new FontLab VI Public Preview for Mac is out, adding context menus, a Gallery panel for named shapes, faster glyph access, and italic-angle drawing.
+
+This build lands a month after the last preview, with new features and a long list of fixes. The highlights:
+
+**Interface**
+
+- **Context menus** (right-click or Ctrl+click) now work in the Glyph and Font windows.
+- A **High contrast mode** in **Preferences › Editing** boosts the visual contrast of UI elements in the Glyph window.
+
+**Shapes**
+
+- The new **Gallery** panel lists every named shape in the font and lets you drop it into the active layer via the **Place** button or drag-and-drop, in either the Glyph or Font window. Name a shape in the Shapes panel and it joins the Gallery for reuse elsewhere.
+
+**Glyph access**
+
+Keyboard navigation in the Font and Glyph windows is faster:
+
+- `/` jumps to a glyph by name; `#` jumps by Unicode.
+- **Cmd+F** (*Edit › Find Glyphs…*) inserts or selects glyphs by various criteria.
+- **Shift+Cmd+F** jumps to the Search box to filter the Font window or insert results in the Glyph window.
+- **Cmd+L** (*Edit › List Related Glyphs…*) goes to glyphs related to the current selection.
+
+The Font window’s **All Glyphs** toggle controls filtering: on (default) shows filtered cells in a “yellow area” at the top with the rest following, FontLab Studio 5 style; off hides everything but the matches.
+
+**Glyph design**
+
+- *View › Apply Italic Angle* (the `\` key) cycles through three states for italic fonts: slanted sidebearings, slanted sidebearings plus a slanted grid (so Shift-constrained moves follow the italic axis), and straightened.
+- **Arrow keys** move points by 1 unit; with Ctrl 0.1 unit, with Shift 10 units, with Cmd 100 units. The base and Shift distances are configurable in *Preferences › Distances*.
+- With the Guides tool, Ctrl+click adds a glyph anchor and Alt+click adds a shape pin.
+- Glyphs made with Generate Glyphs now respect matching named anchors such as `top`/`_top`.
+
+**Import, export, technology**
+
+- A confirmation dialog now shows where exported fonts were written.
+- *Curve Conversion › Create short curves* now applies only to explicit, user-initiated conversion. A new *Open Fonts › Break long TrueType curves to short segments* setting governs the same behavior when fonts are opened.
+- The built-in **ttfautohint** and **HarfBuzz** are updated to their April 2016 versions.
+
+Beyond these, the build clears a long list of fixes across the Font and Glyph windows, the Sketchboard, the Layers and Shapes panels, and various crashes, plus assorted refresh and redraw problems.
+
+A Windows version is also in progress.
+
+Current builds run on OS X 10.7 and later. They do not run on 10.6.8 or earlier.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+At the ATypI conference in Warsaw, Google, Microsoft, Apple, and Adobe jointly unveiled version 1.8 of the OpenType specification — and with it, variable fonts.
+
+Variable fonts, also called OpenType Variations, extend and update the GX Variations technology Apple invented in the 1990s. They are a functional superset of Adobe’s Multiple Master fonts: a single file can carry several axes of variation — weight, width, optical size, or anything a designer chooses to define.
+
+The appeal is twofold. Users get more freedom — a continuous range of styles rather than a handful of fixed weights — and font families ship as smaller files, because the variation data is shared instead of duplicated across every instance. Crucially, the interpolation is done with real typographic finesse. This is not artificial stretching or algorithmic distortion; the designer controls how each axis behaves.
+
+FontLab had already begun integrating variable-font support into FontLab VI before the announcement. Sharp-eyed users of the recent Public Preview builds will have spotted a Variations panel, which exposes some of the flexibility variable fonts allow but Multiple Master did not — masters placed at any point in the design space, and the option of many more design axes. FontLab VI will ship with OpenType Variations support, and the work will continue afterward across FontLab products.
+
+There is a long thread here. FontLab was the first font editor to give designers a full visual environment for Multiple Master, and the idea of folding GX-style variations into OpenType has been kicked around at FontLab for years. Seeing the four major platform owners agree on a shared specification is the part that makes it real.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+FontLab VI Public Preview is now available for Windows, alongside an updated Mac build. It is free until the final app ships.
+
+FontLab VI is our cross-platform professional font editor, a substantial step up from FontLab Studio 5. It runs on both macOS and Windows with the same performance, interface, and toolset.
+
+### What’s in FontLab VI
+
+FontLab Studio 5 users will recognize a lot here, rebuilt and refined. The new **Font window** adds visual sorting, smart search and filtering, and a table view exposing numerical glyph data. The **Glyph window** and **Metrics window** are unified, so the Metrics and Kerning tools are reachable from the main toolbar. The old Class panel is now the **Groups panel**, still the home for kerning and OpenType groups.
+
+In place of the old limited Components, FontLab VI introduces **Cloned Shapes** with bidirectional live links between contours that appear in different glyphs. The View, Transform, OpenType Features, and Python Scripting panels are all still here, each redesigned.
+
+New functionality includes automatic **Create Overlaps** and **TrueType Hinting** commands attachable to PostScript outlines. An internal **fractional coordinate** system lets you scale or slant contours losslessly. There are new drawing tools: the **Rapid** tool, **Tunni Lines** and **Genius points** for curvature control, the **Fill** tool that ignores path direction, the **Power Brush** for calligraphic strokes, and **Power Nudge** for typographically correct condensing and expanding.
+
+The app supports all of **Unicode 9** (including color emoji) and **OpenType 1.8** (including Arabic and Indic shaping, and color and variable fonts). This build can open variable fonts but cannot yet generate them; you can set up unlimited font-wide or per-glyph **Masters** in a MutatorMath- and OpenType Variations-compatible design space that stays backwards-compatible with FontLab Studio 5’s Multiple Master model.
+
+FontLab VI also brings unlimited glyphs and layers, multi-line multi-glyph editing, full color support, tag-based guides and zones, anchor-based mark attachment, and metrics linking via expressions. It converts between `.ttf`, `.otf`, `.vfb`, `.ufo`, `.glyphs`, and color OpenType formats such as OpenType+SVG.
+
+### The Windows build
+
+Because FontLab VI is built on a cross-platform framework, the Windows feature set is practically identical to the Mac version. We expect only a few platform-specific bugs, mostly interface-related.
+
+The Windows version is a 32-bit app that runs on both 32- and 64-bit Windows, from Windows XP through Windows 10. We tested it specifically on Windows XP, 7, and 10.
+
+One caveat: some menu shortcuts are marked with a “Meta” modifier and are not yet accessible. The Mac has three modifier keys available to developers (Ctrl, Alt, Cmd) while Windows has two (Ctrl, Alt). Sensible Windows shortcuts are still being worked out.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+FontLab VI will not ship in 2016 after all. The new target is February.
+
+We had said all year that FontLab VI would arrive “this year.” Earlier this month it became clear that was not going to happen.
+
+We could have rushed the last few things and shipped anyway. Anyone who has used software for long knows how that ends. FontLab VI simply needs more bake time — more weeks of real type-design work, ours and yours, to surface and fix the bugs and rough edges that only show up under a genuine workout.
+
+In the meantime, the Public Preview builds keep coming, more often than before. If you already run a Public Preview on Mac or Windows, launch it and it will offer the newest build. New testers can register to receive a download link. When something breaks, please report it on the user forum — that feedback is what turns a capable app into a finished one.
+
+FontLab VI is a flexible tool with many possible workflows. That is a strength, but it also means the app benefits most from real users running real tasks, not just from us doing things the way we already know how. Thanks for the help getting there.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+“Discontinued” and “deprecated” sound like the same thing. At FontLab they mean two different fates for an old product, and the difference matters if you depend on one of them.
+
+Every so often a tool we offer gets old and we have no intention of updating it — usually because demand has dried up, or because a newer product does the same job better. What happens next depends on whether anyone is left who genuinely needs it.
+
+**Discontinued** products we drop entirely. No web page, no store listing, no promotion. FOGlamp is a good example: it converted Fontographer’s native files straight to FontLab Studio, and it became unnecessary once newer FontLab Studio versions could simply open those old FOG files. If you ever desperately need a discontinued tool, contact sales — they may be able to help.
+
+**Deprecated** products are a special case. Sometimes a tool ticks two awkward boxes at once:
+
+1. It does not sell enough to justify a new version.
+1. Some people who need it have no real alternative — competing products lack the features, do not run on the right operating system, or simply do not exist.
+
+So we keep the page live and continue to sell it, and we label it deprecated. That label means two things:
+
+- We have no current plans to make a new version. Some of its functionality may eventually be folded into another product.
+- Support has limits. We still try to help, but a known bug may never get a fix, and our ability to support the tool will gradually decline.
+
+There are also Mac-specific catches for deprecated apps. In some cases — BitFonter and ScanFont among them — the Mac version no longer runs on recent macOS, so we ship the Windows build inside a WINE wrapper. That makes for a larger app running the Windows version under emulation on a Mac.
+
+These older Mac apps also tend not to be Retina-aware. On a double-resolution Retina display they still work, but parts of the interface render at half resolution and look blurry. You can soften this by running the Mac at a higher non-Retina resolution — a trade-off between blur and small interface elements — and utilities such as QuickRes or DisplayMenu give you more resolution choices. (For what it is worth, a few of our current, non-deprecated apps are not Retina-savvy either.)
+
+[Read more →](https://www.fontlab.com/)
+
+Newer FontLab VI builds require macOS 10.10 Yosemite or later. Earlier Public Preview builds ran on 10.9 Mavericks; that support is ending.
+
+The reason is straightforward: moving to a 10.10 baseline lets us build on a newer version of our development framework, which means a faster, better-performing app.
+
+The cost is small. Our research suggests only about 4 to 5 percent of Mac users are still on 10.9, and every Apple machine capable of running 10.9 can also run 10.10 and 10.11. In other words, no one has to buy new hardware — a free system update is enough.
+
+If you are on 10.9 and using a FontLab VI Public Preview, update your macOS to keep getting the latest builds.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+A quick status report from the Public Preview period: FontLab VI was close to done, the bug list was short, and Variable Fonts were the last big feature going in.
+
+The team had been heads-down finishing FontLab VI, which is why none of us turned up at the recent TypeCon and ATypI conferences. Here is what we would have talked about over lunch.
+
+**Bug fixes.** During the Public Preview, the developers fixed over a thousand bugs. The to-do list was down to 46, plus another 18 fixes waiting to be verified in the next internal build. Internal builds usually landed once or twice a week.
+
+**Variable Fonts.** The last major feature in flight was full support for OpenType Font Variations, alongside finalizing OpenType export across all its varieties: CFF, TrueType, and the various color formats. Both would show up in upcoming builds.
+
+**The User Guide.** Two type designers had joined the team and were testing FontLab VI and helping complete the User Guide. They would also become part of the support team once VI shipped.
+
+The Public Preview, for both macOS and Windows, already had several thousand regular users pulling each new build every couple of weeks. Many reported problems and sent suggestions on the forum, and that feedback shaped the app directly.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+A compatibility note for owners of the older apps: FontLab Studio 5, TypeTool 3, and TransType Pro 3 had real problems on macOS 10.13 “High Sierra” and 10.14 “Mojave.” Here is what broke and what to do about it.
+
+This is a historical record. The issues below were later addressed with updated builds; check the help center for the current state before acting on any of it.
+
+Fontographer 5, TransType 4, and FontLab VI had no High Sierra or Mojave issues. FontLab VI was built on an all-new platform and ran fine. Anyone using FontLab Studio 5 for axis-based (Multiple Master) design, or relying on Paste Special, was better off moving to FontLab VI before upgrading macOS.
+
+## Install and launch problems
+
+FontLab Studio 5.1.4 and earlier, and TransType Pro 3, could not be installed on High Sierra or later. If already installed, they would not launch. Symptoms were a license-file write error, or an “Error initializing license system. Bad or missing or expired RLM license (-130)” message.
+
+The fix: install **FontLab Studio 5.1.5** — a free update for 5.0 and 5.1.x — or upgrade from TransType 3 to TransType 4. FontLab Studio users should still read the operating problems below.
+
+## Operating problems
+
+FontLab Studio 5.1.5 and TypeTool 3.1.2 were both affected on High Sierra and later:
+
+- **Copy and paste in the Font window** did not work normally. The “paste” and “append glyph” commands were grayed out even after a copy, and the keyboard shortcuts were dead too. There is a workaround below.
+- **Contour copy/paste for multiple-master fonts** in the Glyph window copied only one master. Single-master fonts were fine. No workaround.
+- **Paste Special** in FontLab Studio 5 did not work. No workaround.
+
+## Workaround for Font window copy/paste
+
+There is no fix for MM editing in FontLab Studio 5, but the Font window copy problem has a decent workaround in both apps:
+
+1. Select the cell or cells.
+1. Click and drag them to their destination, but do not release the mouse button.
+1. Press and hold the Command key, then release the mouse button.
+
+This works within one Font window or between two. Drop into an empty slot, or into an occupied slot and answer “no” when asked to replace, which appends the glyphs instead.
+
+[Read more →](https://help.fontlab.com/)
+
 FontLab Studio 5 was a workhorse. It shipped in 2004 and carried a generation of type designers through the OpenType transition. The app aged gracefully, right up until it didn’t. On 7 December 2017, we replaced it.
 
 **FontLab VI** is a complete rebuild for macOS and Windows. It is 64-bit, native, and built around a drawing model that reflects how type designers work. Here is what you get on day one:
@@ -215,6 +612,172 @@ The two-minute announcement video previews fluid Bézier editing, real-time vari
 Download FontLab VI from the [FontLab product page](https://www.fontlab.com/font-editor/fontlab/), and start with the [FontLab Help Center](https://help.fontlab.com/) for documentation.
 
 [Read more →](https://help.fontlab.com/)
+
+FontLab VI 6.0.9, together with the previous 6.0.8 update, brought a batch of editing and export improvements. Both were free updates.
+
+Here is what the two updates added:
+
+- **Composite glyphs and auto layers** got better handling, including a quick way to create auto layers across multiple glyphs and layers, and an extended glyph-recipe syntax that allows scaling and flipping of components.
+- **List view** in the Font window now lets you choose which columns appear and drag them into the order you want.
+- A new **Glyphs Bar** in the Glyph window helps you move through your glyph set without leaving the editor.
+- A new **Guides** section in Font Info gives you control over font guides.
+- You can **arrange classes** manually in the Classes panel.
+- The **Features** panel gained auto-complete and drag-and-drop.
+- A contextual **Quick Help** panel is available from the Help menu, with new Quick Tips on the Welcome screen.
+- A setting shows or hides **placeholders for missing glyphs** in the Glyph window. With placeholders on, double-click one to create the glyph (`Preferences > Editing > Show missing glyph placeholders`).
+- **Copy and Paste** buttons appear in the Font Info Family and Font Dimensions sections.
+- Working with **Genius nodes** improved.
+- You get more control over **PostScript-to-TrueType** outline conversion, plus easier ways to add missing extrema and implied TrueType nodes.
+- The optional **VFJ** format (FontLab VI’s JSON) is more human-readable.
+- Exported bitmap **color fonts** (Google `CBDT`, Apple `sbix`) are smaller.
+- An optional Profile setting can include **open contours** in exported fonts.
+
+Both updates also carried many other improvements and bug fixes. See the FontLab VI Release Notes for the full list.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+In September 2018, FontLab ran three free FontLab VI workshops at the ATypI Antwerp conference — two introductory sessions in the morning and an advanced one in the afternoon.
+
+The workshops took place on Tuesday, 11 September 2018 at AP Hogeschool, Campus Spoor Noord in Antwerp, Belgium, alongside the ATypI Antwerp conference. Each session was capped at 20 participants and was free to attend. Thomas Phinney, Yuri Yarmola, and Adam Twardoch also attended the main conference.
+
+## FontLab VI for FontLab Studio 5 users
+
+A morning session with Thomas Phinney and Yuri Yarmola, aimed at FontLab Studio 5 users moving to FontLab VI. It covered what was new and what had changed, and how to avoid the “who moved my cheese?” feeling. Topics included how Elements improve on Components, when to reach for the Rapid tool versus the Pen tool, metrics and kerning workflows, the new editing tools (Power Nudge, Power Guides, Smart Corners, Tunni Lines), OpenType Variations as the replacement for Multiple Master, and working with flexible Layers.
+
+## Type drawing basics with FontLab VI
+
+A morning session with Adam Twardoch for people starting out in type design. Working from an existing mini-font of a few glyphs, the group extended it while exploring FontLab VI’s drawing, spacing, and kerning tools.
+
+## Advanced type design and font creation with FontLab VI
+
+An afternoon session with Adam Twardoch, Yuri Yarmola, and Thomas Phinney for experienced type designers. It went into the more advanced parts of FontLab VI: drawing with guides, grids, smart nodes, and open contours; building families through layers, masters, and variation; spacing with expressions and kerning with classes; extending glyph sets with elements and anchors; and the technical end — OpenType features, hinting, exporting, and interchange with other font tools.
+
+[Read more →](https://www.fontlab.com/)
+
+FontLab VI 6.1 adds three things type designers had been asking for: real, standards-compliant components, a Font window sidebar that filters glyphs by script and category, and metrics expressions that link spacing across glyphs, layers and masters.
+
+## Components
+
+FontLab VI 6.1 (re-)introduces **Components** as a standards-compliant way to build glyphs from other glyphs. They work like components in FontLab Studio 5, UFO, or TrueType-flavored OpenType fonts: a component points to a **source glyph** and carries a transformation — usually a shift, optionally scale, rotation or slant. That is the whole idea. If you have used components in any other font editor, you are already at home.
+
+This sits alongside the **Element References** that earlier versions of VI offered. Element References are great for reusing a design piece — a stem, a serif, a fragment — across glyphs in the same layer, keeping every instance linked. But all references are equal: there is no source glyph they point to, they simply link to each other, and they know nothing about metrics or anchors. They behave rather like subroutines in CFF OpenType fonts.
+
+Earlier VI versions *simulated* components by locking some references and guessing the best source glyph. It was never quite satisfying, so we added real components instead. The rule of thumb: use **Element References** to link pieces of glyphs, use **Components** to build composite glyphs from whole glyphs. VI 6.1 has both.
+
+You can build composites from components in one master or all of them — via Generate Glyphs, Add Component, Copy-Paste or Auto Layers. You can mix components and plain contours in one layer, and you can nest them: build `dieresiscomb` from two `dotaccentcomb` components, then build `Adieresis` from `A` and `dieresiscomb`. On export, FontLab keeps your component structure in formats that support it (TTF, VFB, UFO) and decomposes only where a format cannot represent something — rotated components, say, or components mixed with contours.
+
+### Choosing components or references
+
+In **Preferences > Open Fonts > Composite glyphs**, pick **Use components** (FontLab prefers components) or **Convert components to element references** (FontLab prefers references). When you open a `.vfc` or `.vfj`, FontLab keeps your references as references and your components as components either way; the exception is Auto Layers, which are built dynamically and follow this setting.
+
+When you open a format that supports components (`.ttf`, `.vfb`, `.ufo`, `.fog`, `.glyphs` and derivatives like `.woff`), FontLab either imports the components as-is or converts them to references, depending on the same preference. For formats that *don’t* carry components (`.otf`, Type 1), turn on **Detect composites** and FontLab finds repeating contours and links them — then converts those to components if **Use components** is on.
+
+### Converting references to components
+
+Select glyphs in the Font window and choose **Element > Element Reference > References to Components**; repeat per master. FontLab picks the source glyph by finding where the referenced element appears on its own and is “least transformed” — closest to (0, 0) with no other transformations. If several candidates exist it chooses the least-transformed one; if none works, it leaves the references alone. So “helper glyphs” holding serifs or stems become natural component sources.
+
+### Adding components automatically and by hand
+
+With **Use components** on, FontLab uses components when you run **Font > Generate Glyphs**, turn on **Glyph > Auto Layer**, double-click an empty cell (with the “fill created glyphs” preference on), or run **Font > Detect Composites**.
+
+To add one by hand, choose **Glyph > Add Component…**. Start typing the component’s **glyph name** and pick from the results — with **Find glyph name synonyms** on, typing `uni0414` also finds `Decyr`. Placement is flexible:
+
+- Leave **X** and **Y** empty and FontLab uses matching anchors (`top` and `_top`), or centers horizontally and shifts a mark up by the cap-height-minus-x-height difference on uppercase letters.
+- Enter a number in either field to fix that coordinate while the other follows the automatic rule.
+- Enter an anchor name in a field to position by anchor, and mix the two — `0` in X, `top` in Y.
+
+Use **Flip horizontally/vertically** to mirror, choose whether the glyph keeps its metrics or adopts the component’s width, and use **Apply to all masters** to insert everywhere at once.
+
+You can also paste: copy one glyph cell, select targets, and **Edit > Paste Components** inserts it as a component in all of them across all masters. Copy several cells and the components are matched one-to-one with the selected targets.
+
+### Working with components
+
+Components are special “glyph filter” elements, so you can move them with the Element tool (or the Contour tool) and use most of the **Element** menu and the **Elements** panel. Press `<` and `>` to step between components; double-click (or **Ctrl+E**) to open a component’s source glyph for editing alongside the current one. **Send to Back** makes a component “first”; **Group** keeps several components moving together.
+
+To **replace** a component, type a new source glyph name into the property bar’s underlined **C:** field (or the **Glyph name** field in the Elements panel) and press Enter. To **decompose**, click the **Decompose** button or choose **Glyph > Decompose** — Shift-click components first to decompose only those. **Expand Filters**, **Flatten Glyph** and **Separate Contours to Elements** all decompose as part of their work. Finally, **Element > Element Reference > Component to Reference** converts a component back to a reference, handy when you want to apply a filter or change the fill colour. Delete a source glyph and FontLab converts the affected components to references automatically.
+
+## Font filters and the Font window sidebar
+
+**Font filters** find glyphs in the Font window and sort matches ahead of (or instead of) the rest. (Don’t confuse them with the *glyph* filters in the Glyph window, which do effects like Power Brush.) The Font window shows every glyph in your font, sorted by the property bar’s **Sort** dropdown — but a font filter lets you focus on a subset, or surface empty cells for glyphs you might want to add.
+
+Filters match in three ways:
+
+- **Exact** filters match only when a name, codepoint or property matches outright.
+- **Fuzzy** filters also match variants and alternates, using name suffixes and ligature naming.
+- **Prospective** filters add empty placeholder cells for glyphs you could create — they are exact, since the full set of matches is known up front.
+
+### Hiding unfiltered glyphs
+
+When a filter is active, cells split into **filtered** (matching) and **unfiltered** (not). The new **Hide unfiltered glyphs** toggle in the property bar (formerly **All glyphs** at the bottom of the sidebar) controls the view. Off (the default), matches sit at the top highlighted in yellow — colour adjustable in **Preferences > Font Window > Highlight** — with everything else below. On, only the matches show.
+
+### The filter dropdown and search box
+
+The **Filter** dropdown produces prospective filters for Encodings, Unicode ranges, Codepages, Unicode Categories and Unicode Scripts — choose a type, then the filter. The Encoding filters in the OpenType group no longer pad each encoding with empty cells.
+
+The **Search box** (top-right of the Font and Glyph windows) produces the same prospective filters plus exact or fuzzy ones, and 6.1 improves it. You can now search by:
+
+- **Synonyms** — searching a glyph name also matches other names with the same Unicode from `standard.nam`, plus `XXXX`/`uXXXX`/`uniXXXX` algorithmic names. For `uni042F` (Cyrillic Ya), synonyms include `IA`, `42f` and `afii10049`.
+- **Layers** — enter a complete layer name to find glyphs that include it.
+- **Tags** — enter a complete tag to find glyphs that carry it, including the extended built-in virtual tags.
+
+### The sidebar
+
+Open the sidebar with the 2nd button in the Font window’s property bar. Its filter area is now a hierarchical list in three sections.
+
+**Basics** is for beginners — three prospective encodings in a sensible drawing order:
+
+- **New font** — 157 glyphs in an order you might draw them (basic Latin, digits, some punctuation).
+- **Latin Simple** — 231 glyphs for a simple Western Latin font.
+- **Latin Pro** — 374 glyphs for a wider pan-European Latin font.
+
+**Categories** holds pre-defined filters by Unicode category and OpenType class. Prospective subcategories show a **totals label** — grey shows current matches versus the complete possible set, and clicking it offers **Generate Missing Glyphs**; green means complete. **All**, **Letter** and **Number** are visible by default; **Punctuation**, **Symbol**, **Mark**, **Separator** and **Small caps** appear as your glyph set grows. The **Properties** subcategory lists glyphs by **virtual tags** FontLab assigns automatically — `composite`, `compound`, `references`, `auto`, `colored` — and by OpenType Glyph Definition Class (`otsimp`, `otliga`, `otmark`, `otcomp`, `otnone`). The **Layers & Masters** subcategory lists every layer name present in any glyph, a quick way to find stray layers you forgot about.
+
+**Scripts** lists every Unicode writing system your glyphs cover. Latin, Cyrillic and Greek always appear with prospective subsections (Basic, Historic, Extended); other scripts show once you have at least one glyph for them.
+
+### Custom filters
+
+For a quick **exact** filter, select glyphs, copy, click the Search box, paste, and choose **Text** — it shows just those glyphs and lands in Search History, from where you can drag it to Bookmarks. For a reusable **prospective** filter, write a custom Encoding file and drop it into the `Encoding` subfolder of your User data folder (now settable in **Preferences > General > User data folder**).
+
+## Nonspacing components and elements
+
+VI 6.1 lets you mark a component or element as **nonspacing**. A nonspacing component still exports and still draws — it does not change the glyph’s advance width — but **inside FontLab** it is invisible to the metrics engine. FontLab ignores it when showing width and sidebearing values, when copying metrics with Paste Special, and when computing linked metrics.
+
+This mirrors how typesetting treats nonspacing characters: positioned relative to the spacing glyphs before them, but with their own metrics ignored. With the Measurement Line off, sidebearings are read from the bounding box of the whole layer; nonspacing elements let you exclude parts of that box from the calculation. The exported font, of course, still carries the correct absolute metrics.
+
+*Example:* in `imacron` ("ī"), mark the `macron` component nonspacing, then set LSB and RSB to `=dotlessi`. The macron drops out of the sidebearing calculation, so linking `imacron` to `dotlessi` just works.
+
+To set it, click a component or element and use the **Nonspacing** toggle in the property bar, or the Nonspacing column in the Elements panel. Turn on **Preferences > Open Fonts > Automatically assign nonspacing property to accent components** and FontLab marks components whose source is named `circumflex`/`caron`, falls in the relevant Unicode ranges (U+02B9–02BD, U+02C6–02CF, U+02EC), sits in the “Nonspacing Mark” or “Modifier Symbol” category, or has the OT Mark class. **Element > Nonspacing > Detect Nonspacing** applies the same rule on demand; **Tools > Actions > Metrics > Nonspacing** has Detect and Clear for all masters. If you would rather not use the feature at all, clear nonspacing across the whole font and turn the preference off.
+
+## Metrics expressions (linked metrics)
+
+VI 6.1 sharpens the expressions you write into metrics fields to link spacing across glyphs, layers and masters. Updating is much faster, expressions consistently beat static numbers, you can link across masters, and there are new functions.
+
+**Faster updates.** Because updating is now quick, **Preferences > Spacing > Automatically update linked metrics** is on by default. With thousands of linked glyphs you may prefer to turn it off and run **Font > Update Metrics** manually.
+
+**Expressions take precedence.** The interaction between expressions and plain numbers in the three fields — LSB, RSB, advance width — is now consistent: expressions win over numbers, and the most recent expression wins over an earlier one. One expression makes the other fields adjust; two expressions fix the third; three expressions (a bad idea) let the last one win and adjust one of the others by a constant.
+
+**Specifying glyphs and layers.** Use a glyph name (`aogonek`) to refer to the current layer of that glyph — this works in functions, simple expressions and as a constant. You can also write `ą` (a single character), `:Thin` (a layer of the current glyph) or `ą:Bold` (a glyph and layer), though those three don’t work as constants in extended expressions.
+
+FontLab-specific functions:
+
+| Function             | Description                                                  |
+| -------------------- | ------------------------------------------------------------ |
+| `l()`                | LSB of the current glyph and layer                           |
+| `r()`                | RSB of the current glyph and layer                           |
+| `b()`                | **new:** bounding-box width of the current glyph and layer   |
+| `w()`                | advance width of the current glyph and layer (`l()+b()+r()`) |
+| `lsb("glyphspec")`   | LSB of the specified glyph and/or layer                      |
+| `rsb("glyphspec")`   | RSB of the specified glyph and/or layer                      |
+| `width("glyphspec")` | advance width of the specified glyph and/or layer            |
+| `g("guidename")`     | x position of a vertical guideline named `guidename`         |
+
+You can now wrap a `glyphspec` or `guidename` in single quotes as well as double. Enter `=width(':Regular') + 10` into the Bold layer’s width field for `space` and it sits 10 units wider than the Regular layer.
+
+On top of that you get the full [muParser](http://beltoforion.de/article.php?a=muparser) function set, including **conditionals** — `=(d>0) ? d : o` sets the LSB of “q” to that of “d” unless “d” has no contours, in which case it borrows “o” — and **statistics** like `=max(i, w, m)` or `=avg(width(':Thin'), width(':Bold'))`.
+
+**Other fixes.** Expression results are now always rounded to integers (`H` width 100, `I` set to `= H / 3` gives 33, `K` set to `= I * 2` gives 66; fractions are kept internally, so `= H / 3 + 0.18` gives 34). And when you manually nudge a glyph that uses an expression, the adjustment now *modifies the expression* — drag the RSB of “j” (set to `i`) ten units right and the field becomes `i+10`, rather than collapsing to a plain number as before.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
 
 FontLab VI 6.1 arrived in October 2018. It added standards-compliant components, a Font window sidebar for glyph filtering, and linked metrics expressions.
 
@@ -307,6 +870,19 @@ Thank you to every type designer, student, font engineer, and professionally sus
 
 [Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes-Archive/)
 
+FontLab VI 6.1.2 adds printing, synchronized text across windows, a Tables panel for custom OpenType tables, and a faster Classes panel.
+
+This update rounds out a year of refinements with a set of practical production features:
+
+- **Print** directly from the Font and Glyph windows.
+- **Echo Text** keeps the same text synchronized across multiple windows, so edits show up everywhere you are looking.
+- A new **Tables** panel lets you override existing OpenType tables and add custom ones.
+- The improved **Classes** panel makes adding and editing classes quicker.
+- Export **OpenType Symbol**-encoded fonts.
+- Panels are restored to their previous state when you open a VFC or VFJ source.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
 Variable fonts force you to think in multiple dimensions at once. This four-minute video shows exactly how to set up a design space with axes and masters in FontLab VI. It gives you a concise, visual introduction to the core concepts behind variable font production.
 
 A variable font isn’t a single design. It is a continuous space of designs. You define the extremes as separate masters, and the font interpolates smoothly between them at runtime. The design space is the conceptual model that holds all of this together.
@@ -336,6 +912,128 @@ For lettering artists, calligraphers, and designers who work analog-first, this 
 Watch the full demo on [FontLab TV](https://www.youtube.com/watch?v=c0XCxcJY_UY).
 
 [Read more →](https://help.fontlab.com/fontlab/7/manual/Importing-Artwork/)
+
+FontLab VI 6.1.3 is faster and leaner — up to 2× quicker to open and save, using up to 40% less memory — with sharper editing, better class and feature handling, and Sketchboard text frames.
+
+*Note: VFC and VFJ files saved in 6.1.3 cannot be opened in 6.1.2 or earlier versions.*
+
+### Drawing and editing glyphs
+
+- Move nodes or handles with the cursor keys right after dragging them.
+- Edit Tunni lines more freely with the cursor keys.
+- Do simple maths in numeric fields for widths, coordinates and the like.
+- Add or remove nodes, guides, components and kerning pairs using two mouse buttons.
+- Edit non-node segments directly, with more precision.
+- Free-transform a selection spanning multiple elements across layers in one go.
+- Scale and flip instantly with the Selection frame.
+- Make slanted glyph guides easily, and move nodes and handles along the italic axis.
+- Relocate the first node automatically with Set Start Point, add nodes with the new Add Nodes action, and add horizontal PostScript ghost hints by hand.
+
+### Elements
+
+- Filter and remove elements in the Gallery panel.
+- Add new elements or components to a group easily.
+- Remove or reorder elements and components from the Font window.
+- View a component’s index and coordinates.
+- Copy appearance or element structure when filling a new layer from another font or master.
+
+### Metrics, auto layers and expressions
+
+- Edit kerning exceptions more intuitively.
+- Update linked metrics and auto layers live or on demand.
+- Turn auto layers on or off across all masters.
+- Get the right anchors when decomposing glyphs.
+- Edit glyphs straight from the Metrics window.
+- Search for glyphs that contain expressions.
+
+### Classes, tags and features
+
+- Import and export classes; import features from more font formats.
+- Control what happens when you add glyphs to a kerning class.
+- Use additional virtual tags, view tags in Font window cell captions, and search for partial tags.
+- Use tags and virtual tags in feature definitions.
+
+### Font formats
+
+- Save backups in a subfolder.
+- Use Sketchboard text frames to edit, space and kern glyphs, and save them in VFC/VFJ.
+- Customize font export settings easily.
+- Use hyphens in glyph names.
+- Better export of single-stroke fonts for engravers and plotters.
+- Many improvements to exporting instances, OpenType color fonts and UFO packages.
+
+Plus a long list of bug fixes across Undo, glyph drawing, Tunni lines, Smart Corners, Paste Special, the Mask layer, kerning, the Gallery panel, OpenType features, Variations, hinting, Python and font-format support. You can also choose whether to receive stable or beta updates.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
+
+We have released Mac updates for FontLab Studio 5 (5.1.6), TypeTool (3.1.3) and Fontographer (5.2.4), fixing font open/export and copy-paste problems on recent macOS releases.
+
+These updates address two macOS compatibility issues: a font open/export failure that appeared with macOS 10.14.4, and copy-paste problems on macOS 10.13 and 10.14 (High Sierra and Mojave).
+
+### Opening and exporting OpenType fonts
+
+The old FontLab core relied on a system byte-reordering function for 25 years. There was a latent bug in our code, but it stayed hidden — Mac OS 9 and early OS X handled it fine. When Apple adjusted that system function in macOS 10.14.4 (a change well within spec), it exposed our bug, and FontLab Studio, Fontographer and TypeTool could no longer open or export OTFs and TTFs correctly. That is now fixed for users on macOS 10.14.4 and newer; older macOS versions were never affected.
+
+### OS/2 average width
+
+The same change also appears to fix a problem with the `averageWidth` entry in the OS/2 table, which earlier versions saved incorrectly. This one helps users on every macOS version.
+
+### Copy and paste
+
+Our copy-paste code leaned partly on a system API that Apple removed in macOS 10.13. We rewrote it to use only the newer API, so copy-paste works again in the Font and Glyph windows — including copying contours to and from Adobe Illustrator. This helps users on macOS 10.13 and 10.14.
+
+### Faster progress, on every version
+
+FontLab Studio and TypeTool spent a surprising amount of effort drawing and updating the progress bar shown while opening and exporting fonts. Trimming that work makes those operations up to 10 times faster on all macOS versions.
+
+### Pasting in panels
+
+We improved pasting non-ASCII text into the OpenType panel and the Edit Macro panel. Those fields were never Unicode-capable and will not be, but pasting Unicode text in 5.1.5 produced odd results. Now FontLab keeps the full macOS Roman (Western European) range and drops the rest. This applies to FontLab Studio on all macOS versions.
+
+[Read more →](https://www.fontlab.com/)
+
+FontLab VI 6.1.4 adds high-precision segment editing, a snapping Knife, smarter glyph deletion — and, the headline, the ability to open and export `.glyphs` files on both Mac and Windows.
+
+### Major improvements
+
+- Edit segments directly with **high-precision dragging**.
+- Add nodes, break or slice contours with an improved **snapping Knife**.
+- **Kern** more efficiently with improved keyboard shortcuts.
+- See at a glance which Font window **cells** hold composites or auto layers.
+- **Delete** glyphs and decide what happens to their composites and auto layers.
+- Export OpenType PS (`.otf`) fonts with better **hinting**.
+- Export OpenType Variations (`.ttf`) with fewer limitations.
+
+### Collaborate via .glyphs files
+
+FontLab VI already moves between tools easily: it opens and exports `.vfb` (FontLab Studio 5, Fontographer), `.designspace` and `.ufo` (Superpolator, RoboFont, FontForge). The gap was Glyphs.app — VI could read `.glyphs` files but not write them.
+
+That changes here. FontLab VI 6.1.4 exports `.glyphs` files and opens them far more faithfully, on Mac and Windows alike. The conversion has limits, but you will walk a long way before you hit them.
+
+Export is **beta**, so the Glyphs profile is hidden by default. Turn it on under *File > Profiles* (tick the blue checkbox next to *Glyphs*, click OK), then choose the *Glyphs* profile in *File > Export Font As*.
+
+### Other improvements
+
+- Reach common contour operations from the **Node** panel.
+- **Snap** guides to other objects, and turn them into hints and zones.
+- Measure thickness quickly with `G` and drag.
+- Tap `\` to make up/down moves **italic** or upright, for reliable italic metrics linking.
+- Show **anchor** clouds only for selected anchors.
+- Tap `Esc` for a **clean view** in Metrics and Kerning modes.
+- Optically separate imported **artwork** more flexibly.
+- **Zoom** in and out more easily in Glyph and Font windows.
+- **Remove Overlap** while leaving unaffected nodes untouched.
+- No more vanishing kerning, plus other bug fixes.
+
+### Demo mode
+
+When the FontLab VI trial expired, you used to be stuck at the Activation screen. Now the app switches to **demo mode** instead. In demo mode you can open any font and explore freely — you just cannot save, export, print, or copy contours to other apps.
+
+That makes VI a capable font viewer. Open and proof fonts made elsewhere — TrueType variable fonts, color fonts of every flavour, development formats like `.vfc`, `.vfj`, `.vfb`, `.fog`, `.ufo` or `.glyphs`. Check curve quality and curvature, test interpolation, inspect kerning and OpenType Layout features, run contours under FontAudit, and see how automatic master matching behaves. On the Mac, you can even check hinting in the genuine Windows ClearType rasterizer via the TrueType Hinting tool.
+
+When you do need to save and export, the *buy* button is one click away.
+
+[Read more →](https://help.fontlab.com/fontlab-vi/Release-Notes/)
 
 macOS 10.15 Catalina drops all 32-bit app support, which means FontLab Studio 5, Fontographer 5, TypeTool 3, and BitFonter 3 for Mac will not run on it — and porting them to 64-bit is not feasible. If you are on Catalina, your options are CrossOver Mac 19 (run the Windows versions via a thin emulation layer), a virtual machine running an older macOS or Windows, or upgrading to the 64-bit FontLab 7.
 
