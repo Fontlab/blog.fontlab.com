@@ -4,15 +4,53 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository state (2026-05-08)
 
-Live and building. ProperDocs 1.6.7 + MaterialX 10.1.4 site at `mkdocs/mkdocs.yml`, blog moved to site root (`blog_dir: .`, posts at `/yyyy/mm/dd/slug/`). 78 published posts in `src_docs/md/posts/`, 11 offline drafts under `issues/draft-posts/`. RSS + JSON Feed, `llms.txt` / `llms-full.txt` generated. Build via `./build.sh build` (Flowmark format → ProperDocs build); preview via `./build.sh serve`. CI deploys on git tag `v*.*.*` via `peaceiris/actions-gh-pages@v4`.
+Live and building. ProperDocs 1.6.7 + MaterialX 10.1.4 site at `mkdocs/mkdocs.yml`, blog moved to site root (`blog_dir: .`, posts at `/yyyy/mm/dd/slug/`). 78 published posts in `src_docs/md/posts/`, 11 offline drafts under `issues/draft-posts/`. RSS + JSON Feed, `llms.txt` / `llms-full.txt` generated. Build via `./build.sh build` (Flowmark format → ProperDocs build); preview via `./build.sh serve`.
 
 Source: `IDEA.md` (master spec, read first), `spec/00-toc.md` + `spec/01.md`–`spec/15.md` (chapters incl. editorial roadmap and content series), `TODO.md` (open work), `CHANGELOG.md` (history). Latest release tag: `v1.0.58`.
 
 Open work right now (see `TODO.md`): 13 generic-placeholder image follow-ups. Everything else from the recent rewrite/title-case/CTA/consolidation/missing-image sprints has shipped.
 
+## Build & deploy (load-bearing — read before touching publishing)
+
+The hosting has three parts that are easy to confuse. Keep them straight:
+
+| Piece | Truth |
+|---|---|
+| **GitHub Pages source** | The **`gh-pages`** branch (a repo *setting*, not in the tree), served at `blog.fontlab.com`. **Not** `main/docs`. |
+| **`.github/workflows/ci.yml`** (`deploy`) | Runs `./build.sh build`, then deploys `docs/` → `gh-pages` via `peaceiris/actions-gh-pages@v4` (orphan branch, writes `CNAME`). |
+| **`docs/`** | Build output. Tracked on `main` but **vestigial** — it only seeds `docs/CNAME`, which `build.sh` *preserves* (does not regenerate) and CI's sanity-check requires. Never hand-edit; the live HTML comes from `gh-pages`. |
+
+**`ci.yml` triggers:** push to `main`, `v*.*.*` tag push, and manual dispatch.
+So a single Markdown push to `main` is enough to publish — `build.sh` runs in
+CI and redeploys `gh-pages`. `./build.sh build` does Flowmark-format
+`src_docs/md/` → clean `docs/` (preserving `CNAME`) → ProperDocs build.
+`./publish.sh` is the heavier path: build + sanity-check + `uvx gitnextver`
+(commit, tag, push) — the tag also triggers deploy.
+
+Do **not** "fix" the `docs/` churn by untracking it: a fresh CI checkout needs
+`docs/CNAME` to exist before `build.sh` runs, or the sanity-check fails.
+
+Force a redeploy: `gh workflow run deploy --repo Fontlab/blog.fontlab.com --ref main`.
+
+> **History / gotcha (2026-06-07):** Pages previously served `main/docs`
+> directly and `ci.yml` ran only on tags. The api.fontlab.com web admin
+> publishes posts by committing only the source Markdown to `main` (it never
+> rebuilds `docs/`), so posts landed in `src_docs/` but never went live.
+> Fixed by switching Pages to `gh-pages` + adding the `main` push trigger.
+
+### How posts get written
+
+A post is `src_docs/md/posts/YYYY-MM-DD-slug.md` with frontmatter `title:`,
+`authors: [<key>]` (a key from `src_docs/md/authors.yml` — this is the category
+axis; there is **no `tags:` taxonomy**), nested `date: created:`, and `slug:`.
+The excerpt is the text above a `<!-- more -->` separator. Most posts are
+authored through the FontLab WWW Admin
+(`api.fontlab.com/dist/public/www-admin/`, "Blog post" tab), which writes
+exactly this schema and pushes to `main`.
+
 ## Goal (from IDEA.md)
 
-Modern (May 2026) **ProperDocs**-based blog at `blog.fontlab.com`, GitHub Pages from `docs/`. Source Markdown in `src_docs/md/`. `uv`-driven CLI wraps build + publish; GitHub Action runs on tag.
+Modern (May 2026) **ProperDocs**-based blog at `blog.fontlab.com`, GitHub Pages from the `gh-pages` branch (built by CI from `docs/` — see [Build & deploy](#build--deploy-load-bearing--read-before-touching-publishing)). Source Markdown in `src_docs/md/`. `uv`-driven CLI wraps build + publish; the deploy Action runs on push to `main`, on `v*.*.*` tags, and on manual dispatch.
 
 Content is ported (selectively, blog-only, no promos) from:
 - `reference/fontlab-com-oldpub/2013…2023/` — keep blog-style posts mostly verbatim, preserve original dates
