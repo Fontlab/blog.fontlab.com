@@ -1,13 +1,4 @@
----
-title: "Vexy Lines 2 is here!"
-authors: [vexy-lines]
-date:
-  created: 2026-06-07
-slug: vexy-lines-2
----
 Say hello to Vexy Lines 2, with all-new image filters, a stroke-cutting sharp mask, cross-hatching diamond dots, organic wobble & rough strokes, much faster parameter tweaking, and hundreds of other improvements. If you have Vexy Lines 1, it’s free!
-
-<!-- more -->
 
 In this article, we’re covering the new features in Vexy Lines 2.0, and also those that we added Vexy Lines 1.1. If you already have Vexy Lines, use **Check for Updates** to get the latest version. If you don’t, now is a good time!
 
@@ -45,7 +36,7 @@ The new **Sharp mask** cuts the rendered strokes precisely at the mask boundarie
 
 And when Mask Overlay makes the current layer’s active regions inactive in the group’s layers below, those excluded regions now render correctly in red if **Highlight Masks** is on.
 
-- Updated in 1.1: With the Brush tool active, tap **[** and **]** to decrease or increase the mask brush size
+- Updated in 1.1: With the Brush tool active, tap **\[** and **\]** to decrease or increase the mask brush size
 
 ## New in 2.0: Diamond dots
 
@@ -117,7 +108,7 @@ After that, **File > Export** (Cmd+E / Ctrl+E) repeats the last export instantly
 - You can set a document background color in the Properties panel, included in PDF, SVG, and PNG exports.
 - On Windows, File Explorer now shows richer thumbnails and previews for `.lines` documents.
 
-* * *
+______________________________________________________________________
 
 Plus hundreds of other improvements and fixes throughout the app.
 

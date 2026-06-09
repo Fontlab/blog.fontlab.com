@@ -138,4 +138,5 @@ News, technical writing, and product updates from FontLab.
 - [The hedcut at 45](https://blog.fontlab.com/2026/04/28/the-hedcut-at-45/index.md)
 - [Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes](https://blog.fontlab.com/2026/05/03/color-fonts-in-2026/index.md)
 - [From bland to bold: turning any image into a vector with Vexy Lines](https://blog.fontlab.com/2026/05/07/from-bland-to-bold-with-vexy-lines/index.md)
+- [Vexy Lines 2 is here!](https://blog.fontlab.com/2026/06/07/vexy-lines-2/index.md)
 
