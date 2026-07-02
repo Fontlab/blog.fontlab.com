@@ -14,11 +14,9 @@ With Vexy Lines, you can make the most of your variable fonts. Create expressive
 
 <div class="w-1/2 float-right"><script type="module" src="https://i.vexy.art/dist/lines-nano/vexy-before-after.js"></script><vexy-before-after before="https://i.vexy.art/vl/case-text/vexy3d-7-before.jpg" after="https://i.vexy.art/vl/case-text/vexy3d-7-after.png" before-label="Source image" after-label="Text fill" position="50" direction="horizontal" aspect="1/1" rounded="6px" style="display: block; width: 100%; max-width: 1024px; margin: 0 auto"></vexy-before-after></div>
 
-What do Vexy Lines and FontLab have in common? Same developers, and same passion for high-quality typography. So, even though Vexy Lines is our new Mac & Windows app for parametric creation of vector graphics — of course we added a unique typographic gem it: Text fill!
+What do Vexy Lines and FontLab have in common? Same developers, and same passion for high-quality typography. So, even though Vexy Lines is our new Mac & Windows app for parametric creation of vector graphics — of course we added a unique typographic gem it: Text fill. If you make or use variable fonts — it’s a must!
 
-Drop in a source image, Put a base fill over it, and hide it — Linear, Wave, Circular, Spiral, Handmade, or even Halftone!
-
-Apply Filters like Contrast or Blur to the base fill to tweak the impact of the source image.
+Drop in a source image, Put a base fill over it, and hide it — Linear, Wave, Circular, Spiral, Handmade, or even Halftone! Apply Filters like Contrast or Blur to the base fill to tweak the impact of the source image.
 
 Add a Text fill based on the first fill. The pattern paths of the base fill decide where and how the baselines in the Text fill will flow. Enter your text, pick a variable font, nominate a variation axis.
 
