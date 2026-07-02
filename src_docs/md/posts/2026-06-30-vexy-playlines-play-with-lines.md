@@ -12,7 +12,7 @@ slug: vexy-playlines-play-with-lines
 
 <!-- more -->
 
-<script type="module" src="https://i.vexy.art/dist/lines-nano/vexy-lines-nano-v1/vexy-lines-nano.element.js"></script><vexy-lines-nano image="https://i.vexy.art/vl/case-portraits/hedcpt-elara-500x500-100-src.jpg" fill="wave" color="#111827" plugins="fill-switcher drag before-after formats get badge" formats="svg png pdf" style="display:block;width:100%;max-width:560px;aspect-ratio:1/1;margin:1.5rem auto;border-radius:14px;overflow:hidden;border:1px solid #ececf0;"></vexy-lines-nano>
+<div class="w-3/5 float-right ml-6 mb-4"><script type="module" src="https://i.vexy.art/dist/lines-nano/vexy-lines-nano-v1/vexy-lines-nano.element.js"></script><vexy-lines-nano image="https://i.vexy.art/vl/case-portraits/hedcpt-elara-500x500-100-src.jpg" fill="wave" color="#111827" plugins="fill-switcher drag before-after formats get badge" formats="svg png pdf" style="display:block;width:100%;max-width:560px;aspect-ratio:1/1;margin:1.5rem auto;border-radius:14px;overflow:hidden;border:1px solid #ececf0;"></vexy-lines-nano></div>
 
 Here’s a live example of Vexy Playlines running right here on this page: switch the fill, move the before-after splitter, and drag the patterns to change its parameters: left, right, up and down!
 
