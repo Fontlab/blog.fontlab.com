@@ -4,7 +4,7 @@ What do Vexy Lines and FontLab have in common? Same developers, and same passion
 
 Drop in a source image, Put a base fill over it, and hide it — Linear, Wave, Circular, Spiral, Handmade, or even Halftone! Apply Filters like Contrast or Blur to the base fill to tweak the impact of the source image.
 
-Add a Text fill based on the first fill. The pattern paths of the base fill decide where and how the baselines in the Text fill will flow. Enter your text, pick a variable font, nominate a variation axis — and watch Vexy Lines work its variable magic.
+Add a Text fill based on the first fill. The pattern paths of the base fill decide where and how the baselines in the Text fill will flow. Enter your text, pick a variable font, nominate a variation axis — and watch Vexy Lines work its magic.
 
 As the text flows along the pattern paths, Vexy Lines samples the image brightness under each glyph, and uses it to choose the font size and the instance — so your bitmap becomes the UI for your variable font! A simple linear gradient from white to black plus a variable Futura gives the pretty gradient above, made out of typographic color.
 
