@@ -74,6 +74,17 @@
   })(window,document,'script','dataLayer','GTM-5WNRV8Z7');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- Tailwind CSS (Play CDN) for utility classes in post Markdown via attr_list.
+       Preflight is OFF so Tailwind's base reset cannot clobber the MaterialX theme;
+       we only want the utility layer (grid, flex, gap, rounded, shadow, aspect, …). -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      important: '.md-typeset'
+    };
+  </script>
+
   <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

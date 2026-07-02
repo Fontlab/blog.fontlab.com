@@ -1,5 +1,137 @@
 # Changelog
 
+## [Unreleased] — 2026-07-02 — Frontpage AIDA leads + index-only thumbnails
+
+### Added
+- New `.illu-front` thumbnail mode in `extra.css`: the image shows as the
+  200px card thumbnail on the blog index but is hidden on the post page.
+  Completes the trio — `.illu-thumb` (post only), `.illu-thumb .illu-index`
+  (both), `.illu-thumb .illu-front` (index only).
+- New `.illu-photo` modifier: exempts photographic/color thumbnails from
+  the dark-mode line-art invert filter; cover-fit with rounded corners.
+- Six square 600×600 thumbnails in `src_docs/md/media/` (`*-thumb-sq.*`),
+  cropped/resized via sips from i.vexy.art case art and landing heroes.
+
+### Changed
+- Rewrote the lead paragraph (excerpt above `<!-- more -->`) of all six
+  Vexy Lines/Playlines posts as dense, self-standing AIDA leads for the
+  blog index, and attached the index-only square thumbnail to each.
+
+## [Unreleased] — 2026-07-02 — Vexy Lines teaser AIDA rewrite (issues/211.md)
+
+### Changed
+- Rewrote all six Vexy Lines / Playlines teaser posts (2026-06-22 …
+  2026-06-30) as four-paragraph AIDA stories, each voiced for the target
+  audience named in issues/211.md (type designers, brand/vector designers,
+  poster designers, general graphic designers).
+- Added judicious media per post: `https://i.vexy.art/vl/…` lead images,
+  local `media/` screenshots, and one interactive element where it earns
+  its place — Vexy Before-After sliders (typography, portraits, lettering)
+  and one draggable Vexy Lines Nano (Playlines).
+- Fixed component pitfalls: aligned before/after pairs only (swapped
+  typography UI screenshots for the flamesq artwork pair; replaced the
+  retro scan-vs-vector slider, whose framings don't align, with a static
+  restored-scan image), and collapsed multi-line custom-element markup to
+  a single line so Markdown emits real tags instead of escaped source.
+
+### Verified
+- `./build.sh build` clean; all six pages 200 on 127.0.0.1:8080; every
+  local and remote image/script URL resolves (200); no escaped `&lt;vexy-…`
+  markup in built HTML; excerpts render on the blog index.
+
+## 2026-07-02 (earlier) — Vexy Lines teaser condensation
+
+### Changed
+- Condensed the six Vexy Lines / Playlines posts from 2026-06-22 through
+  2026-06-30 into three-paragraph teasers.
+- Replaced full case-study narration, image grids, embeds, headings, and
+  references with short audience-specific copy that points readers to the actual
+  Vexy Lines case pages or Playlines app.
+
+### Verified
+- Paragraph-count check confirms each edited source post has exactly 3 body
+  paragraphs.
+- `./build.sh build` completes successfully and regenerates all six public post
+  pages.
+
+## [Unreleased] — 2026-07-02 — Playlines embed export UI
+
+### Fixed
+- Removed the `copy` plugin from the Playlines blog embed so the embedded
+  `<vexy-lines-nano>` widget shows a single SVG/PNG/PDF download dropdown
+  instead of two adjacent format dropdowns.
+
+### Verified
+- `./build.sh build` completes.
+- `node --check` passes for the relevant `i.vexy.art/docs/dist/lines-nano`
+  plugin modules.
+- Python Playwright on the localhost Playlines post confirms one dropdown exists
+  and opening it shows `SVG`, `PNG`, `PDF`.
+
+## [Unreleased] — 2026-07-01 — Vexy Lines series revision (issue 211, Tasks 1 & 2)
+
+### Fixed / investigated (Task 1 — "new posts don't show on localhost")
+- Diagnosed as **non-reproducing**: a clean `./build.sh build` regenerates all six
+  post dirs and `live-server docs` serves each (HTTP 200) and lists all six on `/`.
+  The build/serve pipeline is correct — the original symptom was a stale
+  browser/live-server tab (reload socket doesn't fire on tabs opened before the
+  server) or a view during "Cleaning site directory". Remedy: hard-refresh or
+  restart live-server. No config change needed. (`draft_on_serve: true` only
+  affects `properdocs serve`, not the static server, and these posts aren't drafts.)
+
+### Changed (Task 2 — friendlier rewrite + better media)
+- Rewrote all six posts in a warmer, more conversational register, each with its own
+  twist: host/welcome (new-home), peer-to-peer + precise (typography), practical +
+  space-crew humor (portraits), the print-shop-email running gag (lettering),
+  hype/steal-the-look (retro), and playful "drag this" (Playlines).
+- Replaced the weak placeholder images with **real case-study art** pulled from
+  `www.vexy.art/dev_wf/lines/case-*` (web-ready stages, the Elara before→process→
+  engraving, the balltext specimen, the teal/orange crew) and **live-site
+  screenshots** captured via headless Chrome over CDP (cookie-consent modal
+  dismissed by coordinate click; `shoot.py`).
+- Portraits post now shows Elara's before/after + process (per brief) and drops the
+  mismatched source-headshots collage.
+- Fixed two swapped `this_file:` headers (06-23 typography, 06-29 retro).
+- Removed 13 orphaned/superseded media files.
+
+### Added (infra)
+- **Tailwind CSS (Play CDN)** in `mkdocs/mk-fontlab/main.html` `extrahead`, with
+  `corePlugins.preflight:false` and `important:'.md-typeset'` so utility classes work
+  in post Markdown without the base reset clobbering the MaterialX theme. Posts use
+  responsive `<img>` grids (`grid grid-cols-… gap-… my-…`) — authored as raw HTML with
+  root-absolute `/media/…` paths so Flowmark's `--width 0` line-collapsing and
+  `md_in_html`'s `<p>`-wrapping can't break the grid.
+- A **live `<vexy-lines-nano>` embed** in the Playlines post (loads
+  `i.vexy.art/dist/lines-nano/…`; image served with `ACAO: *` so the canvas isn't
+  tainted), giving readers an interactive before/after they can drag.
+
+### Verified
+- `./build.sh build` completes (exit 0); Tailwind CDN present in built `<head>`.
+- Browser render (headless, localhost:8080) confirms: 2- and 3-column grids lay out
+  as columns; standalone images and screenshots load via `/media/`; the nano embed
+  renders a live before/after split; MaterialX theme unaffected by Tailwind.
+- All `../media/` and `/media/` references resolve to existing files; no missing images.
+
+## [Unreleased] — 2026-06-30 — Vexy Lines week series (issue 211)
+
+### Added
+- Six `vexy-lines` blog posts, one per scheduled date:
+  - `2026-06-22-vexy-lines-new-home.md` — the relaunched vexy.art/lines site + the Strokes Maker → Vexy origin story; opens the week-long series.
+  - `2026-06-23-vexy-lines-retro-poster-revival.md` — Albert Kapr's 1977 poster revived as three variants; for poster/graphic designers (hype + humor).
+  - `2026-06-24-vexy-lines-one-team-one-look.md` — unifying mismatched team headshots; for website/UI designers (problem-solving + the space-crew demo).
+  - `2026-06-25-vexy-lines-lettering-that-survives-the-cutter.md` — flat vector patterns for vinyl/large-format; for vector/brand designers.
+  - `2026-06-29-vexy-lines-type-that-reads-the-picture.md` — per-glyph variable-font instance selection; for type designers (precise).
+  - `2026-06-30-vexy-playlines-paint-with-algorithms.md` — the free browser app; viral/emotional finale.
+- 29 curated, date-prefixed images copied into `src_docs/md/media/` and referenced by the posts.
+- Six social files in `src_docs/social/` (primary tweet + alternates + a 3-tweet thread + a LinkedIn variant each).
+- Two researched SEO/virality recommendation docs: `www.vexy.art/dev_wf/ideas-260630.md` (vexy.art site) and `www.vexy.art/dev_wf/playlines/ideas-260630.md` (Vexy Playlines), each ~2,300 words with a NOW/NEXT/LATER roadmap and cited sources.
+
+### Verified
+- `./build.sh build` completes (exit 0); ProperDocs builds in ~5 s with only the pre-existing `topic/index.md` nav notice.
+- All six posts render at `docs/2026/06/<dd>/<slug>/index.html`; 29 new media files copied into `docs/media/`.
+- Every `../media/...` reference in the six posts resolves to an existing file.
+- Frontmatter on all six posts matches the house schema after Flowmark (`this_file`, quoted title, `authors: [vexy-lines]`, nested `date.created`, `slug`; no `tags:` field).
+
 ## [Unreleased] — 2026-05-22 — Publish helper
 
 ### Added

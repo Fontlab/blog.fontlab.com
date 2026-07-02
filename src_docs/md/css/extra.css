@@ -7,6 +7,11 @@
    Markdown classes (set via attr_list, e.g. `{ .illu-thumb }`):
      .illu-thumb   default — float right, wraps text on left
      .illu-left    modifier — flip to float left
+     .illu-index   modifier — also show as thumbnail on the blog index
+     .illu-front   modifier — show ONLY on the blog index, hidden on
+                   the post page (for posts with dedicated art inside)
+     .illu-photo   modifier — photographic/color art: no dark-mode
+                   invert, rounded corners, cover-fit
 
    Sizing is contextual:
      - Inside .md-post--excerpt (blog index card) → small thumbnail
@@ -55,7 +60,8 @@
 /* When .illu-index is present: render the thumbnail anchored to the top-
      right of the excerpt and reserve space on the right of the content so
      the H2 title and body wrap around it cleanly. */
-.md-post--excerpt .md-post__content:has(.illu-thumb.illu-index) {
+.md-post--excerpt .md-post__content:has(.illu-thumb.illu-index),
+.md-post--excerpt .md-post__content:has(.illu-thumb.illu-front) {
   position: relative;
   padding-right: 220px;
   /* image (200) + gap (20) */
@@ -63,7 +69,8 @@
   /* keep the box at least image-tall */
 }
 
-.md-post--excerpt .md-typeset .illu-thumb.illu-index {
+.md-post--excerpt .md-typeset .illu-thumb.illu-index,
+.md-post--excerpt .md-typeset .illu-thumb.illu-front {
   display: block;
   position: absolute;
   top: -1rem;
@@ -75,6 +82,25 @@
   height: 200px;
   object-fit: contain;
   margin: 0;
+}
+
+/* .illu-front: index-only thumbnail. Everywhere outside the excerpt card
+   (i.e. on the post page itself) the image is removed entirely; the
+   excerpt rules above opt it back in on the blog index. */
+.md-typeset .illu-thumb.illu-front {
+  display: none;
+}
+
+/* .illu-photo: photographic or full-color art. The dark-mode invert
+   below is meant for black line-art PNGs — exempt photos, and give
+   them cover-fit with soft corners on the index card. */
+[data-md-color-scheme='slate'] .md-typeset .illu-thumb.illu-photo {
+  filter: none;
+}
+
+.md-post--excerpt .md-typeset .illu-thumb.illu-photo {
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 /* Optional flip-to-left modifier on the index. */
@@ -111,11 +137,13 @@
 
   .md-post--excerpt .md-typeset .illu-thumb,
   .md-post--excerpt .md-typeset .illu-thumb.illu-index,
+  .md-post--excerpt .md-typeset .illu-thumb.illu-front,
   .md-post--excerpt .md-typeset .illu-thumb.illu-index.illu-left {
     display: none;
   }
 
   .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index),
+  .md-post--excerpt .md-post__content:has(.illu-thumb.illu-front),
   .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index.illu-left) {
     padding-right: 0;
     padding-left: 2rem;

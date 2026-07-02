@@ -4,6 +4,78 @@
 
 - (none — session deliverables shipped)
 
+## Shipped (2026-07-02 — Vexy Lines teaser condensation)
+
+- Condensed the six issue-211 Vexy Lines / Playlines posts dated 2026-06-22,
+  2026-06-23, 2026-06-24, 2026-06-25, 2026-06-29, and 2026-06-30 to exactly
+  three prose paragraphs each.
+- Removed the case-study replay structure, headings, image grids, embeds, and
+  references from those post bodies. Each post now teases the relevant Vexy page
+  or Playlines app and links readers there for the actual walkthrough.
+- Preserved the audience targeting from `issues/211.md`: type designers get
+  precise variable-font framing, team/brand maintainers get practical workflow
+  framing, vector/brand designers get production survival, poster designers get
+  expressive revival energy, and Playlines stays quick and playful.
+
+### Verified
+- Paragraph-count check over all six source files: each reports 3 body
+  paragraphs after frontmatter and `<!-- more -->`.
+- `./build.sh build` completed successfully after Flowmark formatting and
+  ProperDocs generation.
+- Confirmed all six generated `docs/2026/06/.../index.html` pages exist and
+  contain the shortened destination-page links.
+
+## Shipped (2026-07-02 — Playlines embed export UI)
+
+- Removed the superfluous `copy` plugin from the live
+  `vexy-lines-nano` embed in `2026-06-30-vexy-playlines-paint-with-algorithms.md`,
+  leaving one SVG/PNG/PDF download dropdown beside the Vexy badge.
+- Reviewed the `i.vexy.art/docs/dist/lines-nano` `get`, `copy`, `formats`,
+  `ui-shared`, and custom-element plugin wiring. No component change was needed:
+  the duplicate control came from this post's embed config requesting both `get`
+  and `copy`.
+- Verified with `./build.sh build`, `node --check` on the relevant
+  `lines-nano` plugin modules, and Python Playwright against
+  `http://127.0.0.1:8080/2026/06/30/vexy-playlines-paint-with-algorithms/`.
+  The rendered widget has one dropdown; opening it shows `SVG`, `PNG`, `PDF`.
+  Existing console noise remains external to this fix: the Tailwind CDN warning
+  and a third-party analytics 400.
+
+## Shipped (2026-07-01 — issue 211 revision, Tasks 1 & 2)
+
+- **Task 1** (posts not showing on localhost): investigated and found non-reproducing.
+  Clean build regenerates all six posts; `live-server docs` serves them (200) and lists
+  them on `/`. Cause = stale browser/live-server tab, not a config bug. No fix needed
+  beyond a hard-refresh; documented in CHANGELOG.
+- **Task 2** (friendlier rewrite + better media): rewrote all six posts conversationally
+  with per-audience twists; replaced weak images with real dev_wf case art + live-site
+  screenshots (headless-Chrome CDP, `scratchpad/shoot.py`); added Tailwind Play CDN
+  (preflight off) + responsive raw-HTML `<img>` grids; embedded a live `<vexy-lines-nano>`
+  in the Playlines post; fixed swapped `this_file` headers; removed 13 orphan images.
+- Verified in a headless browser against localhost:8080 — grids render as columns, all
+  images load, the nano embed renders a live before/after, theme intact.
+
+## Shipped (2026-06-30 Vexy Lines week series — issue 211)
+
+### Posts + media (Task 1)
+- Wrote six `vexy-lines` posts (2026-06-22, -23, -24, -25, -29, -30), each grounded in the live vexy.art source pages and tailored to a distinct audience per the issue brief: general/social, poster designers (hype+humor), website/UI designers (problem-solving), vector/brand designers (vinyl-cutter survival), type designers (precise variable-font detail), and a viral/emotional Playlines finale.
+- Copied 29 curated source images from `www.vexy.art/dev_wf/lines/**` and the `i.vexy.art/docs/playlines/` CDN into `src_docs/md/media/` with date-prefixed names; each post references 4–5.
+- Avoided repeating the existing 2026-05-07 "From bland to bold" and 2026-06-07 "Vexy Lines 2 is here" posts; the 06-22 post uses the fresh Strokes Maker (2007, Dmitry Apanovich) origin angle.
+
+### Tweets (Task 2)
+- Wrote one social file per post in `src_docs/social/` — primary tweet (≤270 chars, URL included), two alternates, a 3-tweet thread, and a LinkedIn variant.
+
+### Research docs (Task 3)
+- `www.vexy.art/dev_wf/ideas-260630.md` (~2.3k words) — vexy.art SEO/virality/conversion plan: title-tag cannibalization fix, per-case OG images + before/after sliders, comparison + use-case landing pages, a "Made with Vexy" UGC gallery loop, unified CTA/canonical buy URL. 23 sources.
+- `www.vexy.art/dev_wf/playlines/ideas-260630.md` (~2.4k words) — Playlines playbook: dedicated `/playlines` landing page + WebApplication/VideoObject schema, "Made with" growth loop + per-creation OG cards, per-style indexable gallery pages, timed FontLab Pass prompt, remix URLs + 9:16 morph MP4. 16 sources.
+
+### Verified
+- `./build.sh build` — exit 0; ProperDocs builds in ~5 s.
+- All six posts render under `docs/2026/06/<dd>/<slug>/index.html`; 29 new media files in `docs/media/`.
+- Image-reference cross-check: every `../media/...` link in the six posts resolves; zero dead references.
+- Frontmatter schema intact after Flowmark (this_file / quoted title / `authors: [vexy-lines]` / `date.created` / slug; no `tags:`).
+- Not committed/pushed — content is on disk only, awaiting the user's publish decision (a push to `main` triggers the Pages deploy).
+
 ## Shipped (2026-05-22 publish helper)
 
 ### Publish script

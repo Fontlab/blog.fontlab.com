@@ -78,6 +78,17 @@
   })(window,document,'script','dataLayer','GTM-5WNRV8Z7');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- Tailwind CSS (Play CDN) for utility classes in post Markdown via attr_list.
+       Preflight is OFF so Tailwind's base reset cannot clobber the MaterialX theme;
+       we only want the utility layer (grid, flex, gap, rounded, shadow, aspect, …). -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      important: '.md-typeset'
+    };
+  </script>
+
   <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1234,6 +1245,60 @@
         <article class="md-post md-post--excerpt">
   <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
         <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-7207644-and-macos-123-monterey"><a class="toclink" href="../../2022/03/22/fontlab-7207644-and-macos-123-monterey/">FontLab 7.2.0.7644 and macOS 12.3 Monterey</a></h2>
+<p><img alt="" class="illu-thumb" src="../../media/illu/fontlab-7-2-0-7649-and-macos-12-3-monterey-1.png" /></p>
+<p>Apple’s macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing the system Python 2.7 that FontLab depended on. FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need to install a bundled Python 2.7 package alongside the app. A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644 does not have that problem. <span class="md-post__metaline"><time datetime="2022-03-22 00:00:00+00:00">March 22, 2022</time> <a class="md-post__readlink" href="../../2022/03/22/fontlab-7207644-and-macos-123-monterey/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="TransType">
+        <img src="/media/authors/transtype.png" alt="TransType">
+      </span><h2 id="rescue-your-postscript-type-1-fonts"><a class="toclink" href="../../2021/09/15/rescue-postscript-type1-transtype/">Rescue your PostScript Type 1 fonts</a></h2>
+<p><img alt="" class="illu-thumb" src="../../media/illu/rescue-postscript-type1-transtype-1.png" /></p>
+<p>PostScript Type 1 fonts are on their way out. Adobe is ending Type 1 support in Creative Cloud applications in early 2023, and Apple has signalled the same direction in macOS. If you have a library of Type 1 fonts — and many working designers do — now is the time to convert them to OpenType. <span class="md-post__metaline"><time datetime="2021-09-15 00:00:00+00:00">September 15, 2021</time> <a class="md-post__readlink" href="../../2021/09/15/rescue-postscript-type1-transtype/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="make-your-variable-fonts-better-with-fontlab-7"><a class="toclink" href="../../2021/05/27/make-variable-fonts-better-fontlab-7/">Make your variable fonts better with FontLab 7</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/make-variable-fonts-better-fontlab-7-1.png" /></p>
+<p>This 19-minute presentation by Adam Twardoch, delivered at ATypI Tech Talks 2021, goes beyond building variable fonts to the harder question: making them good. It covers quality assurance, interpolation checking, and the tools in FontLab 7 and related applications that help catch problems before a variable font ships. <span class="md-post__metaline"><time datetime="2021-05-27 00:00:00+00:00">May 27, 2021</time> <a class="md-post__readlink" href="../../2021/05/27/make-variable-fonts-better-fontlab-7/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-7-a-year-in-updates"><a class="toclink" href="../../2020/12/30/fontlab-7-year-in-review/">FontLab 7: a year in updates</a></h2>
+<p><img alt="" class="illu-thumb" src="../../media/illu/fontlab-7-year-in-review-1.png" /></p>
+<p>FontLab 7 launched in December 2019 with over 250 new features. Twelve months later, it has rather more than that. Here is what the 2020 update cycle actually delivered — not counting FontLab 7.2, which has <a href="../../2020/11/30/say-hello-to-fontlab-72/">its own post</a>. <span class="md-post__metaline"><time datetime="2020-12-30 00:00:00+00:00">December 30, 2020</time> <a class="md-post__readlink" href="../../2020/12/30/fontlab-7-year-in-review/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="basics-of-spacing-in-fontlab-7"><a class="toclink" href="../../2020/12/16/basics-of-spacing-fontlab-7/">Basics of spacing in FontLab 7</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/basics-of-spacing-fontlab-7-1.png" /></p>
+<p>Spacing is the invisible work that determines whether a font feels effortless or labored to read. This five-minute tutorial from Dave Lawrence’s FontLab 7 series strips the topic down to its essentials: what sidebearings are, how to set them in the metrics window, and how to evaluate spacing visually as you work. <span class="md-post__metaline"><time datetime="2020-12-16 00:00:00+00:00">December 16, 2020</time> <a class="md-post__readlink" href="../../2020/12/16/basics-of-spacing-fontlab-7/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="import-artwork-into-fontlab-7"><a class="toclink" href="../../2020/12/11/import-artwork-fontlab-7/">Import artwork into FontLab 7</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/import-artwork-fontlab-7-1.png" /></p>
+<p>Most type designers don’t draw directly in the font editor — they sketch in pencil, refine in Illustrator or Affinity Designer, then need to get that artwork into FontLab cleanly. This eight-minute video from Dave Lawrence’s FontLab 7 series shows exactly how. <span class="md-post__metaline"><time datetime="2020-12-11 00:00:00+00:00">December 11, 2020</time> <a class="md-post__readlink" href="../../2020/12/11/import-artwork-fontlab-7/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
       </span><h2 id="say-hello-to-fontlab-72"><a class="toclink" href="../../2020/11/30/say-hello-to-fontlab-72/">Say hello to FontLab 7.2</a></h2>
 <p><img alt="" class="illu-thumb" src="../../media/illu/fontlab-72-dec-2020-1.png" /></p>
 <p>FontLab 7.2 is a free update with 120 new or improved features. The headline: interpolation now runs 30× faster. New tools include Rotate, Scale, and Slant; an adaptive freeform grid with Suggest Distance; variable and attached components; visual OpenType feature proofing; and Microsoft VOLT integration. Existing FontLab 7 users get it free; FontLab VI users can upgrade for $99. <span class="md-post__metaline"><time datetime="2020-11-30 00:00:00+00:00">November 30, 2020</time> <a class="md-post__readlink" href="../../2020/11/30/say-hello-to-fontlab-72/">4 min read →</a></span></p>
@@ -1431,58 +1496,6 @@
         <img src="/media/authors/fontlab.png" alt="FontLab">
       </span><h2 id="fontlabs-plans-for-opentype-18-variable-fonts"><a class="toclink" href="../../2016/09/14/fontlab-opentype-variations/">FontLab's plans for OpenType 1.8 variable fonts</a></h2>
 <p>At the ATypI conference in Warsaw, Google, Microsoft, Apple, and Adobe jointly unveiled version 1.8 of the OpenType specification — and with it, variable fonts. <span class="md-post__metaline"><time datetime="2016-09-14 00:00:00+00:00">September 14, 2016</time> <a class="md-post__readlink" href="../../2016/09/14/fontlab-opentype-variations/">2 min read →</a></span></p>
-</div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
-        <img src="/media/authors/fontlab.png" alt="FontLab">
-      </span><h2 id="new-fontlab-vi-public-preview-for-mac"><a class="toclink" href="../../2016/04/29/fontlab-vi-pp4-mac/">New FontLab VI Public Preview for Mac</a></h2>
-<p>A new FontLab VI Public Preview for Mac is out, adding context menus, a Gallery panel for named shapes, faster glyph access, and italic-angle drawing. <span class="md-post__metaline"><time datetime="2016-04-29 00:00:00+00:00">April 29, 2016</time> <a class="md-post__readlink" href="../../2016/04/29/fontlab-vi-pp4-mac/">2 min read →</a></span></p>
-</div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
-        <img src="/media/authors/fontlab.png" alt="FontLab">
-      </span><h2 id="fontlab-vi-public-preview-2-for-mac"><a class="toclink" href="../../2016/01/03/fontlab-vi-public-preview-2/">FontLab VI Public Preview 2 for Mac</a></h2>
-<p>FontLab VI Public Preview 2 (build 5844) is out for Mac, following the expiry of the first preview. We are still not calling it a beta. <span class="md-post__metaline"><time datetime="2016-01-03 00:00:00+00:00">January 3, 2016</time> <a class="md-post__readlink" href="../../2016/01/03/fontlab-vi-public-preview-2/">1 min read →</a></span></p>
-</div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
-        <img src="/media/authors/fontlab.png" alt="FontLab">
-      </span><h2 id="how-to-space-a-font"><a class="toclink" href="../../2015/11/13/how-to-space-a-font/">How to space a font</a></h2>
-<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/how-to-space-a-font-1.png" /></p>
-<p>Spacing is where type design lives or dies. In this 53-minute tutorial, Thomas Phinney walks through sidebearings, optical principles, and the practical workflow inside FontLab Studio 5. <span class="md-post__metaline"><time datetime="2015-11-13 00:00:00+00:00">November 13, 2015</time> <a class="md-post__readlink" href="../../2015/11/13/how-to-space-a-font/">2 min read →</a></span></p>
-</div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
-        <img src="/media/authors/fontlab.png" alt="FontLab">
-      </span><h2 id="basics-of-python-scripting-in-fontlab-studio-5"><a class="toclink" href="../../2015/02/25/python-scripting-fontlab-studio-5/">Basics of Python scripting in FontLab Studio 5</a></h2>
-<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/python-scripting-fontlab-studio-5-3.png" /></p>
-<p>Automation unlocks the real power of a professional font editor. In this 70-minute tutorial, Adam Twardoch introduces Python scripting inside FontLab Studio 5. <span class="md-post__metaline"><time datetime="2015-02-25 00:00:00+00:00">February 25, 2015</time> <a class="md-post__readlink" href="../../2015/02/25/python-scripting-fontlab-studio-5/">2 min read →</a></span></p>
-</div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab Pad">
-        <img src="/media/authors/fontlab-pad.png" alt="FontLab Pad">
-      </span><h2 id="dtl-otmaster-50-vfb2ufo-and-fontlab-pad-11"><a class="toclink" href="../../2014/12/15/otmaster-5-vfb2ufo-fontlab-pad-11/">DTL OTMaster 5.0, vfb2ufo, and FontLab Pad 1.1</a></h2>
-<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/otmaster-5-vfb2ufo-fontlab-pad-11-3.png" /></p>
-<p>December 2014 brought a major update to DTL OTMaster, plus two new free tools. We released a command-line UFO converter and an updated color font typesetter. <span class="md-post__metaline"><time datetime="2014-12-15 00:00:00+00:00">December 15, 2014</time> <a class="md-post__readlink" href="../../2014/12/15/otmaster-5-vfb2ufo-fontlab-pad-11/">2 min read →</a></span></p>
-</div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
-        <img src="/media/authors/fontlab.png" alt="FontLab">
-      </span><h2 id="color-fonts-the-next-big-thing-a-fontlab-tutorial"><a class="toclink" href="../../2014/06/18/color-fonts-tutorial/">Color fonts: the next big thing? A FontLab tutorial</a></h2>
-<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/color-fonts-tutorial-3.png" /></p>
-<p>Back in 2014, color fonts were a brand new frontier. This 103-minute tutorial with Adam Twardoch was one of the first deep dives into how to actually make them. <span class="md-post__metaline"><time datetime="2014-06-18 00:00:00+00:00">June 18, 2014</time> <a class="md-post__readlink" href="../../2014/06/18/color-fonts-tutorial/">2 min read →</a></span></p>
 </div>
 </article>
       

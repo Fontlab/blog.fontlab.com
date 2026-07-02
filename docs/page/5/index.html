@@ -78,6 +78,17 @@
   })(window,document,'script','dataLayer','GTM-5WNRV8Z7');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- Tailwind CSS (Play CDN) for utility classes in post Markdown via attr_list.
+       Preflight is OFF so Tailwind's base reset cannot clobber the MaterialX theme;
+       we only want the utility layer (grid, flex, gap, rounded, shadow, aspect, …). -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      important: '.md-typeset'
+    };
+  </script>
+
   <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1230,6 +1241,58 @@
       <header class="md-typeset">
         <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="new-fontlab-vi-public-preview-for-mac"><a class="toclink" href="../../2016/04/29/fontlab-vi-pp4-mac/">New FontLab VI Public Preview for Mac</a></h2>
+<p>A new FontLab VI Public Preview for Mac is out, adding context menus, a Gallery panel for named shapes, faster glyph access, and italic-angle drawing. <span class="md-post__metaline"><time datetime="2016-04-29 00:00:00+00:00">April 29, 2016</time> <a class="md-post__readlink" href="../../2016/04/29/fontlab-vi-pp4-mac/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-vi-public-preview-2-for-mac"><a class="toclink" href="../../2016/01/03/fontlab-vi-public-preview-2/">FontLab VI Public Preview 2 for Mac</a></h2>
+<p>FontLab VI Public Preview 2 (build 5844) is out for Mac, following the expiry of the first preview. We are still not calling it a beta. <span class="md-post__metaline"><time datetime="2016-01-03 00:00:00+00:00">January 3, 2016</time> <a class="md-post__readlink" href="../../2016/01/03/fontlab-vi-public-preview-2/">1 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="how-to-space-a-font"><a class="toclink" href="../../2015/11/13/how-to-space-a-font/">How to space a font</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/how-to-space-a-font-1.png" /></p>
+<p>Spacing is where type design lives or dies. In this 53-minute tutorial, Thomas Phinney walks through sidebearings, optical principles, and the practical workflow inside FontLab Studio 5. <span class="md-post__metaline"><time datetime="2015-11-13 00:00:00+00:00">November 13, 2015</time> <a class="md-post__readlink" href="../../2015/11/13/how-to-space-a-font/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="basics-of-python-scripting-in-fontlab-studio-5"><a class="toclink" href="../../2015/02/25/python-scripting-fontlab-studio-5/">Basics of Python scripting in FontLab Studio 5</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/python-scripting-fontlab-studio-5-3.png" /></p>
+<p>Automation unlocks the real power of a professional font editor. In this 70-minute tutorial, Adam Twardoch introduces Python scripting inside FontLab Studio 5. <span class="md-post__metaline"><time datetime="2015-02-25 00:00:00+00:00">February 25, 2015</time> <a class="md-post__readlink" href="../../2015/02/25/python-scripting-fontlab-studio-5/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab Pad">
+        <img src="/media/authors/fontlab-pad.png" alt="FontLab Pad">
+      </span><h2 id="dtl-otmaster-50-vfb2ufo-and-fontlab-pad-11"><a class="toclink" href="../../2014/12/15/otmaster-5-vfb2ufo-fontlab-pad-11/">DTL OTMaster 5.0, vfb2ufo, and FontLab Pad 1.1</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/otmaster-5-vfb2ufo-fontlab-pad-11-3.png" /></p>
+<p>December 2014 brought a major update to DTL OTMaster, plus two new free tools. We released a command-line UFO converter and an updated color font typesetter. <span class="md-post__metaline"><time datetime="2014-12-15 00:00:00+00:00">December 15, 2014</time> <a class="md-post__readlink" href="../../2014/12/15/otmaster-5-vfb2ufo-fontlab-pad-11/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="color-fonts-the-next-big-thing-a-fontlab-tutorial"><a class="toclink" href="../../2014/06/18/color-fonts-tutorial/">Color fonts: the next big thing? A FontLab tutorial</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../media/illu/color-fonts-tutorial-3.png" /></p>
+<p>Back in 2014, color fonts were a brand new frontier. This 103-minute tutorial with Adam Twardoch was one of the first deep dives into how to actually make them. <span class="md-post__metaline"><time datetime="2014-06-18 00:00:00+00:00">June 18, 2014</time> <a class="md-post__readlink" href="../../2014/06/18/color-fonts-tutorial/">2 min read →</a></span></p>
+</div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="Adam Twardoch">

@@ -4061,3 +4061,73 @@ ______________________________________________________________________
 Plus hundreds of other improvements and fixes throughout the app.
 
 Vexy Lines 2 is a free upgrade for everyone on version 1. Grab it with **Check for Updates**, and as always, tell us what you make with it—and what you’d like to see next.
+
+In October 2025, we launched Vexy Lines, a Mac & Windows app that redraws any photo as editable vector line art: engraving, halftone, stipple, wireframe, even live variable type that reads the image beneath it. We just revamped the [vexy.art/lines](https://www.vexy.art/lines/) website, which now includes real-life case studies.
+
+A dozen vector fills helps in your creation: Linear engraving, Wave, Halftone, Scribble, Wireframe, Fractal, the image-reading Text fill. Add layers, masks, filters, mesh warps, and you get machinery that turns a one-click result into a considered piece.
+
+On the page, you’ll find case studies that showcase Vexy Lines in real-life (or at least plausible!) scenarios: [team portraits](https://vexy.art/lines/case-portraits) with a sci-fi twist, pixel-driven [variable typography](https://vexy.art/lines/case-typography), [vector lettering](https://vexy.art/lines/case-lettering) that survives vinyl cutting, and a faithful, ultrasharp digital revival of a [retro poster](https://vexy.art/lines/case-retro-poster).
+
+[Say hello to Vexy Lines! →](https://www.vexy.art/lines/)
+
+With Vexy Lines, you can make the most of your variable fonts. Create expressive typographic arrangements, impactful headlines and font specimens. Check out the [Vexy Lines Text fill](https://vexy.art/lines/case-typography/)! It typesets your text along the baselines created by the app’s procedural patterns. Each text glyph picks its font size or variable font instance from the brightness of the image beneath it. Sampled per glyph. Mapped to Weight, Width, Optical Size, or any other axis. Exported to SVG & PDF. For foundries who want to show their design spaces flow along pixels.
+
+What do Vexy Lines and FontLab have in common? Same developers, and same passion for high-quality typography. Of course we added a unique typographic gem into our new parametric vector graphics creation app: Text fill!
+
+Drop in a source image, Put a base fill over it, and hide it — Linear, Wave, Circular, Spiral, Handmade, or even Halftone!
+
+Apply Filters like Contrast or Blur to the base fill to tweak the impact of the source image.
+
+Add a Text fill based on the first fill. The pattern paths of the base fill decide where and how the baselines in the Text fill will flow. Enter your text, pick a variable font, nominate a variation axis.
+
+As the text flows along the pattern paths, Vexy Lines samples the image brightness under each glyph, and makes two-fold use of it.
+
+The image brightness modulates the stroke thickness within the thickness range in the hidden base fill. This, in turn, modulates the font size in the Text fill. Lighter pixels — thinner stroke — smaller glyphs. Make the min and max thickness the same for a constant font size.
+
+Additionally, the image brightness directly drives the variable instance selection along the nominated axis, one interpolated instance per glyph. This works even if the min and max stroke thickness are the same. If you choose Weight, light pixels will give you light letters, dark pixels give you bold glyphs.
+
+That makes it a specimen tool, not a gimmick. Instead of nine static cuts you get the full axis rendered continuously across a single word, and the axis can be anything your designspace defines — Weight, Width, Optical Size, a custom grade; the flame poem drives Weight, Width, Italic and Optical Size at once. It works with the real families you already license — Playfair by Claus Eggers Sørensen, Futura, whatever variable font you feed it — and it exports to SVG and PDF, so the finished piece drops straight into the specimen sheet or the deck you were already building.
+
+[Discover variable typography in Vexy Lines →](https://vexy.art/lines/case-typography/)
+
+Many headshots, many cameras, one team photoshoot: with Vexy Lines, you can turn low-quality photos into visually harmonized, crisp SVGs & PDFs. Turn your starship crew into WSJ-style hedcuts or brutalist stipples, and showcase them from avatar to hero. This [look is worth every penny](https://vexy.art/lines/case-portraits/)!
+
+Vexy Lines reads a photo as pure light and shade, then redraws every tone as a pattern of strokes, layer by layer, until a raw snapshot becomes clean line art that still looks like the person.
+
+The quiet payoff is the next hire. Save the look once, drop in whoever starts on Monday, and your corporate crypto banknote series stays consistent without a design meeting or a reshoot. The team page, that is.
+
+[Read the Vexy Lines case study: Team portrait →](https://vexy.art/lines/case-portraits/)
+
+Airbrushed lettering dies at the vinyl cutter: no edge to follow, no colour to separate. The Vexy Lines [lettering case study](https://www.vexy.art/lines/case-lettering/) rebuilds the glow as flat vector structure — halftone stars sized by tone, masked outlines, hand-tuned Béziers. The result cuts cleanly at four feet, separates to spot colours, and stays editable the whole way.
+
+We turned a soft, low-res airbrush mark into ultrasharp vectors using seven Vexy Lines fills. Best part? Not one of them uses an actual gradient or pixel texture!
+
+A halftone fill scatters stars whose size tracks the tone of the original, so the glow becomes dots you can cut. Hand-drawn shells get their outer edge auto-traced, then tightened by hand with the simple Vexy Lines curve editor. We added a teal core by masking and shrinking the outline, plus a darker halftone fill inside the same mask for texture.
+
+Every soft transition is now a hard-edged path or a field of countable marks. That is the difference between a picture of your wordmark, and a wordmark that the machine can actually reproduce.
+
+[Read the Vexy Lines case study: Lettering →](https://www.vexy.art/lines/case-lettering/)
+
+In 1977, Albert Kapr squeezed poster style out of cheap GDR paper and a one-colour press. The [Vexy Lines retro case study](https://vexy.art/lines/case-retro-poster/) scans his SC Dynamo sheet, rebuilds the halftone photo into a vector signal where stroke thickness answers to luminance, and pours one photograph into three posters: faithful linear, colour-soaked, and full brutalist for the scrolling feed.
+
+Here is what happens when you stop worshipping the museum glass and start reverse-engineering it. We scanned the poster, rebuilt the halftoned photo back into continuous tone, then dropped that grayscale image into Vexy Lines.
+
+Out come retro-authentic vector-perfect ultrasized linear halftones! The reverent direction is black on white, the same line-screen idea Kapr used, now vector artwork that scales past anything a 1977 press could dream of printing.
+
+Take the method, bring it into today: Start with a photo, let the lines carry the tone, then decide whether the gig wants faithful, fluorescent, or feral: and let the engine do the redrawing while you do the deciding!
+
+[Read the Vexy Lines case study: Retro poster revival →](https://vexy.art/lines/case-retro-poster/)
+
+[Vexy Playlines](https://playlines.vexy.art/) turns any photo into vector art in the browser: drop an image, pick one of fourteen algorithmic fills, from classic linear or dotted halftones, to stipple, low-poly, wireframe, ASCII. Drag a slider or two, export SVG! Five fills are free with no sign-up, nothing to install; nine more unlock with a FontLab Pass. Try the [quick little cousin](https://playlines.vexy.art/) of our Mac and Windows Vexy Lines app — built for the ten-minute detour that eats an afternoon.
+
+Here’s a live example of Vexy Playlines running right here on this page: switch the fill, move the before-after splitter, and drag the patterns to change its parameters: left, right, up and down!
+
+Playlines takes the pixels from a photo, reads the tone and the edges, and rebuilds the whole thing in front of you as lines or dots or typed characters while you watch. Nudge a parameter and it redraws instantly, so you’re never guessing, you’re steering. What comes out is a real vector file that scales to a phone or a billboard without going soft. But you don’t have to know any of that to enjoy it. Drag until the picture looks right, download it, then drop it into Photoshop or Affinity or PowerPoint.
+
+Vexy Playlines ships with fourteen ways to see the same face. Stipple scatters thousands of dots like a pointillist who never needs a break; Low-Poly shatters the portrait into coloured triangles; Wireframe turns a person into a blueprint. Five of these fills are free for everyone, with SVG export and no sign-up.
+
+The other nine fills unlock with a FontLab Pass. Each download costs a single Vexy Coin, no subscription. One photo, fourteen completely different looks. You’ll end up trying every single one!
+
+Go do it with your own photo: you’ll have real vector art in less time than it took to read this post!
+
+[Try Vexy Playlines →](https://playlines.vexy.art/)
