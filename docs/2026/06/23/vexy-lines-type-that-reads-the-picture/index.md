@@ -1,6 +1,6 @@
 With Vexy Lines, you can make the most of your variable fonts. Create expressive typographic arrangements, impactful headlines and font specimens. Check out the [Vexy Lines case study: Text fill](https://vexy.art/lines/case-typography/)! It typesets your text along the baselines created by the app’s procedural patterns. Each text glyph picks its font size or variable font instance from the brightness of the image beneath it. Sampled per glyph. Mapped to Weight, Width, Optical Size, or any other axis. Exported to SVG & PDF. For foundries who want to show their design spaces flow along pixels.
 
-What do Vexy Lines and FontLab have in common? Same developers, and same passion for high-quality typography. Of course we added a unique typographic gem into our new parametric vector graphics creation app: Text fill!
+What do Vexy Lines and FontLab have in common? Same developers, and same passion for high-quality typography. So, even though Vexy Lines is our new Mac & Windows app for parametric creation of vector graphics — of course we added a unique typographic gem it: Text fill!
 
 Drop in a source image, Put a base fill over it, and hide it — Linear, Wave, Circular, Spiral, Handmade, or even Halftone!
 
