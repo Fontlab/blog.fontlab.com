@@ -8,7 +8,7 @@ slug: vexy-lines-retro-poster-revival
 ---
 ![The brutalist remix of Kapr’s 1977 football poster: fluorescent stochastic halftone](../media/2026-06-29-thumb-sq.png){ .illu-thumb .illu-front .illu-photo }
 
-In 1977, Albert Kapr squeezed poster style out of cheap GDR paper and a one-colour press. The [Vexy Lines retro case study](https://vexy.art/lines/case-retro-poster/) scans his SC Dynamo sheet, rebuilds the halftone photo into a vector signal where stroke thickness answers to luminance, and pours one photograph into three posters: faithful linear, colour-soaked, and full brutalist for the scrolling feed.
+In 1977, Albert Kapr squeezed poster style out of cheap GDR paper and a one-colour press. The [Vexy Lines case study: retro poster](https://vexy.art/lines/case-retro-poster/) scans his SC Dynamo sheet, rebuilds the halftone photo into a vector signal where stroke thickness answers to luminance, and pours one photograph into three posters: faithful linear, colour-soaked, and full brutalist for the scrolling feed.
 
 <!-- more -->
 

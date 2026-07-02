@@ -1,4 +1,4 @@
-Airbrushed lettering dies at the vinyl cutter: no edge to follow, no colour to separate. The Vexy Lines [lettering case study](https://www.vexy.art/lines/case-lettering/) rebuilds the glow as flat vector structure — halftone stars sized by tone, masked outlines, hand-tuned Béziers. The result cuts cleanly at four feet, separates to spot colours, and stays editable the whole way.
+Airbrushed lettering dies at the vinyl cutter: no edge to follow, no colour to separate. The [Vexy Lines case study: lettering](https://www.vexy.art/lines/case-lettering/) rebuilds the glow as flat vector structure — halftone stars sized by tone, masked outlines, hand-tuned Béziers. The result cuts cleanly at four feet, separates to spot colours, and stays editable the whole way.
 
 We turned a soft, low-res airbrush mark into ultrasharp vectors using seven Vexy Lines fills. Best part? Not one of them uses an actual gradient or pixel texture!
 

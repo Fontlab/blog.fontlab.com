@@ -4070,7 +4070,7 @@ On the page, you’ll find case studies that showcase Vexy Lines in real-life (o
 
 [Say hello to Vexy Lines! →](https://www.vexy.art/lines/)
 
-With Vexy Lines, you can make the most of your variable fonts. Create expressive typographic arrangements, impactful headlines and font specimens. Check out the [Vexy Lines Text fill](https://vexy.art/lines/case-typography/)! It typesets your text along the baselines created by the app’s procedural patterns. Each text glyph picks its font size or variable font instance from the brightness of the image beneath it. Sampled per glyph. Mapped to Weight, Width, Optical Size, or any other axis. Exported to SVG & PDF. For foundries who want to show their design spaces flow along pixels.
+With Vexy Lines, you can make the most of your variable fonts. Create expressive typographic arrangements, impactful headlines and font specimens. Check out the [Vexy Lines case study: Text fill](https://vexy.art/lines/case-typography/)! It typesets your text along the baselines created by the app’s procedural patterns. Each text glyph picks its font size or variable font instance from the brightness of the image beneath it. Sampled per glyph. Mapped to Weight, Width, Optical Size, or any other axis. Exported to SVG & PDF. For foundries who want to show their design spaces flow along pixels.
 
 What do Vexy Lines and FontLab have in common? Same developers, and same passion for high-quality typography. Of course we added a unique typographic gem into our new parametric vector graphics creation app: Text fill!
 
@@ -4098,7 +4098,7 @@ The quiet payoff is the next hire. Save the look once, drop in whoever starts on
 
 [Read the Vexy Lines case study: Team portrait →](https://vexy.art/lines/case-portraits/)
 
-Airbrushed lettering dies at the vinyl cutter: no edge to follow, no colour to separate. The Vexy Lines [lettering case study](https://www.vexy.art/lines/case-lettering/) rebuilds the glow as flat vector structure — halftone stars sized by tone, masked outlines, hand-tuned Béziers. The result cuts cleanly at four feet, separates to spot colours, and stays editable the whole way.
+Airbrushed lettering dies at the vinyl cutter: no edge to follow, no colour to separate. The [Vexy Lines case study: lettering](https://www.vexy.art/lines/case-lettering/) rebuilds the glow as flat vector structure — halftone stars sized by tone, masked outlines, hand-tuned Béziers. The result cuts cleanly at four feet, separates to spot colours, and stays editable the whole way.
 
 We turned a soft, low-res airbrush mark into ultrasharp vectors using seven Vexy Lines fills. Best part? Not one of them uses an actual gradient or pixel texture!
 
@@ -4108,7 +4108,7 @@ Every soft transition is now a hard-edged path or a field of countable marks. Th
 
 [Read the Vexy Lines case study: Lettering →](https://www.vexy.art/lines/case-lettering/)
 
-In 1977, Albert Kapr squeezed poster style out of cheap GDR paper and a one-colour press. The [Vexy Lines retro case study](https://vexy.art/lines/case-retro-poster/) scans his SC Dynamo sheet, rebuilds the halftone photo into a vector signal where stroke thickness answers to luminance, and pours one photograph into three posters: faithful linear, colour-soaked, and full brutalist for the scrolling feed.
+In 1977, Albert Kapr squeezed poster style out of cheap GDR paper and a one-colour press. The [Vexy Lines case study: retro poster](https://vexy.art/lines/case-retro-poster/) scans his SC Dynamo sheet, rebuilds the halftone photo into a vector signal where stroke thickness answers to luminance, and pours one photograph into three posters: faithful linear, colour-soaked, and full brutalist for the scrolling feed.
 
 Here is what happens when you stop worshipping the museum glass and start reverse-engineering it. We scanned the poster, rebuilt the halftoned photo back into continuous tone, then dropped that grayscale image into Vexy Lines.
 

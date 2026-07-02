@@ -8,7 +8,7 @@ slug: vexy-lines-lettering-that-survives-the-cutter
 ---
 ![Airbrush-style lettering rebuilt as flat, cuttable vector structure](https://i.vexy.art/vl/case-lettering/airbrush-result.png){ .illu-thumb .illu-front .illu-photo }
 
-Airbrushed lettering dies at the vinyl cutter: no edge to follow, no colour to separate. The Vexy Lines [lettering case study](https://www.vexy.art/lines/case-lettering/) rebuilds the glow as flat vector structure — halftone stars sized by tone, masked outlines, hand-tuned Béziers. The result cuts cleanly at four feet, separates to spot colours, and stays editable the whole way.
+Airbrushed lettering dies at the vinyl cutter: no edge to follow, no colour to separate. The [Vexy Lines case study: lettering](https://www.vexy.art/lines/case-lettering/) rebuilds the glow as flat vector structure — halftone stars sized by tone, masked outlines, hand-tuned Béziers. The result cuts cleanly at four feet, separates to spot colours, and stays editable the whole way.
 
 <!-- more -->
 
