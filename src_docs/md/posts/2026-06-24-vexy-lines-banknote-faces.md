@@ -12,7 +12,7 @@ Many headshots, many cameras, one team photoshoot: with Vexy Lines, you can turn
 
 <!-- more -->
 
-<div class="w-3/5 float-right"><script type="module" src="https://i.vexy.art/dist/lines-nano/vexy-before-after.js"></script> <vexy-before-after before="https://i.vexy.art/vl/case-portraits/hedcpt-elara-src-2048x2048.jpg" after="https://i.vexy.art/vl/case-portraits/hedcpt-elara-2048x2048.jpg" before-label="Photo" after-label="Vexy Lines" position="38" direction="vertical" aspect="1/1" rounded="6px" style="display: block; width: 100%; max-width: 1280px; margin: 0 auto"></vexy-before-after></div>
+<div class="w-3/5 float-right ml-6 mb-4"><script type="module" src="https://i.vexy.art/dist/lines-nano/vexy-before-after.js"></script> <vexy-before-after before="https://i.vexy.art/vl/case-portraits/hedcpt-elara-src-2048x2048.jpg" after="https://i.vexy.art/vl/case-portraits/hedcpt-elara-2048x2048.jpg" before-label="Photo" after-label="Vexy Lines" position="38" direction="vertical" aspect="1/1" rounded="6px" style="display: block; width: 100%; max-width: 1280px; margin: 0 auto"></vexy-before-after></div>
 
 Vexy Lines reads a photo as pure light and shade, then redraws every tone as a pattern of strokes, layer by layer, until a raw snapshot becomes clean line art that still looks like the person.
 
