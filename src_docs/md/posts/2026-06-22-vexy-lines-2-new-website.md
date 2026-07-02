@@ -12,7 +12,7 @@ In October 2025, we launched Vexy Lines, a Mac & Windows app that redraws any ph
 
 <!-- more -->
 
-[![The new Vexy Lines home page, showing a photograph redrawn as scalable vector line art](../media/2026-06-22-site-home.png){ .rounded-lg .shadow-lg }]((https://www.vexy.art/lines/))
+[![The new Vexy Lines home page, showing a photograph redrawn as scalable vector line art](../media/2026-06-22-site-home.png){ .rounded-lg .shadow-lg }](https://www.vexy.art/lines/)
 
 A dozen vector fills helps in your creation: Linear engraving, Wave, Halftone, Scribble, Wireframe, Fractal, the image-reading Text fill. Add layers, masks, filters, mesh warps, and you get machinery that turns a one-click result into a considered piece.
 

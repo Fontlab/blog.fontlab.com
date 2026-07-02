@@ -34,6 +34,6 @@ Additionally, the image brightness directly drives the variable instance selecti
 
 That makes it a specimen tool, not a gimmick. Instead of nine static cuts you get the full axis rendered continuously across a single word, and the axis can be anything your designspace defines — Weight, Width, Optical Size, a custom grade; the flame poem drives Weight, Width, Italic and Optical Size at once. It works with the real families you already license — Playfair by Claus Eggers Sørensen, Futura, whatever variable font you feed it — and it exports to SVG and PDF, so the finished piece drops straight into the specimen sheet or the deck you were already building.
 
-[![A single line set in a variable font where each glyph takes a different instance sampled from the image beneath it](../media/2026-06-23-typography-specimen.png)]((https://vexy.art/lines/case-typography/))
+[![A single line set in a variable font where each glyph takes a different instance sampled from the image beneath it](../media/2026-06-23-typography-specimen.png)](https://vexy.art/lines/case-typography/)
 
 [Discover variable typography in Vexy Lines →](https://vexy.art/lines/case-typography/){ .md-button .md-button--primary }
