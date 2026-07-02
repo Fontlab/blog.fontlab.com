@@ -1,6 +1,6 @@
 ---
 this_file: src_docs/md/posts/2026-06-25-vexy-lines-lettering-that-survives-the-cutter.md
-title: "Your gradient will not survive the vinyl cutter. This will."
+title: "Your gradient will not survive the vinyl cutter"
 authors: [vexy-lines]
 date:
   created: 2026-06-25

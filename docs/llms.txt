@@ -141,8 +141,8 @@ News, technical writing, and product updates from FontLab.
 - [Vexy Lines 2 is here!](https://blog.fontlab.com/2026/06/07/vexy-lines-2/index.md)
 - [A new home for Vexy Lines where pixels become lines](https://blog.fontlab.com/2026/06/22/vexy-lines-2-new-website/index.md)
 - [Type that reads the picture underneath it](https://blog.fontlab.com/2026/06/23/vexy-lines-type-that-reads-the-picture/index.md)
-- [Your face on your next crypto banknotes? Can do.](https://blog.fontlab.com/2026/06/24/vexy-lines-banknote-faces/index.md)
-- [Your gradient will not survive the vinyl cutter. This will.](https://blog.fontlab.com/2026/06/25/vexy-lines-lettering-that-survives-the-cutter/index.md)
-- [Poor print produces pretty posters? Steal the look.](https://blog.fontlab.com/2026/06/29/vexy-lines-retro-poster-revival/index.md)
-- [Make your pixels Vexy and play with lines](https://blog.fontlab.com/2026/06/30/vexy-playlines-play-with-lines/index.md)
+- [Your face on your next crypto banknotes](https://blog.fontlab.com/2026/06/24/vexy-lines-banknote-faces/index.md)
+- [Your gradient will not survive the vinyl cutter](https://blog.fontlab.com/2026/06/25/vexy-lines-lettering-that-survives-the-cutter/index.md)
+- [Poor print produces pretty posters](https://blog.fontlab.com/2026/06/29/vexy-lines-retro-poster-revival/index.md)
+- [Make your pixels vexy. Play with lines.](https://blog.fontlab.com/2026/06/30/vexy-playlines-play-with-lines/index.md)
 

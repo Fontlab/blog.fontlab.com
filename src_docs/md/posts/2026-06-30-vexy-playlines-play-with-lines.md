@@ -1,6 +1,6 @@
 ---
 this_file: src_docs/md/posts/2026-06-30-vexy-playlines-play-with-lines.md
-title: "Make your pixels Vexy and play with lines"
+title: "Make your pixels vexy. Play with lines."
 authors: [vexy-lines]
 date:
   created: 2026-06-30

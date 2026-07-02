@@ -1,6 +1,6 @@
 ---
 this_file: src_docs/md/posts/2026-06-24-vexy-lines-banknote-faces.md
-title: "Your face on your next crypto banknotes? Can do."
+title: "Your face on your next crypto banknotes"
 authors: [vexy-lines]
 date:
   created: 2026-06-24

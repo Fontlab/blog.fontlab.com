@@ -1,6 +1,6 @@
 ---
 this_file: src_docs/md/posts/2026-06-29-vexy-lines-retro-poster-revival.md
-title: "Poor print produces pretty posters? Steal the look."
+title: "Poor print produces pretty posters"
 authors: [vexy-lines]
 date:
   created: 2026-06-29
