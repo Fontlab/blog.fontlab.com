@@ -18,7 +18,7 @@ What do Vexy Lines and FontLab have in common? Same developers, and same passion
 
 Drop in a source image, Put a base fill over it, and hide it — Linear, Wave, Circular, Spiral, Handmade, or even Halftone! Apply Filters like Contrast or Blur to the base fill to tweak the impact of the source image.
 
-Add a Text fill based on the first fill. The pattern paths of the base fill decide where and how the baselines in the Text fill will flow. Enter your text, pick a variable font, nominate a variation axis.
+Add a Text fill based on the first fill. The pattern paths of the base fill decide where and how the baselines in the Text fill will flow. Enter your text, pick a variable font, nominate a variation axis — and watch Vexy Lines work its variable magic. Yes, your bitmap is the UI for your variable font!
 
 [![](../media/vartypo-futura1.svg){ .ml-[-1em] }](https://vexy.art/lines/case-typography/){ .w-full }
 
@@ -29,8 +29,6 @@ The image brightness modulates the stroke thickness within the thickness range i
 [![](https://i.vexy.art/vl/case-text/flamesq-141-text.png)](https://vexy.art/lines/case-typography/){ .w-1/2 .float-right .ml-6 .mb-4 }
 
 Additionally, the image brightness directly drives the variable instance selection along the nominated axis, one interpolated instance per glyph. This works even if the min and max stroke thickness are the same. If you choose Weight, light pixels will give you light letters, dark pixels give you bold glyphs.
-
-That makes it a specimen tool, not a gimmick. Instead of nine static cuts you get the full axis rendered continuously across a single word, and the axis can be anything your designspace defines — Weight, Width, Optical Size, a custom grade; the flame poem drives Weight, Width, Italic and Optical Size at once. It works with the real families you already license — Playfair by Claus Eggers Sørensen, Futura, whatever variable font you feed it — and it exports to SVG and PDF, so the finished piece drops straight into the specimen sheet or the deck you were already building.
 
 [![A single line set in a variable font where each glyph takes a different instance sampled from the image beneath it](../media/2026-06-23-typography-specimen.png)](https://vexy.art/lines/case-typography/)
 
