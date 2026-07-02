@@ -12,7 +12,7 @@ With Vexy Lines, you can make the most of your variable fonts. Create expressive
 
 <!-- more -->
 
-<div class="w-1/2 float-left"><script type="module" src="https://i.vexy.art/dist/lines-nano/vexy-before-after.js"></script><vexy-before-after before="https://i.vexy.art/vl/case-text/vexy3d-7-before.jpg" after="https://i.vexy.art/vl/case-text/vexy3d-7-after.png" before-label="Source image" after-label="Text fill" position="50" direction="horizontal" aspect="1/1" rounded="6px" style="display: block; width: 100%; max-width: 1024px; margin: 0 auto"></vexy-before-after></div>
+<div class="w-1/2 float-right"><script type="module" src="https://i.vexy.art/dist/lines-nano/vexy-before-after.js"></script><vexy-before-after before="https://i.vexy.art/vl/case-text/vexy3d-7-before.jpg" after="https://i.vexy.art/vl/case-text/vexy3d-7-after.png" before-label="Source image" after-label="Text fill" position="50" direction="horizontal" aspect="1/1" rounded="6px" style="display: block; width: 100%; max-width: 1024px; margin: 0 auto"></vexy-before-after></div>
 
 What do Vexy Lines and FontLab have in common? Same developers, and same passion for high-quality typography. Of course we added a unique typographic gem into our new parametric vector graphics creation app: Text fill!
 
@@ -22,13 +22,13 @@ Apply Filters like Contrast or Blur to the base fill to tweak the impact of the 
 
 Add a Text fill based on the first fill. The pattern paths of the base fill decide where and how the baselines in the Text fill will flow. Enter your text, pick a variable font, nominate a variation axis.
 
-[![](../media/vartypo-futura1.svg){ .ml-[-1em] }](https://vexy.art/lines/case-typography/){ .w-1/1 }
+[![](../media/vartypo-futura1.svg){ .ml-[-1em] }](https://vexy.art/lines/case-typography/){ .w-full }
 
 As the text flows along the pattern paths, Vexy Lines samples the image brightness under each glyph, and makes two-fold use of it.
 
 The image brightness modulates the stroke thickness within the thickness range in the hidden base fill. This, in turn, modulates the font size in the Text fill. Lighter pixels — thinner stroke — smaller glyphs. Make the min and max thickness the same for a constant font size.
 
-[![](https://i.vexy.art/vl/case-text/flamesq-141-text.png)](https://vexy.art/lines/case-typography/){ .w-1/2 .float-right .ml-6 .mb-4" }
+[![](https://i.vexy.art/vl/case-text/flamesq-141-text.png)](https://vexy.art/lines/case-typography/){ .w-1/2 .float-right .ml-6 .mb-4 }
 
 Additionally, the image brightness directly drives the variable instance selection along the nominated axis, one interpolated instance per glyph. This works even if the min and max stroke thickness are the same. If you choose Weight, light pixels will give you light letters, dark pixels give you bold glyphs.
 

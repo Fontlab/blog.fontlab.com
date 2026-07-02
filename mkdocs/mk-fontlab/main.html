@@ -27,7 +27,7 @@
        Preflight is OFF so Tailwind's base reset cannot clobber the MaterialX theme;
        we only want the utility layer (grid, flex, gap, rounded, shadow, aspect, …). -->
   <script data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
-  <script>
+  <script data-cfasync="false">
     tailwind.config = {
       corePlugins: { preflight: false },
       important: '.md-typeset'
