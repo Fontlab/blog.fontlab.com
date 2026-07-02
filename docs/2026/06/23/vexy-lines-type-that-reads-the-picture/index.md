@@ -6,9 +6,7 @@ Drop in a source image, Put a base fill over it, and hide it — Linear, Wave, C
 
 Add a Text fill based on the first fill. The pattern paths of the base fill decide where and how the baselines in the Text fill will flow. Enter your text, pick a variable font, nominate a variation axis — and watch Vexy Lines work its variable magic.
 
-Yes, your bitmap is the UI for your variable font. A simple linear gradient from white to black plus a variable Futura gives this pretty gradient made out of typographic color:
-
-As the text flows along the pattern paths, Vexy Lines samples the image brightness under each glyph, and makes two-fold use of it.
+As the text flows along the pattern paths, Vexy Lines samples the image brightness under each glyph, and uses it to choose the font size and the instance — so your bitmap becomes the UI for your variable font! A simple linear gradient from white to black plus a variable Futura gives the pretty gradient above, made out of typographic color.
 
 The image brightness modulates the stroke thickness within the thickness range in the hidden base fill. This, in turn, modulates the font size in the Text fill. Lighter pixels — thinner stroke — smaller glyphs. Make the min and max thickness the same for a constant font size.
 
