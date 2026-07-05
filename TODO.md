@@ -1,24 +1,30 @@
 ---
 this_file: TODO.md
 ---
-# TODO — blog.fontlab.com rewrite
+# TODO — blog.fontlab.com
 
-Current source state after the 2026-05-08 reconciliation sprint:
+Live source state (verified by `tests/test_content_state.py`):
 
-- 78 published source posts in `src_docs/md/posts/`
-- 0 draft posts in `src_docs/md/posts/`
+- 134 published source posts in `src_docs/md/posts/`
 - 11 offline draft/research files in `issues/draft-posts/`
-- 0 live title-case fixes remaining
-- 0 live voice rewrite fixes remaining
-- 0 live consolidation TODO items remaining
-- 0 live CTA deep-link research items remaining
-- 0 posts with `review.image_status: missing`
-- 0 posts with `review.image_status: weak`
-- 13 generic placeholder image follow-ups remaining
+- 93 posts carry the editorial `review:` overlay
+- 41 posts still awaiting an editorial review pass
+- 19 reviewed posts with `review.image_status: missing`
 
-Completed rewrite, title-case, concrete-URL CTA, deep-link research, consolidation, and missing-image items were removed after source front matter and rendered output were reconciled.
+The corpus roughly doubled after the 2026-05 reconciliation sprint (78 → 134
+posts). The QA overlay was applied to the sprint-era posts; the newer art-history
+"line" series and the Vexy Lines product posts ship with plain front matter and
+still need a review pass. `test_content_state.py` enforces the invariants that
+hold today (core front matter on every post; valid review schema and a
+body-matched CTA target on reviewed posts) and keeps the counts above honest.
 
-## Generic Image Follow-Up
+## Editorial backlog
+
+- [ ] Extend the `review:` overlay to the 41 posts that lack it (art-history
+      "line" series 2025-05 → 2026-04, and the Vexy Lines posts 2026-05 → 2026-06).
+- [ ] Replace the 19 generic/placeholder hero images flagged `image_status: missing`.
+
+### Generic image follow-ups (subset of the 19 above)
 
 - [ ] `2018-10-25-fontlab-vi-61.md` — replace generic FontLab 8 hero with a FontLab VI 6.1 interface/sidebar image.
 - [ ] `2020-03-02-fontlab-71.md` — replace generic FontLab 8 hero with a FontLab 7.1 ink-trap, measurement, or handle-harmonization image.
@@ -33,3 +39,9 @@ Completed rewrite, title-case, concrete-URL CTA, deep-link research, consolidati
 - [ ] `2025-11-04-the-briem-method-and-the-geometry-of-nothing.md` — add a metrics/sidebearings image and remove `image TBD`.
 - [ ] `2026-04-08-made-with-fontlab-fabio-duarte-martins.md` — replace generic Made with FontLab placeholder with Scannerlicker or FontLab variable-font media.
 - [ ] `2026-04-21-the-old-fonts-are-not-dead.md` — replace generic revival placeholder with a Type 1, old font suitcase, or TransType rescue image.
+
+## Engineering backlog
+
+- The tracked `docs/` build output (~69 MB) stays tracked on purpose: a fresh CI
+  checkout needs `docs/CNAME` to exist before `build.sh` runs, and the deploy
+  sanity-check requires it (see CLAUDE.md → Build & deploy). Do not untrack it.

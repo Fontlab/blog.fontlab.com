@@ -89,6 +89,9 @@ profile_default/
 rabbitmq-data/
 rabbitmq/
 reference/
+ruvector.db
+/src_docs-llms.txt
+/tmp_plugin_download/
 sdist/
 share/python-wheels/
 target/

@@ -24,6 +24,11 @@ dependencies = [
     "flowmark>=0.6.5",
 ]
 
+[project.urls]
+Homepage = "https://blog.fontlab.com/"
+Source = "https://github.com/Fontlab/blog.fontlab.com"
+Issues = "https://github.com/Fontlab/blog.fontlab.com/issues"
+
 [project.scripts]
 blog-fontlab = "blog_fontlab.cli:main"
 
@@ -61,6 +66,13 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
 ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src/blog_fontlab"]
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
 
 [dependency-groups]
 dev = [

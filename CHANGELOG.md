@@ -1,5 +1,37 @@
 # Changelog
 
+## [Unreleased] — 2026-07-05 — Repo modernization + honest content-state tests
+
+### Added
+- `[project.urls]` (Homepage, Source, Issues) and a minimal `[tool.mypy]`
+  block in `pyproject.toml`.
+- `docs/assets/icon.png` — a Steinberg-style single-line concept icon
+  ("Markdown pushed, blog goes live"), palette-quantized to 1024×1024 / ~270 KB.
+- New content invariants split into two honest tiers: core front matter
+  (`title`/`date`/`authors`) required on every post, and review-schema checks
+  (known `image_status`, body-matched `cta_target`) only for posts that carry
+  the editorial `review:` overlay.
+
+### Changed
+- `tests/test_content_state.py` rewritten. The old tests asserted a
+  "finished editorial sprint" state (every post reviewed, zero missing
+  images) that the corpus outgrew when it doubled to 134 posts; they had
+  rotted because CI runs `./build.sh build`, not pytest. The new tests
+  encode invariants that are true today and keep the TODO.md summary honest.
+- `TODO.md` now reports the true live counts (134 posts, 93 reviewed,
+  41 awaiting review, 19 with a missing hero image) and records the real
+  editorial backlog.
+- Fixed a CTA drift in `2026-04-08-made-with-fontlab-fabio-duarte-martins.md`:
+  the review `cta_target` pointed at a MyFonts collection while the published
+  body links to the designer's own live catalogue; aligned the annotation to
+  the shipped link.
+
+### Removed
+- Untracked accidental artifacts and added them to `.gitignore`: a broken
+  `tmp_plugin_download` gitlink (submodule pointer with no `.gitmodules`),
+  the `ruvector.db` AI vector cache (~1.5 MB), and the generated
+  `src_docs-llms.txt` snapshot (~316 KB).
+
 ## [Unreleased] — 2026-07-02 — Frontpage AIDA leads + index-only thumbnails
 
 ### Added

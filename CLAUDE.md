@@ -2,13 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Repository state (2026-05-08)
+## Repository state (2026-07-05)
 
-Live and building. ProperDocs 1.6.7 + MaterialX 10.1.4 site at `mkdocs/mkdocs.yml`, blog moved to site root (`blog_dir: .`, posts at `/yyyy/mm/dd/slug/`). 78 published posts in `src_docs/md/posts/`, 11 offline drafts under `issues/draft-posts/`. RSS + JSON Feed, `llms.txt` / `llms-full.txt` generated. Build via `./build.sh build` (Flowmark format → ProperDocs build); preview via `./build.sh serve`.
+Live and building. ProperDocs 1.6.7 + MaterialX 10.1.4 site at `mkdocs/mkdocs.yml`, blog moved to site root (`blog_dir: .`, posts at `/yyyy/mm/dd/slug/`). 134 published posts in `src_docs/md/posts/`, 11 offline drafts under `issues/draft-posts/`. RSS + JSON Feed, `llms.txt` / `llms-full.txt` generated. Build via `./build.sh build` (Flowmark format → ProperDocs build); preview via `./build.sh serve`.
 
-Source: `IDEA.md` (master spec, read first), `spec/00-toc.md` + `spec/01.md`–`spec/15.md` (chapters incl. editorial roadmap and content series), `TODO.md` (open work), `CHANGELOG.md` (history). Latest release tag: `v1.0.58`.
+Source: `IDEA.md` (master spec, read first), `spec/00-toc.md` + `spec/01.md`–`spec/15.md` (chapters incl. editorial roadmap and content series), `TODO.md` (open work), `CHANGELOG.md` (history). Latest release tag: `v1.0.92`.
 
-Open work right now (see `TODO.md`): 13 generic-placeholder image follow-ups. Everything else from the recent rewrite/title-case/CTA/consolidation/missing-image sprints has shipped.
+Open work right now (see `TODO.md`): 41 newer posts still need the editorial `review:` overlay, and 19 reviewed posts still carry a placeholder hero image. `tests/test_content_state.py` verifies the live counts and the invariants that hold today.
 
 ## Build & deploy (load-bearing — read before touching publishing)
 

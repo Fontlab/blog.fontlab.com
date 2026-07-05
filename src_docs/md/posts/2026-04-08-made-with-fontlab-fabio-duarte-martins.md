@@ -8,7 +8,7 @@ date:
 slug: made-with-fontlab-fabio-duarte-martins
 review:
   cta_status: ok
-  cta_target: "https://www.myfonts.com/collections/scannerlicker-foundry"
+  cta_target: "https://fonts.scannerlicker.net/"
   title_case: ok
   title_suggested: ""
   voice_quality: strong
