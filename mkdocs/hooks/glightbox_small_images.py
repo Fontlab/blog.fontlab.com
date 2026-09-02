@@ -80,7 +80,10 @@ def _is_small(path: Path) -> bool:
 def _add_off_glb(tag: str) -> str:
     class_match = CLASS_RE.search(tag)
     if class_match is None:
-        return tag[:-1].rstrip() + ' class="off-glb"' + tag[-1:]
+        # Keep a self-closing slash after the new attribute, not before it.
+        head = tag[:-1].rstrip().rstrip("/").rstrip()
+        tail = " />" if tag[:-1].rstrip().endswith("/") else ">"
+        return head + ' class="off-glb"' + tail
     classes = (_attr(class_match) or "").split()
     if "off-glb" in classes:
         return tag

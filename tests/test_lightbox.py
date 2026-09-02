@@ -64,6 +64,11 @@ def test_small_images_get_the_plugin_opt_out_class(tmp_path):
         hook._add_off_glb('<img class="illu-photo" src="a.png">')
         == '<img class="illu-photo off-glb" src="a.png">'
     )
+    # Raw HTML in the corpus writes self-closing tags; the slash stays last.
+    assert (
+        hook._add_off_glb('<img src="a.png" decoding="async" />')
+        == '<img src="a.png" decoding="async" class="off-glb" />'
+    )
     # Idempotent — a hand-tagged image is left alone.
     tagged = '<img class="off-glb" src="a.png">'
     assert hook._add_off_glb(tagged) == tagged
