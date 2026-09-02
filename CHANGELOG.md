@@ -1,5 +1,27 @@
 # Changelog
 
+## [Unreleased] — 2026-09-02 — Image lightbox
+
+### Added
+- Click-to-zoom lightbox on post images, via `mkdocs-glightbox` (a MaterialX
+  `recommended` plugin). Images open in an overlay gallery with keyboard and
+  touch navigation; the assets ship from the site itself, no CDN.
+- `mkdocs/hooks/glightbox_small_images.py` — build hook that stamps the
+  plugin's own `off-glb` opt-out class onto any image whose intrinsic size is
+  under 480px on both axes, so icons, avatars and small crops stay unzoomable.
+  The decision is per image and reads the real file, so no Markdown changes are
+  needed; `{ .off-glb }` in Markdown still works as a manual escape hatch.
+- `tests/test_lightbox.py` covering the plugin wiring, the size threshold, the
+  `src` resolution and the class stamping.
+
+### Changed
+- `.illu-thumb` hero/index illustrations are excluded from the lightbox
+  (`skip_classes`): on the blog index they are the click-target for the post
+  link (`js/illu-link.js`), which a lightbox anchor would hijack.
+- Images that already sit inside a link (YouTube, Wikimedia sources) keep their
+  link — the plugin skips them.
+- TODO.md corpus counts refreshed to the live 135 posts / 42 unreviewed.
+
 ## [Unreleased] — 2026-07-05 — Repo modernization + honest content-state tests
 
 ### Added

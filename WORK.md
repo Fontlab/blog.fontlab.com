@@ -4,6 +4,24 @@
 
 - (none — session deliverables shipped)
 
+## Shipped (2026-09-02 — image lightbox)
+
+- Added `mkdocs-glightbox` (a MaterialX `recommended` plugin) so post images
+  zoom on click. No CDN: the plugin copies its CSS/JS into `docs/assets/`.
+- Wrote `mkdocs/hooks/glightbox_small_images.py`, which runs before the plugin
+  (`@event_priority(50)`) and stamps `off-glb` on images whose file is under
+  480px on both axes. By this event MkDocs has already rewritten `src` against
+  the page's *output* URL, so the hook resolves paths via `page.file.dest_uri`,
+  not `src_uri` — the first cut silently matched nothing.
+- Excluded `.illu-thumb` via `skip_classes`: on the index those images are the
+  post link (`js/illu-link.js` wraps them at runtime), so a lightbox anchor
+  would fight the click.
+- Verified in a browser against the built site: lightbox opens and the overlay
+  fills the viewport; the index still links its 28 thumbnails to the posts and
+  carries zero lightbox anchors; no console errors.
+- Corpus counts in TODO.md were stale after the TransType 5 post (134 → 135);
+  refreshed so `test_content_state.py` passes again.
+
 ## Shipped (2026-07-02 — Vexy Lines teaser condensation)
 
 - Condensed the six issue-211 Vexy Lines / Playlines posts dated 2026-06-22,

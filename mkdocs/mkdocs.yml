@@ -89,6 +89,13 @@ plugins:
           - about.md: FontLab company history and background.
         Blog posts:
           - posts/*.md
+  - glightbox:
+      # Zoom real artwork; leave UI chrome and small art alone.
+      # `.illu-thumb` hero/index illustrations are click-targets on the blog
+      # index (js/illu-link.js links them to the post), so they stay out.
+      # Small images are excluded per image by hooks/glightbox_small_images.py.
+      skip_classes:
+        - illu-thumb
   - materialx/tags
   - materialx/blog:
       blog_dir: .
@@ -129,6 +136,9 @@ plugins:
       use_git: true
       use_material_blog: true
       use_material_social_cards: false
+
+hooks:
+  - hooks/glightbox_small_images.py
 
 extra_css:
   - css/fontlab-chrome.css

@@ -5,10 +5,10 @@ this_file: TODO.md
 
 Live source state (verified by `tests/test_content_state.py`):
 
-- 134 published source posts in `src_docs/md/posts/`
+- 135 published source posts in `src_docs/md/posts/`
 - 11 offline draft/research files in `issues/draft-posts/`
 - 93 posts carry the editorial `review:` overlay
-- 41 posts still awaiting an editorial review pass
+- 42 posts still awaiting an editorial review pass
 - 19 reviewed posts with `review.image_status: missing`
 
 The corpus roughly doubled after the 2026-05 reconciliation sprint (78 → 134
@@ -20,7 +20,7 @@ body-matched CTA target on reviewed posts) and keeps the counts above honest.
 
 ## Editorial backlog
 
-- [ ] Extend the `review:` overlay to the 41 posts that lack it (art-history
+- [ ] Extend the `review:` overlay to the 42 posts that lack it (art-history
       "line" series 2025-05 → 2026-04, and the Vexy Lines posts 2026-05 → 2026-06).
 - [ ] Replace the 19 generic/placeholder hero images flagged `image_status: missing`.
 

@@ -145,4 +145,5 @@ News, technical writing, and product updates from FontLab.
 - [Your gradient will not survive the vinyl cutter](https://blog.fontlab.com/2026/06/25/vexy-lines-lettering-that-survives-the-cutter/index.md)
 - [Poor print produces pretty posters](https://blog.fontlab.com/2026/06/29/vexy-lines-retro-poster-revival/index.md)
 - [Make your pixels vexy. Play with lines.](https://blog.fontlab.com/2026/06/30/vexy-playlines-play-with-lines/index.md)
+- [TransType 5: every style of your variable fonts, in every app](https://blog.fontlab.com/2026/09/02/transtype-5/index.md)
 
