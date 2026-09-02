@@ -1,0 +1,2337 @@
+<!-- this_file: mkdocs/mk-fontlab/main.html --><!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="News, technical writing, and updates from FontLab.">
+      
+      
+        <meta name="author" content="Fontlab Ltd.">
+      
+      
+        <link rel="canonical" href="https://blog.fontlab.com/topic/fontlab/page/2/">
+      
+      
+        <link rel="prev" href="../../../vexy-lines/">
+      
+      
+        <link rel="next" href="../../../adam/">
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
+      
+      
+        
+        
+        
+          <link rel="icon" href="../../../../assets/images/favicon.png">
+        
+      
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.3">
+    
+    
+      
+        <title>FontLab - FontLab Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.dc9e9c2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.d7242098.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/fontlab-chrome.css">
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5WNRV8Z7');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Tailwind CSS (Play CDN) for utility classes in post Markdown via attr_list.
+       Preflight is OFF so Tailwind's base reset cannot clobber the MaterialX theme;
+       we only want the utility layer (grid, flex, gap, rounded, shadow, aspect, …). -->
+  <script data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
+  <script data-cfasync="false">
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      important: '.md-typeset'
+    };
+  </script>
+
+  <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Crimson+Pro:ital,wght@0,200..900;1,200..900&amp;display=swap" rel="stylesheet">
+
+  <!-- MaterialX layout tweaks: <fontlab-menu> is the only top bar. -->
+  <style>
+    /* Kill the MaterialX copyright footer; <fontlab-footer> is the only footer. */
+    .md-footer { display: none !important; }
+
+    /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
+    .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: 860px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 1rem 1.5rem 3rem !important;
+    }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
+    .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
+  </style>
+
+  <!-- RSS / JSON Feed autodiscovery (mkdocs-rss-plugin). -->
+  <link rel="alternate" type="application/rss+xml" title="FontLab Blog (RSS, by creation date)" href="../../../../feed_rss_created.xml">
+  <link rel="alternate" type="application/rss+xml" title="FontLab Blog (RSS, by update date)" href="../../../../feed_rss_updated.xml">
+  <link rel="alternate" type="application/feed+json" title="FontLab Blog (JSON Feed, by creation date)" href="../../../../feed_json_created.json">
+  <link rel="alternate" type="application/feed+json" title="FontLab Blog (JSON Feed, by update date)" href="../../../../feed_json_updated.json">
+
+  <!-- FontLab menu/footer loader -->
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer=""></script>
+
+  <!-- Configure <fontlab-menu>: no local nav items for blog; search from 'blog'. -->
+  <script>
+  (function () {
+    function apply() {
+      var el = document.querySelector('fontlab-menu');
+      if (!el) return;
+      el.config = { localMenu: [], search: { from: 'blog' } };
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else { apply(); }
+  })();
+  </script>
+
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fontlab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WNRV8Z7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <fontlab-menu mode="dark" site-label="Blog" site-url="https://blog.fontlab.com/"></fontlab-menu>
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-header__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FontLab Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FontLab
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" aria-hidden="true" type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+  
+
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-nav__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    FontLab Blog
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2020
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2017/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2017
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2016
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2015/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2015
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2014/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2014
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2013/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2013
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2005/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2005
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Topics
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../transtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TransType
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vexy-lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vexy Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+      
+    
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="../../" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-tv-design-space-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab TV: design space basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emoji-is-older-than-you-think" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emoji is older than you think
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#woff-woff2-and-the-emmy-that-crowned-web-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WOFF, WOFF2, and the Emmy that crowned web type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-multiple-master-to-opentype-variable-fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Multiple Master to OpenType variable fonts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optical-sizings-lost-century" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optical sizing's lost century
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fvar-avar-hvar-the-tables-that-hold-a-variable-font-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fvar, avar, HVAR — the tables that hold a variable font together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-fonts-were-about-file-size-and-still-are-on-your-phone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable fonts WERE about file size — and still are on your phone
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roboto-flex-and-the-thirteen-axes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roboto Flex and the thirteen axes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-tv-color-fonts-without-tears" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab TV: color fonts without tears
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calligraphic-fonts-spacing-italics-and-family-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calligraphic fonts: spacing, italics, and family planning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-tv-anchors-components-and-accented-glyphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab TV: anchors, components, and accented glyphs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-tv-spacing-letters-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab TV: spacing letters from scratch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opentype-features-as-invisible-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenType features as invisible UX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hinting-and-screen-testing-the-craft-of-small-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinting and screen testing: the craft of small sizes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripting-the-mundane-letting-python-do-the-dishes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripting the mundane: letting Python do the dishes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-calligraphic-fonts-in-fontlab-setup-and-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drawing calligraphic fonts in FontLab: setup and shapes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-heavy-machinery-of-fontlab-84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The heavy machinery of FontLab 8.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghosts-in-the-machine-drawing-with-strokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ghosts in the machine — drawing with strokes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-web-fonts-are-probably-too-heavy-here-is-the-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your web fonts are probably too heavy — here is the fix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-83-and-84-whats-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab 8.3 and 8.4: what's new
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#briem-on-spacing-italics-and-the-bold-weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Briem on spacing, italics, and the bold weight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-scripts-and-color-font-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color, scripts, and color-font formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#briem-on-type-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Briem on type design decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-fontlab-82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hello, FontLab 8.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-fonts-in-fontlab-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable fonts in FontLab 8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#briems-typography-lessons-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Briem's typography lessons: foundations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-fontlab-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hello, FontLab 8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-7207644-and-macos-123-monterey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab 7.2.0.7644 and macOS 12.3 Monterey
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-your-variable-fonts-better-with-fontlab-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make your variable fonts better with FontLab 7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-7-a-year-in-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab 7: a year in updates
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adam Twardoch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../typetool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeTool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fontographer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fontographer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fontlab-pad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab Pad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-tv-design-space-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab TV: design space basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emoji-is-older-than-you-think" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emoji is older than you think
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#woff-woff2-and-the-emmy-that-crowned-web-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WOFF, WOFF2, and the Emmy that crowned web type
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-multiple-master-to-opentype-variable-fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Multiple Master to OpenType variable fonts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optical-sizings-lost-century" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optical sizing's lost century
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fvar-avar-hvar-the-tables-that-hold-a-variable-font-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fvar, avar, HVAR — the tables that hold a variable font together
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-fonts-were-about-file-size-and-still-are-on-your-phone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable fonts WERE about file size — and still are on your phone
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roboto-flex-and-the-thirteen-axes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roboto Flex and the thirteen axes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-tv-color-fonts-without-tears" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab TV: color fonts without tears
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calligraphic-fonts-spacing-italics-and-family-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calligraphic fonts: spacing, italics, and family planning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-tv-anchors-components-and-accented-glyphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab TV: anchors, components, and accented glyphs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-tv-spacing-letters-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab TV: spacing letters from scratch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opentype-features-as-invisible-ux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenType features as invisible UX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hinting-and-screen-testing-the-craft-of-small-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hinting and screen testing: the craft of small sizes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripting-the-mundane-letting-python-do-the-dishes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripting the mundane: letting Python do the dishes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drawing-calligraphic-fonts-in-fontlab-setup-and-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drawing calligraphic fonts in FontLab: setup and shapes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-heavy-machinery-of-fontlab-84" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The heavy machinery of FontLab 8.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ghosts-in-the-machine-drawing-with-strokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ghosts in the machine — drawing with strokes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-web-fonts-are-probably-too-heavy-here-is-the-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your web fonts are probably too heavy — here is the fix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-83-and-84-whats-new" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab 8.3 and 8.4: what's new
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#briem-on-spacing-italics-and-the-bold-weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Briem on spacing, italics, and the bold weight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-scripts-and-color-font-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Color, scripts, and color-font formats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#briem-on-type-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Briem on type design decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-fontlab-82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hello, FontLab 8.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-fonts-in-fontlab-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable fonts in FontLab 8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#briems-typography-lessons-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Briem's typography lessons: foundations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-fontlab-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hello, FontLab 8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-7207644-and-macos-123-monterey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab 7.2.0.7644 and macOS 12.3 Monterey
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-your-variable-fonts-better-with-fontlab-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make your variable fonts better with FontLab 7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontlab-7-a-year-in-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FontLab 7: a year in updates
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="fontlab">FontLab<a class="headerlink" href="#fontlab" title="Permanent link">¶</a></h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-tv-design-space-basics"><a class="toclink" href="../../../../2025/06/24/fontlab-tv-design-space/">FontLab TV: design space basics</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-tv-design-space-1.png"></p>
+<p>Design space is the part of variable font work that decides whether your font feels good or merely works. The FontLab TV design space episode is the conceptual foundation for everything you do with masters, axes, and instances. <span class="md-post__metaline"><time datetime="2025-06-24 00:00:00+00:00">June 24, 2025</time> <a class="md-post__readlink" href="../../../../2025/06/24/fontlab-tv-design-space/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="emoji-is-older-than-you-think"><a class="toclink" href="../../../../2025/06/17/emoji-is-older-than-you-think/">Emoji is older than you think</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/emoji-is-older-than-you-think-1.png"></p>
+<p>The story everyone tells is that Shigetaka Kurita designed emoji at NTT Docomo in 1999. It is a good story. It is also wrong. <span class="md-post__metaline"><time datetime="2025-06-17 00:00:00+00:00">June 17, 2025</time> <a class="md-post__readlink" href="../../../../2025/06/17/emoji-is-older-than-you-think/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="woff-woff2-and-the-emmy-that-crowned-web-type"><a class="toclink" href="../../../../2025/06/10/woff-and-the-emmy-nobody-expected/">WOFF, WOFF2, and the Emmy that crowned web type</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/woff-and-the-emmy-nobody-expected-1.png"></p>
+<p>In 2021 the Television Academy gave the W3C a Technology &amp; Engineering Emmy for font standardisation on the web. Among the recipients was the CEO of FontLab Ltd — a small, deeply satisfying acknowledgement that the work to make type travel cleanly across browsers, operating systems, and broadcast pipelines mattered enough to be celebrated alongside cinematography and sound design. <span class="md-post__metaline"><time datetime="2025-06-10 00:00:00+00:00">June 10, 2025</time> <a class="md-post__readlink" href="../../../../2025/06/10/woff-and-the-emmy-nobody-expected/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="from-multiple-master-to-opentype-variable-fonts"><a class="toclink" href="../../../../2025/06/03/from-multiple-master-to-variable/">From Multiple Master to OpenType variable fonts</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/from-multiple-master-to-variable-2.png"></p>
+<p>Variable fonts are not new. They are the third attempt at the same idea, by mostly the same engineers, after twenty-five years of finding out what didn’t work. <span class="md-post__metaline"><time datetime="2025-06-03 00:00:00+00:00">June 3, 2025</time> <a class="md-post__readlink" href="../../../../2025/06/03/from-multiple-master-to-variable/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="optical-sizings-lost-century"><a class="toclink" href="../../../../2025/05/27/optical-sizings-lost-century/">Optical sizing's lost century</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/optical-sizings-lost-century-2.png"></p>
+<p>William Caslon knew something in 1720 that digital type spent a century forgetting: a six-point letter is not a twelve-point letter made smaller. <span class="md-post__metaline"><time datetime="2025-05-27 00:00:00+00:00">May 27, 2025</time> <a class="md-post__readlink" href="../../../../2025/05/27/optical-sizings-lost-century/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fvar-avar-hvar-the-tables-that-hold-a-variable-font-together"><a class="toclink" href="../../../../2025/05/20/fvar-avar-hvar-the-tables-that-hold-it-together/">fvar, avar, HVAR — the tables that hold a variable font together</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/fvar-avar-hvar-the-tables-that-hold-it-together-2.png"></p>
+<p>A variable font isn’t a new file format. It’s an OpenType file with a few extra tables nailed on, and once you know what each one does, the whole thing stops being magic. <span class="md-post__metaline"><time datetime="2025-05-20 00:00:00+00:00">May 20, 2025</time> <a class="md-post__readlink" href="../../../../2025/05/20/fvar-avar-hvar-the-tables-that-hold-it-together/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="variable-fonts-were-about-file-size-and-still-are-on-your-phone"><a class="toclink" href="../../../../2025/05/13/variable-fonts-file-size/">Variable fonts WERE about file size — and still are on your phone</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/variable-fonts-file-size-1.png"></p>
+<p>The fashionable take is that variable fonts are not about file size. The fashionable take is wrong, or at least wrong by half. <span class="md-post__metaline"><time datetime="2025-05-13 00:00:00+00:00">May 13, 2025</time> <a class="md-post__readlink" href="../../../../2025/05/13/variable-fonts-file-size/">4 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="roboto-flex-and-the-thirteen-axes"><a class="toclink" href="../../../../2025/05/06/roboto-flex-thirteen-axes/">Roboto Flex and the thirteen axes</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/roboto-flex-thirteen-axes-2.png"></p>
+<p>Christian Robertson drew Roboto in 2011 for Android. Ten years later, David Berlow’s team turned it into something with thirteen knobs. <span class="md-post__metaline"><time datetime="2025-05-06 00:00:00+00:00">May 6, 2025</time> <a class="md-post__readlink" href="../../../../2025/05/06/roboto-flex-thirteen-axes/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-tv-color-fonts-without-tears"><a class="toclink" href="../../../../2025/04/08/fontlab-tv-color-fonts/">FontLab TV: color fonts without tears</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/fontlab-tv-color-fonts-2.png"></p>
+<p>Color fonts have stopped being a novelty and started being a deliverable — emoji, branded display faces, multi-layered display work. The FontLab TV color font episode covers the four formats you actually have to think about and which to ship for which target. <span class="md-post__metaline"><time datetime="2025-04-08 00:00:00+00:00">April 8, 2025</time> <a class="md-post__readlink" href="../../../../2025/04/08/fontlab-tv-color-fonts/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="calligraphic-fonts-spacing-italics-and-family-planning"><a class="toclink" href="../../../../2025/03/17/calfonts-spacing-italics/">Calligraphic fonts: spacing, italics, and family planning</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/calfonts-spacing-italics-1.png"></p>
+<p>Once your letterforms are drawn, the work shifts to spacing, quality control, and — if you’re ambitious — building a family. This post distills Dave Lawrence’s chapters on fitting and spacing, building italic variants, and planning a type family in FontLab 8. <span class="md-post__metaline"><time datetime="2025-03-17 00:00:00+00:00">March 17, 2025</time> <a class="md-post__readlink" href="../../../../2025/03/17/calfonts-spacing-italics/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-tv-anchors-components-and-accented-glyphs"><a class="toclink" href="../../../../2025/01/21/fontlab-tv-anchors-components/">FontLab TV: anchors, components, and accented glyphs</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-tv-anchors-components-1.png"></p>
+<p>If you are still drawing every accented letter by hand, this is the episode that retires that habit. Anchors plus components mean you draw <code>a</code> and <code>acute</code> once, and FontLab assembles <code>aacute</code>, <code>acircumflex</code>, <code>agrave</code>, and the other 700-odd accented forms for you. <span class="md-post__metaline"><time datetime="2025-01-21 00:00:00+00:00">January 21, 2025</time> <a class="md-post__readlink" href="../../../../2025/01/21/fontlab-tv-anchors-components/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-tv-spacing-letters-from-scratch"><a class="toclink" href="../../../../2024/12/10/fontlab-tv-spacing-letters/">FontLab TV: spacing letters from scratch</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-tv-spacing-letters-1.png"></p>
+<p>Spacing is what separates a font that exists from a font that reads. The FontLab TV spacing episode is the one to watch first — before kerning, before OpenType, before anything else that can mask bad sidebearings. <span class="md-post__metaline"><time datetime="2024-12-10 00:00:00+00:00">December 10, 2024</time> <a class="md-post__readlink" href="../../../../2024/12/10/fontlab-tv-spacing-letters/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="opentype-features-as-invisible-ux"><a class="toclink" href="../../../../2024/12/10/opentype-features-as-ux/">OpenType features as invisible UX</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/opentype-features-as-ux-1.png"></p>
+<p>Most readers never notice when typography is right. They only notice when reading feels like work. The features that decide which side of that line a font lands on are mostly the unglamorous ones — kerning, standard ligatures, contextual alternates — the parts that handle the friction the user never sees. <span class="md-post__metaline"><time datetime="2024-12-10 00:00:00+00:00">December 10, 2024</time> <a class="md-post__readlink" href="../../../../2024/12/10/opentype-features-as-ux/">4 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="hinting-and-screen-testing-the-craft-of-small-sizes"><a class="toclink" href="../../../../2024/11/12/the-bitter-truth-of-screens-hinting/">Hinting and screen testing: the craft of small sizes</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/the-bitter-truth-of-screens-hinting-1.png"></p>
+<p>You can spend six months refining the curvature of a lowercase ‘s’, and then your font gets rendered onto a generous grid of pixels on someone’s second monitor at 1366 × 768. Translating a smooth Bézier into that grid is one of the more delicate handovers in typography, and the people who built the tools that handle it have been wonderfully inventive about it. <span class="md-post__metaline"><time datetime="2024-11-12 00:00:00+00:00">November 12, 2024</time> <a class="md-post__readlink" href="../../../../2024/11/12/the-bitter-truth-of-screens-hinting/">4 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="scripting-the-mundane-letting-python-do-the-dishes"><a class="toclink" href="../../../../2024/10/15/scripting-the-mundane-python-fontlab/">Scripting the mundane: letting Python do the dishes</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/scripting-the-mundane-python-fontlab-1.png"></p>
+<p>Type design is an art form. Font production is a factory job. Once the aesthetic decisions are settled on the core alphabet, you face the unglamorous reality of propagating those decisions across hundreds — sometimes thousands — of glyphs. Doing that by hand is a recipe for repetitive strain injury and existential dread. <span class="md-post__metaline"><time datetime="2024-10-15 00:00:00+00:00">October 15, 2024</time> <a class="md-post__readlink" href="../../../../2024/10/15/scripting-the-mundane-python-fontlab/">4 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="drawing-calligraphic-fonts-in-fontlab-setup-and-shapes"><a class="toclink" href="../../../../2024/09/23/calfonts-setup-shapes/">Drawing calligraphic fonts in FontLab: setup and shapes</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/calfonts-setup-shapes-1.png"></p>
+<p>Dave Lawrence of California Type Foundry wrote a comprehensive set of tutorials for FontLab 8, from installation to finished font. This post distills the first two chapters: getting your environment set up, and the fundamentals of drawing in FontLab’s glyph-oriented workflow. <span class="md-post__metaline"><time datetime="2024-09-23 00:00:00+00:00">September 23, 2024</time> <a class="md-post__readlink" href="../../../../2024/09/23/calfonts-setup-shapes/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="the-heavy-machinery-of-fontlab-84"><a class="toclink" href="../../../../2024/09/10/the-heavy-machinery-of-fontlab-8/">The heavy machinery of FontLab 8.4</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/the-heavy-machinery-of-fontlab-8-1.png"></p>
+<p>Drawing letters for a living turns out to be mostly an exercise in being perpetually disappointed by optical illusions. A geometric circle next to a geometric square at the same height looks smaller than the square. The fix is to draw the circle slightly larger so that it merely looks the same size. Type design is a profession built on quietly lying to the eye so the eye perceives the truth. <span class="md-post__metaline"><time datetime="2024-09-10 00:00:00+00:00">September 10, 2024</time> <a class="md-post__readlink" href="../../../../2024/09/10/the-heavy-machinery-of-fontlab-8/">4 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="ghosts-in-the-machine-drawing-with-strokes"><a class="toclink" href="../../../../2024/08/13/drawing-with-strokes-power-brush/">Ghosts in the machine — drawing with strokes</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/drawing-with-strokes-power-brush-3.png"></p>
+<p>The standard method for digitising a font is to draw the outline. You map the exterior boundary of the shape with Bezier curves, and you push and pull nodes until the silhouette behaves. This works fine for rigid sans-serifs. For a script font, it feels like sculpting in oven mitts. <span class="md-post__metaline"><time datetime="2024-08-13 00:00:00+00:00">August 13, 2024</time> <a class="md-post__readlink" href="../../../../2024/08/13/drawing-with-strokes-power-brush/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="your-web-fonts-are-probably-too-heavy-here-is-the-fix"><a class="toclink" href="../../../../2024/06/11/web-fonts-too-heavy-the-fix/">Your web fonts are probably too heavy — here is the fix</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/web-fonts-too-heavy-the-fix-2.png"></p>
+<p>You inherit a folder of old PostScript Type 1 fonts. Or a client sends a family with broken names, duplicate glyphs, and kerning that only works in one app. You need web fonts that load fast and look right everywhere. <span class="md-post__metaline"><time datetime="2024-06-11 00:00:00+00:00">June 11, 2024</time> <a class="md-post__readlink" href="../../../../2024/06/11/web-fonts-too-heavy-the-fix/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-83-and-84-whats-new"><a class="toclink" href="../../../../2024/06/05/fontlab-8-updates-2024/">FontLab 8.3 and 8.4: what's new</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-8-updates-1.png"></p>
+<p>Since the FontLab 8.2 release in August 2023, two major free updates have shipped: 8.3 in December 2023 and 8.4 in June 2024. Together they add over 200 new features and improvements. Here is the short version. <span class="md-post__metaline"><time datetime="2024-06-05 00:00:00+00:00">June 5, 2024</time> <a class="md-post__readlink" href="../../../../2024/06/05/fontlab-8-updates-2024/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="briem-on-spacing-italics-and-the-bold-weight"><a class="toclink" href="../../../../2024/04/08/briem-bold-italic-spacing/">Briem on spacing, italics, and the bold weight</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/briem-bold-italic-spacing-3.png"></p>
+<p>Three chapters from Gunnlaugur SE Briem’s notes on type design cover the work that comes after the roman is drawn: making a bold weight, designing the italic, and spacing the result. All three are harder than they look and more forgiving than they seem. <span class="md-post__metaline"><time datetime="2024-04-08 00:00:00+00:00">April 8, 2024</time> <a class="md-post__readlink" href="../../../../2024/04/08/briem-bold-italic-spacing/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="color-scripts-and-color-font-formats"><a class="toclink" href="../../../../2023/11/13/color-scripts-color-fonts/">Color, scripts, and color-font formats</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/color-scripts-color-fonts-1.png"></p>
+<p>FontLab 8 supports every current color OpenType format and ships with Python 3.11 scripting and the TypeRig library. This post covers the color workflow and scripting capabilities from the “Color” and “Scripts &amp; extensions” chapters of the What’s New documentation. <span class="md-post__metaline"><time datetime="2023-11-13 00:00:00+00:00">November 13, 2023</time> <a class="md-post__readlink" href="../../../../2023/11/13/color-scripts-color-fonts/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="briem-on-type-design-decisions"><a class="toclink" href="../../../../2023/09/04/briem-decisions/">Briem on type design decisions</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/briem-decisions-3.png"></p>
+<p>The hardest part of designing a typeface isn’t drawing — it’s deciding. Which letterforms? How wide? How much contrast? Gunnlaugur SE Briem’s notes on decisions and modules offer two complementary approaches: systematic variation and comparison, and learning from masterpieces. <span class="md-post__metaline"><time datetime="2023-09-04 00:00:00+00:00">September 4, 2023</time> <a class="md-post__readlink" href="../../../../2023/09/04/briem-decisions/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="hello-fontlab-82"><a class="toclink" href="../../../../2023/08/09/fontlab-82-released/">Hello, FontLab 8.2</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-82-released-1.png"></p>
+<p>FontLab 8.2 lands with around 250 changes on top of 8.0 — a consolidation release that touches every corner of the app, from the Sketchboard to the export dialog. Drawing tools get smoother handles and snappier strokes; kerning learns to read right-to-left; the COLR format reaches v1; Python moves to 3.11; and a quietly redesigned UI makes large fonts feel lighter to work with. Free for FontLab 8 owners. <span class="md-post__metaline"><time datetime="2023-08-09 00:00:00+00:00">August 9, 2023</time> <a class="md-post__readlink" href="../../../../2023/08/09/fontlab-82-released/">4 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="variable-fonts-in-fontlab-8"><a class="toclink" href="../../../../2023/05/22/variable-fonts-fontlab-8/">Variable fonts in FontLab 8</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/variable-fonts-fontlab-8-1.png"></p>
+<p>Variable fonts pack an entire type family into one file, letting users slide continuously between weights, widths, and other axes rather than jumping between predetermined styles. FontLab 8 treats variable font creation as a first-class workflow, not a post-production step. Here’s what the “Families &amp; variation” chapter of the What’s New documentation covers. <span class="md-post__metaline"><time datetime="2023-05-22 00:00:00+00:00">May 22, 2023</time> <a class="md-post__readlink" href="../../../../2023/05/22/variable-fonts-fontlab-8/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="briems-typography-lessons-foundations"><a class="toclink" href="../../../../2023/04/17/briem-foundations/">Briem's typography lessons: foundations</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/briem-foundations-1.png"></p>
+<p>Gunnlaugur SE Briem taught type design at the Royal Academy of Fine Arts in Copenhagen in 1996. His notes from that course — precise, practical, free of mystification — have been republished with permission on the FontLab documentation site. Here is a distillation of his opening chapters on why you’d make a font and what the basics actually require. <span class="md-post__metaline"><time datetime="2023-04-17 00:00:00+00:00">April 17, 2023</time> <a class="md-post__readlink" href="../../../../2023/04/17/briem-foundations/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="hello-fontlab-8"><a class="toclink" href="../../../../2022/06/26/fontlab-8-released/">Hello, FontLab 8</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/fontlab-8-released-1.png"></p>
+<p>Two years into FontLab 7, users had a clear message: the drawing engine is excellent, the variable font support is solid, now make the rest of the application match. FontLab 8, shipping today, is our answer. <span class="md-post__metaline"><time datetime="2022-06-26 00:00:00+00:00">June 26, 2022</time> <a class="md-post__readlink" href="../../../../2022/06/26/fontlab-8-released/">4 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-7207644-and-macos-123-monterey"><a class="toclink" href="../../../../2022/03/22/fontlab-7207644-and-macos-123-monterey/">FontLab 7.2.0.7644 and macOS 12.3 Monterey</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/fontlab-7-2-0-7649-and-macos-12-3-monterey-1.png"></p>
+<p>Apple’s macOS 12.3 Monterey update broke all previous versions of FontLab 7 by removing the system Python 2.7 that FontLab depended on. FontLab 7.2.0.7644 is a free patch that restores compatibility — macOS 12.3 users need to install a bundled Python 2.7 package alongside the app. A buggy intermediate build (7650) that made glyph fills transparent was withdrawn; 7644 does not have that problem. <span class="md-post__metaline"><time datetime="2022-03-22 00:00:00+00:00">March 22, 2022</time> <a class="md-post__readlink" href="../../../../2022/03/22/fontlab-7207644-and-macos-123-monterey/">3 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="make-your-variable-fonts-better-with-fontlab-7"><a class="toclink" href="../../../../2021/05/27/make-variable-fonts-better-fontlab-7/">Make your variable fonts better with FontLab 7</a></h2>
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/make-variable-fonts-better-fontlab-7-1.png"></p>
+<p>This 19-minute presentation by Adam Twardoch, delivered at ATypI Tech Talks 2021, goes beyond building variable fonts to the harder question: making them good. It covers quality assurance, interpolation checking, and the tools in FontLab 7 and related applications that help catch problems before a variable font ships. <span class="md-post__metaline"><time datetime="2021-05-27 00:00:00+00:00">May 27, 2021</time> <a class="md-post__readlink" href="../../../../2021/05/27/make-variable-fonts-better-fontlab-7/">2 min read →</a></span></p>
+</div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset"><span class="md-post__avatar md-author" title="FontLab">
+        <img src="/media/authors/fontlab.png" alt="FontLab">
+      </span><h2 id="fontlab-7-a-year-in-updates"><a class="toclink" href="../../../../2020/12/30/fontlab-7-year-in-review/">FontLab 7: a year in updates</a></h2>
+<p><img alt="" class="illu-thumb" src="../../../../media/illu/fontlab-7-year-in-review-1.png"></p>
+<p>FontLab 7 launched in December 2019 with over 250 new features. Twelve months later, it has rather more than that. Here is what the 2020 update cycle actually delivered — not counting FontLab 7.2, which has <a href="../../../../2020/11/30/say-hello-to-fontlab-72/">its own post</a>. <span class="md-post__metaline"><time datetime="2020-12-30 00:00:00+00:00">December 30, 2020</time> <a class="md-post__readlink" href="../../../../2020/12/30/fontlab-7-year-in-review/">2 min read →</a></span></p>
+</div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__current">2</span> <a class="md-pagination__link" href="../3/">3</a> <a class="md-pagination__link" href="../4/">4</a>
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden="">
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H9V6h11Z"></path></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-5 14H4V6h11Z"></path></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2013–2026 Fontlab Ltd.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <section class="fl-footer-cta" aria-label="FontLab links">
+    <div class="fl-footer-cta__grid">
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--buy">
+        <h2 class="fl-footer-cta__title">Buy FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Get the professional font editor for drawing, spacing, kerning,
+          OpenType production, color fonts, and variable fonts.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light" href="https://www.fontlab.com/buy/">Buy now</a>
+        </p>
+        <a class="fl-footer-cta__fineprint" href="https://www.fontlab.com/buy/">FontLab licenses, upgrades, and bundles</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--learn">
+        <h2 class="fl-footer-cta__title">Explore FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Learn what FontLab can do for type design, variable workflows,
+          color fonts, scripting, import, export, and production.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light" href="https://www.fontlab.com/">Learn more</a>
+        </p>
+        <a class="fl-footer-cta__fineprint" href="https://www.fontlab.com/">Products, features, examples, and updates</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--talk">
+        <h2 class="fl-footer-cta__title">Questions first?</h2>
+        <p class="fl-footer-cta__copy">
+          Tell us what you are making, what you need to solve, or what you
+          need to know before choosing a FontLab tool.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--dark" href="https://www.fontlab.com/contact/">Let's talk</a>
+        </p>
+        <a class="fl-footer-cta__fineprint fl-footer-cta__fineprint--dark" href="https://www.fontlab.com/contact/">Sales and support contact options</a>
+      </article>
+    </div>
+  </section>
+  <fontlab-footer mode="dark"></fontlab-footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.top", "navigation.indexes", "toc.follow", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
+      
+        <script src="../../../../js/illu-link.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

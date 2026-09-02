@@ -1,0 +1,1687 @@
+<!-- this_file: mkdocs/mk-fontlab/main.html --><!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="News, technical writing, and updates from FontLab.">
+      
+      
+        <meta name="author" content="Fontlab Ltd.">
+      
+      
+        <link rel="canonical" href="https://blog.fontlab.com/2026/05/03/color-fonts-in-2026/">
+      
+      
+        <link rel="prev" href="../../../04/28/the-hedcut-at-45/">
+      
+      
+        <link rel="next" href="../../07/from-bland-to-bold-with-vexy-lines/">
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
+      
+      
+        
+        
+        
+          <link rel="icon" href="../../../../assets/images/favicon.png">
+        
+      
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.3">
+    
+    
+      
+        <title>Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes - FontLab Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.dc9e9c2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.d7242098.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/fontlab-chrome.css">
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5WNRV8Z7');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Tailwind CSS (Play CDN) for utility classes in post Markdown via attr_list.
+       Preflight is OFF so Tailwind's base reset cannot clobber the MaterialX theme;
+       we only want the utility layer (grid, flex, gap, rounded, shadow, aspect, …). -->
+  <script data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
+  <script data-cfasync="false">
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      important: '.md-typeset'
+    };
+  </script>
+
+  <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Crimson+Pro:ital,wght@0,200..900;1,200..900&amp;display=swap" rel="stylesheet">
+
+  <!-- MaterialX layout tweaks: <fontlab-menu> is the only top bar. -->
+  <style>
+    /* Kill the MaterialX copyright footer; <fontlab-footer> is the only footer. */
+    .md-footer { display: none !important; }
+
+    /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
+    .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: 860px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 1rem 1.5rem 3rem !important;
+    }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
+    .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
+  </style>
+
+  <!-- RSS / JSON Feed autodiscovery (mkdocs-rss-plugin). -->
+  <link rel="alternate" type="application/rss+xml" title="FontLab Blog (RSS, by creation date)" href="../../../../feed_rss_created.xml">
+  <link rel="alternate" type="application/rss+xml" title="FontLab Blog (RSS, by update date)" href="../../../../feed_rss_updated.xml">
+  <link rel="alternate" type="application/feed+json" title="FontLab Blog (JSON Feed, by creation date)" href="../../../../feed_json_created.json">
+  <link rel="alternate" type="application/feed+json" title="FontLab Blog (JSON Feed, by update date)" href="../../../../feed_json_updated.json">
+
+  <!-- FontLab menu/footer loader -->
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer=""></script>
+
+  <!-- Configure <fontlab-menu>: no local nav items for blog; search from 'blog'. -->
+  <script>
+  (function () {
+    function apply() {
+      var el = document.querySelector('fontlab-menu');
+      if (!el) return;
+      el.config = { localMenu: [], search: { from: 'blog' } };
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else { apply(); }
+  })();
+  </script>
+
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-actually-shipped" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WNRV8Z7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <fontlab-menu mode="dark" site-label="Blog" site-url="https://blog.fontlab.com/"></fontlab-menu>
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-header__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FontLab Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" aria-hidden="true" type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+  
+
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-nav__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    FontLab Blog
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2020
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2017/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2017
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2016
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2015/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2015
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2014/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2014
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2013/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2013
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2005/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2005
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Topics
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/transtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TransType
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/vexy-lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vexy Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/adam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adam Twardoch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/typetool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeTool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontographer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fontographer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontlab-pad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab Pad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#what-actually-shipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What actually shipped
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-important-change-colr-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The important change: COLR v1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#palettes-are-now-a-web-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Palettes are now a web feature
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-support-as-of-3-may-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser support as of 3 May 2026
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app-and-platform-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        App and platform support
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-fontlab-8-supports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What FontLab 8 supports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-2013-lesson-that-still-holds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The 2013 lesson that still holds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="/media/authors/adam-twardoch.png" alt="Adam Twardoch">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="../../../../topic/adam/">Adam Twardoch</a>
+                        
+                      </strong>
+                      <br>
+                      Editorial essays, interviews, and Made with FontLab stories
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"></path></svg>
+                        <time datetime="2026-05-03 00:00:00+00:00" class="md-ellipsis">May 3, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"></path></svg>
+                          <span class="md-ellipsis">
+                            
+                              8 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+  <h1>Color fonts in 2026: COLR v1, SVG, sbix, and bitmap strikes</h1>
+
+<p><img alt="" class="illu-thumb illu-index" src="../../../../media/illu/color-fonts-in-2026-3.png"></p>
+<p>In 2013, color OpenType looked like a standards argument with four exits. Apple had <code>sbix</code>. Google had <code>CBDT/CBLC</code>. Microsoft had <code>COLR/CPAL</code>. Adobe and Mozilla had SVG-in-OpenType. The question then was which proposal would win. In 2026, the answer is less tidy and more useful: they all became real OpenType color font formats, but they did not become equally useful everywhere.</p>
+<!-- more -->
+
+<p>For scalable color display type on the web, <code>COLR</code> v1 is now the format to understand first. For Apple and many design-app workflows, SVG and bitmap flavors still matter. For emoji and legacy platform compatibility, <code>sbix</code> and <code>CBDT/CBLC</code> are still in the room, looking faintly pleased with themselves.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../media/fl8-head-09-gradient.png" data-desc-position="bottom"><img alt="FontLab 8 gradient color-font artwork" src="../../../../media/fl8-head-09-gradient.png"></a></p>
+<h2 id="what-actually-shipped">What actually shipped<a class="headerlink" href="#what-actually-shipped" title="Permanent link">¶</a></h2>
+<p>The four 2013 proposals are no longer merely proposals. They are OpenType color glyph mechanisms with different strengths.</p>
+<p><code>COLR/CPAL</code> is the compact vector format. <code>COLR</code> version 0 stacks outline glyphs as layers, each filled with a solid color from <code>CPAL</code>. <code>COLR</code> version 1 keeps the outline-and-palette architecture but adds a paint graph: linear, radial and sweep gradients, transforms, compositing, blending, reuse of paint subgraphs, and variation data for the color construction itself. The OpenType specification is explicit: <code>COLR</code> needs <code>CPAL</code>; without a <code>CPAL</code> table, the <code>COLR</code> table is ignored. See the OpenType <code>COLR</code> and <code>CPAL</code> specs, the Chrome COLRv1 implementation notes, and the current Can I Use support data for the same shape of the story.</p>
+<p><code>SVG</code> is the rich vector-and-bitmap format. An OpenType <code>SVG</code> table stores SVG 1.1 documents for glyphs. Those documents can use gradients and can combine vector and raster artwork, but the OpenType subset deliberately forbids or discourages several web-SVG freedoms: scripts, links, <code>foreignObject</code>, many CSS mechanisms, interactivity, and other features that do not belong in a text renderer. SVG-in-OpenType can optionally use <code>CPAL</code>, but it does not get the same integration with OpenType Font Variations that <code>COLR</code> v1 gets.</p>
+<p><code>sbix</code> is Apple’s bitmap graphics table. It stores standard bitmap graphics such as PNG, JPEG or TIFF in size-specific strikes. It can provide beautiful emoji-style glyphs when the target size is known, and it can also store different artwork for different pixel densities. It is not the format you choose for infinitely scalable display type.</p>
+<p><code>CBDT/CBLC</code> is Google’s color bitmap pair. <code>CBDT</code> stores color bitmap glyph data; <code>CBLC</code> stores the locations and strike metadata. The pair extends the older embedded bitmap tables used for monochrome and grayscale bitmaps. It can store BGRA bitmap data or PNG images. It remains important because Android and older emoji workflows used it heavily, but like <code>sbix</code>, it is a bitmap strategy, not a scalable vector strategy.</p>
+<h2 id="the-important-change-colr-v1">The important change: COLR v1<a class="headerlink" href="#the-important-change-colr-v1" title="Permanent link">¶</a></h2>
+<p>The old Microsoft <code>COLR</code> idea was clean and limited: stack outline layers, fill each layer with one solid palette color, and rely on normal font rasterizers. That limitation was also the problem. Real display type wants gradients, shadows, highlights, depth, transparent overlays and reusable parts.</p>
+<p><code>COLR</code> v1 is the practical compromise. It keeps glyph outlines as the geometry, so the font remains compact and scalable. It uses <code>CPAL</code> palettes, so colors are data rather than hard-coded pixels. It adds the paint operations that designers actually need. It also participates in variable fonts: in a <code>COLR</code> v1 variable font, not only the glyph outlines but also alpha values, gradient stop positions, gradient placement and transform arguments can vary. By contrast, <code>COLR</code> v0 can vary the underlying outlines but not the color composition.</p>
+<p>That last sentence is one of the big 2026 facts. Variable color fonts are no longer a contradiction. They are specifically designed into <code>COLR</code> v1. The OpenType spec describes the variation store in the <code>COLR</code> table, Google Fonts’ color-font guidance treats variable COLRv1 and SVG differently for exactly this reason, and FontLab 8 can export many variable COLRv1 fonts with gradients.</p>
+<h2 id="palettes-are-now-a-web-feature">Palettes are now a web feature<a class="headerlink" href="#palettes-are-now-a-web-feature" title="Permanent link">¶</a></h2>
+<p><code>CPAL</code> stores one or more palettes, each made of sRGB color records. Palette 0 is the default. Version 1 of <code>CPAL</code> can label palettes and mark them as usable on light or dark backgrounds.</p>
+<p>CSS caught up. The <code>font-palette</code> property lets a page choose a palette from a color font. The <code>@font-palette-values</code> rule lets a page override palette entries or define a new palette for a font family. This does not magically make every color font format work in every browser. It means palette selection has moved from wishful thinking into the CSS Fonts Level 4 model, and browser support for the CSS controls is now broad.</p>
+<p>For production CSS, use feature queries and ordered fallbacks:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">@</span><span class="k">font-face</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s2">"Example Color"</span><span class="o">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">src</span><span class="o">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">url</span><span class="o">(</span><span class="s2">"/fonts/example-colrv1.woff2"</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s2">"woff2"</span><span class="o">)</span><span class="w"> </span><span class="nt">tech</span><span class="o">(</span><span class="nt">color-COLRv1</span><span class="o">),</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">url</span><span class="o">(</span><span class="s2">"/fonts/example-svg.woff2"</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s2">"woff2"</span><span class="o">)</span><span class="w"> </span><span class="nt">tech</span><span class="o">(</span><span class="nt">color-SVG</span><span class="o">),</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">url</span><span class="o">(</span><span class="s2">"/fonts/example-regular.woff2"</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s2">"woff2"</span><span class="o">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">@</span><span class="k">supports</span><span class="w"> </span><span class="nt">font-tech</span><span class="o">(</span><span class="nt">color-COLRv1</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">.</span><span class="nc">headline</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Color"</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="k">font-palette</span><span class="p">:</span><span class="w"> </span><span class="n">dark</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The exact fallback stack depends on the fonts you can ship. The principle does not: declare the most capable source first, tag it with <code>tech()</code>, and include a normal monochrome font that still reads correctly.</p>
+<h2 id="browser-support-as-of-3-may-2026">Browser support as of 3 May 2026<a class="headerlink" href="#browser-support-as-of-3-may-2026" title="Permanent link">¶</a></h2>
+<p>The browser picture is better than it was, but it is still not one-format paradise.</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>What to expect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chrome and Chromium browsers</td>
+<td><code>COLR</code> v1 has been supported since Chrome 98. Edge follows the Chromium implementation line, and Can I Use lists Edge support from 98.</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td><code>COLR</code> v1 is on by default from Firefox 107. Mozilla’s tracking bug and the Can I Use table agree on that point.</td>
+</tr>
+<tr>
+<td>Safari and iOS Safari</td>
+<td><code>COLR</code> v1 is still not supported in Safari or iOS Safari in current Can I Use data. WebKit’s standards-position discussion remains the public place to watch.</td>
+</tr>
+<tr>
+<td>CSS palette controls</td>
+<td><code>font-palette</code> and <code>@font-palette-values</code> have broad support: Chrome, Edge, Firefox, Safari and iOS Safari all support the CSS palette controls in current MDN and Can I Use data.</td>
+</tr>
+</tbody>
+</table>
+<p>This creates one mildly annoying rule: Safari can support palette CSS while still not supporting <code>COLR</code> v1 glyph rendering. Those are different layers of the stack. Test the actual font technology, not only the CSS property.</p>
+<h2 id="app-and-platform-support">App and platform support<a class="headerlink" href="#app-and-platform-support" title="Permanent link">¶</a></h2>
+<p>Application support is messier than browser support because most apps sit on top of a text stack, an OS text API, a graphics engine, and their own export code. Support for “color fonts” is therefore not one checkbox.</p>
+<p>On Windows, DirectWrite exposes multiple glyph image formats, including <code>COLR</code>, SVG, PNG, JPEG, TIFF and bitmap BGRA data. That does not mean every Windows app renders every color-font flavor equally. It means the platform API has a route for applications that use the relevant DirectWrite interfaces and Windows build.</p>
+<p>In FreeType-based stacks, the split is also important. FreeType exposes <code>COLR</code> layer data and has convenience rendering for limited <code>COLR</code> v0 cases, but its own documentation says <code>COLR</code> v1 needs a dedicated graphics library such as Skia or Cairo to draw the paint tree. HarfBuzz now has paint APIs whose stated purpose is extracting and painting <code>COLR</code> v1 glyph layers. So a Linux or cross-platform app may be excellent, partial, or oblivious depending on which versions and renderers it bundles.</p>
+<p>Adobe support is app-by-app. Photoshop’s official documentation describes OpenType-SVG support. InDesign’s documentation also describes OpenType-SVG color fonts and emoji fonts. Current Illustrator documentation lists both SVG fonts and COLR fonts, and describes COLR fonts as supporting gradient-filled text styles. That is useful, but it is not permission to skip app testing. The font format may render; editing, exporting, PDF output and variable-axis behavior can still differ between apps.</p>
+<p>For Apple platform work, keep the distinction sharp. <code>sbix</code> exists because Apple shipped bitmap color emoji early. Safari still does not support <code>COLR</code> v1 as of this writing. If Safari or iOS is the target, a COLRv1-only font is not enough.</p>
+<h2 id="what-fontlab-8-supports">What FontLab 8 supports<a class="headerlink" href="#what-fontlab-8-supports" title="Permanent link">¶</a></h2>
+<p>FontLab 8 is built for this mixed reality. You can paste, import and edit color vectors, gradients and images; assign solid colors and linear, radial or conical gradients to elements; edit gradients visually; and build layered chromatic fonts.</p>
+<p>For export, FontLab 8 writes all relevant color OpenType flavors: OpenType+COLR, OpenType+SVG, OpenType+sbix and OpenType+CBDT. The current FontLab 8 documentation says FontLab 8.2 added OpenType COLRv1 support. The format notes are more specific: solid-color elements export as <code>COLR</code> v0, gradient elements export as <code>COLR</code> v1, the exported <code>CPAL</code> table can include an automatically generated dark palette, and many variable color fonts can be exported in the COLRv1 flavor. The FontLab product page also lists Color OpenType import/export for TTF+SVG, COLR v0/v1, CBDT and sbix.</p>
+<p>In practice, that means you should design one source and export the flavors your target environment needs. For a web display family in 2026, start with WOFF2 COLRv1 plus a monochrome fallback. If Safari matters, add an SVG flavor or another fallback strategy. If emoji-style bitmap fidelity matters, consider <code>sbix</code> or <code>CBDT/CBLC</code>. If the font is variable and color, prefer COLRv1 for the color construction.</p>
+<h2 id="the-2013-lesson-that-still-holds">The 2013 lesson that still holds<a class="headerlink" href="#the-2013-lesson-that-still-holds" title="Permanent link">¶</a></h2>
+<p>The best color font format is not the most powerful one. It is the format whose limits match the job.</p>
+<p>Use <code>COLR</code> v1 when you need compact, scalable, palette-aware, variable-capable color glyphs. Use SVG when your target app supports it and your artwork really needs SVG’s richer model. Use <code>sbix</code> or <code>CBDT/CBLC</code> when bitmap artwork is the point, especially for emoji-style glyphs or legacy environments. Always include a readable monochrome fallback unless you control every renderer.</p>
+<p>The dream of one color-font flavor everywhere is still premature. The good news is that the source workflow no longer has to be premature. FontLab 8 lets the designer work once, then ship the color formats the world actually uses.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COLR</code> v0/v1, <code>CPAL</code>, gradients, paint graphs and COLRv1 variation</td>
+<td><a href="https://learn.microsoft.com/en-us/typography/opentype/spec/colr">OpenType <code>COLR</code></a>, <a href="https://learn.microsoft.com/en-us/typography/opentype/spec/cpal">OpenType <code>CPAL</code></a>, <a href="https://developer.chrome.com/blog/colrv1-fonts">Chrome COLRv1 notes</a>, <a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/">FontLab 8 formats</a></td>
+</tr>
+<tr>
+<td>SVG-in-OpenType capabilities and limits</td>
+<td><a href="https://learn.microsoft.com/en-us/typography/opentype/spec/svg">OpenType <code>SVG</code></a>, <a href="https://learn.microsoft.com/en-us/typography/opentype/spec/cpal">OpenType <code>CPAL</code> relation to SVG</a>, <a href="https://helpx.adobe.com/fonts/using/ot-svg-color-fonts.html">Adobe OpenType-SVG help</a></td>
+</tr>
+<tr>
+<td><code>sbix</code> and <code>CBDT/CBLC</code> bitmap behavior</td>
+<td><a href="https://learn.microsoft.com/en-us/typography/opentype/spec/sbix">OpenType <code>sbix</code></a>, <a href="https://learn.microsoft.com/en-us/typography/opentype/spec/cbdt">OpenType <code>CBDT</code></a>, <a href="https://learn.microsoft.com/en-us/typography/opentype/spec/cblc">OpenType <code>CBLC</code></a>, <a href="https://notofonts.github.io/noto-docs/specimen/NotoColorEmoji/">Noto Color Emoji notes</a></td>
+</tr>
+<tr>
+<td>Browser support for COLRv1 and palette CSS</td>
+<td><a href="https://caniuse.com/colr-v1">Can I Use COLRv1</a>, <a href="https://developer.chrome.com/blog/colrv1-fonts">Chrome COLRv1 notes</a>, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1791558">Mozilla COLRv1 bug 1791558</a>, <a href="https://github.com/WebKit/standards-positions/issues/415">WebKit COLRv1 standards position</a>, <a href="https://caniuse.com/css-font-palette">Can I Use font-palette</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-palette">MDN font-palette</a></td>
+</tr>
+<tr>
+<td>App and renderer support</td>
+<td><a href="https://learn.microsoft.com/en-us/windows/win32/api/dcommon/ne-dcommon-dwrite_glyph_image_formats">DirectWrite glyph image formats</a>, <a href="https://freetype.org/freetype2/docs/reference/ft2-layer_management.html">FreeType color layer management</a>, <a href="https://harfbuzz.github.io/harfbuzz-hb-paint.html">HarfBuzz paint API</a>, <a href="https://helpx.adobe.com/illustrator/desktop/design-with-text/fonts-and-scripts/supported-fonts-in-illustrator.html">Adobe Illustrator supported fonts</a>, <a href="https://helpx.adobe.com/photoshop/using/svg-fonts.html">Photoshop SVG fonts</a>, <a href="https://helpx.adobe.com/indesign/using/using-fonts.html">InDesign fonts</a></td>
+</tr>
+<tr>
+<td>FontLab 8 support</td>
+<td><a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-09-color/">FontLab 8 color features</a>, <a href="https://help.fontlab.com/fontlab/8/whats-new/whats-new-11-formats/">FontLab 8 formats</a>, <a href="https://help.fontlab.com/fontlab/8/tutorials/intro/8-days/day-8-color/">FontLab 8 color tutorial</a>, <a href="https://www.fontlab.com/font-editor/fontlab/">FontLab 8 product page</a></td>
+</tr>
+</tbody>
+</table>
+<p><a class="fl-help-cta" href="https://help.fontlab.com/fontlab/8/manual/">Read more →</a></p>
+
+
+  
+
+
+  <nav class="md-tags">
+    
+      
+      
+      
+      
+        <span class="md-tag md-tag-icon">cbdt</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag md-tag-icon">color-fonts</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag md-tag-icon">colrv1</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag md-tag-icon">fontlab-8</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag md-tag-icon">sbix</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag md-tag-icon">svg</span>
+      
+    
+  </nav>
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden="">
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+        
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H9V6h11Z"></path></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-5 14H4V6h11Z"></path></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2013–2026 Fontlab Ltd.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <section class="fl-footer-cta" aria-label="FontLab links">
+    <div class="fl-footer-cta__grid">
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--buy">
+        <h2 class="fl-footer-cta__title">Buy FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Get the professional font editor for drawing, spacing, kerning,
+          OpenType production, color fonts, and variable fonts.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light" href="https://www.fontlab.com/buy/">Buy now</a>
+        </p>
+        <a class="fl-footer-cta__fineprint" href="https://www.fontlab.com/buy/">FontLab licenses, upgrades, and bundles</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--learn">
+        <h2 class="fl-footer-cta__title">Explore FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Learn what FontLab can do for type design, variable workflows,
+          color fonts, scripting, import, export, and production.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light" href="https://www.fontlab.com/">Learn more</a>
+        </p>
+        <a class="fl-footer-cta__fineprint" href="https://www.fontlab.com/">Products, features, examples, and updates</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--talk">
+        <h2 class="fl-footer-cta__title">Questions first?</h2>
+        <p class="fl-footer-cta__copy">
+          Tell us what you are making, what you need to solve, or what you
+          need to know before choosing a FontLab tool.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--dark" href="https://www.fontlab.com/contact/">Let's talk</a>
+        </p>
+        <a class="fl-footer-cta__fineprint fl-footer-cta__fineprint--dark" href="https://www.fontlab.com/contact/">Sales and support contact options</a>
+      </article>
+    </div>
+  </section>
+  <fontlab-footer mode="dark"></fontlab-footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.top", "navigation.indexes", "toc.follow", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
+      
+        <script src="../../../../js/illu-link.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

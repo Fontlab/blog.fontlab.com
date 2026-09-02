@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>mask test: palette vs RGBA</title>
+<style>
+  body { background: #fff; font: 13px/1.4 -apple-system,sans-serif; padding: 1.5rem; }
+  .row { display: grid; grid-template-columns: 220px 220px 220px 220px; gap: 1rem; align-items: center; padding: 0.6rem 0; border-bottom: 1px solid #eee; }
+  .label { font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #555; }
+  img.raw { width: 200px; height: 200px; object-fit: contain; display: block; }
+  .mask {
+    display: block; width: 200px; height: 200px;
+    -webkit-mask-image: var(--src);    mask-image: var(--src);
+    -webkit-mask-repeat: no-repeat;    mask-repeat: no-repeat;
+    -webkit-mask-position: center;     mask-position: center;
+    -webkit-mask-size: contain;        mask-size: contain;
+    -webkit-mask-mode: alpha;          mask-mode: alpha;
+  }
+  .mask.blue  { background-color: #0d283e; }
+  .mask.cream { background-color: #f5f4f1; }
+  .dark { width: 200px; height: 200px; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<h1 style="font-size:1rem">mask test — does mask-mode:alpha respect the alpha channel?</h1>
+
+<div class="row">
+  <div class="label">PALETTE PNG (current)<br>halftone-fox-talbot-…-1.png</div>
+  <img class="raw" src="halftone-fox-talbot-to-shantytown-1.png">
+  <span class="mask blue" style="--src:url(halftone-fox-talbot-to-shantytown-1.png)"></span>
+  <div class="dark"><span class="mask cream" style="--src:url(halftone-fox-talbot-to-shantytown-1.png)"></span></div>
+</div>
+
+<div class="row">
+  <div class="label">TRUE RGBA PNG<br>_test_rgba.png</div>
+  <img class="raw" src="_test_rgba.png">
+  <span class="mask blue" style="--src:url(_test_rgba.png)"></span>
+  <div class="dark"><span class="mask cream" style="--src:url(_test_rgba.png)"></span></div>
+</div>
+
+</body>
+</html>

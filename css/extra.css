@@ -1,0 +1,686 @@
+/* this_file: src_docs/md/css/extra.css */
+/* FontLab blog typography and footer CTA customizations. */
+
+/* ============================================================
+   Post illustrations — black-on-transparent line-art PNGs.
+
+   Markdown classes (set via attr_list, e.g. `{ .illu-thumb }`):
+     .illu-thumb   default — float right, wraps text on left
+     .illu-left    modifier — flip to float left
+     .illu-index   modifier — also show as thumbnail on the blog index
+     .illu-front   modifier — show ONLY on the blog index, hidden on
+                   the post page (for posts with dedicated art inside)
+     .illu-photo   modifier — photographic/color art: no dark-mode
+                   invert, rounded corners, cover-fit
+
+   Sizing is contextual:
+     - Inside .md-post--excerpt (blog index card) → small thumbnail
+     - On the post page itself                  → hero (max 512px)
+
+   Dark-mode recolor: PNGs ship pure black, so a single CSS filter
+   inverts black → light gray. No mask wiring needed, no per-image
+   --src plumbing — works directly on the markdown-emitted <img>.
+   ============================================================ */
+
+/* Hero on the post page (default size). */
+.md-typeset .illu-thumb {
+  float: right;
+  width: 50%;
+  max-width: 512px;
+  height: auto;
+  margin: 0 0 -1.5rem 0.5rem;
+  position: relative;
+  top: -1.5rem;
+  shape-outside: margin-box;
+}
+
+/* Flipped float modifier. */
+.md-typeset .illu-thumb.illu-left {
+  float: left;
+  margin: 0 0.5rem -1.5rem 0;
+}
+
+/* On the blog-index card, anchor the thumbnail to the top-right of the
+                                           excerpt so the H2 title wraps around it (not just the body paragraph).
+                                           We can't move the image *before* the title in DOM order — the blog
+                                           plugin emits the H2 from the post's first heading — so we lift it out
+                                           of flow with absolute positioning and reserve space on the right via
+                                           padding-right on the post content. */
+.md-post--excerpt {
+  display: flow-root;
+  /* still contain stray floats */
+}
+
+/* On the blog index, the post excerpt hides its illu image by default.
+     Add the .illu-index modifier in markdown to opt the image back in. */
+.md-post--excerpt .md-typeset .illu-thumb {
+  display: none;
+}
+
+/* When .illu-index is present: render the thumbnail anchored to the top-
+     right of the excerpt and reserve space on the right of the content so
+     the H2 title and body wrap around it cleanly. */
+.md-post--excerpt .md-post__content:has(.illu-thumb.illu-index),
+.md-post--excerpt .md-post__content:has(.illu-thumb.illu-front) {
+  position: relative;
+  padding-right: 220px;
+  /* image (200) + gap (20) */
+  min-height: 210px;
+  /* keep the box at least image-tall */
+}
+
+.md-post--excerpt .md-typeset .illu-thumb.illu-index,
+.md-post--excerpt .md-typeset .illu-thumb.illu-front {
+  display: block;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  float: none;
+  clear: none;
+  width: 200px;
+  max-width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0;
+}
+
+/* .illu-front: index-only thumbnail. Everywhere outside the excerpt card
+   (i.e. on the post page itself) the image is removed entirely; the
+   excerpt rules above opt it back in on the blog index. */
+.md-typeset .illu-thumb.illu-front {
+  display: none;
+}
+
+/* .illu-photo: photographic or full-color art. The dark-mode invert
+   below is meant for black line-art PNGs — exempt photos, and give
+   them cover-fit with soft corners on the index card. */
+[data-md-color-scheme='slate'] .md-typeset .illu-thumb.illu-photo {
+  filter: none;
+}
+
+.md-post--excerpt .md-typeset .illu-thumb.illu-photo {
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Optional flip-to-left modifier on the index. */
+.md-post--excerpt .md-typeset .illu-thumb.illu-index.illu-left {
+  right: auto;
+  left: 0;
+}
+
+.md-post--excerpt .md-post__content:has(.illu-thumb.illu-index.illu-left) {
+  padding-right: 0;
+  padding-left: 220px;
+}
+
+/* Dark mode: turn black ink into light gray.
+                                           .85 ≈ rgb(217,217,217); tweak if a particular shade is preferred. */
+[data-md-color-scheme='slate'] .md-typeset .illu-thumb {
+  filter: invert(0.86);
+}
+
+/* Mobile: on the article page, stop floating and stack full-width.
+   On the blog index, hide the thumbnail entirely — list density wins. */
+@media (max-width: 720px) {
+  .md-typeset .illu-thumb,
+  .md-typeset .illu-thumb.illu-left {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    position: static;
+    top: auto;
+    margin: 0.5rem 0 1.25rem;
+  }
+
+  .md-post--excerpt .md-typeset .illu-thumb,
+  .md-post--excerpt .md-typeset .illu-thumb.illu-index,
+  .md-post--excerpt .md-typeset .illu-thumb.illu-front,
+  .md-post--excerpt .md-typeset .illu-thumb.illu-index.illu-left {
+    display: none;
+  }
+
+  .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index),
+  .md-post--excerpt .md-post__content:has(.illu-thumb.illu-front),
+  .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index.illu-left) {
+    padding-right: 0;
+    padding-left: 2rem;
+    min-height: 0;
+  }
+}
+
+:root {
+  --fl-black: #000000;
+  --fl-white: #ffffff;
+  --fl-off-white: #f5f4f0;
+  --fl-gray-light: #e8e8e8;
+  --fl-gray-text: #555555;
+  --fl-red: #c81a27;
+  --fl-blue-deep: #0e273e;
+  --fl-code-bg: #f2f1ee;
+  --fl-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fl-font-display:
+    'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fl-font-quote: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --md-text-font: var(--fl-font-body);
+  --md-code-font:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+}
+
+html {
+  overflow-x: clip;
+}
+
+.md-typeset,
+.md-nav,
+.md-search__input {
+  font-family: var(--fl-font-body);
+  letter-spacing: 0;
+}
+
+.md-typeset {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.md-typeset p,
+.md-typeset li,
+.md-typeset blockquote,
+.md-typeset td,
+.md-typeset th {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+  text-wrap-style: pretty;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-post__content h2 {
+  color: var(--fl-black);
+  font-family: var(--fl-font-display);
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+.md-typeset h1 {
+  font-size: 2.4rem;
+  font-weight: 200;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.md-typeset h2 {
+  border-bottom: 0;
+  font-size: 1.7rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 2rem 0 2rem;
+}
+
+.md-typeset h3 {
+  font-family: var(--fl-font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.md-typeset blockquote {
+  border-left: 3px solid var(--fl-gray-light);
+  color: var(--fl-gray-text);
+  padding-left: 1rem;
+}
+
+.md-typeset blockquote,
+.md-typeset blockquote p {
+  font-family: var(--fl-font-body);
+  font-size: 1.05rem;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.md-typeset code,
+.md-typeset pre {
+  font-size: 0.85rem;
+}
+
+.md-typeset pre {
+  background: var(--fl-code-bg);
+  border: 1px solid var(--fl-gray-light);
+  border-radius: 6px;
+}
+
+.md-typeset .headerlink {
+  display: none;
+}
+
+.md-sidebar--secondary .md-nav--secondary > .md-nav__title[for='__toc'] {
+  display: none;
+}
+
+.md-nav--secondary > .md-nav__list {
+  padding-top: 0.2rem;
+}
+/* Hide the "Metadata" label that appears above the post sidebar's
+   author/date/read-time block. */
+.md-post__title {
+  display: none;
+}
+
+.md-post--excerpt {
+  margin-bottom: 2.25rem;
+}
+
+.md-post--excerpt .md-post__content h2 {
+  font-family: var(--fl-font-display);
+  line-height: 1.1;
+  margin: 0 0 0.3rem;
+  text-transform: none;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-size: 1.35rem;
+}
+
+/* Author avatar: appears inline-before the title; abstract aligns with title */
+.md-post--excerpt .md-post__content {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.md-post--excerpt .md-post__avatar {
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+}
+
+.md-post--excerpt .md-post__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Inline date + "N min read →" appended at the end of the intro paragraph.
+   inline-block + nowrap keeps the whole metaline as one atomic chunk; the
+   browser then breaks BEFORE it when it doesn't fit on the current line.
+   `text-wrap: pretty` on the excerpt paragraph (rule below) helps the
+   browser pick the break point that doesn't orphan a tiny last word. */
+.md-post__metaline {
+  display: inline-block;
+  /* No left margin: the gap comes from the natural whitespace character
+                                                 between the body text and the metaline — that whitespace lives on the
+                                                 previous line when the browser breaks here, so a wrapped metaline starts
+                                                 flush left instead of indented. */
+  margin-left: 0;
+  color: var(--fl-gray-text);
+  white-space: nowrap;
+}
+
+.md-post__metaline,
+.md-ellipsis {
+  font-size: 0.65rem;
+}
+
+.md-post__metaline small,
+.md-ellipsis small {
+  font-size: 0.7em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  display: block;
+  line-height: 1.2em;
+  opacity: 0.5;
+}
+
+.md-nav__list > li + li {
+  margin-top: 0;
+}
+
+.md-nav__link {
+  padding: 0.15rem 0.8rem;
+}
+
+.md-post--excerpt .md-post__content p {
+  text-wrap: pretty;
+  text-wrap-style: pretty;
+}
+.md-post__metaline time {
+  font-variant-numeric: tabular-nums;
+}
+
+.md-post__readlink {
+  color: var(--fl-gray-text);
+  text-decoration: none;
+  margin-left: 0.35em;
+  white-space: nowrap;
+}
+
+.md-post__readlink:hover {
+  text-decoration: underline;
+  color: var(--fl-red);
+}
+
+.md-post--excerpt .md-post__content > *:last-child {
+  margin-bottom: 0.25rem;
+}
+
+/* In-content CTA link (.fl-help-cta applied via attr_list) */
+.md-typeset p:has(> a.fl-help-cta:only-child) {
+  margin: 0.35rem 0 3rem;
+  line-height: 1.2;
+}
+
+.md-typeset a.fl-help-cta,
+.md-typeset a.fl-help-cta:visited {
+  display: inline-block;
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--fl-red);
+  border-radius: 0;
+  box-shadow: none !important;
+  padding: 0;
+  font-family: var(--fl-font-display);
+  font-size: 0.72rem;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0;
+  text-transform: none;
+  transition:
+    color 0.18s ease,
+    text-decoration-color 0.18s ease;
+  margin-top: 0;
+}
+
+.md-typeset a.fl-help-cta:hover {
+  background: transparent !important;
+  color: var(--fl-black);
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset a.fl-help-cta::after {
+  content: ' →';
+}
+
+.md-post--excerpt .md-post__content h2 a {
+  color: var(--fl-black);
+  text-decoration: none;
+}
+
+.md-post--excerpt .md-post__content h2 a:hover {
+  color: var(--fl-red);
+}
+
+.fl-footer-cta {
+  background: var(--fl-off-white);
+  margin: 3.5rem 0 0;
+}
+
+.fl-footer-cta__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.fl-footer-cta__panel {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto;
+  min-height: 24rem;
+  padding: 3.5rem 1.5rem;
+  row-gap: 0.7rem;
+}
+
+.fl-footer-cta__panel--buy {
+  background: var(--fl-red);
+  color: var(--fl-white);
+}
+
+.fl-footer-cta__panel--learn {
+  background: var(--fl-blue-deep);
+  color: var(--fl-white);
+}
+
+.fl-footer-cta__panel--talk {
+  background: var(--fl-off-white);
+  color: var(--fl-black);
+}
+
+.fl-footer-cta__title {
+  color: inherit;
+  font-family: var(--fl-font-display);
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: 500;
+  grid-row: 1;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.fl-footer-cta__copy {
+  color: inherit;
+  font-family: var(--fl-font-body);
+  font-size: 1.05rem;
+  grid-row: 2;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 34ch;
+  opacity: 0.86;
+}
+
+.fl-footer-cta__panel--talk .fl-footer-cta__copy {
+  color: var(--fl-gray-text);
+  opacity: 1;
+}
+
+.fl-footer-cta__button-row {
+  align-items: center;
+  display: flex;
+  grid-row: 4;
+  margin: 0.75rem 0 0;
+  min-height: 3.5rem;
+}
+
+.fl-footer-cta__button,
+.fl-footer-cta__button:hover,
+.fl-footer-cta__button:focus,
+.fl-footer-cta__button:visited {
+  align-items: center;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: inline-flex;
+  font-family: var(--fl-font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  min-height: 3.25rem;
+  min-width: 12.5rem;
+  padding: 0.9rem 1.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
+}
+
+.fl-footer-cta__button--light,
+.fl-footer-cta__button--light:hover,
+.fl-footer-cta__button--light:focus,
+.fl-footer-cta__button--light:visited {
+  background: var(--fl-white);
+  border-color: var(--fl-white);
+  color: var(--fl-red);
+}
+
+.fl-footer-cta__panel--learn .fl-footer-cta__button--light,
+.fl-footer-cta__panel--learn .fl-footer-cta__button--light:hover,
+.fl-footer-cta__panel--learn .fl-footer-cta__button--light:focus,
+.fl-footer-cta__panel--learn .fl-footer-cta__button--light:visited {
+  color: var(--fl-blue-deep);
+}
+
+.fl-footer-cta__button--dark,
+.fl-footer-cta__button--dark:hover,
+.fl-footer-cta__button--dark:focus,
+.fl-footer-cta__button--dark:visited {
+  background: var(--fl-black);
+  border-color: var(--fl-black);
+  color: var(--fl-white);
+}
+
+.fl-footer-cta__button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.fl-footer-cta__fineprint,
+.fl-footer-cta__fineprint:hover,
+.fl-footer-cta__fineprint:focus,
+.fl-footer-cta__fineprint:visited {
+  color: inherit;
+  font-family: var(--fl-font-body);
+  font-size: 0.78rem;
+  grid-row: 5;
+  line-height: 1.4;
+  margin: 0.35rem 0 0;
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+.fl-footer-cta__fineprint:hover {
+  opacity: 1;
+}
+
+.fl-footer-cta__fineprint--dark,
+.fl-footer-cta__fineprint--dark:hover,
+.fl-footer-cta__fineprint--dark:focus,
+.fl-footer-cta__fineprint--dark:visited {
+  color: var(--fl-gray-text);
+  opacity: 0.85;
+}
+
+@media (min-width: 768px) {
+  .md-post--excerpt .md-post__content h2 {
+    font-size: 1.35rem;
+  }
+
+  .fl-footer-cta__panel {
+    padding: 4.5rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fl-footer-cta__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .fl-footer-cta__panel {
+    min-height: 28rem;
+    padding: 5.5rem 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .md-typeset h1 {
+    font-size: 2rem;
+  }
+
+  .fl-footer-cta__panel {
+    min-height: 21rem;
+  }
+
+  .fl-footer-cta__button {
+    min-width: 11rem;
+  }
+}
+
+/* Home hero — full-bleed band, visually extends the dark menu. */
+.fl-home-hero {
+  background: #2a2a2a;
+  width: 100%;
+  margin: 0 0 1rem 0;
+  display: block;
+  line-height: 0;
+  padding: 0.2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.fl-home-hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 690px;
+}
+
+/* Hide the generated 'Blog' header on pagination listing pages */
+.md-content__inner > header.md-typeset h1#blog {
+  display: none !important;
+}
+
+.md-nav--primary,
+.md-sidebar--secondary .md-nav--secondary {
+  opacity: 0.5;
+  margin-top: 0.9rem;
+}
+
+.md-sidebar--secondary .md-nav--secondary .md-ellipsis {
+  font-family: var(--fl-font-body);
+  font-size: 0.65rem;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+[dir='ltr'] .md-typeset blockquote {
+  border-left: none;
+}
+
+[dir='ltr'] .md-typeset blockquote {
+  padding-left: 0;
+  padding-right: 2rem;
+}
+
+.md-typeset blockquote,
+.md-typeset blockquote p {
+  font-family: var(--fl-font-display);
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.3;
+}
+
+.md-typeset blockquote {
+  color: var(--fl-gray-text);
+}

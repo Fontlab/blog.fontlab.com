@@ -1,0 +1,1668 @@
+<!-- this_file: mkdocs/mk-fontlab/main.html --><!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="News, technical writing, and updates from FontLab.">
+      
+      
+        <meta name="author" content="Fontlab Ltd.">
+      
+      
+        <link rel="canonical" href="https://blog.fontlab.com/2026/06/07/vexy-lines-2/">
+      
+      
+        <link rel="prev" href="../../../05/07/from-bland-to-bold-with-vexy-lines/">
+      
+      
+        <link rel="next" href="../../22/vexy-lines-2-new-website/">
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
+      
+      
+        
+        
+        
+          <link rel="icon" href="../../../../assets/images/favicon.png">
+        
+      
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.3">
+    
+    
+      
+        <title>Vexy Lines 2 is here! - FontLab Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.dc9e9c2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.d7242098.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../css/fontlab-chrome.css">
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5WNRV8Z7');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Tailwind CSS (Play CDN) for utility classes in post Markdown via attr_list.
+       Preflight is OFF so Tailwind's base reset cannot clobber the MaterialX theme;
+       we only want the utility layer (grid, flex, gap, rounded, shadow, aspect, …). -->
+  <script data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
+  <script data-cfasync="false">
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      important: '.md-typeset'
+    };
+  </script>
+
+  <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Crimson+Pro:ital,wght@0,200..900;1,200..900&amp;display=swap" rel="stylesheet">
+
+  <!-- MaterialX layout tweaks: <fontlab-menu> is the only top bar. -->
+  <style>
+    /* Kill the MaterialX copyright footer; <fontlab-footer> is the only footer. */
+    .md-footer { display: none !important; }
+
+    /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
+    .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: 860px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 1rem 1.5rem 3rem !important;
+    }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
+    .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
+  </style>
+
+  <!-- RSS / JSON Feed autodiscovery (mkdocs-rss-plugin). -->
+  <link rel="alternate" type="application/rss+xml" title="FontLab Blog (RSS, by creation date)" href="../../../../feed_rss_created.xml">
+  <link rel="alternate" type="application/rss+xml" title="FontLab Blog (RSS, by update date)" href="../../../../feed_rss_updated.xml">
+  <link rel="alternate" type="application/feed+json" title="FontLab Blog (JSON Feed, by creation date)" href="../../../../feed_json_created.json">
+  <link rel="alternate" type="application/feed+json" title="FontLab Blog (JSON Feed, by update date)" href="../../../../feed_json_updated.json">
+
+  <!-- FontLab menu/footer loader -->
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer=""></script>
+
+  <!-- Configure <fontlab-menu>: no local nav items for blog; search from 'blog'. -->
+  <script>
+  (function () {
+    function apply() {
+      var el = document.querySelector('fontlab-menu');
+      if (!el) return;
+      el.config = { localMenu: [], search: { from: 'blog' } };
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else { apply(); }
+  })();
+  </script>
+
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#whats-vexy-lines" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WNRV8Z7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <fontlab-menu mode="dark" site-label="Blog" site-url="https://blog.fontlab.com/"></fontlab-menu>
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-header__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FontLab Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vexy Lines 2 is here!
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" aria-hidden="true" type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+  
+
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-nav__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    FontLab Blog
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2020
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2017/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2017
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2016
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2015/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2015
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2014/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2014
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2013/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2013
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2005/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2005
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Topics
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/transtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TransType
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/vexy-lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vexy Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/adam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adam Twardoch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/typetool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeTool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontographer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fontographer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontlab-pad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab Pad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#whats-vexy-lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What’s Vexy Lines?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-20-image-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 2.0: Image filters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-20-sharp-masks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 2.0: Sharp masks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-20-diamond-dots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 2.0: Diamond dots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-20-more-organic-strokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 2.0: More organic strokes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-20-drag-parameter-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 2.0: Drag parameter icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-11-flowlines-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 1.1: Flowlines fill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-in-11-handmade-fills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated in 1.1: Handmade fills
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-11-stochastic-stippling-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 1.1: Stochastic Stippling fill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-in-11-spiral-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated in 1.1: Spiral fill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-in-11-fractal-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated in 1.1: Fractal fill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-fills-and-strokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated: Fills and strokes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-in-11-export-and-file-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New in 1.1: Export and file handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-in-11-and-20-interface-and-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updated in 1.1 and 2.0: Interface and workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="/media/authors/vexy-lines.png" alt="Vexy Lines">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="../../../../topic/vexy-lines/">Vexy Lines</a>
+                        
+                      </strong>
+                      <br>
+                      Vector drawing, engraving, hatching, guilloche, and line art
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"></path></svg>
+                        <time datetime="2026-06-07 00:00:00+00:00" class="md-ellipsis">June 7, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"></path></svg>
+                          <span class="md-ellipsis">
+                            
+                              7 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+  <h1>Vexy Lines 2 is here!</h1>
+
+<p>Say hello to Vexy Lines 2, with all-new image filters, a stroke-cutting sharp mask, cross-hatching diamond dots, organic wobble &amp; rough strokes, much faster parameter tweaking, and hundreds of other improvements. If you have Vexy Lines 1, it’s free!</p>
+<!-- more -->
+
+<p>In this article, we’re covering the new features in Vexy Lines 2.0, and also those that we added Vexy Lines 1.1. If you already have Vexy Lines, use <strong>Check for Updates</strong> to get the latest version. If you don’t, now is a good time!</p>
+<p><a href="https://vexy.art/lines/"><img alt="Vexy Lines" src="https://cdn.prod.website-files.com/67c7070e70765599c7796390/6a3e97f80d8bed4238e52e97_vexy.art--front-4k.png"></a></p>
+<h2 id="whats-vexy-lines">What’s Vexy Lines?<a class="headerlink" href="#whats-vexy-lines" title="Permanent link">¶</a></h2>
+<p>With Vexy Lines, you can transform your photos and bitmap images into infinitely scalable vector artwork.</p>
+<p>From traditional autotrace, to engraving-style line art, retro halftone dot patterns, impactful spirals, wave textures, scribbles, wireframes, fractal curves—and even variable text, where typesetting dynamically picks variable font instances depending on the region of the underlying source image.</p>
+<p>Start by applying a single fill for immediate results. Use masks to apply different fills on parts of the image. Add an extra dimension with a mesh. Then export or copy the result as a scalable SVG or PDF graphic, or as a PNG or JPEG.</p>
+<p>Every fill transforms the source image into <em>signal</em> with filters, and from it generates <em>pattern paths</em>: lines or dots that form the skeleton of the fill. Then stroke parameters render the paths into <em>strokes</em>. Keep that chain in mind—signal, paths, strokes—because most of what’s new sharpens one link in it.</p>
+<h2 id="new-in-20-image-filters">New in 2.0: Image filters<a class="headerlink" href="#new-in-20-image-filters" title="Permanent link">¶</a></h2>
+<p>Optimal stroke parameters are only half of impactful vector artwork—the signal itself matters just as much. The source image is the control surface for the finished artwork. When a fill turns your image into engraving lines, halftone dots, or hatching, the pixels decide how dense the pattern gets, where strokes thicken and thin, how the lines break and gather.</p>
+<p>But you don’t easily see it upfront: a photo can look perfectly good on screen and still produce a muddy, clogged halftone or a thin, lifeless engraving.</p>
+<p>Where 1.1 gave you brightness and contrast, 2.0 turns that into a full filter stack. New image postprocessing <strong>filters</strong> added on any fill change how that fill interprets the source image. Use the <strong>Filters</strong> section of the Properties panel to add, remove, or reorder filters on the current fill.</p>
+<p>Nudge the contrast and watch the lines respond. Sharpen the source and watch the halftone tighten. Lift the shadows and watch detail appear in the dark areas of the pattern. You’re adjusting the signal and shaping the vectors. Finally, you can experiment until it’s right instead of exporting, re-importing, and hoping.</p>
+<p>Adjust <strong>Brightness</strong>, <strong>Contrast</strong>, <strong>Levels</strong>, <strong>Shadows / Highlights</strong>. <strong>Sharpen</strong> or <strong>Blur</strong>. <strong>Invert</strong> the image or restrict its <strong>Color</strong> range.</p>
+<p>Add a <strong>Gradient</strong> to a path-producing fill, base a Text fill on it, use a variable font, and watch weight or width change smoothly along the gradient. Or emphasize the foreground and fade the rest with <strong>Remove background</strong>—it uses an algorithm tuned to your platform and is never fast, so use it sparingly.</p>
+<p>In the <strong>Image &amp; Signal</strong> section, click the new <strong>Show source image</strong> to preview the postprocessed result, or use the <strong>Histogram</strong> to limit the final signal threshold.</p>
+<h2 id="new-in-20-sharp-masks">New in 2.0: Sharp masks<a class="headerlink" href="#new-in-20-sharp-masks" title="Permanent link">¶</a></h2>
+<p>Each layer’s mask defines its active regions. The <strong>Normal mask</strong> cuts the pattern paths, which are then expanded into strokes—so those strokes can spill past the mask boundary. <strong>Smooth mask</strong> softens the signal gradually with a tolerance you set.</p>
+<p>The new <strong>Sharp mask</strong> cuts the rendered strokes precisely at the mask boundaries. No spill.</p>
+<p>And when Mask Overlay makes the current layer’s active regions inactive in the group’s layers below, those excluded regions now render correctly in red if <strong>Highlight Masks</strong> is on.</p>
+<ul>
+<li>Updated in 1.1: With the Brush tool active, tap <strong>[</strong> and <strong>]</strong> to decrease or increase the mask brush size</li>
+</ul>
+<h2 id="new-in-20-diamond-dots">New in 2.0: Diamond dots<a class="headerlink" href="#new-in-20-diamond-dots" title="Permanent link">¶</a></h2>
+<p>Say you have fills that together form a grid of small cells enclosed by crossing paths—for example, two Linear fills at different angles that intersect into diamond-shaped cells.</p>
+<p>Select two or more such fills, choose <strong>Create Diamond Dots</strong> from the <strong>Fill</strong> menu, and Vexy Lines builds a new “Diamond Dots” fill. This new Handmade fill consists of short lines that run diagonally through each cell, with a short stroke—the “diamond dot” growing from the middle of each cell. Drag the end nodes of each line to adjust the line lengths, and in the Handmade Fill section decide how much of that length renders as the dot.</p>
+<h2 id="new-in-20-more-organic-strokes">New in 2.0: More organic strokes<a class="headerlink" href="#new-in-20-more-organic-strokes" title="Permanent link">¶</a></h2>
+<p>The Stroke Thickness section gains two parameters you can combine:</p>
+<p><strong>Wobble</strong> adds hand-drawn pen jitter to the stroke. <strong>Rough</strong> adds high-frequency paper roughness. Together they take the mechanical edge off a vectorized line.</p>
+<h2 id="new-in-20-drag-parameter-icons">New in 2.0: Drag parameter icons<a class="headerlink" href="#new-in-20-drag-parameter-icons" title="Permanent link">¶</a></h2>
+<p>Whenever a numeric field in the Properties panel has an icon to the left of the number, you can press-and-hold the icon—a small captioned slider appears underneath. <strong>Drag the icon</strong> to change the value: a short drag tunes precisely, a longer drag moves faster. It works for fill parameters like interval and rotation, and stroke parameters like smoothing and thinning. (Real sliders, like opacity, stroke thickness, and the dashes line threshold, still work the way they always did.)</p>
+<h2 id="new-in-11-flowlines-fill">New in 1.1: Flowlines fill<a class="headerlink" href="#new-in-11-flowlines-fill" title="Permanent link">¶</a></h2>
+<p><strong>Flowlines</strong> is a Handmade Fill subtype where strokes follow a direction field generated from the image. They wrap around shapes and follow edges instead of cutting across them.</p>
+<p>Imagine your source image is a terrain immersed in water. <strong>Auto Flowlines</strong> generates currents that cross and combine depending on the shape of the underwater terrain. Each stroke is a little paper ship that sails across the image, guided by those currents—following edges, wrapping around forms, changing direction where the image does.</p>
+<p>Flowlines also works in <strong>manual mode</strong>: draw a few base lines with the Pencil tool and the currents reshape themselves to follow them, as if you dipped a stick into the water and traced a path. A <strong>Push Strength</strong> setting controls how strongly strokes continue through dense areas—higher values push deeper between neighbors, lower values stop earlier for a tighter result.</p>
+<ul>
+<li>New in 2.0: <strong>Flowlines</strong> now finds edges more reliably.</li>
+</ul>
+<h2 id="updated-in-11-handmade-fills">Updated in 1.1: Handmade fills<a class="headerlink" href="#updated-in-11-handmade-fills" title="Permanent link">¶</a></h2>
+<p>Three similar Handmade fill kinds are now unified into one <strong>Extended</strong> subtype, with the joining method (miter, bevel, rounded) moved to a selector near the Stroke shift.</p>
+<h2 id="new-in-11-stochastic-stippling-fill">New in 1.1: Stochastic Stippling fill<a class="headerlink" href="#new-in-11-stochastic-stippling-fill" title="Permanent link">¶</a></h2>
+<p><strong>Stochastic Stippling</strong> is a Halftone Fill subtype. It places dots so darker areas are denser and lighter areas are sparser, emulating the classic pen-and-ink stippling technique used in illustration, scientific diagrams, and editorial art. Because the placement is randomized rather than gridded—the same principle behind modern inkjet and fine-art printing—the result is softer and less mechanical than a regular dot grid.</p>
+<h2 id="updated-in-11-spiral-fill">Updated in 1.1: Spiral fill<a class="headerlink" href="#updated-in-11-spiral-fill" title="Permanent link">¶</a></h2>
+<p><strong>Spiral Fill</strong> now lets you choose the direction of rotation: clockwise or counter-clockwise.</p>
+<h2 id="updated-in-11-fractal-fill">Updated in 1.1: Fractal fill<a class="headerlink" href="#updated-in-11-fractal-fill" title="Permanent link">¶</a></h2>
+<p><strong>Fractal Fill</strong> got a real overhaul. You can now choose between two space-filling curve types: <strong>Huber</strong> (square-based) and <strong>Gosper</strong> (triangle-based). Pattern density moved to the familiar <strong>Interval</strong> selector instead of the old Depth parameter, and a new <strong>Sharp / Round</strong> corner selector controls how the curve bends at each turn.</p>
+<h2 id="updated-fills-and-strokes">Updated: Fills and strokes<a class="headerlink" href="#updated-fills-and-strokes" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Auto Thinning</strong> makes strokes thinner in crowded areas where many lines meet, reducing buildup in dense regions.</li>
+<li>Fill rotation now allows fractional angles.</li>
+<li>The ends of <strong>round-capped</strong> strokes draw more correctly on short or tightly-curved segments.</li>
+<li><strong>Dash by Thickness</strong> switches between continuous and dashed lines based on stroke thickness rather than image brightness—which pairs nicely with Auto Thinning, since thinned strokes can become dashed too.</li>
+<li>Round dots and dashed caps render correctly where cutting lines cross dashed lines.</li>
+<li>In multi-line <strong>Text fill</strong>, the first glyph of a line no longer disappears.</li>
+<li>Type in the font picker and matching fonts list at the top, with the rest dimmed rather than hidden.</li>
+</ul>
+<h2 id="new-in-11-export-and-file-handling">New in 1.1: Export and file handling<a class="headerlink" href="#new-in-11-export-and-file-handling" title="Permanent link">¶</a></h2>
+<p>In <strong>File &gt; Export As</strong>, you choose the format (PDF, SVG, EPS, PNG, JPG), and the destination: clipboard, next to the document with the same base name, or a Save dialog.</p>
+<p>After that, <strong>File &gt; Export</strong> (Cmd+E / Ctrl+E) repeats the last export instantly. Handy for linked workflows and for quickly dropping an SVG or PNG into another app!</p>
+<h2 id="updated-in-11-and-20-interface-and-workflow">Updated in 1.1 and 2.0: Interface and workflow<a class="headerlink" href="#updated-in-11-and-20-interface-and-workflow" title="Permanent link">¶</a></h2>
+<ul>
+<li>In Preferences, you can choose light or dark UI mode.</li>
+<li>Layers panel is faster, with easier drag-and-drop reordering and double-click renaming.</li>
+<li>The canvas refreshes faster after you change fill parameters.</li>
+<li>Handling of layers and groups in the Layers panel is greatly improved</li>
+<li>Alt+drag of nodes is better</li>
+<li>Dragging a selection snaps at the document edge</li>
+<li>Properties panel has had numerous detailed touch-ups.</li>
+<li>You can set a document background color in the Properties panel, included in PDF, SVG, and PNG exports.</li>
+<li>On Windows, File Explorer now shows richer thumbnails and previews for <code>.lines</code> documents.</li>
+</ul>
+<hr>
+<p>Plus hundreds of other improvements and fixes throughout the app.</p>
+<p>Vexy Lines 2 is a free upgrade for everyone on version 1. Grab it with <strong>Check for Updates</strong>, and as always, tell us what you make with it—and what you’d like to see next.</p>
+
+
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden="">
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+        
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H9V6h11Z"></path></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-5 14H4V6h11Z"></path></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2013–2026 Fontlab Ltd.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <section class="fl-footer-cta" aria-label="FontLab links">
+    <div class="fl-footer-cta__grid">
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--buy">
+        <h2 class="fl-footer-cta__title">Buy FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Get the professional font editor for drawing, spacing, kerning,
+          OpenType production, color fonts, and variable fonts.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light" href="https://www.fontlab.com/buy/">Buy now</a>
+        </p>
+        <a class="fl-footer-cta__fineprint" href="https://www.fontlab.com/buy/">FontLab licenses, upgrades, and bundles</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--learn">
+        <h2 class="fl-footer-cta__title">Explore FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Learn what FontLab can do for type design, variable workflows,
+          color fonts, scripting, import, export, and production.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light" href="https://www.fontlab.com/">Learn more</a>
+        </p>
+        <a class="fl-footer-cta__fineprint" href="https://www.fontlab.com/">Products, features, examples, and updates</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--talk">
+        <h2 class="fl-footer-cta__title">Questions first?</h2>
+        <p class="fl-footer-cta__copy">
+          Tell us what you are making, what you need to solve, or what you
+          need to know before choosing a FontLab tool.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--dark" href="https://www.fontlab.com/contact/">Let's talk</a>
+        </p>
+        <a class="fl-footer-cta__fineprint fl-footer-cta__fineprint--dark" href="https://www.fontlab.com/contact/">Sales and support contact options</a>
+      </article>
+    </div>
+  </section>
+  <fontlab-footer mode="dark"></fontlab-footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.top", "navigation.indexes", "toc.follow", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
+      
+        <script src="../../../../js/illu-link.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
