@@ -1,6 +1,6 @@
 You found a font you love, and your app is showing you a fraction of it. With [FontLab Pad 2](https://www.fontlab.com/fontlab-pad/) you try the font without installing it, set your headline exactly the way you want it, and paste the result into whatever you are working in. Pad has been free for ten years, and it still is!
 
-You downloaded a variable font with a hundred usable styles, and your layout app offers you Regular and Bold. You bought a color font, and the letters arrive black. You want the swash version of that one `g`, and the app has no way to let you ask for it. None of that is your fault, and none of it is worth fighting: open the font in Pad, get the words looking right there, and carry the result over.
+You downloaded a variable font with a hundred usable styles, and your layout app offers you Regular and Bold. You bought a color font, and the letters arrive black. You want the swash version of that one `g`, and the app has no way to let you ask for it. None of that is your fault, and none of it needs to cost you an afternoon: open the font in Pad, get the words looking right there, and carry the result over.
 
 ## Skip the install, and keep your system fast
 
