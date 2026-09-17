@@ -5,10 +5,10 @@ this_file: TODO.md
 
 Live source state (verified by `tests/test_content_state.py`):
 
-- 135 published source posts in `src_docs/md/posts/`
+- 136 published source posts in `src_docs/md/posts/`
 - 11 offline draft/research files in `issues/draft-posts/`
 - 93 posts carry the editorial `review:` overlay
-- 42 posts still awaiting an editorial review pass
+- 43 posts still awaiting an editorial review pass
 - 19 reviewed posts with `review.image_status: missing`
 
 The corpus roughly doubled after the 2026-05 reconciliation sprint (78 → 134
