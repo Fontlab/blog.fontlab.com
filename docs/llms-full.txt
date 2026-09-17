@@ -4238,9 +4238,11 @@ You found a font you love, and your app is showing you a fraction of it. With [F
 
 You downloaded a variable font with a hundred usable styles, and your layout app offers you Regular and Bold. You bought a color font, and the letters arrive black. You want the swash version of that one `g`, and the app has no way to let you ask for it. None of that is your fault, and none of it is worth fighting: open the font in Pad, get the words looking right there, and carry the result over.
 
-## Try a font before you commit to it
+## Skip the install, and keep your system fast
 
-If a font is sitting in your downloads and you are not sure yet, you don’t have to install it to find out. Open the file in Pad, type the actual words you are designing with, your client’s name or your own headline rather than a specimen sentence, and see whether it does what you hoped. Your font menus stay clean, and the fonts you decide against never clutter your system in the first place.
+Installing a font to try it is a small tax you pay every time. The app you want to use it in may not see the new font until you quit and reopen it. If you already own three fonts called *Garamond*, your system will quietly show you one of them and hide the rest, with no error and no note about which one you got. And if you keep saying yes to every font you download, you end up with 5,000 of them installed, at which point even a fast machine starts to think about it.
+
+None of that has to happen. With FontLab Pad 2 you open the font file where it lies, type your text, choose the instance you want, insert a variant glyph if the design has one, then copy the result as PDF, SVG or Bitmap and paste it into Figma, PowerPoint, Keynote, or really anything else you work in. The font never touches your system, and your font menus stay as short as you like them.
 
 ## Use the style your app won’t show you
 
