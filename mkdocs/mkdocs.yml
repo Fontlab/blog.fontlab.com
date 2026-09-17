@@ -141,6 +141,7 @@ hooks:
   - hooks/glightbox_small_images.py
 
 extra_css:
+  - https://use.typekit.net/gav0zux.css
   - css/fontlab-chrome.css
   - css/extra.css
 
