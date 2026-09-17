@@ -146,4 +146,5 @@ News, technical writing, and product updates from FontLab.
 - [Poor print produces pretty posters](https://blog.fontlab.com/2026/06/29/vexy-lines-retro-poster-revival/index.md)
 - [Make your pixels vexy. Play with lines.](https://blog.fontlab.com/2026/06/30/vexy-playlines-play-with-lines/index.md)
 - [TransType 5: every style of your variable fonts, in every app](https://blog.fontlab.com/2026/09/02/transtype-5/index.md)
+- [FontLab Pad 2: set your text in a variable font, then take it with you](https://blog.fontlab.com/2026/09/17/fontlab-pad-2/index.md)
 
