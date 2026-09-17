@@ -16,9 +16,9 @@ A variable font holds far more than the handful of styles that turn up in a menu
 
 Color fonts are better served in Pad 2 than they have ever been, variable color fonts included, so you can move an axis and watch the palette and the shapes respond together. If your design app flattens a color font to black, or refuses it outright, Pad gives you the artwork as it was drawn, ready to copy or export. We have been rendering these since 2014, when almost nothing else on your desktop would.
 
-## Set Arabic and Hebrew without fighting the field
+## Set Arabic and Hebrew the way they should be set
 
-If you work in right-to-left scripts, Pad 2 treats them considerably better. Your line layout comes out the way you intended, the cursor goes where you expect it to, and you can get on with choosing the font instead of wrestling with the text box.
+Right-to-left scripts are handled considerably better in Pad 2. Your text runs in the right direction, the line layout comes out as you intended, and the cursor lands where you expect it to, so you can give your attention to the typography.
 
 ## Reach the alternate you actually wanted
 
