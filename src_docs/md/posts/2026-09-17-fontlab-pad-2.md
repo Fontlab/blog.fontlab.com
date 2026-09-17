@@ -1,45 +1,45 @@
 ---
-title: "FontLab Pad 2: set your text in any font, then take it with you"
+title: "FontLab Pad 2: get the look you want, then paste it where you need it"
 authors: [fontlab-pad]
 date:
   created: 2026-09-17
 slug: fontlab-pad-2
 ---
-With [FontLab Pad 2](https://www.fontlab.com/fontlab-pad/), you open a font without installing it, type your text, dial a variable font to the exact style you want, and copy the result straight into your favorite app. Pad has been free for ten years, and it still is!
+You found a font you love, and your app is showing you a fraction of it. With [FontLab Pad 2](https://www.fontlab.com/fontlab-pad/) you try the font without installing it, set your headline exactly the way you want it, and paste the result into whatever you are working in. Pad has been free for ten years, and it still is!
 
 <!-- more -->
 
 ![FontLab Pad 2](https://res.cloudinary.com/fontlab/image/upload/v1789563635/i/opengraph/og-fontlab-pad.png){ .rounded-lg .shadow }
 
-A variable font holds hundreds of styles, and a color font brings its own palette, but your document app shows you only as much of that as it happens to support, which is rarely all of it. FontLab Pad is the small room where you get the text right first, before it has to travel anywhere: open a font file or an installed font, type, choose the style you want, then copy the result as Bitmap, SVG or PDF, or export a PNG, SVG or PDF file to place in your design.
+You downloaded a variable font with a hundred usable styles, and your layout app offers you Regular and Bold. You bought a color font, and the letters arrive black. You want the swash version of that one `g`, and the app has no way to let you ask for it. None of that is your fault, and none of it is worth fighting: open the font in Pad, get the words looking right there, and carry the result over.
 
-## Variable fonts, at any instance
+## Try a font before you commit to it
 
-Pad 2 previews variable OpenType fonts at the instances the foundry named and at any in-between location you care to dial in, and it interpolates multiple-master Type 1 fonts the same way. If a font carries no predefined instances, you choose its masters instead.
+If a font is sitting in your downloads and you are not sure yet, you don’t have to install it to find out. Open the file in Pad, type the actual words you are designing with, your client’s name or your own headline rather than a specimen sentence, and see whether it does what you hoped. Your font menus stay clean, and the fonts you decide against never clutter your system in the first place.
 
-Predefined instances live in the sidebar, so you can pick one and move on, or you can adjust the axes with the sliders or by typing numbers while your preview text and formatting stay exactly as they are and the design moves underneath them. The header keeps you oriented: for a variable font it shows the family name together with the current style or the axis coordinates, and if you click the style selector there, the instance panel appears or folds away again. The instance and formatting panels share the sidebar, so only one of them is in your way at a time.
+## Use the style your app won’t show you
 
-## Color fonts, including variable ones
+A variable font holds far more than the handful of styles that turn up in a menu, and in Pad 2 all of them are yours. Pick a named instance from the sidebar, or take the sliders and find the weight between Medium and Semibold that your logo actually wants, typing exact axis numbers when you need to hit the same style twice. Your text and formatting stay put while you hunt, so you are always judging the real words, and the header tells you where you have landed: family name, and either the style or the coordinates you dialed. If you work with old multiple-master Type 1 designs, you can interpolate those too.
 
-Color font support is much better across the board, and it now reaches variable color fonts, where the palette and the axes come at you at once. Pad rendered color fonts back in 2014, when almost nothing else on your desktop would, and it still renders them better than the app you are pasting into.
+## Get your color fonts to look like themselves
 
-## Right-to-left scripts
+Color fonts are better served in Pad 2 than they have ever been, variable color fonts included, so you can move an axis and watch the palette and the shapes respond together. If your design app flattens a color font to black, or refuses it outright, Pad gives you the artwork as it was drawn, ready to copy or export. We have been rendering these since 2014, when almost nothing else on your desktop would.
 
-Arabic, Hebrew and other right-to-left scripts are handled considerably better in Pad 2. If you set RTL text, the line layout and the cursor behave the way you expect them to, which is all anyone has ever wanted from an RTL text field.
+## Set Arabic and Hebrew without fighting the field
 
-## Glyphs by name
+If you work in right-to-left scripts, Pad 2 treats them considerably better. Your line layout comes out the way you intended, the cursor goes where you expect it to, and you can get on with choosing the font instead of wrestling with the text box.
 
-Select a letter, press the `/` key in the preview, then type a glyph name or a character, and insert the variant you were after: a swash, a stylistic alternate, a ligature. The picker draws its glyphs with the current instance, so what you see there is what lands in your text.
+## Reach the alternate you actually wanted
 
-## Copying, with the format you meant
+Select a letter, press the `/` key, and type a glyph name or a character: the swash, the stylistic alternate, the ligature that your app keeps hidden behind a panel you don’t have. The picker shows each variant in the instance you are currently using, so you are choosing with your eyes rather than guessing from a list of names.
 
-Copy is its own button now, and it offers Bitmap, SVG and PDF. It remembers the format you chose last time, and it preserves the font color along with the preview layout, so if you set your text over a transparent background to check it against a design, that is exactly what arrives in the other app.
+## Take it with you in the shape you need
 
-## What Pad opens, and where it runs
+When the words look right, you decide how they travel. Copy them as Bitmap, SVG or PDF and paste straight into your design, or save a PNG, SVG or PDF file to place later. Pad remembers the format you used last time, so the second and the tenth trip cost you one click, and it carries your color and layout across intact. If you set your type over a transparent background to check it against your artwork, that is what you get on the other side.
 
-Static and variable OpenType, color OpenType in SVG, `sbix`, `COLR`/`CPAL` and `CBDT`/`CBLC` flavors, Type 1 and multiple-master fonts, WOFF web fonts, Photofont and SVG fonts. It copies Bitmap, SVG and PDF, and exports PNG, SVG and PDF.
+## What you can open, and what you need to run it
 
-On the Mac, Pad 2 is a true universal app, native on Apple silicon and on Intel. It runs on macOS 10.15 and newer and on Windows 10 and newer, and it’s free to use on any number of devices belonging to one household or organization.
+Pad opens static and variable OpenType, color OpenType in SVG, `sbix`, `COLR`/`CPAL` and `CBDT`/`CBLC` flavors, Type 1 and multiple-master fonts, WOFF web fonts, Photofont and SVG fonts. On the Mac it is a true universal app, so it runs at full speed whether you are on Apple silicon or Intel. You need macOS 10.15 or newer, or Windows 10 or newer, and you can use it on every device in your household or organization.
 
 ## Get FontLab Pad 2
 
