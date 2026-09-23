@@ -141,9 +141,13 @@ hooks:
   - hooks/glightbox_small_images.py
 
 extra_css:
+  - https://i.fontlab.com/fltheme26/1.0.0/components.css
+  - https://i.fontlab.com/fltheme26/1.0.0/theme.css
   - https://use.typekit.net/gav0zux.css
-  - css/fontlab-chrome.css
+  - https://i.fontlab.com/fltheme26/1.0.0/chrome/fontlab.css
   - css/extra.css
 
 extra_javascript:
+  - https://i.fontlab.com/fltheme26/1.0.0/basecoat.js
+  - https://i.fontlab.com/fltheme26/1.0.0/theme.js
   - js/illu-link.js
