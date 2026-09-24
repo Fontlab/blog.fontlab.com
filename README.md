@@ -161,3 +161,13 @@ repositories and assets used as context, tooling, and source material.
 ## License
 
 MIT — Copyright 2026 Fontlab Ltd.
+
+<!-- shared-theme-integration:start -->
+## Shared FontLab theme integration
+
+This repository is part of the FontLab theme 2026 rollout: fontlab blog.
+[THEME.md](THEME.md) documents its source/output boundaries, configuration,
+publication route, control ownership, shared visual changes and verification.
+Use the [public setup guide](https://i.fontlab.com/fltheme26/) and
+[MaterialX starter](https://i.fontlab.com/fltheme26/starter.zip) for new sites.
+<!-- shared-theme-integration:end -->
