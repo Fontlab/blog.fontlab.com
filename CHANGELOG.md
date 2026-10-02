@@ -2,6 +2,11 @@
 
 # Changelog
 
+## [Unreleased] — 2026-10-02 — FontLab Pad shortcut
+
+- Corrected the slash key syntax so the Pad 2.1 post renders `/` in a keycap.
+- Updated TODO corpus counts to reflect the new post.
+
 ## [Unreleased] — 2026-10-02 — GitHub post authoring guide
 
 ### Changed

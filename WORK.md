@@ -2,6 +2,16 @@
 
 # Work — blog.fontlab.com
 
+## 2026-10-02 — FontLab Pad slash key
+
+Changed `++Slash++` to the recognized `++slash++` spelling in the Pad 2.1 post.
+Corrected the stale TODO corpus counts exposed by the baseline test (137 posts,
+44 awaiting review). All 16 blog tests and an isolated `./build.sh build` pass; the generated post
+contains `<kbd class="key-slash">/</kbd>` with no raw shortcut syntax.
+The content was published in `f6b1d74` (`v1.0.103`); deploy run `37064544053`
+succeeded and the bare public post URL has the correct keycap. Shared mark weight
+is deployed separately from `fontlab-www-docstheme`. Generated output is not committed.
+
 ## In progress
 
 - (none — session deliverables shipped)
