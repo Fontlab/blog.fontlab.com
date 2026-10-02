@@ -6,6 +6,13 @@
 
 - (none — session deliverables shipped)
 
+## Verified locally (2026-10-02 — concise team instructions)
+
+- Replaced `Writing a post` with six direct GitHub create/edit/publish steps.
+  Kept `#writing-a-post`; moved the existing templates to `#post-examples`.
+- Removed template limitations and background explanations from the authoring
+  guide. Verified rendered anchors, six templates, local references and tests.
+
 ## Verified locally (2026-10-02 — GitHub post authoring guide)
 
 - Expanded README's `Writing a post` section with direct GitHub create/edit

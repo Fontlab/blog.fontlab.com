@@ -5,6 +5,8 @@
 ## [Unreleased] — 2026-10-02 — GitHub post authoring guide
 
 ### Changed
+- Shortened `Writing a post` to six direct create/edit/publish steps and moved
+  the six copyable examples into a separate `Post examples` section.
 - Expanded README's `Writing a post` section while preserving its
   `#writing-a-post` link. Linked directly to the posts folder and explained
   **Add file → Create new file**, **Edit this file**, and publication after

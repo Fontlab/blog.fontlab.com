@@ -25,86 +25,23 @@ that also stamps a version tag.
 
 ## Writing a post
 
-You can write or edit posts directly on GitHub: go to
-[**src_docs/md/posts/**](https://github.com/Fontlab/blog.fontlab.com/tree/main/src_docs/md/posts)
-and either choose **Add file → Create new file**, or click an existing post
-and click **Edit this file** (the pencil icon). Commit your changes to `main`
-and GitHub Actions will fully rebuild and republish the blog. In the GitHub
-web editor, committing to `main` saves the changes remotely; no separate push
-is needed. If you edit locally, commit and push to `main`.
+1. Open [**src_docs/md/posts/**](https://github.com/Fontlab/blog.fontlab.com/tree/main/src_docs/md/posts).
+2. **Create a post:** choose **Add file → Create new file**, name it
+   `YYYY-MM-DD-your-slug.md`, and paste a [post example](#post-examples).
+   Set `this_file`, `title`, `authors`, `date.created` and `slug` for your post.
+   Choose an author key from [authors.yml](src_docs/md/authors.yml).
+3. **Edit a post:** click the existing file, then **Edit this file** (pencil).
+   Keep its `date.created` and `slug` to preserve its URL.
+4. Write the summary above `<!-- more -->` and the article below it.
+   Check the text, links and images using **Preview**.
+5. Click **Commit changes**, select **Commit directly to the main branch**,
+   and confirm. GitHub Actions rebuilds and republishes the blog automatically.
+6. Check [GitHub Actions](https://github.com/Fontlab/blog.fontlab.com/actions/workflows/ci.yml)
+   for a successful deploy, then check your post on [blog.fontlab.com](https://blog.fontlab.com/).
 
-GitHub has no documented per-folder setting that automatically inserts a
-Markdown template into that editor.
-[Issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
-fill issue forms; [repository templates](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-create entire repositories. Neither supplies a blog post in this folder.
-The supported [new-file workflow](https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files)
-is to name the file and paste its contents.
+## Post examples
 
-1. Copy one of the complete examples below using the code block's copy button.
-2. In the posts folder, create `YYYY-MM-DD-your-slug.md`. The folder is already
-   selected: enter the filename, rather than repeating `src_docs/md/posts/`.
-3. Paste the example. Change `this_file`, title, author/topic, date, slug,
-   image references and body to match your new post. The examples use existing
-   posts and images to demonstrate syntax; they are not new release announcements.
-4. Use **Preview** to check ordinary Markdown. GitHub's preview does not show
-   the blog layout, special image classes, link buttons or custom embeds.
-5. Choose **Commit changes**. Commit to `main` to publish, or create a branch
-   and pull request if the post needs review; merging into `main` publishes it.
-6. Check the [deploy workflow](https://github.com/Fontlab/blog.fontlab.com/actions/workflows/ci.yml)
-   and then the published page. No local build or version tag is needed.
-
-For an existing post, open its file and click the pencil (**Edit this file**).
-Keep `date.created` and `slug` unchanged to preserve its published URL. You can
-change the title, summary, images and body, and add `date.updated` when useful:
-
-```yaml
-date:
-  created: 2026-09-17
-  updated: 2026-10-02
-```
-
-Keep unfinished writing on a separate branch or under `issues/draft-posts/`.
-A future date alone does **not** hold a post back: this site's configuration
-sets `draft_if_future_date: false`. Do not commit a template with placeholder
-text to the posts folder on `main`.
-
-### Frontmatter and excerpts
-
-Each post starts with YAML between two `---` lines. The examples below include
-all the fields needed for an ordinary new post:
-
-| Field | What to enter |
-|---|---|
-| `this_file` | Source path from the repository root, e.g. `src_docs/md/posts/2026-10-02-your-slug.md`. |
-| `title` | Reader-facing headline. Quote it, especially if it contains a colon; escape any internal double quotes as `\"`. |
-| `authors` | One or more keys from [authors.yml](src_docs/md/authors.yml), written as a YAML list. These drive the blog's topic/profile pages. |
-| `date.created` | Publication date as `YYYY-MM-DD`, nested under `date`. Keep the filename's date consistent. |
-| `date.updated` | Optional revision date, also nested under `date`. |
-| `slug` | Short, stable URL segment in lowercase with hyphens. Keep the filename's slug consistent. |
-
-| Author/topic key | Use for |
-|---|---|
-| `fontlab` | FontLab releases, font editing and tutorials |
-| `vexy-lines` | Vexy Lines, Playlines, vector drawing and line art |
-| `transtype` | TransType and font conversion |
-| `typetool` | TypeTool |
-| `fontographer` | Fontographer |
-| `fontlab-pad` | FontLab Pad and typesetting |
-| `adam` | Editorial essays, interviews and Made with FontLab stories |
-
-Use an existing key; a display name such as `FontLab Pad` is not a key.
-Some older posts contain `tags`, but category navigation is disabled and the
-current topic structure uses `authors`. New posts do not need `tags` or the
-editorial `review` overlay. When copying a reviewed post, omit its `review`
-block rather than inheriting claims about the old post's checks.
-
-Put one clear lead paragraph above `<!-- more -->`: this is the excerpt on
-the index and the feed boundary. An index illustration can go before that
-paragraph. Put the full article below the separator. Start body sections at
-`##`; the theme already displays the frontmatter title as the page title.
-With `created: 2026-09-17` and `slug: fontlab-pad-2`, the URL is
-`https://blog.fontlab.com/2026/09/17/fontlab-pad-2/`.
+Copy an example and replace its metadata, text and images with your post's content.
 
 ### Example 1: product announcement with a clear next step
 
@@ -344,14 +281,10 @@ Give images descriptive alt text and include any required credit or source link.
 [Explore FontLab →](https://www.fontlab.com/font-editor/fontlab/){ .fl-help-cta }
 ```
 
-A plain image appears in the article. Use
-`{ .illu-thumb .illu-front .illu-photo }` before the excerpt separator for a
-photographic index thumbnail: `illu-front` hides it on the full article page.
-Add a separate image below the separator if it should also appear in the body.
-Most article images get click-to-zoom automatically; append `{ .off-glb }` to
-opt out. Small images and `illu-thumb` illustrations are already excluded.
-The `.fl-help-cta` class styles a standalone next-step link on the blog;
-GitHub displays the attribute syntax as text in its own preview.
+Use `{ .illu-thumb .illu-front .illu-photo }` before `<!-- more -->` for an
+index thumbnail. Add a separate image below the separator for the article.
+Use `{ .off-glb }` to opt an image out of click-to-zoom. Add
+`{ .fl-help-cta }` to a standalone next-step link.
 
 For a compact comparison inside a tutorial or release post, use a table:
 
