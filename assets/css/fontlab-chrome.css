@@ -1,0 +1,15 @@
+/* this_file: src_docs/md/assets/css/fontlab-chrome.css */
+/* Hide MaterialX header and adjust spacing for Web Component menu integration */
+
+.md-header {
+  display: none !important;
+}
+
+.md-main {
+  padding-top: 0 !important;
+}
+
+/* Ensure footer has proper spacing */
+.md-footer {
+  margin-top: 2rem;
+}

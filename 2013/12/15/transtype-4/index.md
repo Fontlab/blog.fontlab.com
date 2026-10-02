@@ -1,0 +1,14 @@
+TransType 4 arrived in December 2013 as a complete rewrite of our font conversion app. It added multi-color OpenType output and web font export to its core toolkit.
+
+You can convert virtually any font format into modern OpenType PS (.otf), TrueType (.ttf), and @font-face web fonts. This includes VFB and UFO source files. The app runs on both Mac and Windows.
+
+Here’s what it does:
+
+- **Format conversion**: Reads legacy and current font formats. Writes OpenType PS, OpenType TT, and @font-face web font packages.
+- **Family naming repair**: Fixes and reorganizes font family naming automatically. You can also drag and drop to make manual adjustments.
+- **Multi-color OpenType**: Generates color OpenType fonts from layered source fonts or BitFonter Photofont files.
+- **Effects**: Applies outlines, shadows, and other transformations to generate new font variants.
+
+This release replaced TransType 3. The older version handled basic cross-platform format conversion but predated the OpenType and web font era.
+
+[Read more →](https://help.fontlab.com/transtype-4/)

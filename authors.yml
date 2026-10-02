@@ -1,0 +1,37 @@
+# this_file: src_docs/md/authors.yml
+authors:
+  fontlab:
+    name: FontLab
+    description: Font editor posts, tutorials, releases, and type-making notes
+    avatar: /media/authors/fontlab.png
+    slug: fontlab
+  vexy-lines:
+    name: Vexy Lines
+    description: Vector drawing, engraving, hatching, guilloche, and line art
+    avatar: /media/authors/vexy-lines.png
+    slug: vexy-lines
+  transtype:
+    name: TransType
+    description: Font conversion, legacy rescue, and format migration
+    avatar: /media/authors/transtype.png
+    slug: transtype
+  typetool:
+    name: TypeTool
+    description: Lightweight font editing and older TypeTool notes
+    avatar: /media/authors/typetool.png
+    slug: typetool
+  fontographer:
+    name: Fontographer
+    description: Classic Fontographer notes and compatibility history
+    avatar: /media/authors/fontographer.png
+    slug: fontographer
+  fontlab-pad:
+    name: FontLab Pad
+    description: FontLab Pad, typesetting, and companion-tool posts
+    avatar: /media/authors/fontlab-pad.png
+    slug: fontlab-pad
+  adam:
+    name: Adam Twardoch
+    description: Editorial essays, interviews, and Made with FontLab stories
+    avatar: /media/authors/adam-twardoch.png
+    slug: adam
