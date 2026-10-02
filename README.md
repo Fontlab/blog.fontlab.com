@@ -25,34 +25,366 @@ that also stamps a version tag.
 
 ## Writing a post
 
-A post is one Markdown file at `src_docs/md/posts/YYYY-MM-DD-slug.md` with this
-frontmatter (matched by every existing post — there is **no `tags:`
-taxonomy**; the `authors:` field is the blog's category axis):
+You can write or edit posts directly on GitHub: go to
+[**src_docs/md/posts/**](https://github.com/Fontlab/blog.fontlab.com/tree/main/src_docs/md/posts)
+and either choose **Add file → Create new file**, or click an existing post
+and click **Edit this file** (the pencil icon). Commit your changes to `main`
+and GitHub Actions will fully rebuild and republish the blog. In the GitHub
+web editor, committing to `main` saves the changes remotely; no separate push
+is needed. If you edit locally, commit and push to `main`.
+
+GitHub has no documented per-folder setting that automatically inserts a
+Markdown template into that editor.
+[Issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
+fill issue forms; [repository templates](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+create entire repositories. Neither supplies a blog post in this folder.
+The supported [new-file workflow](https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files)
+is to name the file and paste its contents.
+
+1. Copy one of the complete examples below using the code block's copy button.
+2. In the posts folder, create `YYYY-MM-DD-your-slug.md`. The folder is already
+   selected: enter the filename, rather than repeating `src_docs/md/posts/`.
+3. Paste the example. Change `this_file`, title, author/topic, date, slug,
+   image references and body to match your new post. The examples use existing
+   posts and images to demonstrate syntax; they are not new release announcements.
+4. Use **Preview** to check ordinary Markdown. GitHub's preview does not show
+   the blog layout, special image classes, link buttons or custom embeds.
+5. Choose **Commit changes**. Commit to `main` to publish, or create a branch
+   and pull request if the post needs review; merging into `main` publishes it.
+6. Check the [deploy workflow](https://github.com/Fontlab/blog.fontlab.com/actions/workflows/ci.yml)
+   and then the published page. No local build or version tag is needed.
+
+For an existing post, open its file and click the pencil (**Edit this file**).
+Keep `date.created` and `slug` unchanged to preserve its published URL. You can
+change the title, summary, images and body, and add `date.updated` when useful:
+
+```yaml
+date:
+  created: 2026-09-17
+  updated: 2026-10-02
+```
+
+Keep unfinished writing on a separate branch or under `issues/draft-posts/`.
+A future date alone does **not** hold a post back: this site's configuration
+sets `draft_if_future_date: false`. Do not commit a template with placeholder
+text to the posts folder on `main`.
+
+### Frontmatter and excerpts
+
+Each post starts with YAML between two `---` lines. The examples below include
+all the fields needed for an ordinary new post:
+
+| Field | What to enter |
+|---|---|
+| `this_file` | Source path from the repository root, e.g. `src_docs/md/posts/2026-10-02-your-slug.md`. |
+| `title` | Reader-facing headline. Quote it, especially if it contains a colon; escape any internal double quotes as `\"`. |
+| `authors` | One or more keys from [authors.yml](src_docs/md/authors.yml), written as a YAML list. These drive the blog's topic/profile pages. |
+| `date.created` | Publication date as `YYYY-MM-DD`, nested under `date`. Keep the filename's date consistent. |
+| `date.updated` | Optional revision date, also nested under `date`. |
+| `slug` | Short, stable URL segment in lowercase with hyphens. Keep the filename's slug consistent. |
+
+| Author/topic key | Use for |
+|---|---|
+| `fontlab` | FontLab releases, font editing and tutorials |
+| `vexy-lines` | Vexy Lines, Playlines, vector drawing and line art |
+| `transtype` | TransType and font conversion |
+| `typetool` | TypeTool |
+| `fontographer` | Fontographer |
+| `fontlab-pad` | FontLab Pad and typesetting |
+| `adam` | Editorial essays, interviews and Made with FontLab stories |
+
+Use an existing key; a display name such as `FontLab Pad` is not a key.
+Some older posts contain `tags`, but category navigation is disabled and the
+current topic structure uses `authors`. New posts do not need `tags` or the
+editorial `review` overlay. When copying a reviewed post, omit its `review`
+block rather than inheriting claims about the old post's checks.
+
+Put one clear lead paragraph above `<!-- more -->`: this is the excerpt on
+the index and the feed boundary. An index illustration can go before that
+paragraph. Put the full article below the separator. Start body sections at
+`##`; the theme already displays the frontmatter title as the page title.
+With `created: 2026-09-17` and `slug: fontlab-pad-2`, the URL is
+`https://blog.fontlab.com/2026/09/17/fontlab-pad-2/`.
+
+### Example 1: product announcement with a clear next step
+
+Adapted from [FontLab Pad 2](src_docs/md/posts/2026-09-17-fontlab-pad-2.md).
+Use this structure when the reader needs a problem, an outcome and a download
+link. Sample filename: `2026-09-17-try-fonts-in-pad.md`.
 
 ```markdown
 ---
-title: "Vexy Lines 2 is here!"
-authors: [vexy-lines]
+this_file: src_docs/md/posts/2026-09-17-try-fonts-in-pad.md
+title: "FontLab Pad 2: try a font, then take your text with you"
+authors: [fontlab-pad]
 date:
-  created: 2026-06-07
-slug: vexy-lines-2
+  created: 2026-09-17
+slug: try-fonts-in-pad
 ---
 
-Lead paragraph that shows on the index and in feeds.
+Your layout app may not show every style or glyph in a font.
+[FontLab Pad 2](https://www.fontlab.com/fontlab-pad/) lets you try the font
+without installing it, shape your text, and copy the result into your work.
 
 <!-- more -->
 
-Full body of the post…
+## Open the font without installing it
+
+Open the font file in Pad and type your text. Your system font menus stay
+unchanged while you try the design.
+
+## Take the result into your layout
+
+Choose the style and glyph variants you need, then copy the result as PDF,
+SVG or Bitmap and paste it into your design or presentation app.
+
+[Get FontLab Pad →](https://www.fontlab.com/fontlab-pad/){ .fl-help-cta }
 ```
 
-- **`authors:`** must reference a key defined in `src_docs/md/authors.yml`
-  (e.g. `fontlab`, `vexy-lines`, `adam`, `transtype`, `typetool`,
-  `fontographer`, `fontlab-pad`). An unknown author makes the post unresolvable.
-- **`<!-- more -->`** is the mkdocs-material excerpt separator — text above it
-  becomes the summary on the index page and in the RSS/JSON feeds.
-- The published URL is `/YYYY/MM/DD/slug/`, derived from the date + slug.
+### Example 2: release notes grouped by the work they improve
 
-Most posts are written through the web admin (see below) rather than by hand.
+Adapted from [Vexy Lines 2](src_docs/md/posts/2026-06-07-vexy-lines-2.md).
+Group changes under useful headings instead of writing one long feature list.
+Sample filename: `2026-06-07-vexy-lines-update-highlights.md`.
+
+```markdown
+---
+this_file: src_docs/md/posts/2026-06-07-vexy-lines-update-highlights.md
+title: "Vexy Lines 2: clearer signals, sharper masks"
+authors: [vexy-lines]
+date:
+  created: 2026-06-07
+slug: vexy-lines-update-highlights
+---
+
+Vexy Lines 2 adds image filters and sharp masks, with improvements throughout
+the drawing workflow. Here are two places to start with the update.
+
+<!-- more -->
+
+## Shape the source before generating the lines
+
+Add image filters in the Properties panel to change how a fill interprets
+its source image:
+
+- Adjust brightness and contrast to change the balance of light and dark.
+- Sharpen the source to bring out detail.
+- Reorder filters to try a different result.
+
+## Keep strokes inside the mask
+
+A **Sharp mask** cuts the rendered strokes at the mask boundary. Use it
+when the stroke edges need to stay within the selected region.
+
+## Get the update
+
+If you already use Vexy Lines, choose **Check for Updates** in the app.
+
+[Explore Vexy Lines →](https://vexy.art/lines/){ .fl-help-cta }
+```
+
+### Example 3: a tutorial with steps and a screenshot
+
+Adapted from the instance-conversion workflow in
+[TransType 5](src_docs/md/posts/2026-09-02-transtype-5.md).
+Sample filename: `2026-09-02-export-variable-font-instances.md`.
+Replace the screenshot with your own when documenting a different workflow.
+
+```markdown
+---
+this_file: src_docs/md/posts/2026-09-02-export-variable-font-instances.md
+title: "Turn a variable font instance into a font your app can use"
+authors: [transtype]
+date:
+  created: 2026-09-02
+slug: export-variable-font-instances
+---
+
+Your variable font contains the style you want, but your app does not offer
+it. Export that instance as a static font in TransType 5.
+
+<!-- more -->
+
+## Convert the instance
+
+1. Drop your variable font into TransType 5.
+2. Choose **File > Add Instance**, or click **+ Instance** in the family bar.
+3. Add the in-between style you want to use.
+4. Choose a static output format and destination, then click **Convert**.
+
+![TransType's Add Instance workflow](https://cdn.prod.website-files.com/59f8b0f378cc2d0001fd32e5/6a982b9439dc6a86ba2b85be_tr5-screen-13-add-instance-light.png)
+
+## Check the result in your app
+
+Install the exported font, or turn on **Install Fonts** in TransType's
+Destination dropdown before conversion. You may need to restart your
+layout app before the new style appears in its font menu.
+
+[Explore TransType →](https://www.fontlab.com/font-converter/transtype/){ .fl-help-cta }
+```
+
+### Example 4: a short teaser with an index thumbnail
+
+Adapted from [Play with lines](src_docs/md/posts/2026-06-30-vexy-playlines-play-with-lines.md).
+Use this when the main experience is on another page. A live widget is
+optional; a clear link is enough. Sample filename: `2026-06-30-try-playlines.md`.
+
+```markdown
+---
+this_file: src_docs/md/posts/2026-06-30-try-playlines.md
+title: "One photo, a different set of lines"
+authors: [vexy-lines]
+date:
+  created: 2026-06-30
+slug: try-playlines
+---
+
+![Halftone portraits made with Playlines](../media/2026-06-30-thumb-sq.jpg){ .illu-thumb .illu-front .illu-photo }
+
+Drop a photo into [Vexy Playlines](https://playlines.vexy.art/), choose a
+fill, and watch it become vector artwork in your browser.
+
+<!-- more -->
+
+Move the controls to change the pattern and compare it with your source
+image. The same photo can become a field of lines, dots or triangles.
+
+Download the result as SVG and take it into your design app. Start with
+your own photo: seeing the pattern change is the useful part.
+
+[Try Playlines →](https://playlines.vexy.art/){ .fl-help-cta }
+```
+
+### Example 5: a designer story with a specific takeaway
+
+Adapted from [Made with FontLab: Fábio Duarte Martins](src_docs/md/posts/2026-04-08-made-with-fontlab-fabio-duarte-martins.md).
+Use this structure for a person's work and methods. Link to the original
+work, credit images, and quote only statements you have checked.
+Sample filename: `2026-04-08-scannerlicker-workflow.md`.
+
+```markdown
+---
+this_file: src_docs/md/posts/2026-04-08-scannerlicker-workflow.md
+title: "Made with FontLab: a look at Scannerlicker's workflow"
+authors: [adam]
+date:
+  created: 2026-04-08
+slug: scannerlicker-workflow
+---
+
+Fábio Duarte Martins runs Scannerlicker. His account of working in FontLab
+names the tools he uses, giving other designers a practical place to start.
+
+<!-- more -->
+
+## The tools behind the work
+
+His testimonial highlights drawing tools, FontAudit, masks and layers for
+multiple masters, and expressions and tags for organizing production work.
+
+## A useful place to start
+
+Choose one repetitive task in your own project. Look at how expressions or
+tags could make that task easier before trying to automate the whole font.
+
+## See the finished typefaces
+
+The foundry's catalogue puts the workflow in context: the tools serve the
+letters, and the letters are what readers will see.
+
+[Browse Scannerlicker →](https://fonts.scannerlicker.net/){ .fl-help-cta }
+```
+
+### Example 6: a recording with a linked preview image
+
+Adapted from the [Matthew Carter webinar](src_docs/md/posts/2014-02-15-matthew-carter-webinar.md).
+A thumbnail linking to the recording is simpler than an iframe and works
+without loading a video player on the blog page.
+Sample filename: `2014-02-15-watch-matthew-carter.md`.
+
+```markdown
+---
+this_file: src_docs/md/posts/2014-02-15-watch-matthew-carter.md
+title: "Watch the Matthew Carter webinar"
+authors: [adam]
+date:
+  created: 2014-02-15
+slug: watch-matthew-carter
+---
+
+FontLab's February 2014 webinar with Matthew Carter looks at how technical
+constraints shape type design, from metal type to digital fonts.
+
+<!-- more -->
+
+[![Matthew Carter webinar recording](../media/matthew-carter-webinar.jpg)](https://www.youtube.com/watch?v=ibJhxbsbqJ4)
+
+## What to listen for
+
+- How a production constraint becomes a design decision.
+- How Carter's working methods changed with the technology.
+- What the transition to digital production made possible.
+
+[Watch the recording →](https://www.youtube.com/watch?v=ibJhxbsbqJ4){ .fl-help-cta }
+```
+
+### Images, links and reusable body patterns
+
+Upload local images to [`src_docs/md/media/`](src_docs/md/media/) before
+publishing a post that refers to them. From a file in `posts/`, use
+`../media/filename.png`, not `media/filename.png` or a path into generated
+`docs/`. Existing posts also use full HTTPS image URLs, as in Example 3.
+Give images descriptive alt text and include any required credit or source link.
+
+```markdown
+![Matthew Carter webinar thumbnail](../media/matthew-carter-webinar.jpg)
+
+[Read the FontLab Pad 2 announcement](2026-09-17-fontlab-pad-2.md)
+
+[Explore FontLab →](https://www.fontlab.com/font-editor/fontlab/){ .fl-help-cta }
+```
+
+A plain image appears in the article. Use
+`{ .illu-thumb .illu-front .illu-photo }` before the excerpt separator for a
+photographic index thumbnail: `illu-front` hides it on the full article page.
+Add a separate image below the separator if it should also appear in the body.
+Most article images get click-to-zoom automatically; append `{ .off-glb }` to
+opt out. Small images and `illu-thumb` illustrations are already excluded.
+The `.fl-help-cta` class styles a standalone next-step link on the blog;
+GitHub displays the attribute syntax as text in its own preview.
+
+For a compact comparison inside a tutorial or release post, use a table:
+
+```markdown
+| Task | Where to start |
+|---|---|
+| Try a font without installing it | FontLab Pad |
+| Convert a variable instance into a static font | TransType |
+| Draw and edit your own font | FontLab |
+```
+
+For a short sourced note, use a footnote. For interface labels, use bold; for
+filenames and literal values, use backticks:
+
+```markdown
+Choose **File > Add Instance** to add a style, then export a static `.otf`
+or `.ttf` font. This workflow is described in the TransType announcement.[^source]
+
+[^source]: [TransType 5 announcement](2026-09-02-transtype-5.md).
+```
+
+### Before committing a post
+
+- Replace every copied title, date, slug, path and product-specific detail.
+- Check that the author key exists and YAML indentation uses spaces.
+- Keep the summary above exactly one `<!-- more -->` separator.
+- Upload new images and check their paths, alt text and credits.
+- Check facts, links and any quoted statements; keep the next step clear.
+- Preserve an existing post's creation date and slug when editing its wording.
+- After publishing, check the Actions result, the index excerpt, the topic
+  page and the full article on [blog.fontlab.com](https://blog.fontlab.com/).
+
+Most posts can also be written through the web admin described below.
 
 ## Publishing & deploy
 
@@ -73,8 +405,8 @@ which:
 - **manual dispatch**.
 
 So the normal flow is: edit/add Markdown in `src_docs/md/` → push to `main` →
-GitHub Actions builds and deploys to `gh-pages` → the live site updates within
-a minute or two.
+GitHub Actions builds and deploys to `gh-pages` → the live site updates after
+the workflow and Pages deployment finish successfully.
 
 > **History / gotcha:** Pages used to serve `main`'s `docs/` folder *directly*,
 > and `ci.yml` only ran on tags. Because the web admin pushes only source

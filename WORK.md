@@ -1,8 +1,27 @@
+<!-- this_file: WORK.md -->
+
 # Work — blog.fontlab.com
 
 ## In progress
 
 - (none — session deliverables shipped)
+
+## Verified locally (2026-10-02 — GitHub post authoring guide)
+
+- Expanded README's `Writing a post` section with direct GitHub create/edit
+  instructions and six complete examples based on existing posts. Kept the
+  `#writing-a-post` anchor and distinguished web commits from local pushes.
+- Checked GitHub's official file-creation and template documentation and the
+  site's current author definitions, Markdown extensions, blog configuration,
+  image classes and lightbox exclusions.
+- All six examples passed frontmatter parsing, author-key, date/filename/slug,
+  excerpt-separator, local link/image and rendered CTA checks. README's local
+  references, tables and `writing-a-post` heading anchor also passed.
+- `uv run --with pytest python -m pytest -q`: 16 passed before and after the
+  README edit. `git diff --check`: passed.
+- Scope is repository documentation; no source post, build configuration or
+  generated site files changed. Publication will use the existing `main`
+  push workflow after the documentation commit.
 
 ## Shipped (2026-09-02 — image lightbox)
 

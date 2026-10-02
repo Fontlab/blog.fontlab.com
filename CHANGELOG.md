@@ -1,4 +1,22 @@
+<!-- this_file: CHANGELOG.md -->
+
 # Changelog
+
+## [Unreleased] — 2026-10-02 — GitHub post authoring guide
+
+### Changed
+- Expanded README's `Writing a post` section while preserving its
+  `#writing-a-post` link. Linked directly to the posts folder and explained
+  **Add file → Create new file**, **Edit this file**, and publication after
+  committing to `main` (or committing and pushing from a local checkout).
+- Added six complete, copyable post examples adapted from existing
+  announcements, release notes, tutorials, teasers, designer stories and
+  recordings, plus image, CTA, table and footnote snippets.
+- Documented frontmatter, author/topic keys, excerpt boundaries, stable URLs,
+  revision dates, draft locations and GitHub preview limitations. Clarified
+  that GitHub's documented new-file workflow has no per-folder template
+  setting, with links to GitHub's own documentation.
+
 
 ## [Unreleased] — 2026-09-02 — Image lightbox
 
