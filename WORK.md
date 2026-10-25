@@ -317,3 +317,7 @@ is deployed separately from `fontlab-www-docstheme`. Generated output is not com
 - Verify Thomas Phinney's GitHub avatar URL (currently a guessed user ID — `3043872` may not match).
 - Stripped excerpt content sometimes ends with a stub paragraph from the WP export; quick polish pass would catch any leftover scaffolding.
 - An unprompted commit (`0a7adc5`) was made by a background agent; subsequent porting/relocation/cleanup edits are uncommitted.
+
+## 2026-10-18: documentation plugin adoption
+
+Kept authors/topic streams, RSS, tags and authored Markdown includes. Explicit MaterialX search and native breadcrumbs replace ambiguous plugin selection/extra breadcrumb dependencies. Strict renderer build passes (174 HTML pages); browser search returns results. No additional categories taxonomy or publication was introduced.

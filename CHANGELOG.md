@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 2026-10-18: documentation plugin adoption
+
+Kept authors/topic streams, RSS, tags and authored Markdown includes. Explicit MaterialX search and native breadcrumbs replace ambiguous plugin selection/extra breadcrumb dependencies. Strict renderer build passes (174 HTML pages); browser search returns results. No additional categories taxonomy or publication was introduced.
+
 ## [Unreleased] — 2026-10-02 — FontLab Pad shortcut
 
 - Corrected the slash key syntax so the Pad 2.1 post renders `/` in a keycap.
