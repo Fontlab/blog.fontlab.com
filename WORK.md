@@ -2,6 +2,21 @@
 
 # Work — blog.fontlab.com
 
+## 2026-11-05 — Publish pull repair
+
+- Set repository-local `pull.rebase=false` so gitnextver's pull merges divergent
+  branches without requiring a global Git preference or rewriting commits.
+- Pulled with `--no-edit --autostash`; the merge completed without conflicts.
+  SHA-256 checks confirmed all 202 existing modified/untracked files were
+  unchanged immediately after the merge.
+- gitnextver's actual `pull_with_conflict_check` now succeeds; all 16 tests and
+  `bash -n publish.sh` pass. No publish-script changes were needed.
+- A separate publish run subsequently pushed `9893856` / `v1.0.104`; remote main
+  and tag were verified. Its rebuild refreshed four generated feed files;
+  the other 198 original local file hashes still match.
+- Both deploy runs (`42118998770` and `42118998969`) passed their build,
+  output checks and GitHub Pages deployment. Repair notes remain uncommitted.
+
 ## 2026-10-02 — FontLab Pad slash key
 
 Changed `++Slash++` to the recognized `++slash++` spelling in the Pad 2.1 post.

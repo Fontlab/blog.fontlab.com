@@ -2,6 +2,12 @@
 
 # Changelog
 
+## 2026-11-05 — Local publishing repair
+
+- Configured this checkout to merge on pull and reconciled divergent `main`
+  commits with autostash, preserving local work. gitnextver's pull now succeeds.
+  This is a repository-local Git setting; other checkouts retain their settings.
+
 ## 2026-10-18: documentation plugin adoption
 
 Kept authors/topic streams, RSS, tags and authored Markdown includes. Explicit MaterialX search and native breadcrumbs replace ambiguous plugin selection/extra breadcrumb dependencies. Strict renderer build passes (174 HTML pages); browser search returns results. No additional categories taxonomy or publication was introduced.
