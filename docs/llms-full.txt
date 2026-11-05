@@ -4533,9 +4533,10 @@ To manage your FontLab account and licenses, sign in to **FontLab Pass** at [pas
 
 ## Get FontLab 9
 
-- **[Upgrade your FontLab 8, 7, VI or Studio 5](https://pass.fontlab.com/upgrade/fl9)** to FontLab 9 for $149.
-- Bought FontLab 8 after **1 January 2026**? [Upgrade to FontLab 9](https://pass.fontlab.com/upgrade/fl9) for **$49**. Bought it after **1 June 2026**? **[Upgrade for free!](https://pass.fontlab.com/upgrade/fl9)**
 - **[Buy FontLab 9 Lifetime](https://fontlab.onfastspring.com/fontlab9)** for $499.
 - **[Buy FontLab 9 Starter (129 days)](https://fontlab.onfastspring.com/fontlab9)** for $139.
+- **[Upgrade your FontLab 8, 7, VI or Studio 5](https://pass.fontlab.com/upgrade/fl9)** to FontLab 9 for $149.
+- Bought FontLab 8 after **1 January 2026**? [Upgrade to FontLab 9](https://pass.fontlab.com/upgrade/fl9) for **$49**.
+- Bought FontLab 8 after **1 June 2026**? **[Upgrade for free!](https://pass.fontlab.com/upgrade/fl9)**
 
 [Try FontLab 9 for 10 days →](https://download.fontlab.com/)
