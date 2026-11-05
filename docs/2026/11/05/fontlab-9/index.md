@@ -1,6 +1,6 @@
-[FontLab 9](https://www.fontlab.com/font-editor/fontlab/whats-new/) for Mac and Windows is now available.
+**[FontLab 9](https://www.fontlab.com/font-editor/fontlab/whats-new/)** for Mac and Windows is now available. Revolutionary stem editing. Ultrasmooth tangents. Curved interpolation. Bracket layers. Optical oblique. Neural spacing & kerning. Visual features. AI, MCP & UI in 19 languages. [Buy lifetime:](https://fontlab.onfastspring.com/fontlab9) $499. [Upgrade from FontLab:](https://pass.fontlab.com/upgrade/fl9) $149, $49 or free!.
 
-Ask **Aidus**, FontLab’s built-in assistant powered by a large language model of your choice, anything. Ask it about the app and the open font. Ask it to build Font window filters, to write simple Python scripts, to write proof texts, or to draft a missing glyph.
+Ask **Aidus**, FontLab’s built-in assistant powered by a large language model of your choice, anything: ask it about the app, about the current font. Ask it to build Font window filters, to write simple Python scripts, to write proof texts. Create a new glyph with Aidus using context-aware image generation.
 
 Adjust the weight, width and slope of stems across one or several glyphs with the new **Stem tool**: visually, by units or by percentage. View Thickness consistency along curved and diagonal stems with **Quick measurement** rainbow.
 
@@ -231,6 +231,7 @@ To manage your FontLab account and licenses, sign in to **FontLab Pass** at [pas
 
 - **[Upgrade your FontLab 8, 7, VI or Studio 5](https://pass.fontlab.com/upgrade/fl9)** to FontLab 9 for $149.
 - Bought FontLab 8 after **1 January 2026**? [Upgrade to FontLab 9](https://pass.fontlab.com/upgrade/fl9) for **$49**. Bought it after **1 June 2026**? **[Upgrade for free!](https://pass.fontlab.com/upgrade/fl9)**
-- **[Buy FontLab 9 Lifetime](https://fontlab.onfastspring.com/fl9)** for $499.
+- **[Buy FontLab 9 Lifetime](https://fontlab.onfastspring.com/fontlab9)** for $499.
+- **[Buy FontLab 9 Starter (129 days)](https://fontlab.onfastspring.com/fontlab9)** for $139.
 
 [Try FontLab 9 for 10 days →](https://download.fontlab.com/)
