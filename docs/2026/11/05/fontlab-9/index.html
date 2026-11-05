@@ -1,0 +1,1822 @@
+<!-- this_file: mkdocs/mk-fontlab/main.html --><!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="News, technical writing, and updates from FontLab.">
+      
+      
+        <meta name="author" content="Fontlab Ltd.">
+      
+      
+        <link rel="canonical" href="https://blog.fontlab.com/2026/11/05/fontlab-9/">
+      
+      
+        <link rel="prev" href="../../../10/02/fontlab-pad-2-1/">
+      
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../feed_rss_updated.xml">
+      
+      
+        
+        
+        
+          <link rel="icon" href="../../../../assets/images/favicon.png">
+        
+      
+      <meta name="generator" content="mkdocs-ProperDocs 1.6.7, mkdocs-materialx-10.1.3">
+    
+    
+      
+        <title>Introducing FontLab 9 - FontLab Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.dc9e9c2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.d7242098.min.css">
+      
+    
+    
+
+    
+
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="https://i.fontlab.com/fltheme26/1.0.0/components.css">
+    
+      <link rel="stylesheet" href="https://i.fontlab.com/fltheme26/1.0.0/theme.css">
+    
+      <link rel="stylesheet" href="https://use.typekit.net/gav0zux.css">
+    
+      <link rel="stylesheet" href="https://i.fontlab.com/fltheme26/1.0.0/chrome/fontlab.css">
+    
+      <link rel="stylesheet" href="../../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5WNRV8Z7');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Tailwind CSS (Play CDN) for utility classes in post Markdown via attr_list.
+       Preflight is OFF so Tailwind's base reset cannot clobber the MaterialX theme;
+       we only want the utility layer (grid, flex, gap, rounded, shadow, aspect, …). -->
+  <script data-cfasync="false" src="https://cdn.tailwindcss.com"></script>
+  <script data-cfasync="false">
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      important: '.md-typeset'
+    };
+  </script>
+
+  <!-- Partner-site typography: Outfit body/headings, Bricolage display, Crimson quotes. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Crimson+Pro:ital,wght@0,200..900;1,200..900&amp;display=swap" rel="stylesheet">
+
+  <!-- MaterialX layout tweaks: <fontlab-menu> is the only top bar. -->
+  <style>
+    /* Kill the MaterialX copyright footer; <fontlab-footer> is the only footer. */
+    .md-footer { display: none !important; }
+
+    /* Sub-pages: narrow column + proper typography scale. */
+    .md-main__inner,
+    .md-content {
+      min-width: 0 !important;
+    }
+    .md-content__inner.md-typeset {
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: 860px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 1rem 1.5rem 3rem !important;
+    }
+    .md-content__inner.md-typeset img {
+      height: auto;
+      max-width: 100%;
+    }
+    .md-main__inner { margin-top: 0 !important; }
+    @media (max-width: 700px) {
+      .md-content__inner.md-typeset {
+        padding: 1rem 1rem 3rem !important;
+      }
+    }
+  </style>
+
+  <!-- RSS / JSON Feed autodiscovery (mkdocs-rss-plugin). -->
+  <link rel="alternate" type="application/rss+xml" title="FontLab Blog (RSS, by creation date)" href="../../../../feed_rss_created.xml">
+  <link rel="alternate" type="application/rss+xml" title="FontLab Blog (RSS, by update date)" href="../../../../feed_rss_updated.xml">
+  <link rel="alternate" type="application/feed+json" title="FontLab Blog (JSON Feed, by creation date)" href="../../../../feed_json_created.json">
+  <link rel="alternate" type="application/feed+json" title="FontLab Blog (JSON Feed, by update date)" href="../../../../feed_json_updated.json">
+
+  <!-- FontLab menu/footer loader -->
+  <script src="https://i.fontlab.com/menu/fontlab.js" defer=""></script>
+
+  <!-- Configure <fontlab-menu>: no local nav items for blog; search from 'blog'. -->
+  <script>
+  (function () {
+    function apply() {
+      var el = document.querySelector('fontlab-menu');
+      if (!el) return;
+      el.config = { localMenu: [], search: { from: 'blog' } };
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', apply);
+    } else { apply(); }
+  })();
+  </script>
+
+  <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" data-mx-topbar="glass">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="toc" type="checkbox" id="__toc" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__toc"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#edit-a-stem-as-a-stem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WNRV8Z7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <fontlab-menu mode="dark" site-label="Blog" site-url="https://blog.fontlab.com/"></fontlab-menu>
+  
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-header__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FontLab Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducing FontLab 9
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="red" aria-hidden="true" type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.25 2a8.25 8.25 0 0 1 6.34 13.53l5.69 5.69a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215l-5.69-5.69A8.25 8.25 0 1 1 10.25 2M3.5 10.25a6.75 6.75 0 1 0 13.5 0 6.75 6.75 0 0 0-13.5 0"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+
+    <div class="md-container" data-md-component="container">
+      
+  
+
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://blog.fontlab.com/" title="FontLab Blog" class="md-nav__button md-logo" aria-label="FontLab Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    FontLab Blog
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2023
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2022
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2021/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2021
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2020/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2020
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2019/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2019
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2018/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2018
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2017/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2017
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2016/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2016
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2015/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2015
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2014/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2014
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2013/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2013
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2005/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2005
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Topics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Topics
+  
+
+          </label>
+          <ul class="md-nav__list">
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontlab-pad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FontLab Pad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/transtype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TransType
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/vexy-lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vexy Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/adam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adam Twardoch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/typetool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeTool
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../topic/fontographer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fontographer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#edit-a-stem-as-a-stem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit a stem as a stem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measure-along-the-stroke" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measure along the stroke
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shape-the-transition-between-masters-with-sigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shape the transition between masters with Sigma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switch-construction-with-bracket-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch construction with bracket layers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keep-fonts-masters-and-variations-beside-the-outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keep fonts, masters and variations beside the outline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kern-many-pairs-at-once-in-superkerning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kern many pairs at once in Superkerning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-spacing-and-kerning-with-local-neural-predictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start spacing and kerning with local neural predictions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corners-ink-traps-obliques-and-strokes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Corners, ink traps, obliques and strokes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw-with-fewer-interruptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Draw with fewer interruptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-reworked-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A reworked workspace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-and-match-across-masters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transfer and match across masters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notepad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notepad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opentype-features-anchors-and-ligatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenType features, anchors and ligatures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compile-truetype-hints-with-vtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compile TrueType hints with VTT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exchange-files-with-glyphs-and-newer-opentype" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exchange files with Glyphs and newer OpenType
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-aidus-about-the-open-font" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ask Aidus about the open font
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agents-scripts-and-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agents, scripts and Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-in-your-language-and-name-fonts-in-theirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Work in your language, and name fonts in theirs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving-recovery-and-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saving, recovery and fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-from-fontlab-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Moving from FontLab 8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-fontlab-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get FontLab 9
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="/media/authors/fontlab.png" alt="FontLab">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="../../../../topic/fontlab/">FontLab</a>
+                        
+                      </strong>
+                      <br>
+                      Font editor posts, tutorials, releases, and type-making notes
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"></path></svg>
+                        <time datetime="2026-11-05 00:00:00+00:00" class="md-ellipsis">November 5, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"></path></svg>
+                          <span class="md-ellipsis">
+                            
+                              27 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+  <h1>Introducing FontLab 9</h1>
+
+<p><a href="https://www.fontlab.com/font-editor/fontlab/whats-new/">FontLab 9</a> for Mac and Windows is now available.</p>
+<p>Ask <strong>Aidus</strong>, FontLab’s built-in assistant powered by a large language model of your choice, anything. Ask it about the app and the open font. Ask it to build Font window filters, to write simple Python scripts, to write proof texts, or to draft a missing glyph.</p>
+<p>Adjust the weight, width and slope of stems across one or several glyphs with the new <strong>Stem tool</strong>: visually, by units or by percentage. View Thickness consistency along curved and diagonal stems with <strong>Quick measurement</strong> rainbow.</p>
+<p>Draw more confidently with the improved <strong>Pen tool</strong>: preview the next segment, draw corners, curves and tangents, or refine existing handles. Draw live calligraphic strokes with new <strong>Power Brush</strong>: use the <strong>Thickness</strong> tool to change the brush thickness, angle and roundness for every node. Add variation-compatible ink traps.</p>
+<p>Ensure perfect G2-smoothness with <strong>Genius</strong> Tangent nodes when a line segment transitions to curve, and on rounded <strong>Smart Corners</strong>. Simplify part of a contour with the new <strong>Trowel</strong> tool, or clear an area with the <strong>Cleaner</strong> tool. Turn bitmap images into contours more accurately with improved <strong>Autotrace</strong>.</p>
+<p>Turn on <strong>Quick Preview on drag</strong> and focus on the shape whenenver you drag: all the distractions disappear. Turn all snapping on and off at once with <strong>Enable Snapping</strong>. Repeat the last command on a different glyph or layer with <strong>Repeat</strong>.</p>
+<p>Interpolate along curves with the <strong>Sigma tool</strong>. Switch construction partway along the axis with <strong>bracket layers</strong>. Slant glyphs with <strong>Make oblique</strong> action that performs automatic optical adjustment.</p>
+<p>Kern existing and planned pairs in the new <strong>Superkerning</strong> panel. Use one set of kerning classes in all masters. <strong>Auto Space</strong> and <strong>Auto Kern</strong> with new neural algorithms. Preview multiple font sizes, masters, instances in the new <strong>Notepad</strong> panel; build and edit specimens, and export then to PDF.</p>
+<p>Selectively copy-paste contours, appearance, metrics, anchors, guides, hints or masks across masters with <strong>Paste Special</strong>. Reuse <strong>Skin</strong> elements. Reshape elements with the <strong>Mesh</strong> filter. See which glyphs have contours, components or advanced elements with <strong>Color-code element type</strong>.</p>
+<p>Visually edit and test features for all writing systems in the <strong>Lookups</strong> editor, test with the step-by-step lookup debugger. Control ligature <strong>caret</strong> positioning with anchors. Export visual TrueType hints into static and variable fonts with the genuine <strong>VTT</strong> engine.</p>
+<p>Open and export Glyphs 4 files. Import Open Font Format 2026 fonts with cubic TrueType outlines, variable components and <code>avar</code> version 2 mappings. Automate your work with improved Python scripting. Automate FontLab from external scripts and agents with the built-in <strong>MCP server</strong>.</p>
+<p>Use the interface and built-in help in <strong>19 languages</strong>: English, Deutsch, Français, Español, Polski, Čeština, हिन्दी, Bahasa Indonesia, Italiano, 日本語, 한국어, Português, Русский, ไทย, Türkçe, Українська, Tiếng Việt, 简体中文, 繁體中文. Learn FontLab 9 from the all-new <strong>user manual</strong>. Simplify the user interface with <strong>Focused Menu</strong>.</p>
+<!-- more -->
+
+<h2 id="edit-a-stem-as-a-stem">Edit a stem as a stem<a class="headerlink" href="#edit-a-stem-as-a-stem" title="Permanent link">¶</a></h2>
+<p>A stem is two sides of a contour, but you think of it as one shape: the upright of an l, the crossbar of an H, the diagonal of a V, the pair of opposing curves at the top and bottom of an o. With the new <strong>Stem tool</strong>, you can work with it as one. Hover over a stem in the Glyph window and FontLab highlights it in light green, together with its connected nodes, attached serifs and corners. Click to select it. Move it, rotate it, or change its thickness. Shift-click more stems in the same glyph or across multiple glyphs. FontLab changes the contours so that some parts change fully and some change partially, to retain the logical structure of the glyph, including the joins between strokes. The result remains an ordinary outline that you can refine with the Contour tool.</p>
+<p>Compared to old curve-editing techniques, the Stem tool is much faster, but it’s not an artificial one-click filter. You can quickly create bold or condensed variations, or experiment with scaling the counters or with the placement of a horizontal bar, but you’re always in control of the changes.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../media/fontlab-9/stem-tool-closeup.png" data-desc-position="bottom"><img alt="Stem tool in the Glyph window: the middle stem of m is highlighted in green, with the widths of the uprights shown beside the outline. The pinned Info widget at the top left and the Variations widget at the top right stay beside the drawing." src="../../../../media/fontlab-9/stem-tool-closeup.png"></a></p>
+<p>Click the Stem tool icon on the toolbar or tap <span class="keys"><kbd class="key-6">6</kbd></span> to activate it. Repeat to cycle through its three subtools, <mark>Move</mark>, <mark>Thickness</mark> and <mark>Rotate</mark>, or pick one in the Toolbox or the Stem widget.</p>
+<ul>
+<li><mark>Move</mark> shifts a stem without changing its width. Raise the crossbar of an H to balance its counters, or shift the middle stem of an m.</li>
+<li><mark>Thickness</mark> changes the width. Enter <code>90</code> to make every selected stem 90 font units wide, or <code>+5</code> to add five units to each. Enter <code>112%</code> to scale each selected stem to 112% of its own width, or <code>+12%</code> and <code>-12%</code> for relative changes. A unit value makes every selected stem the same; a percentage keeps their proportions, so a heavier stem stays heavier than a lighter one.</li>
+<li><mark>Rotate</mark> changes the angle. Double-click a vertical stem to lean it to the master’s italic angle.</li>
+</ul>
+<p>Arrow keys move the selected stems by one unit, or resize them in Thickness mode. With <span class="keys"><kbd class="key-shift">Shift</kbd></span>, the step is 10 units, or the next larger or smaller <strong>standard stem</strong> declared for the current master and orientation in <mark>Font Info &gt; Stems</mark>. Numeric controls show <em>Mixed</em> when the selected stems have different values.</p>
+<p>Stem edits respect your spacing. If your sidebearings are plain numbers, the advance width stays fixed. If you turn on <mark>Keep sidebearings</mark> in the Stem toolbox, or if your sidebearings are bound or use an expression, the sidebearing distances stay fixed and the advance width adapts to the new outline.</p>
+<p>The tool also works across a word. Type a string of visually related glyphs such as <em>hamburgefontsiv</em> into the Glyph window, turn on <mark>Edit &gt; Edit Across &gt; Glyphs</mark> with the inactive glyphs unlocked, and Shift-click, frame or lasso stems in several letters. Enter <code>104%</code>: each stem grows by 4% of its own width, and the relation between thick and thin stems is retained. FontLab records the edit as one undo step and reports how many glyphs were edited or rejected. If one glyph cannot accept a change, it keeps its last valid outline while the other selected glyphs still update.</p>
+<p>The Stem tool changes outlines only; Font Info stem definitions and hints stay unchanged. FontLab skips diagonal detection on layers with more than 1,000 nodes or 100 contours. With <mark>Match Edits</mark> on, diagonal stem edits apply across masters, while horizontal and vertical stem edits affect the active layer only.</p>
+<h2 id="measure-along-the-stroke">Measure along the stroke<a class="headerlink" href="#measure-along-the-stroke" title="Permanent link">¶</a></h2>
+<p>Measurement follows more of the drawing. <strong>Quick Measurement</strong> measures the stem width under the pointer, and the thickness <strong>Rainbow</strong> shows thickness along straight and curved stems as a colored band, with their edges and centerline. You can check the weight where the shoulder of n meets its upright, around the bowl of an o or through the slanted stroke of a V. Rainbow avoids ambiguous sharp corners and stops at intervening closed contours; in FontLab 8, it could continue across them. The display helps you locate a change in weight. It does not change the outline.</p>
+<p>The new <strong>Measurements widget</strong> brings the measuring controls together in the Glyph window: quick thickness measurement, automatic stem and counter measurements, segment lengths and angles, tension, node coordinates and curvature. Turn on the measurements you need for the current correction.</p>
+<p>Tension expresses a curve handle’s length as a proportion of its full extension toward the intersection of the handle directions, so you can compare curves of different sizes without relying only on handle lengths in font units. The <strong>Nodes</strong> panel now has a tension strip with a mark for each selected curve. Click to set a common value, or drag to change all selected tensions by the same amount while keeping their differences. When the bowls of o, c and e don’t quite agree, the strip helps you find the unusually tight or loose segment. Font-wide default Curve and Corner tension remain in <mark>Font Info &gt; Font Dimensions</mark>.</p>
+<h2 id="shape-the-transition-between-masters-with-sigma">Shape the transition between masters with Sigma<a class="headerlink" href="#shape-the-transition-between-masters-with-sigma" title="Permanent link">¶</a></h2>
+<p>A pair of good masters doesn’t always produce the shapes you want in between. A counter can close too quickly on its way to a heavier weight, or a join can gain more weight than the surrounding strokes.</p>
+<p>The new <strong>Sigma tool</strong> lets you adjust how corresponding points move between compatible masters. Instead of following straight paths, selected points can follow quadratic or cubic trajectories that you shape yourself. The positions in the source masters stay unchanged, so you work on the transition without redrawing its endpoints. Variable fonts exported with Sigma use non-linear interpolation. Sigma variable export is experimental, with restrictions on combining Sigma and bracket switching in affected glyphs.</p>
+<h2 id="switch-construction-with-bracket-layers">Switch construction with bracket layers<a class="headerlink" href="#switch-construction-with-bracket-layers" title="Permanent link">¶</a></h2>
+<p>Some glyphs need a different construction at different points in a family. A dollar sign can use two strokes in lighter weights and switch to one in heavier weights. <strong>Bracket layers</strong> let a glyph change construction at a chosen location in the design space. Both designs stay in the same glyph. Masters within each range remain compatible, while the drawings on opposite sides of the switch can have different contour structures.</p>
+<p>Bracket conditions can involve more than one axis. Supported switches export to variable TrueType and CFF2 fonts.</p>
+<h2 id="keep-fonts-masters-and-variations-beside-the-outline">Keep fonts, masters and variations beside the outline<a class="headerlink" href="#keep-fonts-masters-and-variations-beside-the-outline" title="Permanent link">¶</a></h2>
+<p>New Glyph window widgets put useful information beside the drawing. The <strong>Info</strong> widget shows the current glyph’s name, preview, metrics and bounds; you can move and pin it beside the drawing. The <strong>Fonts</strong> widget shows the same glyph in other open fonts, or a placeholder if the glyph is missing, and a click on a thumbnail switches fonts. Compare the g in a roman and an italic, or a drawing in two related families, without leaving the Glyph window.</p>
+<p>The reworked <strong>Variations</strong> widget lets you choose an axis and click or drag on the glyph preview itself to change the design location. Scrub between weights while watching a counter or a join. Resize the widget to see more previews along an axis: it marks master locations and fits intermediate samples between them, and clicking a master sample activates that layer. <mark>Link matching axes</mark> links axes with the same OpenType tag. The <strong>Masters</strong> widget activates a master from its thumbnail. <mark>Match Moves</mark> and <mark>Match Edits</mark> are now also in the Toolbox, as well as in the Variations panel.</p>
+<h2 id="kern-many-pairs-at-once-in-superkerning">Kern many pairs at once in Superkerning<a class="headerlink" href="#kern-many-pairs-at-once-in-superkerning" title="Permanent link">¶</a></h2>
+<p><strong>Superkerning</strong> is a fully new panel, available from <mark>Window &gt; Panels &gt; Superkerning</mark>. It adds a workspace beside the existing Kerning and Pairs &amp; Phrases panels; it does not replace them. Pairs that already have kerning and pairs planned from a text list appear together, so you can review the work you’ve done and find relationships you haven’t kerned yet, without first creating values for every pair.</p>
+<p>Choose one of three views from the panel menu:</p>
+<ul>
+<li><strong>Table view</strong> shows compact rows with Left, Value and Right columns. Pair names and class-member shapes appear beside the value. Compare many pairs at once, sort the rows, or search for a glyph that belongs to a class.</li>
+<li><strong>Simple preview</strong> shows each pair in text, with its kerning value beside it. The preview uses a word from the pair list when one is available, or neutral surrounding letters. It hides class overlays and the center guide, so you can judge the spacing as text.</li>
+<li><strong>Detailed preview</strong> keeps that text context but emphasizes the active pair. Surrounding letters are muted; class-member outlines appear in blue around the pair, with a center guide. That makes it easier to catch a value that suits the representative pair but causes trouble for an accent or a different terminal elsewhere in the class.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../media/fontlab-9/superkerning-simple-preview.png" data-desc-position="bottom"><img align="right" alt="Superkerning Simple preview shows each pair in readable text, with its value at the right and no class-member overlays." loading="lazy" src="../../../../media/fontlab-9/superkerning-simple-preview.png" width="50%"></a></p>
+<p>Work directly in the panel. Filter by glyph names and class members, type a value, adjust it with the arrow keys, or drag in a preview. Press <span class="keys"><kbd class="key-semicolon">;</kbd></span> to autokern the selected rows, or the current row when none is selected. In a focused preview, tap <span class="keys"><kbd class="key-space">Space</kbd></span> to switch between Simple and Detailed preview, or hold it to see the other preview temporarily. Previews, widths, class membership and pair values follow the selected font master, so the shapes you judge belong to the values you edit, and editing stored pairs keeps the table’s selection and scroll position, so you don’t lose your place in a long review.</p>
+<p>Select several rows and change their kerning together with the arrow keys or a horizontal drag. Every selected pair moves by the same amount from its own starting value: a pair at −100 and a planned pair with no value both move by +25, to −75 and +25. If To, Tr, Tu and Ty all look a little too tight after autokerning, search for T, select those four rows and drag to loosen them. Their relative order stays as it was, and one Undo reverses the whole adjustment.</p>
+<p>Superkerning keeps its own suggested-pair list, separate from Pairs &amp; Phrases. By default, suggestions use the combined Latin, Cyrillic and Greek lists; <mark>Suggested pairs…</mark> chooses another list. Editing a planned pair gives it a saved value, and autokerning stores successfully calculated results. An explicit zero remains different from a pair with no stored value. General operations such as kerning audit, adjustment and removal act on the whole font, so check their scope before using them.</p>
+<h2 id="start-spacing-and-kerning-with-local-neural-predictions">Start spacing and kerning with local neural predictions<a class="headerlink" href="#start-spacing-and-kerning-with-local-neural-predictions" title="Permanent link">¶</a></h2>
+<p><strong>Autokerning</strong> gains a neural method, and <strong>Auto Space</strong> can use neural spacing. Both run locally: with the <strong>neural</strong> methods selected in <mark>Preferences &gt; Spacing</mark>, FontLab calculates sidebearings and pair adjustments for review without an Aidus provider, an API key or data sent to a provider. Review the proposed spacing and kerning in text and change the numbers as usual. The local calculation gives you values to review; it does not decide that the alphabet is finished.</p>
+<p>Neural autospacing is primarily intended for basic Latin A–Z and a–z, and predicts spacing for other glyphs in that alphabet’s context. <mark>Link to key glyphs</mark> can link uppercase sidebearings to H, A or O when the predictions are close. Neural kerning has a pair model and a model that uses font-wide context: in the Glyph window’s Kerning mode, <span class="keys"><kbd class="key-semicolon">;</kbd></span> uses the pair model and <span class="keys"><kbd class="key-colon">:</kbd></span> the alternate model. If a neural kerning model is missing, FontLab falls back to the optical method.</p>
+<p>The separately selected <strong>optical</strong> kerning method uses a new scanline engine, so recalculated values can differ from FontLab 8. FontLab does not automatically replace saved values.</p>
+<p>For families with several masters, a Font Info option keeps <strong>kerning classes synchronized</strong> from the main master. Add Ŧ to the T class once, and every master receives the same class membership, while each master keeps its own pair values. Renaming, deleting or replacing a class updates its pair references in every master, and one Undo restores the affected kerning together. When you match kerning, FontLab can also copy the resulting pair values to all masters. You can also sort class contents by glyph name, Unicode or Font window order, and <mark>Remove All Pairs…</mark> now asks first and lets you choose whether to remove classes too, and whether to act on all masters.</p>
+<h2 id="corners-ink-traps-obliques-and-strokes">Corners, ink traps, obliques and strokes<a class="headerlink" href="#corners-ink-traps-obliques-and-strokes" title="Permanent link">¶</a></h2>
+<p><strong>Smart Corners</strong> can now be smooth. Toggle smoothing from a corner handle’s context menu or by double-clicking the handle. On curved outlines, the generated corner can preserve curvature continuity with the adjoining segments. While the Node tool is active, Frame and Lasso selection now include Smart Corner handles, anchors and pins, and with several corner handles selected, <span class="keys"><kbd class="key-enter">Enter</kbd></span> balances their radii: each corner receives the average of the selected radii.</p>
+<p><strong>Genius nodes</strong> now keep a join between a straight line and a curve curvature-smooth, where a straight stem flows into the shoulder of n, the bowl of b or the arch of h, without FontLab rewriting the source outline. In FontLab 8, this worked at curve-to-curve joins only. The new <strong>Convert Nodes</strong> action removes Genius or Servant status when you want an ordinary node again.</p>
+<p>The new <strong>Ink Trap</strong> action cuts traps into matching corner nodes, with depth, width, angle range and smoothing in its dialog and a live preview in the Glyph window. For a text face meant for small sizes, try it on the junctions of v and w, and narrow the angle range if it catches corners you want to keep. A trap with zero width or zero depth still keeps matching nodes across masters, so you can open traps in a heavy master and set them to zero in a light one without breaking interpolation.</p>
+<p><strong>Make oblique</strong>, in <mark>Tools &gt; Actions &gt; Adjust</mark>, slants and horizontally scales outlines with the curve fitting from Italicize: FontLab corrects the outline through a mesh, beyond the shear that Slant applies, preserves short ink traps and refits the curves. Compare the bowls, counters and joins of an upright o and n with a plain Slant result. The action gives you a starting outline for a sloped design; an italic still needs design work. Refitting can change node structure, so check compatibility across masters before export.</p>
+<p>The new <strong>Mesh filter</strong> lets you reshape an element by moving points on an editable mesh, keeping the deformation available for further adjustment.</p>
+<p>For strokes, <mark>Element &gt; Brush &amp; Stroke &gt; Add Stroke</mark> turns a Pen- or Pencil-drawn centerline into an editable stroke with horizontal and vertical thickness, cap and join settings, or into an editable Power Stroke. <mark>Link</mark> keeps the two thicknesses equal; <mark>Auto</mark> derives horizontal thickness from vertical. The command moves whole selected contours into a new stroked element, even if you selected only part of a contour.</p>
+<p><strong>Power Brush</strong> has a new engine and an improved <strong>PowerStroke editor</strong>. Vary an elliptical nib’s size, angle and roundness from node to node, with on-canvas handles and numeric feedback; nodes without a local setting inherit the element-wide nib, and FontLab interpolates the settings along the path. Changing the nib at two points of a broad-nib swash alters weight and contrast along its length. The <strong>Thickness tool</strong> adjusts the width and the nib at individual nodes; local thickness is also available in the Node widget and Nodes panel. FontLab regenerates a FontLab 8 live brush with the new engine, so compare the result before expanding a family’s brush elements: expanded outlines no longer have editable nib settings.</p>
+<h2 id="draw-with-fewer-interruptions">Draw with fewer interruptions<a class="headerlink" href="#draw-with-fewer-interruptions" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>See the filled shape while dragging.</strong> Turn on <mark>Quick Preview on drag</mark> in Editor preferences, and FontLab shows the filled glyph from mouse-down until release when you drag nodes, contours, elements or a Variations control. Judge the letterforms as they change, without holding <span class="keys"><kbd class="key-space">Space</kbd></span>.</li>
+<li><strong>Preview the next segment.</strong> The <strong>Pen tool</strong> previews the segment you are about to draw and lets you draw corners, curves and tangents, or refine existing handles.</li>
+<li><strong>Simplify part of a contour, or clear an area.</strong> The former Simplify Path mode is now <strong>Trowel</strong>: use it on a chosen section of a contour, such as a traced stroke ending with too many nodes. The new <strong>Cleaner</strong> removes the area under a dragged rectangle in one operation; hold <span class="keys"><kbd class="key-shift">Shift</kbd></span> for a square or Alt/Option to draw from the center.</li>
+<li><strong>Switch all snapping together.</strong> <mark>View &gt; Enable Snapping</mark> turns all snapping and suggestions off for free placement, then restores them together without changing your individual snapping settings. While it is off, the <mark>View &gt; Snap</mark> and <mark>View &gt; Suggest</mark> submenus are hidden, so check this switch first if expected snaps disappear.</li>
+<li><strong>Repeat a command on the next glyph.</strong> <mark>Edit &gt; Repeat</mark> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-r">R</kbd></span> on macOS, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-r">R</kbd></span> on Windows) reruns the last repeatable command on the glyph or selection you choose. The menu names the command and becomes unavailable when the current selection cannot accept it. Repeat does not record a macro, and it does not choose the next glyph for you. Rulers moved to <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-r">R</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-r">R</kbd></span>.</li>
+<li><strong>Updated Autotrace.</strong> <mark>Element &gt; Image &gt; Autotrace…</mark> and optical separation use a new tracing algorithm, based on Simon Cozens’ Glyphtracy, that follows the source image more precisely. Because the engine changed, the same saved slider settings can produce different contours from FontLab 8, so compare a re-trace with existing work before replacing it.</li>
+<li><strong>Zoom to what you are editing.</strong> <mark>Fit Selection</mark> frames the selected artwork in the Glyph window.</li>
+<li><strong>Create guides without rulers.</strong> Drag from the top or left edge of the Glyph window to add a glyph guide; hold <span class="keys"><kbd class="key-shift">Shift</kbd></span> for a font guide. The <strong>Remove Guides</strong> action can target horizontal, vertical or diagonal guides and filter by tag.</li>
+<li><strong>Recognize how a glyph is built.</strong> Optional element-type colors distinguish outlines, references, components, strokes and live filters in Font and Glyph window previews, without changing their actual fills. Enable <mark>Color-code element type</mark> in the Glyph Window or Font Window preferences. Use it before a correction pass to tell a directly drawn glyph from one built from components.</li>
+<li><strong>Reuse Skin elements.</strong> Copy an active Skin element and paste it onto selected nodes or the active node; FontLab adapts its layer and orientation.</li>
+<li><strong>Magnet is now Attach.</strong> The tool previously called Magnet is named Attach, leaving the magnet icon associated with snapping.</li>
+</ul>
+<h2 id="a-reworked-workspace">A reworked workspace<a class="headerlink" href="#a-reworked-workspace" title="Permanent link">¶</a></h2>
+<p>Document tabs now sit in the title bar on both macOS and Windows. Hold a tab briefly, or start dragging with Alt/Option, to reorder it, and drag an eligible document outside the tab bar to detach it into a separate window for side-by-side work.</p>
+<p>Double-click the toolbar to switch to a compact layout that groups related selection, drawing, spacing, erasing and transformation tools behind menus, with a separate View menu. Trowel, Cleaner, Transform and all shape tools are available from the compact toolbar menus, and the active window’s search, layer, query and color-mark controls fit into the toolbar when space allows. Double-click the vertical Tools panel header to switch between one and two columns, and read the View panel as a labeled list if an icon is unfamiliar. Menus now carry icons that match the Toolbox and panels, adapted to light and dark menus; turn off <mark>Show icons in menu</mark> in Preferences if you prefer text-only menus.</p>
+<p>Numeric fields have icon-popup sliders. Drag or scroll over an icon with a nonlinear response: small movements give fine control near the starting value, larger movements change values faster. Click to keep the slider open. When a sidebearing uses a metrics expression, the Glyph window’s <strong>Context</strong> widget shows the resolved LSB and RSB values beside it, so you read the actual number while keeping the link. The <strong>Preview</strong> panel accepts a custom size from 4 to 2048 pt.</p>
+<p><strong>Preferences</strong> are reorganized into groups, with descriptions of what each setting controls, and search highlights matching settings inside a page. When a change needs a restart, choose <mark>Restart Now</mark> or <mark>Later</mark>; the option to reopen fonts and windows restores your workspace, including modified and untitled fonts. FontLab checks for updates on Windows and self-updates on macOS. If you ever want a fresh start, hold Alt/Option while opening the Help menu to reveal <mark>Reset the App</mark>: it clears preferences and local activation after save prompts, while keeping fonts, scripts and presets.</p>
+<p>The <strong>Actions</strong> dialog has a resizable split layout that keeps a glyph preview beside the settings, remembers its size, and lets you search inside actions. Inspect a candidate stem adjustment or oblique before applying it. The layout does not change the selected action’s scope, so check the selected glyphs and masters too.</p>
+<h2 id="transfer-and-match-across-masters">Transfer and match across masters<a class="headerlink" href="#transfer-and-match-across-masters" title="Permanent link">¶</a></h2>
+<p><mark>Edit &gt; Paste Special</mark> transfers only the contours, appearance, metrics, anchors, guides, hints, masks or glyph information you need, into the active master or into masters matched by name. Copy glyphs from a sibling family and paste only their sidebearings, or only their anchors and hints, while keeping the destination outlines. Contours can become independent outlines, references or components; metrics can be values or links; <mark>Map glyphs by name</mark> pastes into glyphs with matching names instead of the current selection. With <mark>All masters</mark>, FontLab matches source layers to destination masters by name, so check those names before transferring a family.</p>
+<p>With master matching enabled, corresponding <strong>Knife</strong> cuts and hint deletions apply across masters, and a Knife operation orders the resulting pieces consistently along the cut. If you convert a curve to a corner with <mark>Match Edits</mark> on, FontLab checks every affected master before changing any outline; if conversion fails in one master, all remain unchanged. Support for editing across masters depends on the operation, so inspect the result if a cut passes through different structures.</p>
+<p>Smaller things add up here too. The <strong>Layers</strong> panel supports multiple selections for copying, deleting and dragging layers. You can rename contour elements directly in the Elements widget, and the expanded <strong>Elements</strong> panel groups properties under headings and shows the surrounding glyph faintly in element previews. You can rename anchors and pins directly in their list, copy named glyph and font guides to other masters from the Guides inspector, select several Font Info zones and filter them by tag, and edit a selected glyph’s name and Unicode values directly in the Font window fields. In the <strong>New Glyph</strong> dialog, follow the glyph name with <code>=</code> and a construction recipe, or a design description for Aidus generation. After editing an encoding file, refresh the encoding selector without restarting FontLab.</p>
+<h2 id="notepad">Notepad<a class="headerlink" href="#notepad" title="Permanent link">¶</a></h2>
+<p>The new <strong>Notepad</strong> panel gives you a place to build and edit a specimen in the current font. Set a heading at one size and body text at another, compare OpenType features, or set passages at different variation locations. Start with your own text or choose a preset, including waterfalls, kerning pairs and variation ramps.</p>
+<p>Each font keeps its own Notepad document, with text and formatting saved in the native font file. Use <mark>Current location</mark> to follow Variations live, or keep a passage at a fixed instance or master. Pinch or Alt/Option-wheel to magnify the view without changing text sizes. You can export the full specimen as a vector PDF with searchable text for review or sharing, and Python or MCP can replace Notepad text and formatting without opening the panel, so a repeatable proof with chosen sizes, features and variation locations is a script away.</p>
+<h2 id="opentype-features-anchors-and-ligatures">OpenType features, anchors and ligatures<a class="headerlink" href="#opentype-features-anchors-and-ligatures" title="Permanent link">¶</a></h2>
+<p>The <strong>Lookups</strong> panel is no longer a viewer. You can create and edit OpenType features, lookups, rules and shared classes, enter rules visually or as substitution text such as <code>f i -&gt; f_i</code>, compile them, and see before-and-after previews. Import features from the Features panel, or copy lookup definitions back as feature code. If the visual editor cannot handle a rule in your font, edit that rule as code in the Features panel; the Features code builds the font’s OpenType tables for export.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../media/fontlab-9/lookupspanel.png" data-desc-position="bottom"><img alt="The Lookups panel: OpenType features by script and language on the left, a locl lookup with its rule in the middle, and the substitution shown as glyph shapes on the right." src="../../../../media/fontlab-9/lookupspanel.png"></a></p>
+<p>The new <strong>lookup debugger</strong> follows what happens to a text sample step by step through HarfBuzz shaping. Inspect substitutions, spacing and mark positioning, then open a rule directly from the trace to edit it. In the <strong>Features</strong> editor, glyph and class names complete as you type, in alphabetical or font order, and word-wrap buttons in the Features and Scripting panels wrap long lines for display without changing the code.</p>
+<p>Anchors give you more control over construction and positioning:</p>
+<ul>
+<li>Choose whether an anchor contributes to generated <code>mark</code> and <code>mkmk</code> features independently of its role in glyph construction and Anchor Clouds. Keep an anchor for building composites without creating an unwanted mark attachment in the exported font. You can also restrict generated <code>mark</code>/<code>mkmk</code> features to glyphs classified as marks or components.</li>
+<li>Extended glyph recipes can connect differently named anchors: in <code>=lam_alef-ar.isol+dotabove-ar@top_2[_top]</code>, the mark’s <code>_top</code> attaches to the ligature’s <code>top_2</code>, with separate horizontal and vertical offsets. With <code>=f&amp;i</code>, the bases’ <code>top</code> anchors become <code>top_1</code> and <code>top_2</code>, so stacked marks and nested ligatures get numbered attachment positions per component and master.</li>
+<li>Right-to-left ligature recipes can join bases through <code>#exit</code> and <code>#entry</code> anchors and number inherited anchors and generated carets in reading order. Encoded RTL glyphs are detected automatically; use <code>#?rtl</code> for an unencoded glyph.</li>
+<li>Place cursor stops inside ligatures with <code>caret_1</code>, <code>caret_2</code>, … anchors. In an f_f_i glyph, place two caret anchors where a text editor should be able to put the cursor between the underlying characters. Blue anchor lines show them in the Glyph window, and export writes their x coordinates into OpenType <code>GDEF</code>. Recipes with <code>&amp;</code> generate stops between spacing components automatically. Behavior in text depends on the application’s caret support.</li>
+</ul>
+<p><strong>Flatten components</strong> reduces nested component references to one level while combining their transforms, without decomposing the glyph into outlines. Check mixed constructions first: ordinary contours alongside nested component children are omitted. The TrueType export-profile option <mark>Allow Nested Components</mark> controls the same thing at export, so you can flatten exported nesting without flattening the source document.</p>
+<p>The Glyph panel’s Unicode variation-selector control now covers selectors 1–256 instead of 1–48, including the supplementary range, so you can assign and inspect variation sequences for ideographic variants and text-versus-emoji presentation.</p>
+<h2 id="compile-truetype-hints-with-vtt">Compile TrueType hints with VTT<a class="headerlink" href="#compile-truetype-hints-with-vtt" title="Permanent link">¶</a></h2>
+<p>FontLab 9 compiles Instructor tool commands with the open-source <strong>VTT</strong> compiler, for static and variable TrueType fonts and WOFF/WOFF2 output. Choose the compiler in Font Info or in an export profile. VTT is the default for new fonts and for the default Variable TT export profile; a compiler choice already saved in a font or profile remains in effect. FontLab reports commands VTT does not support in the Output panel.</p>
+<p>The Glyph window’s hinted display and the preview area in the <strong>TT Hinting</strong> panel use the selected compiler. With VTT, variable hint previews follow the chosen design-space location in both FreeType and Microsoft rendering modes, the waterfall keeps a stable layout and highlights the selected PPM, and hint preparation keeps each master’s point names, so visual hint commands still refer to the intended points in variable exports.</p>
+<h2 id="exchange-files-with-glyphs-and-newer-opentype">Exchange files with Glyphs and newer OpenType<a class="headerlink" href="#exchange-files-with-glyphs-and-newer-opentype" title="Permanent link">¶</a></h2>
+<p>FontLab 9 opens and exports <strong>Glyphs</strong> files, including version 4 and <code>.glyphspackage</code>, and export profiles can choose Glyphs 2, 3 or 4 where supported. Conversion handles newer curves, images, color fills, gradients, stroke data and Smart Glyph coordinates. FontLab reports effects and kerning forms it does not support, and writes to a temporary location before replacing an existing file or package. If a collaborator sends a Glyphs 4 source, check the imported glyphs and masters before editing the family.</p>
+<p>FontLab also imports cubic TrueType outlines, variable components (<code>VARC</code>), <code>avar</code> version 2 axis mappings and the newer large-glyph and layout tables. When opening supported variable fonts, it can reconstruct recognized bracket switches and Sigma trajectories as editable source data. VFC, VFJ and VFJP retain component programs and axis mapping, but export of these new OpenType formats is not yet available, and older FontLab builds cannot interpret those records.</p>
+<h2 id="ask-aidus-about-the-open-font">Ask Aidus about the open font<a class="headerlink" href="#ask-aidus-about-the-open-font" title="Permanent link">¶</a></h2>
+<p><strong>Aidus</strong> brings optional AI assistance into FontLab 9. It’s in beta, and it works with your own supported provider or gateway account: configure the provider, API key and models in <mark>Preferences &gt; Aidus</mark>. OpenRouter is the default API base; direct OpenAI, Anthropic, Gemini, DeepSeek and compatible APIs are also supported. FontLab stores the key in the macOS Keychain or Windows Credential Manager. Setup is optional, and you can use FontLab without it.</p>
+<p><strong>Aidus Chat</strong> works with the font you have open and can use FontLab’s own tools to inspect data and make changes. Ask “What is current kerning for Vo?”, and Chat reads the pair through a FontLab tool and reports the value for the current master. Ask it to autokern the pair, then to adjust it by +12, and each step lists the tools it called and reports the old and new values. Before a tool changes the font, Chat asks for confirmation unless you have suppressed that warning for the tool. Supported native font edits can be undone. Chat runs Python only after an explicit request in the conversation, and you can turn that off again.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../media/fontlab-9/aidus-chat-panel.png" data-desc-position="bottom"><img alt="Aidus Chat beside the Glyph window: a question about the current kerning for Vo, an autokern request and an adjustment by +12, each answered with the tool calls listed and the old and new values." src="../../../../media/fontlab-9/aidus-chat-panel.png"></a></p>
+<p><strong>Smart Filters</strong> bring descriptions to the Font window. Describe the glyphs you need, such as “glyphs with components and no Unicode” or “Latin uppercase with diagonal stem and no components”, and Aidus compiles the description into a saved filter in the Font window sidebar. Filters can use names, Unicode, scripts, categories, tags, notes, widths, contour and component counts, layer information and stem counts, and can examine individual masters and layers, so they help you find work that still needs attention. Compiling the rule sends your request and facts about a small glyph sample to your provider; the saved rule then checks current font data locally without another model call, and is stored with the application for reuse across fonts. Check the expected matches before applying a batch action to a filtered set: a valid rule can still misinterpret your description.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../../media/fontlab-9/smart-filters-bar.png" data-desc-position="bottom"><img alt="The Smart Filter dialog over the Font window: the description “Latin uppercase with diagonal stem and no components” becomes a saved filter listed in the sidebar, with the matching glyphs shown in the Font window." src="../../../../media/fontlab-9/smart-filters-bar.png"></a></p>
+<p><strong>Smart Content</strong> helps put the text you need into the Glyph window. Describe a sample or ask for a set of glyphs, such as all lowercase Cyrillic letters in the font, generate combinations, or change the case of existing text. Saved commands run locally against the current font and text without another AI request, even when AI is turned off.</p>
+<p>With a compatible image model, Aidus can also draft a missing glyph. In <mark>Font &gt; New Glyph</mark>, follow the glyph name with <code>=</code> and a description of the shape you want. FontLab sends rendered examples from your font to your image-model provider, traces the returned image into editable contours and applies the selected Auto Space method. A generated currency symbol or display alternate can serve as a starting point for drawing. FontLab sends a separate request for each master, so separate generations may produce drawings that cannot interpolate: review their node structure, spacing and style, and check compatibility before interpolating.</p>
+<p>Requests can send conversation text, relevant font data or visual references to your provider, and provider charges may apply. Chat history is not saved. Before commercial use of generated drawings, check the provider’s terms: the Aidus preferences state that generative results may be public domain or subject to third-party licensing.</p>
+<h2 id="agents-scripts-and-python">Agents, scripts and Python<a class="headerlink" href="#agents-scripts-and-python" title="Permanent link">¶</a></h2>
+<p>External assistants can connect through FontLab’s <strong>MCP server</strong>, which is enabled separately from built-in Chat and is off by default. Enable <mark>Preferences &gt; Aidus &gt; Allow external MCP clients to control FontLab</mark> and use a matching <strong>fontlab-mcp</strong> bridge; the bridge authenticates the local connection automatically, and turning access off disconnects external clients. External calls do not receive Chat’s per-tool confirmation dialogs, so start with an audit task, such as listing widths in a named font and master, and inspect the returned data before requesting edits. Use tool discovery to check what a particular build supports.</p>
+<p>Chat, MCP clients and the new <strong><code>fontpr</code></strong> Python module share the same focused operations: inspect open fonts, and automate glyph, anchor, metrics, kerning, font-information and action operations, including supported Actions such as autokerning. Tools can inspect indexed contour nodes and apply bounded, undoable node edits, calculate vectors and Bézier points without changing a font, inspect and edit stored PostScript hints, read and change supported application preferences, and read and save UTF-8 text in FontLab’s Aidus and Scripts/Aidus folders. Overwriting an existing file requires an explicit choice, and saving a script does not run it.</p>
+<p>For unattended runs, <mark>Hide warning dialogs</mark> in <mark>Preferences &gt; General &gt; Other</mark> lets scripts and MCP sessions launch FontLab and open fonts without startup or import prompts. FontLab uses the configured import settings, skips optional repairs and encoding conversion, and writes problems to the Output panel instead. Because optional repairs are skipped, a font opened this way can differ from the same font opened interactively, so read Output after the run, and turn the option off again for interactive work.</p>
+<p>Python reaches further into the application. Scripts can draw overlays below or above glyph artwork on the Glyph window canvas with <code>flCanvas.appendPythonPainter</code>, including in previews, and register interactive tools with <code>flWorkspace.registerPythonTool</code>: the tool gets a Tools-menu entry and a toolbar button, and receives activation, mouse, keyboard and drawing callbacks. A script-based measuring or construction tool can be selected and used like the built-in ones. You can also ask Aidus Chat to write a Python script, review it in the Scripting panel, and save it to reuse on other fonts.</p>
+<p>The Scripting panel gains a <strong>Python debugger</strong>. Set breakpoints, step through a script, and inspect its stack and variables. If a script raises an uncaught exception, its stack remains available to help you find the cause. Script calls handle named arguments and omitted defaults more consistently, change notifications include nested glyph data by default so scripted outline edits can be undone correctly, and several crashes involving Python signal callbacks are fixed.</p>
+<h2 id="work-in-your-language-and-name-fonts-in-theirs">Work in your language, and name fonts in theirs<a class="headerlink" href="#work-in-your-language-and-name-fonts-in-theirs" title="Permanent link">¶</a></h2>
+<p>FontLab 9’s interface is available in English and 18 other languages. German, French, Spanish and Polish are reviewed translations. Czech, Hindi, Indonesian, Italian, Japanese, Korean, Brazilian Portuguese, Russian, Thai, Turkish, Ukrainian, Vietnamese, Simplified Chinese and Traditional Chinese are machine-draft preview translations, still under review. Choose a language in <mark>Preferences &gt; General &gt; Appearance &gt; Language</mark>, or follow the system language, and restart FontLab. Menus, panels, tooltips, <strong>Quick Help</strong>, Help panel articles and welcome tips use the chosen language where a translation is available, with English as the fallback. The setting does not rename glyphs or change feature code.</p>
+<p>You can also give the fonts you make multilingual names. <strong>Font Info</strong> lets you add translated family, style, full-name, creator and legal information, as well as axis names, named axis values and instance names, and include them in supported font exports. Family and legal translations are shared across the family; style and full-name translations can belong to individual masters. OpenType export profiles can also omit legacy Macintosh Roman name records while retaining Unicode names. FontLab preserves imported conflicts and unsupported legacy records without choosing replacements, so check the names in the exported font before delivery.</p>
+<p>FontLab 9 comes with a new <strong>user manual</strong> covering drawing, spacing, variable fonts, OpenType layout, production and automation. Open it from <mark>Help &gt; User Manual</mark>, or <a href="https://help.fontlab.com/fontlab/9/">read it online</a>.</p>
+<h2 id="saving-recovery-and-fixes">Saving, recovery and fixes<a class="headerlink" href="#saving-recovery-and-fixes" title="Permanent link">¶</a></h2>
+<p>Autosave makes recovery saves after glyph edits and undo, including with several fonts open. Undo of large edits uses less time and memory, and opening component-heavy VFCs requires less work. Save a Copy and successful MCP saves keep the recovery data of a document that still has unsaved edits, so a copy saved for a colleague leaves the safety net for the working file in place. A canceled project save keeps the previous recovery file, and a failed save reports the actual file or serialization error.</p>
+<p>Sparse ligature anchors retain their actual component slots in generated mark features, and missing mark-attachment classes remain empty instead of acquiring a synthetic anchor at (0, 0). Paste Special metrics-line pasting, layer insertion order, instance-layer renaming, anchor expressions, Illustrator clipboard handling, Remove Overlap and Windows appearance receive fixes, and FontLab no longer scans every installed font in the background at startup.</p>
+<h2 id="moving-from-fontlab-8">Moving from FontLab 8<a class="headerlink" href="#moving-from-fontlab-8" title="Permanent link">¶</a></h2>
+<p>You can keep FontLab 8 installed while moving to FontLab 9. On first launch, FontLab 9 offers to import your FontLab 8 preferences, workspaces, scripts and other user data. Afterwards, check <mark>Preferences &gt; General &gt; User data folder</mark>: it may still point to the FontLab 8 folder, and clearing the field uses the FontLab 9 default.</p>
+<p>A few results are regenerated with new engines, so compare them with existing work before replacing it: optical kerning values, Autotrace results and live Power Brush outlines. Test your Python scripts in FontLab 9 before relying on them. Fonts and export profiles that already store a hint-compiler choice keep it; VTT becomes the default only for new fonts and the default Variable TT profile.</p>
+<p>To manage your FontLab account and licenses, sign in to <strong>FontLab Pass</strong> at <a href="https://pass.fontlab.com/">pass.fontlab.com</a>. Your Aidus API key belongs to your model provider and does not sign you into FontLab Pass.</p>
+<h2 id="get-fontlab-9">Get FontLab 9<a class="headerlink" href="#get-fontlab-9" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong><a href="https://pass.fontlab.com/upgrade/fl9">Upgrade your FontLab 8, 7, VI or Studio 5</a></strong> to FontLab 9 for $149.</li>
+<li>Bought FontLab 8 after <strong>1 January 2026</strong>? <a href="https://pass.fontlab.com/upgrade/fl9">Upgrade to FontLab 9</a> for <strong>$49</strong>. Bought it after <strong>1 June 2026</strong>? <strong><a href="https://pass.fontlab.com/upgrade/fl9">Upgrade for free!</a></strong></li>
+<li><strong><a href="https://fontlab.onfastspring.com/fl9">Buy FontLab 9 Lifetime</a></strong> for $499.</li>
+</ul>
+<p><a class="md-button md-button--primary" href="https://download.fontlab.com/">Try FontLab 9 for 10 days →</a></p>
+
+
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+          <div class="md-top" data-md-component="top" hidden="">
+  <div class="md-top__center">
+    <button type="button" class="md-top__button md-top__button--main" data-md-action="top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+      <span>Back to top</span>
+    </button>
+    
+      
+      
+        
+      
+      <label class="md-top__button md-top__side md-top__side--nav" for="__drawer" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H9V6h11Z"></path></svg>
+      </label>
+    
+    
+      
+      
+      <label class="md-top__button md-top__side md-top__side--toc" for="__toc">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-5 14H4V6h11Z"></path></svg>
+      </label>
+    
+  </div>
+</div>
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2013–2026 Fontlab Ltd.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <section class="fl-footer-cta" aria-label="FontLab links">
+    <div class="fl-footer-cta__grid">
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--buy">
+        <h2 class="fl-footer-cta__title">Buy FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Get the professional font editor for drawing, spacing, kerning,
+          OpenType production, color fonts, and variable fonts.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light" href="https://www.fontlab.com/buy/">Buy now</a>
+        </p>
+        <a class="fl-footer-cta__fineprint" href="https://www.fontlab.com/buy/">FontLab licenses, upgrades, and bundles</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--learn">
+        <h2 class="fl-footer-cta__title">Explore FontLab</h2>
+        <p class="fl-footer-cta__copy">
+          Learn what FontLab can do for type design, variable workflows,
+          color fonts, scripting, import, export, and production.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--light" href="https://www.fontlab.com/">Learn more</a>
+        </p>
+        <a class="fl-footer-cta__fineprint" href="https://www.fontlab.com/">Products, features, examples, and updates</a>
+      </article>
+
+      <article class="fl-footer-cta__panel fl-footer-cta__panel--talk">
+        <h2 class="fl-footer-cta__title">Questions first?</h2>
+        <p class="fl-footer-cta__copy">
+          Tell us what you are making, what you need to solve, or what you
+          need to know before choosing a FontLab tool.
+        </p>
+        <p class="fl-footer-cta__button-row">
+          <a class="fl-footer-cta__button fl-footer-cta__button--dark" href="https://www.fontlab.com/contact/">Let's talk</a>
+        </p>
+        <a class="fl-footer-cta__fineprint fl-footer-cta__fineprint--dark" href="https://www.fontlab.com/contact/">Sales and support contact options</a>
+      </article>
+    </div>
+  </section>
+  <fontlab-footer mode="dark"></fontlab-footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.path", "navigation.top", "navigation.indexes", "toc.follow", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.af6d90d5.min.js"></script>
+      
+        <script src="https://i.fontlab.com/fltheme26/1.0.0/basecoat.js"></script>
+      
+        <script src="https://i.fontlab.com/fltheme26/1.0.0/theme.js"></script>
+      
+        <script src="../../../../js/illu-link.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
