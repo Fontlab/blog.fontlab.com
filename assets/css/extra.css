@@ -1,0 +1,109 @@
+/* this_file: src_docs/md/assets/css/extra.css */
+/* FontLab brand design tokens and custom styles */
+
+:root {
+  /* Brand colors — dark mode defaults */
+  --fl-bg: #111213;          /* Dark background */
+  --fl-fg: #ffffff;          /* Light foreground */
+  --fl-accent: #0066cc;      /* FontLab blue */
+  --fl-code-bg: #1e1f23;     /* Code block background */
+  --fl-border: #2d2e33;      /* Border color */
+  
+  /* Typography */
+  --fl-font-sans: "Inter", "Work Sans", sans-serif;
+  --fl-font-serif: "IBM Plex Serif", serif;
+  --fl-font-mono: "JetBrains Mono", "Courier New", monospace;
+}
+
+/* Ensure body uses design tokens */
+body {
+  background-color: var(--fl-bg);
+  color: var(--fl-fg);
+  font-family: var(--fl-font-sans);
+}
+
+/* Code block styling */
+pre {
+  background-color: var(--fl-code-bg);
+  border: 1px solid var(--fl-border);
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+code {
+  font-family: var(--fl-font-mono);
+  font-size: 0.9em;
+}
+
+/* Links */
+a {
+  color: var(--fl-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fl-font-serif);
+  color: var(--fl-fg);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75em;
+  font-weight: 600;
+  border-bottom: 1px solid var(--fl-border);
+  padding-bottom: 0.25em;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--fl-accent);
+  margin-left: 0;
+  padding-left: 1rem;
+  color: #888;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+table th {
+  background-color: var(--fl-code-bg);
+  border: 1px solid var(--fl-border);
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  border: 1px solid var(--fl-border);
+  padding: 0.75rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Post metadata */
+.md-post__meta {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 1rem;
+}
