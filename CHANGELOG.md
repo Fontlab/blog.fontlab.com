@@ -2,6 +2,13 @@
 
 # Changelog
 
+## 2026-11-23 — fly-january follow-up 2 (theme a344026)
+
+- `search` uses its bare plugin name. The theme now renders the search box for it;
+  checked in the browser at 1440 and 390.
+- New `hooks/plain_links.py` adds `data-fly-plain` to the 134 `.fl-help-cta` links at
+  build time, so they keep the red CTA look under the theme's article-link rule.
+
 ## 2026-11-23 — fly-january follow-up (theme 4579e72)
 
 - Removed the TEMPORARY workarounds for G1–G5. The theme now handles excerpt headings,

@@ -29,8 +29,9 @@ archives, topic pages, pagination, feeds and search.
 - `mkdocs/hooks/glightbox_small_images.py`: keeps small images out of the lightbox.
 - `src_docs/md/css/extra.css`: blog content styling. rem values are against the theme's
   14.4px root. Component links are styled as `.md-typeset .class` (no `!important`).
-- Plugins use bare names (`blog`, `tags`) except `materialx/search`: MaterialX's header
-  only renders the search box for that exact name (theme gap G6).
+- Plugins use bare names (`search`, `blog`, `tags`).
+- `mkdocs/hooks/plain_links.py`: adds `data-fly-plain` to `.fl-help-cta` links so the
+  theme's article-link rule leaves the CTA component alone.
 - Tailwind Play CDN + `js/tailwind-config.js` serve the unprefixed utility classes used
   in posts (`extra.fly.utilities` stays off: posts do not use `tw:` classes).
 

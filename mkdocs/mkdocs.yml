@@ -108,9 +108,7 @@ markdown_extensions:
   - pymdownx.tilde
 
 plugins:
-  # Prefixed on purpose: bare `search` resolves to fly-january/search, but MaterialX's
-  # header.html only renders the search box for "materialx/search" (theme gap G6).
-  - materialx/search:
+  - search:
       enabled: true
   - include-markdown:
       opening_tag: "{!"
@@ -177,6 +175,7 @@ plugins:
 hooks:
   - hooks/glightbox_small_images.py
   - hooks/site_head.py
+  - hooks/plain_links.py
 
 extra_css:
   - css/extra.css

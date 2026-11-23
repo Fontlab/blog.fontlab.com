@@ -2,6 +2,11 @@
 
 # Work — blog.fontlab.com
 
+## 2026-11-23 — fly-january follow-up 2 (theme a344026)
+
+- Strict scratch build passes. Old-vs-new 44 cases: 0 mismatches. "kerning" search returns
+  29 documents at 1440 and 390. CTA: rgb(200,26,39), no underline. 16 tests pass.
+
 ## 2026-11-23 — fly-january follow-up (theme 4579e72)
 
 - Strict scratch build passes. Old-vs-new 44 cases: 0 mismatches, no overflow, no console
