@@ -1,7 +1,5 @@
 /* this_file: src_docs/md/css/extra.css */
-/* FontLab blog content styling: post illustrations, excerpt cards, CTAs, home hero.
-   rem lengths are against fly-january's 14.4px root (the old 20px MaterialX values
-   multiplied by 20/14.4, so the rendered px sizes are unchanged). */
+/* FontLab blog typography and footer CTA customizations. */
 
 /* ============================================================
    Post illustrations — black-on-transparent line-art PNGs.
@@ -30,16 +28,16 @@
   width: 50%;
   max-width: 512px;
   height: auto;
-  margin: 0 0 -2.083rem 0.694rem;
+  margin: 0 0 -1.5rem 0.5rem;
   position: relative;
-  top: -2.083rem;
+  top: -1.5rem;
   shape-outside: margin-box;
 }
 
 /* Flipped float modifier. */
 .md-typeset .illu-thumb.illu-left {
   float: left;
-  margin: 0 0.694rem -2.083rem 0;
+  margin: 0 0.5rem -1.5rem 0;
 }
 
 /* On the blog-index card, anchor the thumbnail to the top-right of the
@@ -75,7 +73,7 @@
 .md-post--excerpt .md-typeset .illu-thumb.illu-front {
   display: block;
   position: absolute;
-  top: -1.389rem;
+  top: -1rem;
   right: 0;
   float: none;
   clear: none;
@@ -134,7 +132,7 @@
     height: auto;
     position: static;
     top: auto;
-    margin: 0.694rem 0 1.736rem;
+    margin: 0.5rem 0 1.25rem;
   }
 
   .md-post--excerpt .md-typeset .illu-thumb,
@@ -148,7 +146,7 @@
   .md-post--excerpt .md-post__content:has(.illu-thumb.illu-front),
   .md-post--excerpt .md-post__content:has(.illu-thumb.illu-index.illu-left) {
     padding-right: 0;
-    padding-left: 2.778rem;
+    padding-left: 2rem;
     min-height: 0;
   }
 }
@@ -165,54 +163,157 @@
   --fl-font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --fl-font-display:
     'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fl-font-quote: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --md-text-font: var(--fl-font-body);
+  --md-code-font:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
 }
 
 html {
   overflow-x: clip;
 }
 
-/* Text wrapping of the old typography block; sizes, families and leading are
-   fly-january roles now (extra.fly.fonts in mkdocs.yml). */
+.md-typeset,
+.md-nav,
+.md-search__input {
+  font-family: var(--fl-font-body);
+  letter-spacing: 0;
+}
+
+.md-typeset {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .md-typeset p,
 .md-typeset li,
 .md-typeset blockquote,
 .md-typeset td,
 .md-typeset th {
+  font-size: 0.95rem;
+  line-height: 1.6;
   text-wrap: pretty;
+  text-wrap-style: pretty;
 }
 
-/* No heading permalinks on the blog. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-post__content h2 {
+  color: var(--fl-black);
+  font-family: var(--fl-font-display);
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+.md-typeset h1 {
+  font-size: 2.4rem;
+  font-weight: 200;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.md-typeset h2 {
+  border-bottom: 0;
+  font-size: 1.7rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 2rem 0 2rem;
+}
+
+.md-typeset h3 {
+  font-family: var(--fl-font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.md-typeset blockquote {
+  border-left: 3px solid var(--fl-gray-light);
+  color: var(--fl-gray-text);
+  padding-left: 1rem;
+}
+
+.md-typeset blockquote,
+.md-typeset blockquote p {
+  font-family: var(--fl-font-body);
+  font-size: 1.05rem;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.md-typeset code,
+.md-typeset pre {
+  font-size: 0.85rem;
+}
+
+.md-typeset pre {
+  background: var(--fl-code-bg);
+  border: 1px solid var(--fl-gray-light);
+  border-radius: 6px;
+}
+
 .md-typeset .headerlink {
   display: none;
 }
 
+.md-sidebar--secondary .md-nav--secondary > .md-nav__title[for='__toc'] {
+  display: none;
+}
+
+.md-nav--secondary > .md-nav__list {
+  padding-top: 0.2rem;
+}
 /* Hide the "Metadata" label that appears above the post sidebar's
    author/date/read-time block. */
 .md-post__title {
   display: none;
 }
 
-/* Excerpt titles keep the blog's 27px list size, set through fly-january's heading tokens
-   (the h2 rule reads them from the nearest ancestor). */
 .md-post--excerpt {
-  margin-bottom: 3.125rem;
-  --fly-h2-size: 1.875rem;
-  --fly-h2-leading: 2rem; /* one 28.8px grid line, about the old 1.1 */
+  margin-bottom: 2.25rem;
 }
 
+.md-post--excerpt .md-post__content h2 {
+  font-family: var(--fl-font-display);
+  line-height: 1.1;
+  margin: 0 0 0.3rem;
+  text-transform: none;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-size: 1.35rem;
+}
 
 /* Author avatar: appears inline-before the title; abstract aligns with title */
 .md-post--excerpt .md-post__content {
   position: relative;
-  padding-left: 2.778rem;
+  padding-left: 2rem;
 }
 
 .md-post--excerpt .md-post__avatar {
   position: absolute;
   left: 0;
-  top: 0.278rem;
-  width: 1.806rem;
-  height: 1.806rem;
+  top: 0.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
   border-radius: 50%;
   overflow: hidden;
   display: block;
@@ -242,8 +343,27 @@ html {
   white-space: nowrap;
 }
 
-.md-post__metaline {
-  font-size: 0.903rem;
+.md-post__metaline,
+.md-ellipsis {
+  font-size: 0.65rem;
+}
+
+.md-post__metaline small,
+.md-ellipsis small {
+  font-size: 0.7em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  display: block;
+  line-height: 1.2em;
+  opacity: 0.5;
+}
+
+.md-nav__list > li + li {
+  margin-top: 0;
+}
+
+.md-nav__link {
+  padding: 0.15rem 0.8rem;
 }
 
 .md-post--excerpt .md-post__content p {
@@ -254,39 +374,39 @@ html {
   font-variant-numeric: tabular-nums;
 }
 
-.md-typeset .md-post__readlink {
+.md-post__readlink {
   color: var(--fl-gray-text);
   text-decoration: none;
   margin-left: 0.35em;
   white-space: nowrap;
 }
 
-.md-typeset .md-post__readlink:hover {
+.md-post__readlink:hover {
   text-decoration: underline;
   color: var(--fl-red);
 }
 
 .md-post--excerpt .md-post__content > *:last-child {
-  margin-bottom: 0.347rem;
+  margin-bottom: 0.25rem;
 }
 
 /* In-content CTA link (.fl-help-cta applied via attr_list) */
 .md-typeset p:has(> a.fl-help-cta:only-child) {
-  margin: 0.486rem 0 4.167rem;
+  margin: 0.35rem 0 3rem;
   line-height: 1.2;
 }
 
 .md-typeset a.fl-help-cta,
 .md-typeset a.fl-help-cta:visited {
   display: inline-block;
-  background: transparent;
-  border: 0;
+  background: transparent !important;
+  border: 0 !important;
   color: var(--fl-red);
   border-radius: 0;
-  box-shadow: none;
+  box-shadow: none !important;
   padding: 0;
   font-family: var(--fl-font-display);
-  font-size: 1rem;
+  font-size: 0.72rem;
   font-weight: 400;
   text-decoration: none;
   letter-spacing: 0;
@@ -298,7 +418,7 @@ html {
 }
 
 .md-typeset a.fl-help-cta:hover {
-  background: transparent;
+  background: transparent !important;
   color: var(--fl-black);
   text-decoration: underline;
   text-decoration-thickness: 0.05em;
@@ -320,7 +440,7 @@ html {
 
 .fl-footer-cta {
   background: var(--fl-off-white);
-  margin: 4.861rem 0 0;
+  margin: 3.5rem 0 0;
 }
 
 .fl-footer-cta__grid {
@@ -332,9 +452,9 @@ html {
   box-sizing: border-box;
   display: grid;
   grid-template-rows: auto auto 1fr auto auto;
-  min-height: 33.333rem;
-  padding: 4.861rem 2.083rem;
-  row-gap: 0.972rem;
+  min-height: 24rem;
+  padding: 3.5rem 1.5rem;
+  row-gap: 0.7rem;
 }
 
 .fl-footer-cta__panel--buy {
@@ -355,7 +475,7 @@ html {
 .fl-footer-cta__title {
   color: inherit;
   font-family: var(--fl-font-display);
-  font-size: 2.639rem;
+  font-size: 1.9rem;
   font-style: normal;
   font-weight: 500;
   grid-row: 1;
@@ -368,7 +488,7 @@ html {
 .fl-footer-cta__copy {
   color: inherit;
   font-family: var(--fl-font-body);
-  font-size: 1.458rem;
+  font-size: 1.05rem;
   grid-row: 2;
   line-height: 1.5;
   margin: 0;
@@ -385,8 +505,8 @@ html {
   align-items: center;
   display: flex;
   grid-row: 4;
-  margin: 1.042rem 0 0;
-  min-height: 4.861rem;
+  margin: 0.75rem 0 0;
+  min-height: 3.5rem;
 }
 
 .fl-footer-cta__button,
@@ -399,14 +519,14 @@ html {
   box-sizing: border-box;
   display: inline-flex;
   font-family: var(--fl-font-display);
-  font-size: 1.458rem;
+  font-size: 1.05rem;
   font-weight: 700;
   justify-content: center;
   letter-spacing: 0.03em;
   line-height: 1.1;
-  min-height: 4.514rem;
-  min-width: 17.361rem;
-  padding: 1.25rem 2.5rem;
+  min-height: 3.25rem;
+  min-width: 12.5rem;
+  padding: 0.9rem 1.8rem;
   text-decoration: none;
   text-transform: uppercase;
   transition:
@@ -450,10 +570,10 @@ html {
 .fl-footer-cta__fineprint:visited {
   color: inherit;
   font-family: var(--fl-font-body);
-  font-size: 1.083rem;
+  font-size: 0.78rem;
   grid-row: 5;
   line-height: 1.4;
-  margin: 0.486rem 0 0;
+  margin: 0.35rem 0 0;
   opacity: 0.75;
   text-decoration: none;
 }
@@ -471,8 +591,12 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md-post--excerpt .md-post__content h2 {
+    font-size: 1.35rem;
+  }
+
   .fl-footer-cta__panel {
-    padding: 6.25rem 4.167rem;
+    padding: 4.5rem 3rem;
   }
 }
 
@@ -482,18 +606,22 @@ html {
   }
 
   .fl-footer-cta__panel {
-    min-height: 38.889rem;
-    padding: 7.639rem 5.556rem;
+    min-height: 28rem;
+    padding: 5.5rem 4rem;
   }
 }
 
 @media (max-width: 767px) {
+  .md-typeset h1 {
+    font-size: 2rem;
+  }
+
   .fl-footer-cta__panel {
-    min-height: 29.167rem;
+    min-height: 21rem;
   }
 
   .fl-footer-cta__button {
-    min-width: 15.278rem;
+    min-width: 11rem;
   }
 }
 
@@ -501,10 +629,10 @@ html {
 .fl-home-hero {
   background: #2a2a2a;
   width: 100%;
-  margin: 0 0 1.389rem 0;
+  margin: 0 0 1rem 0;
   display: block;
   line-height: 0;
-  padding: 0.278rem 1.389rem 1.389rem 1.389rem;
+  padding: 0.2rem 1rem 1rem 1rem;
   text-align: center;
 }
 
@@ -521,17 +649,33 @@ html {
   display: none !important;
 }
 
-/* Blog blockquote: Outfit Light, no rule, grey. */
+.md-nav--primary,
+.md-sidebar--secondary .md-nav--secondary {
+  opacity: 0.5;
+  margin-top: 0.9rem;
+}
+
+.md-sidebar--secondary .md-nav--secondary .md-ellipsis {
+  font-family: var(--fl-font-body);
+  font-size: 0.65rem;
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
 [dir='ltr'] .md-typeset blockquote {
   border-left: none;
+}
+
+[dir='ltr'] .md-typeset blockquote {
   padding-left: 0;
-  padding-right: 2.778rem;
+  padding-right: 2rem;
 }
 
 .md-typeset blockquote,
 .md-typeset blockquote p {
   font-family: var(--fl-font-display);
-  font-size: 1.667rem;
+  font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   line-height: 1.3;

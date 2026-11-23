@@ -1,5 +1,5 @@
 version = 1
-revision = 5
+revision = 3
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.13'",
@@ -56,9 +56,7 @@ source = { editable = "." }
 dependencies = [
     { name = "fire" },
     { name = "flowmark" },
-    { name = "fly-january" },
     { name = "loguru" },
-    { name = "mkdocs" },
     { name = "mkdocs-awesome-nav" },
     { name = "mkdocs-copy-to-llm" },
     { name = "mkdocs-glightbox" },
@@ -81,19 +79,17 @@ dev = [
 requires-dist = [
     { name = "fire", specifier = ">=0.6" },
     { name = "flowmark", specifier = ">=0.6.5" },
-    { name = "fly-january", specifier = "==0.1.0" },
     { name = "loguru", specifier = ">=0.7" },
-    { name = "mkdocs", specifier = "==1.6.1" },
     { name = "mkdocs-awesome-nav", specifier = ">=3.3" },
     { name = "mkdocs-copy-to-llm", specifier = ">=0.2" },
     { name = "mkdocs-glightbox", specifier = ">=0.5" },
     { name = "mkdocs-include-markdown-plugin", specifier = ">=7.2" },
     { name = "mkdocs-llmstxt", specifier = ">=0.2" },
-    { name = "mkdocs-materialx", specifier = "==10.1.8" },
+    { name = "mkdocs-materialx", specifier = ">=10.1.4" },
     { name = "mkdocs-rss-plugin", specifier = ">=1.17" },
     { name = "pillow", specifier = ">=11.0" },
-    { name = "properdocs", specifier = "==1.6.7" },
-    { name = "pymdown-extensions", specifier = "==11.0.1" },
+    { name = "properdocs", specifier = ">=1.6.7" },
+    { name = "pymdown-extensions", specifier = ">=10.2" },
     { name = "python-frontmatter", specifier = ">=1.1" },
 ]
 
@@ -265,21 +261,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/4e/cc/eac8218c043842af17e7bab947ee653712b8335be572b074d0a5cc5f7e5a/flowmark-0.6.5.tar.gz", hash = "sha256:f4136cd176a5fa2346c0bff5f84d2f757228c51e164a75682daee4bb2df5578b", size = 454443, upload-time = "2026-02-26T05:23:23.673Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/3e/3e/92367d19bd97df6fee87f6f58df19fea42c02573a0713a217e4dc56d3b84/flowmark-0.6.5-py3-none-any.whl", hash = "sha256:984f4fc70f8a237658936bb4b05371d9de001960ecff2f90eac3662828e79c9f", size = 64331, upload-time = "2026-02-26T05:23:22.264Z" },
-]
-
-[[package]]
-name = "fly-january"
-version = "0.1.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "mkdocs" },
-    { name = "mkdocs-materialx" },
-    { name = "properdocs" },
-    { name = "vexy-python-markdown-figure-groups" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/0d/3e/3720c48cbf835ea091a0fafa8b394554e2a467c865dfc014383974ead62e/fly_january-0.1.0.tar.gz", hash = "sha256:10a83623328f7032665badd899bb19d626ba463c24f34fb6e7e2c04f0999fbff", size = 236505, upload-time = "2026-11-23T21:18:11.021Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/d9/f9/96853718f1e9fa44ebc5edb991dcceeb84bbafd83084cf5a44a613f426b3/fly_january-0.1.0-py3-none-any.whl", hash = "sha256:9352ae513437160bf4fdfe8ffa9d76ac3e83842466773e463d44d63dad51be76", size = 225668, upload-time = "2026-11-23T21:18:08.957Z" },
 ]
 
 [[package]]
@@ -563,16 +544,15 @@ wheels = [
 
 [[package]]
 name = "mkdocs-document-dates"
-version = "3.8.7"
+version = "3.8.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "babel" },
     { name = "mkdocs" },
     { name = "properdocs" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/47/9d/c77aedfdc4228b6aeb80d3ccc4d3c6e642b064f44e1ce47cef93101ff59d/mkdocs_document_dates-3.8.7.tar.gz", hash = "sha256:da03b4fcc5f94689a92791e96ff4b38cb967b6abce8a3a465fee849451aa5f1f", size = 195236, upload-time = "2026-06-19T06:27:40.37Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9d/e9/dce07c334bcb10d38abec73074fbdc36338c213b1ba9e2ee8990bc2977fa/mkdocs_document_dates-3.8.0.tar.gz", hash = "sha256:20fb60d0ab25e4f5b93b214a205ef07c57ad93dedaa6c5b82aa4bfb6cdad244d", size = 194309, upload-time = "2026-04-23T14:28:22.993Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f4/10/7bd3e3a5edeb1dde352b5183a05819f8d2003958f17af42fade886cb025d/mkdocs_document_dates-3.8.7-py3-none-any.whl", hash = "sha256:9f9f699ad08080e1e8b5199820350d43e8c358c1de53bb6ef386bb360316eb9f", size = 200431, upload-time = "2026-06-19T06:27:38.882Z" },
+    { url = "https://files.pythonhosted.org/packages/69/12/7d540980dafac7d44cb7221674b89402ca72089f03fe1764577237e255a0/mkdocs_document_dates-3.8.0-py3-none-any.whl", hash = "sha256:204dac25f94f1ccb4fe975d60703a085df634bb414d162f15cfdbd27eaf34b80", size = 199607, upload-time = "2026-04-23T14:28:21.183Z" },
 ]
 
 [[package]]
@@ -640,7 +620,7 @@ wheels = [
 
 [[package]]
 name = "mkdocs-materialx"
-version = "10.1.8"
+version = "10.1.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "babel" },
@@ -657,9 +637,9 @@ dependencies = [
     { name = "pymdown-extensions" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/82/5f/bbb59ac0a84e32f63d46c129cb0b56c788807b0253253a97a7bb68a0aacb/mkdocs_materialx-10.1.8.tar.gz", hash = "sha256:53f76693411725296b49392ead856b249c17efb4bbf7889dcdb04f66c5f1b18a", size = 4257316, upload-time = "2026-06-19T14:44:26.295Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4d/a1/b5cd26e0abce491f439a2b7ccdc116dd9b117844717c1906daab7b00ca1b/mkdocs_materialx-10.1.4.tar.gz", hash = "sha256:3aad29c71d6aa9f10ea3d8d48fc5568fdaea2cd2f7e3acec18fd6aa9bdb812e5", size = 4098357, upload-time = "2026-04-24T06:44:14.242Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fc/a2/5c8585ce5e8272cd91ff80a69c8fde279e1968c844e0340c1b9c7adb11f1/mkdocs_materialx-10.1.8-py3-none-any.whl", hash = "sha256:6ba5d5426a5eb80cc441912ce6b3669718f6012ed7a89aed01ab8411a6d5991b", size = 10206933, upload-time = "2026-06-19T14:44:23.501Z" },
+    { url = "https://files.pythonhosted.org/packages/92/54/78d09978ad977aca4e59c644a13e05383ea5ede892641c396338ed18fbec/mkdocs_materialx-10.1.4-py3-none-any.whl", hash = "sha256:2b90da60d5eaea3ebb93fdc2205f1d3f163a56bae3429fef8a6ec40fd9132b4c", size = 9289165, upload-time = "2026-04-24T06:44:11.281Z" },
 ]
 
 [[package]]
@@ -972,15 +952,15 @@ wheels = [
 
 [[package]]
 name = "pymdown-extensions"
-version = "11.0.1"
+version = "10.21.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "markdown" },
     { name = "pyyaml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/21/a9/5f0c535ba3b08fe09270c16808e053a968868242ecbd5676d4e3a488bf28/pymdown_extensions-11.0.1.tar.gz", hash = "sha256:dd2905ae6fc5b75582fafb139a1266ffc754705efa902aa50067fa7ff4f94ec0", size = 857113, upload-time = "2026-07-02T17:59:22.955Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/df/08/f1c908c581fd11913da4711ea7ba32c0eee40b0190000996bb863b0c9349/pymdown_extensions-10.21.2.tar.gz", hash = "sha256:c3f55a5b8a1d0edf6699e35dcbea71d978d34ff3fa79f3d807b8a5b3fa90fbdc", size = 853922, upload-time = "2026-03-29T15:01:55.233Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d6/54/da572c98c0b77626a91b5d3b89f0231d8bff5125c225420908632f8b342d/pymdown_extensions-11.0.1-py3-none-any.whl", hash = "sha256:db3943a62bab7e03af1364f0c4083e64b91fb097675a4b6cceccfbe9a77e5eb2", size = 269455, upload-time = "2026-07-02T17:59:21.271Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/27/a2fc51a4a122dfd1015e921ae9d22fee3d20b0b8080d9a704578bf9deece/pymdown_extensions-10.21.2-py3-none-any.whl", hash = "sha256:5c0fd2a2bea14eb39af8ff284f1066d898ab2187d81b889b75d46d4348c01638", size = 268901, upload-time = "2026-03-29T15:01:53.244Z" },
 ]
 
 [[package]]
@@ -1310,18 +1290,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz", hash = "sha256:231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c", size = 433602, upload-time = "2026-05-07T16:13:18.596Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl", hash = "sha256:9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897", size = 131087, upload-time = "2026-05-07T16:13:17.151Z" },
-]
-
-[[package]]
-name = "vexy-python-markdown-figure-groups"
-version = "0.1.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "markdown" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/12/60/b2d7a64fe0859970ecca8f1b2ccfbecf5db73f343622b2220595f457bba3/vexy_python_markdown_figure_groups-0.1.0.tar.gz", hash = "sha256:7b7c506d9e792e387e57fffd0f55be918b93a5e0dc9a536967d5ce8f06d75b11", size = 15214, upload-time = "2026-11-23T21:16:35.527Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/d8/9b/5a41e6a7efb428e7e945086eae47e081b551880d0d24b7b69114c9f343b3/vexy_python_markdown_figure_groups-0.1.0-py3-none-any.whl", hash = "sha256:9224022a735492d1aa25c669f12c44733ecd76c8c76921c90c45b81f0d628b8a", size = 11609, upload-time = "2026-11-23T21:16:34.565Z" },
 ]
 
 [[package]]

@@ -2,47 +2,101 @@
 this_file: THEME.md
 ---
 
-# Theme: blog.fontlab.com
+# Shared theme integration: blog.fontlab.com
 
 ## FontLab blog
 
-The site uses the installable **fly-january** theme (ProperDocs theme extending MaterialX)
-and its `fly` plugin. The MaterialX blog plugin remains responsible for post routing,
-archives, topic pages, pagination, feeds and search.
+The MaterialX blog plugin remains responsible for post routing, archives, feeds and search. Shared chrome and components do not replace the blog pipeline.
+
+Documentation-first pages use **local MaterialX navigation and local search** when present. Archives, internal configs and source mirrors are not separate live sites.
+
+## Configuration and destinations
 
 | Configuration | Role | Destination |
 |---|---|---|
 | `mkdocs/mkdocs.yml` | active publication configuration | https://blog.fontlab.com/ |
 
-## What lives where
+## Build and publish responsibility
 
-- `theme.name: fly-january`, `plugins: [..., fly]`, `extra.fly` in `mkdocs/mkdocs.yml`:
-  `chrome: fontlab` renders `<fontlab-menu>` (site-label "Blog", search-from "blog",
-  MaterialX drawer and search) and `<fontlab-footer>`; `fonts` loads Outfit and sets the
-  type roles (Outfit headings, system sans text, `sans` role for links, italic `em`). No hue: H1 stays ink.
-- `mkdocs/mk-fontlab/` (custom_dir) holds only what the theme lacks. Never add a
-  `main.html` there: it would replace the theme's own and drop its CSS and JS.
-  - `blog.html`: MaterialX blog index template plus the homepage hero.
-  - `partials/post.html`: excerpt layout (avatar, inline date and read time).
-  - `partials/footer.html`: the FontLab CTA band (the blog shows no MaterialX footer).
-- `mkdocs/hooks/site_head.py`: Google Tag Manager and JSON Feed links (no template slot).
-- `mkdocs/hooks/glightbox_small_images.py`: keeps small images out of the lightbox.
-- `src_docs/md/css/extra.css`: blog content styling. rem values are against the theme's
-  14.4px root. Component links are styled as `.md-typeset .class` (no `!important`).
-- Plugins use bare names (`search`, `blog`, `tags`).
-- `mkdocs/hooks/plain_links.py`: adds `data-fly-plain` to `.fl-help-cta` links so the
-  theme's article-link rule leaves the CTA component alone.
-- Tailwind Play CDN + `js/tailwind-config.js` serve the unprefixed utility classes used
-  in posts (`extra.fly.utilities` stays off: posts do not use `tw:` classes).
+`./build.sh build` produces `docs/`, preserving `docs/CNAME`. The deploy workflow builds from main and publishes to `gh-pages`, which is the live Pages source. A root documentation commit is source documentation; runtime verification still uses https://blog.fontlab.com/.
 
-## Build
+## Shared runtime contract
 
-`./build.sh build` (or `uv run properdocs build -f mkdocs/mkdocs.yml`). Python 3.13 via
-uv; engine pins in `pyproject.toml`: properdocs 1.6.7, mkdocs 1.6.1, mkdocs-materialx
-10.1.8, pymdown-extensions 11.0.1. fly-january is an editable path source until it is
-published on PyPI; until then CI cannot build this configuration.
+The browser layer is published at `https://i.fontlab.com/fltheme26/1.0.0/`.
+Load CSS in this order: `components.css`, then `theme.css`. Load scripts in this
+order: `basecoat.js`, then `theme.js`. Do not duplicate bundles or edit generated
+CDN CSS locally. The four assets are shared across consumers; compatible fixes
+are currently published in place under `1.0.0/`, not as immutable snapshots.
 
-## Verification
+Keep `theme.name: materialx`, native navigation/search markup, the search plugin,
+and generated `search/search_index.json`. The shared bridge defaults documentation
+pages to MaterialX menu/search when those targets exist. In the global bar, one
+loupe sits left of one hamburger. The local drawer opens on the right with the
+palette at the bottom. Below 76.25em, branding scrolls away and compact controls
+dock when either control serves the local site. Escape closes local panels and
+returns focus. Plain static/Webflow pages without MaterialX targets keep global
+controls.
 
-Check desktop and mobile, light and dark: index, `/page/2/`, an archive and a topic
-page, posts with images, code and tables; menu search, mobile drawer, lightbox, footer.
+Choose ownership independently with `mobile-menu="materialx|global"` and
+`mobile-search="materialx|global"` on `<fontlab-menu>` or `<vexy-menu>`. These
+strings describe the allowed alternatives: use one value, not the literal pipe.
+The corresponding config properties are `mobileMenu` and `mobileSearch`; explicit
+attributes win. Search ownership applies at desktop widths too. Local search uses
+the documentation index; global search uses the brand search service.
+
+Reading shortcuts are Right / Alt+Right → next navigation page, Alt+Left → previous
+navigation page, and Left → browser history back. Generated head rel links take
+priority over primary-nav order. There is no wraparound. Editable fields, widgets,
+open dialogs, selected text and other modifiers retain their normal behavior.
+
+## Components and visual changes
+
+Wrap Basecoat and daisyUI markup in a separate `.fltheme-components` container.
+Basecoat keeps its classes; prefix every daisyUI component class with `du-`.
+MaterialX keeps `md-` classes. Enable `attr_list` and `md_in_html` when using Markdown
+attributes and `markdown="1"` inside HTML containers. The host retains its fonts
+and theme picker; wrappers may opt into `data-fltheme-mode="light"` or `"dark"`.
+Call `FLTheme.refresh()` after manual DOM replacement; native instant navigation
+is already handled. Do not load another Basecoat runtime.
+
+The September 2026 shared changes cover:
+
+- One global/local hamburger and one search control, right-side local navigation,
+  responsive docking, desktop local search and safe focus restoration.
+- Navigation/history arrow keys with guards for interactive controls.
+- Consistent form labels, fields, checkboxes, radios, switches, selects and sliders.
+- Shared keycaps, tabs, tooltips, captions, alerts, pagination, drawers, skeletons,
+  progress indicators, mockup frames, chart refresh, countdowns and filter reset.
+- Standard MaterialX/Basecoat/daisyUI buttons: 2.5rem height, 1rem horizontal
+  padding, .875rem text, weight 600 and 1.25rem line height. Explicit size/shape
+  variants remain available.
+- Admonitions have no border or background. Icon, heading and body use a semantic
+  color; body text aligns with the heading. No viewport-based article-end padding.
+- Vexy mobile search uses panel background/text colours, so a transparent global
+  header does not make an explicitly opaque search panel transparent.
+
+The optional Marketing/styleguide editorial layer is distinct from the scoped
+component bundle. Do not add its legacy vendor CSS to an otherwise native site
+without also adopting and testing its companion template and theme controls.
+
+## Verification and future changes
+
+For a shared CSS/runtime fix, change `fontlab-www-docstheme`, build it, run its
+relevant tests, stage the CDN, push, wait for Pages, and verify live asset hashes.
+For a site-specific config/template change, use this repository’s native build and
+publish route, then inspect its final output. Cached Webflow/static overlays can
+replace intermediate HTML, so checking a MkDocs build alone is insufficient.
+
+Check desktop and mobile, light and dark, local/global ownership, drawer/search
+open-close-focus behavior, key navigation and at least one component interaction.
+Shared assets must load once. Keep unrelated working-tree edits, content, branding,
+URLs, downloadable payloads and deployment credentials untouched.
+
+## References
+
+- [Complete setup and integration guide](https://i.fontlab.com/fltheme26/)
+- [Downloadable tested MaterialX starter](https://i.fontlab.com/fltheme26/starter.zip)
+- [Component catalogue with HTML and Markdown](https://fontlab.dev/Marketing/fl1992mk/start/)
+- [Shared source and change history](https://github.com/Fontlab/fontlab-www-docstheme)
+- [Consumer inventory](https://github.com/Fontlab/fontlab-www-docstheme/blob/main/consumers.json)
+- [Issue 213 component corrections](https://github.com/Fontlab/fontlab-www-docstheme/blob/main/review/issue213.md)

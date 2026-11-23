@@ -2,41 +2,6 @@
 
 # Changelog
 
-## 2026-11-23 — Blog links and feed discovery
-
-- Restored the creation-date and update-date titles on RSS autodiscovery links.
-- Matched the help CTA by its exact HTML class and removed four CSS priority overrides.
-- Pinned the include-markdown, llmstxt, glightbox and RSS plugins in `mkdocs/build.sh` to their locked versions.
-
-## 2026-11-23 — fly-january follow-up 2 (theme a344026)
-
-- `search` uses its bare plugin name. The theme now renders the search box for it;
-  checked in the browser at 1440 and 390.
-- New `hooks/plain_links.py` adds `data-fly-plain` to the 134 `.fl-help-cta` links at
-  build time, so they keep the red CTA look under the theme's article-link rule.
-
-## 2026-11-23 — fly-january follow-up (theme 4579e72)
-
-- Removed the TEMPORARY workarounds for G1–G5. The theme now handles excerpt headings,
-  component links, wide tables and the post column. The sans face and italic emphasis
-  move to `extra.fly.fonts.roles` (`sans`, `em.style: italic`). CTA and read-more
-  links are styled at normal specificity as `.md-typeset .class`.
-- `blog` and `tags` use bare plugin names. `materialx/search` stays prefixed (gap G6:
-  with the bare name MaterialX's header renders no search box).
-
-## 2026-11-23 — fly-january theme
-
-- Switched to the fly-january theme and its `fly` plugin: `chrome: fontlab` (menu
-  "Blog", search from "blog"), Outfit heading roles and system-sans text roles. Removed the
-  fltheme26 CDN CSS/JS, the Typekit and unused Google families, and `mk-fontlab/main.html`.
-- Moved the homepage hero to `mk-fontlab/blog.html`, the CTA band to
-  `mk-fontlab/partials/footer.html`, GTM and JSON Feed links to `hooks/site_head.py`, the
-  Tailwind settings to `js/tailwind-config.js`.
-- Trimmed `css/extra.css` to blog content styling with rems converted to the 14.4px root;
-  TEMPORARY workarounds for theme gaps G1–G5.
-- Engine pins: Python 3.13, properdocs 1.6.7, mkdocs 1.6.1, mkdocs-materialx 10.1.8,
-  pymdown-extensions 11.0.1; fly-january as an editable path source until PyPI release.
-
 ## 2026-11-05 — Local publishing repair
 
 - Configured this checkout to merge on pull and reconciled divergent `main`

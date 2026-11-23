@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository state (2026-07-05)
 
-Live and building. ProperDocs 1.6.7 + MaterialX 10.1.8 + fly-january theme site at `mkdocs/mkdocs.yml`, blog moved to site root (`blog_dir: .`, posts at `/yyyy/mm/dd/slug/`). 134 published posts in `src_docs/md/posts/`, 11 offline drafts under `issues/draft-posts/`. RSS + JSON Feed, `llms.txt` / `llms-full.txt` generated. Build via `./build.sh build` (Flowmark format → ProperDocs build); preview via `./build.sh serve`.
+Live and building. ProperDocs 1.6.7 + MaterialX 10.1.4 site at `mkdocs/mkdocs.yml`, blog moved to site root (`blog_dir: .`, posts at `/yyyy/mm/dd/slug/`). 134 published posts in `src_docs/md/posts/`, 11 offline drafts under `issues/draft-posts/`. RSS + JSON Feed, `llms.txt` / `llms-full.txt` generated. Build via `./build.sh build` (Flowmark format → ProperDocs build); preview via `./build.sh serve`.
 
 Source: `IDEA.md` (master spec, read first), `spec/00-toc.md` + `spec/01.md`–`spec/15.md` (chapters incl. editorial roadmap and content series), `TODO.md` (open work), `CHANGELOG.md` (history). Latest release tag: `v1.0.92`.
 
@@ -100,11 +100,14 @@ From IDEA.md: lead strong, plain language, concise, show-don't-tell, edit ruthle
 <!-- shared-theme-integration:start -->
 ## Shared theme maintenance
 
-Read [THEME.md](THEME.md) before changing theme configuration, templates or site CSS.
-The site uses the fly-january theme (`theme.name: fly-january`, `fly` plugin,
-`extra.fly`); theme behaviour belongs in `fontlab-www-docstheme`, the FontLab global
-menu in `img/docs/menu/fontlab.js`. Keep only blog-specific templates in
-`mkdocs/mk-fontlab/` (never a `main.html`). Keep styles for blog content in
-`src_docs/md/css/extra.css`. Verify generated HTML in a
-browser; a source-only change is not proof of a live deployment.
+Read [THEME.md](THEME.md) before changing shared chrome, MaterialX configuration
+or component assets. This repository’s role is: fontlab blog.
+Shared browser behavior belongs in `fontlab-www-docstheme`; FontLab global menu
+source belongs in `img/docs/menu/fontlab.js`, Vexy menu source in
+`i.vexy.art/docs/menu/vexy.js`. Keep per-site content, branding and native builds here.
+Preserve one menu and one search control, documented ownership defaults, scoped
+`.fltheme-components` styles and `du-` component prefixes. Verify final generated
+HTML after overlays; a source-only change is not proof of a live deployment.
+Do not commit unrelated local edits or hand-edit generated CSS as the source fix.
+Work directly unless the current user explicitly requests delegation.
 <!-- shared-theme-integration:end -->
