@@ -13,10 +13,10 @@ exec uvx --directory .. --python 3.13 --from properdocs==1.6.7 \
   --with mkdocs==1.6.1 \
   --with mkdocs-materialx==10.1.8 \
   --with-editable "$FLY" \
-  --with mkdocs-include-markdown-plugin \
-  --with mkdocs-llmstxt \
-  --with mkdocs-glightbox \
-  --with mkdocs-rss-plugin \
+  --with mkdocs-include-markdown-plugin==7.2.2 \
+  --with mkdocs-llmstxt==0.5.0 \
+  --with mkdocs-glightbox==0.5.2 \
+  --with mkdocs-rss-plugin==1.19.0 \
   --with pymdown-extensions==11.0.1 \
   --with pillow \
   properdocs build --config-file mkdocs/mkdocs.yml "$@"

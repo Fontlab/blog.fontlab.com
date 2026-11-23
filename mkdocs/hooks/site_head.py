@@ -2,8 +2,8 @@
 """Page-wide additions that have no template slot in fly-january or MaterialX.
 
 Adds Google Tag Manager (the head script and the <noscript> iframe after <body>) and the
-JSON Feed autodiscovery links. MaterialX already emits the two RSS links because the rss
-plugin is enabled. A custom main.html would replace fly-january's own, so these go in a
+JSON Feed autodiscovery links, and titles MaterialX's two RSS links for the blog.
+A custom main.html would replace fly-january's own, so these go in a
 hook. Runs on every page (on_post_page) and on 404.html (on_post_template).
 """
 
@@ -28,11 +28,20 @@ JSON_FEEDS = (
     ("feed_json_created.json", "FontLab Blog (JSON Feed, by creation date)"),
     ("feed_json_updated.json", "FontLab Blog (JSON Feed, by update date)"),
 )
+RSS_TITLES = {
+    "created": "FontLab Blog (RSS, by creation date)",
+    "updated": "FontLab Blog (RSS, by update date)",
+}
+# MaterialX emits this attribute order and makes the feed paths relative to each page.
+RSS_TITLE = re.compile(
+    r'(?<=<link rel="alternate" type="application/rss\+xml" title=")[^"]*'
+    r'(?=" href="(?:/|(?:\.\./)*)feed_rss_(created|updated)\.xml")'
+)
 BODY_OPEN = re.compile(r"<body\b[^>]*>")
 
 
 def add_site_head(html: str, site_url: str) -> str:
-    """Insert GTM and the JSON Feed links into one rendered page (once)."""
+    """Set the RSS titles and insert GTM and JSON Feed links once per page."""
     if GTM_ID in html or "</head>" not in html:
         return html
     feeds = "".join(
@@ -40,7 +49,9 @@ def add_site_head(html: str, site_url: str) -> str:
         f'href="{site_url}{name}">'
         for name, title in JSON_FEEDS
     )
-    html = html.replace("</head>", f"{GTM_HEAD}{feeds}</head>", 1)
+    head, end_head, body = html.partition("</head>")
+    head = RSS_TITLE.sub(lambda match: RSS_TITLES[match[1]], head)
+    html = f"{head}{GTM_HEAD}{feeds}{end_head}{body}"
     return BODY_OPEN.sub(lambda m: m.group(0) + GTM_BODY, html, count=1)
 
 

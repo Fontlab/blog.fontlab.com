@@ -432,5 +432,5 @@ MIT — Copyright 2026 Fontlab Ltd.
 
 The site uses the fly-january theme (ProperDocs theme extending MaterialX) with the
 FontLab global menu and footer. [THEME.md](THEME.md) documents the configuration, the
-blog-specific templates and the temporary theme-gap workarounds.
+blog-specific templates and the styles for blog content.
 <!-- shared-theme-integration:end -->

@@ -2,6 +2,12 @@
 
 # Changelog
 
+## 2026-11-23 — Blog links and feed discovery
+
+- Restored the creation-date and update-date titles on RSS autodiscovery links.
+- Matched the help CTA by its exact HTML class and removed four CSS priority overrides.
+- Pinned the include-markdown, llmstxt, glightbox and RSS plugins in `mkdocs/build.sh` to their locked versions.
+
 ## 2026-11-23 — fly-january follow-up 2 (theme a344026)
 
 - `search` uses its bare plugin name. The theme now renders the search box for it;

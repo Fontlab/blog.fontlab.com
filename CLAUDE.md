@@ -104,7 +104,7 @@ Read [THEME.md](THEME.md) before changing theme configuration, templates or site
 The site uses the fly-january theme (`theme.name: fly-january`, `fly` plugin,
 `extra.fly`); theme behaviour belongs in `fontlab-www-docstheme`, the FontLab global
 menu in `img/docs/menu/fontlab.js`. Keep only blog-specific templates in
-`mkdocs/mk-fontlab/` (never a `main.html`). Remove a `TEMPORARY` rule in
-`src_docs/md/css/extra.css` once the theme fixes its gap. Verify generated HTML in a
+`mkdocs/mk-fontlab/` (never a `main.html`). Keep styles for blog content in
+`src_docs/md/css/extra.css`. Verify generated HTML in a
 browser; a source-only change is not proof of a live deployment.
 <!-- shared-theme-integration:end -->

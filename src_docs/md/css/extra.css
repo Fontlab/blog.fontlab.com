@@ -192,13 +192,10 @@ html {
   display: none;
 }
 
-.md-post--excerpt {
-  margin-bottom: 3.125rem;
-}
-
 /* Excerpt titles keep the blog's 27px list size, set through fly-january's heading tokens
    (the h2 rule reads them from the nearest ancestor). */
 .md-post--excerpt {
+  margin-bottom: 3.125rem;
   --fly-h2-size: 1.875rem;
   --fly-h2-leading: 2rem; /* one 28.8px grid line, about the old 1.1 */
 }
@@ -282,11 +279,11 @@ html {
 .md-typeset a.fl-help-cta,
 .md-typeset a.fl-help-cta:visited {
   display: inline-block;
-  background: transparent !important;
-  border: 0 !important;
+  background: transparent;
+  border: 0;
   color: var(--fl-red);
   border-radius: 0;
-  box-shadow: none !important;
+  box-shadow: none;
   padding: 0;
   font-family: var(--fl-font-display);
   font-size: 1rem;
@@ -301,7 +298,7 @@ html {
 }
 
 .md-typeset a.fl-help-cta:hover {
-  background: transparent !important;
+  background: transparent;
   color: var(--fl-black);
   text-decoration: underline;
   text-decoration-thickness: 0.05em;

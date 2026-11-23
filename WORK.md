@@ -2,6 +2,18 @@
 
 # Work — blog.fontlab.com
 
+## 2026-11-23 — Blog hook and stylesheet checks
+
+- 35 pytest cases passed. The strict scratch build produced 173 rendered pages with
+  both historical RSS titles on every page and all 134 CTA anchors marked.
+- Compared the generated CTA cascade before and after removing four `!important`
+  declarations. Normal and visited links stayed #c81a27 and hover stayed black.
+  All four state combinations kept a transparent background, zero border and no shadow.
+  Chrome exited during agent-browser startup, so this comparison used built HTML and CSS.
+- Ran the final gates in the installed environment with `UV_NO_SYNC=1` because syncing
+  tried to rebuild an editable dependency in a read-only sibling checkout.
+  The full `docs/` tree matched its pre-edit SHA-256 fingerprint.
+
 ## 2026-11-23 — fly-january follow-up 2 (theme a344026)
 
 - Strict scratch build passes. Old-vs-new 44 cases: 0 mismatches. "kerning" search returns
