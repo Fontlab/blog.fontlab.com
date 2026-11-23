@@ -2,6 +2,19 @@
 
 # Changelog
 
+## 2026-11-23 — fly-january theme
+
+- Switched to the fly-january theme and its `fly` plugin: `chrome: fontlab` (menu
+  "Blog", search from "blog"), Outfit heading roles and system-sans text roles. Removed the
+  fltheme26 CDN CSS/JS, the Typekit and unused Google families, and `mk-fontlab/main.html`.
+- Moved the homepage hero to `mk-fontlab/blog.html`, the CTA band to
+  `mk-fontlab/partials/footer.html`, GTM and JSON Feed links to `hooks/site_head.py`, the
+  Tailwind settings to `js/tailwind-config.js`.
+- Trimmed `css/extra.css` to blog content styling with rems converted to the 14.4px root;
+  TEMPORARY workarounds for theme gaps G1–G5.
+- Engine pins: Python 3.13, properdocs 1.6.7, mkdocs 1.6.1, mkdocs-materialx 10.1.8,
+  pymdown-extensions 11.0.1; fly-january as an editable path source until PyPI release.
+
 ## 2026-11-05 — Local publishing repair
 
 - Configured this checkout to merge on pull and reconciled divergent `main`

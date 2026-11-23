@@ -14,7 +14,9 @@ site_dir: ../docs/
 use_directory_urls: true
 
 theme:
-  name: materialx
+  name: fly-january
+  # Only the blog's own templates (fly-january provides the rest): blog.html (homepage
+  # hero), partials/post.html (excerpt layout), partials/footer.html (CTA band).
   custom_dir: mk-fontlab
   font: false
   features:
@@ -31,6 +33,34 @@ theme:
 extra:
   homepage: https://blog.fontlab.com/
   generator: false
+  fly:
+    # Global FontLab menu and footer (mode="dark", site-url = site_url, MaterialX drawer
+    # and search), as the old main.html configured them.
+    chrome: fontlab
+    chrome_options:
+      site-label: Blog
+      search-from: blog
+    # No hue: H1 stays ink (near-black, as before); the theme's default accent (cobalt)
+    # serves focus rings. FontLab red stays on the site's CTAs.
+    # Typefaces of the previous build (measured): Outfit headings, system sans text.
+    fonts:
+      sources:
+        - google:Outfit:wght@100..900
+      roles:
+        h1: {family: "'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 200}
+        h2: {family: "'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 300}
+        h3: {family: "'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 500}
+        h4: {family: "'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 600}
+        h5: {family: "'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 600}
+        h6: {family: "'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 600}
+        body: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 400}
+        lead: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 400}
+        table: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 400}
+        nav: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"}
+        caption: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"}
+        code: {family: "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"}
+        em: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 400, adjust: 1}
+        strong: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 700, adjust: 1}
 
 nav:
   - News: index.md
@@ -137,18 +167,18 @@ plugins:
       use_git: true
       use_material_blog: true
       use_material_social_cards: false
+  # fly-january: fonts, chrome, body classes (last).
+  - fly
 
 hooks:
   - hooks/glightbox_small_images.py
+  - hooks/site_head.py
 
 extra_css:
-  - https://i.fontlab.com/fltheme26/1.0.0/components.css
-  - https://i.fontlab.com/fltheme26/1.0.0/theme.css
-  - https://use.typekit.net/gav0zux.css
-  - https://i.fontlab.com/fltheme26/1.0.0/chrome/fontlab.css
   - css/extra.css
 
 extra_javascript:
-  - https://i.fontlab.com/fltheme26/1.0.0/basecoat.js
-  - https://i.fontlab.com/fltheme26/1.0.0/theme.js
+  # Tailwind Play CDN for the unprefixed utility classes in posts, then its settings.
+  - https://cdn.tailwindcss.com
+  - js/tailwind-config.js
   - js/illu-link.js

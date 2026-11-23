@@ -1,0 +1,34 @@
+{#- this_file: mkdocs/mk-fontlab/blog.html -#}
+{#- The blog index and its pagination pages: MaterialX 10.1.8 blog.html (container block
+    copied verbatim) plus the homepage hero band under the global menu. fly-january has no
+    hero slot, and a custom main.html would replace the theme's own, so the hero lives in
+    the one template that renders the homepage. -#}
+{% extends "main.html" %}
+{% block hero %}
+  {% if page and page.is_homepage %}
+    <div class="fl-home-hero" role="presentation">
+      <img class="fl-home-hero__img"
+           src="{{ 'media/fl8-hero.png' | url }}"
+           alt=""
+           loading="eager"
+           decoding="async">
+    </div>
+  {% endif %}
+{% endblock %}
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        {{ page.content }}
+      </header>
+      {% for post in posts %}
+        {% include "partials/post.html" %}
+      {% endfor %}
+      {% if pagination %}
+        {% block pagination %}
+          {% include "partials/pagination.html" %}
+        {% endblock %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

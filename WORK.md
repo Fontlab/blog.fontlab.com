@@ -2,6 +2,15 @@
 
 # Work — blog.fontlab.com
 
+## 2026-11-23 — fly-january adoption (local only, not published)
+
+- Strict build into a scratch directory passes (`docs/` left untouched; `./build.sh` not
+  run because it rewrites `docs/` and Flowmark-formats sources).
+- agent-browser old vs new: 11 pages × 1440/390 × light/dark = 44 cases, 0 mismatches in
+  headings, images, excerpts, nav entries, hero, CTA band, pagination; no overflow; no
+  console errors (Tailwind CDN production warning only). Search, drawer, lightbox checked.
+- 16 pytest tests pass. Next: publish fly-january to PyPI, pin it, then deploy.
+
 ## 2026-11-05 — Publish pull repair
 
 - Set repository-local `pull.rebase=false` so gitnextver's pull merges divergent
