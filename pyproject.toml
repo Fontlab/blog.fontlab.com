@@ -22,7 +22,7 @@ dependencies = [
     "properdocs==1.6.7",
     "mkdocs==1.6.1",
     "mkdocs-materialx==10.1.8",
-    "fly-january",
+    "fly-january==0.1.0",
     "flowmark>=0.6.5",
     "mkdocs-glightbox>=0.5",
     "pillow>=11.0",
@@ -51,13 +51,6 @@ packages = ["src/blog_fontlab"]
 
 [tool.uv]
 package = true
-
-[tool.uv.sources]
-# fly-january (theme + fly plugin) from the local theme checkout until its first PyPI
-# release; at release this becomes a pinned "fly-january==X.Y.Z" dependency and these
-# path entries go away. figure-groups is the theme's own unpublished dependency.
-fly-january = { path = "/Users/adam/Developer/vcs3/github.fontlab/fontlab-www-docstheme.fly", editable = true }
-vexy-python-markdown-figure-groups = { path = "/Users/adam/Developer/vcs3/github.vexyart/vexy-python-markdown-figure-groups", editable = true }
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

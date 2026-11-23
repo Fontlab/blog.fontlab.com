@@ -81,7 +81,7 @@ dev = [
 requires-dist = [
     { name = "fire", specifier = ">=0.6" },
     { name = "flowmark", specifier = ">=0.6.5" },
-    { name = "fly-january", editable = "/Users/adam/Developer/vcs3/github.fontlab/fontlab-www-docstheme.fly" },
+    { name = "fly-january", specifier = "==0.1.0" },
     { name = "loguru", specifier = ">=0.7" },
     { name = "mkdocs", specifier = "==1.6.1" },
     { name = "mkdocs-awesome-nav", specifier = ">=3.3" },
@@ -269,38 +269,17 @@ wheels = [
 
 [[package]]
 name = "fly-january"
-source = { editable = "/Users/adam/Developer/vcs3/github.fontlab/fontlab-www-docstheme.fly" }
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mkdocs" },
     { name = "mkdocs-materialx" },
     { name = "properdocs" },
     { name = "vexy-python-markdown-figure-groups" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "mkdocs", specifier = ">=1.6.1" },
-    { name = "mkdocs-materialx", specifier = ">=10.1.8,<11" },
-    { name = "properdocs", specifier = ">=1.6.7" },
-    { name = "vexy-python-markdown-figure-groups", editable = "../../github.vexyart/vexy-python-markdown-figure-groups" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "mkdocs", specifier = "==1.6.1" },
-    { name = "mkdocs-materialx", specifier = "==10.1.8" },
-    { name = "properdocs", specifier = "==1.6.7" },
-    { name = "pymdown-extensions", specifier = "==11.0.1" },
-    { name = "pytest", specifier = ">=8" },
-    { name = "ruff" },
-]
-site = [
-    { name = "beautifulsoup4", specifier = "==4.14.3" },
-    { name = "markdown", specifier = "==3.10.2" },
-    { name = "mkdocs-awesome-nav", specifier = "==3.3.0" },
-    { name = "mkdocs-glightbox", specifier = "==0.5.2" },
-    { name = "mkdocs-material-extensions", specifier = "==1.3.1" },
-    { name = "vexy-mkdocs-strip-number-prefix", specifier = "==1.0.12" },
+sdist = { url = "https://files.pythonhosted.org/packages/0d/3e/3720c48cbf835ea091a0fafa8b394554e2a467c865dfc014383974ead62e/fly_january-0.1.0.tar.gz", hash = "sha256:10a83623328f7032665badd899bb19d626ba463c24f34fb6e7e2c04f0999fbff", size = 236505, upload-time = "2026-11-23T21:18:11.021Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d9/f9/96853718f1e9fa44ebc5edb991dcceeb84bbafd83084cf5a44a613f426b3/fly_january-0.1.0-py3-none-any.whl", hash = "sha256:9352ae513437160bf4fdfe8ffa9d76ac3e83842466773e463d44d63dad51be76", size = 225668, upload-time = "2026-11-23T21:18:08.957Z" },
 ]
 
 [[package]]
@@ -1335,21 +1314,15 @@ wheels = [
 
 [[package]]
 name = "vexy-python-markdown-figure-groups"
-source = { editable = "../../github.vexyart/vexy-python-markdown-figure-groups" }
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "markdown" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "markdown", specifier = ">=3.5" },
-    { name = "mypy", marker = "extra == 'dev'" },
-    { name = "pytest", marker = "extra == 'dev'" },
-    { name = "pytest-cov", marker = "extra == 'dev'" },
-    { name = "ruff", marker = "extra == 'dev'" },
-    { name = "types-markdown", marker = "extra == 'dev'" },
+sdist = { url = "https://files.pythonhosted.org/packages/12/60/b2d7a64fe0859970ecca8f1b2ccfbecf5db73f343622b2220595f457bba3/vexy_python_markdown_figure_groups-0.1.0.tar.gz", hash = "sha256:7b7c506d9e792e387e57fffd0f55be918b93a5e0dc9a536967d5ce8f06d75b11", size = 15214, upload-time = "2026-11-23T21:16:35.527Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d8/9b/5a41e6a7efb428e7e945086eae47e081b551880d0d24b7b69114c9f343b3/vexy_python_markdown_figure_groups-0.1.0-py3-none-any.whl", hash = "sha256:9224022a735492d1aa25c669f12c44733ecd76c8c76921c90c45b81f0d628b8a", size = 11609, upload-time = "2026-11-23T21:16:34.565Z" },
 ]
-provides-extras = ["dev"]
 
 [[package]]
 name = "watchdog"
