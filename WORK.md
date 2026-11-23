@@ -2,6 +2,12 @@
 
 # Work — blog.fontlab.com
 
+## 2026-11-23 — fly-january follow-up (theme 4579e72)
+
+- Strict scratch build passes. Old-vs-new 44 cases: 0 mismatches, no overflow, no console
+  errors. The three longest titles take 4 lines at 1440 and 5 at 390, with no overflow;
+  the h1 role was not changed. Search: "kerning" gives 29 documents. 16 tests pass.
+
 ## 2026-11-23 — fly-january adoption (local only, not published)
 
 - Strict build into a scratch directory passes (`docs/` left untouched; `./build.sh` not

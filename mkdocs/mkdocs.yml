@@ -59,7 +59,9 @@ extra:
         nav: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"}
         caption: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"}
         code: {family: "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"}
-        em: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 400, adjust: 1}
+        em: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 400, adjust: 1, style: italic}
+        # Links and mark in the body face (the theme's default sans is Grtsk).
+        sans: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", stretch: normal, adjust: 1}
         strong: {family: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", weight: 700, adjust: 1}
 
 nav:
@@ -106,6 +108,8 @@ markdown_extensions:
   - pymdownx.tilde
 
 plugins:
+  # Prefixed on purpose: bare `search` resolves to fly-january/search, but MaterialX's
+  # header.html only renders the search box for "materialx/search" (theme gap G6).
   - materialx/search:
       enabled: true
   - include-markdown:
@@ -127,8 +131,8 @@ plugins:
       # Small images are excluded per image by hooks/glightbox_small_images.py.
       skip_classes:
         - illu-thumb
-  - materialx/tags
-  - materialx/blog:
+  - tags
+  - blog:
       blog_dir: .
       blog_toc: false
       post_dir: posts

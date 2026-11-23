@@ -171,36 +171,6 @@ html {
   overflow-x: clip;
 }
 
-/* TEMPORARY: remove when fly-january fixes gap G3. Links, strong, em and mark use
-   --fly-sans-family (Grtsk, falling back to Arial), which extra.fly.fonts.roles cannot set,
-   and em has no font-style property; the blog sets them in its body face, as before. */
-:root {
-  --fly-sans-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --fly-sans-stretch: normal;
-  --fly-sans-adjust: 1;
-}
-
-.md-typeset em {
-  font-style: italic !important;
-}
-
-/* TEMPORARY: remove when fly-january fixes gap G4. On blog post pages below 76.25em a
-   wide table or code block widens the article past the viewport. */
-.md-content--post > .md-content__inner {
-  max-width: 100%;
-}
-
-/* TEMPORARY: remove when fly-january fixes gap G5. On blog post pages the post sidebar
-   (.md-sidebar--post, about 16.8rem) sits beside the article inside the fly-canvas
-   container, but the article's margin column (--m) is sized from the whole container,
-   which left a 387px text column at 1440px. Half the sidebar comes off --m, so the text
-   column matches other pages. */
-@media screen and (min-width: 76.25em) {
-  .md-content--post > .md-content__inner {
-    --m: calc(clamp(11.1111rem, 20cqi, 20.8333rem) - 8.4rem) !important;
-  }
-}
-
 /* Text wrapping of the old typography block; sizes, families and leading are
    fly-january roles now (extra.fly.fonts in mkdocs.yml). */
 .md-typeset p,
@@ -231,18 +201,8 @@ html {
 .md-post--excerpt {
   --fly-h2-size: 1.875rem;
   --fly-h2-leading: 2rem; /* one 28.8px grid line, about the old 1.1 */
-  --fly-h2-measure: none;
-  /* No canvas outset: the title spans the excerpt column instead of the full canvas. */
-  --out: 0px;
 }
 
-/* TEMPORARY: remove when fly-january fixes gap G1 (h1/h2 rules carry id specificity and
-   centre the heading with auto margins at 76.25em and up, so a component heading such as
-   this excerpt title cannot be placed without !important). */
-.md-post--excerpt .md-post__content h2 {
-  margin: 0 0 0.417rem !important;
-  text-align: start !important;
-}
 
 /* Author avatar: appears inline-before the title; abstract aligns with title */
 .md-post--excerpt .md-post__content {
@@ -297,19 +257,16 @@ html {
   font-variant-numeric: tabular-nums;
 }
 
-/* TEMPORARY !important here and in .fl-help-cta: remove when fly-january fixes gap G2
-   (its .md-typeset a rule has id specificity and sets colour, underline and size on every
-   content link, so link components lose their own). */
-.md-post__readlink {
-  color: var(--fl-gray-text) !important;
-  text-decoration: none !important;
+.md-typeset .md-post__readlink {
+  color: var(--fl-gray-text);
+  text-decoration: none;
   margin-left: 0.35em;
   white-space: nowrap;
 }
 
-.md-post__readlink:hover {
-  text-decoration: underline !important;
-  color: var(--fl-red) !important;
+.md-typeset .md-post__readlink:hover {
+  text-decoration: underline;
+  color: var(--fl-red);
 }
 
 .md-post--excerpt .md-post__content > *:last-child {
@@ -327,14 +284,14 @@ html {
   display: inline-block;
   background: transparent !important;
   border: 0 !important;
-  color: var(--fl-red) !important;
+  color: var(--fl-red);
   border-radius: 0;
   box-shadow: none !important;
   padding: 0;
-  font-family: var(--fl-font-display) !important;
-  font-size: 1rem !important;
+  font-family: var(--fl-font-display);
+  font-size: 1rem;
   font-weight: 400;
-  text-decoration: none !important;
+  text-decoration: none;
   letter-spacing: 0;
   text-transform: none;
   transition:
@@ -345,8 +302,8 @@ html {
 
 .md-typeset a.fl-help-cta:hover {
   background: transparent !important;
-  color: var(--fl-black) !important;
-  text-decoration: underline !important;
+  color: var(--fl-black);
+  text-decoration: underline;
   text-decoration-thickness: 0.05em;
   text-underline-offset: 0.18em;
 }

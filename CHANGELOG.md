@@ -2,6 +2,15 @@
 
 # Changelog
 
+## 2026-11-23 — fly-january follow-up (theme 4579e72)
+
+- Removed the TEMPORARY workarounds for G1–G5. The theme now handles excerpt headings,
+  component links, wide tables and the post column. The sans face and italic emphasis
+  move to `extra.fly.fonts.roles` (`sans`, `em.style: italic`). CTA and read-more
+  links are styled at normal specificity as `.md-typeset .class`.
+- `blog` and `tags` use bare plugin names. `materialx/search` stays prefixed (gap G6:
+  with the bare name MaterialX's header renders no search box).
+
 ## 2026-11-23 — fly-january theme
 
 - Switched to the fly-january theme and its `fly` plugin: `chrome: fontlab` (menu
