@@ -1,0 +1,164 @@
+# this_file: src_docs/md/media/external/_sources.txt
+# External images localized from src_docs/md/posts.
+# source is the URL found in Markdown; fetched_from differs where stale Commons paths were resolved.
+
+src_docs/md/media/external/youtube-uyyapvoeeho-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/uyyAPvoeEHo/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/uyyAPvoeEHo/maxresdefault.jpg
+  used_by: src_docs/md/posts/2018-12-21-fontlab-vi-12-releases-in-12-months.md
+src_docs/md/media/external/youtube-nqq5bohszw4-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/NQQ5boHSZw4/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/NQQ5boHSZw4/maxresdefault.jpg
+  used_by: src_docs/md/posts/2019-10-08-fls5-fog5-tt3-macos-catalina.md
+src_docs/md/media/external/youtube-yue1eixahig-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/yUe1Eixahig/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/yUe1Eixahig/maxresdefault.jpg
+  used_by: src_docs/md/posts/2019-10-08-fls5-fog5-tt3-macos-catalina.md
+src_docs/md/media/external/youtube-t9o1hpcofte-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/T9O1HpCoFTE/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/T9O1HpCoFTE/maxresdefault.jpg
+  used_by: src_docs/md/posts/2019-10-08-fls5-fog5-tt3-macos-catalina.md
+src_docs/md/media/external/youtube-opkztyqetts-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/OpkzTyQETts/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/OpkzTyQETts/maxresdefault.jpg
+  used_by: src_docs/md/posts/2019-10-08-fls5-fog5-tt3-macos-catalina.md
+src_docs/md/media/external/cloudinary-fls5-fog5-tt3.png
+  source: https://res.cloudinary.com/fontlab/images/v1629415725/fls5-fog5-tt3/fls5-fog5-tt3.png?_i=AA
+  fetched_from: https://res.cloudinary.com/fontlab/images/v1629415725/fls5-fog5-tt3/fls5-fog5-tt3.png?_i=AA
+  used_by: src_docs/md/posts/2019-10-08-fls5-fog5-tt3-macos-catalina.md
+src_docs/md/media/external/cloudinary-fontlab-studio5-win-crossover19-macos-catalina.png
+  source: https://res.cloudinary.com/fontlab/images/w_2560,h_1440/v1629415719/fontlab-studio5-win-crossover19-macos-catalina/fontlab-studio5-win-crossover19-macos-catalina.png?_i=AA
+  fetched_from: https://res.cloudinary.com/fontlab/images/w_2560,h_1440/v1629415719/fontlab-studio5-win-crossover19-macos-catalina/fontlab-studio5-win-crossover19-macos-catalina.png?_i=AA
+  used_by: src_docs/md/posts/2019-10-08-fls5-fog5-tt3-macos-catalina.md
+src_docs/md/media/external/youtube-9tqxrlxdbxi-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/9tQxrLxdbXI/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/9tQxrLxdbXI/maxresdefault.jpg
+  used_by: src_docs/md/posts/2019-11-30-introducing-fontlab-7.md
+src_docs/md/media/external/youtube-9mto-xdxgmq-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/9mtO-XdxGMQ/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/9mtO-XdxGMQ/maxresdefault.jpg
+  used_by: src_docs/md/posts/2020-11-30-fontlab-72-dec-2020.md
+src_docs/md/media/external/youtube-13-fnaf2ye8-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/13-fnAf2YE8/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/13-fnAf2YE8/maxresdefault.jpg
+  used_by: src_docs/md/posts/2020-11-30-fontlab-72-dec-2020.md
+src_docs/md/media/external/youtube-lqqlrgoj5zo-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/lQqLRgOJ5Zo/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/lQqLRgOJ5Zo/maxresdefault.jpg
+  used_by: src_docs/md/posts/2020-11-30-fontlab-72-dec-2020.md
+src_docs/md/media/external/youtube-1qtsfiha9ms-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/1QTsFihA9Ms/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/1QTsFihA9Ms/maxresdefault.jpg
+  used_by: src_docs/md/posts/2020-11-30-fontlab-72-dec-2020.md
+src_docs/md/media/external/youtube-fjxuslfbl9k-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/fjxUSlfbL9k/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/fjxUSlfbL9k/maxresdefault.jpg
+  used_by: src_docs/md/posts/2020-11-30-fontlab-72-dec-2020.md
+src_docs/md/media/external/youtube-ni51ir9f9xq-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/NI51ir9f9xQ/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/NI51ir9f9xQ/maxresdefault.jpg
+  used_by: src_docs/md/posts/2020-11-30-fontlab-72-dec-2020.md
+src_docs/md/media/external/youtube-2ttcohqqkl8-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/2tTcOhqqKl8/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/2tTcOhqqKl8/maxresdefault.jpg
+  used_by: src_docs/md/posts/2020-11-30-fontlab-72-dec-2020.md
+src_docs/md/media/external/youtube-hhk-untvqay-maxresdefault.jpg
+  source: https://i.ytimg.com/vi/hhk_untVQaY/maxresdefault.jpg
+  fetched_from: https://i.ytimg.com/vi/hhk_untVQaY/maxresdefault.jpg
+  used_by: src_docs/md/posts/2020-11-30-fontlab-72-dec-2020.md
+src_docs/md/media/external/cloudinary-fontlab7-monterey-installer-1024x806.png
+  source: https://res.cloudinary.com/fontlab/images/w_1024,h_806,c_scale/v1647359144/blog/fontlab7-monterey-installer/fontlab7-monterey-installer-1024x806.png?_i=AA
+  fetched_from: https://res.cloudinary.com/fontlab/images/w_1024,h_806,c_scale/v1647359144/blog/fontlab7-monterey-installer/fontlab7-monterey-installer-1024x806.png?_i=AA
+  used_by: src_docs/md/posts/2022-03-22-fontlab-7-2-0-7649-and-macos-12-3-monterey.md
+src_docs/md/media/external/fontlab-briem-3-01-test.gif
+  source: https://i.fontlab.com/fl8/briem/gif/briem-3-01-test.gif
+  fetched_from: https://i.fontlab.com/fl8/briem/gif/briem-3-01-test.gif
+  used_by: src_docs/md/posts/2023-09-04-briem-decisions.md
+src_docs/md/media/external/fontlab-briem-3-01-bell.gif
+  source: https://i.fontlab.com/fl8/briem/gif/briem-3-01-bell.gif
+  fetched_from: https://i.fontlab.com/fl8/briem/gif/briem-3-01-bell.gif
+  used_by: src_docs/md/posts/2023-09-04-briem-decisions.md
+src_docs/md/media/external/fontlab-briem-3-03-golden.gif
+  source: https://i.fontlab.com/fl8/briem/gif/briem-3-03-golden.gif
+  fetched_from: https://i.fontlab.com/fl8/briem/gif/briem-3-03-golden.gif
+  used_by: src_docs/md/posts/2023-09-04-briem-decisions.md
+src_docs/md/media/external/fontlab-briem-3-06-zeros.gif
+  source: https://i.fontlab.com/fl8/briem/gif/briem-3-06-zeros.gif
+  fetched_from: https://i.fontlab.com/fl8/briem/gif/briem-3-06-zeros.gif
+  used_by: src_docs/md/posts/2023-09-04-briem-decisions.md
+src_docs/md/media/external/fontlab-briem-3-04-final-seven.gif
+  source: https://i.fontlab.com/fl8/briem/gif/briem-3-04-final-seven.gif
+  fetched_from: https://i.fontlab.com/fl8/briem/gif/briem-3-04-final-seven.gif
+  used_by: src_docs/md/posts/2023-09-04-briem-decisions.md
+src_docs/md/media/external/fontlab-alexanderkapusta-yffbecha.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/AlexanderKapusta-YFFBecha.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/AlexanderKapusta-YFFBecha.png
+  used_by: src_docs/md/posts/2024-09-17-made-with-fontlab-alexander-kapusta.md
+src_docs/md/media/external/fontlab-alexanderkapusta-yffzarya.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/AlexanderKapusta-YFFZarya.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/AlexanderKapusta-YFFZarya.png
+  used_by: src_docs/md/posts/2024-09-17-made-with-fontlab-alexander-kapusta.md
+src_docs/md/media/external/fontlab-calfonts-bodonicasale.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/CALFonts-BodoniCasale.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/CALFonts-BodoniCasale.png
+  used_by: src_docs/md/posts/2024-11-05-made-with-fontlab-dave-lawrence.md
+src_docs/md/media/external/fontlab-calfonts-calgrotesk.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/CALFonts-CALGrotesk.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/CALFonts-CALGrotesk.png
+  used_by: src_docs/md/posts/2024-11-05-made-with-fontlab-dave-lawrence.md
+src_docs/md/media/external/fontlab-canadatype-bananas.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/CanadaType-Bananas.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/CanadaType-Bananas.png
+  used_by: src_docs/md/posts/2025-02-18-made-with-fontlab-patrick-griffin.md
+src_docs/md/media/external/fontlab-canadatype-ronaldsonpro.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/CanadaType-RonaldsonPro.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/CanadaType-RonaldsonPro.png
+  used_by: src_docs/md/posts/2025-02-18-made-with-fontlab-patrick-griffin.md
+src_docs/md/media/external/fontlab-blambot-thunderclapbb.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/Blambot-ThunderclapBB.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/Blambot-ThunderclapBB.png
+  used_by: src_docs/md/posts/2025-05-13-made-with-fontlab-nate-piekos.md
+src_docs/md/media/external/fontlab-blambot-inkcantationbb.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/Blambot-InkcantationBB.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/Blambot-InkcantationBB.png
+  used_by: src_docs/md/posts/2025-05-13-made-with-fontlab-nate-piekos.md
+src_docs/md/media/external/wikimedia-a-specimen-by-william-caslon.jpg
+  source: https://upload.wikimedia.org/wikipedia/commons/9/93/Caslon-schriftmusterblatt.jpeg
+  fetched_from: https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_Specimen_by_William_Caslon.jpg/1920px-A_Specimen_by_William_Caslon.jpg
+  used_by: src_docs/md/posts/2025-05-27-optical-sizings-lost-century.md
+src_docs/md/media/external/fontlab-thomasphinney-sciencegothic.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/ThomasPhinney-ScienceGothic.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/ThomasPhinney-ScienceGothic.png
+  used_by: src_docs/md/posts/2025-11-11-made-with-fontlab-vassil-kateliev.md
+src_docs/md/media/external/wikimedia-hunminjeongeumhaerye.jpg
+  source: https://upload.wikimedia.org/wikipedia/commons/2/2c/Hunmin_Jeongeum.jpg
+  fetched_from: https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Hunminjeongeumhaerye.jpg/1920px-Hunminjeongeumhaerye.jpg
+  used_by: src_docs/md/posts/2025-11-25-hangul-invented-1443-lost-found-in-a-coat.md
+src_docs/md/media/external/fontlab-yurigordon-acquaaldinavf.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/YuriGordon-AcquaAldinaVF.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/YuriGordon-AcquaAldinaVF.png
+  used_by: src_docs/md/posts/2026-02-25-made-with-fontlab-yuri-gordon.md
+src_docs/md/media/external/fontlab-yurigordon-villon.png
+  source: https://i.fontlab.com/made-with-fontlab/fonts-black/YuriGordon-Villon.png
+  fetched_from: https://i.fontlab.com/made-with-fontlab/fonts-black/YuriGordon-Villon.png
+  used_by: src_docs/md/posts/2026-02-25-made-with-fontlab-yuri-gordon.md
+src_docs/md/media/external/wikimedia-a-scene-in-shantytown-new-york-1880.png
+  source: https://upload.wikimedia.org/wikipedia/commons/9/93/A_Scene_in_Shantytown%2C_New_York_%281880%29.png
+  fetched_from: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/A_Scene_in_Shantytown%2C_New_York_%281880%29.png/1920px-A_Scene_in_Shantytown%2C_New_York_%281880%29.png
+  used_by: src_docs/md/posts/2026-03-17-halftone-fox-talbot-to-shantytown.md
+src_docs/md/media/external/wikimedia-georges-seurat-a-sunday-on-la-grande-jatte-1884-google-art-project.jpg
+  source: https://upload.wikimedia.org/wikipedia/commons/7/7d/Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg
+  fetched_from: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg/1920px-Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg
+  used_by: src_docs/md/posts/2026-03-19-seurat-and-the-220000-dots.md
+src_docs/md/media/external/wikimedia-albrecht-durer-knight-death-and-devil-1513-nga-598.jpg
+  source: https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/D%C3%BCrer_-_Ritter%2C_Tod_und_Teufel_%28Recto%29.jpg/600px-D%C3%BCrer_-_Ritter%2C_Tod_und_Teufel_%28Recto%29.jpg
+  fetched_from: https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Albrecht_D%C3%BCrer%2C_Knight%2C_Death_and_Devil%2C_1513%2C_NGA_598.jpg/1920px-Albrecht_D%C3%BCrer%2C_Knight%2C_Death_and_Devil%2C_1513%2C_NGA_598.jpg
+  used_by: src_docs/md/posts/2026-03-26-five-centuries-of-line.md
+src_docs/md/media/external/wikimedia-minard.png
+  source: https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png
+  fetched_from: https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png
+  used_by: src_docs/md/posts/2026-04-02-drawing-the-invisible-minard.md
+src_docs/md/media/external/wikimedia-penny-black.jpg
+  source: https://upload.wikimedia.org/wikipedia/commons/0/04/Penny_black.jpg
+  fetched_from: https://upload.wikimedia.org/wikipedia/commons/3/36/Penny_black.jpg
+  used_by: src_docs/md/posts/2026-04-14-money-lace-guilloche-intaglio-spirograph.md
